@@ -4,8 +4,6 @@ CANDIDATES  := $(wildcard $(RCPATH)/*)
 EXCLUSIONS  := .DS_Store .git .gitmodules
 TARGETS     := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 
-ZSH         := $(shell which zsh)
-NEOVIM      := $(shell which nvim)
 ZSHENV_FILE := $(RCPATH)/zshenv
 UNAME       := $(shell uname -s)
 
@@ -18,11 +16,15 @@ endif
 .PHONY: all
 all:
 
+.PHONY: init
+	@git clone --recursive https://github.com/sorin-ionescu/prezto.git \
+		rc/config/zsh/.zprezto
+
 .PHONY: help
 help:
+	@echo "init   => Initialize environment settings."
 	@echo "deploy => Create symlinks to home directory."
 	@echo "clean  => remove the dotfiles."
-
 
 .PHONY: deploy 
 deploy:
