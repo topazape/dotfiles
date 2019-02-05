@@ -8,12 +8,6 @@ TARGETS       := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 ZSHENV        := zshenv
 UNAME         := $(shell uname -s)
 
-ZSH_DIR       := $(RCPATH)/config/zsh
-ZPREZTO_DIR   := $(ZSH_DIR)/.zprezto
-ZPREZTO_RCDIR := $(ZPREZTO_DIR)/runcoms
-ZPREZTO_CAN   := $(notdir $(wildcard $(ZPREZTO_RCDIR)/*))
-ZPREZTO_EXC   := zpreztorc zshrc README.md
-ZPREZTO_TARG  := $(filter-out $(ZPREZTO_EXC), $(ZPREZTO_CAN))
 
 ifeq ($(UNAME), Linux)
 	DOTFILES := $(TARGETS)
@@ -40,6 +34,14 @@ prezto-init:
 	 fi
 	@git clone --recursive https://github.com/sorin-ionescu/prezto.git \
 		rc/config/zsh/.zprezto
+
+	ZSH_DIR       := $(RCPATH)/config/zsh
+	ZPREZTO_DIR   := $(ZSH_DIR)/.zprezto
+	ZPREZTO_RCDIR := $(ZPREZTO_DIR)/runcoms
+	ZPREZTO_CAN   := $(notdir $(wildcard $(ZPREZTO_RCDIR)/*))
+	ZPREZTO_EXC   := zpreztorc zshrc README.md
+	ZPREZTO_TARG  := $(filter-out $(ZPREZTO_EXC), $(ZPREZTO_CAN))
+
 	@$(foreach val, $(ZPREZTO_TARG), ln -snfv $(ZPREZTO_RCDIR)/$(val) $(ZSH_DIR)/.$(val);)
 
 .PHONY: vim-plug-init
@@ -64,6 +66,12 @@ deploy:
 clean:
 	@echo "Remove dotfiles from your home directory."
 	@$(foreach val, $(DOTFILES), rm -vf $(HOME)/.$(val);)
+
+.PHONY: all-clean
+all-clean:
+	@$(MAKE) clean
+	@$(foreach val, $(ZPREZTO_TARG), rm -vf $(ZSH_DIR)/.$(val);)
+	@rm -rf $(HOME)/.local
 
 .PHONY: update
 update:
