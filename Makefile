@@ -17,6 +17,7 @@ endif
 all:
 
 .PHONY: init
+init:
 	@git clone --recursive https://github.com/sorin-ionescu/prezto.git \
 		rc/config/zsh/.zprezto
 
