@@ -39,7 +39,7 @@ prezto-init:
 	ZPREZTO_DIR   := $(ZSH_DIR)/.zprezto
 	ZPREZTO_RCDIR := $(ZPREZTO_DIR)/runcoms
 	ZPREZTO_CAN   := $(notdir $(wildcard $(ZPREZTO_RCDIR)/*))
-	ZPREZTO_EXC   := zpreztorc zshrc README.md
+	ZPREZTO_EXC   := .zpreztorc .zshrc README.md
 	ZPREZTO_TARG  := $(filter-out $(ZPREZTO_EXC), $(ZPREZTO_CAN))
 
 	@$(foreach val, $(ZPREZTO_TARG), ln -snfv $(ZPREZTO_RCDIR)/$(val) $(ZSH_DIR)/.$(val);)
