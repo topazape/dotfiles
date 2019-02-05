@@ -1,0 +1,8 @@
+export LANG=C
+export ZDOTDIR=$HOME/.config/zsh
+if [ -e /etc/lsb-release ]; then
+	export HTTP_PROXY="http://172.20.131.3:8065"
+	export http_proxy="http://172.20.131.3:8065"
+	export HTTPS_PROXY="https://172.20.131.3:8065"
+	export https_proxy="https://172.20.131.3:8065"
+fi
