@@ -16,7 +16,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 
-export EDITOR='nvim'
+export EDITOR="nvim"
 export HISTFILE="$XDG_DATA_HOME/zsh/history"
 
 ## Zsh-Prezto
@@ -29,6 +29,7 @@ export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
 
 ## linuxbrew
 eval $(~/.linuxbrew/bin/brew shellenv)
+## direnv
 eval "$(direnv hook zsh)"
 
 ## aliases
