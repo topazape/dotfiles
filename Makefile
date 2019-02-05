@@ -1,11 +1,11 @@
 DOTPATH       := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
 RCPATH        := $(DOTPATH)/rc
 
-CANDIDATES    := $(wildcard $(RCPATH)/*)
+CANDIDATES    := $(notdir $(wildcard $(RCPATH)/*))
 EXCLUSIONS    := .DS_Store .git .gitmodules
 TARGETS       := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 
-ZSHENV_FILE   := $(RCPATH)/zshenv
+ZSHENV        := zshenv
 UNAME         := $(shell uname -s)
 
 ZSH_DIR       := $(RCPATH)/config/zsh
@@ -16,9 +16,9 @@ ZPREZTO_EXC   := zpreztorc zshrc README.md
 ZPREZTO_TARG  := $(filter-out $(ZPREZTO_EXC), $(ZPREZTO_CAN))
 
 ifeq ($(UNAME), Linux)
-	DOTFILES_FILES := $(TARGETS)
+	DOTFILES := $(TARGETS)
 else
-	DOTFILES_FILES := $(ZSHENV_FILE)
+	DOTFILES := $(ZSHENV)
 endif
 
 .PHONY: all
@@ -31,7 +31,7 @@ init:
 	 fi
 	@git clone --recursive https://github.com/sorin-ionescu/prezto.git \
 		rc/config/zsh/.zprezto
-	@$(foreach val, $(ZPREZTO_TARG), ln -snfv $(ZSH_DIR)/$(val) $(ZSH_DIR)/.$(val))
+	@$(foreach val, $(ZPREZTO_TARG), ln -snfv $(ZSH_DIR)/$(val) $(ZSH_DIR)/.$(val);)
 
 .PHONY: help
 help:
@@ -41,9 +41,9 @@ help:
 
 .PHONY: deploy 
 deploy:
-	@$(foreach val, $(DOTFILES_FILES), ln -snfv $(val) $(HOME)/.$(notdir $(val));)
+	@$(foreach val, $(DOTFILES), ln -snfv $(RCPATH)/$(val) $(HOME)/.$(val);)
 
 .PHONY: clean
 clean:
 	@echo "Remove dotfiles from your home directory."
-	@$(foreach val, $(DOTFILES_FILES), rm -rvf $(HOME)/.$(notdir $(val));)
+	@$(foreach val, $(DOTFILES), rm -vf $(HOME)/.$(val);)
