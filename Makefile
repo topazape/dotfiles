@@ -24,20 +24,37 @@ endif
 .PHONY: all
 all:
 
-.PHONY: init
-init:
-	@if [ -d $(ZPREZTO_DIR) ]; then \
-		rm -rf $(ZPREZTO_DIR); \
-	 fi
-	@git clone --recursive https://github.com/sorin-ionescu/prezto.git \
-		rc/config/zsh/.zprezto
-	@$(foreach val, $(ZPREZTO_TARG), ln -snfv $(ZSH_DIR)/$(val) $(ZSH_DIR)/.$(val);)
-
 .PHONY: help
 help:
 	@echo "init   => Initialize environment settings."
 	@echo "deploy => Create symlinks to home directory."
 	@echo "clean  => remove the dotfiles."
+	@echo "update => For Github upload."
+
+
+
+.PHONY: prezto-init
+prezto-init:
+	@if [ -d $(ZPREZTO_DIR) ]; then \
+		rm -rf $(ZPREZTO_DIR); \
+	 fi
+	@git clone --recursive https://github.com/sorin-ionescu/prezto.git \
+		rc/config/zsh/.zprezto
+	@$(foreach val, $(ZPREZTO_TARG), ln -snfv $(ZPREZTO_RCDIR)/$(val) $(ZSH_DIR)/.$(val);)
+
+.PHONY: vim-plug-init
+vim-plug-init:
+	@curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+.PHONY: init
+init:
+ifeq ($(UNAME), Linux)
+	@$(MAKE) prezto-init
+	@$(MAKE) vim-plug-init
+else
+	@$(MAKE) prezto-init
+endif
 
 .PHONY: deploy 
 deploy:
@@ -47,3 +64,7 @@ deploy:
 clean:
 	@echo "Remove dotfiles from your home directory."
 	@$(foreach val, $(DOTFILES), rm -vf $(HOME)/.$(val);)
+
+.PHONY: update
+update:
+	@$(foreach val, $(ZPREZTO_TARG), rm -vf $(ZSH_DIR)/.$(val);)
