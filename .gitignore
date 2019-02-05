@@ -1,5 +1,5 @@
 /rc/config/direnv/
 /rc/config/nvim/.netrwhist
-/rc/config/zsh/.zcompdump
-/rc/config/zsh/.zcompdump.zwc
-/rc/config/zsh/.zhistory
+/rc/config/zsh/
+!/rc/config/zsh/.zpreztorc
+!/rc/config/zsh/.zshrc

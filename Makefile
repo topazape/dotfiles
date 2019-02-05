@@ -42,6 +42,7 @@ prezto-init:
 	$(eval ZPREZTO_TARG := $(filter-out $(ZPREZTO_EXC), $(ZPREZTO_CAN)))
 	
 	@$(foreach val, $(ZPREZTO_TARG), ln -snfv $(ZPREZTO_RCDIR)/$(val) $(ZSH_DIR)/.$(val);)
+	@mkdir -p $(HOME)/.local/share/zsh
 
 .PHONY: vim-plug-init
 vim-plug-init:
