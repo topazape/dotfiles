@@ -32,20 +32,16 @@ help:
 .PHONY: prezto-init
 prezto-init:
 	@if [ -d $(ZPREZTO_DIR) ]; then \
-		rm -rf $(ZPREZTO_DIR); \
+		rm -rvf $(ZPREZTO_DIR); \
 	 fi
 	@git clone --recursive https://github.com/sorin-ionescu/prezto.git \
 		rc/config/zsh/.zprezto
 
 	$(eval ZPREZTO_CAN  := $(notdir $(wildcard $(ZPREZTO_RCDIR)/*)))
-	$(eval ZPREZTO_EXC  := .zpreztorc .zshrc README.md)
+	$(eval ZPREZTO_EXC  := zpreztorc zshrc README.md)
 	$(eval ZPREZTO_TARG := $(filter-out $(ZPREZTO_EXC), $(ZPREZTO_CAN)))
 	
-	@echo $(ZPREZTO_CAN)
-	@echo $(ZPREZTO_EXC)
-	@echo $(ZPREZTO_TARG)
-
-#	@$(foreach val, $(ZPREZTO_TARG), ln -snfv $(ZPREZTO_RCDIR)/$(val) $(ZSH_DIR)/.$(val);)
+	@$(foreach val, $(ZPREZTO_TARG), ln -snfv $(ZPREZTO_RCDIR)/$(val) $(ZSH_DIR)/.$(val);)
 
 .PHONY: vim-plug-init
 vim-plug-init:
