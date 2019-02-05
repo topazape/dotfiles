@@ -40,8 +40,12 @@ prezto-init:
 	$(eval ZPREZTO_CAN  := $(notdir $(wildcard $(ZPREZTO_RCDIR)/*)))
 	$(eval ZPREZTO_EXC  := .zpreztorc .zshrc README.md)
 	$(eval ZPREZTO_TARG := $(filter-out $(ZPREZTO_EXC), $(ZPREZTO_CAN)))
+	
+	@echo $(ZPREZTO_CAN)
+	@echo $(ZPREZTO_EXC)
+	@echo $(ZPREZTO_TARG)
 
-	@$(foreach val, $(ZPREZTO_TARG), ln -snfv $(ZPREZTO_RCDIR)/$(val) $(ZSH_DIR)/.$(val);)
+#	@$(foreach val, $(ZPREZTO_TARG), ln -snfv $(ZPREZTO_RCDIR)/$(val) $(ZSH_DIR)/.$(val);)
 
 .PHONY: vim-plug-init
 vim-plug-init:
@@ -70,7 +74,7 @@ clean:
 all-clean:
 	@$(MAKE) clean
 	@$(foreach val, $(ZPREZTO_TARG), rm -vf $(ZSH_DIR)/.$(val);)
-	@rm -rf $(HOME)/.local
+	@rm -rvf $(HOME)/.local
 
 .PHONY: update
 update:
