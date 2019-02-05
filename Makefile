@@ -26,12 +26,12 @@ all:
 
 .PHONY: init
 init:
-	@if [ -e $(ZPREZTO_DIR) ]; then \
+	@if [ -d $(ZPREZTO_DIR) ]; then \
 		rm -rf $(ZPREZTO_DIR); \
 	 fi
 	@git clone --recursive https://github.com/sorin-ionescu/prezto.git \
 		rc/config/zsh/.zprezto
-	@$(foreach val, $(ZPREZTO_TARG), ln -snfv $(ZSH_DIR)/.$(val))
+	@$(foreach val, $(ZPREZTO_TARG), ln -snfv $(ZSH_DIR)/$(val) $(ZSH_DIR)/.$(val))
 
 .PHONY: help
 help:
