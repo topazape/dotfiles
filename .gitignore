@@ -1,5 +1,4 @@
-/rc/config/direnv/
-/rc/config/nvim/.netrwhist
+/rc/config/direnv/allow
 /rc/config/zsh/
 !/rc/config/zsh/.zpreztorc
 !/rc/config/zsh/.zshrc
