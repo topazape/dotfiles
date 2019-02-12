@@ -17,21 +17,32 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 
-export EDITOR="nvim"
+### XDG_ZSH_HISTORY
 export HISTFILE="$XDG_DATA_HOME/zsh/history"
+
+## CUDA
+if type nvidia-smi > /dev/null 2>&1; then
+	export __GL_SHADER_DISK_CACHE_PATH="$XDG_CACHE_HOME/nv"
+	export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+fi
+
+### LINUXBREW
+if [ -e ~/.linuxbrew/bin/brew ]; then
+	eval $(~/.linuxbrew/bin/brew shellenv)
+	### direnv
+	if type direnv > /dev/null 2>&1; then
+		eval "$(direnv hook zsh)"
+	fi
+fi
+
+## EDITOR
+if type nvim > /dev/null 2>&1; then
+	export EDITOR="nvim"
+fi
 
 ## zsh-prezto
 ### disable safe redirection
 setopt clobber
-
-## CUDA
-export __GL_SHADER_DISK_CACHE_PATH="$XDG_CACHE_HOME/nv"
-export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
-
-## linuxbrew
-eval $(~/.linuxbrew/bin/brew shellenv)
-## direnv
-eval "$(direnv hook zsh)"
 
 ## aliases
 alias ls='ls -F --color=auto'
