@@ -15,7 +15,7 @@ ZPREZTO_RCDIR := $(ZPREZTO_DIR)/runcoms
 ifeq ($(UNAME), Linux)
 	DOTFILES := $(TARGETS)
 else
-	DOTFILES := $(filter-out $(MAC_EXC), $(TARGETS)
+	DOTFILES := $(filter-out $(MAC_EXC), $(TARGETS))
 endif
 
 .PHONY: all
