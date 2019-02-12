@@ -37,4 +37,4 @@ eval "$(direnv hook zsh)"
 alias ls='ls -F --color=auto'
 alias ll='ls -lh'
 alias la='ls -A'
-alias less='less -i -x2 -N -R'
+alias less='less -i -x2 -N -R -M'
