@@ -5,19 +5,12 @@ CANDIDATES    := $(notdir $(wildcard $(RCPATH)/*))
 EXCLUSIONS    := .DS_Store .git .gitmodules
 TARGETS       := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 
-ZSHENV        := zshenv
 UNAME         := $(shell uname -s)
 
 ZSH_DIR       := $(RCPATH)/config/zsh
 ZPREZTO_DIR   := $(ZSH_DIR)/.zprezto
 ZPREZTO_RCDIR := $(ZPREZTO_DIR)/runcoms
 
-
-ifeq ($(UNAME), Linux)
-	DOTFILES := $(TARGETS)
-else
-	DOTFILES := $(ZSHENV)
-endif
 
 .PHONY: all
 all:
