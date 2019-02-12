@@ -26,6 +26,7 @@ help:
 	@echo "init   => Initialize environment settings."
 	@echo "deploy => Create symlinks to home directory."
 	@echo "clean  => remove the dotfiles."
+	@echo "update => update prezto"
 	@echo "upload => For Github upload."
 
 .PHONY: prezto-init
@@ -60,6 +61,10 @@ endif
 .PHONY: deploy 
 deploy:
 	@$(foreach val, $(DOTFILES), ln -snfv $(RCPATH)/$(val) $(HOME)/.$(val);)
+
+.PHONY: update
+update:
+	@cd $(ZPREZTO_DIR) && git pull && git submodule update --init --recursive
 
 .PHONY: clean
 clean:
