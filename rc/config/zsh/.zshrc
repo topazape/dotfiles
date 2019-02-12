@@ -11,6 +11,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+export LESSHISTFILE=-
 ## XDG
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -36,3 +37,4 @@ eval "$(direnv hook zsh)"
 alias ls='ls -F --color=auto'
 alias ll='ls -lh'
 alias la='ls -A'
+alias less='less -i -x2 -N -R'
