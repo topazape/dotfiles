@@ -3,6 +3,7 @@ RCPATH        := $(DOTPATH)/rc
 
 CANDIDATES    := $(notdir $(wildcard $(RCPATH)/*))
 EXCLUSIONS    := .DS_Store .git .gitmodules
+MAC_EXC       := gitconfig sqliterc tmux.conf
 TARGETS       := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 
 UNAME         := $(shell uname -s)
@@ -11,16 +12,22 @@ ZSH_DIR       := $(RCPATH)/config/zsh
 ZPREZTO_DIR   := $(ZSH_DIR)/.zprezto
 ZPREZTO_RCDIR := $(ZPREZTO_DIR)/runcoms
 
+ifeq ($(UNAME), Linux)
+	DOTFILES := $(TARGETS)
+else
+	DOTFILES := $(filter-out $(MAC_EXC), $(TARGETS)
+endif
 
 .PHONY: all
 all:
+	@echo $(DOTFILES)
 
 .PHONY: help
 help:
 	@echo "init   => Initialize environment settings."
 	@echo "deploy => Create symlinks to home directory."
 	@echo "clean  => remove the dotfiles."
-	@echo "update => For Github upload."
+	@echo "upload => For Github upload."
 
 .PHONY: prezto-init
 prezto-init:
@@ -66,6 +73,6 @@ all-clean:
 	@$(foreach val, $(ZPREZTO_TARG), rm -vf $(ZSH_DIR)/.$(val);)
 	@rm -rvf $(HOME)/.local
 
-.PHONY: update
+.PHONY: upload
 update:
 	@$(foreach val, $(ZPREZTO_TARG), rm -vf $(ZSH_DIR)/.$(val);)
