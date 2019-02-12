@@ -20,7 +20,6 @@ endif
 
 .PHONY: all
 all:
-	@echo $(DOTFILES)
 
 .PHONY: help
 help:
@@ -74,5 +73,5 @@ all-clean:
 	@rm -rvf $(HOME)/.local
 
 .PHONY: upload
-update:
+upload:
 	@$(foreach val, $(ZPREZTO_TARG), rm -vf $(ZSH_DIR)/.$(val);)
