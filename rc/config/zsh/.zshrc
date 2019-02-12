@@ -45,8 +45,8 @@ fi
 setopt clobber
 
 ## aliases
+alias wget='wget --no-hsts'
 case "$OSTYPE" in
-	alias wget='wget --no-hsts'
 	linux*)
 		alias ls='ls -F --color=auto'
 		alias ll='ls -lh'
