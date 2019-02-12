@@ -45,7 +45,16 @@ fi
 setopt clobber
 
 ## aliases
-alias ls='ls -F --color=auto'
-alias ll='ls -lh'
-alias la='ls -A'
-alias less='less -i -x2 -N -R -M'
+case "$OSTYPE" in
+	linux*)
+		alias ls='ls -F --color=auto'
+		alias ll='ls -lh'
+		alias la='ls -A'
+		alias less='less -i -x2 -N -R -M'
+		;;
+	darwin*)
+		alias ls='ls -F -G'
+		alias ll='ls -lh'
+		alias la='ls -A'
+		;;
+esac
