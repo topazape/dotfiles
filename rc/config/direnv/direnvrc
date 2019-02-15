@@ -5,13 +5,17 @@ use_init () {
 	mkdir -p $VIRTUAL_ENV/local/lib
 }
 
+use_jupyter () {
+	export IPYTHONDIR="$VIRTUAL_ENV/.ipython"
+	export JUPYTER_CONFIG_DIR="$VIRTUAL_ENV/.jupyter"
+	export MPLCONFIGDIR="$VIRTUAL_ENV/.matplotlib"
+}
+
+
 use_rdkit () {
 	export RDBASE="$VIRTUAL_ENV/RDKit"
 	export LD_LIBRARY_PATH="$VIRTUAL_ENV/local/lib:$VIRTUAL_ENV/lib:$RDBASE/lib:/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
 	export PYTHONPATH="$VIRTUAL_ENV/local/lib/python:$PYTHONPATH"
-	export IPYTHONDIR="$VIRTUAL_ENV/.ipython"
-	export JUPYTER_CONFIG_DIR="$VIRTUAL_ENV/.jupyter"
-	export MPLCONFIGDIR="$VIRTUAL_ENV/.matplotlib"
 }
 
 use_gpu () {
