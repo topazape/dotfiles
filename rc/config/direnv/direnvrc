@@ -1,16 +1,10 @@
 #!/bin/sh
 
-use_init () {
-	source ./bin/activate
-	mkdir -p $VIRTUAL_ENV/local/lib
-}
-
 use_jupyter () {
 	export IPYTHONDIR="$VIRTUAL_ENV/.ipython"
 	export JUPYTER_CONFIG_DIR="$VIRTUAL_ENV/.jupyter"
 	export MPLCONFIGDIR="$VIRTUAL_ENV/.matplotlib"
 }
-
 
 use_rdkit () {
 	export RDBASE="$VIRTUAL_ENV/RDKit"

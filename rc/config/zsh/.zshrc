@@ -28,7 +28,7 @@ fi
 
 ### LINUXBREW
 if [ -e ~/.linuxbrew/bin/brew ]; then
-	eval $(~/.linuxbrew/bin/brew shellenv)
+	eval "$(~/.linuxbrew/bin/brew shellenv)"
 	### completions
 	#### site-functions
 	if [ -d ~/.linuxbrew/share/zsh/site-functions ]; then
