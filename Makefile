@@ -71,13 +71,11 @@ update:
 clean:
 	@echo "Remove dotfiles from your home directory."
 	@$(foreach val, $(DOTFILES), rm -vf $(HOME)/.$(val);)
-	@rm -vf $(HOME)/.numpy-site.cfg
 
 .PHONY: all-clean
 all-clean:
 	@$(MAKE) clean
 	@$(foreach val, $(ZPREZTO_TARG), rm -vf $(ZSH_DIR)/.$(val);)
-	@rm -vf $(HOME)/.numpy-site.cfg
 	@rm -rvf $(HOME)/.local
 
 .PHONY: upload
