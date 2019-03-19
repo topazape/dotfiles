@@ -59,6 +59,9 @@ autocmd BufRead,BufNewFile *.tpl setfiletype html
 autocmd FileType python setlocal
 	\ autoindent smartindent
 	\ tabstop=8 softtabstop=4 shiftwidth=4 expandtab smarttab
+if executable('yapf')
+	autocmd FileType python nnoremap <Leader>y :0,$!yapf<Cr>
+endif
 if !exists('$VIRTUAL_ENV')
 	let g:python3_host_prog = expand('$HOME') . '/.linuxbrew/bin/python3'
 else
