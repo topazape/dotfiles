@@ -13,7 +13,10 @@ call plug#end()
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_delay = 0
+let g:deoplete#auto_complete_delay = 1
+"" deoplete-jedi
+let g:deoplete#sources#jedi#statement_length = 100
+let g:deoplete#sources#jedi#show_docstring = 1
 
 
 " devicons

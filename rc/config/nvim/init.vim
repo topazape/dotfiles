@@ -37,7 +37,7 @@ set wildmenu
 set wildmode=full
 
 "" completion
-set completeopt=menu
+set completeopt=menuone,preview
 
 " Deletion
 set backspace=indent,eol,start
