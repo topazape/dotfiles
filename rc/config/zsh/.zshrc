@@ -34,6 +34,10 @@ if [ -e ~/.linuxbrew/bin/brew ]; then
 	if [ -d ~/.linuxbrew/share/zsh/site-functions ]; then
 		fpath=(~/.linuxbrew/share/zsh/site-functions $fpath)
 	fi
+	#### sphinx
+	if [ -d ~/.linuxbrew/opt/sphinx-doc/bin ]; then
+		export PATH="$HOME/.linuxbrew/opt/sphinx-doc/bin:$PATH"
+	fi
 	#### pipenv
 	if type pipenv > /dev/null 2>&1; then
 		eval "$(pipenv --completion)"
