@@ -27,7 +27,7 @@ let g:lsp_diagnostic_echo_curosr = 1
 " lightline
 let g:lightline = {
 	\ 'colorscheme': 'wombat',
-	\}
+	\ }
 
 " devicons
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
