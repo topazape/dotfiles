@@ -2,32 +2,35 @@
 let g:plug_window = 'new'
 
 call plug#begin('~/.local/share/nvim/plugged')
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'prabirshrestha/vim-lsp'
 Plug 'itchyny/lightline.vim'
 Plug 'Yggdroot/indentLine'
-Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
-Plug 'zchee/deoplete-jedi'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
-Plug 'fuenor/qfixhowm'
 call plug#end()
 
-" deoplete
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_delay = 1
-"" deoplete-jedi
-let g:deoplete#sources#jedi#statement_length = 100
-let g:deoplete#sources#jedi#show_docstring = 1
+" vim-lsp
+if executable('pyls')
+	au User lsp_setup call lsp#register_server({
+		\ 'name': 'pyls',
+		\ 'cmd': {server_info->['pyls']},
+		\ 'whitelist': ['python'],
+		\ })
+endif
+"" Signs
+let g:lsp_signs_enabled = 1
+let g:lsp_diagnostic_echo_curosr = 1
 
+" lightline
+let g:lightline = {
+	\ 'colorscheme': 'wombat',
+	\}
 
 " devicons
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
-" QFixHowm
-"" home directory
-let homw_dir = '~/howm'
-"" Set file Extention to markdown
-let howm_filename = '%Y/%m/%Y-%m-%d-%H%M%S.md'
-"" Set filetype to markdowm
-let QFixHowm_FileType = 'markdown'
-"" Set Title Symbol #
-let QFixHowm_Title = '#'
+" colors
+set termguicolors
