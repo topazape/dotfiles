@@ -49,11 +49,11 @@ autocmd FileType html setlocal
 	\ autoindent smartindent
 	\ tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
 autocmd BufRead,BufNewFile *.tpl setfiletype html
-" htmldjango
-autocmd FileType htmldjango setlocal
-	\ autoindent smartindent
-	\ tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
-autocmd BufRead,BufNewFile *.tpl setfiletype html
+
+" cpp
+autocmd FileType cpp setlocal
+	\ autoindent smarindent
+	\ tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab
 
 " python
 autocmd FileType python setlocal
