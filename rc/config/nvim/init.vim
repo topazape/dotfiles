@@ -52,7 +52,7 @@ autocmd BufRead,BufNewFile *.tpl setfiletype html
 
 " cpp
 autocmd FileType cpp setlocal
-	\ autoindent smarindent
+	\ autoindent smartindent
 	\ tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab
 
 " python
