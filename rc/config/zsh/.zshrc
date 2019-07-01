@@ -26,6 +26,15 @@ if type nvidia-smi > /dev/null 2>&1; then
 	export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
 fi
 
+## direnv
+if type direnv > /dev/null 2>&1; then
+	eval "$(direnv hook zsh)"
+fi
+## pipenv
+if type pipenv > /dev/null 2>&1; then
+	eval "$(pipenv --completion)"
+fi
+
 ## EDITOR
 if type nvim > /dev/null 2>&1; then
 	export EDITOR="nvim"
