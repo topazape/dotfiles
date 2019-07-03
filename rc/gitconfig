@@ -3,3 +3,5 @@
 	name = topazape
 [http]
 	postBuffer = 104857600
+[credential]
+	helper = cache
