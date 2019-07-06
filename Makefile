@@ -61,7 +61,6 @@ endif
 .PHONY: deploy
 deploy:
 	@$(foreach val, $(DOTFILES), ln -snfv $(RCPATH)/$(val) $(HOME)/.$(val);)
-	@./gen_numpy-site.cfg.sh
 
 .PHONY: update
 update:
