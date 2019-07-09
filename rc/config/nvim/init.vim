@@ -48,10 +48,9 @@ inoremap <C-d> <DEL>
 autocmd FileType html setlocal
 	\ autoindent smartindent
 	\ tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
-autocmd BufRead,BufNewFile *.tpl setfiletype html
 
 " cpp
-autocmd FileType cpp setlocal
+autocmd FileType c,cc,cpp,cxx,h,hpp setlocal
 	\ autoindent smartindent
 	\ tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab
 
@@ -60,7 +59,7 @@ autocmd FileType python setlocal
 	\ autoindent smartindent
 	\ tabstop=8 softtabstop=4 shiftwidth=4 expandtab smarttab
 if executable('yapf')
-	autocmd FileType python nnoremap <Leader>y :0,$!yapf<Cr>
+	autocmd FileType python nnoremap <Leader>y :0,$!yapf<CR>
 endif
 if !exists('$VIRTUAL_ENV')
 	let g:python3_host_prog = expand('$HOME') . '/.linuxbrew/bin/python3'
