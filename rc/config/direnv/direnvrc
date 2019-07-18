@@ -8,10 +8,12 @@ use_jupyter () {
 
 use_rdkit () {
 	export RDBASE="$VIRTUAL_ENV/RDKit"
-	export LD_LIBRARY_PATH="$RDBASE/lib:$LD_LIBRARY_PATH"
+	export LD_LIBRARY_PATH="$RDBASE/lib":$LD_LIBRARY_PATH
 }
 
 use_gpu () {
+	export CUDA_ROOT="/usr/local/cuda"
+	export PATH="/usr/local/cuda/bin":$PATH
 	export CUDA_VISIBLE_DEVICES=0
-	export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
+	export LD_LIBRARY_PATH="/usr/local/cuda/lib64":$LD_LIBRARY_PATH
 }
