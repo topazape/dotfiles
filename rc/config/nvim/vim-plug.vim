@@ -13,6 +13,7 @@ Plug 'Yggdroot/indentLine'
 " nardtree
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 
 " vim-lsp
@@ -42,4 +43,4 @@ let g:lightline = {
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
 " colors
-set termguicolors
+colorscheme slate
