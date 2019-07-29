@@ -14,6 +14,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 " colorscheme
+Plug 'nanotech/jellybeans.vim'
 call plug#end()
 
 " vim-lsp
@@ -44,3 +45,4 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
 " colorscheme
 set termguicolors
+colorscheme jellybeans

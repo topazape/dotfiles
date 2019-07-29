@@ -23,44 +23,36 @@ set noruler
 set wrap
 set breakindent
 
-"" highlighting
+" Highlighting
 syntax on
 set hlsearch
 set showmatch
 
-"" show control chars
+" show control chars
 set list
 set listchars=tab:→\ ,trail:˽,eol:↓
 
-"" filename completion
+" filename completion
 set wildmenu
 set wildmode=full
 
-"" completion
+" completion
 set completeopt=menuone,preview
 
 " Deletion
 set backspace=indent,eol,start
-"" <DEL> by C-d
+" <DEL> by C-d
 inoremap <C-d> <DEL>
 
-" html
-autocmd FileType html setlocal
-	\ autoindent smartindent
-	\ tabstop=2 softtabstop=2 shiftwidth=2 expandtab smarttab
+" FileType Setting
+filetype plugin on
 
-" cpp
-autocmd FileType c,cc,cpp,cxx,h,hpp setlocal
-	\ autoindent smartindent
-	\ tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab
-
-" python
-autocmd FileType python setlocal
-	\ autoindent smartindent
-	\ tabstop=8 softtabstop=4 shiftwidth=4 expandtab smarttab
+" python-yapf
 if executable('yapf')
 	autocmd FileType python nnoremap <Leader>y :0,$!yapf<CR>
 endif
+
+""" direnv
 if !exists('$VIRTUAL_ENV')
 	let g:python3_host_prog = expand('$HOME') . '/.linuxbrew/bin/python3'
 else
