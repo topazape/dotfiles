@@ -28,21 +28,24 @@ syntax on
 set hlsearch
 set showmatch
 
-" show control chars
+" Show control chars
 set list
 set listchars=tab:→\ ,trail:˽,eol:↓
 
-" filename completion
+" Filename completion
 set wildmenu
 set wildmode=full
 
-" completion
+" Completion
 set completeopt=menuone,preview
 
 " Deletion
 set backspace=indent,eol,start
 " <DEL> by C-d
 inoremap <C-d> <DEL>
+
+" Hide -- INSERT --
+set noshowmode
 
 " FileType Setting
 filetype plugin on
