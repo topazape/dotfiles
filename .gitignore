@@ -1,4 +1,7 @@
 /rc/config/direnv/allow
 /rc/config/zsh/
+/rc/config/lftp/
+/rc/config/PandasProfiling/
+/rc/config/pudb/
 !/rc/config/zsh/.zpreztorc
 !/rc/config/zsh/.zshrc
