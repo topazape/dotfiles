@@ -29,8 +29,7 @@ endif
 
 "" Signs
 let g:lsp_signs_enabled = 1
-let g:lsp_diagnostic_echo_curosr = 1
-
+let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_signs_error = {'text': '✗'}
 let g:lsp_signs_warning = {'text': '‼'}
 let g:asyncomplete_completion_delay = 1
