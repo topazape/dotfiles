@@ -43,5 +43,4 @@ let g:lightline = {
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
 " colorscheme
-set termguicolors
 colorscheme jellybeans
