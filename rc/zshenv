@@ -17,9 +17,6 @@ if [ -d $HOME/bin ]; then
 	export PATH=$HOME/bin:$PATH
 fi
 
-# GO
-export GOPATH=$HOME/src/go
-
 ### LINUXBREW
 if [ -e ~/.linuxbrew/bin/brew ]; then
 	eval "$(~/.linuxbrew/bin/brew shellenv)"
