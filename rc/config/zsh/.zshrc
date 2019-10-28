@@ -43,12 +43,18 @@ fi
 ## golang
 if type go > /dev/null 2>&1; then
 	GODIR=$HOME/.go
+	GOWORKDIR=$HOME/src/go/src
 	if [ -d $GODIR ]; then
 		:
 	else
 		mkdir $GODIR
 	fi
-	export GOPATH=$GODIR
+	if [ -d $GOWORKDIR ]; then
+		:
+	else
+		mkdir -p $GOWORKDIR
+	fi
+	export GOPATH=$GODIR:$GOWORKDIR
 	export PATH=$(go env GOPATH)/bin:$PATH
 fi
 
