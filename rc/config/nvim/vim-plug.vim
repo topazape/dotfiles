@@ -19,13 +19,26 @@ call plug#end()
 
 " vim-lsp
 "" python
-if executable('pyls')
-	au User lsp_setup call lsp#register_server({
-		\ 'name': 'pyls',
-		\ 'cmd': {server_info->['pyls']},
-		\ 'whitelist': ['python'],
-		\ })
-endif
+augroup LspPython
+	if executable('pyls')
+		autocmd User lsp_setup call lsp#register_server({
+			\ 'name': 'pyls',
+			\ 'cmd': {server_info->['pyls']},
+			\ 'whitelist': ['python'],
+			\ })
+	endif
+augroup End
+
+augroup LspGo
+	if executable('gopls')
+		autocmd User lsp_setup call lsp#register_server({
+			\ 'name': 'go-lang',
+			\ 'cmd': {server_info->['gopls']},
+			\ 'whitelist': ['go'],
+			\ })
+		autocmd FileType go setlocal omnifunc=lsp#complete
+	endif
+augroup End
 
 "" Signs
 let g:lsp_signs_enabled = 1

@@ -40,6 +40,18 @@ if type nvim > /dev/null 2>&1; then
 	export EDITOR="nvim"
 fi
 
+## golang
+if type go > /dev/null 2>&1; then
+	GODIR=$HOME/.go
+	if [ -d $GODIR ]; then
+		:
+	else
+		mkdir $GODIR
+	fi
+	export GOPATH=$GODIR
+	export PATH=$(go env GOPATH)/bin:$PATH
+fi
+
 ## zsh-prezto
 ### disable safe redirection
 setopt clobber
