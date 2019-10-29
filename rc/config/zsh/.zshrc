@@ -55,7 +55,7 @@ if type go > /dev/null 2>&1; then
 		mkdir -p $GOWORKDIR
 	fi
 	export GOPATH=$GODIR:$GOWORKDIR
-	export PATH=$(go env GOPATH)/bin:$PATH
+	export PATH=$GODIR/bin:$PATH
 fi
 
 ## zsh-prezto
