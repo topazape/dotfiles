@@ -13,11 +13,12 @@ export LS_COLORS
 
 export ZDOTDIR=$HOME/.config/zsh
 
+# PATH
 if [ -d $HOME/bin ]; then
 	export PATH=$HOME/bin:$PATH
 fi
 
-### LINUXBREW
+## LINUXBREW
 if [ -e ~/.linuxbrew/bin/brew ]; then
 	eval "$(~/.linuxbrew/bin/brew shellenv)"
 	### completions
@@ -25,4 +26,22 @@ if [ -e ~/.linuxbrew/bin/brew ]; then
 	if [ -d ~/.linuxbrew/share/zsh/site-functions ]; then
 		fpath=(~/.linuxbrew/share/zsh/site-functions $fpath)
 	fi
+fi
+
+## golang
+if type go > /dev/null 2>&1; then
+	GODIR=$HOME/.go
+	GOWORKDIR=$HOME/src/go/src
+	if [ -d $GODIR ]; then
+		:
+	else
+		mkdir $GODIR
+	fi
+	if [ -d $GOWORKDIR ]; then
+		:
+	else
+		mkdir -p $GOWORKDIR
+	fi
+	export GOPATH=$GODIR:$GOWORKDIR
+	export PATH=$GODIR/bin:$PATH
 fi
