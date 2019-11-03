@@ -42,6 +42,7 @@ if type go > /dev/null 2>&1; then
 	else
 		mkdir -p $GOWORKDIR
 	fi
+	export GO111MODULE=on
 	export GOPATH=$GODIR:$GOWORKDIR
 	export PATH=$GODIR/bin:$PATH
 fi
