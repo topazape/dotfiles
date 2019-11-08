@@ -10,6 +10,8 @@ Plug 'prabirshrestha/vim-lsp'
 " markdown
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+" toml
+Plug 'cespare/vim-toml'
 " decoration
 Plug 'itchyny/lightline.vim'
 Plug 'Yggdroot/indentLine'
