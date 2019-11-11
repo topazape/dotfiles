@@ -27,7 +27,6 @@ help:
 	@echo "deploy => Create symlinks to home directory."
 	@echo "clean  => remove the dotfiles."
 	@echo "update => update prezto"
-	@echo "upload => For Github upload."
 
 .PHONY: prezto-init
 prezto-init:
@@ -76,7 +75,3 @@ all-clean:
 	@$(MAKE) clean
 	@$(foreach val, $(ZPREZTO_TARG), rm -vf $(ZSH_DIR)/.$(val);)
 	@rm -rvf $(HOME)/.local
-
-.PHONY: upload
-upload:
-	@$(foreach val, $(ZPREZTO_TARG), rm -vf $(ZSH_DIR)/.$(val);)
