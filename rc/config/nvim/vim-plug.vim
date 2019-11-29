@@ -66,6 +66,8 @@ let g:vim_markdown_toml_frontmatter = 1
 let g:vim_markdown_json_frontmatter = 1
 "" disable foliding
 let g:vim_markdown_folding_disabled = 1
+"" strikethrough
+let g:vim_markdown_strikethrough = 1
 
 " devicons
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
