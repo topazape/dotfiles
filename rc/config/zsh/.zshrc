@@ -53,6 +53,7 @@ case "$OSTYPE" in
 		alias ll='ls -lh'
 		alias la='ls -A'
 		alias less='less -i -x2 -N -R -M'
+		alias vim=$EDITOR
 		;;
 	darwin*)
 		alias ls='ls -F -G'
