@@ -14,5 +14,5 @@ use_gpu () {
 	export CUDA_ROOT="/usr/local/cuda"
 	export PATH="/usr/local/cuda/bin":$PATH
 	export CUDA_VISIBLE_DEVICES=0
-	export LD_LIBRARY_PATH="/usr/local/cuda/lib64":$LD_LIBRARY_PATH
+	export LD_LIBRARY_PATH="/usr/local/cuda/lib64":"/usr/local/cuda/extras/CUPTI/lib64":$LD_LIBRARY_PATH
 }
