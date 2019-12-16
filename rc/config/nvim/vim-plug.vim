@@ -31,6 +31,7 @@ augroup LspPython
 			\ 'cmd': {server_info->['pyls']},
 			\ 'whitelist': ['python'],
 			\ })
+		autocmd Filetype python setlocal omnifunc=lsp#complete
 	endif
 augroup End
 
