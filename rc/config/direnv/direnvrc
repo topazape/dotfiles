@@ -6,7 +6,6 @@ use_jupyter () {
 }
 
 use_rdkit () {
-	export RDBASE="$PWD/RDKit"
 	export LD_LIBRARY_PATH="$VIRTUAL_ENV/lib":"$HOME/.linuxbrew/lib":$LD_LIBRARY_PATH
 }
 
