@@ -30,10 +30,6 @@ fi
 if type direnv > /dev/null 2>&1; then
 	eval "$(direnv hook zsh)"
 fi
-## pipenv
-if type pipenv > /dev/null 2>&1; then
-	eval "$(pipenv --completion)"
-fi
 
 ## EDITOR
 if type nvim > /dev/null 2>&1; then
