@@ -19,7 +19,7 @@ if [ "$(uname -s)" = "Linux" ]; then
 		export HTTP_PROXY="172.20.131.3:8065"
 		export http_proxy="http://172.20.131.3:8065"
 		export HTTPS_PROXY="172.20.131.3:8065"
-		export https_proxy="http://172.20.131.3:8065"
+		export https_proxy="https://172.20.131.3:8065"
 	fi
 fi
 ## less
