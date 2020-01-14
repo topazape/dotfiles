@@ -1,10 +1,10 @@
 if [ "$(uname -s)" = 'Linux' ]; then
 	export LANG=en_US.UTF-8
 	if [ -e /etc/lsb-release ]; then
-		export HTTP_PROXY="http://172.20.131.3:8065"
-		export http_proxy="http://172.20.131.3:8065"
-		export HTTPS_PROXY="http://172.20.131.3:8065"
-		export https_proxy="http://172.20.131.3:8065"
+		export HTTP_PROXY="172.20.131.3:8065"
+		export http_proxy="172.20.131.3:8065"
+		export HTTPS_PROXY="172.20.131.3:8065"
+		export https_proxy="172.20.131.3:8065"
 	fi
 fi
 
@@ -18,13 +18,17 @@ if [ -d $HOME/bin ]; then
 	export PATH=$HOME/bin:$PATH
 fi
 
+if [ -d "$HOME/.local/bin" ]; then
+	export PATH="HOME/.local/bin":$PATH
+fi
+
 ## LINUXBREW
-if [ -e ~/.linuxbrew/bin/brew ]; then
-	eval "$(~/.linuxbrew/bin/brew shellenv)"
+if [ -e "$HOME/.linuxbrew/bin/brew" ]; then
+	eval "$($HOME/.linuxbrew/bin/brew shellenv)"
 	### completions
 	#### site-functions
-	if [ -d ~/.linuxbrew/share/zsh/site-functions ]; then
-		fpath=(~/.linuxbrew/share/zsh/site-functions $fpath)
+	if [ -d "$HOME/.linuxbrew/share/zsh/site-functions" ]; then
+		fpath=("$HOME/.linuxbrew/share/zsh/site-functions" $fpath)
 	fi
 fi
 
