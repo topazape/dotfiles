@@ -19,7 +19,6 @@ if [ -e "$HOME/.linuxbrew/bin/brew" ]; then
 		fpath=("$HOME/.linuxbrew/share/zsh/site-functions" $fpath)
 	fi
 fi
-
 ## golang
 if type go > /dev/null 2>&1; then
 	GODIR="$HOME/.go"
