@@ -50,11 +50,6 @@ set noshowmode
 " FileType Setting
 filetype plugin on
 
-" python-yapf
-if executable('yapf')
-	autocmd FileType python nnoremap <Leader>y :0,$!yapf<CR>
-endif
-
 """ direnv
 if !exists('$VIRTUAL_ENV')
 	let g:python3_host_prog = expand('$HOME') . '/.linuxbrew/bin/python3'
