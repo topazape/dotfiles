@@ -30,6 +30,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 ### XDG_ZSH_HISTORY
 export HISTFILE="$XDG_DATA_HOME/zsh/history"
+export SAVEHIST=100000
 ## CUDA
 if type nvidia-smi > /dev/null 2>&1; then
 	export __GL_SHADER_DISK_CACHE_PATH="$XDG_CACHE_HOME/nv"
