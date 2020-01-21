@@ -11,16 +11,16 @@ layout_poetry() {
   PATH_add "$VENV"
 }
 
-use_jupyter () {
+use_jupyter() {
 	export IPYTHONDIR="$VIRTUAL_ENV/.ipython"
 	export JUPYTER_CONFIG_DIR="$VIRTUAL_ENV/.jupyter"
 }
 
-use_rdkit () {
+use_rdkit() {
 	export LD_LIBRARY_PATH="$VIRTUAL_ENV/lib":"$HOME/.linuxbrew/lib":$LD_LIBRARY_PATH
 }
 
-use_gpu () {
+use_gpu() {
 	export CUDA_ROOT="/usr/local/cuda"
 	export PATH="/usr/local/cuda/bin":$PATH
 	export CUDA_VISIBLE_DEVICES=$1
