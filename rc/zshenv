@@ -3,8 +3,8 @@ export LS_COLORS
 
 # PATH
 ## homedir
-if [ -d $HOME/bin ]; then
-	export PATH=$HOME/bin:$PATH
+if [ -d "$HOME/bin" ]; then
+	export PATH="$HOME/bin":$PATH
 fi
 ## pipx
 if [ -d "$HOME/.local/bin" ]; then
