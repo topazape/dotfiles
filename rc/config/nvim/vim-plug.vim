@@ -23,7 +23,7 @@ Plug 'nanotech/jellybeans.vim'
 call plug#end()
 
 " vim-lsp
-let g:lsp_log_file = expand('~/.vim-lsp.log')
+" let g:lsp_log_file = expand('~/.vim-lsp.log')
 "" lsp-Signs
 let g:lsp_signs_enabled = 1
 let g:lsp_diagnostics_echo_cursor = 1
