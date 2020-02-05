@@ -24,35 +24,36 @@ call plug#end()
 
 " vim-lsp
 "" lsp-python
-augroup LspPython
-	if executable('pyls')
+if executable('pyls')
+	augroup LspPython
 		autocmd User lsp_setup call lsp#register_server({
 			\ 'name': 'pyls',
 			\ 'cmd': {server_info->['pyls']},
 			\ 'whitelist': ['python'],
 			\ })
 		autocmd Filetype python setlocal omnifunc=lsp#complete
-	endif
-augroup End
+	augroup End
+endif
 
 "" lsp-golang
-augroup LspGo
-	if executable('gopls')
+if executable('gopls')
+	augroup LspGo
+		au!
 		autocmd User lsp_setup call lsp#register_server({
 			\ 'name': 'go-lang',
 			\ 'cmd': {server_info->['gopls']},
 			\ 'whitelist': ['go'],
 			\ })
 		autocmd FileType go setlocal omnifunc=lsp#complete
-	endif
-augroup End
+	augroup End
+endif
 
 "" lsp-Signs
 let g:lsp_signs_enabled = 1
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_signs_error = {'text': '✗'}
 let g:lsp_signs_warning = {'text': '‼'}
-let g:asyncomplete_completion_delay = 1
+let g:lsp_highlight_references_enabled = 1
 
 " lightline
 let g:lightline = {

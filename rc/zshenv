@@ -19,22 +19,16 @@ if [ -e "$HOME/.linuxbrew/bin/brew" ]; then
 		fpath=("$HOME/.linuxbrew/share/zsh/site-functions" $fpath)
 	fi
 fi
-## golang
+# golang
 if type go > /dev/null 2>&1; then
+	export GO111MODULE=on
 	GODIR="$HOME/.go"
-	GOWORKDIR="$HOME/src/go"
 	if [ -d $GODIR ]; then
 		:
 	else
 		mkdir $GODIR
 	fi
-	if [ -d $GOWORKDIR ]; then
-		:
-	else
-		mkdir -p $GOWORKDIR
-	fi
-	export GO111MODULE=on
-	export GOPATH=$GODIR:$GOWORKDIR
+	export GOPATH=$GODIR
 	export PATH="$GODIR/bin":$PATH
 fi
 
