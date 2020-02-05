@@ -23,6 +23,12 @@ Plug 'nanotech/jellybeans.vim'
 call plug#end()
 
 " vim-lsp
+"" lsp-Signs
+let g:lsp_signs_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_signs_error = {'text': '✗'}
+let g:lsp_signs_warning = {'text': '‼'}
+let g:lsp_highlight_references_enabled = 1
 "" lsp-python
 if executable('pyls')
 	augroup LspPython
@@ -34,11 +40,9 @@ if executable('pyls')
 		autocmd Filetype python setlocal omnifunc=lsp#complete
 	augroup End
 endif
-
 "" lsp-golang
 if executable('gopls')
 	augroup LspGo
-		au!
 		autocmd User lsp_setup call lsp#register_server({
 			\ 'name': 'go-lang',
 			\ 'cmd': {server_info->['gopls']},
@@ -47,13 +51,6 @@ if executable('gopls')
 		autocmd FileType go setlocal omnifunc=lsp#complete
 	augroup End
 endif
-
-"" lsp-Signs
-let g:lsp_signs_enabled = 1
-let g:lsp_diagnostics_echo_cursor = 1
-let g:lsp_signs_error = {'text': '✗'}
-let g:lsp_signs_warning = {'text': '‼'}
-let g:lsp_highlight_references_enabled = 1
 
 " lightline
 let g:lightline = {
