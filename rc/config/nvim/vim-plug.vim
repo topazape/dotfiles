@@ -17,7 +17,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'Yggdroot/indentLine'
 " nardtree
 Plug 'scrooloose/nerdtree'
-Plug 'ryanoasis/vim-devicons'
 " colorscheme
 Plug 'nanotech/jellybeans.vim'
 call plug#end()
