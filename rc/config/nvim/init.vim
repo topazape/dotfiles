@@ -1,5 +1,3 @@
-set nocompatible
-
 " Mouse OFF
 set mouse=
 
