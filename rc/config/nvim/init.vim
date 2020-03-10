@@ -50,7 +50,7 @@ set noshowmode
 " FileType Setting
 filetype plugin on
 
-""" direnv
+" for Python Environment
 if !exists('$VIRTUAL_ENV')
 	let g:python3_host_prog = expand('$HOME') . '/.linuxbrew/bin/python3'
 else
