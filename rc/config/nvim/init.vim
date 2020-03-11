@@ -20,6 +20,7 @@ set number
 set noruler
 set wrap
 set breakindent
+set termguicolors
 
 " Highlighting
 syntax on
