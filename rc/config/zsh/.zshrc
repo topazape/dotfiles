@@ -14,7 +14,7 @@ fi
 # Customize to your needs...
 ## proxy
 if [ "$(uname -s)" = "Linux" ]; then
-	export LANG=en_US.UTF-8
+	export LANG=C.UTF-8
 	if [ -e /etc/lsb-release ]; then
 		export HTTP_PROXY="172.20.131.3:8065"
 		export http_proxy="http://172.20.131.3:8065"
@@ -57,7 +57,6 @@ case "$OSTYPE" in
 		alias ll='ls -lh'
 		alias la='ls -A'
 		alias less='less -i -x2 -N -R -M'
-		alias vim=$EDITOR
 		;;
 	darwin*)
 		alias ls='ls -F -G'
