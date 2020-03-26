@@ -22,8 +22,6 @@ if [ "$(uname -s)" = "Linux" ]; then
 		export https_proxy="https://172.20.131.3:8065"
 	fi
 fi
-## less
-export LESSHISTFILE=-
 ## XDG
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -31,6 +29,15 @@ export XDG_DATA_HOME="$HOME/.local/share"
 ### XDG_ZSH_HISTORY
 export HISTFILE="$XDG_DATA_HOME/zsh/history"
 export SAVEHIST=100000
+
+## less
+export LESSHISTFILE=-
+## completions
+if type brew > /dev/null 2>&1; then
+	FPATH="$(brew --prefix)/share/zsh/site-functions":$FPATH
+	autoload -Uz compinit
+	compinit
+fi
 ## CUDA
 if type nvidia-smi > /dev/null 2>&1; then
 	export __GL_SHADER_DISK_CACHE_PATH="$XDG_CACHE_HOME/nv"
@@ -44,7 +51,6 @@ fi
 if type nvim > /dev/null 2>&1; then
 	export EDITOR="nvim"
 fi
-
 ## zsh-prezto
 ### disable safe redirection
 setopt clobber
