@@ -49,10 +49,10 @@ set noshowmode
 filetype plugin on
 
 " for Python Environment
-if !exists('$VIRTUAL_ENV')
-	let g:python3_host_prog = expand('$HOME') . '/.linuxbrew/bin/python3'
-else
+if exists('$VIRTUAL_ENV')
 	let g:python3_host_prog = expand('$VIRTUAL_ENV') . '/bin/python3'
+else
+	let g:python3_host_prog = expand('$HOME') . '/.linuxbrew/bin/python3'
 endif
 
 " TERMINAL MODE
