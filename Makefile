@@ -3,7 +3,7 @@ RCPATH        := $(DOTPATH)/rc
 
 CANDIDATES    := $(notdir $(wildcard $(RCPATH)/*))
 EXCLUSIONS    := .DS_Store .git .gitmodules
-MAC_EXC       := gitconfig sqliterc tmux.conf numpy-site.cfg
+MAC_EXC       := sqliterc tmux.conf numpy-site.cfg
 TARGETS       := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 
 UNAME         := $(shell uname -s)
