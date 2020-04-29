@@ -61,7 +61,9 @@ fi
 setopt clobber
 
 ## aliases
-alias wget='wget --no-hsts'
+if type wget > /dev/null 2>&1; then
+	alias wget='wget --no-hsts'
+fi
 case "$OSTYPE" in
 	linux*)
 		alias ls='ls -F --color=auto'
