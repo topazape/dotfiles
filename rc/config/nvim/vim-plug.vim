@@ -7,9 +7,6 @@ Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
-" markdown
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
 " toml
 Plug 'cespare/vim-toml'
 " decoration
@@ -61,17 +58,6 @@ endif
 let g:lightline = {
 	\ 'colorscheme': 'wombat',
 	\ }
-
-" vim-markdowm
-"" enable extensions
-let g:vim_markdown_math = 1
-let g:vim_markdown_frontmatter = 1
-let g:vim_markdown_toml_frontmatter = 1
-let g:vim_markdown_json_frontmatter = 1
-"" disable foliding
-let g:vim_markdown_folding_disabled = 1
-"" strikethrough
-let g:vim_markdown_strikethrough = 1
 
 " devicons
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
