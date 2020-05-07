@@ -19,6 +19,9 @@ Plug 'Yggdroot/indentLine'
 Plug 'scrooloose/nerdtree'
 " colorscheme
 Plug 'nanotech/jellybeans.vim'
+" dadbod
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
 call plug#end()
 
 " vim-lsp
