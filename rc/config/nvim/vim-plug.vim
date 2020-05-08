@@ -34,6 +34,7 @@ let g:lsp_highlight_references_enabled = 1
 "" lsp-python
 if executable('pyls')
 	augroup LspPython
+		autocmd!
 		autocmd User lsp_setup call lsp#register_server({
 			\ 'name': 'pyls',
 			\ 'cmd': {server_info->['pyls']},
@@ -45,6 +46,7 @@ endif
 "" lsp-golang
 if executable('gopls')
 	augroup LspGo
+		autocmd!
 		autocmd User lsp_setup call lsp#register_server({
 			\ 'name': 'go-lang',
 			\ 'cmd': {server_info->['gopls']},
@@ -53,6 +55,9 @@ if executable('gopls')
 		autocmd FileType go setlocal omnifunc=lsp#complete
 	augroup End
 endif
+
+" vim-dadbod-ui
+autocmd FileType dbui setlocal shiftwidth=2
 
 " lightline
 let g:lightline = {
