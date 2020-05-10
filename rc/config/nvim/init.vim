@@ -45,6 +45,11 @@ inoremap <C-d> <DEL>
 " Hide -- INSERT --
 set noshowmode
 
+" Register
+"" do not store in register by deletion
+nnoremap x "_x
+nnoremap dd "_dd
+
 " FileType Setting
 filetype plugin on
 
