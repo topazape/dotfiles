@@ -52,13 +52,18 @@ nnoremap dd "_dd
 
 " FileType Setting
 filetype plugin on
+" vim script
+autocmd FileType vim setlocal tabstop=4 shiftwidth=4 expandtab
+" sql
+autocmd FileType sql setlocal tabstop=4 shiftwidth=4 expandtab
 
 " for Python Environment
 if exists('$VIRTUAL_ENV')
-	let g:python3_host_prog = expand('$VIRTUAL_ENV') . '/bin/python3'
+    let g:python3_host_prog = expand('$VIRTUAL_ENV') . '/bin/python3'
 else
-	let g:python3_host_prog = expand('$HOME') . '/.linuxbrew/bin/python3'
+    let g:python3_host_prog = expand('$HOME') . '/.linuxbrew/bin/python3'
 endif
+
 
 " TERMINAL MODE
 tnoremap <silent> <ESC> <C-\><C-n>
