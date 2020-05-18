@@ -7,6 +7,7 @@ Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'mattn/vim-lsp-icons'
 " toml
 Plug 'cespare/vim-toml'
 " decoration
