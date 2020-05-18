@@ -76,8 +76,5 @@ let g:lightline = {
     \ 'colorscheme': 'wombat',
     \ }
 
-" devicons
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-
 " colorscheme
 colorscheme jellybeans
