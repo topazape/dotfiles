@@ -74,11 +74,11 @@ autocmd FileType dbui setlocal shiftwidth=2
 let g:lightline = {
     \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
     \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
-    \ 'colorscheme': 'nord',
+    \ 'colorscheme': 'wombat',
     \ }
 
 " Colors
 "" colorscheme
-"colorscheme jellybeans
+colorscheme jellybeans
 "colorscheme iceberg
-colorscheme nord
+"colorscheme nord
