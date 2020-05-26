@@ -9,7 +9,6 @@ set fileformats=unix,dos,mac
 " No files
 set nobackup
 set noswapfile
-set viminfo=
 
 " Search
 set ignorecase
@@ -48,6 +47,7 @@ set noshowmode
 " Register
 "" do not store in register by deletion
 nnoremap x "_x
+"" but dd can store
 "nnoremap dd "_dd
 
 " FileType Setting
@@ -64,8 +64,7 @@ else
     let g:python3_host_prog = expand('$HOME') . '/.linuxbrew/bin/python3'
 endif
 
-
-" TERMINAL MODE
+" Terminal Mode
 tnoremap <silent> <ESC> <C-\><C-n>
 
 " load plugins
