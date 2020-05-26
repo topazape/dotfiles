@@ -18,6 +18,7 @@ Plug 'scrooloose/nerdtree'
 " colorscheme
 Plug 'nanotech/jellybeans.vim'
 Plug 'cocopon/iceberg.vim'
+Plug 'arcticicestudio/nord-vim'
 " dadbod
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
@@ -73,12 +74,11 @@ autocmd FileType dbui setlocal shiftwidth=2
 let g:lightline = {
     \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
     \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
-    \ 'colorscheme': 'iceberg',
+    \ 'colorscheme': 'nord',
     \ }
 
 " Colors
-set background=dark
-set termguicolors
 "" colorscheme
 "colorscheme jellybeans
-colorscheme iceberg
+"colorscheme iceberg
+colorscheme nord
