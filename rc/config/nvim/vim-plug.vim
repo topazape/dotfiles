@@ -53,18 +53,6 @@ if executable('gopls')
         autocmd FileType go setlocal omnifunc=lsp#complete
     augroup End
 endif
-" lsp-sql
-if executable('sqls')
-    augroup LspSqls
-        autocmd!
-        autocmd User lsp_setup call lsp#register_server({
-            \ 'name': 'sqls',
-            \ 'cmd': {server_info->['sqls']},
-            \ 'whitelist': ['sql'],
-            \ })
-        autocmd FileType sql setlocal omnifunc=lsp#complete
-    augroup End
-endif
 
 " vim-dadbod-ui
 autocmd FileType dbui setlocal shiftwidth=2
