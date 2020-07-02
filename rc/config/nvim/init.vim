@@ -33,9 +33,6 @@ set listchars=tab:→\ ,trail:˽,eol:¬
 set wildmenu
 set wildmode=full
 
-" Completion
-set completeopt=menuone,preview
-
 " Deletion
 set backspace=indent,eol,start
 " <DEL> by C-d

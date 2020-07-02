@@ -6,7 +6,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'mattn/vim-lsp-icons'
 " toml
 Plug 'cespare/vim-toml'
 " decoration
@@ -24,11 +23,14 @@ Plug 'kristijanhusak/vim-dadbod-ui'
 call plug#end()
 
 " vim-lsp
-"" lsp-debug
-" let g:lsp_log_verbose = 1
-" let g:lsp_log_file = expand('~/.vim-lsp.log')
-"" lsp-signs
+let g:lsp_diagnostics_enabled = 1
 let g:lsp_diagnostics_echo_cursor = 1
+let g:asyncomplete_auto_popup = 1
+let g:asyncomplete_popup_delay = 100
+let g:lsp_text_edit_enabled = 1
+set completeopt=menuone,noinsert,noselect,preview
+inoremap <expr><CR> pumvisible() ? "<C-y>" : "<CR>"
+"autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 "" lsp-python
 if executable('pyls')
     augroup LspPython
