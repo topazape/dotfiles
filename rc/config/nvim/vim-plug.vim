@@ -30,7 +30,6 @@ let g:asyncomplete_popup_delay = 100
 let g:lsp_text_edit_enabled = 1
 set completeopt=menuone,noinsert,noselect,preview
 inoremap <expr><CR> pumvisible() ? "<C-y>" : "<CR>"
-"autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 "" lsp-python
 if executable('pyls')
     augroup LspPython
@@ -51,6 +50,15 @@ if executable('gopls')
             \ 'name': 'go-lang',
             \ 'cmd': {server_info->['gopls']},
             \ 'whitelist': ['go'],
+            \ 'workspace_config': {'gopls': {
+            \    'staticcheck': v:true,
+            \    'completeUnimported': v:true,
+            \    'caseSensitiveCompletion': v:true,
+            \    'usePlaceholders': v:true,
+            \    'completionDocumentation': v:true,
+            \    'watchFileChanges': v:true,
+            \    'hoverKind': 'SingleLine',
+            \   }},
             \ })
         autocmd FileType go setlocal omnifunc=lsp#complete
     augroup End
