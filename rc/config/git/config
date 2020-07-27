@@ -7,3 +7,5 @@
 	helper = cache
 [merge]
 	conflictstyle = diff3
+[push]
+	default = simple

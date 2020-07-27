@@ -2,6 +2,14 @@
 let g:plug_window = 'new'
 
 call plug#begin('~/.local/share/nvim/plugged')
+" useful plugins
+"" comment out
+Plug 'tyru/caw.vim'
+"" fuzzy finder
+Plug 'ctrlpvim/ctrlp.vim'
+"" lexima
+Plug 'mattn/vim-lexiv'
+
 " lsp
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
@@ -23,6 +31,7 @@ Plug 'kristijanhusak/vim-dadbod-ui'
 call plug#end()
 
 " vim-lsp
+let g:lsp_highlight_references_enabled = 1
 let g:lsp_diagnostics_enabled = 1
 let g:lsp_diagnostics_echo_cursor = 1
 let g:asyncomplete_auto_popup = 1
