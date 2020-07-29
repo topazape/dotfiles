@@ -31,12 +31,11 @@ Plug 'kristijanhusak/vim-dadbod-ui'
 call plug#end()
 
 " vim-lsp
+nnoremap <Leader>ff :LspDocumentFormat<CR>
+let g:lsp_signs_error = {'text': 'x'}
+let g:lsp_signs_warning = {'text': '!'}
+let g:lsp_textprop_enabled = 1
 let g:lsp_highlight_references_enabled = 1
-let g:lsp_diagnostics_enabled = 1
-let g:lsp_diagnostics_echo_cursor = 1
-let g:asyncomplete_auto_popup = 1
-let g:asyncomplete_popup_delay = 100
-let g:lsp_text_edit_enabled = 1
 set completeopt=menuone,noinsert,noselect,preview
 inoremap <expr><CR> pumvisible() ? "<C-y>" : "<CR>"
 "" lsp-python
@@ -59,15 +58,6 @@ if executable('gopls')
             \ 'name': 'go-lang',
             \ 'cmd': {server_info->['gopls']},
             \ 'whitelist': ['go'],
-            \ 'workspace_config': {'gopls': {
-            \    'staticcheck': v:true,
-            \    'completeUnimported': v:true,
-            \    'caseSensitiveCompletion': v:true,
-            \    'usePlaceholders': v:true,
-            \    'completionDocumentation': v:true,
-            \    'watchFileChanges': v:true,
-            \    'hoverKind': 'SingleLine',
-            \   }},
             \ })
         autocmd FileType go setlocal omnifunc=lsp#complete
     augroup End
@@ -86,5 +76,3 @@ let g:lightline = {
 " Colors
 "" colorscheme
 colorscheme jellybeans
-"colorscheme iceberg
-"colorscheme nord
