@@ -6,7 +6,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 "" comment out
 Plug 'tyru/caw.vim'
 "" fuzzy finder
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'junegunn/fzf'
 "" lexima
 Plug 'mattn/vim-lexiv'
 
@@ -19,8 +19,6 @@ Plug 'cespare/vim-toml'
 " decoration
 Plug 'itchyny/lightline.vim'
 Plug 'Yggdroot/indentLine'
-" nardtree
-Plug 'scrooloose/nerdtree'
 " colorscheme
 Plug 'nanotech/jellybeans.vim'
 Plug 'cocopon/iceberg.vim'
@@ -32,12 +30,11 @@ call plug#end()
 
 " vim-lsp
 nnoremap <Leader>ff :LspDocumentFormat<CR>
+let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_signs_error = {'text': 'x'}
 let g:lsp_signs_warning = {'text': '!'}
 let g:lsp_textprop_enabled = 1
 let g:lsp_highlight_references_enabled = 1
-set completeopt=menuone,noinsert,noselect,preview
-inoremap <expr><CR> pumvisible() ? "<C-y>" : "<CR>"
 "" lsp-python
 if executable('pyls')
     augroup LspPython
