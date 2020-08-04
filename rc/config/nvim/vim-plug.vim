@@ -6,7 +6,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 "" comment out
 Plug 'tyru/caw.vim'
 "" fuzzy finder
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 "" lexima
 Plug 'mattn/vim-lexiv'
 
@@ -28,8 +29,15 @@ Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 call plug#end()
 
+" fzf
+nnoremap [FZF] <Nop>
+nmap <Leader>f [FZF]
+nnoremap [FZF]f :<C-u>Files<CR>
+nnoremap [FZF]g :<C-u>GFiles<CR>
+nnoremap [FZF]b :<C-u>Buffers<CR>
+
 " vim-lsp
-nnoremap <Leader>ff :LspDocumentFormat<CR>
+nnoremap <Leader>lf :LspDocumentFormat<CR>
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_signs_error = {'text': 'x'}
 let g:lsp_signs_warning = {'text': '!'}
