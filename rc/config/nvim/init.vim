@@ -27,7 +27,8 @@ set showmatch
 
 " Show control chars
 set list
-set listchars=tab:→\ ,trail:˽,eol:¬
+set listchars=tab:›\ ,trail:˽,eol:¬,extends:»,precedes:«,nbsp:·
+
 
 " Filename completion
 set wildmenu
