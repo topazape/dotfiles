@@ -64,6 +64,7 @@ if executable('gopls')
             \ 'cmd': {server_info->['gopls']},
             \ 'whitelist': ['go'],
             \ })
+        autocmd BufWritePre *.go LspDocumentFormatSync
         autocmd FileType go setlocal omnifunc=lsp#complete
     augroup End
 endif
