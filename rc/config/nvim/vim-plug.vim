@@ -36,6 +36,10 @@ nnoremap [FZF]f :<C-u>Files<CR>
 nnoremap [FZF]g :<C-u>GFiles<CR>
 nnoremap [FZF]b :<C-u>Buffers<CR>
 
+
+" asyncomplete
+set completeopt=menuone,noinsert,noselect,preview
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 " vim-lsp
 nnoremap <Leader>lf :LspDocumentFormat<CR>
 let g:lsp_diagnostics_echo_cursor = 1
@@ -62,6 +66,11 @@ if executable('gopls')
         autocmd User lsp_setup call lsp#register_server({
             \ 'name': 'go-lang',
             \ 'cmd': {server_info->['gopls']},
+            \ 'initializaion_options': {
+            \   'diagnostics': v:true,
+            \   'completeUnimported': v:true,
+            \   'matcher': 'fuzzy',
+            \ },
             \ 'whitelist': ['go'],
             \ })
         autocmd BufWritePre *.go LspDocumentFormatSync
