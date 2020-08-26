@@ -15,6 +15,7 @@ Plug 'mattn/vim-lexiv'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'mattn/vim-lsp-settings'
 " toml
 Plug 'cespare/vim-toml'
 " decoration
@@ -57,24 +58,6 @@ if executable('pyls')
             \ 'whitelist': ['python'],
             \ })
         autocmd Filetype python setlocal omnifunc=lsp#complete
-    augroup End
-endif
-"" lsp-golang
-if executable('gopls')
-    augroup LspGo
-        autocmd!
-        autocmd User lsp_setup call lsp#register_server({
-            \ 'name': 'go-lang',
-            \ 'cmd': {server_info->['gopls']},
-            \ 'initializaion_options': {
-            \   'diagnostics': v:true,
-            \   'completeUnimported': v:true,
-            \   'matcher': 'fuzzy',
-            \ },
-            \ 'whitelist': ['go'],
-            \ })
-        autocmd BufWritePre *.go LspDocumentFormatSync
-        autocmd FileType go setlocal omnifunc=lsp#complete
     augroup End
 endif
 
