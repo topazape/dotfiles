@@ -54,6 +54,8 @@ filetype plugin on
 autocmd FileType vim setlocal tabstop=4 shiftwidth=4 expandtab
 " sql
 autocmd FileType sql setlocal tabstop=4 shiftwidth=4 expandtab
+" json
+autocmd FileType json setlocal tabstop=4 shiftwidth=4 expandtab
 
 " for Python Environment
 if exists('$VIRTUAL_ENV')

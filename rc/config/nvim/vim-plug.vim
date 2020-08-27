@@ -70,6 +70,10 @@ let g:lightline = {
     \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" },
     \ 'colorscheme': 'wombat',
     \ }
+" indeneLine
+"" change conceal setting for json
+let g:indentLine_concealcursor = ''
+let g:indentLine_conceallevel = 1
 
 " Colors
 "" colorscheme

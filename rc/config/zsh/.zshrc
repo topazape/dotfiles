@@ -22,20 +22,26 @@ if [ "$(uname -s)" = "Linux" ]; then
 		export https_proxy="https://172.20.131.3:8065"
 	fi
 fi
-## XDG
+
+# XDG
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
-### XDG_ZSH_HISTORY
+## XDG_ZSH_HISTORY
 export HISTFILE="$XDG_DATA_HOME/zsh/history"
 export SAVEHIST=100000
-### postgresql
+## postgresql
 export PSQLRC="$XDG_CONFIG_HOME/pg/psqlrc"
 export PSQL_HISTORY="$XDG_CACHE_HOME/pg/psql_history"
 export PGPASSFILE="$XDG_CONFIG_HOME/pg/pgpass"
 export PGSERVICEFILE="$XDG_CONFIG_HOME/pg/pg_service.conf"
+## CUDA
+if type nvidia-smi > /dev/null 2>&1; then
+	export __GL_SHADER_DISK_CACHE_PATH="$XDG_CACHE_HOME/nv"
+	export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+fi
 
-## less
+# less
 export LESSHISTFILE=-
 ## completions
 if type brew > /dev/null 2>&1; then
@@ -43,24 +49,27 @@ if type brew > /dev/null 2>&1; then
 	autoload -Uz compinit
 	compinit
 fi
-## CUDA
-if type nvidia-smi > /dev/null 2>&1; then
-	export __GL_SHADER_DISK_CACHE_PATH="$XDG_CACHE_HOME/nv"
-	export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
-fi
-## direnv
+
+# direnv
 if type direnv > /dev/null 2>&1; then
 	eval "$(direnv hook zsh)"
 fi
-## EDITOR
+
+# EDITOR
 if type nvim > /dev/null 2>&1; then
 	export EDITOR="nvim"
 fi
-## zsh-prezto
-### disable safe redirection
+
+# Go
+if type go > /dev/null 2>&1; then
+	export GOPATH="$HOME/Documents/go"
+fi
+
+# zsh-prezto
+## disable safe redirection
 setopt clobber
 
-## aliases
+# aliases
 if type wget > /dev/null 2>&1; then
 	alias wget='wget --no-hsts'
 fi
