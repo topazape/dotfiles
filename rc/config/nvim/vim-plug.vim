@@ -40,7 +40,7 @@ set completeopt=menuone,noinsert,noselect,preview
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " vim-lsp
-nnoremap <Leader>lf :LspDocumentFormat<CR>
+nnoremap <Leader>ldf :LspDocumentFormat<CR>
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_signs_error = {'text': 'x'}
 let g:lsp_signs_warning = {'text': '!'}
