@@ -22,9 +22,7 @@ Plug 'cespare/vim-toml'
 Plug 'itchyny/lightline.vim'
 Plug 'Yggdroot/indentLine'
 " colorscheme
-Plug 'nanotech/jellybeans.vim'
-Plug 'cocopon/iceberg.vim'
-Plug 'arcticicestudio/nord-vim'
+Plug 'ghifarit53/tokyonight-vim'
 " dadbod
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
@@ -77,4 +75,4 @@ let g:indentLine_conceallevel = 1
 
 " Colors
 "" colorscheme
-colorscheme jellybeans
+colorscheme tokyonight
