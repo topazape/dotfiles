@@ -11,18 +11,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 	source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
-## proxy
-if [ "$(uname -s)" = "Linux" ]; then
-	export LANG=C.UTF-8
-	if [ -e /etc/lsb-release ]; then
-		export HTTP_PROXY="172.20.131.3:8065"
-		export http_proxy="http://172.20.131.3:8065"
-		export HTTPS_PROXY="172.20.131.3:8065"
-		export https_proxy="https://172.20.131.3:8065"
-	fi
-fi
-
 # XDG
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -58,11 +46,6 @@ fi
 # EDITOR
 if type nvim > /dev/null 2>&1; then
 	export EDITOR="nvim"
-fi
-
-# Go
-if type go > /dev/null 2>&1; then
-	export GOPATH="$HOME/Documents/go"
 fi
 
 # zsh-prezto
