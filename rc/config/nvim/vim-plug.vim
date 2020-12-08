@@ -23,9 +23,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'Yggdroot/indentLine'
 " colorscheme
 Plug 'ghifarit53/tokyonight-vim'
-" dadbod
-Plug 'tpope/vim-dadbod'
-Plug 'kristijanhusak/vim-dadbod-ui'
 call plug#end()
 
 " fzf
@@ -58,9 +55,6 @@ if executable('pyls')
         autocmd Filetype python setlocal omnifunc=lsp#complete
     augroup End
 endif
-
-" vim-dadbod-ui
-autocmd FileType dbui setlocal shiftwidth=2
 
 " lightline
 let g:lightline = {
