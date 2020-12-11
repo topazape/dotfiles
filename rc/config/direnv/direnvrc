@@ -15,6 +15,7 @@ layout_poetry() {
 use_jupyter() {
 	export IPYTHONDIR="$VIRTUAL_ENV/.ipython"
 	export JUPYTER_CONFIG_DIR="$VIRTUAL_ENV/.jupyter"
+	export MPLCONFIGDIR="$VIRTUAL_ENV/.matplotlib"
 }
 
 use_rdkit() {
