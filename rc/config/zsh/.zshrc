@@ -31,6 +31,9 @@ fi
 ## rust
 ### cargo
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
+if [ -d "$CARGO_HOME/bin" ]; then
+	export PATH="$CARGO_HOME/bin":$PATH
+fi
 
 # less
 export LESSHISTFILE=-
