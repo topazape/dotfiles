@@ -28,6 +28,11 @@ if type nvidia-smi > /dev/null 2>&1; then
 	export __GL_SHADER_DISK_CACHE_PATH="$XDG_CACHE_HOME/nv"
 	export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
 fi
+## rust
+### cargo
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+### rustup
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 
 # less
 export LESSHISTFILE=-
