@@ -31,8 +31,6 @@ fi
 ## rust
 ### cargo
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
-### rustup
-export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
 
 # less
 export LESSHISTFILE=-
