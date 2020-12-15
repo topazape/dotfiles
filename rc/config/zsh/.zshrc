@@ -34,7 +34,10 @@ export CARGO_HOME="$XDG_DATA_HOME/cargo"
 if [ -d "$CARGO_HOME/bin" ]; then
 	export PATH="$CARGO_HOME/bin":$PATH
 fi
-
+## pip
+if [[ $OSTYPE = darwin* ]] && [[ -e "$XDG_CONFIG_HOME/pip/pip.conf" ]]; then
+	export PIP_COFIG_FILE="$XDG_CONFIG_HOME/pip.conf"
+fi
 # less
 export LESSHISTFILE=-
 ## completions
