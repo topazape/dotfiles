@@ -3,7 +3,7 @@ RCPATH        := $(DOTPATH)/rc
 
 CANDIDATES    := $(notdir $(wildcard $(RCPATH)/*))
 EXCLUSIONS    := .DS_Store .git .gitmodules
-MAC_EXC       := numpy-site.cfg
+MAC_EXC       := 
 TARGETS       := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 
 UNAME         := $(shell uname -s)

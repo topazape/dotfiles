@@ -36,7 +36,7 @@ if [ -d "$CARGO_HOME/bin" ]; then
 fi
 ## pip
 if [[ $OSTYPE = darwin* ]] && [[ -e "$XDG_CONFIG_HOME/pip/pip.conf" ]]; then
-	export PIP_COFIG_FILE="$XDG_CONFIG_HOME/pip.conf"
+	export PIP_CONFIG_FILE="$XDG_CONFIG_HOME/pip/pip.conf"
 fi
 # less
 export LESSHISTFILE=-
