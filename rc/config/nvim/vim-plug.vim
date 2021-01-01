@@ -43,6 +43,10 @@ let g:lsp_signs_error = {'text': 'x'}
 let g:lsp_signs_warning = {'text': '!'}
 let g:lsp_textprop_enabled = 1
 let g:lsp_highlight_references_enabled = 1
+"" vim-lsp debug
+"let g:lsp_log_verbose = 1
+"let g:lsp_log_file = expand('~/vim-lsp.log')
+
 "" lsp-python
 if executable('pyls')
     augroup LspPython
