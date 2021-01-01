@@ -29,6 +29,13 @@ if type nvidia-smi > /dev/null 2>&1; then
 	export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
 fi
 ## rust
+if type rustc > /dev/null 2>&1; then
+	RUST_VERSION=`rustc --version |cut -d' ' -f 2`
+	if [ -d "$XDG_DATA_HOME/rust/src/rust-$RUST_VERSION" ]; then
+		export RUST_SRC_PATH="$XDG_DATA_HOME/rust/src/rust-$RUST_VERSION/library"
+	fi
+	unset RUST_VERSION
+fi
 ### cargo
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
 if [ -d "$CARGO_HOME/bin" ]; then
