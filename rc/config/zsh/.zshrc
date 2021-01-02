@@ -18,17 +18,15 @@ export XDG_DATA_HOME="$HOME/.local/share"
 ## XDG_ZSH_HISTORY
 export HISTFILE="$XDG_DATA_HOME/zsh/history"
 export SAVEHIST=100000
-## postgresql
-export PSQLRC="$XDG_CONFIG_HOME/pg/psqlrc"
-export PSQL_HISTORY="$XDG_CACHE_HOME/pg/psql_history"
-export PGPASSFILE="$XDG_CONFIG_HOME/pg/pgpass"
-export PGSERVICEFILE="$XDG_CONFIG_HOME/pg/pg_service.conf"
+
+# Applications
+
 ## CUDA
 if type nvidia-smi > /dev/null 2>&1; then
 	export __GL_SHADER_DISK_CACHE_PATH="$XDG_CACHE_HOME/nv"
 	export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
 fi
-## rust
+## Rust
 if type rustc > /dev/null 2>&1; then
 	RUST_VERSION=`rustc --version |cut -d' ' -f 2`
 	if [ -d "$XDG_DATA_HOME/rust/src/rust-$RUST_VERSION" ]; then
@@ -45,8 +43,19 @@ fi
 if [[ $OSTYPE = darwin* ]] && [[ -e "$XDG_CONFIG_HOME/pip/pip.conf" ]]; then
 	export PIP_CONFIG_FILE="$XDG_CONFIG_HOME/pip/pip.conf"
 fi
+## postgresql
+export PSQLRC="$XDG_CONFIG_HOME/pg/psqlrc"
+export PSQL_HISTORY="$XDG_CACHE_HOME/pg/psql_history"
+export PGPASSFILE="$XDG_CONFIG_HOME/pg/pgpass"
+export PGSERVICEFILE="$XDG_CONFIG_HOME/pg/pg_service.conf"
+## docker
+if type docker > /dev/null 2>&1; then
+	export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
+fi
+
 # less
 export LESSHISTFILE=-
+
 ## completions
 if type brew > /dev/null 2>&1; then
 	FPATH="$(brew --prefix)/share/zsh/site-functions":$FPATH
