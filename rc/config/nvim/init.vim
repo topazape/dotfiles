@@ -48,6 +48,9 @@ nnoremap x "_x
 "" but dd can store
 "nnoremap dd "_dd
 
+" ~/.config/nvim/.netrwhist to ~/.cache/nvim/.netrwhist
+let g:netrw_home = expand('$XDG_CACHE_HOME') . '/nvim'
+
 " FileType Setting
 filetype plugin on
 " vim script
