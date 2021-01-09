@@ -20,7 +20,6 @@ export HISTFILE="$XDG_DATA_HOME/zsh/history"
 export SAVEHIST=100000
 
 # Applications
-
 ## CUDA
 if type nvidia-smi > /dev/null 2>&1; then
 	export __GL_SHADER_DISK_CACHE_PATH="$XDG_CACHE_HOME/nv"
@@ -48,10 +47,6 @@ export PSQLRC="$XDG_CONFIG_HOME/pg/psqlrc"
 export PSQL_HISTORY="$XDG_CACHE_HOME/pg/psql_history"
 export PGPASSFILE="$XDG_CONFIG_HOME/pg/pgpass"
 export PGSERVICEFILE="$XDG_CONFIG_HOME/pg/pg_service.conf"
-## docker
-if type docker > /dev/null 2>&1; then
-	export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
-fi
 
 # less
 export LESSHISTFILE=-

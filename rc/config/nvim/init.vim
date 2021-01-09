@@ -54,6 +54,9 @@ filetype plugin on
 autocmd FileType vim setlocal tabstop=4 shiftwidth=4 expandtab
 " sql
 autocmd FileType sql setlocal tabstop=4 shiftwidth=4 expandtab
+" yaml
+autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 expandtab
+
 " js
 autocmd FileType javascript,typescript,json setlocal tabstop=4 shiftwidth=4 expandtab
 
