@@ -43,6 +43,13 @@ fi
 if [[ $OSTYPE = darwin* ]] && [[ -e "$XDG_CONFIG_HOME/pip/pip.conf" ]]; then
 	export PIP_CONFIG_FILE="$XDG_CONFIG_HOME/pip/pip.conf"
 fi
+if type pip3 > /dev/null 2>&1; then
+	export PIP_CACHE_DIR="$XDG_CACHE_HOME/pip"
+fi
+## pipenv
+if type pipenv > /dev/null 2>&1; then
+	export PIPENV_CACHE_DIR="$XDG_CACHE_HOME/pipenv"
+fi
 ## postgresql
 export PSQLRC="$XDG_CONFIG_HOME/pg/psqlrc"
 export PSQL_HISTORY="$XDG_CACHE_HOME/pg/psql_history"
