@@ -48,6 +48,12 @@ nnoremap x "_x
 "" but dd can store
 "nnoremap dd "_dd
 
+" allow emacs key-bind in INSERT mode
+imap <C-p> <Up>
+imap <C-n> <Down>
+imap <C-b> <Left>
+imap <C-f> <Right>
+
 " ~/.config/nvim/.netrwhist to ~/.cache/nvim/.netrwhist
 let g:netrw_home = expand('$XDG_CACHE_HOME') . '/nvim'
 
