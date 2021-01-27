@@ -15,7 +15,9 @@ layout_poetry() {
 use_jupyter() {
 	export IPYTHONDIR="$VIRTUAL_ENV/.ipython"
 	export JUPYTER_CONFIG_DIR="$VIRTUAL_ENV/.jupyter"
-	export MPLCONFIGDIR="$VIRTUAL_ENV/.matplotlib"
+	if [[ $OSTYPE == darwin* ]]; then
+	  export MPLCONFIGDIR="$XDG_CONFIG_HOME/matplotlib"
+	fi
 }
 
 use_gpu() {
