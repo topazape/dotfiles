@@ -8,9 +8,5 @@ fi
 if [ -d "$HOME/bin" ]; then
 	export PATH="$HOME/bin":$PATH
 fi
-## site-functions
-if [ -d "/usr/local/share/zsh/site-functions" ]; then
-	fpath=("/usr/local/share/zsh/site-functions", $fpath)
-fi
 
 export ZDOTDIR=$HOME/.config/zsh

@@ -20,12 +20,27 @@ export HISTFILE="$XDG_DATA_HOME/zsh/history"
 export SAVEHIST=100000
 
 # Applications
+## homebrew
+if type brew > /dev/null 2>&1; then
+	## gnu commands
+	### grep
+	if [[ -e "$(brew --prefix)/opt/grep/libexec/gnubin" ]]; then
+		export PATH="$(brew --prefix)/opt/grep/libexec/gnubin":$PATH
+	fi
+	### findutils
+	if [[ -e "$(brew --prefix)/opt/findutils/libexec/gnubin" ]]; then
+		export PATH="$(brew --prefix)/opt/grep/libexec/gnubin":$PATH
+	fi
+	### completions
+	FPATH="$(brew --prefix)/share/zsh/site-functions":$FPATH
+	autoload -Uz compinit
+	compinit
+fi
 ## CUDA
 if type nvidia-smi > /dev/null 2>&1; then
 	export __GL_SHADER_DISK_CACHE_PATH="$XDG_CACHE_HOME/nv"
 	export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
 fi
-
 ## Rust
 if type rustc > /dev/null 2>&1; then
 	RUST_VERSION=`rustc --version |cut -d' ' -f 2`
@@ -59,12 +74,6 @@ export PGSERVICEFILE="$XDG_CONFIG_HOME/pg/pg_service.conf"
 # less
 export LESSHISTFILE=-
 
-## completions
-if type brew > /dev/null 2>&1; then
-	FPATH="$(brew --prefix)/share/zsh/site-functions":$FPATH
-	autoload -Uz compinit
-	compinit
-fi
 
 # direnv
 if type direnv > /dev/null 2>&1; then
