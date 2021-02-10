@@ -3,8 +3,6 @@
 	name = topazape
 [http]
 	postBuffer = 104857600
-[credential]
-	helper = cache
 [merge]
 	conflictstyle = diff3
 [push]
