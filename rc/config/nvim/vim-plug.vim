@@ -6,8 +6,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 "" comment out
 Plug 'tyru/caw.vim'
 "" fuzzy finder
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
+Plug '/usr/local/opt/fzf'
 "" lexima
 Plug 'mattn/vim-lexiv'
 
