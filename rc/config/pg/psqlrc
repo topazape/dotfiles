@@ -4,13 +4,8 @@
 -- デフォルトでは、NULLはスペースとして表示される。空白なのかnullなのか？これで違いが見えるようになる
 \pset null '[NULL]'
 -- デフォルトでは表形式のフォーマット(1行目がヘッダ)になるがデータが多い時はより読みやすいように拡張テーブル形式で表示
--- \x auto
+\x auto
 -- 詳しいエラー表示
 \set VERBOSITY verbose
 -- キーワード(SELECTなど)を、小文字で入力し始めたとしても大文字に自動変換
 \set COMP_KEYWORD_CASE upper
-
---pspg
-\setenv PAGER 'pspg -s 21'
-\pset border 2
-\pset linestyle unicode
