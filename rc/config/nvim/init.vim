@@ -77,7 +77,7 @@ autocmd FileType javascript,typescript,json setlocal tabstop=4 shiftwidth=4 expa
 if exists('$VIRTUAL_ENV')
     let g:python3_host_prog = expand('$VIRTUAL_ENV') . '/bin/python3'
 else
-    let g:python3_host_prog = expand('$HOME') . '/.linuxbrew/bin/python3'
+    let g:python3_host_prog = trim(system('which python3'))
 endif
 
 " Terminal Mode
@@ -85,3 +85,4 @@ tnoremap <silent> <ESC> <C-\><C-n>
 
 " load plugins
 runtime! vim-plug.vim
+
