@@ -64,7 +64,7 @@ if type pip3 > /dev/null 2>&1; then
 fi
 ## pipenv
 if type pipenv > /dev/null 2>&1; then
-	export PIPENV_CACHE_DIR="$XDG_CACHE_HOME/pipenv"
+	export PIPENV_CACHE_DIR=$PIP_CACHE_DIR"
 fi
 ## postgresql
 export PSQLRC="$XDG_CONFIG_HOME/pg/psqlrc"
