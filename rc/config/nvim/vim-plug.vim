@@ -7,10 +7,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'preservim/nerdtree'
 "" comment out
 Plug 'tyru/caw.vim'
-"" fuzzy finder
-"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-"Plug 'junegunn/fzf.vim'
-Plug '/usr/local/opt/fzf'
 "" lexima
 Plug 'mattn/vim-lexiv'
 
@@ -31,13 +27,6 @@ call plug#end()
 
 " nerdtree
 nnoremap <C-n> :NERDTree<CR>
-
-" fzf
-nnoremap [FZF] <Nop>
-nmap <Leader>f [FZF]
-nnoremap [FZF]f :<C-u>Files<CR>
-nnoremap [FZF]g :<C-u>GFiles<CR>
-nnoremap [FZF]b :<C-u>Buffers<CR>
 
 " asyncomplete
 set completeopt=menuone,noinsert,noselect,preview
