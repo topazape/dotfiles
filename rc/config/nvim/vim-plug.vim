@@ -3,6 +3,8 @@ let g:plug_window = 'new'
 
 call plug#begin('~/.local/share/nvim/plugged')
 " useful plugins
+" file explore
+Plug 'preservim/nerdtree'
 "" comment out
 Plug 'tyru/caw.vim'
 "" fuzzy finder
@@ -25,6 +27,10 @@ Plug 'Yggdroot/indentLine'
 " colorscheme
 Plug 'ghifarit53/tokyonight-vim'
 call plug#end()
+
+
+" nerdtree
+nnoremap <C-n> :NERDTree<CR>
 
 " fzf
 nnoremap [FZF] <Nop>
