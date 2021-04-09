@@ -5,11 +5,10 @@ call plug#begin('~/.local/share/nvim/plugged')
 " useful plugins
 " file explore
 Plug 'preservim/nerdtree'
-"" comment out
+" comment out
 Plug 'tyru/caw.vim'
-"" lexima
+" lexima
 Plug 'mattn/vim-lexiv'
-
 " lsp
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
@@ -27,6 +26,12 @@ call plug#end()
 
 " nerdtree
 nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-n> :NERDTreeFind<CR>
+"" Start NERDTree. If a file is specified, move the cursor to its window.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+"" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 " asyncomplete
 set completeopt=menuone,noinsert,noselect,preview

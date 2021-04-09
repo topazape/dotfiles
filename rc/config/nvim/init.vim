@@ -71,6 +71,8 @@ autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 expandtab
 " javascript
 autocmd FileType javascript,typescript,json setlocal tabstop=4 shiftwidth=4 expandtab
+" PHP
+autocmd FileType php setlocal tabstop=4 shiftwidth=4 expandtab
 
 
 " for Python Environment
@@ -81,8 +83,12 @@ else
 endif
 
 " Terminal Mode
+"" map the terminal mode escape command (<C-\><C-n>) to ESC
 tnoremap <silent> <ESC> <C-\><C-n>
+"" always insert mode
+autocmd TermOpen * startinsert
+"" open terminal under current window (:T)
+command! -nargs=* T split | wincmd j | resize 15 | terminal <args>
 
 " load plugins
 runtime! vim-plug.vim
-
