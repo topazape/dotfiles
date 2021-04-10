@@ -87,6 +87,8 @@ endif
 tnoremap <silent> <ESC> <C-\><C-n>
 "" always insert mode
 autocmd TermOpen * startinsert
+"" disable linenumbers in terminal window
+autocmd TermOpen * setlocal nonumber
 "" open terminal under current window (:T)
 command! -nargs=* T split | wincmd j | resize 15 | terminal <args>
 

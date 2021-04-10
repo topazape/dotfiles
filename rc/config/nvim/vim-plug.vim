@@ -26,7 +26,7 @@ call plug#end()
 
 " nerdtree
 nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-n> :NERDTreeFind<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
 "" Start NERDTree. If a file is specified, move the cursor to its window.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
