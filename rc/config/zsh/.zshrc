@@ -6,11 +6,6 @@
 #
 #
 
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-	source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
-
 # XDG
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -19,7 +14,28 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export HISTFILE="$XDG_DATA_HOME/zsh/history"
 export SAVEHIST=100000
 
+# Prezto
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+	source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+## disable safe redirection
+setopt clobber
+
+# EDITOR
+if type nvim > /dev/null 2>&1; then
+	export EDITOR="nvim"
+fi
+
 # Applications
+## less
+if type less > /dev/null 2>&1; then
+	export LESSHISTFILE=-
+fi
+## CUDA
+if type nvidia-smi > /dev/null 2>&1; then
+	export __GL_SHADER_DISK_CACHE_PATH="$XDG_CACHE_HOME/nv"
+	export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+fi
 ## homebrew
 if type brew > /dev/null 2>&1; then
 	## gnu commands
@@ -37,11 +53,19 @@ if type brew > /dev/null 2>&1; then
 	autoload -Uz compinit
 	compinit
 fi
-## CUDA
-if type nvidia-smi > /dev/null 2>&1; then
-	export __GL_SHADER_DISK_CACHE_PATH="$XDG_CACHE_HOME/nv"
-	export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+## PostgreUQL
+if type psql > /dev/null 2>&1; then
+	export PSQLRC="$XDG_CONFIG_HOME/pg/psqlrc"
+	export PSQL_HISTORY="$XDG_CACHE_HOME/pg/psql_history"
+	export PGPASSFILE="$XDG_CONFIG_HOME/pg/pgpass"
+	export PGSERVICEFILE="$XDG_CONFIG_HOME/pg/pg_service.conf"
 fi
+## direnv
+if type direnv > /dev/null 2>&1; then
+	eval "$(direnv hook zsh)"
+fi
+
+# Program Languages
 ## Rust
 if type rustc > /dev/null 2>&1; then
 	RUST_VERSION=`rustc --version |cut -d' ' -f 2`
@@ -55,41 +79,29 @@ export CARGO_HOME="$XDG_DATA_HOME/cargo"
 if [ -d "$CARGO_HOME/bin" ]; then
 	export PATH="$CARGO_HOME/bin":$PATH
 fi
-## pip
+## Python
+### pip
 if [[ $OSTYPE = darwin* ]] && [[ -e "$XDG_CONFIG_HOME/pip/pip.conf" ]]; then
 	export PIP_CONFIG_FILE="$XDG_CONFIG_HOME/pip/pip.conf"
 fi
 if type pip3 > /dev/null 2>&1; then
 	export PIP_CACHE_DIR="$XDG_CACHE_HOME/pip"
 fi
-## pipenv
+### pipenv
 if type pipenv > /dev/null 2>&1; then
 	export PIPENV_CACHE_DIR="$XDG_CACHE_HOME/pipenv"
 fi
-
-## postgresql
-export PSQLRC="$XDG_CONFIG_HOME/pg/psqlrc"
-export PSQL_HISTORY="$XDG_CACHE_HOME/pg/psql_history"
-export PGPASSFILE="$XDG_CONFIG_HOME/pg/pgpass"
-export PGSERVICEFILE="$XDG_CONFIG_HOME/pg/pg_service.conf"
-
-# less
-export LESSHISTFILE=-
-
-
-# direnv
-if type direnv > /dev/null 2>&1; then
-	eval "$(direnv hook zsh)"
+## PHP
+if type brew > /dev/null 2>&1; then
+	if [[ -e "$(brew --prefix)/opt/php@7.3" ]]; then
+		export PATH="$(brew --prefix)/opt/php@7.3/bin":$PATH
+		export PATH="$(brew --prefix)/opt/php@7.3/sbin":$PATH
+	fi
 fi
 
-# EDITOR
-if type nvim > /dev/null 2>&1; then
-	export EDITOR="nvim"
-fi
 
-# zsh-prezto
-## disable safe redirection
-setopt clobber
+
+
 
 # ls
 ## LS_COLORS

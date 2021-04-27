@@ -11,3 +11,5 @@
 	helper = cache
 [init]
 	defaultBranch = main
+[alias]
+	lol = log --graph --decorate --pretty=oneline --all --abbrev-commit
