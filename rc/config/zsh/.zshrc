@@ -53,7 +53,7 @@ if type brew > /dev/null 2>&1; then
 	autoload -Uz compinit
 	compinit
 fi
-## PostgreUQL
+## PostgreSQL
 if type psql > /dev/null 2>&1; then
 	export PSQLRC="$XDG_CONFIG_HOME/pg/psqlrc"
 	export PSQL_HISTORY="$XDG_CACHE_HOME/pg/psql_history"
@@ -101,6 +101,7 @@ fi
 ## JS
 if type npm > /dev/null 2>&1; then
 	export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+fi
 
 # ls
 ## LS_COLORS
