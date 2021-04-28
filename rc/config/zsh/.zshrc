@@ -98,10 +98,9 @@ if type brew > /dev/null 2>&1; then
 		export PATH="$(brew --prefix)/opt/php@7.3/sbin":$PATH
 	fi
 fi
-
-
-
-
+## JS
+if type npm > /dev/null 2>&1; then
+	export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 
 # ls
 ## LS_COLORS
