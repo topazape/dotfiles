@@ -38,6 +38,10 @@ if type nvidia-smi > /dev/null 2>&1; then
 fi
 ## homebrew
 if type brew > /dev/null 2>&1; then
+	if [[ $OSTYPE = darwin* ]]; then
+		export HOMEBREW_CACHE="$XDG_CACHE_HOME/Homebrew"
+	fi
+
 	## gnu commands
 	gnu_pkgs=("coreutils" "findutils" "grep" "gawk" "gnu-sed", "gnu-tar")
 	for gnu_pkg in $gnu_pkgs; do
@@ -60,6 +64,12 @@ if type psql > /dev/null 2>&1; then
 	export PGPASSFILE="$XDG_CONFIG_HOME/pg/pgpass"
 	export PGSERVICEFILE="$XDG_CONFIG_HOME/pg/pg_service.conf"
 fi
+## pspg
+if type pspg > /dev/null 2>&1; then
+	export PSPG_CONF="$XDG_CONFIG_HOME/pspg/pspgconf"
+	export PSPG_HISTORY="$XDG_CACHE_HOME/pspg/pspg_history"
+fi
+
 ## direnv
 if type direnv > /dev/null 2>&1; then
 	eval "$(direnv hook zsh)"
