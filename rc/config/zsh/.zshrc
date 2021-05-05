@@ -66,7 +66,7 @@ if type psql > /dev/null 2>&1; then
 fi
 ## pspg
 if type pspg > /dev/null 2>&1; then
-	export PSPG_CONF="$XDG_CONFIG_HOME/pspg/pspgconf"
+	mkdir -p $XDG_CACHE_HOME/pspg
 	export PSPG_HISTORY="$XDG_CACHE_HOME/pspg/pspg_history"
 fi
 
