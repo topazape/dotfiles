@@ -1,4 +1,9 @@
-/rc/config/zsh/
-!/rc/config/zsh/.zpreztorc
+/rc/config/zsh/*
 !/rc/config/zsh/.zshrc
-/rc/config/configstore/
+!/rc/config/zsh/.zpreztorc
+
+/rc/config/iterm2
+
+/rc/config/matplotlib
+
+/rc/config/gh
