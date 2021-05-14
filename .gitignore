@@ -2,8 +2,6 @@
 !/rc/config/zsh/.zshrc
 !/rc/config/zsh/.zpreztorc
 
-/rc/config/iterm2
-
-/rc/config/matplotlib
-
 /rc/config/gh
+/rc/config/ipython
+/rc/config/jupyter
