@@ -78,11 +78,9 @@ fi
 # Program Languages
 ## Rust
 if type rustc > /dev/null 2>&1; then
-	RUST_VERSION=`rustc --version |cut -d' ' -f 2`
-	if [ -d "$XDG_DATA_HOME/rust/src/rust-$RUST_VERSION" ]; then
-		export RUST_SRC_PATH="$XDG_DATA_HOME/rust/src/rust-$RUST_VERSION/library"
+	if [ -d "/usr/local/opt/rust" ]; then
+		export RUST_SRC_PATH="/usr/local/opt/rust/lib/rustlib/src/rust/library"
 	fi
-	unset RUST_VERSION
 fi
 ### cargo
 export CARGO_HOME="$XDG_DATA_HOME/cargo"
