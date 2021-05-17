@@ -41,7 +41,6 @@ if type brew > /dev/null 2>&1; then
 	if [[ $OSTYPE = darwin* ]]; then
 		export HOMEBREW_CACHE="$XDG_CACHE_HOME/Homebrew"
 	fi
-
 	## gnu commands
 	gnu_pkgs=("coreutils" "findutils" "grep" "gawk" "gnu-sed", "gnu-tar")
 	for gnu_pkg in $gnu_pkgs; do
@@ -77,15 +76,13 @@ fi
 
 # Program Languages
 ## Rust
-if type rustc > /dev/null 2>&1; then
-	if [ -d "/usr/local/opt/rust" ]; then
-		export RUST_SRC_PATH="/usr/local/opt/rust/lib/rustlib/src/rust/library"
+if type rustup-init > /dev/null 2>&1; then
+	export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+	export RUST_SRC_PATH="$RUSTUP_HOME/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/library"
+	export CARGO_HOME="$XDG_DATA_HOME/cargo"
+	if [[ -e "$CARGO_HOME/env" ]]; then
+		source "$CARGO_HOME/env"
 	fi
-fi
-### cargo
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
-if [ -d "$CARGO_HOME/bin" ]; then
-	export PATH="$CARGO_HOME/bin":$PATH
 fi
 ## Python
 ### pip
@@ -152,3 +149,6 @@ case "$OSTYPE" in
 			alias la='ls -A'
 		fi
 esac
+
+# delete dulicated PATH
+typeset -U PATH
