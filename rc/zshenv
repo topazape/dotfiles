@@ -1,3 +1,2 @@
 export LANG=en_US.UTF-8
 export ZDOTDIR=$HOME/.config/zsh
-. "/Users/tomonorikawai/.local/share/cargo/env"
