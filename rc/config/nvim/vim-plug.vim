@@ -3,6 +3,7 @@ let g:plug_window = 'new'
 
 call plug#begin('~/.local/share/nvim/plugged')
 " useful plugins
+Plug 'ryanoasis/vim-devicons'
 " file explore
 Plug 'preservim/nerdtree'
 " comment out
