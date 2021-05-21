@@ -13,3 +13,5 @@
 	defaultBranch = main
 [alias]
 	lol = log --graph --decorate --pretty=oneline --all --abbrev-commit
+[includeIf "gitdir:~/Projects/Works/"]
+	path = ~/Projects/Works/.gitconfig_work

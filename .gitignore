@@ -3,5 +3,6 @@
 !/rc/config/zsh/.zpreztorc
 
 /rc/config/gh
+/rc/config/iterm2
 /rc/config/ipython
 /rc/config/jupyter
