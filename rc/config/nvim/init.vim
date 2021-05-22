@@ -50,11 +50,17 @@ nnoremap x "_x
 "" but dd can store
 "nnoremap dd "_dd
 
+" Mapping of window oparations like tmux
+nnoremap <C-w>- :split<CR><C-w>j
+nnoremap <C-w>{ <C-w><C-x>
+nnoremap <C-w>J <C-w>+
+nnoremap <C-w>K <C-w>-
+
 " allow emacs key-bind in INSERT mode
-imap <C-p> <Up>
-imap <C-n> <Down>
-imap <C-b> <Left>
-imap <C-f> <Right>
+inoremap <C-p> <Up>
+inoremap <C-n> <Down>
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
 
 " ~/.config/nvim/.netrwhist to ~/.cache/nvim/.netrwhist
 let g:netrw_home = expand('$XDG_CACHE_HOME') . '/nvim'
