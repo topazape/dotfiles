@@ -44,6 +44,10 @@ inoremap <C-d> <DEL>
 " Hide -- INSERT --
 set noshowmode
 
+" Buffers
+nnoremap <C-j> :bnext<CR>
+nnoremap <C-k> :bprev<CR>
+
 " Register
 "" do not store in register by deletion
 nnoremap x "_x
