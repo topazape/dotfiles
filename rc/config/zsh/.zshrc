@@ -47,7 +47,7 @@ if type brew > /dev/null 2>&1; then
 		export HOMEBREW_CACHE="$XDG_CACHE_HOME/Homebrew"
 	fi
 	## gnu commands
-	gnu_pkgs=("coreutils" "findutils" "grep" "gawk" "gnu-sed", "gnu-tar")
+	gnu_pkgs=("coreutils" "findutils" "grep" "gawk" "gnu-sed" "gnu-tar")
 	for gnu_pkg in $gnu_pkgs; do
 		if [[ -d "$(brew --prefix)/opt/$gnu_pkg/libexec/gnubin" ]]; then
 			export PATH="$(brew --prefix)/opt/$gnu_pkg/libexec/gnubin":$PATH
