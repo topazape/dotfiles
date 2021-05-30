@@ -7,21 +7,29 @@
 #
 
 # XDG
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_CACHE_HOME="$HOME/.cache"
-export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CONFIG_HOME=${HOME}/.config
+export XDG_CACHE_HOME=${HOME}/.cache
+export XDG_DATA_HOME=${HOME}/.local/share
 
 ## terminfo
-export TERMINFO="$XDG_DATA_HOME/terminfo"
-export TERMINFO_DIRS="$XDG_DATA_HOME/terminfo:/usr/share/terminfo"
+export TERMINFO=${XDG_DATA_HOME}/terminfo
+export TERMINFO_DIRS=${XDG_DATA_HOME}/terminfo:/usr/share/terminfo
+if infocmp ${TERM} |/usr/bin/grep "[sr]itm" > /dev/null; then
+	:
+elif infocmp xterm-256color-italic > /dev/null 2>&1; then
+	export TERM="xterm-256color-italic"
+else
+	perl -e 'use File::Temp qw/ tempfile /; my ($fh, $fn) = tempfile( UNLINK => 1 ); print $fh "xterm-256color-italic|xterm with 256 colors and italic,\n\tsitm=\\E[3m, ritm=\\E[23m,\n\tuse=xterm-256color,\n"; close $fh; my @cmd = ("tic", $fn); system(@cmd);'
+	export TERM="xterm-256color-italic"
+fi
 
 ## XDG_ZSH_HISTORY
-export HISTFILE="$XDG_DATA_HOME/zsh/history"
+export HISTFILE=${XDG_DATA_HOME}/zsh/history
 export SAVEHIST=100000
 
 # Prezto
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-	source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+	source ${ZDOTDIR:-$HOME}/.zprezto/init.zsh
 fi
 ## disable safe redirection
 setopt clobber
@@ -38,79 +46,77 @@ if type less > /dev/null 2>&1; then
 fi
 ## CUDA
 if type nvidia-smi > /dev/null 2>&1; then
-	export __GL_SHADER_DISK_CACHE_PATH="$XDG_CACHE_HOME/nv"
-	export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+	export __GL_SHADER_DISK_CACHE_PATH=${XDG_CACHE_HOME}/nv
+	export CUDA_CACHE_PATH=${XDG_CACHE_HOME}/nv
 fi
 ## homebrew
 if type brew > /dev/null 2>&1; then
 	if [[ $OSTYPE = darwin* ]]; then
-		export HOMEBREW_CACHE="$XDG_CACHE_HOME/Homebrew"
+		export HOMEBREW_CACHE=${XDG_CACHE_HOME}/Homebrew
 	fi
 	## gnu commands
 	gnu_pkgs=("coreutils" "findutils" "grep" "gawk" "gnu-sed" "gnu-tar")
-	for gnu_pkg in $gnu_pkgs; do
-		if [[ -d "$(brew --prefix)/opt/$gnu_pkg/libexec/gnubin" ]]; then
-			export PATH="$(brew --prefix)/opt/$gnu_pkg/libexec/gnubin":$PATH
-			if [[ $gnu_pkg = "coreutils" ]]; then
+	for gnu_pkg in ${gnu_pkgs[@]}; do
+		if [[ -d "$(brew --prefix)/opt/${gnu_pkg}/libexec/gnubin" ]]; then
+			export PATH="$(brew --prefix)/opt/${gnu_pkg}/libexec/gnubin":${PATH}
+			if [[ ${gnu_pkg} = "coreutils" ]]; then
 				gnu_ls=true
 			fi
 		fi
 	done
 	### completions
-	FPATH="$(brew --prefix)/share/zsh/site-functions":$FPATH
+	FPATH="$(brew --prefix)/share/zsh/site-functions":${FPATH}
 	autoload -Uz compinit
 	compinit
 fi
 ## PostgreSQL
 if type psql > /dev/null 2>&1; then
-	export PSQLRC="$XDG_CONFIG_HOME/pg/psqlrc"
-	export PSQL_HISTORY="$XDG_CACHE_HOME/pg/psql_history"
-	export PGPASSFILE="$XDG_CONFIG_HOME/pg/pgpass"
-	export PGSERVICEFILE="$XDG_CONFIG_HOME/pg/pg_service.conf"
+	export PSQLRC=${XDG_CONFIG_HOME}/pg/psqlrc
+	export PSQL_HISTORY=${XDG_CACHE_HOME}/pg/psql_history
+	export PGPASSFILE=${XDG_CONFIG_HOME}/pg/pgpass
+	export PGSERVICEFILE=${XDG_CONFIG_HOME}/pg/pg_service.conf
 fi
 ## pspg
 if type pspg > /dev/null 2>&1; then
-	mkdir -p $XDG_CACHE_HOME/pspg
+	mkdir -p ${XDG_CACHE_HOME}/pspg
 	export PSPG="-s 11"
-	export PSPG_HISTORY="$XDG_CACHE_HOME/pspg/pspg_history"
+	export PSPG_HISTORY=${XDG_CACHE_HOME}/pspg/pspg_history
 fi
 ## direnv
 if type direnv > /dev/null 2>&1; then
 	eval "$(direnv hook zsh)"
 fi
 
-# Program Languages
+# Programing Languages
 ## Rust
 if type rustup-init > /dev/null 2>&1; then
-	export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-	export RUST_SRC_PATH="$RUSTUP_HOME/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/library"
-	export CARGO_HOME="$XDG_DATA_HOME/cargo"
-	if [[ -e "$CARGO_HOME/env" ]]; then
-		source "$CARGO_HOME/env"
+	### rustup
+	export RUSTUP_HOME=${XDG_DATA_HOME}/rustup
+	#### assign to an array to expand wildcard
+	rust_src_path=(${RUSTUP_HOME}/toolchains/*/lib/rustlib/src/rust/library)
+	export RUST_SRC_PATH=${rust_src_path[1]}
+	unset rust_src_path
+	### cargo
+	export CARGO_HOME=${XDG_DATA_HOME}/cargo
+	if [[ -e "${CARGO_HOME}/env" ]]; then
+		source ${CARGO_HOME}/env
 	fi
 fi
 ## Python
 ### pip
-if [[ $OSTYPE = darwin* ]] && [[ -e "$XDG_CONFIG_HOME/pip/pip.conf" ]]; then
-	export PIP_CONFIG_FILE="$XDG_CONFIG_HOME/pip/pip.conf"
+if [[ $OSTYPE = darwin* ]] && [[ -e "${XDG_CONFIG_HOME}/pip/pip.conf" ]]; then
+	export PIP_CONFIG_FILE=${XDG_CONFIG_HOME}/pip/pip.conf
 fi
 if type pip3 > /dev/null 2>&1; then
-	export PIP_CACHE_DIR="$XDG_CACHE_HOME/pip"
+	export PIP_CACHE_DIR=${XDG_CACHE_HOME}/pip
 fi
 ### pipenv
 if type pipenv > /dev/null 2>&1; then
-	export PIPENV_CACHE_DIR="$XDG_CACHE_HOME/pipenv"
+	export PIPENV_CACHE_DIR=${XDG_CACHE_HOME}/pipenv
 fi
-## PHP
-if type brew > /dev/null 2>&1; then
-	if [[ -e "$(brew --prefix)/opt/php@7.3" ]]; then
-		export PATH="$(brew --prefix)/opt/php@7.3/bin":$PATH
-		export PATH="$(brew --prefix)/opt/php@7.3/sbin":$PATH
-	fi
-fi
-## JS
+## npm
 if type npm > /dev/null 2>&1; then
-	export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+	export NPM_CONFIG_USERCONFIG=${XDG_CONFIG_HOME}/npm/npmrc
 fi
 
 # ls
@@ -124,34 +130,34 @@ fi
 # aliases
 ## wget with no history file
 if type wget > /dev/null 2>&1; then
-	alias wget='wget --no-hsts'
+	alias wget="wget --no-hsts"
 fi
 ## vim to neovim
 if type nvim > /dev/null 2>&1; then
-	alias vim='nvim'
+	alias vim="nvim"
 fi
 ## other aliases
-case "$OSTYPE" in
+case ${OSTYPE} in
 	linux*)
 		export LS_COLORS
-		alias ls='ls -F --color=auto'
-		alias ll='ls -lh'
-		alias la='ls -A'
-		alias less='less -i -x2 -N -R -M'
+		alias ls="ls -F --color=auto"
+		alias ll="ls -lh"
+		alias la="ls -A"
+		alias less="less -i -x2 -N -R -M"
 		;;
 	darwin*)
 		if [ $gnu_ls ]; then
 			export LS_COLORS
-			alias ls='ls -F --color=auto'
-			alias ll='ls -lh'
-			alias la='ls -A'
-			alias less='less -i -x2 -N -R -M'
+			alias ls="ls -F --color=auto"
+			alias ll="ls -lh"
+			alias la="ls -A"
+			alias less="less -i -x2 -N -R -M"
 			unset gnu_ls
 		else
 			export LSCOLORS=LS_COLORS
-			alias ls='ls -F -G'
-			alias ll='ls -lh'
-			alias la='ls -A'
+			alias ls="ls -F -G"
+			alias ll="ls -lh"
+			alias la="ls -A"
 		fi
 esac
 
