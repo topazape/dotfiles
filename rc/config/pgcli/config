@@ -13,7 +13,8 @@ wider_completion_menu = False
 # this is set to True, then the end of the statements must have a semi-colon.
 # If this is set to False then sql statements can't be split into multiple
 # lines. End of line (return) is considered as the end of the statement.
-multi_line = False
+# multi_line = False
+multi_line = True
 
 # If multi_line_mode is set to "psql", in multi-line mode, [Enter] will execute
 # the current input if the input ends in a semicolon.
@@ -84,7 +85,7 @@ search_path_filter = False
 # Default pager.
 # By default 'PAGER' environment variable is used
 # pager = less -SRXF
-pager = /usr/local/bin/pspg --csv --rr=2 --quit-if-one-screen --ignore-case --csv-header on --pgcli-fix
+pager = pspg --csv --rr=2 --quit-if-one-screen --ignore-case --csv-header on --pgcli-fix -s 22
 
 # Timing of sql statements and table rendering.
 timing = True
