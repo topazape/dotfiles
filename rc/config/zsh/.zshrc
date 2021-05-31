@@ -19,7 +19,7 @@ if infocmp ${TERM} |/usr/bin/grep "[sr]itm" > /dev/null; then
 elif infocmp xterm-256color-italic > /dev/null 2>&1; then
 	export TERM="xterm-256color-italic"
 else
-	perl -e 'use File::Temp qw/ tempfile /; my ($fh, $fn) = tempfile( UNLINK => 1 ); print $fh "xterm-256color-italic|xterm with 256 colors and italic,\n\tsitm=\\E[3m, ritm=\\E[23m,\n\tuse=xterm-256color,\n"; close $fh; my @cmd = ("tic", $fn); system(@cmd);'
+	perl -e 'use File::Temp qw/ tempfile /; my ($fh, $fn) = tempfile(UNLINK => 1); print $fh "xterm-256color-italic|xterm with 256 colors and italic,\n\tsitm=\\E[3m, ritm=\\E[23m,\n\tuse=xterm-256color,\n"; close $fh; my @cmd = ("tic", $fn); system(@cmd);'
 	export TERM="xterm-256color-italic"
 fi
 
