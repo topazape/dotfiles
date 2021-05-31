@@ -118,7 +118,8 @@ vi = False
 on_error = STOP
 
 # Set threshold for row limit. Use 0 to disable limiting.
-row_limit = 1000
+# row_limit = 1000
+row_limit = 0
 
 # Skip intro on startup and goodbye on exit
 less_chatty = False
