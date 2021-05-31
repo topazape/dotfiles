@@ -40,7 +40,8 @@ generate_aliases = False
 # In Unix/Linux: ~/.config/pgcli/log
 # In Windows: %USERPROFILE%\AppData\Local\dbcli\pgcli\log
 # %USERPROFILE% is typically C:\Users\{username}
-log_file = default
+# log_file = default
+log_file = ~/.cache/pgcli/log
 
 # keyword casing preference. Possible values: "lower", "upper", "auto"
 keyword_casing = auto
@@ -62,7 +63,8 @@ case_column_headers = True
 # In Unix/Linux: ~/.config/pgcli/history
 # In Windows: %USERPROFILE%\AppData\Local\dbcli\pgcli\history
 # %USERPROFILE% is typically C:\Users\{username}
-history_file = default
+# history_file = default
+history_file = ~/.cache/pgcli/history
 
 # Default log level. Possible values: "CRITICAL", "ERROR", "WARNING", "INFO"
 # and "DEBUG". "NONE" disables logging.
