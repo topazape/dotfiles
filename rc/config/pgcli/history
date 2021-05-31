@@ -1,0 +1,48 @@
+
+# 2021-05-31 19:29:22.364202
++SELECT * FROM engagement WHERE website = 'carely.jp';
+
+# 2021-05-31 19:34:46.757771
++exit
+
+# 2021-05-31 19:36:29.517837
++SELECT * FROM engagement WHERE website = 'carely.jp';
+
+# 2021-05-31 19:36:31.028211
++exit
+
+# 2021-05-31 19:38:42.338902
++SELECT * FROM engagement WHERE website = 'carely.jp';
+
+# 2021-05-31 19:39:21.958233
++SELECT * FROM engagement ;
+
+# 2021-05-31 19:39:57.615331
++SELECT * FROM engagement WHERE website = 'carely.jp';
+
+# 2021-05-31 19:42:22.435099
++SELECT * FROM engagement ;
+
+# 2021-05-31 19:45:09.128927
++SELECT * FROM engagement WHERE website = 'carely.jp';
+
+# 2021-05-31 19:45:46.518413
++SELECT * FROM engagement ;
+
+# 2021-05-31 19:46:31.976409
++SELECT * FROM engagement WHERE website = 'carely.jp';
+
+# 2021-05-31 19:47:11.442403
++SELECT * FROM engagement ;
+
+# 2021-05-31 19:47:45.639631
++SELECT * FROM engagement WHERE website = 'carely.jp';
+
+# 2021-05-31 19:48:32.019912
++SELECT * FROM engagement ;
+
+# 2021-05-31 19:48:47.475930
++SELECT * FROM engagement WHERE website = 'carely.jp';
+
+# 2021-05-31 20:03:09.529813
++ls
