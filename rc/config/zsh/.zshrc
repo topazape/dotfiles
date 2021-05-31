@@ -73,8 +73,8 @@ fi
 if type psql > /dev/null 2>&1; then
 	export PSQLRC=${XDG_CONFIG_HOME}/pg/psqlrc
 	export PSQL_HISTORY=${XDG_CACHE_HOME}/pg/psql_history
-	export PGPASSFILE=${XDG_CONFIG_HOME}/pg/pgpass
-	export PGSERVICEFILE=${XDG_CONFIG_HOME}/pg/pg_service.conf
+#	export PGPASSFILE=${XDG_CONFIG_HOME}/pg/pgpass
+#	export PGSERVICEFILE=${XDG_CONFIG_HOME}/pg/pg_service.conf
 fi
 ## pspg
 if type pspg > /dev/null 2>&1; then
