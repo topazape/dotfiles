@@ -76,6 +76,12 @@ if type psql > /dev/null 2>&1; then
 	export PGPASSFILE=${XDG_CONFIG_HOME}/pg/pgpass
 #	export PGSERVICEFILE=${XDG_CONFIG_HOME}/pg/pg_service.conf
 fi
+## usql
+if type usql > /dev/null 2>&1; then
+	export USQLRC=${XDG_CONFIG_HOME}/usql/usqlrc
+	export USQL_HISTORY=${XDG_CACHE_HOME}/usql/usql_history
+	export USQLPASS=${XDG_CACHE_HOME}/usql/usqlpass
+fi
 ## pspg
 if type pspg > /dev/null 2>&1; then
 	mkdir -p ${XDG_CACHE_HOME}/pspg
