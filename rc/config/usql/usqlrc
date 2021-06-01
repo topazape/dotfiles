@@ -1,6 +1,0 @@
-\set PAGER pspg
-
-\pset border 2
-\pset linestyle unicode
-\pset null '[NULL]'
-\pset pager always
