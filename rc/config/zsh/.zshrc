@@ -69,11 +69,17 @@ if type brew > /dev/null 2>&1; then
 	autoload -Uz compinit
 	compinit
 fi
+## usql
+if type usql > /dev/null 2>&1; then
+	export USQLRC=${XDG_CONFIG_HOME}/usql/usqlrc
+	export USQL_HISTORY=${XDG_CACHE_HOME}/usql/usql_history
+	export USQLPASS=${XDG_CACHE_HOME}/usql/usqlpass
+fi
 ## PostgreSQL
 if type psql > /dev/null 2>&1; then
 	export PSQLRC=${XDG_CONFIG_HOME}/pg/psqlrc
 	export PSQL_HISTORY=${XDG_CACHE_HOME}/pg/psql_history
-#	export PGPASSFILE=${XDG_CONFIG_HOME}/pg/pgpass
+	export PGPASSFILE=${XDG_CONFIG_HOME}/pg/pgpass
 #	export PGSERVICEFILE=${XDG_CONFIG_HOME}/pg/pg_service.conf
 fi
 ## pspg
