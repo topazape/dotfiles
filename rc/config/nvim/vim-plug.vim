@@ -32,8 +32,13 @@ call plug#end()
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-n><C-f> :NERDTreeFind<CR>
 let g:NERDTreeBookMarksFile= expand(($XDG_CACHE_HOME . '/nvim/NERDTreeBookmarks'))
-"" Start NERDTree and leave the cursor in it.
-autocmd VimEnter * NERDTree
+"" Start NERDTree. If a file is specified, move the cursor to its window.
+augroup NERD
+    au!
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+    autocmd VimEnter * call lightline#update()
+augroup END
 "" Exit Vim if NERDTree is the only window left.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 "" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
