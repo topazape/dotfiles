@@ -70,7 +70,7 @@ if executable('pyls')
 endif
 
 " vista.vim
-nnoremap <C-n> :Vista vim_lsp<CR>
+nnoremap <C-n><C-v> :Vista vim_lsp<CR>
 
 " lightline
 let g:lightline = {
