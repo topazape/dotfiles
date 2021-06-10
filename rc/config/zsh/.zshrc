@@ -92,6 +92,11 @@ fi
 if type direnv > /dev/null 2>&1; then
 	eval "$(direnv hook zsh)"
 fi
+## aws-cli
+if type aws > /dev/null 2>&1; then
+	export AWS_SHARED_CREDENTIALS_FILE=${XDG_CONFIG_HOME}/aws/credentials
+	export AWS_CONFIG_FILE=${XDG_CONFIG_HOME}/aws/config
+fi
 
 # Programing Languages
 ## Rust
