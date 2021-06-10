@@ -37,6 +37,7 @@ augroup NERDStart
     au!
     autocmd StdinReadPre * let s:std_in=1
     autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+    """ without below line, status of lightline will not be desplayed
     autocmd VimEnter * call lightline#update()
 augroup END
 "" Exit Vim if NERDTree is the only window left.
