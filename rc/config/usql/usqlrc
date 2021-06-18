@@ -1,6 +1,6 @@
-\set PAGER pspg
-
+\pset pager_min_lines 48
 \pset border 2
 \pset linestyle unicode
 \pset null '[NULL]'
-\pset pager always
+\pset pager on
+\set PAGER pspg
