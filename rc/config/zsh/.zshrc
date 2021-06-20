@@ -92,6 +92,10 @@ fi
 if type direnv > /dev/null 2>&1; then
 	eval "$(direnv hook zsh)"
 fi
+## qpdf
+if type qpdf > /dev/null 2>&1; then
+	eval "$(qpdf --completion-zsh)"
+fi
 ## aws-cli
 if type aws > /dev/null 2>&1; then
 	export AWS_SHARED_CREDENTIALS_FILE=${XDG_CONFIG_HOME}/aws/credentials
