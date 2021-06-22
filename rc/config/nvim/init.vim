@@ -13,8 +13,6 @@ set noswapfile
 " Search
 set ignorecase
 set wrapscan
-"" enable very magic to default
-nnoremap / /\v
 
 " View settings
 set number
