@@ -4,21 +4,5 @@ use_jupyter() {
 	export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 	export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 	export JUPYTER_DATA_DIR="$XDG_DATA_HOME/jupyter"
-	if [[ $OSTYPE == darwin* ]]; then
-	  export MPLCONFIGDIR="$XDG_CONFIG_HOME/matplotlib"
-	fi
-}
-
-use_gpu() {
-	export CUDA_ROOT="/usr/local/cuda"
-	export PATH="/usr/local/cuda/bin":$PATH
-	export CUDA_VISIBLE_DEVICES=$1
-	export LD_LIBRARY_PATH="/usr/local/cuda/lib64":$LD_LIBRARY_PATH
-}
-
-use_tensorflow() {
-	export CUDA_ROOT="/usr/local/cuda"
-	export PATH="/usr/local/cuda-10.1/bin":$PATH
-	export CUDA_VISIBLE_DEVICES=$1
-	export LD_LIBRARY_PATH="/usr/local/cuda-10.1/lib64":"/usr/local/cuda-10.1/extras/CUPTI/lib64":"/usr/local/cuda-10.1/TensorRT-6.0.1.5/lib":$LD_LIBRARY_PATH
+	export MPLCONFIGDIR="$XDG_CONFIG_HOME/matplotlib"
 }
