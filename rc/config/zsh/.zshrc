@@ -10,6 +10,7 @@
 export XDG_CONFIG_HOME=${HOME}/.config
 export XDG_CACHE_HOME=${HOME}/.cache
 export XDG_DATA_HOME=${HOME}/.local/share
+export XDG_RUNTIME_DIR=/tmp/user/${UID}
 
 ## terminfo
 export TERMINFO=${XDG_DATA_HOME}/terminfo
@@ -85,7 +86,7 @@ fi
 ## pspg
 if type pspg > /dev/null 2>&1; then
 	mkdir -p ${XDG_CACHE_HOME}/pspg
-	export PSPG="-s 22"
+	export PSPG="--no-last-row-search -s 22"
 	export PSPG_HISTORY=${XDG_CACHE_HOME}/pspg/pspg_history
 fi
 ## direnv
