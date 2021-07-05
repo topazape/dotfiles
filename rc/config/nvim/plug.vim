@@ -16,11 +16,11 @@ Plug 'tyru/caw.vim'
 Plug 'mattn/vim-lexiv'
 
 " lsp
-"" manager
-Plug 'alexaandru/nvim-lspupdate'
-"" lsp
 Plug 'neovim/nvim-lspconfig'
+"" lsp-ui
 Plug 'glepnir/lspsaga.nvim'
+"" installer
+Plug 'kabouzeid/nvim-lspinstall'
 "" LSP symbols
 Plug 'simrat39/symbols-outline.nvim'
 "" auto-completion
@@ -54,18 +54,22 @@ autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_
     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
 " lsp
-" lsp-config
+"" lsp-config
 lua require('_nvim-lspconfig')
-"" completion-nvim 
+"" lspsaga
+lua require('_lspsaga')
+"" lsp install
+lua require('_nvim-lspinstall')
+""" completion-nvim 
 autocmd BufEnter * lua require'completion'.on_attach()
-""" Use <Tab> and <S-Tab> to navigate through popup menu
+"""" Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-""" Set completeopt to have a better completion experience
+"""" Set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
-""" Avoid showing message extra message when using completion
+"""" Avoid showing message extra message when using completion
 set shortmess+=c
-"" symbols-outline
+""" symbols-outline
 let g:symbols_outline = {
     \ "highlight_hovered_item": v:true,
     \ "show_guides": v:true,
@@ -84,6 +88,7 @@ let g:symbols_outline = {
     \ },
     \ "lsp_blacklist": [],
 \ }
+nnoremap <C-n><C-o> :SymbolsOutline<CR>
 
 " status line
 lua require('_lualine')

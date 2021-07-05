@@ -79,9 +79,8 @@ autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 expandtab
 " javascript
 autocmd FileType javascript,typescript,json setlocal tabstop=2 shiftwidth=2 expandtab
-" PHP
-autocmd FileType php setlocal tabstop=4 shiftwidth=4 expandtab
-
+" lua
+autocmd FileType lua setlocal tabstop=2 shiftwidth=2 expandtab
 
 " for Python Virtual Environment
 if exists('$VIRTUAL_ENV')
