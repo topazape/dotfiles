@@ -101,4 +101,4 @@ autocmd TermOpen * setlocal nonumber
 command! -nargs=* T split | wincmd j | resize 15 | terminal <args>
 
 " load plugins
-runtime! vim-plug.vim
+runtime! plug.vim
