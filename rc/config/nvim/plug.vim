@@ -33,7 +33,7 @@ Plug 'hoob3rt/lualine.nvim'
 " visual-indent
 Plug 'Yggdroot/indentLine'
 " colorscheme
-Plug 'ghifarit53/tokyonight-vim'
+Plug 'folke/tokyonight.nvim'
 call plug#end()
 
 

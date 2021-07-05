@@ -1,7 +1,7 @@
 local lualine = require 'lualine'
 local config = {
   options = {
-    theme = 'material'
+    theme = 'tokyonight'
   },
   sections = {
     lualine_x = {
