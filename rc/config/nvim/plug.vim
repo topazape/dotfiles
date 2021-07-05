@@ -4,21 +4,28 @@ let g:plug_window = 'new'
 call plug#begin('~/.local/share/nvim/plugged')
 " file explore
 Plug 'preservim/nerdtree'
+
 " icons
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
-" comment out
+
+" operator/non-operator mappings
 Plug 'tyru/caw.vim'
+
 " lexima
 Plug 'mattn/vim-lexiv'
+
 " lsp
+"" manager
+Plug 'alexaandru/nvim-lspupdate'
+"" lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'glepnir/lspsaga.nvim'
-Plug 'mattn/vim-lsp-settings'
 "" LSP symbols
-Plug 'liuchengxu/vista.vim'
-" auto-completion
+Plug 'simrat39/symbols-outline.nvim'
+"" auto-completion
 Plug 'nvim-lua/completion-nvim'
+
 " tree-sitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " status line
@@ -46,27 +53,42 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
     \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
+" lsp
 " lsp-config
 lua require('_nvim-lspconfig')
-
-" completion-nvim 
+"" completion-nvim 
 autocmd BufEnter * lua require'completion'.on_attach()
-"" Use <Tab> and <S-Tab> to navigate through popup menu
+""" Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-"" Set completeopt to have a better completion experience
+""" Set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
-"" Avoid showing message extra message when using completion
+""" Avoid showing message extra message when using completion
 set shortmess+=c
-
-" vista.vim
-nnoremap <C-n><C-v> :Vista vim_lsp<CR>
+"" symbols-outline
+let g:symbols_outline = {
+    \ "highlight_hovered_item": v:true,
+    \ "show_guides": v:true,
+    \ "position": 'right',
+    \ "auto_preview": v:true,
+    \ "show_numbers": v:false,
+    \ "show_relative_numbers": v:false,
+    \ "show_symbol_details": v:true,
+    \ "keymaps": {
+        \ "close": "<Esc>",
+        \ "goto_location": "<Cr>",
+        \ "focus_location": "o",
+        \ "hover_symbol": "<C-space>",
+        \ "rename_symbol": "r",
+        \ "code_actions": "a",
+    \ },
+    \ "lsp_blacklist": [],
+\ }
 
 " status line
 lua require('_lualine')
 
 " nvim-treesitter
-"" rainbow
 lua require('_nvim-treesitter')
 
 " indentLine
