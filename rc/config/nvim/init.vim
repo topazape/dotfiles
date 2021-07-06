@@ -99,5 +99,6 @@ autocmd TermOpen * setlocal nonumber
 "" open terminal under current window (:T)
 command! -nargs=* T split | wincmd j | resize 15 | terminal <args>
 
-" load plugins
-runtime! plug.vim
+"" packer.lua
+lua require('plugins')
+runtime! plugin-settings.vim

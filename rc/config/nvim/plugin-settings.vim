@@ -1,42 +1,3 @@
-" vim-plug
-let g:plug_window = 'new'
-
-call plug#begin('~/.local/share/nvim/plugged')
-" file explore
-Plug 'kyazdani42/nvim-tree.lua'
-
-" icons
-Plug 'ryanoasis/vim-devicons'
-Plug 'kyazdani42/nvim-web-devicons'
-
-" operator/non-operator mappings
-Plug 'tyru/caw.vim'
-
-" lexima
-Plug 'mattn/vim-lexiv'
-
-" lsp
-Plug 'neovim/nvim-lspconfig'
-"" lsp-ui
-Plug 'glepnir/lspsaga.nvim'
-"" installer
-Plug 'kabouzeid/nvim-lspinstall'
-"" LSP symbols
-Plug 'simrat39/symbols-outline.nvim'
-"" auto-completion
-Plug 'nvim-lua/completion-nvim'
-
-" tree-sitter
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-" status line
-Plug 'hoob3rt/lualine.nvim'
-" visual-indent
-Plug 'Yggdroot/indentLine'
-" colorscheme
-Plug 'folke/tokyonight.nvim'
-call plug#end()
-
-
 " NERDTree
 " nnoremap <C-n> :NERDTree<CR>
 " nnoremap <C-n><C-f> :NERDTreeFind<CR>
@@ -54,7 +15,9 @@ call plug#end()
 "    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
 " nvim-tree
-runtime! nvim-tree.vim
+nnoremap <C-n> :NvimTreeOpen<CR>
+nnoremap <C-n><C-d> :NvimTreeClose<CR>
+nnoremap <C-n><C-f> :NvimTreeFind<CR>
 
 " lsp
 "" lsp-config

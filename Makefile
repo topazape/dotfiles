@@ -48,6 +48,11 @@ vim-plug-init:
 	@curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+.PHONY: nvim-packer-init
+nvim-packer-init:
+	@git clone https://github.com/wbthomason/packer.nvim \
+		 ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
 .PHONY: init
 init:
 ifeq ($(UNAME), Linux)
