@@ -3,7 +3,7 @@ let g:plug_window = 'new'
 
 call plug#begin('~/.local/share/nvim/plugged')
 " file explore
-Plug 'preservim/nerdtree'
+Plug 'kyazdani42/nvim-tree.lua'
 
 " icons
 Plug 'ryanoasis/vim-devicons'
@@ -38,28 +38,31 @@ call plug#end()
 
 
 " NERDTree
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-n><C-f> :NERDTreeFind<CR>
-let g:NERDTreeBookMarksFile= expand(($XDG_CACHE_HOME . '/nvim/NERDTreeBookmarks'))
-"" Start NERDTree. If a file is specified, move the cursor to its window.
-augroup NERDStart
-    au!
-    autocmd StdinReadPre * let s:std_in=1
-    autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
-augroup END
-"" Exit Vim if NERDTree is the only window left.
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-"" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
-autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
-    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+" nnoremap <C-n> :NERDTree<CR>
+" nnoremap <C-n><C-f> :NERDTreeFind<CR>
+" let g:NERDTreeBookMarksFile= expand(($XDG_CACHE_HOME . '/nvim/NERDTreeBookmarks'))
+" "" Start NERDTree. If a file is specified, move the cursor to its window.
+" augroup NERDStart
+"     au!
+"     autocmd StdinReadPre * let s:std_in=1
+"     autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+" augroup END
+" "" Exit Vim if NERDTree is the only window left.
+" autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+" "" If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
+" autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
+"    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
+
+" nvim-tree
+runtime! nvim-tree.vim
 
 " lsp
 "" lsp-config
-lua require('_nvim-lspconfig')
+lua require('_lspconfig')
 "" lspsaga
 lua require('_lspsaga')
 "" lsp install
-lua require('_nvim-lspinstall')
+lua require('_lspinstall')
 """ completion-nvim 
 autocmd BufEnter * lua require'completion'.on_attach()
 """" Use <Tab> and <S-Tab> to navigate through popup menu
@@ -94,7 +97,7 @@ nnoremap <C-n><C-o> :SymbolsOutline<CR>
 lua require('_lualine')
 
 " nvim-treesitter
-lua require('_nvim-treesitter')
+lua require('_treesitter')
 
 " indentLine
 "" change conceal setting for json
