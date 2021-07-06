@@ -4,5 +4,5 @@ saga.init_lsp_saga {
   warn_sign = '',
   hint_sign = '',
   infor_sign = '',
-  border_style = "round",
+  border_style = 'round',
 }

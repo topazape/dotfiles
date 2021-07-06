@@ -41,6 +41,9 @@ return packer.startup(function()
   -- status line
   use 'hoob3rt/lualine.nvim'
 
+  -- indent
+  use 'lukas-reineke/indent-blankline.nvim'
+
   -- colorscheme
   use 'folke/tokyonight.nvim'
 
@@ -49,7 +52,4 @@ return packer.startup(function()
 
   -- lexima
   use 'mattn/vim-lexiv'
-
-  -- visual-indent
-  use 'Yggdroot/indentLine'
 end)
