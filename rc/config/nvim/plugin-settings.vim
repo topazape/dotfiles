@@ -14,6 +14,9 @@
 " autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
 "    \ let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
 
+" packer
+autocmd BufWritePost plugins.lua PackerCompile
+
 " nvim-tree
 nnoremap <C-n> :NvimTreeOpen<CR>
 nnoremap <C-n><C-d> :NvimTreeClose<CR>

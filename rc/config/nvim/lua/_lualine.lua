@@ -1,4 +1,4 @@
-local lualine = require 'lualine'
+local lualine = require('lualine')
 local config = {
   options = {
     theme = 'tokyonight'
