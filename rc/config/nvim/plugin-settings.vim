@@ -9,7 +9,7 @@ lua require('_lspconfig')
 "" lspsaga
 lua require('_lspsaga')
 "" lsp install
-lua require('_lspinstall')
+lua local lspinstall = require('_lspinstall')
 """ completion-nvim 
 autocmd BufEnter * lua require'completion'.on_attach()
 """" Use <Tab> and <S-Tab> to navigate through popup menu
@@ -47,7 +47,7 @@ lua require('_lualine')
 lua require('_treesitter')
 
 " indent-blankline
-let g:indent_blankline_char_list = ['│', '¦', '┆', '┊']
+let g:indent_blankline_char_list = ['│', '┊', '┆', '¦']
 
 " Colors
 "" colorscheme
