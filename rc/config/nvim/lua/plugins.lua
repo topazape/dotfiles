@@ -31,6 +31,8 @@ return packer.startup(function()
   use 'simrat39/symbols-outline.nvim'
   ---- auto-completion
   use 'nvim-lua/completion-nvim'
+  ---- snippets
+  use 'norcalli/snippets.nvim'
 
   -- tree-sitter
   use {

@@ -19,6 +19,8 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 set completeopt=menuone,noinsert,noselect
 """" Avoid showing message extra message when using completion
 set shortmess+=c
+""" snippets
+lua require('snippets').use_suggested_mappings()
 """ symbols-outline
 let g:symbols_outline = {
     \ 'highlight_hovered_item': v:true,
