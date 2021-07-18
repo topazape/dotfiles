@@ -51,7 +51,4 @@ return packer.startup(function()
 
   -- operator/non-operator mappings
   use 'tyru/caw.vim'
-
-  -- lexima
-  use 'mattn/vim-lexiv'
 end)
