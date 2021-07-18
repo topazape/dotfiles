@@ -104,6 +104,22 @@ if type aws > /dev/null 2>&1; then
 fi
 
 # Programing Languages
+## Javascript
+### node
+if type npm > /dev/null 2>&1; then
+	export NPM_CONFIG_USERCONFIG=${XDG_CONFIG_HOME}/npm/npmrc
+	if [[ -d ${XDG_DATA_HOME}/npm/bin ]]; then
+		export PATH=${XDG_DATA_HOME}/npm/bin:${PATH}
+	fi
+fi
+## Ruby
+### rubygems
+export GEM_HOME=${XDG_DATA_HOME}/gem
+export GEM_SPEC_CACHE={$XDG_CACHE_HOME}/gem
+### bundler
+export BUNDLE_USER_CONFIG={$XDG_CONFIG_HOME}/bundle
+export BUNDLE_USER_CACHE={$XDG_CACHE_HOME}/bundle
+export BUNDLE_USER_PLUGIN={$XDG_DATA_HOME]/bundle
 ## Rust
 if type rustup-init > /dev/null 2>&1; then
 	### rustup
@@ -129,13 +145,6 @@ fi
 ### pipenv
 if type pipenv > /dev/null 2>&1; then
 	export PIPENV_CACHE_DIR=${XDG_CACHE_HOME}/pipenv
-fi
-## npm
-if type npm > /dev/null 2>&1; then
-	export NPM_CONFIG_USERCONFIG=${XDG_CONFIG_HOME}/npm/npmrc
-	if [[ -d ${XDG_DATA_HOME}/npm/bin ]]; then
-		export PATH=${XDG_DATA_HOME}/npm/bin:${PATH}
-	fi
 fi
 
 # ls

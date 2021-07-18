@@ -72,7 +72,7 @@ filetype plugin on
 " vim script
 autocmd FileType vim setlocal tabstop=2 shiftwidth=2 expandtab
 " sql
-autocmd FileType sql setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType sql setlocal tabstop=2 shiftwidth=2 expandtab
 " html
 autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
 " yaml
