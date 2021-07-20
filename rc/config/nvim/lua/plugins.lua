@@ -39,6 +39,8 @@ return packer.startup(function()
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+  -- rainbow
+  use 'p00f/nvim-ts-rainbow'
 
   -- status line
   use 'hoob3rt/lualine.nvim'
