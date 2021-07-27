@@ -49,7 +49,7 @@ lua require('_lualine')
 lua require('_treesitter')
 
 " indent-blankline
-let g:indent_blankline_char_list = ['│', '┊', '┆', '¦']
+let g:indent_blankline_char_list = ['│', '┊', '┆', '¦', '⋮', 'ˈ', 'ˌ']
 
 " Colors
 "" colorscheme

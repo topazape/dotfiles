@@ -112,6 +112,18 @@ if type npm > /dev/null 2>&1; then
 		export PATH=${XDG_DATA_HOME}/npm/bin:${PATH}
 	fi
 fi
+## Python
+### pip
+if [[ $OSTYPE = darwin* ]] && [[ -e "${XDG_CONFIG_HOME}/pip/pip.conf" ]]; then
+	export PIP_CONFIG_FILE=${XDG_CONFIG_HOME}/pip/pip.conf
+fi
+if type pip3 > /dev/null 2>&1; then
+	export PIP_CACHE_DIR=${XDG_CACHE_HOME}/pip
+fi
+### pipenv
+if type pipenv > /dev/null 2>&1; then
+	export PIPENV_CACHE_DIR=${XDG_CACHE_HOME}/pipenv
+fi
 ## Ruby
 if [[ -e "/usr/local/opt/ruby/bin" ]]; then
 	export PATH="/usr/local/opt/ruby/bin":$PATH
@@ -139,18 +151,6 @@ if type rustup-init > /dev/null 2>&1; then
 	if [[ -e "${CARGO_HOME}/env" ]]; then
 		source ${CARGO_HOME}/env
 	fi
-fi
-## Python
-### pip
-if [[ $OSTYPE = darwin* ]] && [[ -e "${XDG_CONFIG_HOME}/pip/pip.conf" ]]; then
-	export PIP_CONFIG_FILE=${XDG_CONFIG_HOME}/pip/pip.conf
-fi
-if type pip3 > /dev/null 2>&1; then
-	export PIP_CACHE_DIR=${XDG_CACHE_HOME}/pip
-fi
-### pipenv
-if type pipenv > /dev/null 2>&1; then
-	export PIPENV_CACHE_DIR=${XDG_CACHE_HOME}/pipenv
 fi
 
 # ls
