@@ -17,47 +17,7 @@ wezterm.on('format-tab-title',
 
 local config = {
   -- fonts
-  font = wezterm.font_with_fallback({
-    {family='JetBrainsMono Nerd Font', weight='Regular'},
-  }),
-  font_rules = {
-    {
-      intensity = 'Normal',
-      italic = false,
-      font = wezterm.font_with_fallback(
-        {
-          {family='JetBrainsMono Nerd Font', weight='Regular', italic=false},
-        }
-      ),
-    },
-    {
-      intensity = 'Normal',
-      italic = true,
-      font = wezterm.font_with_fallback(
-        {
-          {family='JetBrainsMono Nerd Font', weight='Regular', italic=true},
-        }
-      ),
-    },
-    {
-      intensity = 'Bold',
-      italic = false,
-      font = wezterm.font_with_fallback(
-        {
-          {family='JetBrainsMono Nerd Font', weight='Bold', italic=false},
-        }
-      ),
-    },
-    {
-      intensity = 'Bold',
-      italic = true,
-      font = wezterm.font_with_fallback(
-        {
-          {family='JetBrainsMono Nerd Font', weight='Bold', italic=true},
-        }
-      ),
-    },
-  },
+  font = wezterm.font("JetBrainsMono Nerd Font Mono"),
   dpi = 144.0,
   font_size = 14.0,
 
