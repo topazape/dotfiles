@@ -1,12 +1,18 @@
+function BuildArray(vals)
+  local arr = {}
+  for i, v in ipairs(vals) do
+    arr[i] = v
+  end
+  return arr
+end
+
+
 local math = require('math')
 local wezterm = require('wezterm')
 
 local img_dir = wezterm.home_dir .. '/Pictures/pics'
-Images = {}
-for i, v in ipairs(wezterm.glob(img_dir .. '/*.*')) do
-  Images[i] = v
-end
-local image = Images[math.random(#Images)]
+local images = BuildArray(wezterm.glob(img_dir .. '/*.*'))
+local image = images[math.random(#images)]
 
 local config = {
   -- fonts
