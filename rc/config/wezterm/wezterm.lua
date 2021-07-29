@@ -28,7 +28,7 @@ local config = {
 
   -- backgrounds
   -- window_backgorund_opacity = 1.0,
-  text_background_opacity = 0.8,
+  text_background_opacity = 0.80,
   window_background_image = image,
   window_background_image_hsb = {
     brightness = 0.3,
