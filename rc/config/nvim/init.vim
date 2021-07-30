@@ -99,7 +99,7 @@ autocmd TermOpen * startinsert
 "" disable linenumbers in terminal window
 autocmd TermOpen * setlocal nonumber
 "" open terminal under current window (:T)
-command! -nargs=* T split | wincmd j | resize 30 | terminal <args>
+command! -nargs=* T split | wincmd j | resize 40 | terminal <args>
 
 "" packer.lua
 lua require('plugins')
