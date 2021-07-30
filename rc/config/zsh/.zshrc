@@ -93,9 +93,9 @@ fi
 if type direnv > /dev/null 2>&1; then
 	eval "$(direnv hook zsh)"
 fi
-## qpdf
-if type qpdf > /dev/null 2>&1; then
-	eval "$(qpdf --completion-zsh)"
+## zellij
+if type zellij > /dev/null 2>&1; then
+	export ZELLIJ_CONFIG_DIR=${XDG_CONFIG_HOME}/zellij
 fi
 ## aws-cli
 if type aws > /dev/null 2>&1; then

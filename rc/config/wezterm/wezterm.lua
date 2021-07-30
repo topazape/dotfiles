@@ -16,7 +16,10 @@ local image = images[math.random(#images)]
 
 local config = {
   -- fonts
-  font = wezterm.font("JetBrainsMono Nerd Font Mono", {weight='Regular', italic=false}),
+  font = wezterm.font_with_fallback({
+    {family='JetBrains Mono', weight='Regular'},
+    {family='DroidSansMono Nerd Font', weight='Regular'}
+  }),
   dpi = 96.0,
   font_size = 14.0,
 
@@ -28,7 +31,7 @@ local config = {
 
   -- backgrounds
   -- window_backgorund_opacity = 1.0,
-  text_background_opacity = 0.80,
+  text_background_opacity = 0.9,
   window_background_image = image,
   window_background_image_hsb = {
     brightness = 0.3,
