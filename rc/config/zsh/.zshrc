@@ -157,7 +157,6 @@ if type rustup-init > /dev/null 2>&1; then
 	fi
 fi
 
-
 # aliases
 ## wget with no history file
 if type wget > /dev/null 2>&1; then

@@ -1,3 +1,6 @@
+local math = require('math')
+local wezterm = require('wezterm')
+
 function BuildArray(vals)
   local arr = {}
   for i, v in ipairs(vals) do
@@ -6,20 +9,63 @@ function BuildArray(vals)
   return arr
 end
 
-
-local math = require('math')
-local wezterm = require('wezterm')
-
 local img_dir = wezterm.home_dir .. '/Pictures/pics'
 local images = BuildArray(wezterm.glob(img_dir .. '/*.*'))
 local image = images[math.random(#images)]
 
-local config = {
+return {
   -- fonts
   font = wezterm.font_with_fallback({
     {family='JetBrains Mono', weight='Regular'},
+    {family='Hiragino Sans', weight='Regular'},
     {family='DroidSansMono Nerd Font', weight='Regular'}
   }),
+  font_rules = {
+    {
+      italic = true,
+      font = wezterm.font_with_fallback({
+        {family='JetBrains Mono', weight='Regular', italic=true},
+        {family='Hiragino Sans', weight='Regular', italic=true},
+        {family='DroidSansMono Nerd Font', weight='Regular', italic=false}
+      })
+    },
+    {
+      intensity = 'Half',
+      italic = false,
+      font = wezterm.font_with_fallback({
+        {family='JetBrains Mono', weight='Thin', italic=false},
+        {family='Hiragino Sans', weight='Thin', italic=false},
+        {family='DroidSansMono Nerd Font', weight='Regular', italic=false}
+      })
+    },
+    {
+      intensity = 'Half',
+      italic = true,
+      font = wezterm.font_with_fallback({
+        {family='JetBrains Mono', weight='Thin', italic=true},
+        {family='Hiragino Sans', weight='Thin', italic=true},
+        {family='DroidSansMono Nerd Font', weight='Regular', italic=false}
+      })
+    },
+    {
+      intensity = 'Bold',
+      italic = false,
+      font = wezterm.font_with_fallback({
+        {family='JetBrains Mono', weight='Bold', italic=false},
+        {family='Hiragino Sans', weight='Bold', italic=false},
+        {family='DroidSansMono Nerd Font', weight='Regular', italic=false}
+      })
+    },
+    {
+      intensity = 'Bold',
+      italic = true,
+      font = wezterm.font_with_fallback({
+        {family='JetBrains Mono', weight='Bold', italic=true},
+        {family='Hiragino Sans', weight='Bold', italic=true},
+        {family='DroidSansMono Nerd Font', weight='Regular', italic=false}
+      })
+    },
+  },
   dpi = 96.0,
   font_size = 14.0,
 
@@ -30,7 +76,6 @@ local config = {
   color_scheme = 'wezterm_tokyonight_storm',
 
   -- backgrounds
-  -- window_backgorund_opacity = 1.0,
   text_background_opacity = 0.9,
   window_background_image = image,
   window_background_image_hsb = {
@@ -59,5 +104,3 @@ local config = {
   allow_square_glyphs_to_overflow_width = 'WhenFollowedBySpace',
   native_macos_fullscreen_mode = true
 }
-
-return config
