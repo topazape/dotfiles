@@ -66,6 +66,8 @@ return {
       })
     },
   },
+  -- font_shaper = 'Harfbuzz',
+  font_shaper = 'Allsorts',
   dpi = 96.0,
   font_size = 14.0,
 
@@ -77,7 +79,7 @@ return {
 
   -- backgrounds
   text_background_opacity = 0.9,
-  window_background_image = image,
+  -- window_background_image = image,
   window_background_image_hsb = {
     brightness = 0.3,
     hue = 1.0,
