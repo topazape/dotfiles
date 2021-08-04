@@ -66,8 +66,8 @@ return {
       })
     },
   },
-  -- font_shaper = 'Harfbuzz',
-  font_shaper = 'Allsorts',
+  font_shaper = 'Harfbuzz',
+  -- font_shaper = 'Allsorts',
   dpi = 96.0,
   font_size = 14.0,
 
