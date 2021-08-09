@@ -42,7 +42,7 @@ let g:symbols_outline = {
     \ },
     \ 'lsp_blacklist': [],
 \ }
-nnoremap <C-n><C-o> :SymbolsOutline<CR>
+nnoremap <C-n>o :SymbolsOutline<CR>
 
 " status line
 lua require('_lualine')
