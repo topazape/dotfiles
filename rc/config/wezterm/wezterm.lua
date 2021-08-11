@@ -67,6 +67,7 @@ return {
     },
   },
   font_shaper = 'Harfbuzz',
+  harfbuzz_features = {'zero'},
   -- font_shaper = 'Allsorts',
   dpi = 96.0,
   font_size = 14.0,
@@ -105,5 +106,5 @@ return {
   use_ime = true,
   check_for_updates = false,
   allow_square_glyphs_to_overflow_width = 'WhenFollowedBySpace',
-  native_macos_fullscreen_mode = true
+  native_macos_fullscreen_mode = true,
 }
