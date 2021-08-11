@@ -97,6 +97,7 @@ return {
     {key='c', mods='SUPER', action=wezterm.action{CopyTo='Clipboard'}},
     {key='v', mods='SUPER', action=wezterm.action{PasteFrom='Clipboard'}},
     {key='f', mods='SUPER', action='ToggleFullScreen'},
+    {key='r', mods='SUPER', action='ReloadConfiguration'}
   },
   -- disable_default_mouse_bindings = true,
 
