@@ -17,16 +17,16 @@ return {
   -- fonts
   font = wezterm.font_with_fallback({
     {family='JetBrains Mono', weight='Regular'},
-    {family='Hiragino Sans', weight='Regular'},
-    {family='DroidSansMono Nerd Font', weight='Regular'}
+    {family='Noto Sans CJK JP', weight='Regular'},
+    {family='Hack Nerd Font Mono', weight='Regular'}
   }),
   font_rules = {
     {
       italic = true,
       font = wezterm.font_with_fallback({
         {family='JetBrains Mono', weight='Regular', italic=true},
-        {family='Hiragino Sans', weight='Regular', italic=true},
-        {family='DroidSansMono Nerd Font', weight='Regular', italic=false}
+        {family='Noto Sans CJK JP', weight='Regular', italic=true},
+        {family='Hack Nerd Font Mono', weight='Regular', italic=false}
       })
     },
     {
@@ -34,8 +34,8 @@ return {
       italic = false,
       font = wezterm.font_with_fallback({
         {family='JetBrains Mono', weight='Thin', italic=false},
-        {family='Hiragino Sans', weight='Thin', italic=false},
-        {family='DroidSansMono Nerd Font', weight='Regular', italic=false}
+        {family='Noto Sans CJK JP', weight='Light', italic=false},
+        {family='Hack Nerd Font Mono', weight='Regular', italic=false}
       })
     },
     {
@@ -43,8 +43,8 @@ return {
       italic = true,
       font = wezterm.font_with_fallback({
         {family='JetBrains Mono', weight='Thin', italic=true},
-        {family='Hiragino Sans', weight='Thin', italic=true},
-        {family='DroidSansMono Nerd Font', weight='Regular', italic=false}
+        {family='Noto Sans CJK JP', weight='Light', italic=true},
+        {family='Hack Nerd Font Mono', weight='Regular', italic=false}
       })
     },
     {
@@ -52,8 +52,8 @@ return {
       italic = false,
       font = wezterm.font_with_fallback({
         {family='JetBrains Mono', weight='Bold', italic=false},
-        {family='Hiragino Sans', weight='Bold', italic=false},
-        {family='DroidSansMono Nerd Font', weight='Regular', italic=false}
+        {family='Noto Sans CJK JP', weight='Bold', italic=false},
+        {family='Hack Nerd Font Mono', weight='Regular', italic=false}
       })
     },
     {
@@ -61,8 +61,8 @@ return {
       italic = true,
       font = wezterm.font_with_fallback({
         {family='JetBrains Mono', weight='Bold', italic=true},
-        {family='Hiragino Sans', weight='Bold', italic=true},
-        {family='DroidSansMono Nerd Font', weight='Regular', italic=false}
+        {family='Noto Sans CJK JP', weight='Bold', italic=true},
+        {family='Hack Nerd Font Mono', weight='Regular', italic=false}
       })
     },
   },
@@ -70,7 +70,7 @@ return {
   harfbuzz_features = {'zero'},
   -- font_shaper = 'Allsorts',
   dpi = 96.0,
-  font_size = 14.0,
+  font_size = 13,
 
   -- colors
   color_scheme_dirs = {
