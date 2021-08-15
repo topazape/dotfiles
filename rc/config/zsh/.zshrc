@@ -25,7 +25,7 @@ else
 fi
 
 ## XDG_ZSH_HISTORY
-export HISTFILE=${XDG_DATA_HOME}/zsh/history
+export HISTFILE=${XDG_CACHE_HOME}/zsh/history
 export SAVEHIST=100000
 
 # Prezto
@@ -68,7 +68,7 @@ if type brew > /dev/null 2>&1; then
 	### completions
 	FPATH="$(brew --prefix)/share/zsh/site-functions":${FPATH}
 	autoload -Uz compinit
-	compinit
+	compinit -i -d ${XDG_CACHE_HOME}/zsh/zcompdump
 fi
 ## PostgreSQL
 if type psql > /dev/null 2>&1; then
@@ -131,17 +131,17 @@ fi
 ## Ruby
 if [[ -e "/usr/local/opt/ruby/bin" ]]; then
 	export PATH="/usr/local/opt/ruby/bin":$PATH
+	### rubygem
+	export GEM_HOME=${XDG_DATA_HOME}/gem
+	export GEM_SPEC_CACHE=${XDG_CACHE_HOME}/gem
+	if [[ -e "${GEM_HOME}/bin" ]]; then
+		export PATH=${GEM_HOME}/bin:$PATH
+	fi
+	### bundler
+	export BUNDLE_USER_CONFIG=${XDG_CONFIG_HOME}/bundle
+	export BUNDLE_USER_CACHE=${XDG_CACHE_HOME}/bundle
+	export BUNDLE_USER_PLUGIN=${XDG_DATA_HOME}/bundle
 fi
-### rubygems
-export GEM_HOME=${XDG_DATA_HOME}/gem
-export GEM_SPEC_CACHE=${XDG_CACHE_HOME}/gem
-if [[ -e "${GEM_HOME}/bin" ]]; then
-	export PATH=${GEM_HOME}/bin:$PATH
-fi
-### bundler
-export BUNDLE_USER_CONFIG=${XDG_CONFIG_HOME}/bundle
-export BUNDLE_USER_CACHE=${XDG_CACHE_HOME}/bundle
-export BUNDLE_USER_PLUGIN=${XDG_DATA_HOME}/bundle
 ## Rust
 if type rustup-init > /dev/null 2>&1; then
 	### rustup
