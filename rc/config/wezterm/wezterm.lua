@@ -23,7 +23,7 @@ return {
   harfbuzz_features = {'zero'},
   -- font_shaper = 'Allsorts',
   dpi = 96.0,
-  font_size = 13,
+  font_size = 14,
 
   -- colors
   color_scheme_dirs = {
@@ -58,6 +58,7 @@ return {
   -- misc
   use_ime = true,
   check_for_updates = false,
-  allow_square_glyphs_to_overflow_width = 'WhenFollowedBySpace',
+  -- allow_square_glyphs_to_overflow_width = 'WhenFollowedBySpace',
+  allow_square_glyphs_to_overflow_width = 'Always',
   native_macos_fullscreen_mode = true,
 }
