@@ -52,6 +52,9 @@ nnoremap x "_x
 "" but dd can store
 "nnoremap dd "_dd
 
+" Disable recording
+nnoremap q <Nop>
+
 " Mapping of window oparations like tmux
 nnoremap <C-w>- :split<CR><C-w>j
 nnoremap <C-w>{ <C-w><C-x>
@@ -99,7 +102,7 @@ autocmd TermOpen * startinsert
 "" disable linenumbers in terminal window
 autocmd TermOpen * setlocal nonumber
 "" open terminal under current window (:T)
-command! -nargs=* T split | wincmd j | resize 40 | terminal <args>
+command! -nargs=* T split | wincmd j | resize 20 | terminal <args>
 
 "" packer.lua
 lua require('plugins')
