@@ -14,12 +14,11 @@ return packer.startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- icons
-  use 'ryanoasis/vim-devicons'
-  use 'kyazdani42/nvim-web-devicons'
-
   -- file explore
-  use 'kyazdani42/nvim-tree.lua'
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = 'kyazdani42/nvim-web-devicons'
+  }
 
   -- lsp
   use 'neovim/nvim-lspconfig'
