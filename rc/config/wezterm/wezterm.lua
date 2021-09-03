@@ -17,7 +17,6 @@ return {
   -- fonts
   font = wezterm.font_with_fallback({
     {family='JetBrains Mono', weight='Regular'},
-    {family='FiraCode Nerd Font Mono', weight='Regular'},
   }),
   font_shaper = 'Harfbuzz',
   harfbuzz_features = {'zero'},
