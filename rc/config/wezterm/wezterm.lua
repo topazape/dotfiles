@@ -17,6 +17,8 @@ return {
   -- fonts
   font = wezterm.font_with_fallback({
     {family='JetBrains Mono', weight='Regular'},
+    {family='Toppan Bunkyu Gothic', weight='Regular'},
+    {family='Hack Nerd Font Mono', weight='Regular'}
   }),
   font_shaper = 'Harfbuzz',
   harfbuzz_features = {'zero'},
