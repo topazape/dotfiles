@@ -25,6 +25,7 @@ autocmd BufEnter * lua require('completion').on_attach()
 set completeopt=menuone,noinsert,noselect
 """" Avoid showing message extra message when using completion
 set shortmess+=c
+let g:completion_enable_auto_signature = 0
 
 " symbols-outline
 let g:symbols_outline = {
@@ -53,3 +54,5 @@ let g:indent_blankline_char_list = ['│', '┊', '┆', '¦']
 " Colors
 "" colorscheme
 colorscheme tokyonight
+"" Lspsaga signature color
+highlight LspSagaSignatureHelpBorder guifg=#edd60E
