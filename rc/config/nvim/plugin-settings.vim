@@ -3,22 +3,30 @@ autocmd BufWritePost plugins.lua PackerCompile
 
 " nvim-tree
 runtime! nvim-tree.vim
+
+" nvim-treesitter
+lua require('_treesitter')
+
+" status line
+lua require('_lualine')
+
 " lsp
+"" lsp install
+lua require('_lspinstall')
 "" lsp-config
 lua require('_lspconfig')
 "" lspsaga
 lua require('_lspsaga')
-"" lsp install
-lua require('_lspinstall')
-
+" lsp_signature.nvim
+lua require('_lsp_signature')
 "" completion-nvim
 autocmd BufEnter * lua require('completion').on_attach()
-""" Set completeopt to have a better completion experience
+"""" Set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
-""" Avoid showing message extra message when using completion
+"""" Avoid showing message extra message when using completion
 set shortmess+=c
 
-""" symbols-outline
+" symbols-outline
 let g:symbols_outline = {
     \ 'highlight_hovered_item': v:true,
     \ 'show_guides': v:true,
@@ -38,12 +46,6 @@ let g:symbols_outline = {
     \ 'lsp_blacklist': [],
 \ }
 nnoremap <C-n>o :SymbolsOutline<CR>
-
-" status line
-lua require('_lualine')
-
-" nvim-treesitter
-lua require('_treesitter')
 
 " indent-blankline
 let g:indent_blankline_char_list = ['│', '┊', '┆', '¦']

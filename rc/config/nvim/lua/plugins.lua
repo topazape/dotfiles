@@ -30,6 +30,8 @@ return packer.startup(function()
   use 'simrat39/symbols-outline.nvim'
   ---- auto-completion
   use 'nvim-lua/completion-nvim'
+  -- lsp_signature
+  use 'ray-x/lsp_signature.nvim'
 
   -- tree-sitter
   use {
