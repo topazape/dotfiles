@@ -28,10 +28,18 @@ return packer.startup(function()
   use 'kabouzeid/nvim-lspinstall'
   ---- LSP symbols
   use 'simrat39/symbols-outline.nvim'
-  ---- auto-completion
-  use 'nvim-lua/completion-nvim'
-  -- lsp_signature
+  ---- lsp_signature
   use 'ray-x/lsp_signature.nvim'
+
+  -- completion
+  use {
+    'hrsh7th/nvim-cmp',
+    requires = {
+      'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-nvim-lua',
+  }
+}
 
   -- tree-sitter
   use {

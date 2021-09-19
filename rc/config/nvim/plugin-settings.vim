@@ -19,13 +19,9 @@ lua require('_lspconfig')
 lua require('_lspsaga')
 " lsp_signature.nvim
 lua require('_lsp_signature')
-"" completion-nvim
-autocmd BufEnter * lua require('completion').on_attach()
-"""" Set completeopt to have a better completion experience
-set completeopt=menuone,noinsert,noselect
-"""" Avoid showing message extra message when using completion
-set shortmess+=c
-let g:completion_enable_auto_signature = 0
+
+" completion
+lua require('_cmp')
 
 " symbols-outline
 let g:symbols_outline = {

@@ -86,6 +86,8 @@ autocmd FileType javascript,typescript,json setlocal tabstop=2 shiftwidth=2 expa
 autocmd FileType lua setlocal tabstop=2 shiftwidth=2 expandtab
 "" lua syntax hilighting in vim script
 let g:vimsyn_emembed = 'l'
+" tex
+autocmd FileType tex setlocal tabstop=4 shiftwidth=4 expandtab
 
 " for Python Virtual Environment
 if exists('$VIRTUAL_ENV')
