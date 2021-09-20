@@ -16,16 +16,18 @@ local image = images[math.random(#images)]
 return {
   -- fonts
   font = wezterm.font_with_fallback({
-    {family='JetBrains Mono', weight='Light'},
-    {family='Apple Symbols', weight='Regular'},
+    { family='Iosevka SS14', weight='Light' },
+
+    { family='JuliaMono', weight='Light' },
+    { family='Apple Symbols', weight='Regular' },
     {family='Apple Color Emoji', weight='Regular'},
 
-    {family='FiraCode Nerd Font', weight='Light'},
-    {family='JuliaMono', weight='Light'},
-    {family='Tsukushi A Round Gothic', weight='Regular'},
+    { family='FiraCode Nerd Font', weight='Light' },
+
+    { family='Tsukushi A Round Gothic', weight='Regular' },
   }),
   font_shaper = 'Harfbuzz',
-  harfbuzz_features = {'zero'},
+  harfbuzz_features = { 'MTLB' },
   dpi = 144.0,
   font_size = 14.0,
 
@@ -36,7 +38,7 @@ return {
   color_scheme = 'wezterm_tokyonight_storm',
 
   -- window
-  window_padding = { left = 1, right = 1, bottom = 1 },
+  window_padding = { left=1, right=1, bottom =1 },
   -- backgrounds
   text_background_opacity = 0.8,
   window_background_image = image,
@@ -52,10 +54,10 @@ return {
   -- bindings
   disable_default_key_bindings = true,
   keys = {
-    {key='c', mods='SUPER', action=wezterm.action{CopyTo='Clipboard'}},
-    {key='v', mods='SUPER', action=wezterm.action{PasteFrom='Clipboard'}},
-    {key='f', mods='SUPER', action='ToggleFullScreen'},
-    {key='r', mods='SUPER', action='ReloadConfiguration'}
+    { key='c', mods='SUPER', action=wezterm.action{ CopyTo='Clipboard' } },
+    { key='v', mods='SUPER', action=wezterm.action{ PasteFrom='Clipboard' } },
+    { key='f', mods='SUPER', action='ToggleFullScreen'},
+    { key='r', mods='SUPER', action='ReloadConfiguration'}
   },
   disable_default_mouse_bindings = false,
 
