@@ -50,5 +50,3 @@ let g:indent_blankline_char_list = ['│', '┊', '┆', '¦']
 " Colors
 "" colorscheme
 colorscheme tokyonight
-"" Lspsaga signature color
-highlight LspSagaSignatureHelpBorder guifg=#edd60E
