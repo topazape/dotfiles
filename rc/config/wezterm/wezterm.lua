@@ -17,13 +17,10 @@ return {
   -- fonts
   font = wezterm.font_with_fallback({
     { family='Iosevka SS14', weight='Light' },
-
     { family='JuliaMono', weight='Light' },
     { family='Apple Symbols', weight='Regular' },
-    {family='Apple Color Emoji', weight='Regular'},
-
+    { family='Apple Color Emoji', weight='Regular' },
     { family='FiraCode Nerd Font', weight='Light' },
-
     { family='Tsukushi A Round Gothic', weight='Regular' },
   }),
   font_shaper = 'Harfbuzz',
