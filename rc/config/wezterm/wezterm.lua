@@ -16,7 +16,7 @@ local image = images[math.random(#images)]
 return {
   -- fonts
   font = wezterm.font_with_fallback({
-    { family='Iosevka SS14', weight='Light' },
+    { family='Iosevka SS04', weight='Light' },
     { family='JuliaMono', weight='Light' },
     { family='Apple Symbols', weight='Regular' },
     { family='Apple Color Emoji', weight='Regular' },
