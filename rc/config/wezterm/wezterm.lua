@@ -38,7 +38,7 @@ return {
   window_padding = { left=1, right=1 },
   -- backgrounds
   text_background_opacity = 0.8,
-  window_background_image = image,
+  -- window_background_image = image,
   window_background_image_hsb = {
     brightness = 0.08,
     hue = 1.0,

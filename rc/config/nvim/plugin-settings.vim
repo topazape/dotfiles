@@ -1,9 +1,6 @@
 " packer
 autocmd BufWritePost plugins.lua PackerCompile
 
-" nvim-tree
-runtime! nvim-tree.vim
-
 " nvim-treesitter
 lua require('_treesitter')
 
@@ -43,6 +40,10 @@ let g:symbols_outline = {
     \ 'lsp_blacklist': [],
 \ }
 nnoremap <C-n>o :SymbolsOutline<CR>
+
+" nvim-tree
+lua require('_tree')
+runtime! nvim-tree.vim
 
 " indent-blankline
 let g:indent_blankline_char_list = ['│', '┊', '┆', '¦']
