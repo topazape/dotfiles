@@ -35,7 +35,7 @@ return {
   color_scheme = 'wezterm_tokyonight_storm',
 
   -- window
-  window_padding = { left=1, right=1 },
+  window_padding = { top=0, left=2, right=2, bottom=0 },
   -- backgrounds
   text_background_opacity = 0.8,
   -- window_background_image = image,
