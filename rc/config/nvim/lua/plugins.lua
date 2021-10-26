@@ -25,8 +25,8 @@ return packer.startup(function()
   ---- lsp-ui
   use 'glepnir/lspsaga.nvim'
   ---- installer
-  use 'kabouzeid/nvim-lspinstall'
-  ---- LSP symbols
+  use 'williamboman/nvim-lsp-installer'
+ ---- LSP symbols
   use 'simrat39/symbols-outline.nvim'
   ---- lsp_signature
   use 'ray-x/lsp_signature.nvim'

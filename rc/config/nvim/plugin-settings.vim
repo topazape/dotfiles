@@ -9,7 +9,7 @@ lua require('_lualine')
 
 " lsp
 "" lsp install
-lua require('_lspinstall')
+lua require('_lspinstaller')
 "" lsp-config
 lua require('_lspconfig')
 "" lspsaga
