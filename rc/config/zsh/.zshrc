@@ -58,8 +58,8 @@ if type brew > /dev/null 2>&1; then
 	## gnu commands
 	gnu_pkgs=("coreutils" "findutils" "grep" "gawk" "gnu-sed" "gnu-tar")
 	for gnu_pkg in ${gnu_pkgs[@]}; do
-		if [[ -d "$(brew --prefix)/opt/${gnu_pkg}/libexec/gnubin" ]]; then
-			export PATH="$(brew --prefix)/opt/${gnu_pkg}/libexec/gnubin":${PATH}
+		if [[ -d $(brew --prefix)/opt/${gnu_pkg}/libexec/gnubin ]]; then
+			export PATH=$(brew --prefix)/opt/${gnu_pkg}/libexec/gnubin:${PATH}
 			if [[ ${gnu_pkg} = "coreutils" ]]; then
 				gnu_ls=true
 			fi
