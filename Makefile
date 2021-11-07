@@ -3,6 +3,7 @@ RCPATH        := $(DOTPATH)/rc
 
 CANDIDATES    := $(notdir $(wildcard $(RCPATH)/*))
 EXCLUSIONS    := .DS_Store .git .gitmodules
+LINUX_EXC     := zshenv
 MAC_EXC       := 
 TARGETS       := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 
@@ -13,7 +14,7 @@ ZPREZTO_DIR   := $(ZSH_DIR)/.zprezto
 ZPREZTO_RCDIR := $(ZPREZTO_DIR)/runcoms
 
 ifeq ($(UNAME), Linux)
-	DOTFILES := $(TARGETS)
+	DOTFILES := $(filter-out $(LINUX_EXC), $(TARGETS))
 else
 	DOTFILES := $(filter-out $(MAC_EXC), $(TARGETS))
 endif
@@ -21,12 +22,18 @@ endif
 .PHONY: all
 all:
 
-.PHONY: help
-help:
-	@echo "init   => Initialize environment settings."
-	@echo "deploy => Create symlinks to home directory."
-	@echo "clean  => remove the dotfiles."
-	@echo "update => update prezto"
+.PHONY: bashenv
+bashenv:
+	@rm -f ~/.bashrc
+	@rm -rf ~/.bash_it
+	@git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
+	@yes | ~/.bash_it/install.sh
+	@. ~/.bashrc
+
+.PHONY: zshenv
+zshenv:
+	@$(MAKE) prezto-init
+
 
 .PHONY: prezto-init
 prezto-init:
@@ -43,40 +50,22 @@ prezto-init:
 	@$(foreach val, $(ZPREZTO_TARG), ln -snfv $(ZPREZTO_RCDIR)/$(val) $(ZSH_DIR)/.$(val);)
 	@mkdir -p $(HOME)/.local/share/zsh
 
-.PHONY: vim-plug-init
-vim-plug-init:
-	@curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-.PHONY: nvim-packer-init
-nvim-packer-init:
-	@git clone https://github.com/wbthomason/packer.nvim \
-		 ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
-.PHONY: init
-init:
+.PHONY: all
+all:
 ifeq ($(UNAME), Linux)
-	@$(MAKE) prezto-init
-	@$(MAKE) vim-plug-init
+	@$(MAKE) bashenv
 else
-	@$(MAKE) prezto-init
+	@$(MAKE) zshenv
 endif
-
-.PHONY: deploy
-deploy:
 	@$(foreach val, $(DOTFILES), ln -snfv $(RCPATH)/$(val) $(HOME)/.$(val);)
-
-.PHONY: update
-update:
-	@cd $(ZPREZTO_DIR) && git pull && git submodule update --init --recursive
+	@git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 .PHONY: clean
 clean:
 	@echo "Remove dotfiles from your home directory."
 	@$(foreach val, $(DOTFILES), rm -vf $(HOME)/.$(val);)
 
-.PHONY: all-clean
-all-clean:
+.PHONY: purge
+purge:
 	@$(MAKE) clean
-	@$(foreach val, $(ZPREZTO_TARG), rm -vf $(ZSH_DIR)/.$(val);)
-	@rm -rvf $(HOME)/.local
+	@rm -rf ~/.local ~/.cache ~/.linuxbrew

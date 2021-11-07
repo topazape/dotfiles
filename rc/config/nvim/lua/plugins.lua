@@ -1,15 +1,10 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
-vim.cmd('packadd packer.nvim')
+vim.cmd [[packadd packer.nvim]]
 
 local packer = require('packer')
-local util = require('packer.util')
-packer.init({
-  compile_path = util.join_paths(vim.fn.stdpath('cache'), 'plugin', 'packer_compiled.lua'),
-})
 
--- return require('packer').startup(function()
 return packer.startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
