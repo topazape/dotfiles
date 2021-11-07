@@ -189,6 +189,7 @@ case ${OSTYPE} in
 			alias ll="ls -lh"
 			alias la="ls -A"
 		fi
+		alias ssh="TERM=xterm-256color ssh"
 esac
 
 # delete dulicated PATH
