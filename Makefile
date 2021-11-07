@@ -58,6 +58,7 @@ else
 	@$(MAKE) zshenv
 endif
 	@$(foreach val, $(DOTFILES), ln -snfv $(RCPATH)/$(val) $(HOME)/.$(val);)
+	@echo 'source "$HOME/.config/bash/rc.bash"' >> ~/.profile
 	@git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 .PHONY: clean
