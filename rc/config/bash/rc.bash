@@ -51,7 +51,7 @@ if type aws > /dev/null 2>&1; then
 fi
 ## vivid
 if type vivid > /dev/null 2>&1; then
-	LS_COLORS="$(vivid generate one-dark)"
+	export LS_COLORS="$(vivid generate one-dark)"
 fi
 
 # Programing Languages
