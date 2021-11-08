@@ -90,16 +90,7 @@ if [[ -e "/usr/local/opt/ruby/bin" ]]; then
 	export BUNDLE_USER_PLUGIN=${XDG_DATA_HOME}/bundle
 fi
 ## Rust
-if type rustup-init > /dev/null 2>&1; then
-	### rustup
-	export RUSTUP_HOME=${XDG_DATA_HOME}/rustup
-	#### assign to an array to expand wildcard
-	rust_src_path=(${RUSTUP_HOME}/toolchains/*/lib/rustlib/src/rust/library)
-	export RUST_SRC_PATH=${rust_src_path[1]}
-	unset rust_src_path
-	### cargo
-	export CARGO_HOME=${XDG_DATA_HOME}/cargo
-	if [[ -e "${CARGO_HOME}/env" ]]; then
-		source ${CARGO_HOME}/env
-	fi
-fi
+### rustup
+export RUSTUP_HOME=${XDG_DATA_HOME}/rustup
+### cargo
+export CARGO_HOME=${XDG_DATA_HOME}/cargo
