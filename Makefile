@@ -24,11 +24,11 @@ all:
 
 .PHONY: bashenv
 bashenv:
-	@rm -f ~/.bashrc
-	@rm -rf ~/.bash_it
-	@git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
-	@yes | ~/.bash_it/install.sh
-	@. ~/.bashrc
+	@rm -f $(HOME)/.bashrc
+	@rm -rf $(HOME)/.bash_it
+	@git clone --depth=1 https://github.com/Bash-it/bash-it.git $(HOME)/.bash_it
+	@yes | $(HOME)/.bash_it/install.sh
+	@. $(HOME)/.bashrc
 
 .PHONY: zshenv
 zshenv:
@@ -58,8 +58,7 @@ else
 	@$(MAKE) zshenv
 endif
 	@$(foreach val, $(DOTFILES), ln -snfv $(RCPATH)/$(val) $(HOME)/.$(val);)
-	@echo 'source "$(HOME)/.config/bash/local.bash"' >> ~/.profile
-	@git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+	@git clone --depth 1 https://github.com/wbthomason/packer.nvim $(HOME)/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 .PHONY: clean
 clean:
@@ -69,4 +68,4 @@ clean:
 .PHONY: purge
 purge:
 	@$(MAKE) clean
-	@rm -rf ~/.local ~/.cache ~/.linuxbrew
+	@rm -rf $(HOME)/.local $(HOME)/.cache $(HOME)/.linuxbrew
