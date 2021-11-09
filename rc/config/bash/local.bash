@@ -36,9 +36,8 @@ if type pspg > /dev/null 2>&1; then
 	export PSPG="--no-last-row-search -s 22"
 	export PSPG_HISTORY=${XDG_CACHE_HOME}/pspg/pspg_history
 fi
-## direnv
 if type direnv > /dev/null 2>&1; then
-	eval "$(direnv hook zsh)"
+	eval "$(direnv hook bash)"
 fi
 ## zellij
 if type zellij > /dev/null 2>&1; then
@@ -51,7 +50,7 @@ if type aws > /dev/null 2>&1; then
 fi
 ## vivid
 if type vivid > /dev/null 2>&1; then
-	export LS_COLORS="$(vivid generate one-dark)"
+	export LS_COLORS="$(vivid generate ayu)"
 fi
 
 # Programing Languages
