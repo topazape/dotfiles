@@ -56,6 +56,14 @@ fi
 
 # Programing Languages
 ## Javascript
+### nvm
+if [[ -e $(brew --prefix nvm) ]]; then
+	export NVM_DIR="$XDG_DATA_HOME"/nvm
+	# This loads nvm
+	[ -s "$(brew --prefix nvm)/nvm.sh" ] && . "$(brew --prefix nvm)/nvm.sh"
+	# This loads nvm bash_completion
+	[ -s "$(brew --prefix nvm)/etc/bash_completion.d/nvm" ] && . "$(brew --prefix nvm)/etc/bash_completion.d/nvm"
+fi
 ### node
 if type npm > /dev/null 2>&1; then
 	export NPM_CONFIG_USERCONFIG=${XDG_CONFIG_HOME}/npm/npmrc
