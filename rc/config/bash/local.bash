@@ -50,7 +50,7 @@ if type aws > /dev/null 2>&1; then
 fi
 ## vivid
 if type vivid > /dev/null 2>&1; then
-	export LS_COLORS="$(vivid generate ayu)"
+	export LS_COLORS="$(vivid generate molokai)"
 fi
 
 # Programing Languages
@@ -97,7 +97,9 @@ if [[ -e "/usr/local/opt/ruby/bin" ]]; then
 	export BUNDLE_USER_PLUGIN=${XDG_DATA_HOME}/bundle
 fi
 ## Rust
-### rustup
+### rustup & cargo
 export RUSTUP_HOME=${XDG_DATA_HOME}/rustup
-### cargo
 export CARGO_HOME=${XDG_DATA_HOME}/cargo
+if [ -e "$HOME/.local/share/cargo/env" ] ; then
+	source "$HOME/.local/share/cargo/env"
+fi
