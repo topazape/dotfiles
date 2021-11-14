@@ -56,11 +56,13 @@ ifeq ($(UNAME), Linux)
 else
 	@$(MAKE) zshenv
 endif
-	@rm -rf $(HOME)/.config $(HOME)/.local $(HOME)/.cache $(HOME)/.linuxbrew
+	@rm -rf $(HOME)/.config $(HOME)/.local $(HOME)/.cache
 	@$(foreach val, $(DOTFILES), ln -snfv $(RCPATH)/$(val) $(HOME)/.$(val);)
 	@git clone --depth 1 https://github.com/wbthomason/packer.nvim $(HOME)/.local/share/nvim/site/pack/packer/start/packer.nvim
+ifeq ($(UNAME), Linux)
 	@echo [ -d /home/linuxbrew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 	@source "$HOME/.config/bash/local.bash"
+endif
 
 .PHONY: clean
 clean:
