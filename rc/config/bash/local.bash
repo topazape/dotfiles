@@ -56,7 +56,7 @@ fi
 # Programing Languages
 ## Javascript
 ### nvm
-if [[ -e $(brew --prefix nvm) ]]; then
+if type brew > /dev/null 2>&1 && [[ -e $(brew --prefix nvm) ]]; then
 	export NVM_DIR="$XDG_DATA_HOME"/nvm
 	# This loads nvm
 	[ -s "$(brew --prefix nvm)/nvm.sh" ] && . "$(brew --prefix nvm)/nvm.sh"
