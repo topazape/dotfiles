@@ -40,8 +40,7 @@ prezto-init:
 	@if [ -d $(ZPREZTO_DIR) ]; then \
 		rm -rvf $(ZPREZTO_DIR); \
 	 fi
-	@git clone --recursive https://github.com/sorin-ionescu/prezto.git \
-		rc/config/zsh/.zprezto
+	@git clone --recursive https://github.com/sorin-ionescu/prezto.git rc/config/zsh/.zprezto
 
 	$(eval ZPREZTO_CAN  := $(notdir $(wildcard $(ZPREZTO_RCDIR)/*)))
 	$(eval ZPREZTO_EXC  := zpreztorc zshrc README.md)
@@ -60,6 +59,8 @@ endif
 	@rm -rf $(HOME)/.config $(HOME)/.local $(HOME)/.cache $(HOME)/.linuxbrew
 	@$(foreach val, $(DOTFILES), ln -snfv $(RCPATH)/$(val) $(HOME)/.$(val);)
 	@git clone --depth 1 https://github.com/wbthomason/packer.nvim $(HOME)/.local/share/nvim/site/pack/packer/start/packer.nvim
+	@echo [ -d /home/linuxbrew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+	@source "$HOME/.config/bash/local.bash"
 
 .PHONY: clean
 clean:
