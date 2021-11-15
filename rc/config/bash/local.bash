@@ -22,8 +22,8 @@ fi
 if type psql > /dev/null 2>&1; then
 	export PSQLRC=${XDG_CONFIG_HOME}/pg/psqlrc
 	export PGPASSFILE=${XDG_CONFIG_HOME}/pg/pgpass
-	mkdir -p ${XDG_CACHE_HOME}/pg
 	export PSQL_HISTORY=${XDG_CACHE_HOME}/pg/psql_history
+	mkdir -p ${XDG_CACHE_HOME}/pg
 fi
 ## usql
 if type usql > /dev/null 2>&1; then
@@ -33,9 +33,9 @@ if type usql > /dev/null 2>&1; then
 fi
 ## pspg
 if type pspg > /dev/null 2>&1; then
-	mkdir -p ${XDG_CACHE_HOME}/pspg
-	export PSPG="--no-last-row-search -s 22"
+	export PSPG="--force-uniborder --bold-labels --double-header --no-last-row-search -s 22"
 	export PSPG_HISTORY=${XDG_CACHE_HOME}/pspg/pspg_history
+	mkdir -p ${XDG_CACHE_HOME}/pspg
 fi
 if type direnv > /dev/null 2>&1; then
 	eval "$(direnv hook bash)"
