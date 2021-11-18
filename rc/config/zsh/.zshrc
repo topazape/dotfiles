@@ -86,7 +86,7 @@ fi
 ## pspg
 if type pspg > /dev/null 2>&1; then
 	mkdir -p ${XDG_CACHE_HOME}/pspg
-	export PSPG="--no-last-row-search -s 22"
+	export PSPG="--force-uniborder --bold-labels --double-header --no-last-row-search -s 22"
 	export PSPG_HISTORY=${XDG_CACHE_HOME}/pspg/pspg_history
 fi
 ## direnv
