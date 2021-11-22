@@ -42,8 +42,10 @@ let g:symbols_outline = {
 nnoremap <C-n>o :SymbolsOutline<CR>
 
 " nvim-tree
+nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <leader>r :NvimTreeRefresh<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
 lua require('_tree')
-runtime! nvim-tree.vim
 
 " indent-blankline
 let g:indent_blankline_char_list = ['│', '┊', '┆', '¦']
