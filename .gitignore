@@ -9,3 +9,4 @@
 /rc/config/matplotlib
 !/rc/config/matplotlib/fontlist-v330.json
 /rc/config/rstudio
+/rc/config/nvim/plugin
