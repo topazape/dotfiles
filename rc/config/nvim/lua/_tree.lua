@@ -1,3 +1,5 @@
+local tree_cb = require('nvim-tree.config').nvim_tree_callback
+
 require('nvim-tree').setup({
   disable_netrw       = true,
   hijack_netrw        = true,
@@ -41,8 +43,10 @@ require('nvim-tree').setup({
     auto_resize = true,
     mappings = {
       custom_only = false,
-      list = {}
+      list = {
+        { key={ "S" },   cb=tree_cb("split") },
+        { key={ "V" },   cb=tree_cb("vsplit") }
+      }
     }
   }
 })
-
