@@ -61,7 +61,7 @@ endif
 	@git clone --depth 1 https://github.com/wbthomason/packer.nvim $(HOME)/.local/share/nvim/site/pack/packer/start/packer.nvim
 ifeq ($(UNAME), Linux)
 	@echo '[ -d /home/linuxbrew ] && eval "$$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $(HOME)/.profile
-	@echo 'source "$$HOME/.config/bash/local.bash"' >> $(HOME)/.profile
+	@echo '[ -e $$HOME/.config/bash/local.bash ] && source $$HOME/.config/bash/local.bash' >> $(HOME)/.profile
 endif
 
 .PHONY: clean
