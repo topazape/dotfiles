@@ -16,27 +16,24 @@ local image = images[math.random(#images)]
 return {
   -- fonts
   font = wezterm.font_with_fallback({
-    { family='Iosevka SS04', stretch='Expanded', weight='Light' },
+    { family='RobotoMono Nerd Font', weight='Light' },
     { family='Apple Symbols', weight='Regular' },
     { family='Apple Color Emoji', weight='Regular' },
-    { family='FiraCode Nerd Font', weight='Light' },
     { family='Tsukushi A Round Gothic', weight='Regular' },
   }),
   font_rules = {
     {
       italic = true,
       font = wezterm.font_with_fallback({
-        { family='Iosevka SS04', stretch='Expanded', weight='Light', italic=true },
+        { family='RobotoMono Nerd Font', weight='Light', italic=true },
         { family='Apple Symbols', weight='Regular', italic=false },
         { family='Apple Color Emoji', weight='Regular', italic=false },
-        { family='FiraCode Nerd Font', weight='Light', italic=false },
         { family='Tsukushi A Round Gothic', weight='Regular', italic=false },
       })
     }
   },
   font_shaper = 'Harfbuzz',
   harfbuzz_features = { 'MTLB' },
-  dpi = 144.0,
   font_size = 14.0,
 
   -- colors
