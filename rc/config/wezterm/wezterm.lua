@@ -1,22 +1,9 @@
-local math = require('math')
 local wezterm = require('wezterm')
-
-function BuildArray(vals)
-  local arr = {}
-  for i, v in ipairs(vals) do
-    arr[i] = v
-  end
-  return arr
-end
-
-local img_dir = wezterm.home_dir .. '/Pictures/pics'
-local images = BuildArray(wezterm.glob(img_dir .. '/*.*'))
-local image = images[math.random(#images)]
 
 return {
   -- fonts
   font = wezterm.font_with_fallback({
-    { family='RobotoMono Nerd Font', weight='Light' },
+    { family='DejavuSansMono Nerd Font', weight='Regular' },
     { family='Apple Symbols', weight='Regular' },
     { family='Apple Color Emoji', weight='Regular' },
     { family='Tsukushi A Round Gothic', weight='Regular' },
@@ -25,7 +12,7 @@ return {
     {
       italic = true,
       font = wezterm.font_with_fallback({
-        { family='RobotoMono Nerd Font', weight='Light', italic=true },
+        { family='DejavuSansMono Nerd Font', weight='Regular', italic=true },
         { family='Apple Symbols', weight='Regular', italic=false },
         { family='Apple Color Emoji', weight='Regular', italic=false },
         { family='Tsukushi A Round Gothic', weight='Regular', italic=false },
@@ -46,16 +33,8 @@ return {
   window_padding = { top=0, left=2, right=2, bottom=1 },
   -- backgrounds
   text_background_opacity = 0.8,
-  -- window_background_image = image,
-  window_background_image_hsb = {
-    brightness = 0.08,
-    hue = 1.0,
-    saturation = 1.0,
-  },
-
   -- tabs
   enable_tab_bar =false,
-
   -- bindings
   disable_default_key_bindings = true,
   keys = {
@@ -65,7 +44,6 @@ return {
     { key='r', mods='SUPER', action='ReloadConfiguration'}
   },
   disable_default_mouse_bindings = false,
-
   -- misc
   use_ime = true,
   check_for_updates = false,
