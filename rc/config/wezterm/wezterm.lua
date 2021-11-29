@@ -31,8 +31,6 @@ return {
 
   -- window
   window_padding = { top=0, left=2, right=2, bottom=1 },
-  -- backgrounds
-  text_background_opacity = 0.8,
   -- tabs
   enable_tab_bar =false,
   -- bindings
