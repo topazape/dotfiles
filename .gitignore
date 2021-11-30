@@ -2,11 +2,11 @@
 !/rc/config/zsh/.zshrc
 !/rc/config/zsh/.zpreztorc
 
-/rc/config/aws
 /rc/config/gh
+!/rc/config/gh/config.yaml
+
+/rc/config/bpytop
 /rc/config/ipython
 /rc/config/jupyter
 /rc/config/matplotlib
-!/rc/config/matplotlib/fontlist-v330.json
 /rc/config/rstudio
-/rc/config/nvim/plugin
