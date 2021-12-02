@@ -2,6 +2,8 @@
 !/rc/config/zsh/.zshrc
 !/rc/config/zsh/.zpreztorc
 
+/rc/config/nvim/plugin
+
 /rc/config/gh
 !/rc/config/gh/config.yaml
 

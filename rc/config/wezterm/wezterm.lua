@@ -3,7 +3,7 @@ local wezterm = require('wezterm')
 return {
   -- fonts
   font = wezterm.font_with_fallback({
-    { family='DejavuSansMono Nerd Font', weight='Regular' },
+    { family='BlexMono Nerd Font', weight='Regular' },
     { family='Apple Symbols', weight='Regular' },
     { family='Apple Color Emoji', weight='Regular' },
     { family='Tsukushi A Round Gothic', weight='Regular' },
@@ -12,7 +12,7 @@ return {
     {
       italic = true,
       font = wezterm.font_with_fallback({
-        { family='DejavuSansMono Nerd Font', weight='Regular', italic=true },
+        { family='BlexMono Nerd Font', weight='Regular', italic=true },
         { family='Apple Symbols', weight='Regular', italic=false },
         { family='Apple Color Emoji', weight='Regular', italic=false },
         { family='Tsukushi A Round Gothic', weight='Regular', italic=false },
