@@ -30,7 +30,7 @@ return {
   color_scheme = 'wezterm_tokyonight_storm',
 
   -- window
-  window_padding = { top=0, left=2, right=2, bottom=1 },
+  window_padding = { top=0, left=2, right=2, bottom=0 },
   -- tabs
   enable_tab_bar =false,
   -- bindings
