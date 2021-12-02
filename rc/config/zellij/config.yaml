@@ -11,7 +11,7 @@ keybinds:
         - action: [SwitchToMode: Locked,]
           key: [Ctrl: 'g',]
         - action: [SwitchToMode: Pane,]
-          key: [Ctrl: 'y',]
+          key: [Ctrl: 'p',]
         - action: [SwitchToMode: Resize,]
           key: [Ctrl: 'n',]
         - action: [SwitchToMode: Tab,]
