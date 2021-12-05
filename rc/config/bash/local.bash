@@ -40,6 +40,10 @@ fi
 if type direnv > /dev/null 2>&1; then
 	eval "$(direnv hook bash)"
 fi
+## tmux
+if type tmux > /dev/null 2>&1 && [[ $OSTYPE == "linux-gnu" ]]; then
+	alias tmux="tmux -u"
+fi
 ## zellij
 if type zellij > /dev/null 2>&1; then
 	export ZELLIJ_CONFIG_DIR=${XDG_CONFIG_HOME}/zellij
