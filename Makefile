@@ -19,9 +19,6 @@ else
 	DOTFILES := $(filter-out $(MAC_EXC), $(TARGETS))
 endif
 
-.PHONY: all
-all:
-
 .PHONY: bashenv
 bashenv:
 	@rm -f $(HOME)/.bashrc
@@ -33,7 +30,6 @@ bashenv:
 .PHONY: zshenv
 zshenv:
 	@$(MAKE) prezto-init
-
 
 .PHONY: prezto-init
 prezto-init:
