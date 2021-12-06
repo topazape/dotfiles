@@ -19,6 +19,10 @@ else
 	DOTFILES := $(filter-out $(MAC_EXC), $(TARGETS))
 endif
 
+# This rule is necessary
+.PHONY: all
+all:
+
 .PHONY: bashenv
 bashenv:
 	@rm -f $(HOME)/.bashrc
