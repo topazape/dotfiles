@@ -13,16 +13,16 @@ export XDG_DATA_HOME=${HOME}/.local/share
 export XDG_RUNTIME_DIR=/tmp/user/${UID}
 
 ## terminfo
-export TERMINFO=${XDG_DATA_HOME}/terminfo
-export TERMINFO_DIRS=${XDG_DATA_HOME}/terminfo:/usr/share/terminfo
-if infocmp ${TERM} |/usr/bin/grep "[sr]itm" > /dev/null; then
-	:
-elif infocmp xterm-256color-italic > /dev/null 2>&1; then
-	export TERM="xterm-256color-italic"
-else
-	perl -e 'use File::Temp qw/ tempfile /; my ($fh, $fn) = tempfile(UNLINK => 1); print $fh "xterm-256color-italic|xterm with 256 colors and italic,\n\tsitm=\\E[3m, ritm=\\E[23m,\n\tuse=xterm-256color,\n"; close $fh; my @cmd = ("tic", $fn); system(@cmd);'
-	export TERM="xterm-256color-italic"
-fi
+# export TERMINFO=${XDG_DATA_HOME}/terminfo
+# export TERMINFO_DIRS=${XDG_DATA_HOME}/terminfo:/usr/share/terminfo
+# if infocmp ${TERM} |/usr/bin/grep "[sr]itm" > /dev/null; then
+# 	:
+# elif infocmp xterm-256color-italic > /dev/null 2>&1; then
+# 	export TERM="xterm-256color-italic"
+# else
+# 	perl -e 'use File::Temp qw/ tempfile /; my ($fh, $fn) = tempfile(UNLINK => 1); print $fh "xterm-256color-italic|xterm with 256 colors and italic,\n\tsitm=\\E[3m, ritm=\\E[23m,\n\tuse=xterm-256color,\n"; close $fh; my @cmd = ("tic", $fn); system(@cmd);'
+# 	export TERM="xterm-256color-italic"
+# fi
 
 ## XDG_ZSH_HISTORY
 export HISTFILE=${XDG_CACHE_HOME}/zsh/history

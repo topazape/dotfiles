@@ -21,7 +21,7 @@ return {
   },
   font_shaper = 'Harfbuzz',
   harfbuzz_features = { 'MTLB' },
-  font_size = 14.0,
+  font_size = 12.0,
 
   -- colors
   color_scheme_dirs = {
