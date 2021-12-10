@@ -1,17 +1,12 @@
 [user]
 	email = topazape@gmail.com
 	name = topazape
-[http]
-	postBuffer = 104857600
-[merge]
-	conflictstyle = diff3
 [push]
-	default = simple
-[credential]
-	helper = cache
-[init]
-	defaultBranch = main
+	default = nothing
+[pull]
+	rebase = false
 [alias]
 	lol = log --graph --decorate --pretty=oneline --all --abbrev-commit
 [includeIf "gitdir:~/Projects/Works/"]
 	path = ~/Projects/Works/.gitconfig_work
+
