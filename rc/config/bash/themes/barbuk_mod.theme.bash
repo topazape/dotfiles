@@ -93,7 +93,7 @@ function _prompt {
 			host="\h"
 		fi
 		#ssh_info="${bold_blue}\u${bold_orange}@${cyan}$host ${bold_orange}in"
-		ssh_info="${cyan}\u${white}@${green}$host"
+		ssh_info="${cyan}\u${white}@${yellow}$host"
 	fi
 
 	# Detect python venv
