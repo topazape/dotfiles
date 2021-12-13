@@ -30,7 +30,7 @@ bashenv:
 	@git clone --depth=1 https://github.com/Bash-it/bash-it.git $(HOME)/.bash_it
 	@yes | $(HOME)/.bash_it/install.sh
 	@sed -i -e '1i export BASH_IT_CUSTOM=$${XDG_CONFIG_HOME}/bash' $(HOME)/.bashrc
-	@. $(HOME)/.bashrc
+	@sed -i -E 's/BASH_IT_THEME=.*/BASH_IT_THEME=$${XDG_CONFIG_HOME}\/bash\/themes\/barbuk_mod.theme.bash/' $(HOME)/.bashrc
 
 .PHONY: zshenv
 zshenv:
