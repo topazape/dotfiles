@@ -61,11 +61,7 @@ endif
 	@git clone --depth 1 https://github.com/wbthomason/packer.nvim $(HOME)/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 ifeq ($(UNAME), Linux)
-	@sed -i -e '1i [ -d /home/linuxbrew ] && eval "$$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' $(HOME)/.profile
-	@sed -i -e '1i export XDG_CONFIG_HOME=$${HOME}/.config' $(HOME)/.bashrc
-	@sed -i -e '2i export XDG_CACHE_HOME=$${HOME}/.cache' $(HOME)/.bashrc
-	@sed -i -e '3i export XDG_DATA_HOME=$${HOME}/.local/share' $(HOME)/.bashrc
-	@sed -i -e '4i export BASH_IT_CUSTOM=$${XDG_CONFIG_HOME}/bash' $(HOME)/.bashrc
+	@sed -i -e '1i export BASH_IT_CUSTOM=$${XDG_CONFIG_HOME}/bash' $(HOME)/.bashrc
 endif
 
 .PHONY: clean
