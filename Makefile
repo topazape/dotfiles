@@ -29,6 +29,7 @@ bashenv:
 	@rm -rf $(HOME)/.bash_it
 	@git clone --depth=1 https://github.com/Bash-it/bash-it.git $(HOME)/.bash_it
 	@yes | $(HOME)/.bash_it/install.sh
+	@sed -i -e '1i export BASH_IT_CUSTOM=$${XDG_CONFIG_HOME}/bash' $(HOME)/.bashrc
 	@. $(HOME)/.bashrc
 
 .PHONY: zshenv
@@ -59,10 +60,6 @@ endif
 	@rm -rf $(HOME)/.config $(HOME)/.local $(HOME)/.cache
 	@$(foreach val, $(DOTFILES), ln -snfv $(RCPATH)/$(val) $(HOME)/.$(val);)
 	@git clone --depth 1 https://github.com/wbthomason/packer.nvim $(HOME)/.local/share/nvim/site/pack/packer/start/packer.nvim
-
-ifeq ($(UNAME), Linux)
-	@sed -i -e '1i export BASH_IT_CUSTOM=$${XDG_CONFIG_HOME}/bash' $(HOME)/.bashrc
-endif
 
 .PHONY: clean
 clean:
