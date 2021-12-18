@@ -93,7 +93,7 @@ function _prompt {
 			host="\h"
 		fi
 		#ssh_info="${bold_blue}\u${bold_orange}@${cyan}$host ${bold_orange}in"
-		ssh_info="${cyan}\u${white}@${yellow}$host"
+		ssh_info="${cyan}\u${white}@${bold_yellow}$host"
 	fi
 
 	# Detect python venv
@@ -106,6 +106,15 @@ function _prompt {
 	PS1="\\n${ssh_info} ${purple}$(scm_char)${python_venv}${dir_color}\\w${normal}$(scm_prompt_info)${command_duration}${exit_code}"
 	[[ ${#PS1} -gt $((COLUMNS * 2)) ]] && wrap_char="\\n"
 	PS1="${PS1}${wrap_char}\\n❯${normal} "
+	case $TERM in
+		xterm*|screen*|tmux*)
+			local TITLEBAR="\[\033]0;\u@\h\007\]"
+			;;
+		*)
+			local TITLEBAR=""
+			;;
+	esac
+	PS1="${TITLEBAR}${PS1}"
 }
 
 safe_append_prompt_command _prompt
