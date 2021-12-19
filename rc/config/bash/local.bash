@@ -67,7 +67,6 @@ fi
 if type npm > /dev/null 2>&1; then
 	export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 fi
-
 ## Python
 ### pip
 if [[ $OSTYPE = darwin* ]] && [[ -e "${XDG_CONFIG_HOME}/pip/pip.conf" ]]; then
