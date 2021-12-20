@@ -1,17 +1,15 @@
-DOTPATH       := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
-RCPATH        := $(DOTPATH)/rc
+DOTPATH        := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
+RCPATH         := $(DOTPATH)/rc
 
-CANDIDATES    := $(notdir $(wildcard $(RCPATH)/*))
-EXCLUSIONS    := .DS_Store .git .gitmodules
-LINUX_EXC     := zshenv
-MAC_EXC       := 
-TARGETS       := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
+CANDIDATES     := $(notdir $(wildcard $(RCPATH)/*))
+EXCLUSIONS     := .DS_Store .git .gitmodules
+LINUX_EXC      :=
+MAC_EXC        :=
 
-UNAME         := $(shell uname -s)
+TARGETS        := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
+IN_CONFIG      := $(dir wildcard $(RCPATH/config/*))
 
-ZSH_DIR       := $(RCPATH)/config/zsh
-ZPREZTO_DIR   := $(ZSH_DIR)/.zprezto
-ZPREZTO_RCDIR := $(ZPREZTO_DIR)/runcoms
+UNAME          := $(shell uname -s)
 
 ifeq ($(UNAME), Linux)
 	DOTFILES := $(filter-out $(LINUX_EXC), $(TARGETS))
@@ -23,6 +21,21 @@ endif
 .PHONY: all
 all:
 
+.PHONY: all
+all:
+	@rm -rf $(HOME)/.config $(HOME)/.local $(HOME)/.cache
+	@$(foreach val, $(DOTFILES), ln -snfv $(RCPATH)/$(val) $(HOME)/.$(val);)
+	@git clone --depth 1 https://github.com/wbthomason/packer.nvim $(HOME)/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+.PHONY: clean
+clean:
+	@$(foreach val, $(DOTFILES), unlink $(HOME)/.$(val);)
+
+.PHONY: purge
+purge:
+	@$(MAKE) clean
+	@rm -rf $(HOME)/.local $(HOME)/.cache
+
 .PHONY: bashenv
 bashenv:
 	@rm -f $(HOME)/.bashrc
@@ -32,41 +45,10 @@ bashenv:
 	@sed -i -e '1i export BASH_IT_CUSTOM=$${XDG_CONFIG_HOME}/bash' $(HOME)/.bashrc
 	@sed -i -E 's/BASH_IT_THEME=.*/BASH_IT_THEME=$${XDG_CONFIG_HOME}\/bash\/themes\/barbuk_mod.theme.bash/' $(HOME)/.bashrc
 
-.PHONY: zshenv
-zshenv:
-	@$(MAKE) prezto-init
-
-.PHONY: prezto-init
-prezto-init:
-	@if [ -d $(ZPREZTO_DIR) ]; then \
-		rm -rvf $(ZPREZTO_DIR); \
-	 fi
-	@git clone --recursive https://github.com/sorin-ionescu/prezto.git rc/config/zsh/.zprezto
-
-	$(eval ZPREZTO_CAN  := $(notdir $(wildcard $(ZPREZTO_RCDIR)/*)))
-	$(eval ZPREZTO_EXC  := zpreztorc zshrc README.md)
-	$(eval ZPREZTO_TARG := $(filter-out $(ZPREZTO_EXC), $(ZPREZTO_CAN)))
-	
-	@$(foreach val, $(ZPREZTO_TARG), ln -snfv $(ZPREZTO_RCDIR)/$(val) $(ZSH_DIR)/.$(val);)
-	@mkdir -p $(HOME)/.local/share/zsh
-
-.PHONY: all
-all:
-ifeq ($(UNAME), Linux)
-	@$(MAKE) bashenv
-else
-	@$(MAKE) zshenv
-endif
-	@rm -rf $(HOME)/.config $(HOME)/.local $(HOME)/.cache
-	@$(foreach val, $(DOTFILES), ln -snfv $(RCPATH)/$(val) $(HOME)/.$(val);)
-	@git clone --depth 1 https://github.com/wbthomason/packer.nvim $(HOME)/.local/share/nvim/site/pack/packer/start/packer.nvim
-
-.PHONY: clean
-clean:
-	@echo "Remove dotfiles from your home directory."
-	@$(foreach val, $(DOTFILES), rm -vf $(HOME)/.$(val);)
-
-.PHONY: purge
-purge:
-	@$(MAKE) clean
-	@rm -rf $(HOME)/.local $(HOME)/.cache $(HOME)/.linuxbrew
+# TODO
+# + rc/config 以下のディレクトリを列挙
+# + ~/.config ディレクトリを作成
+# + ~/.config 以下にシンボリックリンクを作成
+# + ~/.config 以下のシンボリックリンクを削除
+# + with_bashit と without_bashit を作成
+# + 滅びの purge ルールを作成
