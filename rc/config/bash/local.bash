@@ -63,12 +63,9 @@ if type brew > /dev/null 2>&1 && [[ -e $(brew --prefix nvm) ]]; then
 	# This loads nvm bash_completion
 	[ -s "$(brew --prefix nvm)/etc/bash_completion.d/nvm" ] && . "$(brew --prefix nvm)/etc/bash_completion.d/nvm"
 fi
-### node
+### npm
 if type npm > /dev/null 2>&1; then
-	export NPM_CONFIG_USERCONFIG=${XDG_CONFIG_HOME}/npm/npmrc
-	if [[ -d ${XDG_DATA_HOME}/npm/bin ]]; then
-		export PATH=${XDG_DATA_HOME}/npm/bin:${PATH}
-	fi
+	export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 fi
 ## Python
 ### pip
