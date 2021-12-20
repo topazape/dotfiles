@@ -88,6 +88,9 @@ autocmd FileType lua setlocal tabstop=2 shiftwidth=2 expandtab
 let g:vimsyn_emembed = 'l'
 " tex
 autocmd FileType tex setlocal tabstop=4 shiftwidth=4 expandtab
+" digdag
+autocmd BufNewFile,BufRead *.dig set filetype=yaml
+autocmd Syntax yaml setl indentkeys-=<:> indentkeys-=0#
 
 " for Python Virtual Environment
 if exists('$VIRTUAL_ENV')
