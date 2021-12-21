@@ -46,6 +46,9 @@ set noshowmode
 nnoremap <C-j> :bnext<CR>
 nnoremap <C-k> :bprev<CR>
 
+" :sp, :vsp
+set noequalalways
+
 " Register
 "" do not store in register by deletion
 nnoremap x "_x
