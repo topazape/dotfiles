@@ -20,9 +20,6 @@ endif
 # This rule is necessary
 .PHONY: all
 all:
-
-.PHONY: all
-all:
 	@rm -rf $(HOME)/.config $(HOME)/.local $(HOME)/.cache
 	@$(foreach val, $(DOTFILES), ln -snfv $(RCPATH)/$(val) $(HOME)/.$(val);)
 	@git clone --depth 1 https://github.com/wbthomason/packer.nvim $(HOME)/.local/share/nvim/site/pack/packer/start/packer.nvim
