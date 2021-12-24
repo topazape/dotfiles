@@ -77,6 +77,8 @@ let g:netrw_home = expand('$XDG_CACHE_HOME') . '/nvim'
 filetype plugin on
 " vim script
 autocmd FileType vim setlocal tabstop=2 shiftwidth=2 expandtab
+" makefile
+autocmd FileType make setlocal tabstop=4 shiftwidth=4 noexpandtab
 " sql
 autocmd FileType sql setlocal tabstop=2 shiftwidth=2 expandtab
 " html

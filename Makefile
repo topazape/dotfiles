@@ -23,6 +23,8 @@ all:
 	rm -rf $(HOME)/.config $(HOME)/.local $(HOME)/.cache
 	$(foreach val, $(DOTFILES), ln -snfv $(RCPATH)/$(val) $(HOME)/.$(val);)
 	git clone --depth 1 https://github.com/wbthomason/packer.nvim $(HOME)/.local/share/nvim/site/pack/packer/start/packer.nvim
+ifreq ($(UNAME), Linux)
+	$(MAKE) bashenv
 
 .PHONY: clean
 clean:
@@ -39,19 +41,5 @@ bashenv:
 	rm -rf $(HOME)/.bash_it
 	git clone --depth=1 https://github.com/Bash-it/bash-it.git $(HOME)/.bash_it
 	yes | $(HOME)/.bash_it/install.sh
-
-        ifeq ($(UNAME), Darwin)
-            sed -e 's/BASH_IT_THEME=.*/BASH_IT_THEME=$${XDG_CONFIG_HOME}\/bash\/themes\/barbuk_mod.theme.bash/' $(HOME)/.bashrc
-        else
-            sed -i -e '1i export BASH_IT_CUSTOM=$${XDG_CONFIG_HOME}/bash' $(HOME)/.bashrc
-            sed -e 's/BASH_IT_THEME=.*/BASH_IT_THEME=$${XDG_CONFIG_HOME}\/bash\/themes\/barbuk_mod.theme.bash/' $(HOME)/.bashrc
-        endif
-
-
-# TODO
-# + rc/config 以下のディレクトリを列挙
-# + ~/.config ディレクトリを作成
-# + ~/.config 以下にシンボリックリンクを作成
-# + ~/.config 以下のシンボリックリンクを削除
-# + with_bashit と without_bashit を作成
-# + 滅びの purge ルールを作成
+	sed -i -e '1i export BASH_IT_CUSTOM=$${XDG_CONFIG_HOME}/bash' $(HOME)/.bashrc
+	sed -i -e 's/BASH_IT_THEME=.*/BASH_IT_THEME=$${XDG_CONFIG_HOME}\/bash\/themes\/barbuk_mod.theme.bash/' $(HOME)/.bashrc
