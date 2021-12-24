@@ -20,31 +20,31 @@ endif
 # This rule is necessary
 .PHONY: all
 all:
-	@rm -rf $(HOME)/.config $(HOME)/.local $(HOME)/.cache
-	@$(foreach val, $(DOTFILES), ln -snfv $(RCPATH)/$(val) $(HOME)/.$(val);)
-	@git clone --depth 1 https://github.com/wbthomason/packer.nvim $(HOME)/.local/share/nvim/site/pack/packer/start/packer.nvim
+	rm -rf $(HOME)/.config $(HOME)/.local $(HOME)/.cache
+	$(foreach val, $(DOTFILES), ln -snfv $(RCPATH)/$(val) $(HOME)/.$(val);)
+	git clone --depth 1 https://github.com/wbthomason/packer.nvim $(HOME)/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 .PHONY: clean
 clean:
-	@$(foreach val, $(DOTFILES), unlink $(HOME)/.$(val);)
+	$(foreach val, $(DOTFILES), unlink $(HOME)/.$(val);)
 
 .PHONY: purge
 purge:
-	@$(MAKE) clean
-	@rm -rf $(HOME)/.local $(HOME)/.cache
+	$(MAKE) clean
+	rm -rf $(HOME)/.local $(HOME)/.cache
 
 .PHONY: bashenv
 bashenv:
-	@rm -f $(HOME)/.bashrc
-	@rm -rf $(HOME)/.bash_it
-	@git clone --depth=1 https://github.com/Bash-it/bash-it.git $(HOME)/.bash_it
-	@yes | $(HOME)/.bash_it/install.sh
+	rm -f $(HOME)/.bashrc
+	rm -rf $(HOME)/.bash_it
+	git clone --depth=1 https://github.com/Bash-it/bash-it.git $(HOME)/.bash_it
+	yes | $(HOME)/.bash_it/install.sh
 
         ifeq ($(UNAME), Darwin)
-            @sed -e 's/BASH_IT_THEME=.*/BASH_IT_THEME=$${XDG_CONFIG_HOME}\/bash\/themes\/barbuk_mod.theme.bash/' $(HOME)/.bashrc
+            sed -e 's/BASH_IT_THEME=.*/BASH_IT_THEME=$${XDG_CONFIG_HOME}\/bash\/themes\/barbuk_mod.theme.bash/' $(HOME)/.bashrc
         else
-            @sed -i -e '1i export BASH_IT_CUSTOM=$${XDG_CONFIG_HOME}/bash' $(HOME)/.bashrc
-            @sed -e 's/BASH_IT_THEME=.*/BASH_IT_THEME=$${XDG_CONFIG_HOME}\/bash\/themes\/barbuk_mod.theme.bash/' $(HOME)/.bashrc
+            sed -i -e '1i export BASH_IT_CUSTOM=$${XDG_CONFIG_HOME}/bash' $(HOME)/.bashrc
+            sed -e 's/BASH_IT_THEME=.*/BASH_IT_THEME=$${XDG_CONFIG_HOME}\/bash\/themes\/barbuk_mod.theme.bash/' $(HOME)/.bashrc
         endif
 
 
