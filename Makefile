@@ -11,10 +11,10 @@ IN_CONFIG      := $(dir wildcard $(RCPATH/config/*))
 
 UNAME          := $(shell uname -s)
 
-ifeq ($(UNAME), Linux)
-	DOTFILES := $(filter-out $(LINUX_EXC), $(TARGETS))
-else
+ifeq ($(UNAME), Darwin)
 	DOTFILES := $(filter-out $(MAC_EXC), $(TARGETS))
+else
+	DOTFILES := $(filter-out $(LINUX_EXC), $(TARGETS))
 endif
 
 # This rule is necessary
@@ -39,8 +39,12 @@ bashenv:
 	@rm -rf $(HOME)/.bash_it
 	@git clone --depth=1 https://github.com/Bash-it/bash-it.git $(HOME)/.bash_it
 	@yes | $(HOME)/.bash_it/install.sh
-	@sed -i -e '1i export BASH_IT_CUSTOM=$${XDG_CONFIG_HOME}/bash' $(HOME)/.bashrc
-	@sed -i -E 's/BASH_IT_THEME=.*/BASH_IT_THEME=$${XDG_CONFIG_HOME}\/bash\/themes\/barbuk_mod.theme.bash/' $(HOME)/.bashrc
+	ifeq ($(UNAME), Darwin)
+		@sed -e 's/BASH_IT_THEME=.*/BASH_IT_THEME=$${XDG_CONFIG_HOME}\/bash\/themes\/barbuk_mod.theme.bash/' $(HOME)/.bashrc
+	else
+		@sed -i -e '1i export BASH_IT_CUSTOM=$${XDG_CONFIG_HOME}/bash' $(HOME)/.bashrc
+		@sed -e 's/BASH_IT_THEME=.*/BASH_IT_THEME=$${XDG_CONFIG_HOME}\/bash\/themes\/barbuk_mod.theme.bash/' $(HOME)/.bashrc
+
 
 # TODO
 # + rc/config 以下のディレクトリを列挙
