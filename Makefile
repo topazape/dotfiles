@@ -17,7 +17,6 @@ else
 	DOTFILES := $(filter-out $(LINUX_EXC), $(TARGETS))
 endif
 
-# This rule is necessary
 .PHONY: all
 all:
 	rm -rf $(HOME)/.config $(HOME)/.local $(HOME)/.cache
@@ -38,8 +37,8 @@ purge:
 
 .PHONY: bashenv
 bashenv:
-	rm -f $(HOME)/.bashrc
-	rm -rf $(HOME)/.bash_it
+	rm $(HOME)/.bashrc
+	rm -r $(HOME)/.bash_it
 	git clone --depth=1 https://github.com/Bash-it/bash-it.git $(HOME)/.bash_it
 	yes | $(HOME)/.bash_it/install.sh
 	sed -i -e '1i export BASH_IT_CUSTOM=$${XDG_CONFIG_HOME}/bash' $(HOME)/.bashrc
