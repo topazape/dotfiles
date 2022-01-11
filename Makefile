@@ -17,7 +17,6 @@ else
 	DOTFILES := $(filter-out $(LINUX_EXC), $(TARGETS))
 endif
 
-# This rule is necessary
 .PHONY: all
 all:
 	rm -rf $(HOME)/.config $(HOME)/.local $(HOME)/.cache

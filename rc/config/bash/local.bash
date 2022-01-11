@@ -83,6 +83,6 @@ fi
 ### rustup & cargo
 export RUSTUP_HOME=${XDG_DATA_HOME}/rustup
 export CARGO_HOME=${XDG_DATA_HOME}/cargo
-if [ -e "$HOME/.local/share/cargo/env" ] ; then
-	source "$HOME/.local/share/cargo/env"
+if [[ -e "${XDG_DATA_HOME}/cargo/env" ]]; then
+	source ${XDG_DATA_HOME}/cargo/env
 fi
