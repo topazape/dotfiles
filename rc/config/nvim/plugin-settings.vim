@@ -12,8 +12,6 @@ lua require('_lualine')
 lua require('_lspinstaller')
 "" lsp-config
 lua require('_lspconfig')
-"" lspsaga
-lua require('_lspsaga')
 " lsp_signature.nvim
 lua require('_lsp_signature')
 

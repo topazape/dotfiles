@@ -17,8 +17,6 @@ return packer.startup(function()
 
   -- lsp
   use 'neovim/nvim-lspconfig'
-  ---- lsp-ui
-  use 'glepnir/lspsaga.nvim'
   ---- installer
   use 'williamboman/nvim-lsp-installer'
  ---- LSP symbols
