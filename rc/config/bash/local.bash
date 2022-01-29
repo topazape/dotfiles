@@ -20,18 +20,13 @@ if type psql > /dev/null 2>&1; then
 	export PSQL_HISTORY=${XDG_CACHE_HOME}/pg/psql_history
 	mkdir -p ${XDG_CACHE_HOME}/pg
 fi
-## usql
-if type usql > /dev/null 2>&1; then
-	export USQLRC=${XDG_CONFIG_HOME}/usql/usqlrc
-	export USQL_HISTORY=${XDG_CACHE_HOME}/usql/usql_history
-	export USQLPASS=${XDG_CACHE_HOME}/usql/usqlpass
-fi
 ## pspg
 if type pspg > /dev/null 2>&1; then
 	export PSPG="--force-uniborder --bold-labels --double-header --no-last-row-search -s 22"
 	export PSPG_HISTORY=${XDG_CACHE_HOME}/pspg/pspg_history
 	mkdir -p ${XDG_CACHE_HOME}/pspg
 fi
+## direnv
 if type direnv > /dev/null 2>&1; then
 	eval "$(direnv hook bash)"
 fi
@@ -52,6 +47,10 @@ fi
 if type vivid > /dev/null 2>&1; then
 	export LS_COLORS="$(vivid generate molokai)"
 fi
+## csvq
+if type csvq > /dev/null 2>&1; then
+	mkdir -p ${XDG_CACHE_HOME}/csvq
+fi
 
 # Programing Languages
 ## Javascript
@@ -69,9 +68,6 @@ if type npm > /dev/null 2>&1; then
 fi
 ## Python
 ### pip
-if [[ $OSTYPE = darwin* ]] && [[ -e "${XDG_CONFIG_HOME}/pip/pip.conf" ]]; then
-	export PIP_CONFIG_FILE=${XDG_CONFIG_HOME}/pip/pip.conf
-fi
 if type pip3 > /dev/null 2>&1; then
 	export PIP_CACHE_DIR=${XDG_CACHE_HOME}/pip
 fi
