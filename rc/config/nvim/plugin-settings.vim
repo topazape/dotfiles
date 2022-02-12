@@ -1,22 +1,15 @@
 " packer
 autocmd BufWritePost plugins.lua PackerCompile
 
-" nvim-treesitter
+lua require('_cmp')
+lua require('_lsp_signature')
+lua require('_lspconfig')
+lua require('_lspinstaller')
+lua require('_lualine')
+lua require('_neogen')
+lua require('_tree')
 lua require('_treesitter')
 
-" status line
-lua require('_lualine')
-
-" lsp
-"" lsp install
-lua require('_lspinstaller')
-"" lsp-config
-lua require('_lspconfig')
-" lsp_signature.nvim
-lua require('_lsp_signature')
-
-" completion
-lua require('_cmp')
 
 " symbols-outline
 let g:symbols_outline = {

@@ -53,4 +53,6 @@ return packer.startup(function()
 
   -- operator/non-operator mappings
   use 'tyru/caw.vim'
+
+  use 'danymat/neogen'
 end)
