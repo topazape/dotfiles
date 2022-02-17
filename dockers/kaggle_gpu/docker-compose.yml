@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  kaggle:
+    build: ./docker
+    shm_size: "16gb"
+    container_name: kaggle
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+    ports:
+      - 8888:8888
+    volumes:
+      - $PWD/workspace:/workspace
+    working_dir: /workspace

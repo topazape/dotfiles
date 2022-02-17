@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  r:
+    image: rocker/tidyverse:latest
+    container_name: R_env
+    ports:
+      - 8787:8787
+    environment:
+      - DISABLE_AUTH=true
+    working_dir: /workspace
+    volumes:
+      - $PWD/workspace:/workspace
