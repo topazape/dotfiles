@@ -13,3 +13,4 @@
 /rc/config/jupyter
 /rc/config/matplotlib
 /rc/config/rstudio
+/rc/config/wandb
