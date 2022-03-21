@@ -13,16 +13,9 @@ fi
 if type less > /dev/null 2>&1; then
 	export LESSHISTFILE=-
 fi
-## PostgreSQL
-if type psql > /dev/null 2>&1; then
-	export PSQLRC=${XDG_CONFIG_HOME}/pg/psqlrc
-	export PGPASSFILE=${XDG_CONFIG_HOME}/pg/pgpass
-	export PSQL_HISTORY=${XDG_CACHE_HOME}/pg/psql_history
-	mkdir -p ${XDG_CACHE_HOME}/pg
-fi
 ## pspg
 if type pspg > /dev/null 2>&1; then
-	export PSPG="--force-uniborder --bold-labels --double-header --no-last-row-search -s 22"
+	export PSPG="-s 22"
 	export PSPG_HISTORY=${XDG_CACHE_HOME}/pspg/pspg_history
 	mkdir -p ${XDG_CACHE_HOME}/pspg
 fi
