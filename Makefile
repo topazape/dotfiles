@@ -40,6 +40,6 @@ bashenv:
 	rm -f $(HOME)/.bashrc
 	rm -rf $(HOME)/.bash_it
 	git clone --depth=1 https://github.com/Bash-it/bash-it.git $(HOME)/.bash_it
-	yes | $(HOME)/.bash_it/install.sh
+	$(HOME)/.bash_it/install.sh --silent
 	sed -i -e '1i export BASH_IT_CUSTOM=$${XDG_CONFIG_HOME}/bash' $(HOME)/.bashrc
 	sed -i -e 's/BASH_IT_THEME=.*/BASH_IT_THEME=$${XDG_CONFIG_HOME}\/bash\/themes\/barbuk_mod.theme.bash/' $(HOME)/.bashrc

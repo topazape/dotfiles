@@ -26,6 +26,10 @@ if type pspg > /dev/null 2>&1; then
 	export PSPG_HISTORY=${XDG_CACHE_HOME}/pspg/pspg_history
 	mkdir -p ${XDG_CACHE_HOME}/pspg
 fi
+## pgcli
+if type pspg > /dev/null 2>&1; then
+	mkdir -p ${XDG_CACHE_HOME}/pgcli
+fi
 ## direnv
 if type direnv > /dev/null 2>&1; then
 	eval "$(direnv hook bash)"
