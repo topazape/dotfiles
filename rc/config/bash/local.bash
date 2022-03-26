@@ -5,7 +5,7 @@ fi
 
 # Applications
 ## CUDA
-if type nvidia-smi > /dev/null 2>&1; then
+if type nvidia-smi > /dev/null 2>&1 || type nvidia-container-cli > /dev/null 2>&1; then
 	export __GL_SHADER_DISK_CACHE_PATH=${XDG_CACHE_HOME}/nv
 	export CUDA_CACHE_PATH=${XDG_CACHE_HOME}/nv
 fi
