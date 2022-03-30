@@ -73,9 +73,10 @@ if type pipenv > /dev/null 2>&1; then
 	export PIPENV_CACHE_DIR=${XDG_CACHE_HOME}/pipenv
 fi
 ## Rust
-### rustup & cargo
-export RUSTUP_HOME=${XDG_DATA_HOME}/rustup
-export CARGO_HOME=${XDG_DATA_HOME}/cargo
-if [[ -e "${XDG_DATA_HOME}/cargo/env" ]]; then
-	source ${XDG_DATA_HOME}/cargo/env
+if type rustup-init > /dev/null 2>&1; then
+	export RUSTUP_HOME=${XDG_DATA_HOME}/rustup
+	export CARGO_HOME=${XDG_DATA_HOME}/cargo
+	if [[ -e "${XDG_DATA_HOME}/cargo/env" ]]; then
+		source ${XDG_DATA_HOME}/cargo/env
+	fi
 fi
