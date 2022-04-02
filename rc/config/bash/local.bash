@@ -48,6 +48,10 @@ fi
 if type csvq > /dev/null 2>&1; then
 	mkdir -p ${XDG_CACHE_HOME}/csvq
 fi
+## gh
+if type gh > /dev/null 2>&1; then
+	eval "$(gh completion -s bash)"
+fi
 
 # Programing Languages
 ## Javascript
