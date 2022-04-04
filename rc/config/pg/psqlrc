@@ -16,3 +16,5 @@
 \set VERBOSITY verbose
 -- キーワード(SELECTなど)を、小文字で入力し始めたとしても大文字に自動変換
 \set COMP_KEYWORD_CASE upper
+
+\timing on
