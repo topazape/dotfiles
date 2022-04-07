@@ -86,4 +86,8 @@ if type rustup-init > /dev/null 2>&1; then
 	if [[ -e "${XDG_DATA_HOME}/cargo/env" ]]; then
 		source ${XDG_DATA_HOME}/cargo/env
 	fi
+
+	### completions
+	eval "$(rustup completions bash)"
+	eval "$(rustup completions bash cargo)"
 fi
