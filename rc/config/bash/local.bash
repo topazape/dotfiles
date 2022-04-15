@@ -88,6 +88,8 @@ if type rustup-init > /dev/null 2>&1; then
 	fi
 
 	### completions
-	eval "$(rustup completions bash)"
-	eval "$(rustup completions bash cargo)"
+	if type rustup > /dev/null 2>&1; then
+		eval "$(rustup completions bash)"
+		eval "$(rustup completions bash cargo)"
+	fi
 fi
