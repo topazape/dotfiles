@@ -28,7 +28,6 @@ local symbol_map = {
 }
 
 cmp.setup({
-
   formatting = {
     format = function(entry, vim_item)
       -- fancy icons and a name of kind
@@ -57,7 +56,12 @@ cmp.setup({
   },
 
   mapping = {
-    ['<C-y>'] = cmp.mapping.confirm({ select = true }),
+    ['<C-p>'] = cmp.mapping.select_prev_item(),
+    ['<C-n>'] = cmp.mapping.select_next_item(),
+    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.close()
   },
 
   sources = {
