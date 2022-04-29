@@ -36,6 +36,7 @@ nnoremap <C-n>o :SymbolsOutline<CR>
 nnoremap <C-n> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
+let g:nvim_tree_symlink_arrow = ' → '
 lua require('_tree')
 
 " indent-blankline
