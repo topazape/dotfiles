@@ -38,6 +38,7 @@ nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 let g:nvim_tree_symlink_arrow = ' → '
 lua require('_tree')
+autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
 
 " indent-blankline
 let g:indent_blankline_char_list = ['│', '┊', '┆', '¦']
