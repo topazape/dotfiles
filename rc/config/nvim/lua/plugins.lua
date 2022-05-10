@@ -50,6 +50,7 @@ return packer.startup(function()
 
   -- colorscheme
   use 'folke/tokyonight.nvim'
+  use 'ellisonleao/gruvbox.nvim'
 
   -- operator/non-operator mappings
   use 'tyru/caw.vim'
