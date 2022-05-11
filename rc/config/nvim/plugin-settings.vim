@@ -41,7 +41,7 @@ lua require('_tree')
 autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
 
 " indent-blankline
-let g:indent_blankline_char_list = ['│', '┊', '┆', '¦']
+let g:indent_blankline_char_list = ['│', '┊', '┆', '⁞']
 
 " Colors
 "" colorscheme
