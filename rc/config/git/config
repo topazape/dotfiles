@@ -9,3 +9,5 @@
 	lol = log --graph --decorate --pretty=oneline --all --abbrev-commit
 [init]
 	defaultBranch = main
+[core]
+	quotePath = false
