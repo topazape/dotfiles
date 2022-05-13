@@ -2,7 +2,6 @@
 autocmd BufWritePost plugins.lua PackerCompile
 
 lua require('_cmp')
-lua require('_lsp_signature')
 lua require('_lspconfig')
 lua require('_lspinstaller')
 lua require('_lualine')
