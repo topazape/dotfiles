@@ -31,7 +31,7 @@ if type direnv > /dev/null 2>&1; then
 	eval "$(direnv hook bash)"
 fi
 ## tmux
-if type tmux > /dev/null 2>&1 && [[ $OSTYPE == "linux-gnu" ]]; then
+if type tmux > /dev/null 2>&1 && [[ ${OSTYPE} == "linux-gnu" ]]; then
 	alias tmux="tmux -u"
 fi
 ## zellij
@@ -60,7 +60,7 @@ fi
 ## Javascript
 ### nvm
 if type brew > /dev/null 2>&1 && [[ -e $(brew --prefix nvm) ]]; then
-	export NVM_DIR="$XDG_DATA_HOME"/nvm
+	export NVM_DIR=${XDG_DATA_HOME}/nvm
 	# This loads nvm
 	[ -s "$(brew --prefix nvm)/nvm.sh" ] && . "$(brew --prefix nvm)/nvm.sh"
 	# This loads nvm bash_completion
@@ -68,7 +68,7 @@ if type brew > /dev/null 2>&1 && [[ -e $(brew --prefix nvm) ]]; then
 fi
 ### npm
 if type npm > /dev/null 2>&1; then
-	export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+	export NPM_CONFIG_USERCONFIG=${XDG_CONFIG_HOME}/npm/npmrc
 fi
 ## Python
 ### pip
@@ -89,7 +89,9 @@ if type rustup-init > /dev/null 2>&1; then
 
 	### completions
 	if type rustup > /dev/null 2>&1; then
-		eval "$(rustup completions bash)"
-		eval "$(rustup completions bash cargo)"
+		if [[ ${SHELL} =~ bash ]]; then
+			eval "$(rustup completions bash)"
+			eval "$(rustup completions bash cargo)"
+		fi
 	fi
 fi
