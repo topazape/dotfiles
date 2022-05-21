@@ -5,12 +5,12 @@ local config = {
     theme = 'gruvbox'
   },
   sections = {
-    lualine_x = {
-      {'o:encoding'},
-      {'fileformat', lower = false, icons_enabled = false},
-      {'filetype'},
-      {'diff', symbols = {added = ' ', modified = '柳 ', removed = ' '}}
-    }
+    lualine_a = { {'mode'} },
+    lualine_b = { {'branch'}, {'diagnostics'}, {'diff', symbols = {added = ' ', modified = '柳 ', removed = ' '}} },
+    lualine_c = { {'filename', path = 1 } },
+    lualine_x = { {'filetype'}, {'encoding'}, {'fileformat', icons_enabled = false} },
+    lualine_y = { {'progress'} },
+    lualine_z = { {'location'} }
   },
 }
 
