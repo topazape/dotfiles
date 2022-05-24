@@ -64,7 +64,7 @@ cmp.setup({
     ['<C-e>'] = cmp.mapping.close(),
     -- Accept currently selected item.
     -- Set `select` to `false` to only confirm explicitly selected items.
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<C-o>'] = cmp.mapping.confirm({ select = true }),
   },
 
   sources = {
