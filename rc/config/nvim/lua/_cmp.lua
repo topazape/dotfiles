@@ -60,7 +60,7 @@ cmp.setup({
     ['<C-j>'] = cmp.mapping.select_next_item(),
     ['<C-p>'] = cmp.mapping.scroll_docs(-4),
     ['<C-n>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-o>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.close(),
     -- Accept currently selected item.
     -- Set `select` to `false` to only confirm explicitly selected items.
