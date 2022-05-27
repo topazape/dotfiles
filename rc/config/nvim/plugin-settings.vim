@@ -5,7 +5,6 @@ lua require('_cmp')
 lua require('_lspconfig')
 lua require('_lspinstaller')
 lua require('_lualine')
-lua require('_neogen')
 lua require('_tree')
 lua require('_treesitter')
 
