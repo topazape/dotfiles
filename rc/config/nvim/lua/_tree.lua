@@ -41,6 +41,7 @@ require('nvim-tree').setup({
     },
     icons = {
       webdev_colors = true,
+      symlink_arrow = " > ",
     },
   },
   hijack_directories = {
