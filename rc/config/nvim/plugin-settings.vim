@@ -28,7 +28,7 @@ let g:symbols_outline = {
     \ },
     \ 'lsp_blacklist': [],
 \ }
-nnoremap <C-n>o :SymbolsOutline<CR>
+nnoremap <C-o> :SymbolsOutline<CR>
 
 " nvim-tree
 nnoremap <C-n> :NvimTreeToggle<CR>
