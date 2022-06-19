@@ -69,6 +69,7 @@ fi
 ### npm
 if type npm > /dev/null 2>&1; then
 	export NPM_CONFIG_USERCONFIG=${XDG_CONFIG_HOME}/npm/npmrc
+	eval "$(npm completion)"
 fi
 ## Python
 ### pip
