@@ -74,28 +74,9 @@ inoremap <C-f> <Right>
 let g:netrw_home = expand('$XDG_CACHE_HOME') . '/nvim'
 
 " FileType Setting
-filetype plugin on
-" vim script
-autocmd FileType vim setlocal tabstop=2 shiftwidth=2 expandtab
-" makefile
-autocmd FileType make setlocal tabstop=4 shiftwidth=4 noexpandtab
-" sql
-autocmd FileType sql setlocal tabstop=2 shiftwidth=2 expandtab
-" html
-autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
-" yaml
-autocmd FileType yaml setlocal tabstop=2 shiftwidth=2 expandtab
-" javascript
-autocmd FileType javascript,typescript,json setlocal tabstop=2 shiftwidth=2 expandtab
-" lua
-autocmd FileType lua setlocal tabstop=2 shiftwidth=2 expandtab
-"" lua syntax hilighting in vim script
-let g:vimsyn_emembed = 'l'
-" tex
-autocmd FileType tex setlocal tabstop=4 shiftwidth=4 expandtab
-" digdag
+filetype plugin indent on
+"" digdag
 autocmd BufNewFile,BufRead *.dig set filetype=yaml
-autocmd Syntax yaml setl indentkeys-=<:> indentkeys-=0#
 
 " for Python Virtual Environment
 if exists('$VIRTUAL_ENV')
