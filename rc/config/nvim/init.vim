@@ -77,6 +77,10 @@ let g:netrw_home = expand('$XDG_CACHE_HOME') . '/nvim'
 filetype plugin indent on
 "" digdag
 autocmd BufNewFile,BufRead *.dig set filetype=yaml
+"" js, ts, json
+autocmd FileType javascript,typescript,json setlocal tabstop=4 shiftwidth=4 expandtab
+"" svelte
+autocmd FileType svelte setlocal tabstop=4 shiftwidth=4 expandtab
 
 " for Python Virtual Environment
 if exists('$VIRTUAL_ENV')
