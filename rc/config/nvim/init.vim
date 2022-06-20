@@ -84,7 +84,7 @@ autocmd FileType html setlocal tabstop=4 shiftwidth=4 expandtab
 "" js, ts, json
 autocmd FileType javascript,typescript,json setlocal tabstop=4 shiftwidth=4 expandtab
 "" svelte
-autocmd FileType svelte setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType svelte setlocal tabstop=2 shiftwidth=2 expandtab
 
 " for Python Virtual Environment
 if exists('$VIRTUAL_ENV')
