@@ -77,6 +77,8 @@ let g:netrw_home = expand('$XDG_CACHE_HOME') . '/nvim'
 filetype plugin indent on
 "" digdag
 autocmd BufNewFile,BufRead *.dig set filetype=yaml
+"" sql
+autocmd FileType sql setlocal tabstop=2 shiftwidth=2 expandtab
 "" html
 autocmd FileType html setlocal tabstop=4 shiftwidth=4 expandtab
 "" js, ts, json
