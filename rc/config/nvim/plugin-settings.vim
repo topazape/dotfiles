@@ -8,6 +8,8 @@ lua require('_lualine')
 lua require('_tree')
 lua require('_treesitter')
 lua require('_symbolsoutline')
+lua require('_dapui')
+lua require('_dappython')
 
 
 " symbols-outline
@@ -15,8 +17,6 @@ nnoremap <C-o> :SymbolsOutline<CR>
 
 " nvim-tree
 nnoremap <C-n> :NvimTreeToggle<CR>
-nnoremap <leader>r :NvimTreeRefresh<CR>
-nnoremap <leader>n :NvimTreeFindFile<CR>
 lua require('_tree')
 autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
 
