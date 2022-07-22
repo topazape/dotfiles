@@ -13,10 +13,10 @@ lua require('_dappython')
 
 
 " symbols-outline
-nnoremap <C-o> :SymbolsOutline<CR>
+nnoremap <M-o> :SymbolsOutline<CR>
 
 " nvim-tree
-nnoremap <C-n> :NvimTreeToggle<CR>
+nnoremap <M-e> :NvimTreeToggle<CR>
 lua require('_tree')
 autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
 

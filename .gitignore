@@ -1,17 +1,12 @@
-/rc/config/zsh/*
-!/rc/config/zsh/.zshrc
-!/rc/config/zsh/.zpreztorc
-
 /rc/config/nvim/plugin
 
 /rc/config/gh
 !/rc/config/gh/config.yaml
 
-/rc/config/fish
 /rc/config/bpytop
 /rc/config/ipython
 /rc/config/jupyter
 /rc/config/matplotlib
-/rc/config/rstudio
+/rc/config/procps
 /rc/config/wandb
 /rc/config/wslu
