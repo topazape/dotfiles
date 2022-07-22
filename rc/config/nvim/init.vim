@@ -80,11 +80,13 @@ autocmd BufNewFile,BufRead *.dig set filetype=yaml
 "" sql
 autocmd FileType sql setlocal tabstop=2 shiftwidth=2 expandtab
 "" html
-autocmd FileType html setlocal tabstop=4 shiftwidth=4 expandtab
-"" js, ts, json
-autocmd FileType javascript,typescript,json setlocal tabstop=4 shiftwidth=4 expandtab
-"" svelte
-autocmd FileType svelte setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
+"" json
+autocmd FileType json setlocal tabstop=2 shiftwidth=2 expandtab
+"" lua
+autocmd FileType lua setlocal tabstop=2 shiftwidth=2 expandtab
+"" js, ts
+autocmd FileType javascript,typescript setlocal tabstop=4 shiftwidth=4 expandtab
 
 " for Python Virtual Environment
 if exists('$VIRTUAL_ENV')

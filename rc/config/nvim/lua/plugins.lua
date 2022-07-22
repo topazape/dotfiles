@@ -19,7 +19,7 @@ return packer.startup(function()
   use 'neovim/nvim-lspconfig'
   ---- installer
   use 'williamboman/nvim-lsp-installer'
- ---- LSP symbols
+  ---- LSP symbols
   use 'simrat39/symbols-outline.nvim'
   ---- lsp_signature
   use 'ray-x/lsp_signature.nvim'
@@ -31,8 +31,13 @@ return packer.startup(function()
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-nvim-lua',
+    }
   }
-}
+
+  -- Debug Adapter Protocol
+  use 'mfussenegger/nvim-dap'
+  use 'rcarriga/nvim-dap-ui'
+  use 'mfussenegger/nvim-dap-python'
 
   -- tree-sitter
   use {
