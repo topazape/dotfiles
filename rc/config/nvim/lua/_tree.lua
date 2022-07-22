@@ -1,5 +1,3 @@
-local tree_cb = require('nvim-tree.config').nvim_tree_callback
-
 require('nvim-tree').setup({
   auto_reload_on_write = true,
   create_in_closed_folder = false,
@@ -9,7 +7,7 @@ require('nvim-tree').setup({
   hijack_unnamed_buffer_when_opening = false,
   ignore_buffer_on_setup = false,
   open_on_setup = true,
-  open_on_setup_file = true,
+  open_on_setup_file = false,
   open_on_tab = false,
   ignore_buf_on_tab_change = {},
   sort_by = "case-sensitive",
@@ -32,8 +30,8 @@ require('nvim-tree').setup({
     mappings = {
       custom_only = false,
       list = {
-        { key={"S"}, cb=tree_cb("split") },
-        { key={"V"}, cb=tree_cb("vsplit") }
+        { key= "S", action = "split" },
+        { key= "V", action = "vsplit" }
       },
     },
   },
