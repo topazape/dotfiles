@@ -9,7 +9,7 @@ lua require('_tree')
 lua require('_treesitter')
 lua require('_symbolsoutline')
 lua require('_dapui')
-lua require('_dappython')
+lua require('_dap_python')
 
 
 " symbols-outline

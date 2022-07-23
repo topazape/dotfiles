@@ -37,7 +37,6 @@ return packer.startup(function()
   -- Debug Adapter Protocol
   use 'mfussenegger/nvim-dap'
   use 'rcarriga/nvim-dap-ui'
-  use 'mfussenegger/nvim-dap-python'
 
   -- tree-sitter
   use {

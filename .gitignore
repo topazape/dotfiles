@@ -1,5 +1,3 @@
-/rc/config/nvim/plugin
-
 /rc/config/gh
 !/rc/config/gh/config.yaml
 
