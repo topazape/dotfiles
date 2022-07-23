@@ -25,20 +25,20 @@ dapui.setup({
     {
       elements = {
       -- Elements can be strings or table with id and size keys.
-        "watches",
-        "stacks",
-        "breakpoints",
-        { id = "scopes", size = 0.5 },
+        { id = "watches", size = 0.20 },
+        { id = "stacks", size = 0.20 },
+        { id = "breakpoints", size = 0.20 },
+        { id = "scopes", size = 0.40 },
       },
       size = 64, -- 40 columns
-      position = "left",
+      position = "right",
     },
     {
       elements = {
         "repl",
         "console",
       },
-      size = 0.25, -- 25% of total lines
+      size = 0.20, -- 25% of total lines
       position = "bottom",
     },
   },
@@ -64,7 +64,7 @@ vim.api.nvim_set_keymap('n', '<F10>', ':DapStepOver<CR>', {})
 vim.api.nvim_set_keymap('n', '<F11>', ':DapStepInto<CR>', {})
 vim.api.nvim_set_keymap('n', '<F12>', ':DapStepOut<CR>', {})
 
-vim.api.nvim_set_keymap('n', '<leader>df', ':lua require("dapui").eval()<CR>', {})
+vim.api.nvim_set_keymap('n', '<leader>k', ':lua require("dapui").eval()<CR>', {})
 vim.api.nvim_set_keymap('n', '<leader>b', ':DapToggleBreakpoint<CR>', {})
 vim.api.nvim_set_keymap('n', '<leader>B', ':lua require("dap").set_breakpoint(nil, nil, vim.fn.input("Breakpoint condition: "))<CR>', {})
 vim.api.nvim_set_keymap('n', '<leader>lp', ':lua require("dap").set_breakpoint(nil, nil, vim.fn.input("Log point message: "))<CR>', {})
