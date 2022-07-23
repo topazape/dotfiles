@@ -10,7 +10,7 @@ require('nvim-tree').setup({
   open_on_setup_file = false,
   open_on_tab = false,
   ignore_buf_on_tab_change = {},
-  sort_by = "case-sensitive",
+  sort_by = "case_sensitive",
   root_dirs = {},
   prefer_startup_root = false,
   sync_root_with_cwd = false,
