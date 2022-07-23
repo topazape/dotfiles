@@ -30,7 +30,9 @@ return packer.startup(function()
     requires = {
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-nvim-lsp',
+      'hrsh7th/cmp-path',
       'hrsh7th/cmp-nvim-lua',
+      'ray-x/cmp-treesitter',
     }
   }
 
@@ -61,4 +63,7 @@ return packer.startup(function()
 
   -- rust
   use 'rust-lang/rust.vim'
+
+  -- notify
+  use 'rcarriga/nvim-notify'
 end)
