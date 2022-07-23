@@ -38,7 +38,7 @@ require('nvim-tree').setup({
   renderer = {
     add_trailing = false,
     group_empty = false,
-    highlight_git = false,
+    highlight_git = true,
     full_name = false,
     highlight_opened_files = "none",
     root_folder_modifier = ":~",
@@ -53,7 +53,7 @@ require('nvim-tree').setup({
     },
     icons = {
       webdev_colors = true,
-      git_placement = "before",
+      git_placement = "after",
       padding = " ",
       symlink_arrow = " ➛ ",
       show = {
