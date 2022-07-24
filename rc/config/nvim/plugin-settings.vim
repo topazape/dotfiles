@@ -25,4 +25,4 @@ let g:indent_blankline_char_list = ['│', '┊', '┆', '⁞']
 "" colorscheme
 " colorscheme tokyonight
 set background=dark
-colorscheme gruvbox
+colorscheme gruvbox-material
