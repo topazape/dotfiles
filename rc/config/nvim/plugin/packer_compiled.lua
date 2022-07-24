@@ -94,11 +94,6 @@ _G.packer_plugins = {
     path = "/home/topazape/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
     url = "https://github.com/hrsh7th/cmp-nvim-lua"
   },
-  ["cmp-path"] = {
-    loaded = true,
-    path = "/home/topazape/.local/share/nvim/site/pack/packer/start/cmp-path",
-    url = "https://github.com/hrsh7th/cmp-path"
-  },
   ["cmp-vsnip"] = {
     loaded = true,
     path = "/home/topazape/.local/share/nvim/site/pack/packer/start/cmp-vsnip",

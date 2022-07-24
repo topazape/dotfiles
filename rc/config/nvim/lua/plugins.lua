@@ -19,6 +19,8 @@ return packer.startup(function()
   use 'neovim/nvim-lspconfig'
   ---- installer
   use 'williamboman/nvim-lsp-installer'
+  ---- add pictograms
+  use 'onsails/lspkind.nvim'
 
   -- completion
   use {
@@ -29,6 +31,7 @@ return packer.startup(function()
       'hrsh7th/cmp-nvim-lua',
       'hrsh7th/cmp-cmdline',
       'hrsh7th/cmp-vsnip',
+      'hrsh7th/cmp-buffer',
     }
   }
 

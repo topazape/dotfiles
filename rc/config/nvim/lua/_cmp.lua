@@ -35,11 +35,32 @@ cmp.setup({
     { name = 'nvim_lsp_signature_help' },
     { name = 'vsnip' },
     { name = 'lua' },
+  },
+
+  formatting = {
+    format = require("lspkind").cmp_format({
+      -- show only symbol annotations
+      mode = 'symbol',
+      -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+      maxwidth = 50,
+      -- The function below will be called before any actual modifications from lspkind
+      -- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
+      before = function (entry, vim_item)
+        return vim_item
+      end
+    })
   }
+
 })
 
 cmp.setup.cmdline(':', {
   sources = {
     { name = 'cmdline' }
+  }
+})
+
+cmp.setup.cmdline('/', {
+  sources = {
+    { name = 'buffer' }
   }
 })
