@@ -74,30 +74,35 @@ _G.packer_plugins = {
     path = "/home/topazape/.local/share/nvim/site/pack/packer/start/caw.vim",
     url = "https://github.com/tyru/caw.vim"
   },
-  ["cmp-buffer"] = {
+  ["cmp-cmdline"] = {
     loaded = true,
-    path = "/home/topazape/.local/share/nvim/site/pack/packer/start/cmp-buffer",
-    url = "https://github.com/hrsh7th/cmp-buffer"
-  },
-  ["cmp-lua"] = {
-    loaded = true,
-    path = "/home/topazape/.local/share/nvim/site/pack/packer/start/cmp-lua",
-    url = "https://github.com/hrsh7th/cmp-lua"
+    path = "/home/topazape/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
+    url = "https://github.com/hrsh7th/cmp-cmdline"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/topazape/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["cmp-nvim-lsp-signature-help"] = {
+    loaded = true,
+    path = "/home/topazape/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp-signature-help",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp-signature-help"
+  },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "/home/topazape/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
+  },
   ["cmp-path"] = {
     loaded = true,
     path = "/home/topazape/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
-  ["cmp-treesitter"] = {
+  ["cmp-vsnip"] = {
     loaded = true,
-    path = "/home/topazape/.local/share/nvim/site/pack/packer/start/cmp-treesitter",
-    url = "https://github.com/ray-x/cmp-treesitter"
+    path = "/home/topazape/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
+    url = "https://github.com/hrsh7th/cmp-vsnip"
   },
   ["gruvbox.nvim"] = {
     loaded = true,
@@ -108,11 +113,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/topazape/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
-  },
-  ["lsp_signature.nvim"] = {
-    loaded = true,
-    path = "/home/topazape/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
-    url = "https://github.com/ray-x/lsp_signature.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
@@ -178,11 +178,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/topazape/.local/share/nvim/site/pack/packer/start/rust.vim",
     url = "https://github.com/rust-lang/rust.vim"
-  },
-  ["symbols-outline.nvim"] = {
-    loaded = true,
-    path = "/home/topazape/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
-    url = "https://github.com/simrat39/symbols-outline.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,

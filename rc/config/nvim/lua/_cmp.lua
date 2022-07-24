@@ -1,79 +1,45 @@
+-- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
+vim.opt.completeopt = 'menu,menuone,noselect'
+
 local cmp = require('cmp')
-local symbol_map = {
-  Text          = '',
-  Method        = '',
-  Function      = '',
-  Constructor   = '',
-  Field         = '',
-  Variable      = '',
-  Class         = '',
-  Interface     = 'ﰮ',
-  Module        = '',
-  Property      = '',
-  Unit          = '',
-  Value         = '',
-  Enum          = '',
-  Keyword       = '',
-  Snippet       = '﬌',
-  Color         = '',
-  File          = '',
-  Reference     = '',
-  Folder        = '',
-  EnumMember    = '',
-  Constant      = '',
-  Struct        = '',
-  Event         = '',
-  Operator      = 'ﬦ',
-  TypeParameter = '',
-}
-
 cmp.setup({
-  formatting = {
-    format = function(entry, vim_item)
-      -- fancy icons and a name of kind
-      vim_item.kind = symbol_map[vim_item.kind] .. ' ' .. vim_item.kind
-      -- set a name for each source
-      vim_item.menu = ({
-        buffer      = '[Buffer]',
-        nvim_lsp    = '[LSP]',
-        ultisnips   = '[UltiSnips]',
-        nvim_lua    = '[Lua]',
-        cmp_tabnine = '[TabNine]',
-        look        = '[Look]',
-        path        = '[Path]',
-        spell       = '[Spell]',
-        calc        = '[Calc]',
-        emoji       = '[Emoji]'
-      })[entry.source.name]
-      return vim_item
-    end,
-  },
-
   snippet = {
+    -- REQUIRED - you must specify a snippet engine
     expand = function(args)
-      vim.fn['vsnip#anonymous'](args.body)
+      vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+      -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
+      -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
+      -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
     end,
   },
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
 
-  mapping = {
+  mapping = cmp.mapping.preset.insert({
     ['<C-k>'] = cmp.mapping.select_prev_item(),
     ['<C-j>'] = cmp.mapping.select_next_item(),
     ['<C-p>'] = cmp.mapping.scroll_docs(-4),
     ['<C-n>'] = cmp.mapping.scroll_docs(4),
-    ['<C-o>'] = cmp.mapping.complete(),
-    ['<C-e>'] = cmp.mapping.close(),
-    -- Accept currently selected item.
-    -- Set `select` to `false` to only confirm explicitly selected items.
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.abort(),
     ['<C-f>'] = cmp.mapping.confirm({ select = true }),
-  },
+  }),
 
   sources = {
-    { name = 'buffer' },
     { name = 'nvim_lsp' },
-    { name = 'path' },
+    { name = 'nvim_lsp_signature_help' },
+    { name = 'vsnip' },
     { name = 'lua' },
-    { name = 'treesitter' },
-  },
+  }
+})
 
-  completion = { completeopt = 'menu,menuone,noinsert' },
+cmp.setup.cmdline(':', {
+  sources = {
+    { name = 'cmdline' }
+  }
 })

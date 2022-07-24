@@ -19,20 +19,16 @@ return packer.startup(function()
   use 'neovim/nvim-lspconfig'
   ---- installer
   use 'williamboman/nvim-lsp-installer'
-  ---- LSP symbols
-  use 'simrat39/symbols-outline.nvim'
-  ---- lsp_signature
-  use 'ray-x/lsp_signature.nvim'
 
   -- completion
   use {
     'hrsh7th/nvim-cmp',
     requires = {
-      'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-path',
+      'hrsh7th/cmp-nvim-lsp-signature-help',
       'hrsh7th/cmp-nvim-lua',
-      'ray-x/cmp-treesitter',
+      'hrsh7th/cmp-cmdline',
+      'hrsh7th/cmp-vsnip',
     }
   }
 
