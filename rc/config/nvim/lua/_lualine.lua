@@ -1,7 +1,7 @@
 local lualine = require('lualine')
 local config = {
   options = {
-    theme = 'gruvbox-material'
+    theme = 'duskfox'
   },
   sections = {
     lualine_a = { {'mode'} },

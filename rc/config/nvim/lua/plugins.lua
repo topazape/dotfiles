@@ -56,7 +56,7 @@ return packer.startup(function()
   use 'lukas-reineke/indent-blankline.nvim'
 
   -- colorscheme
-  use 'sainnhe/gruvbox-material'
+  use 'EdenEast/nightfox.nvim'
 
   -- operator/non-operator mappings
   use 'tyru/caw.vim'

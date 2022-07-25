@@ -20,8 +20,23 @@ autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tab
 " indent-blankline
 let g:indent_blankline_char_list = ['│', '┊', '┆', '⁞']
 
-" Colors
-"" colorscheme
-" colorscheme tokyonight
-set background=dark
-colorscheme gruvbox-material
+" colorscheme
+lua << EOF
+require('nightfox').setup({
+  options = {
+    styles = {
+      comments = 'italic',
+      conditionals = 'NONE',
+      constants = 'NONE',
+      functions = 'NONE',
+      keywords = 'bold',
+      numbers = 'NONE',
+      operators = 'NONE',
+      strings = 'NONE',
+      types = 'italic,bold',
+      variables = 'NONE',
+    },
+  }
+})
+EOF
+colorscheme nightfox
