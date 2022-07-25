@@ -1,6 +1,4 @@
-/rc/config/gh
-!/rc/config/gh/config.yaml
-
+/rc/config/gh/hosts.yml
 /rc/config/nvim/plugin/packer_compiled.lua
 /rc/config/bpytop
 /rc/config/ipython
