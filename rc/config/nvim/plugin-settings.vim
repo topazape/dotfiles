@@ -39,4 +39,4 @@ require('nightfox').setup({
   }
 })
 EOF
-colorscheme nightfox
+colorscheme duskfox
