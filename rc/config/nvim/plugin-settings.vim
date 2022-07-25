@@ -2,12 +2,11 @@
 autocmd BufWritePost plugins.lua PackerCompile
 
 lua require('_cmp')
-lua require('_lspinstaller')
+lua require('_mason')
 lua require('_lualine')
 lua require('_tree')
 lua require('_treesitter')
-lua require('_dapui')
-lua require('_dap_python')
+lua require('_dap')
 
 
 " symbols-outline

@@ -16,9 +16,11 @@ return packer.startup(function()
   }
 
   -- lsp
-  use 'neovim/nvim-lspconfig'
-  ---- installer
-  use 'williamboman/nvim-lsp-installer'
+  use {
+    'neovim/nvim-lspconfig',
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim'
+  }
   ---- add pictograms
   use 'onsails/lspkind.nvim'
 
