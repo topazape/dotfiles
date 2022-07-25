@@ -1,17 +1,18 @@
+------------------------------------------------
+-- dap
+------------------------------------------------
+
 local dap = require('dap')
 
 local venv = os.getenv('VIRTUAL_ENV')
 if venv == nil then
   return
 end
-command = string.format('%s/bin/python', venv)
-
 dap.adapters.python = {
   type = 'executable';
-  command = command;
+  command = string.format('%s/bin/python', venv);
   args = { '-m', 'debugpy.adapter' };
 }
-
 dap.configurations.python = {
   {
     -- The first three options are required by nvim-dap
@@ -25,7 +26,10 @@ dap.configurations.python = {
   },
 }
 
+
+------------------------------------------------
 -- dapui
+------------------------------------------------
 local dapui = require('dapui')
 
 dapui.setup({
