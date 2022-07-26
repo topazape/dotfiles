@@ -62,15 +62,15 @@ dapui.setup({
         { id = "breakpoints", size = 0.20 },
         { id = "scopes", size = 0.40 },
       },
-      size = 64, -- 40 columns
+      size = 64, -- columns
       position = "right",
     },
     {
       elements = {
-        "repl",
-        "console",
+        { id = "repl", size = 0.5 },
+        { id = "console", size = 0.5 }
       },
-      size = 0.20, -- 25% of total lines
+      size = 0.20, -- of total lines
       position = "bottom",
     },
   },
