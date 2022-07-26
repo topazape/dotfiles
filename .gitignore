@@ -5,5 +5,6 @@
 /rc/config/jupyter
 /rc/config/matplotlib
 /rc/config/procps
+/rc/config/pudb
 /rc/config/wandb
 /rc/config/wslu
