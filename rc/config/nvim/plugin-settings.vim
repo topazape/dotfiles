@@ -7,10 +7,7 @@ lua require('_lualine')
 lua require('_tree')
 lua require('_treesitter')
 lua require('_dap')
-
-
-" symbols-outline
-nnoremap <M-o> :SymbolsOutline<CR>
+lua require('bufferline').setup()
 
 " nvim-tree
 nnoremap <M-e> :NvimTreeToggle<CR>

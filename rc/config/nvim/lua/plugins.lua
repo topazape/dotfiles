@@ -53,6 +53,9 @@ return packer.startup(function()
   -- status line
   use 'hoob3rt/lualine.nvim'
 
+  -- bufferline
+  use {'akinsho/bufferline.nvim', tag = "v2.*"}
+
   -- indent
   use 'lukas-reineke/indent-blankline.nvim'
 
