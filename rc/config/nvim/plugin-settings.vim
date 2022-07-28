@@ -7,7 +7,7 @@ lua require('_lualine')
 lua require('_tree')
 lua require('_treesitter')
 lua require('_dap')
-lua require('bufferline').setup()
+lua require('_bufferline')
 
 " nvim-tree
 nnoremap <M-e> :NvimTreeToggle<CR>
