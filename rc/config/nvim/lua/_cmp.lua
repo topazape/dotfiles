@@ -16,8 +16,20 @@ cmp.setup({
     end,
   },
   window = {
-    completion = cmp.config.window.bordered(),
-    documentation = cmp.config.window.bordered(),
+    completion = cmp.config.window.bordered({
+      border = 'rounded',
+      winhighlight = 'Normal:Normal,FloatBorder:Normal,CursorLine:Visual,Search:None',
+      zindex = 1001,
+      col_offset = 0,
+      side_padding = 1,
+    }),
+    documentation = cmp.config.window.bordered({
+      border = 'rounded',
+      winhighlight = 'Normal:Normal,FloatBorder:Normal,CursorLine:Visual,Search:None',
+      zindex = 1001,
+      col_offset = 0,
+      side_padding = 1,
+    }),
   },
 
   mapping = cmp.mapping.preset.insert({
