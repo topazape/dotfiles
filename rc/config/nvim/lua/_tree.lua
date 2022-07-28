@@ -55,7 +55,7 @@ require('nvim-tree').setup({
       webdev_colors = true,
       git_placement = "after",
       padding = " ",
-      symlink_arrow = " ➛ ",
+      symlink_arrow = " » ",
       show = {
         file = true,
         folder = true,
