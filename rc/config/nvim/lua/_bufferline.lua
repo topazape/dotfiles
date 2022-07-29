@@ -9,7 +9,7 @@ bufferline.setup({
     show_buffer_default_icon = true,
     show_close_icon = false,
     show_tab_indicators = true,
-    separator_style = {'‖', '|'},
+    separator_style = {'║', '│'},
     enforce_regular_tabs = false,
     always_show_bufferline = true
   }
