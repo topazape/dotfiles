@@ -70,6 +70,9 @@ inoremap <C-n> <Down>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 
+" colors
+set termguicolors
+
 " ~/.config/nvim/.netrwhist to ~/.cache/nvim/.netrwhist
 let g:netrw_home = expand('$XDG_CACHE_HOME') . '/nvim'
 
