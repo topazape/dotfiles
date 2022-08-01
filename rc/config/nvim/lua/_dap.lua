@@ -63,7 +63,7 @@ dapui.setup({
         { id = "scopes", size = 0.40 },
       },
       size = 64, -- columns
-      position = "right",
+      position = "left",
     },
     {
       elements = {
