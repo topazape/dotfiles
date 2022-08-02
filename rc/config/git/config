@@ -6,7 +6,7 @@
 [pull]
 	rebase = false
 [alias]
-	lol = log --graph --decorate --pretty='format:%C(bold yellow)%h%Creset  %C(auto)%d%Creset %s  %C(green)[%cr]%Creset %C(cyan)<%an>%Creset' --all --abbrev-commit
+	lol = log --graph --decorate --pretty='format:%C(bold yellow)%h%Creset  %C(auto)%d%Creset %s %C(cyan)› %an%Creset %C(green)› %cr%Creset' --all --abbrev-commit
 [init]
 	defaultBranch = main
 [core]
