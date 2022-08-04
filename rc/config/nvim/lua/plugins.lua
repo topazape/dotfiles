@@ -45,6 +45,9 @@ return packer.startup(function()
     'theHamsta/nvim-dap-virtual-text'
   }
 
+  -- outline
+  use'stevearc/aerial.nvim'
+
   -- tree-sitter
   use {
     'nvim-treesitter/nvim-treesitter',

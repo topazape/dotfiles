@@ -8,6 +8,7 @@ lua require('_tree')
 lua require('_treesitter')
 lua require('_dap')
 lua require('_bufferline')
+lua require('_aerial')
 
 " nvim-tree
 nnoremap <M-e> :NvimTreeToggle<CR>
