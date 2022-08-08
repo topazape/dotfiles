@@ -3,6 +3,11 @@ if type nvim > /dev/null 2>&1; then
 	export EDITOR="nvim"
 fi
 
+# build
+if type brew > /dev/null 2>&1 && type pkg-config > /dev/null 2>&1 && [[ -z ${PKG_CONFIG_PATH} ]]; then
+	export PKG_CONFIG_PATH=$(brew --prefix)/lib/pkgconfig
+fi
+
 # Applications
 ## CUDA
 if type nvidia-smi > /dev/null 2>&1 || type nvidia-container-cli > /dev/null 2>&1; then
