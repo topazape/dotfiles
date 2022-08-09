@@ -1,0 +1,13 @@
+[ -d /home/linuxbrew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+export XDG_CONFIG_HOME=${HOME}/.config
+export XDG_CACHE_HOME=${HOME}/.cache
+export XDG_DATA_HOME=${HOME}/.local/share
+
+if [ -f ${HOME}/.profile ]; then
+        . ${HOME}/.profile
+fi
+
+export ZIM_HOME=${XDG_CONFIG_HOME}/zim
+source ${XDG_CONFIG_HOME}/zsh/local.zsh
+
