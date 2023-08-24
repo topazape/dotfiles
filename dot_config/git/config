@@ -1,0 +1,32 @@
+[user]
+	email = topazape@gmail.com
+	name = topazape
+[push]
+	default = nothing
+[pull]
+	rebase = false
+[alias]
+	lol = log --graph --decorate --pretty='format:%C(bold yellow)%h%Creset  %C(auto)%d%Creset %s %C(cyan)« %an%Creset %C(green)⁝ %cr%Creset' --abbrev-commit
+[init]
+	defaultBranch = main
+[core]
+	quotePath = false
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[add.interactive]
+	useBuiltin = false # required for git 2.37.0
+[delta]
+	navigate = true    # use n and N to move between diff sections
+	light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+	line-numbers = true
+	diff-so-funcy = true
+	syntax-theme = Monokai Extended
+[merge]
+	conflictstyle = diff3
+[diff]
+	colorMoved = default
+[fetch]
+	prune = true
+[includeIf "gitdir:~/Develop/qf/"]
+	path = ~/Develop/qf/gitconfig

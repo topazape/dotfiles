@@ -1,0 +1,9 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/sh
+curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | ZIM_HOME=${HOME}/.local/share/zim zsh
+awk 'NR==1{print "source ${XDG_CONFIG_HOME}/zsh/local.zsh"}1' ${HOME}/.zshrc > ${HOME}/.zshrc.tmp && mv ${HOME}/.zshrc.tmp ${HOME}/.zshrc
+{{ else if eq .chezmoi.os "linux" -}}
+#!/bin/sh
+curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | ZIM_HOME=${HOME}/.local/share/zim zsh
+awk 'NR==1{print "source ${XDG_CONFIG_HOME}/zsh/local.zsh"}1' ${HOME}/.zshrc > ${HOME}/.zshrc.tmp && mv ${HOME}/.zshrc.tmp ${HOME}/.zshrc
+{{ end -}}
