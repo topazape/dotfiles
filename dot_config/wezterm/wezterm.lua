@@ -6,18 +6,22 @@ return {
 		{ family = "Pretendard JP" },
 	}),
 	font_size = 15,
-
+	warn_about_missing_glyphs = false,
 	adjust_window_size_when_changing_font_size = false,
 
-	warn_about_missing_glyphs = false,
+	enable_tab_bar = false,
 
 	window_background_opacity = 1.00,
 	macos_window_background_blur = 20,
 
-	color_scheme = "Tokyo Night (Gogh)",
+	audible_bell = "Disabled",
+	visual_bell = {
+		fade_in_duration_ms = 1,
+		fade_out_duration_ms = 1,
+	},
 
 	send_composed_key_when_left_alt_is_pressed = false,
 	send_composed_key_when_right_alt_is_pressed = false,
 
-	enable_tab_bar = false,
+	color_scheme = "Tokyo Night (Gogh)",
 }
