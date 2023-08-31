@@ -1,32 +1,13 @@
-# zim
-if [[ -e ${XDG_DATA_HOME}/zim ]]; then
-  mkdir -p ${XDG_CACHE_HOME}/zsh
-  zstyle ':zim:completion' dumpfile ${XDG_CACHE_HOME}/zsh/zcompdump
-  zstyle ':completion::complete:*' cache-path ${XDG_CACHE_HOME}/zsh/zcompcache
-fi
-
-# completions
-## create local completion dir
-if [[ ! -d ${XDG_DATA_HOME}/zsh/site-functions ]]; then
-  mkdir -p ${XDG_DATA_HOME}/zsh/site-functions
-  fpath=(${XDG_DATA_HOME}/zsh/site-functions $fpath)
-else
-  fpath=(${XDG_DATA_HOME}/zsh/site-functions $fpath)
-fi
-## enable brew's completion
+# enable brew's completion
 if type brew > /dev/null 2>&1; then
   fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
-fi
-
-# starship
-if type starship > /dev/null 2>&1; then
-  eval "$(starship init zsh)"
 fi
 
 # editor
 if type nvim > /dev/null 2>&1; then
   export EDITOR="nvim"
 fi
+
 # gnu
 case ${OSTYPE} in
   darwin*)

@@ -1,0 +1,9 @@
+source ${XDG_CONFIG_HOME}/zsh/local.zsh
+
+if type sheldon > /dev/null 2>&1; then
+  eval "$(sheldon source)"
+fi
+
+if type starship > /dev/null 2>&1; then
+  eval "$(starship init zsh)"
+fi
