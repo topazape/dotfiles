@@ -12,6 +12,9 @@
 
 shell = "zsh"
 
+[plugins.keybindings]
+inline = "bindkey -e"
+
 [plugins.compinit]
 inline = "autoload -Uz compinit && compinit"
 
@@ -26,6 +29,3 @@ github = "zsh-users/zsh-history-substring-search"
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
-
-[plugins.keybindings]
-inline = "bindkey '^F' autosuggest-accept"
