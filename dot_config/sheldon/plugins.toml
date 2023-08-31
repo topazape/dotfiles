@@ -26,3 +26,6 @@ github = "zsh-users/zsh-history-substring-search"
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"
+
+[plugins.keybindings]
+inline = "bindkey '^F' autosuggest-accept"
