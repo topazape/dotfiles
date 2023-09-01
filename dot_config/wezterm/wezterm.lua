@@ -16,8 +16,8 @@ return {
 
 	audible_bell = "Disabled",
 	visual_bell = {
-		fade_in_duration_ms = 5,
-		fade_out_duration_ms = 5,
+		fade_in_duration_ms = 10,
+		fade_out_duration_ms = 10,
 	},
 
 	send_composed_key_when_left_alt_is_pressed = false,
