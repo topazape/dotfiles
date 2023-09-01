@@ -181,17 +181,6 @@ return {
 		end,
 	},
 
-	-- fancy cursor
-	{
-		"gen740/SmoothCursor.nvim",
-		config = function()
-			require("smoothcursor").setup({
-				speed = 36,
-				disable_float_win = true,
-			})
-		end,
-	},
-
 	-- highlight undo
 	{
 		"tzachar/highlight-undo.nvim",
