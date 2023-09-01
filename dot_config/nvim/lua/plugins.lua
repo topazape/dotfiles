@@ -42,8 +42,8 @@ return {
 		"kosayoda/nvim-lightbulb",
 		config = function()
 			require("nvim-lightbulb").setup({
-				sign = { enabled = false },
-				virtual_text = { enabled = true },
+				sign = { enabled = true },
+				virtual_text = { enabled = false },
 				float = { enabled = false },
 				status_text = { enabled = false },
 				number = { enabled = false },
