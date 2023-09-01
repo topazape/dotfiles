@@ -60,21 +60,23 @@ mason_lspconfig.setup_handlers({
 		require("lspconfig").pylsp.setup({
 			on_attach = on_attach,
 			settings = {
-				plugins = {
-					-- python-lsp-server[all] plugins will be disabled
-					autopep8 = { enabled = false },
-					flake8 = { enabled = false },
-					mccabe = { enabled = false },
-					preload = { enabled = false },
-					pycodestyle = { enabled = false },
-					pydocstyle = { enabled = false },
-					pyflakes = { enabled = false },
-					pylint = { enabled = false },
-					rope_autocomplete = { enabled = false },
-					rope_completion = { enabled = false },
-					yapf = { enabled = false },
-					-- 3rd-party plugins
-					mypy = { enabled = true },
+				pylsp = {
+					plugins = {
+						-- python-lsp-server[all] plugins will be disabled
+						autopep8 = { enabled = false },
+						flake8 = { enabled = false },
+						mccabe = { enabled = false },
+						preload = { enabled = false },
+						pycodestyle = { enabled = false },
+						pydocstyle = { enabled = false },
+						pyflakes = { enabled = false },
+						pylint = { enabled = false },
+						rope_autocomplete = { enabled = false },
+						rope_completion = { enabled = false },
+						yapf = { enabled = false },
+						-- 3rd-party plugins
+						mypy = { enabled = true },
+					},
 				},
 			},
 		})
