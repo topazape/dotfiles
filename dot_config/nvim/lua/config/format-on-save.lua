@@ -5,7 +5,6 @@ format_on_save.setup({
 	formatter_by_ft = {
 		go = {
 			formatters.shell({ cmd = { "gofumpt" } }),
-			formatters.shell({ cmd = { "golines" } }),
 			formatters.shell({ cmd = { "goimports" } }),
 		},
 		json = {
