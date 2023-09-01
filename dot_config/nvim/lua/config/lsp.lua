@@ -59,7 +59,7 @@ mason_lspconfig.setup_handlers({
 	["pylsp"] = function()
 		require("lspconfig").pylsp.setup({
 			on_attach = on_attach,
-			pylsp = {
+			settings = {
 				plugins = {
 					-- python-lsp-server[all] plugins will be disabled
 					autopep8 = { enabled = false },
