@@ -3,7 +3,7 @@ local navic = require("nvim-navic")
 local on_attach = function(client, bufnr)
 	--
 	vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
-		underline = true,
+		underline = false,
 		virtual_text = {
 			spacing = 4,
 			prefix = "",
