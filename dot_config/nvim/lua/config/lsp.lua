@@ -83,6 +83,7 @@ mason_lspconfig.setup_handlers({
 		require("lspconfig").golangclilsp.setup({
 			on_attach = on_attach,
 			default_config = {
+				cmd = { "golangci-lint-langserver" },
 				root_dir = require("lspconfig").util.root_pattern(".git", "go.mod"),
 			},
 		})
