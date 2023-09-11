@@ -30,7 +30,7 @@ local options = {
 	showmatch = true,
 	matchtime = 1, -- 0.1 秒の何倍かを設定
 	---- 行の折り返し
-	wrap = true,
+	wrap = false,
 	display = "lastline", -- できる限り表示
 	breakindent = true, -- 行を折り返すときにインデントを考慮する
 	---- 画面分割
