@@ -85,6 +85,10 @@ fi
 if type zellij > /dev/null 2>&1; then
   export ZELLIJ_CONFIG_DIR=${XDG_CONFIG_HOME}/zellij
 fi
+## bat
+if type bat > /dev/null 2>&1; then
+  export BAT_THEME="OneHalfLight""
+fi
 ## vivid
 if type vivid > /dev/null 2>&1; then
   # export LS_COLORS="$(vivid generate alabaster_dark)"
