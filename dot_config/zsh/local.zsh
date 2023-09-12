@@ -87,7 +87,7 @@ if type zellij > /dev/null 2>&1; then
 fi
 ## bat
 if type bat > /dev/null 2>&1; then
-  export BAT_THEME="OneHalfDark"
+  export BAT_THEME="ansi"
 fi
 ## vivid
 if type vivid > /dev/null 2>&1; then
