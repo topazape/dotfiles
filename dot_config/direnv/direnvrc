@@ -1,10 +1,12 @@
 #!/bin/sh
 
+layout_rye() {
+  source .venv/bin/activate
+}
+
 layout_analysis() {
-	if type ipython > /dev/null 2>&1; then
-		export IPYTHONDIR=${XDG_CONFIG_HOME}/ipython
-		export JUPYTER_CONFIG_DIR=${XDG_CONFIG_HOME}/jupyter
-		export MPLCONFIGDIR=${XDG_CONFIG_HOME}/matplotlib
-		export PYTENSOR_FLAGS="base_compiledir=${XDG_CACHE_HOME}/pytensor"
-	fi
+  export IPYTHONDIR=${XDG_CONFIG_HOME}/ipython
+  export JUPYTER_CONFIG_DIR=${XDG_CONFIG_HOME}/jupyter
+  export MPLCONFIGDIR=${XDG_CONFIG_HOME}/matplotlib
+  export PYTENSOR_FLAGS="base_compiledir=${XDG_CACHE_HOME}/pytensor"
 }
