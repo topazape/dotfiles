@@ -324,4 +324,9 @@ return {
 			require("alpha").setup(require("alpha.themes.startify").config)
 		end,
 	},
+
+	-- startuptime
+	{
+		"dstein64/vim-startuptime",
+	},
 }
