@@ -143,6 +143,10 @@ fi
 if type pipenv > /dev/null 2>&1; then
   export PIPENV_CACHE_DIR=${XDG_CACHE_HOME}/pipenv
 fi
+### rye
+if type rye > /dev/null 2>&1; then
+  export RYE_HOME=${XDG_DATA_HOME}/rye
+fi
 ### cookiecutter
 if type cookiecutter > /dev/null 2>&1; then
   export COOKIECUTTER_CONFIG=${XDG_CONFIG_HOME}/cookiecutter/config.yaml
