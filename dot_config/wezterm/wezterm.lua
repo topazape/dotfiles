@@ -11,7 +11,7 @@ return {
 
 	enable_tab_bar = false,
 
-	window_background_opacity = 0.95,
+	window_background_opacity = 0.90,
 	macos_window_background_blur = 20,
 
 	audible_bell = "Disabled",
