@@ -172,6 +172,7 @@ fi
 ### R
 if type R > /dev/null 2>&1; then
   mkdir -p ${XDG_CACHE_HOME}/R
+  export R_HISTFILE=${XDG_CACHE_HOME}/R/R_history
 fi
 
 # for work
