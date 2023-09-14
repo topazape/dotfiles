@@ -171,7 +171,7 @@ if type goenv > /dev/null 2>&1; then
 fi
 ### R
 if type R > /dev/null 2>&1; then
-  echo "Aaa"
+  mkdir -p ${XDG_CACHE_HOME}/R
 fi
 
 # for work
