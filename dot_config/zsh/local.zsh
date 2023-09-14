@@ -169,6 +169,8 @@ if type goenv > /dev/null 2>&1; then
 
   export PATH=${GOPATH}/bin:${PATH}
 fi
+## R
+if 
 
 # for work
 if [[ -e ${XDG_CONFIG_HOME}/zsh/work.sh ]]; then
