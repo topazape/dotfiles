@@ -37,6 +37,17 @@ return {
 			require("config/lsp")
 		end,
 	},
+	---- lspsaga
+	{
+		"nvimdev/lspsaga.nvim",
+		config = function()
+			require("lspsaga").setup({})
+		end,
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-tree/nvim-web-devicons",
+		},
+	},
 	---- code action lightbulb
 	{
 		"kosayoda/nvim-lightbulb",
