@@ -41,27 +41,16 @@ return {
 	{
 		"nvimdev/lspsaga.nvim",
 		config = function()
-			require("lspsaga").setup({})
+			require("lspsaga").setup({
+				ui = {
+					code_action = "",
+				},
+			})
 		end,
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 			"nvim-tree/nvim-web-devicons",
 		},
-	},
-	---- code action lightbulb
-	{
-		"kosayoda/nvim-lightbulb",
-		config = function()
-			require("nvim-lightbulb").setup({
-				sign = { enabled = true, text = "⚝" },
-				virtual_text = { enabled = false },
-				float = { enabled = false },
-				status_text = { enabled = false },
-				number = { enabled = false },
-				line = { enabled = false },
-				autocmd = { enabled = true },
-			})
-		end,
 	},
 	---- code action preview
 	{
