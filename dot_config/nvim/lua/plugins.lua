@@ -41,9 +41,7 @@ return {
 	{
 		"nvimdev/lspsaga.nvim",
 		config = function()
-			require("lspsaga").setup({
-				symbol_in_winbar = { enable = false },
-			})
+			require("lspsaga").setup({})
 		end,
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
