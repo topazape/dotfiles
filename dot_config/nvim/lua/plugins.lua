@@ -44,6 +44,7 @@ return {
 			require("lspsaga").setup({
 				-- keymaps for lspsaga
 				vim.keymap.set("n", "ga", "<CMD>Lspsaga code_action<CR>", { noremap = true }),
+				vim.keymap.set("n", "ol", "<CMD>Lspsaga outline<CR>", { noremap = true }),
 				-- ui
 				ui = {},
 			})
