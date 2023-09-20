@@ -48,6 +48,7 @@ return {
 				-- ui
 				ui = {
 					border = "double",
+					lines = { "┌", "─", "┐", "│", "┘", "─", "└", "│" },
 					scroll_down = "<C-n>",
 					scroll_up = "<C-p>",
 				},
