@@ -47,7 +47,7 @@ return {
 				-- ui
 				ui = {
 					title = false,
-					lines = { "┗", "┣", "┃", "━", "┏" },
+					lines = { "-", "-", "-", "-", "-" },
 				},
 			})
 		end,
