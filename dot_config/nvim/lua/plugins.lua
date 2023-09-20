@@ -47,8 +47,7 @@ return {
 				vim.keymap.set("n", "go", "<CMD>Lspsaga outline<CR>", { noremap = true }),
 				-- ui
 				ui = {
-					border = "solid", -- Can be single, double, rounded, solid, shadow.
-					lines = { "┌", "─", "┐", "│", "┘", "─", "└", "│" },
+					border = "rounded", -- Can be single, double, rounded, solid, shadow.
 				},
 				scroll_down = "<C-n>",
 				scroll_up = "<C-p>",
