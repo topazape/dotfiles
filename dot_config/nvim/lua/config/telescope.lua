@@ -5,7 +5,6 @@ local builtin = require("telescope.builtin")
 -- extentions
 telescope.load_extension("file_browser")
 telescope.load_extension("noice")
-telescope.load_extension("aerial")
 
 -- mappings
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
@@ -22,8 +21,6 @@ vim.keymap.set("n", "<leader>gc", builtin.git_commits, {})
 vim.keymap.set("n", "<leader>fe", "<CMD>Telescope file_browser<CR>", {})
 -- noice
 vim.keymap.set("n", "<leader>nh", "<CMD>Telescope noice<CR>", {})
--- aerial
-vim.keymap.set("n", "<leader>aa", "<CMD>Telescope aerial<CR>", {})
 
 telescope.setup({
 	defaults = {
