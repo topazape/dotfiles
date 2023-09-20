@@ -43,9 +43,7 @@ return {
 		config = function()
 			require("lspsaga").setup({
 				vim.keymap.set("n", "ga", "<CMD>Lspsaga code_action<CR>", { noremap = true }),
-				ui = {
-					border = "double",
-				},
+				border = "double",
 			})
 		end,
 		dependencies = {
