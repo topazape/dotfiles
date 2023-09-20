@@ -45,9 +45,7 @@ return {
 				-- keymaps for lspsaga
 				vim.keymap.set("n", "ga", "<CMD>Lspsaga code_action<CR>", { noremap = true }),
 				-- ui
-				ui = {
-					lines = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-				},
+				ui = {},
 			})
 		end,
 		dependencies = {
@@ -147,18 +145,6 @@ return {
 		dependencies = {
 			"nvim-telescope/telescope.nvim",
 		},
-	},
-	---- outline
-	{
-		"stevearc/aerial.nvim",
-		dependencies = {
-			"nvim-telescope/telescope.nvim",
-			"nvim-treesitter/nvim-treesitter",
-			"nvim-tree/nvim-web-devicons",
-		},
-		config = function()
-			require("aerial").setup()
-		end,
 	},
 
 	-- completely replaces the UI for messages, cmdline and the popupmenu
