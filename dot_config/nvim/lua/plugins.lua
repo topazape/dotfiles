@@ -48,6 +48,8 @@ return {
 				-- ui
 				ui = {
 					border = "double",
+					scroll_down = "<C-n>",
+					scroll_up = "<C-p>",
 				},
 			})
 		end,
