@@ -48,16 +48,6 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 	},
-	---- code action preview
-	{
-		"aznhe21/actions-preview.nvim",
-		config = function()
-			require("actions-preview").setup({
-				vim.keymap.set("n", "ga", require("actions-preview").code_actions),
-				backend = { "telescope" },
-			})
-		end,
-	},
 	---- show lsp context
 	{ "SmiteshP/nvim-navic" },
 
