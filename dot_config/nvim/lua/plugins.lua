@@ -41,7 +41,9 @@ return {
 	{
 		"nvimdev/lspsaga.nvim",
 		config = function()
-			require("lspsaga").setup({})
+			require("lspsaga").setup({
+				vim.keymap.set("n", "ga", "<CMD>Lspsaga code_action<CR>", { noremap = true }),
+			})
 		end,
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
