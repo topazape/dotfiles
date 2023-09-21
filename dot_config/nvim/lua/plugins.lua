@@ -43,8 +43,16 @@ return {
 		config = function()
 			require("lspsaga").setup({
 				-- keymaps for lspsaga
+				vim.keymap.set("n", "K", "<CMD>Lspsaga hover_doc<CR>", { noremap = true }),
+				vim.keymap.set("n", "gd", "<CMD>Lspsaga peek_definition<CR>", { noremap = true }),
+				vim.keymap.set("n", "gr", "<CMD>Lspsaga lsp_finder<CR>", { noremap = true }),
 				vim.keymap.set("n", "ga", "<CMD>Lspsaga code_action<CR>", { noremap = true }),
+				vim.keymap.set("n", "gn", "<CMD>Lspsaga rename<CR>", { noremap = true }),
+				vim.keymap.set("n", "ge", "<CMD>Lspsaga show_line_diagnostics<CR>", { noremap = true }),
 				vim.keymap.set("n", "go", "<CMD>Lspsaga outline<CR>", { noremap = true }),
+				vim.keymap.set("n", "g]", "<CMD>Lspsaga diagnostic_jump_next<CR>", { noremap = true }),
+				vim.keymap.set("n", "g[", "<CMD>Lspsaga diagnostic_jump_prev<CR>", { noremap = true }),
+
 				-- ui
 				ui = {
 					border = "rounded", -- Can be single, double, rounded, solid, shadow.
