@@ -45,7 +45,7 @@ return {
 				-- keymaps for lspsaga
 				vim.keymap.set("n", "K", "<CMD>Lspsaga hover_doc<CR>", { noremap = true }),
 				vim.keymap.set("n", "gd", "<CMD>Lspsaga peek_definition<CR>", { noremap = true }),
-				vim.keymap.set("n", "gr", "<CMD>Lspsaga lsp_finder<CR>", { noremap = true }),
+				vim.keymap.set("n", "gr", "<CMD>Lspsaga finder<CR>", { noremap = true }),
 				vim.keymap.set("n", "ga", "<CMD>Lspsaga code_action<CR>", { noremap = true }),
 				vim.keymap.set("n", "gn", "<CMD>Lspsaga rename<CR>", { noremap = true }),
 				vim.keymap.set("n", "ge", "<CMD>Lspsaga show_line_diagnostics<CR>", { noremap = true }),
