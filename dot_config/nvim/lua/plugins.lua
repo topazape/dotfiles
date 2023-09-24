@@ -52,7 +52,7 @@ return {
 				vim.keymap.set("n", "go", "<CMD>Lspsaga outline<CR>", { noremap = true }),
 				vim.keymap.set("n", "g]", "<CMD>Lspsaga diagnostic_jump_next<CR>", { noremap = true }),
 				vim.keymap.set("n", "g[", "<CMD>Lspsaga diagnostic_jump_prev<CR>", { noremap = true }),
-
+				vim.keymap.set("n", "<A-t>", "<CMD>Lspsaga term_toggle<CR>", { noremap = true }),
 				-- ui
 				ui = {
 					border = "rounded", -- Can be single, double, rounded, solid, shadow.
