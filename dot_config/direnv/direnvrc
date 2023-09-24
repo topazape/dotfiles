@@ -4,8 +4,12 @@ layout_rye() {
   source .venv/bin/activate
 }
 
-layout_analysis() {
+layout_ipython() {
   export IPYTHONDIR=${XDG_CONFIG_HOME}/ipython
+}
+
+layout_analysis() {
+  layout_ipython
   export JUPYTER_CONFIG_DIR=${XDG_CONFIG_HOME}/jupyter
   export MPLCONFIGDIR=${XDG_CONFIG_HOME}/matplotlib
   export PYTENSOR_FLAGS="base_compiledir=${XDG_CACHE_HOME}/pytensor"
