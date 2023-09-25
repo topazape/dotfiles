@@ -1,4 +1,0 @@
-[pycodestyle]
-; for ruff-lsp
-max-line-length = 88
-ignore = E501
