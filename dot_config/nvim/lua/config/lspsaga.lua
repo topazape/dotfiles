@@ -25,7 +25,7 @@ lspsaga.setup({
 	},
 	-- ui
 	ui = {
-		border = "rounded", -- Can be single, double, rounded, solid, shadow.
+		-- border = "rounded", -- Can be single, double, rounded, solid, shadow.
 		lines = { "⎿", "|", "-", "⎾" },
 	},
 	scroll_down = "<C-n>",
