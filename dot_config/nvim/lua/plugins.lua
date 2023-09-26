@@ -31,7 +31,6 @@ return {
 		dependencies = {
 			"neovim/nvim-lspconfig",
 			"williamboman/mason-lspconfig.nvim",
-			"onsails/lspkind.nvim",
 		},
 		config = function()
 			require("config/lsp")
