@@ -26,7 +26,7 @@ lspsaga.setup({
 	-- ui
 	ui = {
 		border = "rounded", -- Can be single, double, rounded, solid, shadow.
-		kind = require("lspsaga.lspkind").kind,
+		kind = lspsaga.get_kind(),
 	},
 	scroll_down = "<C-n>",
 	scroll_up = "<C-p>",
