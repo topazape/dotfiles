@@ -1,11 +1,11 @@
 local noice = require("noice")
 
--- vim.keymap.set({ "n", "i" }, "<C-n>", function()
--- 	require("noice.lsp").scroll(4)
--- end, { silent = true })
--- vim.keymap.set({ "n", "i" }, "<C-p>", function()
--- 	require("noice.lsp").scroll(-4)
--- end, { silent = true })
+vim.keymap.set({ "n", "i" }, "<C-n>", function()
+	require("noice.lsp").scroll(4)
+end, { silent = true })
+vim.keymap.set({ "n", "i" }, "<C-p>", function()
+	require("noice.lsp").scroll(-4)
+end, { silent = true })
 
 noice.setup({
 	cmdline = {
