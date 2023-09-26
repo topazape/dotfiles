@@ -63,7 +63,7 @@ return {
             quit = "q",
             close = "k",
           }
-        }
+        },
 				-- ui
 				ui = {
 					border = "rounded", -- Can be single, double, rounded, solid, shadow.
