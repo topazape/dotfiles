@@ -53,17 +53,18 @@ return {
 				vim.keymap.set("n", "g]", "<CMD>Lspsaga diagnostic_jump_next<CR>", { noremap = true }),
 				vim.keymap.set("n", "g[", "<CMD>Lspsaga diagnostic_jump_prev<CR>", { noremap = true }),
 				vim.keymap.set("n", "<A-t>", "<CMD>Lspsaga term_toggle<CR>", { noremap = true }),
-        -- definition
-        definition = {
-          keys = {
-            edit = "o",
-            vsplit = "v",
-            split = "s",
-            table = "t",
-            quit = "q",
-            close = "k",
-          }
-        },
+				-- definition
+				definition = {
+					width = 0.7,
+					height = 0.6,
+					keys = {
+						close = "k",
+						edit = "e",
+						quit = "q",
+						split = "s",
+						vsplit = "v",
+					},
+				},
 				-- ui
 				ui = {
 					border = "rounded", -- Can be single, double, rounded, solid, shadow.
