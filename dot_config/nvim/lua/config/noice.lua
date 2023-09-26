@@ -1,11 +1,11 @@
 local noice = require("noice")
 
-vim.keymap.set({ "n", "i" }, "<C-n>", function()
-	require("noice.lsp").scroll(4)
-end, { silent = true })
-vim.keymap.set({ "n", "i" }, "<C-p>", function()
-	require("noice.lsp").scroll(-4)
-end, { silent = true })
+-- vim.keymap.set({ "n", "i" }, "<C-n>", function()
+-- 	require("noice.lsp").scroll(4)
+-- end, { silent = true })
+-- vim.keymap.set({ "n", "i" }, "<C-p>", function()
+-- 	require("noice.lsp").scroll(-4)
+-- end, { silent = true })
 
 noice.setup({
 	cmdline = {
@@ -17,14 +17,14 @@ noice.setup({
 	},
 	lsp = {
 		progress = { enabled = true },
-		override = {
-			-- override the default lsp markdown formatter with Noice
-			["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-			-- override the lsp markdown formatter with Noice
-			["vim.lsp.util.stylize_markdown"] = true,
-			-- override cmp documentation with Noice (needs the other options to work)
-			["cmp.entry.get_documentation"] = true,
-		},
+		-- override = {
+		-- 	-- override the default lsp markdown formatter with Noice
+		-- 	["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+		-- 	-- override the lsp markdown formatter with Noice
+		-- 	["vim.lsp.util.stylize_markdown"] = true,
+		-- 	-- override cmp documentation with Noice (needs the other options to work)
+		-- 	["cmp.entry.get_documentation"] = true,
+		-- },
 	},
 	presets = {
 		-- you can enable a preset by setting it to true, or a table that will override the preset config
