@@ -102,9 +102,9 @@ return {
 					gitrebase = false,
 					help = false,
 					hgcommit = false,
-					svn = false,
-					yaml = false,
 					markdown = true,
+					svn = false,
+					yaml = true,
 					["."] = false,
 				},
 			})
