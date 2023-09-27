@@ -18,7 +18,6 @@ lspsaga.setup({
 		keys = {
 			close = "k",
 			edit = "e",
-			quit = "q",
 			split = "s",
 			vsplit = "v",
 		},
@@ -27,6 +26,12 @@ lspsaga.setup({
 		max_height = 0.8,
 		left_width = 0.4,
 		right_width = 0.6,
+		default = "tyd+ref+imp+def",
+		keys = {
+			split = "s",
+			toggle_or_open = "o",
+			vsplit = "v",
+		},
 	},
 	ui = {
 		border = "rounded", -- Can be single, double, rounded, solid, shadow.
