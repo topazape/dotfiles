@@ -24,8 +24,8 @@ lspsaga.setup({
 	},
 	finder = {
 		max_height = 0.8,
-		left_width = 0.4,
-		right_width = 0.7,
+		left_width = 0.3,
+		right_width = 0.6,
 		default = "imp+tyd+def+ref",
 		keys = {
 			split = "s",
