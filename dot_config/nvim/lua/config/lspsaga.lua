@@ -11,7 +11,7 @@ lspsaga.setup({
 	vim.keymap.set("n", "g]", "<CMD>Lspsaga diagnostic_jump_next<CR>", { noremap = true }),
 	vim.keymap.set("n", "g[", "<CMD>Lspsaga diagnostic_jump_prev<CR>", { noremap = true }),
 	vim.keymap.set("n", "<A-t>", "<CMD>Lspsaga term_toggle<CR>", { noremap = true }),
-	-- definition
+
 	definition = {
 		width = 0.8,
 		height = 0.7,
@@ -23,7 +23,11 @@ lspsaga.setup({
 			vsplit = "v",
 		},
 	},
-	-- ui
+	finder = {
+		max_height = 0.7,
+		left_width = 0.3,
+		right_width = 0.3,
+	},
 	ui = {
 		border = "rounded", -- Can be single, double, rounded, solid, shadow.
 	},
