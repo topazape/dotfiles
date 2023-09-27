@@ -25,8 +25,8 @@ lspsaga.setup({
 	},
 	finder = {
 		max_height = 0.8,
-		left_width = 0.2,
-		right_width = 0.8,
+		left_width = 0.4,
+		right_width = 0.6,
 	},
 	ui = {
 		border = "rounded", -- Can be single, double, rounded, solid, shadow.
