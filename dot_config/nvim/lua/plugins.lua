@@ -180,7 +180,7 @@ return {
 			vim.cmd("set colorcolumn=100")
 			vim.cmd("highlight VirtColumn guifg=#082f49")
 			require("virt-column").setup({
-				char = "⋮",
+				char = "¦",
 			})
 		end,
 	},
