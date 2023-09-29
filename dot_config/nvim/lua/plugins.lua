@@ -173,18 +173,6 @@ return {
 	-- emphasis indent
 	{ "lukas-reineke/indent-blankline.nvim" },
 
-	-- colorcolumn
-	-- {
-	-- 	"lukas-reineke/virt-column.nvim",
-	-- 	config = function()
-	-- 		vim.cmd("set colorcolumn=100")
-	-- 		vim.cmd("highlight VirtColumn guifg=#082f49")
-	-- 		require("virt-column").setup({
-	-- 			char = "¦",
-	-- 		})
-	-- 	end,
-	-- },
-
 	-- comment
 	{
 		"numToStr/Comment.nvim",
