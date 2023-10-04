@@ -156,10 +156,7 @@ fi
 if type rustup-init > /dev/null 2>&1; then
   export RUSTUP_HOME=${XDG_DATA_HOME}/rustup
   export CARGO_HOME=${XDG_DATA_HOME}/cargo
-fi
-### cargo
-if type cargo > /dev/null 2>&1; then
-  export CARGO_HOME=${XDG_DATA_HOME}/cargo
+  source ${CARGO_HOME}/env
 fi
 ## Go
 ### goenv
