@@ -152,6 +152,11 @@ if type cookiecutter > /dev/null 2>&1; then
   export COOKIECUTTER_CONFIG=${XDG_CONFIG_HOME}/cookiecutter/config.yaml
 fi
 ## Rust
+### rustup
+if type rustup-init > /dev/null 2>&1; then
+  export RUSTUP_HOME=${XDG_DATA_HOME}/rustup
+
+fi
 ### cargo
 if type cargo > /dev/null 2>&1; then
   export CARGO_HOME=${XDG_DATA_HOME}/cargo
