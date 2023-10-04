@@ -156,10 +156,17 @@ if type goenv > /dev/null 2>&1; then
 
   export PATH=${GOPATH}/bin:${PATH}
 fi
-### R
+## R
 if type R > /dev/null 2>&1; then
   mkdir -p ${XDG_CACHE_HOME}/R
   export R_HISTFILE=${XDG_CACHE_HOME}/R/Rhistory
+fi
+## JAVA
+### Corretto
+if ${OSTYPE} == "darwin"; then
+  if [[ -d /Library/Java/JavaVirtualMachines/amazon-corretto-* ]]; then
+    export JAVA_HOME=$(ls -d /Library/Java/JavaVirtualMachines/amazon-corretto-*/Contents/Home)
+  fi
 fi
 
 # for work
