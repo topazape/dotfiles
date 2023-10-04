@@ -163,7 +163,7 @@ if type R > /dev/null 2>&1; then
 fi
 ## JAVA
 ### Corretto
-if ${OSTYPE} == "darwin"; then
+if [[ ${OSTYPE} == "darwin" ]]; then
   if [[ -d /Library/Java/JavaVirtualMachines/amazon-corretto-* ]]; then
     export JAVA_HOME=$(ls -d /Library/Java/JavaVirtualMachines/amazon-corretto-*/Contents/Home)
   fi
