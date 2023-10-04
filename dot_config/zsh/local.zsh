@@ -62,24 +62,9 @@ if type psql > /dev/null 2>&1; then
   export PSQL_HISTORY=${XDG_CACHE_HOME}/pg/psql_history
   mkdir -p ${XDG_CACHE_HOME}/pg
 fi
-## pspg
-if type pspg > /dev/null 2>&1; then
-  export PSPG="--force-uniborder --bold-labels --double-header --quit-if-one-screen --no-last-row-search -s 22"
-  export PSPG_HISTORY=${XDG_CACHE_HOME}/pspg/pspg_history
-  mkdir -p ${XDG_CACHE_HOME}/pspg
-fi
-## mycli
-if type mycli > /dev/null 2>&1; then
-  mkdir -p ${XDG_CACHE_HOME}/mycli
-  alias mycli="MYCLI_HISTFILE=${XDG_CACHE_HOME}/mycli/mycli-history mycli"
-fi
 ## direnv
 if type direnv > /dev/null 2>&1; then
   eval "$(direnv hook zsh)"
-fi
-## tmux
-if type tmux > /dev/null 2>&1 && [[ ${OSTYPE} == "linux-gnu" ]]; then
-  alias tmux="tmux -u"
 fi
 ## zellij
 if type zellij > /dev/null 2>&1; then
