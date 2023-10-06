@@ -91,8 +91,6 @@ mason_lspconfig.setup_handlers({
 		})
 	end,
 	["java_language_server"] = function()
-		require("lspconfig").java_language_server.setup({
-			on_attach = on_attach,
-		})
+		require("lspconfig").java_language_server.setup({})
 	end,
 })
