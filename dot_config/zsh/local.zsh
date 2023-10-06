@@ -163,6 +163,10 @@ if [[ -d $(brew --prefix)/opt/openjdk ]]; then
   export CPPFLAGS="${CPPFLAGS} -I/opt/homebrew/opt/openjdk/include"
   export JAVA_TOOL_OPTIONS="-Duser.language=en"
 fi
+### maven
+if type mvn > /dev/null 2>&1; then
+  export MAVEN_OPTS="-Dmaven.repo.local=${XDG_DATA_HOME}/m2/repository"
+fi
 ## R
 if type R > /dev/null 2>&1; then
   mkdir -p ${XDG_CACHE_HOME}/R
