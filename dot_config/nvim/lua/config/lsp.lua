@@ -71,26 +71,25 @@ mason_lspconfig.setup_handlers({
 	end,
 	["golangci_lint_ls"] = function()
 		require("lspconfig").golangci_lint_ls.setup({
-			default_config = {
-				init_options = {
-					command = {
-						"golangci-lint",
-						"run",
-						"--enable",
-						"gofumpt",
-						"--enable",
-						"goimports",
-						"--out-format",
-						"json",
-						"--issues-exit-code=1",
-					},
+			-- default_config = {
+			init_options = {
+				command = {
+					"golangci-lint",
+					"run",
+					"--enable",
+					"gofumpt",
+					"--enable",
+					"goimports",
+					"--out-format",
+					"json",
+					"--issues-exit-code=1",
 				},
 			},
 		})
 	end,
 	["java_language_server"] = function()
 		require("lspconfig").java_language_server.setup({
-			-- root_dir = require("lspconfig").util.root_pattern("build.gradle", "pom.xml", "*.java"),
+			root_dir = require("lspconfig").util.root_pattern("build.gradle", "pom.xml", "*.java"),
 		})
 	end,
 })
