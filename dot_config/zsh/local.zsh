@@ -144,12 +144,7 @@ if type rustup-init > /dev/null 2>&1; then
   source ${CARGO_HOME}/env
 fi
 ## Go
-### goenv
-if type goenv > /dev/null 2>&1; then
-  export GOENV_ROOT=${XDG_DATA_HOME}/goenv
-  export PATH=${GOENV_ROOT}/bin:${PATH}
-  eval "$(goenv init -)"
-
+if type go > /dev/null 2>&1; then
   export GOPATH=${XDG_DATA_HOME}/go
   export GOCACHE=${XDG_CACHE_HOME}/go/go-build
   export GOMODCACHE=${XDG_CACHE_HOME}/go/pkg/mod
