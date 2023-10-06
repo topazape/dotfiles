@@ -1,3 +1,5 @@
+vim.lsp.set_log_level("debug")
+
 local navic = require("nvim-navic")
 
 local on_attach = function(client, bufnr)
