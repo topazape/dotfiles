@@ -156,6 +156,11 @@ if type goenv > /dev/null 2>&1; then
 
   export PATH=${GOPATH}/bin:${PATH}
 fi
+## Java
+if [[ -d $(brew --prefix)/opt/openjdk ]]; then
+  export PATH="$(brew --prefix)/opt/homebrew/opt/openjdk/bin":${PATH}
+  export CPPFLAGS="${CPPFLAGS} -I/opt/homebrew/opt/openjdk/include"
+fi
 ## R
 if type R > /dev/null 2>&1; then
   mkdir -p ${XDG_CACHE_HOME}/R
