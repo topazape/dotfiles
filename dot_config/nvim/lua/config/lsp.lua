@@ -66,13 +66,19 @@ mason_lspconfig.setup_handlers({
 	end,
 	["bashls"] = function()
 		require("lspconfig").bashls.setup({
-			on_attach = on_attach,
 			filetypes = { "sh", "bash", "zsh" },
 		})
 	end,
 	["golangci_lint_ls"] = function()
 		require("lspconfig").golangci_lint_ls.setup({
-			on_attach = on_attach,
+			root_dir = require("lspconfig").util.root_pattern(
+				".golangci.yml",
+				".golangci.yaml",
+				".golangci.toml",
+				".golangci.json",
+				"go.work",
+				"go.mod"
+			),
 			default_config = {
 				init_options = {
 					command = {
