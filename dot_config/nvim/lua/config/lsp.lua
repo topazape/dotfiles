@@ -94,6 +94,7 @@ mason_lspconfig.setup_handlers({
 	end,
 	["java-language-server"] = function()
 		require("lspconfig").java_language_server.setup({
+			cmd = { "java_language_server" },
 			filetypes = { "java" },
 		})
 	end,
