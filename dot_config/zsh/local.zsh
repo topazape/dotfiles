@@ -159,6 +159,7 @@ fi
 ## Java
 if type java > /dev/null 2>&1; then
   export PATH=/opt/homebrew/opt/openjdk/bin:${PATH}
+  export JAVA_HOME=/opt/homebrew/opt/openjdk/libexec/openjdk.jdk
 fi
 ## R
 if type R > /dev/null 2>&1; then
