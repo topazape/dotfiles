@@ -92,10 +92,4 @@ mason_lspconfig.setup_handlers({
 			},
 		})
 	end,
-	["java-language-server"] = function()
-		require("lspconfig").java_language_server.setup({
-			cmd = { "/Users/tkawai/.local/share/nvim/mason/bin/java-language-server" },
-			filetypes = { "java" },
-		})
-	end,
 })
