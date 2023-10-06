@@ -164,7 +164,7 @@ fi
 ## Java
 if type java > /dev/null 2>&1; then
   export PATH=/opt/homebrew/opt/openjdk/bin:${PATH}
-  export CPPFLAGS+="-I/opt/homebrew/opt/openjdk/include"
+  export CPPFLAGS="${CPPFLAGS} -I/opt/homebrew/opt/openjdk/include"
 fi
 
 # for work
