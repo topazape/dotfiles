@@ -70,12 +70,12 @@ mason_lspconfig.setup_handlers({
 			filetypes = { "sh", "bash", "zsh" },
 		})
 	end,
-	["golangclilsp"] = function()
-		require("lspconfig").golangclilsp.setup({
+	["golangci_lint_ls"] = function()
+		require("lspconfig").golangci_lint_ls.setup({
 			on_attach = on_attach,
 			default_config = {
-				cmd = { "golangci-lint-langserver" },
-				root_dir = require("lspconfig").util.root_pattern(".git", "go.mod"),
+				-- cmd = { "golangci-lint-langserver" },
+				-- root_dir = require("lspconfig").util.root_pattern(".git", "go.mod"),
 				init_options = {
 					command = {
 						"golangci-lint",
