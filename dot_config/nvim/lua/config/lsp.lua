@@ -1,5 +1,7 @@
 local navic = require("nvim-navic")
 
+vim.lsp.set_log_level("debug")
+
 local on_attach = function(client, bufnr)
 	-- navic
 	if client.server_capabilities.documentSymbolProvider then
