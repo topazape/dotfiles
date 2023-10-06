@@ -71,7 +71,6 @@ mason_lspconfig.setup_handlers({
 	end,
 	["golangci_lint_ls"] = function()
 		require("lspconfig").golangci_lint_ls.setup({
-			-- default_config = {
 			init_options = {
 				command = {
 					"golangci-lint",
