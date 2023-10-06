@@ -78,7 +78,7 @@ return {
 	{
 		"zbirenbaum/copilot.lua",
 		event = "VeryLazy",
-		enable = false,
+		enabled = false,
 		config = function()
 			require("copilot").setup({
 				panel = {
