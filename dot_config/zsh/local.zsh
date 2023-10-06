@@ -161,11 +161,6 @@ if type R > /dev/null 2>&1; then
   mkdir -p ${XDG_CACHE_HOME}/R
   export R_HISTFILE=${XDG_CACHE_HOME}/R/Rhistory
 fi
-## Java
-if type java > /dev/null 2>&1; then
-  export PATH=/opt/homebrew/opt/openjdk/bin:${PATH}
-  export CPPFLAGS="${CPPFLAGS} -I/opt/homebrew/opt/openjdk/include"
-fi
 
 # for work
 if [[ -e ${XDG_CONFIG_HOME}/zsh/work.sh ]]; then
