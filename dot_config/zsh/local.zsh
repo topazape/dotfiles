@@ -158,8 +158,8 @@ if type goenv > /dev/null 2>&1; then
 fi
 ## Java
 if [[ -d $(brew --prefix)/opt/openjdk ]]; then
-  export JAVA_HOME="$(brew --prefix)/opt/openjdk/libexec/openjdk.jdk/Contents/Home"
-  export PATH="$(brew --prefix)/opt/homebrew/opt/openjdk/bin":${PATH}
+  export JAVA_HOME="$(brew --prefix)/opt/openjdk"
+  export PATH=${JAVA_HOME}/bin:${PATH}
   export CPPFLAGS="${CPPFLAGS} -I/opt/homebrew/opt/openjdk/include"
 fi
 ## R
