@@ -74,8 +74,6 @@ mason_lspconfig.setup_handlers({
 		require("lspconfig").golangci_lint_ls.setup({
 			on_attach = on_attach,
 			default_config = {
-				-- cmd = { "golangci-lint-langserver" },
-				-- root_dir = require("lspconfig").util.root_pattern(".git", "go.mod"),
 				init_options = {
 					command = {
 						"golangci-lint",
@@ -90,6 +88,12 @@ mason_lspconfig.setup_handlers({
 					},
 				},
 			},
+		})
+	end,
+	["java_language_server"] = function()
+		require("lspconfig").java_language_server.setup({
+			on_attach = on_attach,
+			cmd = { "/Users/tkawai/.local/share/nvim/mason/bin/java-language-server" },
 		})
 	end,
 })
