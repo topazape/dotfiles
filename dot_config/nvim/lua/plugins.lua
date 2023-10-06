@@ -77,6 +77,7 @@ return {
 	---- copilot
 	{
 		"zbirenbaum/copilot.lua",
+		enabled = false,
 		event = "VeryLazy",
 		config = function()
 			require("copilot").setup({
