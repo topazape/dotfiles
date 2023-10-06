@@ -90,7 +90,7 @@ mason_lspconfig.setup_handlers({
 	end,
 	["java_language_server"] = function()
 		require("lspconfig").java_language_server.setup({
-			root_dir = require("lspconfig").util.root_pattern("build.gradle", "pom.xml", "*.java"),
+			-- root_dir = require("lspconfig").util.root_pattern("build.gradle", "pom.xml", "*.java"),
 		})
 	end,
 })
