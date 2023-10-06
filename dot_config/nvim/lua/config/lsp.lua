@@ -71,14 +71,6 @@ mason_lspconfig.setup_handlers({
 	end,
 	["golangci_lint_ls"] = function()
 		require("lspconfig").golangci_lint_ls.setup({
-			root_dir = require("lspconfig").util.root_pattern(
-				".golangci.yml",
-				".golangci.yaml",
-				".golangci.toml",
-				".golangci.json",
-				"go.work",
-				"go.mod"
-			),
 			default_config = {
 				init_options = {
 					command = {
@@ -97,6 +89,8 @@ mason_lspconfig.setup_handlers({
 		})
 	end,
 	["java_language_server"] = function()
-		require("lspconfig").java_language_server.setup({})
+		require("lspconfig").java_language_server.setup({
+			root_dir = require("lspconfig").util.root_pattern("build.gradle", "pom.xml", "*.java"),
+		})
 	end,
 })
