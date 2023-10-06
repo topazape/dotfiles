@@ -7,6 +7,9 @@ format_on_save.setup({
 			formatters.shell({ cmd = { "gofumpt" } }),
 			formatters.shell({ cmd = { "goimports" } }),
 		},
+		java = {
+			formatters.shell({ cmd = { "google-java-format" } }),
+		},
 		json = {
 			formatters.shell({ cmd = { "jq" } }),
 		},
