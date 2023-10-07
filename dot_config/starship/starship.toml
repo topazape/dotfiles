@@ -1,6 +1,6 @@
 format = "$all"
 
 [custom.chezmoi]
-when = """ test $CHEZMOI = "1" && echo true || echo false """
+when = """ [ "$CHEZMOI = "1" echo true || echo false" ]"""
 symbol = "🏡"
-format = "[$output]($style)$symbol"
+format = "$symbol"
