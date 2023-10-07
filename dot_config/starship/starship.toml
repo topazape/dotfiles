@@ -1,5 +1,6 @@
-format = "$all$chezmoi"
+format = "$all"
 
 [custom.chezmoi]
 when = """ $CHEZMOI = "1" """
 symbol = "🏡"
+format = "[$output]($style)"
