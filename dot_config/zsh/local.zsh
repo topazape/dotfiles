@@ -156,7 +156,7 @@ if [[ -d $(brew --prefix)/opt/openjdk ]]; then
   export JAVA_HOME="$(brew --prefix)/opt/openjdk"
   export PATH=${JAVA_HOME}/bin:${PATH}
   export CPPFLAGS="${CPPFLAGS} -I/opt/homebrew/opt/openjdk/include"
-  export JAVA_TOOL_OPTIONS="-Duser.language=en"
+  export JDK_TOOL_OPTIONS="-Duser.language=en"
 fi
 ### maven
 if type mvn > /dev/null 2>&1; then
