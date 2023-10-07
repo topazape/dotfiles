@@ -1,1 +1,4 @@
 format = "$all"
+
+[custom.chezmoi]
+symbol = '🏡'
