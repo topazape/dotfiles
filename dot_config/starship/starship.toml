@@ -2,5 +2,5 @@ format = "$all"
 
 [custom.chezmoi]
 command = "echo chezmoi"
-when = ''' test "$CHEZMOI" = "1" '''
+when = """ test "$CHEZMOI" = "1" """
 symbol = "🏡"
