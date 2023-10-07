@@ -1,7 +1,6 @@
 format = "$all"
 
 [custom.chezmoi]
-command = "uname -m"
 when = """ test $(uname -m) = "arm64" """
 symbol = "🏡"
 format = "[$output]($style)"
