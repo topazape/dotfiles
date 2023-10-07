@@ -1,6 +1,6 @@
 format = "$all"
 
 [custom.chezmoi]
-when = """ test $(uname -m) = "arm64" """
+when = """ test $CHEZMOI = "1" && echo true || echo false """
 symbol = "🏡"
 format = "[$output]($style)$symbol"
