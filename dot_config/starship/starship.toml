@@ -1,4 +1,4 @@
-format = "$all"
+format = "$all$chezmoi"
 
 [custom.chezmoi]
 when = """ $CHEZMOI = "1" """
