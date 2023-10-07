@@ -3,4 +3,4 @@ format = "$all"
 [custom.chezmoi]
 when = ''' test "$CHEZMOI" = "1" '''
 symbol = "🏡"
-format = "$symbol chezmoi"
+format = "$symbolchezmoi"
