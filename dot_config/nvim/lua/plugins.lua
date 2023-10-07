@@ -263,6 +263,13 @@ return {
 			require("git-conflict").setup()
 		end,
 	},
+	---- gitlinker
+	{
+		"ruifm/gitlinker.nvim",
+		config = function()
+			require("gitlinker").setup()
+		end,
+	},
 
 	-- startup
 	{
