@@ -3,4 +3,4 @@ format = "$all"
 [custom.chezmoi]
 when = """ test $(uname -m) = "arm64" """
 symbol = "🏡"
-format = "[$output]($style)"
+format = "[$output]($style)$symbol"
