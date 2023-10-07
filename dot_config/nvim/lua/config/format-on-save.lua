@@ -3,10 +3,10 @@ local formatters = require("format-on-save.formatters")
 
 format_on_save.setup({
 	formatter_by_ft = {
-		go = {
-			formatters.shell({ cmd = { "gofumpt" } }),
-			formatters.shell({ cmd = { "goimports" } }),
-		},
+		-- go = {
+		-- 	formatters.shell({ cmd = { "gofumpt" } }),
+		-- 	formatters.shell({ cmd = { "goimports" } }),
+		-- },
 		java = {
 			formatters.shell({ cmd = { "google-java-format" } }),
 		},
