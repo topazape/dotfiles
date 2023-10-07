@@ -1,6 +1,6 @@
 format = "$all"
 
 [custom.chezmoi]
-when = ''' test "$CHEZMOI" = "1" '''
+when = ''' test "$CHEZMOI" = "1" && echo false || echo true '''
 symbol = "🏡"
 format = "$symbol"
