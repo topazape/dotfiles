@@ -267,7 +267,20 @@ return {
 	{
 		"ruifm/gitlinker.nvim",
 		config = function()
-			require("gitlinker").setup()
+			require("gitlinker").setup({
+				vim.api.set(
+					"n",
+					"<leader>gy",
+					"<cmd>lua require('gitlinker').get_repo_url()<cr>",
+					{ noremap = true, silent = true }
+				),
+				vim.api.set(
+					"n",
+					"<leader>gb",
+					"<cmd>lua require('gitlinker').get_buf_range_url()<cr>",
+					{ noremap = true, silent = true }
+				),
+			})
 		end,
 	},
 
