@@ -3,6 +3,7 @@ lspsaga.setup({
 	-- keymaps for lspsaga
 	vim.keymap.set("n", "K", "<CMD>Lspsaga hover_doc<CR>", { noremap = true }),
 	vim.keymap.set("n", "gd", "<CMD>Lspsaga peek_definition<CR>", { noremap = true }),
+	vim.keymap.set("n", "gK", "<CMD>Lspsaga peek_type_definition<CR>", { noremap = true }),
 	vim.keymap.set("n", "gr", "<CMD>Lspsaga finder<CR>", { noremap = true }),
 	vim.keymap.set("n", "ga", "<CMD>Lspsaga code_action<CR>", { noremap = true }),
 	vim.keymap.set("n", "gn", "<CMD>Lspsaga rename<CR>", { noremap = true }),
