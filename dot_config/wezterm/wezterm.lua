@@ -3,6 +3,7 @@ local wezterm = require("wezterm")
 return {
 	font = wezterm.font_with_fallback({
 		{ family = "Berkeley Mono" },
+		{ family = "Osaka" },
 		{ family = "Pretendard JP" },
 	}),
 	font_size = 15,
