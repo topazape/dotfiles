@@ -276,7 +276,7 @@ return {
 			vim.keymap.set(
 				"n",
 				"<leader>gb",
-				"<CMD>lua require('gitlinker').get_buf_range_url()<CR>",
+				"<CMD>lua require('gitlinker').get_repo_url({action_callback = require('gitlinker.actions').open_in_browser})<CR>",
 				{ noremap = true, silent = true }
 			)
 			require("gitlinker").setup()
