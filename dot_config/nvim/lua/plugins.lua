@@ -267,18 +267,6 @@ return {
 	{
 		"ruifm/gitlinker.nvim",
 		config = function()
-			vim.keymap.set(
-				"n",
-				"<leader>gy",
-				"<CMD>lua require('gitlinker').get_repo_url()<CR>",
-				{ noremap = true, silent = true }
-			)
-			vim.keymap.set(
-				"n",
-				"<leader>gb",
-				"<CMD>lua require('gitlinker').get_repo_url({action_callback = require('gitlinker.actions').open_in_browser})<CR>",
-				{ noremap = true, silent = true }
-			)
 			require("gitlinker").setup()
 		end,
 	},
