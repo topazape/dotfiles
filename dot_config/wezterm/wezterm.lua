@@ -4,7 +4,6 @@ return {
 	font = wezterm.font_with_fallback({
 		{ family = "Berkeley Mono" },
 		{ family = "Pretendard JP" },
-		{ family = "Apple Color Emoji" },
 	}),
 	font_size = 15,
 	warn_about_missing_glyphs = false,
