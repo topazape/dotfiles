@@ -1,3 +1,5 @@
+ad_newline = true
+
 [custom.chezmoi]
 command = "echo chezmoi"
 when = """ test "$CHEZMOI" = "1" """
