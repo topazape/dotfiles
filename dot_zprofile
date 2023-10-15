@@ -2,9 +2,6 @@ if [ -f ${HOME}/.profile ]; then
   . ${HOME}/.profile
 fi
 
-[ -d /home/linuxbrew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-[ -d /opt/homebrew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
-
 if [ ! -d ${HOME}/.config ]; then
   mkdir -p ${HOME}/.config
 fi
@@ -20,3 +17,16 @@ fi
 export XDG_CONFIG_HOME=${HOME}/.config
 export XDG_CACHE_HOME=${HOME}/.cache
 export XDG_DATA_HOME=${HOME}/.local/share
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ]; then
+  PATH="$HOME/bin:$PATH"
+fi
+
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ]; then
+  PATH="$HOME/.local/bin:$PATH"
+fi
+
+[ -d /home/linuxbrew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+[ -d /opt/homebrew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
