@@ -1,7 +1,4 @@
-if [ -f ${HOME}/.profile ]; then
-  . ${HOME}/.profile
-fi
-
+# XDG
 if [ ! -d ${HOME}/.config ]; then
   mkdir -p ${HOME}/.config
 fi
@@ -28,5 +25,6 @@ if [ -d "$HOME/.local/bin" ]; then
   PATH="$HOME/.local/bin:$PATH"
 fi
 
+# brews
 [ -d /home/linuxbrew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 [ -d /opt/homebrew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
