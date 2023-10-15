@@ -88,22 +88,17 @@ zellij
 zstd
 
 ==> Casks
-audacity
 beekeeper-studio
 docker
 font-pretendard-jp
-gather
 google-chrome
 google-cloud-sdk
-macdown
 notion
 r
 rstudio
 slack
 stats
 wezterm
-zoom
-
 ```
 
 ## LSP
