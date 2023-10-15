@@ -1,4 +1,4 @@
-ad_newline = true
+add_newline = true
 
 [custom.chezmoi]
 command = "echo chezmoi"
