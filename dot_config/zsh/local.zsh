@@ -109,9 +109,9 @@ if type aws > /dev/null 2>&1; then
   export AWS_CONFIG_FILE=${XDG_CONFIG_HOME}/aws/config
 fi
 ## google-cloud-sdk
-if [[ -e $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc ]]; then
-  source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
-  source $(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+if [[ -d $(brew --prefix)/share/google-cloud-sdk ]]; then
+  source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+  source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 fi
 
 # Programing Languages
