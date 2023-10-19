@@ -17,7 +17,6 @@ format_on_save.setup({
 			formatters.stylua, -- default
 		},
 		python = {
-			formatters.shell({ cmd = { "isort", "--stdout", "--filename", "%", "-" } }),
 			formatters.black, -- default
 		},
 		rust = {
