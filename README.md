@@ -88,12 +88,11 @@ zellij
 zstd
 
 ==> Casks
-beekeeper-studio
+dbeaver-community
 docker
 font-pretendard-jp
 google-chrome
 google-cloud-sdk
-notion
 r
 rstudio
 slack
