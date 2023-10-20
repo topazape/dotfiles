@@ -55,7 +55,7 @@ mason_lspconfig.setup_handlers({
 						rope_completion = { enabled = false },
 						yapf = { enabled = false },
 						-- 3rd-party plugins
-						mypy = { enabled = true },
+						-- mypy = { enabled = true },
 					},
 				},
 			},
