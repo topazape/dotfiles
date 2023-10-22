@@ -12,5 +12,6 @@ layout_analysis() {
   layout_ipython
   export JUPYTER_CONFIG_DIR=${XDG_CONFIG_HOME}/jupyter
   export MPLCONFIGDIR=${XDG_CONFIG_HOME}/matplotlib
+  export SEABORN_DATA=${XDG_CACHE_HOME}/seaborn
   export PYTENSOR_FLAGS="base_compiledir=${XDG_CACHE_HOME}/pytensor"
 }
