@@ -52,7 +52,7 @@ telescope.setup({
 	},
 	extensions = {
 		file_browser = {
-			hidden = true,
+			hidden = false,
 			git_status = true,
 			hijack_netrw = true,
 			mappings = {
