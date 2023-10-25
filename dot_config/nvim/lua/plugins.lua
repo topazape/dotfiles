@@ -277,9 +277,9 @@ return {
     config = function()
       require("viewdoc").setup({
         md_viewer = "mdcat"
-      end,
       })
-    end,
+      end,
+    },
 
 	-- startup
 	{
