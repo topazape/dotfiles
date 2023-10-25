@@ -271,19 +271,6 @@ return {
 		end,
 	},
 
-	-- viewdoc
-	{
-		"ray-x/viewdoc.nvim",
-		dependencies = {
-			"ray-x/guihua.lua",
-		},
-		config = function()
-			require("viewdoc").setup({
-				md_viewer = "mdcat",
-			})
-		end,
-	},
-
 	-- startup
 	{
 		"nvimdev/dashboard-nvim",
