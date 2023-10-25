@@ -40,6 +40,7 @@ telescope.setup({
 		find_files = {
 			hidden = true,
 			file_ignore_patterns = {
+				"^..*/",
 				"^.cache/",
 				"^.kube/",
 				"^.local/",
