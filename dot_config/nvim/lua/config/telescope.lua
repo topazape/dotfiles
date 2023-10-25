@@ -63,5 +63,8 @@ telescope.setup({
 				},
 			},
 		},
+		folder_browser = {
+			hidden = true,
+		},
 	},
 })
