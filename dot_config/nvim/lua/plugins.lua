@@ -271,15 +271,6 @@ return {
 		end,
 	},
 
-	-- markdown
-	{
-		"ellisonleao/glow.nvim",
-		cmd = "Glow",
-		config = function()
-			require("glow").setup()
-		end,
-	},
-
 	-- startup
 	{
 		"nvimdev/dashboard-nvim",
