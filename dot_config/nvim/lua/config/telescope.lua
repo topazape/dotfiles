@@ -44,7 +44,6 @@ telescope.setup({
 				"^.kube/",
 				"^.local/",
 				"^.zcompcache/",
-				"^.zcompdump",
 				"^Applications/",
 				"^Library/",
 			},
