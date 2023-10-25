@@ -17,7 +17,7 @@ format_on_save.setup({
 			formatters.stylua, -- default
 		},
 		python = {
-			formatters.black, -- default
+			formatters.shell({ cmd = { "ruff", "format", "--no-cache", "--respect-gitignore" } }),
 		},
 		rust = {
 			formatters.shell({ cmd = { "rustfmt", "--emit=stdout" } }),
