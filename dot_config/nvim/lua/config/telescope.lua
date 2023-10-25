@@ -52,7 +52,7 @@ telescope.setup({
 	},
 	extensions = {
 		file_browser = {
-			hidden = false,
+			hidden = { file_browser = true, folder_browser = true },
 			git_status = true,
 			hijack_netrw = true,
 			mappings = {
@@ -62,9 +62,6 @@ telescope.setup({
 					["<M-v>"] = actions.select_vertical,
 				},
 			},
-		},
-		folder_browser = {
-			hidden = true,
 		},
 	},
 })
