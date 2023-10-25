@@ -26,8 +26,8 @@ telescope.setup({
 	defaults = {
 		-- Default configuration for telescope goes here:
 		winblend = 20,
-		prompt_prefix = "▷  ",
-		selection_caret = " ",
+		prompt_prefix = "▷ ",
+		selection_caret = "▶ ",
 		mappings = {
 			i = {
 				["<ESC>"] = actions.close,
