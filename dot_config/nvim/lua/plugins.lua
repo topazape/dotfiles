@@ -140,13 +140,6 @@ return {
 			"nvim-telescope/telescope.nvim",
 		},
 	},
-	---- media files
-	{
-		"nvim-telescope/telescope-media-files.nvim",
-		dependencies = {
-			"nvim-telescope/telescope.nvim",
-		},
-	},
 
 	-- completely replaces the UI for messages, cmdline and the popupmenu
 	{
