@@ -133,9 +133,16 @@ return {
 			require("config/telescope")
 		end,
 	},
-	---- filebrowser
+	---- file browser
 	{
 		"nvim-telescope/telescope-file-browser.nvim",
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+		},
+	},
+	---- media files
+	{
+		"nvim-telescope/telescope-media-files.nvim",
 		dependencies = {
 			"nvim-telescope/telescope.nvim",
 		},
