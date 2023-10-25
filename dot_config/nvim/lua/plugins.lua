@@ -271,6 +271,15 @@ return {
 		end,
 	},
 
+  -- viewdoc
+  {
+    "ray-x/viewdoc.nvim",
+    config = function()
+      require("viewdoc").setup({
+        md_viewer = "mdcat"
+      })
+    end,
+
 	-- startup
 	{
 		"nvimdev/dashboard-nvim",
