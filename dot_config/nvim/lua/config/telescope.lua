@@ -18,7 +18,8 @@ vim.keymap.set("n", "<leader>fi", builtin.lsp_implementations, {})
 vim.keymap.set("n", "<leader>gs", builtin.git_status, {})
 vim.keymap.set("n", "<leader>gc", builtin.git_commits, {})
 -- file_browser
-vim.keymap.set("n", "<leader>fe", "<CMD>Telescope file_browser hidden=true<CR>", {})
+-- vim.keymap.set("n", "<leader>fe", "<CMD>Telescope file_browser hidden=true<CR>", {})
+vim.keymap.set("n", "<leader>fe", "<CMD>Telescope file_browser<CR>", {})
 -- noice
 vim.keymap.set("n", "<leader>nh", "<CMD>Telescope noice<CR>", {})
 
