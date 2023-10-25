@@ -64,5 +64,9 @@ telescope.setup({
 				},
 			},
 		},
+		media_files = {
+			filetypes = { "png", "webp", "jpg", "jpeg" },
+			find_cmd = "rg",
+		},
 	},
 })
