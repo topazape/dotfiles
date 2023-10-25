@@ -40,9 +40,10 @@ telescope.setup({
 		find_files = {
 			hidden = true,
 			file_ignore_patterns = {
-				"^.(zcomp)?cache/",
+				"^.cache/",
 				"^.kube/",
 				"^.local/",
+				"^.zcompcache/",
 				"^Applications/",
 				"^Library/",
 			},
