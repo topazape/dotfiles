@@ -235,7 +235,7 @@ return {
 		config = function()
 			require("markdown-preview").setup({
 				viewer = {
-					exec = "mdcat",
+					exec = "glow",
 				},
 			})
 		end,
