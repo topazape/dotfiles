@@ -47,6 +47,13 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 	},
+  ---- code context
+  {
+    "SmiteshP/nvim-navic",
+    dependencies = {
+      "neovim/nvim-lspconfig"
+    },
+  },
 
 	-- format on save
 	{
