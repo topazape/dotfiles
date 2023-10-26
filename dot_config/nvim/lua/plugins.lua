@@ -228,10 +228,10 @@ return {
 		config = function()
 			require("md-preview").setup({
 				viewer = {
-					-- exec = "mdcat",
-					-- args = { "--local" },
-					exec = "glow",
-					args = { "-s", "dark" },
+					exec = "mdcat",
+					args = { "--local" },
+					-- exec = "glow",
+					-- args = { "-s", "dark" },
 				},
 			})
 		end,
