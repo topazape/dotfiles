@@ -222,19 +222,20 @@ return {
 		end,
 	},
 
-	{
-		"topazape/md-preview.nvim",
-		ft = { "md", "markdown", "mkd", "mkdn", "mdwn", "mdown", "mdtxt", "mdtext", "rmd", "wiki" },
-		config = function()
-			vim.keymap.set("n", "<leader>m", "<CMD>MPToggle<CR>", {})
-			require("md-preview").setup({
-				viewer = {
-					exec = "glow",
-					args = { "-s", "dracula" },
-				},
-			})
-		end,
-	},
+	-- markdown
+	-- {
+	-- 	"topazape/md-preview.nvim",
+	-- 	ft = { "md", "markdown", "mkd", "mkdn", "mdwn", "mdown", "mdtxt", "mdtext", "rmd", "wiki" },
+	-- 	config = function()
+	-- 		vim.keymap.set("n", "<leader>m", "<CMD>MPToggle<CR>", {})
+	-- 		require("md-preview").setup({
+	-- 			viewer = {
+	-- 				exec = "glow",
+	-- 				args = { "-s", "dracula" },
+	-- 			},
+	-- 		})
+	-- 	end,
+	-- },
 
 	-- startup
 	{
