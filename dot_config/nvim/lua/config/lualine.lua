@@ -43,6 +43,9 @@ lualine.setup({
 			{ "filename", path = 0 },
 			{ "diagnostics" },
 		},
+		lualine_c = {
+			{ "diagnostics" },
+		},
 		lualine_x = {
 			{ lsp_names },
 		},
