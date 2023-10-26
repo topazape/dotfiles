@@ -39,13 +39,9 @@ lualine.setup({
 			{ "location" },
 		},
 	},
-	-- tabline = {
-	winbar = {
-		-- lualine_b = {
-		-- 	{ "filename", path = 0 },
-		-- },
-		lualine_a = {
-			{ require("lspsaga.symbol.winbar").get_bar() },
+	tabline = {
+		lualine_b = {
+			{ "filename", path = 0 },
 		},
 		lualine_x = {
 			{ lsp_names },
