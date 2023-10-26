@@ -233,11 +233,7 @@ return {
 		"topazape/md-preview.nvim",
 		ft = { "md", "markdown", "mkd", "mkdn", "mdwn", "mdown", "mdtxt", "mdtext", "rmd", "wiki" },
 		config = function()
-			require("md-preview").setup({
-				viewer = {
-					exec = "mdcat",
-				},
-			})
+			require("md-preview").setup({})
 		end,
 	},
 
