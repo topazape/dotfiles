@@ -235,8 +235,7 @@ return {
 		config = function()
 			require("md-preview").setup({
 				viewer = {
-					exec = "glow",
-					args = { "--style", "dark" },
+					exec = "mdcat",
 				},
 			})
 		end,
