@@ -230,8 +230,7 @@ return {
 			require("md-preview").setup({
 				viewer = {
 					exec = "glow",
-					exec_path = "/opt/homebrew/bin/glow",
-					args = { "-s", "light" },
+					args = { "-s", "dark" },
 				},
 			})
 		end,
