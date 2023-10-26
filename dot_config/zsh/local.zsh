@@ -1,7 +1,7 @@
 # homebrew
 if type brew > /dev/null 2>&1; then
   # cache dir
-  if ${OSTYPE} == "darwin"*; then
+  if [[ ${OSTYPE} == "darwin"* ]]; then
     export HOMEBREW_CACHE=${XDG_CACHE_HOME}/homebrew
   fi
   # enable brew's completion
