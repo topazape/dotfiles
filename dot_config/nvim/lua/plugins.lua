@@ -222,18 +222,14 @@ return {
 		end,
 	},
 
-	-- {
-	-- 	"0x00-ketsu/markdown-preview.nvim",
-	-- 	ft = { "md", "markdown", "mkd", "mkdn", "mdwn", "mdown", "mdtxt", "mdtext", "rmd", "wiki" },
-	-- 	config = function()
-	-- 		require("markdown-preview").setup()
-	-- 	end,
-	-- },
 	{
 		"topazape/md-preview.nvim",
 		ft = { "md", "markdown", "mkd", "mkdn", "mdwn", "mdown", "mdtxt", "mdtext", "rmd", "wiki" },
 		config = function()
-			require("md-preview").setup({})
+			require("md-preview").setup({
+				viewer = "glow",
+				args = { "-s", "dark" },
+			})
 		end,
 	},
 
