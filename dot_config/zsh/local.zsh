@@ -2,7 +2,6 @@
 if type brew > /dev/null 2>&1; then
   # cache dir
   if [[ ${OSTYPE} == "darwin"* ]]; then
-    echo "aerfarfaa"
     export HOMEBREW_CACHE=${XDG_CACHE_HOME}/Homebrew
     export HOMEBREW_LOGS=${HOMEBREW_CACHE}/Logs
   fi
