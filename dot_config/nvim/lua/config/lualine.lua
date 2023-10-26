@@ -44,7 +44,7 @@ lualine.setup({
 			{ "filename", path = 0 },
 		},
 		lualine_c = {
-			{ require("lspsaga.symbol.winbar").get_bar() },
+			require("lspsaga.symbol.winbar").get_bar(),
 		},
 		lualine_x = {
 			{ lsp_names },
