@@ -231,7 +231,6 @@ return {
 	-- },
 	{
 		dir = "~/Develop/local/markdown-preview.nvim",
-		dev = true,
 		ft = { "md", "markdown", "mkd", "mkdn", "mdwn", "mdown", "mdtxt", "mdtext", "rmd", "wiki" },
 		config = function()
 			require("markdown-preview").setup()
