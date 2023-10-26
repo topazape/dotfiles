@@ -236,7 +236,7 @@ return {
 			require("markdown-preview").setup({
 				viewer = {
 					exec = "mdcat",
-					args = { "--ansi" },
+					args = { "--local" },
 				},
 			})
 		end,
