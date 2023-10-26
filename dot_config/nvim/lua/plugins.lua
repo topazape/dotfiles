@@ -236,8 +236,7 @@ return {
 			require("md-preview").setup({
 				viewer = {
 					exec = "glow",
-					-- args = { "--local" },
-					-- args = { "-s", "light" },
+					args = { "-s", "dark" },
 				},
 			})
 		end,
