@@ -230,7 +230,7 @@ return {
 			require("md-preview").setup({
 				viewer = {
 					exec = "glow",
-					args = { "-s", "dracula" },
+					args = { "-s", "dark" },
 				},
 			})
 		end,
