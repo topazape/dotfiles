@@ -226,6 +226,7 @@ return {
 		"topazape/md-preview.nvim",
 		ft = { "md", "markdown", "mkd", "mkdn", "mdwn", "mdown", "mdtxt", "mdtext", "rmd", "wiki" },
 		config = function()
+			vim.keymap.set("n", "<leader>ff", "<CMD>MPToggle<CR>", {})
 			require("md-preview").setup({
 				viewer = {
 					exec = "mdcat",
