@@ -41,9 +41,9 @@ lualine.setup({
 	},
 	-- tabline = {
 	winbar = {
-		lualine_b = {
-			{ "filename", path = 0 },
-		},
+		-- lualine_b = {
+		-- 	{ "filename", path = 0 },
+		-- },
 		lualine_c = {
 			{ require("lspsaga.symbol.winbar").get_bar(), icon = "󰐍 " },
 		},
