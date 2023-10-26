@@ -237,7 +237,7 @@ return {
 				viewer = {
 					exec = "glow",
 					-- args = { "--local" },
-					args = { "-s", "dark" },
+					args = { "-s", "light" },
 				},
 			})
 		end,
