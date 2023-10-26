@@ -228,6 +228,7 @@ return {
 		config = function()
 			require("md-preview").setup({
 				viewer = "glow",
+				exec_path = "",
 				args = { "-s", "dark" },
 			})
 		end,
