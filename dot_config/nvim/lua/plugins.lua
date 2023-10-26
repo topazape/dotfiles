@@ -233,7 +233,11 @@ return {
 		dir = "~/Develop/local/markdown-preview.nvim",
 		ft = { "md", "markdown", "mkd", "mkdn", "mdwn", "mdown", "mdtxt", "mdtext", "rmd", "wiki" },
 		config = function()
-			require("markdown-preview").setup()
+			require("markdown-preview").setup({
+				viewer = {
+					exec = "mdcat",
+				},
+			})
 		end,
 	},
 
