@@ -230,8 +230,6 @@ return {
 				viewer = {
 					exec = "mdcat",
 					args = { "--local" },
-					-- exec = "glow",
-					-- args = { "-s", "dark" },
 				},
 			})
 		end,
