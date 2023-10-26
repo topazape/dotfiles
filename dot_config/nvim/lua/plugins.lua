@@ -17,13 +17,6 @@ return {
 			require("config/treesitter")
 		end,
 	},
-	---- sticky header
-	{
-		"nvim-treesitter/nvim-treesitter-context",
-		config = function()
-			require("treesitter-context").setup({})
-		end,
-	},
 
 	-- lsp
 	{
@@ -47,13 +40,13 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 	},
-  ---- code context
-  {
-    "SmiteshP/nvim-navic",
-    dependencies = {
-      "neovim/nvim-lspconfig"
-    },
-  },
+	---- code context
+	{
+		"SmiteshP/nvim-navic",
+		dependencies = {
+			"neovim/nvim-lspconfig",
+		},
+	},
 
 	-- format on save
 	{
