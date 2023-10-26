@@ -39,7 +39,8 @@ lualine.setup({
 			{ "location" },
 		},
 	},
-	tabline = {
+	-- tabline = {
+	winbar = {
 		lualine_b = {
 			{ "filename", path = 0 },
 		},
