@@ -2,7 +2,8 @@
 if type brew > /dev/null 2>&1; then
   # cache dir
   if [[ ${OSTYPE} == "darwin"* ]]; then
-    export HOMEBREW_CACHE=${XDG_CACHE_HOME}/homebrew
+    export HOMEBREW_CACHE=${XDG_CACHE_HOME}/Homebrew
+    export HOMEBREW_LOGS=${HOMEBREW_CACHE}/Logs
   fi
   # enable brew's completion
   fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
