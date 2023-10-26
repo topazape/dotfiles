@@ -47,8 +47,6 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 	},
-	---- show lsp context
-	{ "SmiteshP/nvim-navic" },
 
 	-- format on save
 	{
