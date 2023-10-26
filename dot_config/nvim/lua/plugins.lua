@@ -230,6 +230,7 @@ return {
 			require("md-preview").setup({
 				viewer = {
 					exec = "mdr",
+					exec_path = "/Users/tkawai/bin/mdr",
 					-- args = { "--local" },
 				},
 			})
