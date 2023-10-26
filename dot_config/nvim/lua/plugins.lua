@@ -224,7 +224,6 @@ return {
 
 	{
 		"topazape/md-preview.nvim",
-		branch = "0.1.x",
 		ft = { "md", "markdown", "mkd", "mkdn", "mdwn", "mdown", "mdtxt", "mdtext", "rmd", "wiki" },
 		config = function()
 			vim.keymap.set("n", "<leader>m", "<CMD>MPToggle<CR>", {})
