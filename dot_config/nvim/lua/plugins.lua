@@ -235,8 +235,8 @@ return {
 		config = function()
 			require("markdown-preview").setup({
 				viewer = {
-					exec = "frogmouth",
-					-- args = { "--local" },
+					exec = "mdcat",
+					args = { "--local" },
 				},
 			})
 		end,
