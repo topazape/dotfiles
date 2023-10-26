@@ -236,7 +236,6 @@ return {
 			require("markdown-preview").setup({
 				viewer = {
 					exec = "frogmouth",
-					exec_path = "~/.local/bin/frogmouth",
 					-- args = { "--local" },
 				},
 			})
