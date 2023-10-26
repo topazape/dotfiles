@@ -225,7 +225,6 @@ return {
 	{
 		-- "topazape/md-preview.nvim",
 		dir = "~/Develop/local/md-preview.nvim",
-		dev = true,
 		ft = { "md", "markdown", "mkd", "mkdn", "mdwn", "mdown", "mdtxt", "mdtext", "rmd", "wiki" },
 		config = function()
 			require("md-preview").setup({
