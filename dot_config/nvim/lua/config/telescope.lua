@@ -47,6 +47,7 @@ telescope.setup({
 				"^.zsh_sessions/",
 				"^Applications/",
 				"^Library/",
+				"^.git/",
 			},
 		},
 	},
