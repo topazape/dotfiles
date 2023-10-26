@@ -1,9 +1,9 @@
-local on_attach = function(client, bufnr)
-	-- navic
-	-- if client.server_capabilities.documentSymbolProvider then
-	-- 	require("nvim-navic").attach(client, bufnr)
-	-- end
-end
+-- local on_attach = function(client, bufnr)
+-- 	-- navic
+-- 	-- if client.server_capabilities.documentSymbolProvider then
+-- 	-- 	require("nvim-navic").attach(client, bufnr)
+-- 	-- end
+-- end
 
 -- mason
 local mason = require("mason")
