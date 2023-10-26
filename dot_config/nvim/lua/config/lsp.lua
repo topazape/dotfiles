@@ -1,13 +1,5 @@
--- local on_attach = function(client, bufnr)
--- 	-- navic
--- 	-- if client.server_capabilities.documentSymbolProvider then
--- 	-- 	require("nvim-navic").attach(client, bufnr)
--- 	-- end
--- end
-
 -- mason
-local mason = require("mason")
-mason.setup()
+require("mason").setup()
 
 -- mason-lspconfig
 local mason_lspconfig = require("mason-lspconfig")
@@ -18,14 +10,11 @@ mason_lspconfig.setup_handlers({
 	-- and will be called for each installed server that doesn"t have
 	-- a dedicated handler.
 	function(server_name) -- default handler (optional)
-		require("lspconfig")[server_name].setup({
-			on_attach = on_attach,
-		})
+		require("lspconfig")[server_name].setup({})
 	end,
 	-- Next, you can provide a dedicated handler for specific servers.
 	["lua_ls"] = function()
 		require("lspconfig").lua_ls.setup({
-			on_attach = on_attach,
 			settings = {
 				Lua = {
 					diagnostics = {
