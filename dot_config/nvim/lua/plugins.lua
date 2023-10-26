@@ -235,8 +235,9 @@ return {
 		config = function()
 			require("md-preview").setup({
 				viewer = {
-					exec = "bat",
+					exec = "glow",
 					-- args = { "--local" },
+					args = { "-s", "dark" },
 				},
 			})
 		end,
