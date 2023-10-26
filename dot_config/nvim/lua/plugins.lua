@@ -228,8 +228,10 @@ return {
 		ft = { "md", "markdown", "mkd", "mkdn", "mdwn", "mdown", "mdtxt", "mdtext", "rmd", "wiki" },
 		config = function()
 			require("md-preview").setup({
-				viewer = "mdcat",
-				-- args = { "-s", "dark" },
+				viewer = {
+					exec = "glow",
+					args = { "-s", "dark" },
+				},
 			})
 		end,
 	},
