@@ -226,7 +226,7 @@ return {
 		"0x00-ketsu/markdown-preview.nvim",
 		ft = { "md" },
 		config = function()
-			require("markdown-preview").setup()
+			require("markdown-preview").setup({})
 		end,
 	},
 
