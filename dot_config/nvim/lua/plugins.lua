@@ -222,6 +222,14 @@ return {
 		end,
 	},
 
+	{
+		"0x00-ketsu/markdown-preview.nvim",
+		ft = { "md" },
+		config = function()
+			require("markdown-preview.nvim").setup()
+		end,
+	},
+
 	-- startup
 	{
 		"nvimdev/dashboard-nvim",
