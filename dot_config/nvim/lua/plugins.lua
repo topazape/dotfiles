@@ -232,7 +232,6 @@ return {
 	{
 		dir = "~/Develop/local/markdown-preview.nvim",
 		ft = { "md", "markdown", "mkd", "mkdn", "mdwn", "mdown", "mdtxt", "mdtext", "rmd", "wiki" },
-		insert_mode_after_preview = false,
 		config = function()
 			require("markdown-preview").setup({
 				viewer = {
