@@ -28,7 +28,6 @@ lualine.setup({
 		},
 		lualine_x = {
 			{ "filetype" },
-			{ "diagnostics" },
 			{ "encoding" },
 			{ "fileformat", icons_enabled = false },
 		},
@@ -42,6 +41,7 @@ lualine.setup({
 	tabline = {
 		lualine_b = {
 			{ "filename", path = 0 },
+			{ "diagnostics" },
 		},
 		lualine_x = {
 			{ lsp_names },
