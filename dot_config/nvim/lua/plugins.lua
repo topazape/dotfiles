@@ -229,6 +229,10 @@ return {
 	-- 		require("markdown-preview").setup()
 	-- 	end,
 	-- },
+	{
+		dir = "~/Develop/local/markdown-preview.nvim",
+		dev = true,
+	},
 
 	-- startup
 	{
