@@ -43,9 +43,9 @@ lualine.setup({
 			{ "filename", path = 0 },
 			{ "diagnostics" },
 		},
-		lualine_c = {
-			{ "navic", color_correction = "dynamic", navic_opts = nil },
-		},
+		-- lualine_c = {
+		-- 	{ "navic", color_correction = "dynamic", navic_opts = nil },
+		-- },
 		lualine_x = {
 			{ lsp_names },
 		},
