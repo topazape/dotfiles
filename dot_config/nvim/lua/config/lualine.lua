@@ -39,7 +39,7 @@ lualine.setup({
 		},
 	},
 	tabline = {
-		lualine_a = {
+		lualine_c = {
 			{ "filename", path = 0 },
 			{ "diagnostics" },
 		},
