@@ -221,8 +221,8 @@ return {
 			vim.keymap.set("n", "<leader>m", "<CMD>MPToggle<CR>", {})
 			require("md-preview").setup({
 				viewer = {
-					exec = "glow",
-					args = { "-s", "dracula" },
+					exec = "mdv",
+					-- args = { "-s", "dracula" },
 				},
 			})
 		end,
