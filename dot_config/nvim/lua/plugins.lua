@@ -222,6 +222,7 @@ return {
 			require("md-preview").setup({
 				viewer = {
 					exec = "mdv",
+					args = { "-c", 80 },
 					-- args = { "-s", "dracula" },
 				},
 			})
