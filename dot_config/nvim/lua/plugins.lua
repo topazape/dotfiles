@@ -149,8 +149,10 @@ return {
 					show_end = false,
 					injected_languages = true,
 				},
+				exclude = {
+					filetypes = { "dashboard" },
+				},
 			})
-      require("ibl").update({ exclude = { "dashboard" } })
 		end,
 	},
 
