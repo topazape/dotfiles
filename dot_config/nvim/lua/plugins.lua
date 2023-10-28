@@ -140,6 +140,7 @@ return {
 			require("ibl").setup({
 				indent = {
 					char = "┆",
+					tab_char = "┆",
 					smart_indent_cap = true,
 				},
 				scope = {
