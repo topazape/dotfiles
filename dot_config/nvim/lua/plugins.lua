@@ -149,20 +149,7 @@ return {
 					show_end = false,
 					injected_languages = true,
 				},
-				exclude = {
-					filetypes = {
-						"lspinfo",
-						"packer",
-						"checkhealth",
-						"help",
-						"man",
-						"gitcommit",
-						"TelescopePrompt",
-						"TelescopeResults",
-						"dashboard",
-					},
-				},
-			})
+			}, require("ibl").update({ exclude = { "dashboard" } }))
 		end,
 	},
 
