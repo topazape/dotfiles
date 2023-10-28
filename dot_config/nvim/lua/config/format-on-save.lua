@@ -4,8 +4,9 @@ local formatters = require("format-on-save.formatters")
 format_on_save.setup({
 	formatter_by_ft = {
 		go = {
-			formatters.shell({ cmd = { "gofumpt" } }),
-			formatters.shell({ cmd = { "goimports" } }),
+			formatters.shell({
+				cmd = { "golangci-lint", "run", "--enable", "gofumpt", "--enable", "goimports", "--fix" },
+			}),
 		},
 		java = {
 			formatters.shell({ cmd = { "google-java-format", "-" } }),
