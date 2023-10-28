@@ -147,7 +147,7 @@ return {
 					enabled = true,
 					show_start = false,
 					show_end = false,
-					injected_languages = false,
+					injected_languages = true,
 				},
 			})
 		end,
