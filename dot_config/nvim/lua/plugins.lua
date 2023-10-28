@@ -136,9 +136,19 @@ return {
 	-- emphasis indent
 	{
 		"lukas-reineke/indent-blankline.nvim",
-		-- config = function()
-		-- 	require("ibl").setup()
-		-- end,
+		config = function()
+			local highlight = {
+				"CursorColumn",
+				"Whitespace",
+			}
+			require("ibl").setup({
+				indent = { highlight = highlight, char = "" },
+				whitespace = {
+					highlight = highlight,
+					remove_blanklines_trail = false,
+				},
+			})
+		end,
 	},
 
 	-- comment
