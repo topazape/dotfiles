@@ -136,9 +136,9 @@ return {
 	-- emphasis indent
 	{
 		"lukas-reineke/indent-blankline.nvim",
-		config = function()
-			require("ibl").setup()
-		end,
+		-- config = function()
+		-- 	require("ibl").setup()
+		-- end,
 	},
 
 	-- comment
