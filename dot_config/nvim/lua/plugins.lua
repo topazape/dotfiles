@@ -149,7 +149,19 @@ return {
 					show_end = false,
 					injected_languages = true,
 				},
-				exclude = { language = { "dashboard" } },
+				exclude = {
+					filetypes = {
+						"lspinfo",
+						"packer",
+						"checkhealth",
+						"help",
+						"man",
+						"gitcommit",
+						"TelescopePrompt",
+						"TelescopeResults",
+						"dashboard",
+					},
+				},
 			})
 		end,
 	},
