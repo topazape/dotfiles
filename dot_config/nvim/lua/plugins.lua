@@ -145,7 +145,7 @@ return {
 				indent = { highlight = highlight, char = "" },
 				whitespace = {
 					highlight = highlight,
-					remove_blanklines_trail = false,
+					remove_blankline_trail = false,
 				},
 			})
 		end,
