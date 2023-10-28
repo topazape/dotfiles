@@ -4,8 +4,8 @@ local formatters = require("format-on-save.formatters")
 format_on_save.setup({
 	formatter_by_ft = {
 		go = {
-			formatters.shell({ cmd = { "goimports", "-" } }),
-			formatters.shell({ cmd = { "gofumpt", "-" } }),
+			formatters.shell({ cmd = { "goimports" } }),
+			formatters.shell({ cmd = { "gofumpt" } }),
 		},
 		java = {
 			formatters.shell({ cmd = { "google-java-format", "-" } }),
