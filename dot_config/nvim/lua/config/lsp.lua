@@ -1,11 +1,7 @@
--- mason
 require("mason").setup()
+require("mason-lspconfig").setup()
 
--- mason-lspconfig
-local mason_lspconfig = require("mason-lspconfig")
-mason_lspconfig.setup()
-
-mason_lspconfig.setup_handlers({
+local handlers = {
 	-- The first entry (without a key) will be the default handler
 	-- and will be called for each installed server that doesn"t have
 	-- a dedicated handler.
@@ -24,6 +20,7 @@ mason_lspconfig.setup_handlers({
 			},
 		})
 	end,
+
 	["pylsp"] = function()
 		require("lspconfig").pylsp.setup({
 			settings = {
@@ -48,11 +45,13 @@ mason_lspconfig.setup_handlers({
 			},
 		})
 	end,
+
 	["bashls"] = function()
 		require("lspconfig").bashls.setup({
 			filetypes = { "sh", "bash", "zsh" },
 		})
 	end,
+
 	["golangci_lint_ls"] = function()
 		require("lspconfig").golangci_lint_ls.setup({
 			init_options = {
@@ -70,4 +69,6 @@ mason_lspconfig.setup_handlers({
 			},
 		})
 	end,
-})
+}
+
+require("mason-lspconfig").setup_handlers(handlers)
