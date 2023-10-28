@@ -134,7 +134,12 @@ return {
 	},
 
 	-- emphasis indent
-	{ "lukas-reineke/indent-blankline.nvim" },
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		config = function()
+			require("ibl").setup()
+		end,
+	},
 
 	-- comment
 	{
