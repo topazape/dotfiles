@@ -149,7 +149,8 @@ return {
 					show_end = false,
 					injected_languages = true,
 				},
-			}, require("ibl").update({ exclude = { "dashboard" } }))
+			})
+      require("ibl").update({ exclude = { "dashboard" } }))
 		end,
 	},
 
