@@ -149,6 +149,7 @@ return {
 					show_end = false,
 					injected_languages = true,
 				},
+				exclude = { language = { "dashboard" } },
 			})
 		end,
 	},
