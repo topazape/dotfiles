@@ -58,6 +58,7 @@ luv
 lz4
 lzo
 maven
+mpdecimal
 mpfr
 msgpack
 neovim
@@ -68,12 +69,14 @@ openldap
 openssl@3
 pcre2
 pixman
+python@3.11
 readline
 ripgrep
 rtmpdump
 rustup-init
 rye
 sheldon
+sqlite
 starship
 tree
 tree-sitter
@@ -87,7 +90,7 @@ zstd
 ==> Casks
 docker
 font-pretendard-jp
-pushplaylabs-sidekick
+google-chrome
 r
 rstudio
 stats
@@ -105,6 +108,7 @@ wezterm
 ◍ golangci-lint-langserver golangci_lint_ls
 ◍ google-java-format
 ◍ gopls
+◍ isort
 ◍ java-language-server java_language_server
 ◍ jq
 ◍ json-lsp jsonls
