@@ -250,7 +250,8 @@ return {
 			vim.keymap.set("n", "<leader>m", "<CMD>MPToggle<CR>", {})
 			require("md-preview").setup({
 				viewer = {
-					exec = "paper",
+					exec = "glow",
+					args = { "-s", "dark" },
 				},
 			})
 		end,
