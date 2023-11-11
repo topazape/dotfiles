@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 
 return {
 	font = wezterm.font_with_fallback({
-		{ family = "Monaspace" },
+		{ family = "Monaspace Krypton" },
 		{ family = "Berkeley Mono" },
 		{ family = "Pretendard JP" },
 	}),
