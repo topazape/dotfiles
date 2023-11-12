@@ -20,9 +20,9 @@ format_on_save.setup({
 			formatters.shell({ cmd = { "ruff", "format", "--no-cache", "--respect-gitignore", "-" } }),
 			formatters.shell({ cmd = { "isort", "-" } }),
 		},
-		-- rust = {
-		-- 	formatters.shell({ cmd = { "rustfmt", "--emit=stdout" } }),
-		-- },
+		rust = {
+			formatters.shell({ cmd = { "rustfmt", "--edition", "2021", "--emit=stdout" } }),
+		},
 		sh = {
 			formatters.shfmt, -- default, Google style
 		},
