@@ -176,12 +176,6 @@ fi
 if type mvn > /dev/null 2>&1; then
   export MAVEN_OPTS="-Dmaven.repo.local=${XDG_DATA_HOME}/m2/repository"
 fi
-## R
-if type R > /dev/null 2>&1; then
-  mkdir -p ${XDG_CACHE_HOME}/R
-  export R_HISTFILE=${XDG_CACHE_HOME}/R/Rhistory
-fi
-
 # for work
 if [[ -e ${XDG_CONFIG_HOME}/zsh/work.sh ]]; then
   source ${XDG_CONFIG_HOME}/zsh/work.sh
