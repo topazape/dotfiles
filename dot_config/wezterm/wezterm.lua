@@ -9,7 +9,7 @@ return {
 	warn_about_missing_glyphs = false,
 	adjust_window_size_when_changing_font_size = false,
 
-	enable_tab_bar = false,
+	enable_tab_bar = true,
 
 	window_background_opacity = 1.00,
 	macos_window_background_blur = 20,
