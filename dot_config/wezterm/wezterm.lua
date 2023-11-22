@@ -1,6 +1,8 @@
 local wezterm = require("wezterm")
 
 local keyconfig = {
+	{ key = "Copy", mods = "NONE", action = wezterm.action.CopyTo("Clipboard") },
+	{ key = "Paste", mods = "NONE", action = wezterm.action.PasteFrom("Clipboard") },
 	{ mods = "LEADER", key = "n", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
 	{ mods = "LEADER", key = "|", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 	{ mods = "LEADER", key = "-", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
