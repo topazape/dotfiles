@@ -9,11 +9,9 @@ for i = 1, 9 do
 	})
 end
 table.insert(keyconfig, {
-	{
-		key = "-",
-		mods = "LEADER",
-		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-	},
+	key = "-",
+	mods = "LEADER",
+	action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 })
 -- table.insert(keyconfig, {
 -- 	{
