@@ -13,13 +13,11 @@ table.insert(keyconfig, {
 	mods = "LEADER",
 	action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 })
--- table.insert(keyconfig, {
--- 	{
--- 		key = "|",
--- 		mods = "LEADER",
--- 		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
--- 	},
--- })
+table.insert(keyconfig, {
+	key = "|",
+	mods = "LEADER",
+	action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+})
 
 return {
 	font = wezterm.font_with_fallback({
