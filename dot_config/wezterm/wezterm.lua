@@ -1,6 +1,5 @@
 local wezterm = require("wezterm")
 
--- keybindings
 local keyconfig = {}
 for i = 1, 9 do
 	-- F1 through F8 to activate that tab
@@ -9,6 +8,18 @@ for i = 1, 9 do
 		action = wezterm.action.ActivateTab(i - 1),
 	})
 end
+table.insert(keyconfig, {
+	{
+		key = "-",
+		mods = "LEADER",
+		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "|",
+		mods = "LEADER",
+		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+	},
+})
 
 return {
 	font = wezterm.font_with_fallback({
@@ -34,6 +45,7 @@ return {
 	send_composed_key_when_right_alt_is_pressed = false,
 
 	-- keybindings
+	leader = { mods = "CTRL", key = "t", timeout_milliseconds = 1000 },
 	keys = keyconfig,
 
 	color_scheme = "Catppuccin Mocha",
