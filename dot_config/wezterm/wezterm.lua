@@ -39,6 +39,8 @@ return {
 	send_composed_key_when_left_alt_is_pressed = false,
 	send_composed_key_when_right_alt_is_pressed = false,
 
+	-- keybindings
+	disable_default_key_bindings = true, -- 初期のキーバインドは利用しない場合
 	keys = keyconfig,
 
 	color_scheme = "Catppuccin Mocha",
