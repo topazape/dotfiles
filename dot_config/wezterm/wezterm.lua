@@ -1,6 +1,9 @@
 local wezterm = require("wezterm")
 
 return {
+	color_scheme = "Catppuccin Mocha",
+
+	-- font
 	font = wezterm.font_with_fallback({
 		{ family = "Berkeley Mono" },
 		{ family = "Pretendard JP" },
@@ -9,17 +12,27 @@ return {
 	warn_about_missing_glyphs = false,
 	adjust_window_size_when_changing_font_size = false,
 
+	-- tab
 	enable_tab_bar = true,
+	tab_bar_style = {
+		active_tab_left = wezterm.format({
+			{ Background = { Color = 0x2f2f2f } },
+			{ Text = { Color = 0x2f2f2f } },
+		}),
+	},
 
+	-- look and feel
 	window_background_opacity = 1.00,
 	macos_window_background_blur = 20,
 
+	-- bell
 	audible_bell = "Disabled",
 	visual_bell = {
 		fade_in_duration_ms = 50,
 		fade_out_duration_ms = 50,
 	},
 
+	-- keys
 	send_composed_key_when_left_alt_is_pressed = false,
 	send_composed_key_when_right_alt_is_pressed = false,
 
@@ -56,8 +69,6 @@ return {
 		{ key = "]", mods = "LEADER", action = wezterm.action.ActivateTabRelative(1) },
 		{ key = "F12", mods = "NONE", action = wezterm.action.ActivateTabRelative(1) },
 	},
-
-	color_scheme = "Catppuccin Mocha",
 }
 
 -- default keybinds
