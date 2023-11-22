@@ -14,6 +14,8 @@ table.insert(keyconfig, {
 		mods = "LEADER",
 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 	},
+})
+table.insert(keyconfig, {
 	{
 		key = "|",
 		mods = "LEADER",
