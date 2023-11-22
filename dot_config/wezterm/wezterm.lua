@@ -3,6 +3,12 @@ local wezterm = require("wezterm")
 -- keybindings
 local keyconfig = {}
 for i = 1, 9 do
+	-- CTRL+ALT + number to activate that tab
+	table.insert(keyconfig, {
+		key = tostring(i),
+		mods = "CTRL|ALT",
+		action = wezterm.action.ActivateTab(i - 1),
+	})
 	-- F1 through F8 to activate that tab
 	table.insert(keyconfig, {
 		key = "F" .. tostring(i),
