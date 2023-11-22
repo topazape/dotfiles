@@ -1,4 +1,7 @@
 local wezterm = require("wezterm")
+local LEFT_ARROW = utf8.char(0xff0b3)
+local SOLID_LEFT_ARROW = utf8.char(0xff0b2)
+local SOLID_RIGHT_ARROW = utf8.char(0xff0b0)
 
 return {
 	color_scheme = "Catppuccin Mocha",
@@ -16,8 +19,24 @@ return {
 	enable_tab_bar = true,
 	tab_bar_style = {
 		active_tab_left = wezterm.format({
-			{ Background = { Color = 0x2f2f2f } },
-			{ Text = { Color = 0x2f2f2f } },
+			{ Background = { Color = "#0b0022" } },
+			{ Foreground = { Color = "#3c1361" } },
+			{ Text = SOLID_LEFT_ARROW },
+		}),
+		active_tab_right = wezterm.format({
+			{ Background = { Color = "#0b0022" } },
+			{ Foreground = { Color = "#3c1361" } },
+			{ Text = SOLID_RIGHT_ARROW },
+		}),
+		inactive_tab_left = wezterm.format({
+			{ Background = { Color = "#0b0022" } },
+			{ Foreground = { Color = "#1b1032" } },
+			{ Text = SOLID_LEFT_ARROW },
+		}),
+		inactive_tab_right = wezterm.format({
+			{ Background = { Color = "#0b0022" } },
+			{ Foreground = { Color = "#1b1032" } },
+			{ Text = SOLID_RIGHT_ARROW },
 		}),
 	},
 
