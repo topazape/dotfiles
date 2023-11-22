@@ -68,7 +68,7 @@ return {
 	adjust_window_size_when_changing_font_size = false,
 
 	-- tab
-	enable_tab_bar = true,
+	-- enable_tab_bar = true,
 
 	-- look and feel
 	window_background_opacity = 1.00,
