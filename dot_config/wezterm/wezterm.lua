@@ -41,7 +41,6 @@ return {
 
 	-- keybindings
 	disable_default_key_bindings = true, -- 初期のキーバインドは利用しない場合
-	keys = keyconfig,
 
 	color_scheme = "Catppuccin Mocha",
 }
