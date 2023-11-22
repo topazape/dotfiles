@@ -3,6 +3,7 @@ local act = wezterm.action
 
 return {
 	keys = {
+		-- font
 		{ key = "+", mods = "CTRL", action = act.IncreaseFontSize },
 		{ key = "-", mods = "CTRL", action = act.DecreaseFontSize },
 		{ key = "+", mods = "SUPER", action = act.IncreaseFontSize },
@@ -10,123 +11,70 @@ return {
 		{ key = "0", mods = "CTRL", action = act.ResetFontSize },
 		{ key = "0", mods = "SUPER", action = act.ResetFontSize },
 
+		-- pane
 		{ key = "-", mods = "LEADER", action = act.SplitVertical({ domain = "CurrentPaneDomain" }) },
 		{ key = "|", mods = "LEADER", action = act.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 
+		-- tab selection
 		{ key = "1", mods = "SUPER", action = act.ActivateTab(0) },
 		{ key = "1", mods = "LEADER", action = act.ActivateTab(0) },
 		{ key = "F1", mods = "NONE", action = act.ActivateTab(0) },
-
 		{ key = "2", mods = "SUPER", action = act.ActivateTab(1) },
 		{ key = "2", mods = "LEADER", action = act.ActivateTab(1) },
 		{ key = "F2", mods = "NONE", action = act.ActivateTab(1) },
-
 		{ key = "3", mods = "SUPER", action = act.ActivateTab(2) },
 		{ key = "3", mods = "LEADER", action = act.ActivateTab(2) },
 		{ key = "F3", mods = "NONE", action = act.ActivateTab(2) },
-
 		{ key = "4", mods = "SUPER", action = act.ActivateTab(3) },
 		{ key = "4", mods = "LEADER", action = act.ActivateTab(3) },
 		{ key = "F4", mods = "NONE", action = act.ActivateTab(3) },
-
 		{ key = "5", mods = "SUPER", action = act.ActivateTab(4) },
 		{ key = "5", mods = "LEADER", action = act.ActivateTab(4) },
 		{ key = "F5", mods = "NONE", action = act.ActivateTab(4) },
-
 		{ key = "6", mods = "SUPER", action = act.ActivateTab(5) },
 		{ key = "6", mods = "LEADER", action = act.ActivateTab(5) },
 		{ key = "F6", mods = "NONE", action = act.ActivateTab(5) },
-
 		{ key = "7", mods = "SUPER", action = act.ActivateTab(6) },
 		{ key = "7", mods = "LEADER", action = act.ActivateTab(6) },
 		{ key = "F7", mods = "NONE", action = act.ActivateTab(6) },
-
 		{ key = "8", mods = "SUPER", action = act.ActivateTab(7) },
 		{ key = "8", mods = "LEADER", action = act.ActivateTab(7) },
 		{ key = "F8", mods = "NONE", action = act.ActivateTab(7) },
-
 		{ key = "9", mods = "SUPER", action = act.ActivateTab(-1) },
 		{ key = "9", mods = "LEADER", action = act.ActivateTab(8) },
 		{ key = "F9", mods = "NONE", action = act.ActivateTab(8) },
+		{ key = "[", mods = "SUPER", action = act.ActivateTabRelative(-1) },
+		{ key = "[", mods = "LEADER", action = act.ActivateTabRelative(-1) },
+		{ key = "F11", mods = "NONE", action = act.ActivateTabRelative(-1) },
+		{ key = "]", mods = "SUPER", action = act.ActivateTabRelative(1) },
+		{ key = "]", mods = "LEADER", action = act.ActivateTabRelative(1) },
+		{ key = "F12", mods = "NONE", action = act.ActivateTabRelative(1) },
 
-		{ key = "F", mods = "CTRL", action = act.Search("CurrentSelectionOrEmptyString") },
-
-		{ key = "K", mods = "CTRL", action = act.ClearScrollback("ScrollbackOnly") },
-
-		{ key = "L", mods = "CTRL", action = act.ShowDebugOverlay },
-		{ key = "M", mods = "CTRL", action = act.Hide },
-		{ key = "M", mods = "SHIFT|CTRL", action = act.Hide },
-		{ key = "N", mods = "CTRL", action = act.SpawnWindow },
-		{ key = "N", mods = "SHIFT|CTRL", action = act.SpawnWindow },
-		{ key = "P", mods = "CTRL", action = act.ActivateCommandPalette },
-		{ key = "P", mods = "SHIFT|CTRL", action = act.ActivateCommandPalette },
-		{ key = "Q", mods = "CTRL", action = act.QuitApplication },
-		{ key = "Q", mods = "SHIFT|CTRL", action = act.QuitApplication },
-		{ key = "R", mods = "CTRL", action = act.ReloadConfiguration },
-		{ key = "R", mods = "SHIFT|CTRL", action = act.ReloadConfiguration },
-		{ key = "T", mods = "CTRL", action = act.SpawnTab("CurrentPaneDomain") },
-		{ key = "T", mods = "SHIFT|CTRL", action = act.SpawnTab("CurrentPaneDomain") },
-		{
-			key = "U",
-			mods = "CTRL",
-			action = act.CharSelect({ copy_on_select = true, copy_to = "ClipboardAndPrimarySelection" }),
-		},
-		{
-			key = "U",
-			mods = "SHIFT|CTRL",
-			action = act.CharSelect({ copy_on_select = true, copy_to = "ClipboardAndPrimarySelection" }),
-		},
-		{ key = "V", mods = "CTRL", action = act.PasteFrom("Clipboard") },
-		{ key = "V", mods = "SHIFT|CTRL", action = act.PasteFrom("Clipboard") },
-		{ key = "W", mods = "CTRL", action = act.CloseCurrentTab({ confirm = true }) },
-		{ key = "W", mods = "SHIFT|CTRL", action = act.CloseCurrentTab({ confirm = true }) },
 		{ key = "X", mods = "CTRL", action = act.ActivateCopyMode },
 		{ key = "X", mods = "SHIFT|CTRL", action = act.ActivateCopyMode },
-		{ key = "Z", mods = "CTRL", action = act.TogglePaneZoomState },
-		{ key = "Z", mods = "SHIFT|CTRL", action = act.TogglePaneZoomState },
-		{ key = "[", mods = "SHIFT|SUPER", action = act.ActivateTabRelative(-1) },
-		{ key = "]", mods = "SHIFT|SUPER", action = act.ActivateTabRelative(1) },
-		{ key = "^", mods = "CTRL", action = act.ActivateTab(5) },
-		{ key = "^", mods = "SHIFT|CTRL", action = act.ActivateTab(5) },
-		{ key = "_", mods = "CTRL", action = act.DecreaseFontSize },
-		{ key = "_", mods = "SHIFT|CTRL", action = act.DecreaseFontSize },
+
+		-- search
+		{ key = "f", mods = "SUPER", action = act.Search("CurrentSelectionOrEmptyString") },
+		-- copy
 		{ key = "c", mods = "SHIFT|CTRL", action = act.CopyTo("Clipboard") },
 		{ key = "c", mods = "SUPER", action = act.CopyTo("Clipboard") },
-		{ key = "f", mods = "SHIFT|CTRL", action = act.Search("CurrentSelectionOrEmptyString") },
-		{ key = "f", mods = "SUPER", action = act.Search("CurrentSelectionOrEmptyString") },
-		{ key = "h", mods = "SHIFT|CTRL", action = act.HideApplication },
-		{ key = "h", mods = "SUPER", action = act.HideApplication },
-		{ key = "k", mods = "SHIFT|CTRL", action = act.ClearScrollback("ScrollbackOnly") },
-		{ key = "k", mods = "SUPER", action = act.ClearScrollback("ScrollbackOnly") },
-		{ key = "l", mods = "SHIFT|CTRL", action = act.ShowDebugOverlay },
-		{ key = "m", mods = "SHIFT|CTRL", action = act.Hide },
-		{ key = "m", mods = "SUPER", action = act.Hide },
-		{ key = "n", mods = "SHIFT|CTRL", action = act.SpawnWindow },
-		{ key = "n", mods = "SUPER", action = act.SpawnWindow },
-		{ key = "n", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
-		{ key = "p", mods = "SHIFT|CTRL", action = act.ActivateCommandPalette },
-		{ key = "q", mods = "SHIFT|CTRL", action = act.QuitApplication },
-		{ key = "q", mods = "SUPER", action = act.QuitApplication },
-		{ key = "r", mods = "SHIFT|CTRL", action = act.ReloadConfiguration },
-		{ key = "r", mods = "SUPER", action = act.ReloadConfiguration },
-		{ key = "t", mods = "SHIFT|CTRL", action = act.SpawnTab("CurrentPaneDomain") },
-		{ key = "t", mods = "SUPER", action = act.SpawnTab("CurrentPaneDomain") },
-		{
-			key = "u",
-			mods = "SHIFT|CTRL",
-			action = act.CharSelect({ copy_on_select = true, copy_to = "ClipboardAndPrimarySelection" }),
-		},
-		{ key = "v", mods = "SHIFT|CTRL", action = act.PasteFrom("Clipboard") },
+		{ key = "Copy", mods = "NONE", action = act.CopyTo("Clipboard") },
+
+		-- paste
 		{ key = "v", mods = "SUPER", action = act.PasteFrom("Clipboard") },
-		{ key = "w", mods = "SHIFT|CTRL", action = act.CloseCurrentTab({ confirm = true }) },
+		{ key = "v", mods = "SHIFT|CTRL", action = act.PasteFrom("Clipboard") },
+		{ key = "Paste", mods = "NONE", action = act.PasteFrom("Clipboard") },
+
+		{ key = "n", mods = "SUPER", action = act.SpawnWindow },
+		{ key = "p", mods = "SUPER", action = act.ActivateCommandPalette },
+		{ key = "q", mods = "SUPER", action = act.QuitApplication },
+		{ key = "r", mods = "SUPER", action = act.ReloadConfiguration },
+
+		{ key = "n", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
+		{ key = "t", mods = "SUPER", action = act.SpawnTab("CurrentPaneDomain") },
 		{ key = "w", mods = "SUPER", action = act.CloseCurrentTab({ confirm = true }) },
-		{ key = "x", mods = "SHIFT|CTRL", action = act.ActivateCopyMode },
-		{ key = "z", mods = "SHIFT|CTRL", action = act.TogglePaneZoomState },
-		{ key = "{", mods = "SUPER", action = act.ActivateTabRelative(-1) },
-		{ key = "{", mods = "SHIFT|SUPER", action = act.ActivateTabRelative(-1) },
-		{ key = "}", mods = "SUPER", action = act.ActivateTabRelative(1) },
-		{ key = "}", mods = "SHIFT|SUPER", action = act.ActivateTabRelative(1) },
-		{ key = "phys:Space", mods = "SHIFT|CTRL", action = act.QuickSelect },
+		{ key = "w", mods = "LEADER", action = act.CloseCurrentTab({ confirm = true }) },
+
 		{ key = "PageUp", mods = "SHIFT", action = act.ScrollByPage(-1) },
 		{ key = "PageUp", mods = "CTRL", action = act.ActivateTabRelative(-1) },
 		{ key = "PageUp", mods = "SHIFT|CTRL", action = act.MoveTabRelative(-1) },
@@ -141,8 +89,6 @@ return {
 		{ key = "UpArrow", mods = "SHIFT|ALT|CTRL", action = act.AdjustPaneSize({ "Up", 1 }) },
 		{ key = "DownArrow", mods = "SHIFT|CTRL", action = act.ActivatePaneDirection("Down") },
 		{ key = "DownArrow", mods = "SHIFT|ALT|CTRL", action = act.AdjustPaneSize({ "Down", 1 }) },
-		{ key = "Copy", mods = "NONE", action = act.CopyTo("Clipboard") },
-		{ key = "Paste", mods = "NONE", action = act.PasteFrom("Clipboard") },
 	},
 
 	key_tables = {
