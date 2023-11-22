@@ -1,7 +1,33 @@
 local wezterm = require("wezterm")
-local LEFT_ARROW = utf8.char(0xff0b3)
-local SOLID_LEFT_ARROW = utf8.char(0xff0b2)
-local SOLID_RIGHT_ARROW = utf8.char(0xff0b0)
+local config = wezterm.config_builder()
+-- The filled in variant of the < symbol
+local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
+
+-- The filled in variant of the > symbol
+local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
+
+config.tab_bar_style = {
+	active_tab_left = wezterm.format({
+		{ Background = { Color = "#0b0022" } },
+		{ Foreground = { Color = "#2b2042" } },
+		{ Text = SOLID_LEFT_ARROW },
+	}),
+	active_tab_right = wezterm.format({
+		{ Background = { Color = "#0b0022" } },
+		{ Foreground = { Color = "#2b2042" } },
+		{ Text = SOLID_RIGHT_ARROW },
+	}),
+	inactive_tab_left = wezterm.format({
+		{ Background = { Color = "#0b0022" } },
+		{ Foreground = { Color = "#1b1032" } },
+		{ Text = SOLID_LEFT_ARROW },
+	}),
+	inactive_tab_right = wezterm.format({
+		{ Background = { Color = "#0b0022" } },
+		{ Foreground = { Color = "#1b1032" } },
+		{ Text = SOLID_RIGHT_ARROW },
+	}),
+}
 
 return {
 	color_scheme = "Catppuccin Mocha",
@@ -17,28 +43,6 @@ return {
 
 	-- tab
 	enable_tab_bar = true,
-	tab_bar_style = {
-		active_tab_left = wezterm.format({
-			{ Background = { Color = "#0b0022" } },
-			{ Foreground = { Color = "#3c1361" } },
-			{ Text = SOLID_LEFT_ARROW },
-		}),
-		active_tab_right = wezterm.format({
-			{ Background = { Color = "#0b0022" } },
-			{ Foreground = { Color = "#3c1361" } },
-			{ Text = SOLID_RIGHT_ARROW },
-		}),
-		inactive_tab_left = wezterm.format({
-			{ Background = { Color = "#0b0022" } },
-			{ Foreground = { Color = "#1b1032" } },
-			{ Text = SOLID_LEFT_ARROW },
-		}),
-		inactive_tab_right = wezterm.format({
-			{ Background = { Color = "#0b0022" } },
-			{ Foreground = { Color = "#1b1032" } },
-			{ Text = SOLID_RIGHT_ARROW },
-		}),
-	},
 
 	-- look and feel
 	window_background_opacity = 1.00,
