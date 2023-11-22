@@ -9,6 +9,16 @@ for i = 1, 9 do
 		action = wezterm.action.ActivateTab(i - 1),
 	})
 end
+table.insert(keyconfig, {
+	key = "C",
+	mods = "CTRL",
+	action = wezterm.action.CopyTo("Clipboard"),
+})
+table.insert(keyconfig, {
+	key = "V",
+	mods = "CTRL",
+	action = wezterm.action.PasteFrom("Clipboard"),
+})
 
 return {
 	font = wezterm.font_with_fallback({
@@ -34,6 +44,7 @@ return {
 	send_composed_key_when_right_alt_is_pressed = false,
 
 	-- keybindings
+	disable_default_key_bindings = true,
 	keys = keyconfig,
 
 	color_scheme = "Catppuccin Mocha",
