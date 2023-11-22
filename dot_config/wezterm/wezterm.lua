@@ -11,12 +11,12 @@ for i = 1, 9 do
 end
 table.insert(keyconfig, {
 	key = "C",
-	mods = "CTRL",
+	mods = "CTRL|SUPER",
 	action = wezterm.action.CopyTo("Clipboard"),
 })
 table.insert(keyconfig, {
 	key = "V",
-	mods = "CTRL",
+	mods = "CTRL|SUPER",
 	action = wezterm.action.PasteFrom("Clipboard"),
 })
 
