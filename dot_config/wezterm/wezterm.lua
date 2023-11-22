@@ -4,6 +4,7 @@ local keyconfig = {
 	{ mods = "LEADER", key = "n", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
 	{ mods = "LEADER", key = "|", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
 	{ mods = "LEADER", key = "-", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
+	{ mods = "CTRL|ALT", key = "1", action = wezterm.action.ActivateTab(0) },
 	{ mods = "NONE", key = "F1", action = wezterm.action.ActivateTab(0) },
 	{ mods = "NONE", key = "F2", action = wezterm.action.ActivateTab(1) },
 	{ mods = "NONE", key = "F3", action = wezterm.action.ActivateTab(2) },
@@ -39,6 +40,7 @@ return {
 	send_composed_key_when_right_alt_is_pressed = false,
 
 	-- keybindings
+	disable_default_key_bindings = true,
 	leader = { mods = "CTRL", key = "t", timeout_milliseconds = 1000 },
 	keys = keyconfig,
 
