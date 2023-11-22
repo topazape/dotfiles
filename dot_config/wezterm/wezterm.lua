@@ -1,5 +1,21 @@
 local wezterm = require("wezterm")
 
+-- keybindings
+local keyconfig = {}
+for i = 1, 8 do
+	-- CTRL+ALT + number to activate that tab
+	table.insert(keyconfig, {
+		key = tostring(i),
+		mods = "CTRL|ALT",
+		action = wezterm.action.ActivateTab(i - 1),
+	})
+	-- F1 through F8 to activate that tab
+	table.insert(keyconfig, {
+		key = "F" .. tostring(i),
+		action = wezterm.action.ActivateTab(i - 1),
+	})
+end
+
 return {
 	font = wezterm.font_with_fallback({
 		{ family = "Berkeley Mono" },
@@ -22,6 +38,8 @@ return {
 
 	send_composed_key_when_left_alt_is_pressed = false,
 	send_composed_key_when_right_alt_is_pressed = false,
+
+	keyconfig,
 
 	color_scheme = "Catppuccin Mocha",
 }
