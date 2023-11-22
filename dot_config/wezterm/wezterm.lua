@@ -50,7 +50,7 @@ return {
 	send_composed_key_when_right_alt_is_pressed = false,
 
 	-- keybindings
-	disable_default_key_bindings = true,
+	-- disable_default_key_bindings = true,
 	leader = { mods = "CTRL", key = "t", timeout_milliseconds = 1000 },
 	keys = keyconfig,
 
