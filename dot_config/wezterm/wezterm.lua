@@ -1,6 +1,17 @@
 local wezterm = require("wezterm")
 
-local keyconfig = {}
+local keyconfig = {
+	{
+		key = "|",
+		mods = "LEADER",
+		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+	},
+	{
+		key = "-",
+		mods = "LEADER",
+		action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+	},
+}
 for i = 1, 9 do
 	-- F1 through F8 to activate that tab
 	table.insert(keyconfig, {
@@ -8,16 +19,16 @@ for i = 1, 9 do
 		action = wezterm.action.ActivateTab(i - 1),
 	})
 end
-table.insert(keyconfig, {
-	key = "|",
-	mods = "LEADER",
-	action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
-})
-table.insert(keyconfig, {
-	key = "-",
-	mods = "LEADER",
-	action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
-})
+-- table.insert(keyconfig, {
+-- 	key = "|",
+-- 	mods = "LEADER",
+-- 	action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
+-- })
+-- table.insert(keyconfig, {
+-- 	key = "-",
+-- 	mods = "LEADER",
+-- 	action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }),
+-- })
 
 return {
 	font = wezterm.font_with_fallback({
