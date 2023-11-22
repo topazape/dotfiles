@@ -51,7 +51,6 @@ return {
 
 		{ key = "F", mods = "CTRL", action = act.Search("CurrentSelectionOrEmptyString") },
 
-		{ key = "H", mods = "CTRL", action = act.HideApplication },
 		{ key = "K", mods = "CTRL", action = act.ClearScrollback("ScrollbackOnly") },
 
 		{ key = "L", mods = "CTRL", action = act.ShowDebugOverlay },
