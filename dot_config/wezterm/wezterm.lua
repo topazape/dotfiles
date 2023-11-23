@@ -31,8 +31,19 @@ return {
 	leader = { mods = "CTRL", key = "t", timeout_milliseconds = 1000 },
 	keys = {
 		-- pane
+		---- split
 		{ key = "-", mods = "LEADER", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
 		{ key = "|", mods = "LEADER", action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }) },
+		---- move
+		{ key = "h", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Left") },
+		{ key = "j", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Down") },
+		{ key = "k", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Up") },
+		{ key = "l", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Right") },
+		---- pane size
+		{ key = "H", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Left", 1 }) },
+		{ key = "J", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Down", 1 }) },
+		{ key = "K", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Up", 1 }) },
+		{ key = "L", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Right", 1 }) },
 		-- tab
 		---- create
 		{ key = "n", mods = "LEADER", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
