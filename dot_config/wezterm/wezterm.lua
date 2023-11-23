@@ -40,10 +40,10 @@ return {
 		{ key = "k", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Up") },
 		{ key = "l", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Right") },
 		---- pane size
-		{ key = "H", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Left", 1 }) },
-		{ key = "J", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Down", 1 }) },
-		{ key = "K", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Up", 1 }) },
-		{ key = "L", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Right", 1 }) },
+		{ key = "LeftArrow", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Left", 1 }) },
+		{ key = "RightArrow", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Down", 1 }) },
+		{ key = "UpArrow", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Up", 1 }) },
+		{ key = "DownArrow", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Right", 1 }) },
 		-- tab
 		---- create
 		{ key = "n", mods = "LEADER", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
