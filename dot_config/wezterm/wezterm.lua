@@ -39,15 +39,19 @@ return {
 		{ key = "j", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Down") },
 		{ key = "k", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Up") },
 		{ key = "l", mods = "LEADER", action = wezterm.action.ActivatePaneDirection("Right") },
-		---- pane size
+		---- adjust
+		{ key = "H", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Left", 1 }) },
+		{ key = "J", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Down", 1 }) },
+		{ key = "K", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Up", 1 }) },
+		{ key = "L", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Right", 1 }) },
 		{ key = "LeftArrow", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Left", 1 }) },
-		{ key = "RightArrow", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Down", 1 }) },
+		{ key = "DownArrow", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Down", 1 }) },
 		{ key = "UpArrow", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Up", 1 }) },
-		{ key = "DownArrow", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Right", 1 }) },
+		{ key = "RightArrow", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Right", 1 }) },
 		-- tab
 		---- create
 		{ key = "n", mods = "LEADER", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
-		---- selection
+		---- select
 		{ key = "1", mods = "LEADER", action = wezterm.action.ActivateTab(0) },
 		{ key = "F1", mods = "NONE", action = wezterm.action.ActivateTab(0) },
 		{ key = "2", mods = "LEADER", action = wezterm.action.ActivateTab(1) },
