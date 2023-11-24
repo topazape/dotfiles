@@ -24,12 +24,12 @@ return {
 		fade_out_duration_ms = 50,
 	},
 
-	-- keys
+	-- key config
 	send_composed_key_when_left_alt_is_pressed = false,
 	send_composed_key_when_right_alt_is_pressed = false,
-
-	-- keybindings
+	---- set leader_key to achieve tmux-like keybinds
 	leader = { mods = "CTRL", key = "t", timeout_milliseconds = 1000 },
+	---- additional keybinds
 	keys = {
 		-- pane
 		---- split
