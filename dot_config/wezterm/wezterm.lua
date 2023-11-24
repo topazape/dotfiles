@@ -50,7 +50,7 @@ return {
 		{ key = "RightArrow", mods = "LEADER", action = wezterm.action.AdjustPaneSize({ "Right", 1 }) },
 		-- tab
 		---- create
-		{ key = "n", mods = "LEADER", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
+		{ key = "t", mods = "LEADER", action = wezterm.action.SpawnTab("CurrentPaneDomain") },
 		---- select
 		{ key = "1", mods = "LEADER", action = wezterm.action.ActivateTab(0) },
 		{ key = "F1", mods = "NONE", action = wezterm.action.ActivateTab(0) },
