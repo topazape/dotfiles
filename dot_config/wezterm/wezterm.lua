@@ -20,7 +20,7 @@ return {
 		border_bottom_height = "0.25cell",
 		border_top_height = "0.25cell",
 		border_left_color = "white",
-		border_right_color = "purple",
+		border_right_color = "gray",
 		border_bottom_color = "purple",
 		border_top_color = "purple",
 	},
