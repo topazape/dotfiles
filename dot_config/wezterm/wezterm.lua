@@ -14,6 +14,16 @@ return {
 	adjust_window_size_when_changing_font_size = false,
 
 	-- look and feel
+	window_frame = {
+		border_left_width = "0.5cell",
+		border_right_width = "0.5cell",
+		border_bottom_height = "0.25cell",
+		border_top_height = "0.25cell",
+		border_left_color = "purple",
+		border_right_color = "purple",
+		border_bottom_color = "purple",
+		border_top_color = "purple",
+	},
 	window_background_opacity = 1.00,
 	macos_window_background_blur = 20,
 	use_fancy_tab_bar = false,
