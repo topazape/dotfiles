@@ -15,8 +15,8 @@ return {
 
 	-- look and feel
 	window_frame = {
-		border_left_width = "0.1cell",
-		border_right_width = "0.1cell",
+		border_left_width = "0.25cell",
+		border_right_width = "0.25cell",
 		border_bottom_height = "0.25cell",
 		border_top_height = "0.25cell",
 		border_left_color = "purple",
