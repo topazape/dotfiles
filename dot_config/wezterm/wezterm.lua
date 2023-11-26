@@ -17,7 +17,7 @@ return {
 	window_frame = {
 		border_left_width = "0.2cell",
 		border_right_width = "0.2cell",
-		border_bottom_height = "0.2cell",
+		border_bottom_height = "0.1cell",
 		border_top_height = "0.0cell",
 		border_left_color = "purple",
 		border_right_color = "purple",
