@@ -20,9 +20,9 @@ return {
 		border_bottom_height = "0.1cell",
 		border_top_height = "0.0cell",
 		border_left_color = "gray88",
-		border_right_color = "purple",
-		border_bottom_color = "purple",
-		border_top_color = "purple",
+		border_right_color = "gray88",
+		border_bottom_color = "gray88",
+		border_top_color = "gray88",
 	},
 
 	window_background_opacity = 1.00,
