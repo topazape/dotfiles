@@ -124,6 +124,11 @@ if [[ -d $(brew --prefix)/share/google-cloud-sdk ]]; then
   source $(brew --prefix)/share/google-cloud-sdk/path.zsh.inc
   source $(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc
 fi
+## openblas
+if [[ -d $(brew --prefix)/opt/openblas ]]; then
+  export LDFLAGS="${LDFLAGS} -L/opt/homebrew/opt/openblas/lib"
+  export CPPFLAGS="${CPPFLAGS} -I/opt/homebrew/opt/openblas/include"
+fi
 
 # Programing Languages
 ### npm
