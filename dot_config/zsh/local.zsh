@@ -23,20 +23,20 @@ fi
 case ${OSTYPE} in
   darwin*)
     alias rm="rm -i"
-    if [[ -d $(brew --prefix)/opt/coreutils/libexec/gnubin ]]; then
-      path=($(brew --prefix)/opt/coreutils/libexec/gnubin $path)
+    if [[ -d $(brew --prefix coreutils) ]]; then
+      path=($(brew --prefix coreutils)/libexec/gnubin $path)
       # aliases
       alias ls="ls --classify --color=auto"
       alias ll="ls -lh"
       alias la="ls -a"
     fi
-    if [[ -d $(brew --prefix)/opt/grep/libexec/gnubin ]]; then
-      path=($(brew --prefix)/opt/grep/libexec/gnubin $path)
+    if [[ -d $(brew --prefix grep) ]]; then
+      path=($(brew --prefix grep)/libexec/gnubin $path)
       # aliases
       alias grep="grep --color=auto"
     fi
-    if [[ -d $(brew --prefix)/opt/findutils/libexec/gnubin ]]; then
-      path=($(brew --prefix)/opt/findutils/libexec/gnubin $path)
+    if [[ -d $(brew --prefix findutils) ]]; then
+      path=($(brew --prefix findutils)/libexec/gnubin $path)
     fi
     ;;
   linux*)
@@ -125,9 +125,9 @@ if [[ -d $(brew --prefix)/share/google-cloud-sdk ]]; then
   source $(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc
 fi
 ## openblas
-if [[ -d $(brew --prefix)/opt/openblas ]]; then
-  export LDFLAGS="${LDFLAGS} -L/opt/homebrew/opt/openblas/lib"
-  export CPPFLAGS="${CPPFLAGS} -I/opt/homebrew/opt/openblas/include"
+if [[ -d $(brew --prefix openblas) ]]; then
+  export LDFLAGS="${LDFLAGS} -L$(brew --prefix openblas)/lib"
+  export CPPFLAGS="${CPPFLAGS} -I$(brew --prefix openblas)/include"
 fi
 
 # Programing Languages
@@ -171,10 +171,10 @@ if type go > /dev/null 2>&1; then
   export PATH=${GOPATH}/bin:${PATH}
 fi
 ## Java
-if [[ -d $(brew --prefix)/opt/openjdk ]]; then
-  export JAVA_HOME="$(brew --prefix)/opt/openjdk"
+if [[ -d $(brew --prefix openjdk) ]]; then
+  export JAVA_HOME=$(brew --prefix openjdk)
   export PATH=${JAVA_HOME}/bin:${PATH}
-  export CPPFLAGS="${CPPFLAGS} -I/opt/homebrew/opt/openjdk/include"
+  export CPPFLAGS="${CPPFLAGS} -I$(brew --prefix openjdk)/include"
   export JDK_TOOL_OPTIONS="-Duser.language=en"
 fi
 ### maven
