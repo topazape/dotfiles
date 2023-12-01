@@ -126,8 +126,8 @@ if [[ -d $(brew --prefix)/share/google-cloud-sdk ]]; then
 fi
 ## openblas
 if [[ -d $(brew --prefix openblas) ]]; then
-  export LDFLAGS="${LDFLAGS} -L$(brew --prefix openblas)/lib"
-  export CPPFLAGS="${CPPFLAGS} -I$(brew --prefix openblas)/include"
+  # export LDFLAGS="${LDFLAGS} -L$(brew --prefix openblas)/lib"
+  # export CPPFLAGS="${CPPFLAGS} -I$(brew --prefix openblas)/include"
 fi
 
 # Programing Languages
