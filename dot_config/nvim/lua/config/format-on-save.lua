@@ -32,7 +32,6 @@ format_on_save.setup({
 		zsh = {
 			formatters.shfmt, -- default, Google style
 		},
-
 		toml = {
 			formatters.shell({ cmd = { "taplo", "format", "-" } }),
 		},
