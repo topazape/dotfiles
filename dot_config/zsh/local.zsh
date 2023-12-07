@@ -122,8 +122,8 @@ fi
 ## google-cloud-sdk
 if [[ -d $(brew --prefix)/share/google-cloud-sdk ]]; then
   echo "yes"
-  source $(brew --prefix)/share/google-cloud-sdk/path.zsh.inc
-  source $(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc
+  source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+  source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 fi
 ## openblas
 if [[ -d $(brew --prefix openblas) ]]; then
