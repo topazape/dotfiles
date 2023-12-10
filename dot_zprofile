@@ -1,3 +1,5 @@
+export HISTSIZE=100000
+
 # XDG
 if [ ! -d ${HOME}/.config ]; then
   mkdir -p ${HOME}/.config
