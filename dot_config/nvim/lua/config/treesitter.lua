@@ -39,7 +39,9 @@ require("nvim-treesitter.configs").setup({
 	},
 	indent = {
 		enable = true,
-		disable = {},
+		disable = {
+			"yaml",
+		},
 	},
 	rainbow = {
 		enable = true,
