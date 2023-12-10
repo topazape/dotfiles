@@ -1,9 +1,3 @@
-# in memory history
-export HISTSIZE=100
-
-# num of lines to save in history
-export SAVEHIST=100000
-
 # XDG
 if [ ! -d ${HOME}/.config ]; then
   mkdir -p ${HOME}/.config
