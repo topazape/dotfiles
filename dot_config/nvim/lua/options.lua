@@ -39,6 +39,8 @@ local options = {
 	equalalways = true, -- 画面分割時のリサイズを均等にする
 	---- floating windows を半透明にする
 	winblend = 20,
+	---- モデルラインの有効化
+	modeline = true,
 
 	-- 補完
 	---- コマンドライン補完を強化
