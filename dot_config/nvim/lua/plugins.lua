@@ -17,6 +17,13 @@ return {
 			require("config/treesitter")
 		end,
 	},
+	---- tree-sitter rainbow
+	{
+		"HiPhish/nvim-ts-rainbow2",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+	},
 
 	-- lsp
 	{
