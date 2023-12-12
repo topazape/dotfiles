@@ -6,7 +6,6 @@ return {
 
 	-- font
 	font = wezterm.font_with_fallback({
-		{ family = "SF Mono" },
 		{ family = "Berkeley Mono" },
 		{ family = "Pretendard JP" },
 	}),
