@@ -1,0 +1,86 @@
+# vim: set filetype=dosini:
+
+[sqlfluff]
+dialect = bigquery
+sql_file_exts = .sql,.bq,.bql
+rules = core,AL01,CV01,CV02,CV06,CV08,CV09,CV10,CV11,LT04,LT09,RF02,RF05,RF06,ST01,ST02,ST04,ST05,AM05,AM07
+# LT05: layout.long_lines
+exclude_rules = LT05,LT08
+
+# インデント
+[sqlfluff:indentation]
+# インデントはスペース
+indent_unit = space
+# インデントは 2 スペース
+tab_space_size = 2
+#  JOIN はインデントしない
+indented_joins = False
+# JOIN の ON はインデントする
+indented_using_on = True
+# JOIN の複数の ON はインデントする
+indented_on_contents = True
+# CTE はインデントしない
+indented_cte = False
+# CASE の THEN はインデントする
+indented_then = True
+# THEN の中はインデントしない
+indented_then_contents = False
+# 暗黙的なインデントを許可
+allow_implicit_indents = True
+
+# カンマ
+[sqlfluff:layout:type:comma]
+# カンマの前にスペースを入れない
+spacing_before = touch
+# カンマの後にスペースを入れる
+spacing_after = single
+# カンマは行頭に置く
+line_position = leading
+
+# 二項演算子
+[sqlfluff:layout:type:binary_operator]
+#  演算子の前後にスペースを入れる
+spacing_within = single
+line_position = leading
+
+# テーブルのエイリアスには AS をつける
+[sqlfluff:rules:aliasing.table]
+aliasing = explicit
+
+# カラムのエイリアスには AS をつける
+[sqlfluff:rules:aliasing.column]
+aliasing = explicit
+
+# カラム式には AS をつける
+[sqlfluff:rules:aliasing.expression]
+allow_scalar = True
+
+# 予約語は大文字統一
+[sqlfluff:rules:capitalisation.keywords]
+capitalisation_policy = upper
+
+# 識別子は小文字統一
+[sqlfluff:rules:capitalisation.identifiers]
+capitalisation_policy = lower
+
+# 関数名は大文字統一
+[sqlfluff:rules:capitalisation.functions]
+extented_capitalisation_policy = upper
+
+# Boolean や NULL は大文字統一
+[sqlfluff:rules:capitalisation.literals]
+capitalisation_policy = upper
+
+# データ型は大文字統一
+[sqlfluff:rules:capitalisation.types]
+capitalisation_policy = upper
+
+# 文の末尾にはセミコロンをつける
+[sqlfluff:rules:convention.terminator]
+multiline_newline = True
+require_final_semicolon = True
+
+# シングルクォートを推奨
+[sqlfluff:rules:convention.quoted_literals]
+force_enable = False
+preferred_quoted_literal_style = single_quotes
