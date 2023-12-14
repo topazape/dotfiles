@@ -39,8 +39,10 @@ local handlers = {
 						rope_completion = { enabled = false },
 						yapf = { enabled = false },
 						-- 3rd-party plugins
-						pylsp_mypy = { enabled = true },
-						mypy = { enabled = true },
+						---- type checker
+						pylsp_mypy = {
+							enabled = true,
+						},
 					},
 				},
 			},
