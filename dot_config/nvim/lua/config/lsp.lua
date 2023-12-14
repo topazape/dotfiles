@@ -1,6 +1,18 @@
 require("mason").setup()
 require("mason-lspconfig").setup()
 
+local py_path = nil
+if vim.fn.executable("pylsp") then
+	local venv_path = os.getenv("VIRTUAL_ENV")
+	if venv_path ~= nil then
+		py_path = venv_path .. "/bin/python3"
+	elseif vim.g.python3_host_prog ~= nil then
+		py_path = vim.g.python3_host_prog
+	else
+		py_path = vim.fn.exepath("python3")
+	end
+end
+
 local handlers = {
 	-- The first entry (without a key) will be the default handler
 	-- and will be called for each installed server that doesn"t have
@@ -42,6 +54,7 @@ local handlers = {
 						---- type checker
 						pylsp_mypy = {
 							enabled = true,
+							overrides = { "--python-executable", py_path, true },
 						},
 					},
 				},
