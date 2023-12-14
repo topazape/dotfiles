@@ -39,7 +39,7 @@ local handlers = {
 						rope_completion = { enabled = false },
 						yapf = { enabled = false },
 						-- 3rd-party plugins
-						mypy = { enabled = true },
+						-- mypy = { enabled = true },
 						pylsp_mypy = { enabled = true },
 					},
 				},
