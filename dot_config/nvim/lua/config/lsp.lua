@@ -40,6 +40,7 @@ local handlers = {
 						yapf = { enabled = false },
 						-- 3rd-party plugins
 						mypy = { enabled = true },
+						pylsp_mypy = { enabled = true },
 					},
 				},
 			},
