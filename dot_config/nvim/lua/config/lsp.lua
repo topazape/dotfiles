@@ -55,6 +55,7 @@ local handlers = {
 						pylsp_mypy = {
 							enabled = true,
 							overrides = { "--python-executable", py_path, true },
+							report_progress = true,
 						},
 					},
 				},
