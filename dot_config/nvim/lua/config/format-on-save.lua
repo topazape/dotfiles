@@ -23,9 +23,6 @@ format_on_save.setup({
 		rust = {
 			formatters.shell({ cmd = { "rustfmt", "--edition", "2021", "--emit=stdout" } }),
 		},
-		sql = {
-			formatters.shell({ cmd = { "sqlfluff", "fix", "-" } }),
-		},
 		sh = {
 			formatters.shfmt, -- default, Google style
 		},
