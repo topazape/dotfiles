@@ -68,6 +68,7 @@ return {
 			"hrsh7th/vim-vsnip",
 			"hrsh7th/vim-vsnip-integ",
 		},
+		event = "InsertEnter",
 		config = function()
 			require("config/cmp")
 		end,
