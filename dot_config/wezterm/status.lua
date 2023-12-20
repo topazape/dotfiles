@@ -1,3 +1,5 @@
+local wezterm = require("wezterm")
+
 local DEFAULT_FG = { Color = "#9a9eab" }
 local DEFAULT_BG = { Color = "#333333" }
 
@@ -41,5 +43,13 @@ local function right_update(window, pane)
 end
 
 require("wezterm").on("update-status", function(window, pane)
-	right_update(window, pane)
+	local date = wezterm.strftime("%Y-%m-%d %H:%M:%S")
+
+	-- Make it italic and underlined
+	window:set_right_status(wezterm.format({
+		{ Attribute = { Underline = "Single" } },
+		{ Attribute = { Italic = true } },
+		{ Text = "Hello " .. date },
+	}))
+	-- right_update(window, pane)
 end)
