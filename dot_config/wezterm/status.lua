@@ -18,7 +18,7 @@ local function AddElement(elems, header, str)
 end
 
 local function GetDate(elems)
-	AddElement(elems, HEADER_DATE, wezterm.strftime("%Y-%m-%d %a"))
+	AddElement(elems, HEADER_DATE, wezterm.strftime("%Y-%m-%d (%a)"))
 end
 
 local function GetTime(elems)
