@@ -23,15 +23,6 @@ return {
 		-- Each element holds that text for a cell in a "powerline" style << fade
 		local cells = {}
 
-		-- current working directory
-		local cwd_uri = pane:get_current_working_dir()
-		if cwd_uri then
-			cwd_uri = cwd_uri:sub(8) --trim file://
-			local slash = cwd_uri:find("/")
-			local cwd = cwd_uri:sub(slash)
-			table.insert(cells, cwd)
-		end
-
 		-- workspace name
 		local work_space = window:active_workspace()
 		table.insert(cells, work_space)
