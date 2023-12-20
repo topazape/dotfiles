@@ -28,7 +28,8 @@ return {
 		table.insert(cells, work_space)
 
 		-- date/time: e.g.) "Wed Mar 3 08:14"
-		local date = wezterm.strftime("%a %b %-d %H:%M")
+		-- local date = wezterm.strftime("%a %b %-d %H:%M")
+		local date = wezterm.time
 		table.insert(cells, date)
 
 		-- An Entry for each battery (typically 0 or 1 battery)
