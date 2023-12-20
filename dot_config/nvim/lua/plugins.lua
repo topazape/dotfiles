@@ -9,21 +9,21 @@ return {
 		end,
 	},
 
-	-- tree-sitter
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-		config = function()
-			require("config/treesitter")
-		end,
-	},
-	---- tree-sitter rainbow
-	{
-		"HiPhish/nvim-ts-rainbow2",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		},
-	},
+	-- -- tree-sitter
+	-- {
+	-- 	"nvim-treesitter/nvim-treesitter",
+	-- 	build = ":TSUpdate",
+	-- 	config = function()
+	-- 		require("config/treesitter")
+	-- 	end,
+	-- },
+	-- ---- tree-sitter rainbow
+	-- {
+	-- 	"HiPhish/nvim-ts-rainbow2",
+	-- 	dependencies = {
+	-- 		"nvim-treesitter/nvim-treesitter",
+	-- 	},
+	-- },
 
 	-- lsp
 	{
