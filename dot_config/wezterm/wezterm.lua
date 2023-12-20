@@ -18,6 +18,8 @@ return {
 	macos_window_background_blur = 20,
 	use_fancy_tab_bar = false,
 
+	require("status"),
+
 	-- bell
 	audible_bell = "Disabled",
 	visual_bell = {
