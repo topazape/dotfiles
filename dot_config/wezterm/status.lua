@@ -51,10 +51,6 @@ local function GetTime(elems)
 end
 
 local function GetBattery(elems, window)
-	if not window:get_dimensions().is_full_screen then
-		return
-	end
-
 	for _, b in ipairs(wezterm.battery_info()) do
 		AddElement(elems, HEADER_BATTERY, string.format("%.0f%%", b.state_of_charge * 100))
 	end
