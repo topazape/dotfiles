@@ -18,7 +18,7 @@ local function AddElement(elems, header, str)
 
 	table.insert(elems, { Foreground = DEFAULT_FG })
 	table.insert(elems, { Background = DEFAULT_BG })
-	-- table.insert(elems, { Text = str .. SPACE_3 })
+	table.insert(elems, { Text = str .. SPACE_3 })
 end
 
 local function GetHostAndCwd(elems, pane)
