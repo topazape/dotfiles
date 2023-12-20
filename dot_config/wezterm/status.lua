@@ -14,7 +14,7 @@ local function add_element(elems, header, str)
 
 	table.insert(elems, { Foreground = DEFAULT_FG })
 	table.insert(elems, { Background = DEFAULT_BG })
-	table.insert(elems, { Text = str .. "|" })
+	table.insert(elems, { Text = str .. "  " })
 end
 
 local function get_date(elems)
