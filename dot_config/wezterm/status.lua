@@ -17,30 +17,30 @@ local function AddElement(elems, header, str)
 	table.insert(elems, { Text = str .. " " })
 end
 
-local function GetDate(elems)
+local function get_date(elems)
 	AddElement(elems, HEADER_DATE, wezterm.strftime("%Y-%m-%d %a"))
 end
 
-local function GetTime(elems)
+local function get_time(elems)
 	AddElement(elems, HEADER_TIME, wezterm.strftime("%H:%M"))
 end
 
-local function GetBattery(elems, window)
+local function get_battery(elems)
 	for _, b in ipairs(wezterm.battery_info()) do
 		AddElement(elems, HEADER_BATTERY, string.format("%.0f%%", b.state_of_charge * 100))
 	end
 end
 
-local function RightUpdate(window, pane)
+local function RightUpdate(window)
 	local elems = {}
 
-	GetTime(elems)
-	GetDate(elems)
-	GetBattery(elems, window)
+	get_time(elems)
+	get_date(elems)
+	get_battery(elems)
 
 	window:set_right_status(wezterm.format(elems))
 end
 
-wezterm.on("update-status", function(window, pane)
-	RightUpdate(window, pane)
+wezterm.on("update-status", function(window)
+	RightUpdate(window)
 end)
