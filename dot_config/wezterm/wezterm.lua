@@ -1,5 +1,7 @@
 local wezterm = require("wezterm")
 
+require("status")
+
 return {
 	-- color scheme
 	color_scheme = "Catppuccin Mocha",
@@ -17,8 +19,6 @@ return {
 	window_background_opacity = 1.00,
 	macos_window_background_blur = 20,
 	use_fancy_tab_bar = false,
-
-	require("status"),
 
 	-- bell
 	audible_bell = "Disabled",
