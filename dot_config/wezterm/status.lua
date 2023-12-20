@@ -2,8 +2,6 @@ local wezterm = require("wezterm")
 
 local DEFAULT_FG = { Color = "#9a9eab" }
 local DEFAULT_BG = { Color = "#333333" }
-local SPACE_1 = " "
-local SPACE_3 = "   "
 
 local HEADER_DATE = { Foreground = { Color = "#ffccac" }, Text = "󱪺" }
 local HEADER_TIME = { Foreground = { Color = "#bcbabe" }, Text = "" }
@@ -12,11 +10,10 @@ local HEADER_BATTERY = { Foreground = { Color = "#dfe166" }, Text = "" }
 local function AddElement(elems, header, str)
 	table.insert(elems, { Foreground = header.Foreground })
 	table.insert(elems, { Background = DEFAULT_BG })
-	table.insert(elems, { Text = header.Text .. SPACE_1 })
+	table.insert(elems, { Text = header.Text .. " " })
 
 	table.insert(elems, { Foreground = DEFAULT_FG })
 	table.insert(elems, { Background = DEFAULT_BG })
-	-- table.insert(elems, { Text = str .. SPACE_3 })
 	table.insert(elems, { Text = str .. " " })
 end
 
