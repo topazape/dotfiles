@@ -29,7 +29,7 @@ return {
 
 		-- date/time: e.g.) "Wed Mar 3 08:14"
 		-- local date = wezterm.strftime("%a %b %-d %H:%M")
-		local date = wezterm.time
+		local date = wezterm.time.now()
 		table.insert(cells, date)
 
 		-- An Entry for each battery (typically 0 or 1 battery)
