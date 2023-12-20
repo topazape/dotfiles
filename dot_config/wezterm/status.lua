@@ -14,7 +14,8 @@ local HEADER_BATTERY = { Foreground = { Color = "#dfe166" }, Text = "" }
 local function AddElement(elems, header, str)
 	table.insert(elems, { Foreground = header.Foreground })
 	table.insert(elems, { Background = DEFAULT_BG })
-	table.insert(elems, { Text = header.Text .. SPACE_1 })
+	-- table.insert(elems, { Text = header.Text .. SPACE_1 })
+	table.insert(elems, { Text = header.Text })
 
 	table.insert(elems, { Foreground = DEFAULT_FG })
 	table.insert(elems, { Background = DEFAULT_BG })
