@@ -27,6 +27,9 @@ return {
 		fade_out_duration_ms = 50,
 	},
 
+	-- status
+	status_update_interval = 1000,
+
 	-- key config
 	send_composed_key_when_left_alt_is_pressed = false,
 	send_composed_key_when_right_alt_is_pressed = false,
