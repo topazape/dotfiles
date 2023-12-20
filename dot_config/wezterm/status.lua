@@ -5,8 +5,6 @@ local DEFAULT_BG = { Color = "#333333" }
 local SPACE_1 = " "
 local SPACE_3 = "   "
 
-local HEADER_HOST = { Foreground = { Color = "#75b1a9" }, Text = "" }
-local HEADER_CWD = { Foreground = { Color = "#92aac7" }, Text = "" }
 local HEADER_DATE = { Foreground = { Color = "#ffccac" }, Text = "󱪺" }
 local HEADER_TIME = { Foreground = { Color = "#bcbabe" }, Text = "" }
 local HEADER_BATTERY = { Foreground = { Color = "#dfe166" }, Text = "" }
@@ -19,27 +17,6 @@ local function AddElement(elems, header, str)
 	table.insert(elems, { Foreground = DEFAULT_FG })
 	table.insert(elems, { Background = DEFAULT_BG })
 	table.insert(elems, { Text = str .. SPACE_3 })
-end
-
-local function GetHostAndCwd(elems, pane)
-	local uri = pane:get_current_working_dir()
-
-	if not uri then
-		return
-	end
-
-	local cwd_uri = uri:sub(8)
-	local slash = cwd_uri:find("/")
-
-	if not slash then
-		return
-	end
-
-	local host = cwd_uri:sub(1, slash - 1)
-	local dot = host:find("[.]")
-
-	AddElement(elems, HEADER_HOST, dot and host:sub(1, dot - 1) or host)
-	AddElement(elems, HEADER_CWD, cwd_uri:sub(slash))
 end
 
 local function GetDate(elems)
@@ -59,7 +36,6 @@ end
 local function RightUpdate(window, pane)
 	local elems = {}
 
-	GetHostAndCwd(elems, pane)
 	GetDate(elems)
 	GetBattery(elems, window)
 	GetTime(elems)
