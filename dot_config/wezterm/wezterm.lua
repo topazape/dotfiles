@@ -18,6 +18,14 @@ return {
 	macos_window_background_blur = 20,
 	use_fancy_tab_bar = false,
 
+	-- status
+	wezterm.on("update-status", function(window, pane)
+		local path = pane:get_current_dir()
+		local dir = path:match("^.+/(.+)$")
+		local title = dir or path
+		window:set_title(title)
+	end),
+
 	-- bell
 	audible_bell = "Disabled",
 	visual_bell = {
