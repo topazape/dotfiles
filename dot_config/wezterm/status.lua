@@ -22,7 +22,7 @@ local function get_date(elems)
 end
 
 local function get_time(elems)
-	add_element(elems, HEADER_TIME, wezterm.strftime("%H:%M"))
+	add_element(elems, HEADER_TIME, wezterm.strftime("%H:%m"))
 end
 
 local function get_battery(elems)
