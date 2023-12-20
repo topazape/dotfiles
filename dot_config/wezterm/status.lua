@@ -36,9 +36,9 @@ end
 local function RightUpdate(window, pane)
 	local elems = {}
 
+	GetTime(elems)
 	GetDate(elems)
 	GetBattery(elems, window)
-	GetTime(elems)
 
 	window:set_right_status(wezterm.format(elems))
 end
