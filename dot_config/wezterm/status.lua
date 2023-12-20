@@ -31,6 +31,14 @@ local function get_battery(elems)
 	end
 end
 
+local function get_weather(elems)
+	local success, stdout, _ = wezterm.run_child_process({
+		"curl",
+		"--silent",
+		"wttr.in/Tokyo?format=3",
+	})
+end
+
 local function right_update(window)
 	local elems = {}
 
