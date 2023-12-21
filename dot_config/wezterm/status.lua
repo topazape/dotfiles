@@ -18,7 +18,7 @@ local DEFAULT_BG = { Color = "#001219" }
 local HEADER_TIME = { Foreground = { Color = "#e9d8a6" }, Text = " " }
 local HEADER_DATE = { Foreground = { Color = "#9b2226" }, Text = "󱪺 " }
 local HEADER_BATTERY = { Foreground = { Color = "#94d2bd" }, Text = " " }
-local HEADER_HOSTNAME = { Foreground = { Color = "#ee9b00" }, Text = " " }
+local HEADER_HOSTNAME = { Foreground = { Color = "#ee9b00" }, Text = " " }
 
 local function add_element(elems, header, str)
 	table.insert(elems, { Foreground = header.Foreground })
