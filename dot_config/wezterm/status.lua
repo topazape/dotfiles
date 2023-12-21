@@ -56,6 +56,7 @@ local function update_weather()
 			"wttr.in/Tokyo?format=3",
 		})
 		weather = stdout.gsub("\n", "")
+		wezterm.GLOBAL.weather = weather
 	end
 	wezterm.GLOBAL.weather_update_count = wcnt + 1
 	return wezterm.GLOBAL.weather_update_count .. weather
