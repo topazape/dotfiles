@@ -14,6 +14,7 @@ local HEADER_TIME = { Foreground = { Color = "#118ab2" }, Text = " " }
 local HEADER_DATE = { Foreground = { Color = "#ef476f" }, Text = "󱪺 " }
 local HEADER_BATTERY = { Foreground = { Color = "#ffd166" }, Text = " " }
 local HEADER_HOSTNAME = { Foreground = { Color = "#06d6a0" }, Text = " " }
+local HEADER_WEATHER = { Foreground = { Color = "#ef476f" }, Text = "󰍛 " }
 
 local function add_element(elems, header, str)
 	table.insert(elems, { Foreground = header.Foreground })
@@ -43,6 +44,14 @@ local function get_hostname(elems)
 	add_element(elems, HEADER_HOSTNAME, wezterm.hostname())
 end
 
+local function update_weather()
+	return wezterm.child_process("curl -s wttr.in/Tokyo?format=3")
+end
+
+local function get_weather(elems)
+	add_element(elems, HEADER_WEATHER, update_weather())
+end
+
 local function right_update(window)
 	local elems = {}
 
@@ -50,6 +59,7 @@ local function right_update(window)
 	get_date(elems)
 	get_battery(elems)
 	get_hostname(elems)
+	get_weather(elems)
 
 	window:set_right_status(wezterm.format(elems))
 end
