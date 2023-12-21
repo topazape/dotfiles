@@ -56,7 +56,7 @@ local function update_weather()
 
 		if success then
 			wezterm.GLOBAL.weather_update_count = wcnt + 1
-			return stdout
+			return wezterm.GLOBAL.weather_update_count .. stdout
 		end
 	end
 end
