@@ -45,7 +45,11 @@ local function get_hostname(elems)
 end
 
 local function update_weather()
-	return wezterm.run_child_process("curl -s wttr.in/Tokyo?format=3")
+	return wezterm.run_child_process({
+		"curl",
+		"-s",
+		"wttr.in/Tokyo?format=3",
+	})
 end
 
 local function get_weather(elems)
