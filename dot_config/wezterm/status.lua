@@ -49,7 +49,7 @@ local function update_weather()
 	local success, stdout, _ = wezterm.run_child_process({
 		"curl",
 		"-s",
-		"wttr.in/:help",
+		"wttr.in/Tokyo?format=3",
 	})
 
 	if success then
