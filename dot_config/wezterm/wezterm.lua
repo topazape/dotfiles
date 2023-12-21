@@ -9,7 +9,10 @@ return {
 	-- colors
 	colors = {
 		tab_bar = {
-			background = "#073b4c",
+			active_tab = {
+				bg_color = "#073b4c",
+				fg_color = "#eeeeee",
+			},
 		},
 	},
 
