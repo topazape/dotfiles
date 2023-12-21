@@ -46,9 +46,12 @@ end
 
 local function update_weather()
 	local wcnt = wezterm.GLOBAL.weather_update_count or 0
-
+	local stdout = ""
+	if wcnt % 10 == 0 then
+		stdout = "refreshed"
+	end
 	wezterm.GLOBAL.weather_update_count = wcnt + 1
-	return wezterm.GLOBAL.weather_update_count
+	return wezterm.GLOBAL.weather_update_count .. stdout
 end
 
 local function get_weather(elems)
