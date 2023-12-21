@@ -46,7 +46,7 @@ end
 
 local function update_weather()
 	local wcnt = wezterm.GLOBAL.weather_update_count or 0
-	local weather = wezterm.GLOBAL.weather or {}
+	local weather = wezterm.GLOBAL.weather or ""
 
 	local stdout = ""
 	if wcnt % 10 == 0 then
@@ -55,8 +55,10 @@ local function update_weather()
 			"--silent",
 			"wttr.in/Tokyo?format=3",
 		})
-		weather = stdout.gsub("\n", "")
-		wezterm.GLOBAL.weather = weather
+		if success then
+			weather, _ = string.gsub(stdout, "\n", "")
+			wezterm.GLOBAL.weather = weather
+		end
 	end
 	wezterm.GLOBAL.weather_update_count = wcnt + 1
 	return wezterm.GLOBAL.weather_update_count .. weather
