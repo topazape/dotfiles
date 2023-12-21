@@ -45,12 +45,20 @@ local function get_hostname(elems)
 end
 
 local function update_weather()
-	local success, stdout, stderr = wezterm.run_child_process({
-		"curl",
-		"-s",
-		"wttr.in/Tokyo?format=3",
-	})
-	return stdout
+	local wcnt = wezterm.GLOBAL.weather_update_count or 0
+
+	if wcnt % 100 == 0 then
+		local success, stdout, _ = wezterm.run_child_process({
+			"curl",
+			"-s",
+			"wttr.in/:help",
+		})
+
+		if success then
+			wezterm.GLOBAL.weather_update_count = wcnt + 1
+			return stdout
+		end
+	end
 end
 
 local function get_weather(elems)
