@@ -50,7 +50,12 @@ local function update_weather()
 
 	local stdout = ""
 	if wcnt % 10 == 0 then
-		weather = "refreshed"
+		local success, stdout, stderr = wezterm.run_child_process({
+			"curl",
+			"--silent",
+			"wttr.in/Tokyo?format=3",
+		})
+		weather = stdout
 	end
 	wezterm.GLOBAL.weather_update_count = wcnt + 1
 	return wezterm.GLOBAL.weather_update_count .. weather
