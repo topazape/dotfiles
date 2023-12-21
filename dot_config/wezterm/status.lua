@@ -46,16 +46,9 @@ end
 
 local function update_weather()
 	local wcnt = wezterm.GLOBAL.weather_update_count or 0
-	local success, stdout, _ = wezterm.run_child_process({
-		"curl",
-		"-s",
-		"wttr.in/Tokyo?format=3",
-	})
 
-	if success then
-		wezterm.GLOBAL.weather_update_count = wcnt + 1
-		return wezterm.GLOBAL.weather_update_count .. stdout
-	end
+	wezterm.GLOBAL.weather_update_count = wcnt + 1
+	return wezterm.GLOBAL.weather_update_count
 end
 
 local function get_weather(elems)
