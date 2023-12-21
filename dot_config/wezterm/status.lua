@@ -62,7 +62,7 @@ local function update_weather()
 		end
 	end
 
-	return wezterm.GLOBAL.weather_update_count .. wezterm.GLOBAL.weather
+	return wezterm.GLOBAL.weather
 end
 
 local function get_weather(elems)
