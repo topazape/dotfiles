@@ -1,24 +1,19 @@
 local wezterm = require("wezterm")
 
 -- palette
--- #001219
--- #005f73
--- #0a9396
--- #94d2bd
--- #e9d8a6
--- #ee9b00
--- #ca6702
--- #bb3e03
--- #ae2012
--- #9b2226
+-- #073b4c
+-- #118ab2
+-- #06d6a0
+-- #ffd166
+-- #ef476f
 
-local DEFAULT_FG = { Color = "#e9d8a6" }
-local DEFAULT_BG = { Color = "#001219" }
+local DEFAULT_FG = { Color = "#9a9eab" }
+local DEFAULT_BG = { Color = "#073b4c" }
 
 local HEADER_TIME = { Foreground = { Color = "#e9d8a6" }, Text = " " }
-local HEADER_DATE = { Foreground = { Color = "#9b2226" }, Text = "󱪺 " }
-local HEADER_BATTERY = { Foreground = { Color = "#94d2bd" }, Text = " " }
-local HEADER_HOSTNAME = { Foreground = { Color = "#ee9b00" }, Text = " " }
+local HEADER_DATE = { Foreground = { Color = "#ef476f" }, Text = "󱪺 " }
+local HEADER_BATTERY = { Foreground = { Color = "#ffd166" }, Text = " " }
+local HEADER_HOSTNAME = { Foreground = { Color = "#06d6a0" }, Text = " " }
 
 local function add_element(elems, header, str)
 	table.insert(elems, { Foreground = header.Foreground })
