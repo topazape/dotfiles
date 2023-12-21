@@ -49,7 +49,7 @@ local function update_weather()
 	local weather = wezterm.GLOBAL.weather or ""
 
 	local stdout = ""
-	if wcnt % 10 == 0 then
+	if wcnt % 3600 == 0 then
 		local success, stdout, stderr = wezterm.run_child_process({
 			"curl",
 			"--silent",
@@ -61,7 +61,7 @@ local function update_weather()
 		end
 	end
 	wezterm.GLOBAL.weather_update_count = wcnt + 1
-	return wezterm.GLOBAL.weather_update_count .. weather
+	return wezterm.GLOBAL.weather
 end
 
 local function get_weather(elems)
