@@ -57,8 +57,11 @@ local function update_weather()
 		})
 		if success then
 			wezterm.GLOBAL.weather = weather_info:gsub("\n", "")
+		else
+			wezterm.GLOBAL.weather = "N/A"
 		end
 	end
+
 	return wezterm.GLOBAL.weather_update_count .. wezterm.GLOBAL.weather
 end
 
