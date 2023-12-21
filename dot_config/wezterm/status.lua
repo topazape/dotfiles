@@ -6,6 +6,7 @@ local DEFAULT_BG = { Color = "#222222" }
 local HEADER_DATE = { Foreground = { Color = "#ffccac" }, Text = "󱪺 " }
 local HEADER_TIME = { Foreground = { Color = "#bcbabe" }, Text = " " }
 local HEADER_BATTERY = { Foreground = { Color = "#dfe166" }, Text = " " }
+local HEADER_HOSTNAME = { Foreground = { Color = "#dfe166" }, Text = "a " }
 
 local function add_element(elems, header, str)
 	table.insert(elems, { Foreground = header.Foreground })
@@ -31,12 +32,17 @@ local function get_battery(elems)
 	end
 end
 
+local function get_hostname(elems)
+	add_element(elems, HEADER_HOSTNAME, wezterm.hostname())
+end
+
 local function right_update(window)
 	local elems = {}
 
 	get_time(elems)
 	get_date(elems)
 	get_battery(elems)
+	get_hostname(elems)
 
 	window:set_right_status(wezterm.format(elems))
 end
