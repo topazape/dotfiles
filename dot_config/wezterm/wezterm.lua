@@ -6,6 +6,13 @@ return {
 	-- color scheme
 	color_scheme = "Catppuccin Mocha",
 
+	-- colors
+	colors = {
+		tab_bar = {
+			background = "#073b4c",
+		},
+	},
+
 	-- font
 	font = wezterm.font_with_fallback({
 		{ family = "Berkeley Mono" },
