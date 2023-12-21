@@ -53,7 +53,7 @@ local function update_weather()
 		weather = "refreshed"
 	end
 	wezterm.GLOBAL.weather_update_count = wcnt + 1
-	return wezterm.GLOBAL.weather_update_count .. weather
+	return wcnt .. weather
 end
 
 local function get_weather(elems)
