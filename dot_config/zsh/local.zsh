@@ -170,17 +170,7 @@ if type go > /dev/null 2>&1; then
 
   export PATH=${GOPATH}/bin:${PATH}
 fi
-## Java
-if [[ -d $(brew --prefix openjdk) ]]; then
-  export JAVA_HOME=$(brew --prefix openjdk)
-  export PATH=${JAVA_HOME}/bin:${PATH}
-  export CPPFLAGS="${CPPFLAGS} -I$(brew --prefix openjdk)/include"
-  export JDK_TOOL_OPTIONS="-Duser.language=en"
-fi
-### maven
-if type mvn > /dev/null 2>&1; then
-  export MAVEN_OPTS="-Dmaven.repo.local=${XDG_DATA_HOME}/m2/repository"
-fi
+
 # for work
 if [[ -e ${XDG_CONFIG_HOME}/zsh/work.sh ]]; then
   source ${XDG_CONFIG_HOME}/zsh/work.sh
