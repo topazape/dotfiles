@@ -7,7 +7,7 @@ local wezterm = require("wezterm")
 -- #ffd166
 -- #ef476f
 
-local DEFAULT_FG = { Color = "#9a9a9a" }
+local DEFAULT_FG = { Color = "#aaaaaa" }
 local DEFAULT_BG = { Color = "#073b4c" }
 
 local HEADER_TIME = { Foreground = { Color = "#e9d8a6" }, Text = " " }
