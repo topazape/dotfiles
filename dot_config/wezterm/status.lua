@@ -49,7 +49,7 @@ local function update_weather()
 	update_count = update_count + 1
 	wezterm.GLOBAL.weather_update_count = update_count
 
-	if update_count % 10 == 0 then
+	if update_count == 1 or update_count % 3600 == 0 then
 		local success, weather_info, _ = wezterm.run_child_process({
 			"curl",
 			"--silent",
