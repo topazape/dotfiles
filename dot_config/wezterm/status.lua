@@ -50,10 +50,23 @@ local function update_weather()
 	wezterm.GLOBAL.weather_update_count = update_count
 
 	if update_count == 1 or update_count % 3600 == 0 then
+		-- c    Weather condition,
+		-- C    Weather condition textual name,
+		-- x    Weather condition, plain-text symbol,
+		-- h    Humidity,
+		-- t    Temperature (Actual),
+		-- f    Temperature (Feels Like),
+		-- w    Wind,
+		-- l    Location,
+		-- m    Moon phase 🌑🌒🌓🌔🌕🌖🌗🌘,
+		-- M    Moon day,
+		-- p    Precipitation (mm/3 hours),
+		-- P    Pressure (hPa),
+		-- u    UV index (1-12),
 		local success, weather_info, _ = wezterm.run_child_process({
 			"curl",
 			"--silent",
-			"wttr.in/Tokyo?format=%l+%c%t+%m",
+			"wttr.in/Tokyo?format=%l+%c+%f+%P+%m",
 		})
 		if success then
 			wezterm.GLOBAL.weather = weather_info:gsub("\n", "")
