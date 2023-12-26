@@ -66,7 +66,7 @@ local function update_weather()
 		local success, weather_info, _ = wezterm.run_child_process({
 			"curl",
 			"--silent",
-			"wttr.in/Tokyo?format=%l:+%f+%c%m",
+			"wttr.in/Tokyo?format=%l:%c%m+%f",
 		})
 		if success then
 			wezterm.GLOBAL.weather = weather_info:gsub("\n", "")
