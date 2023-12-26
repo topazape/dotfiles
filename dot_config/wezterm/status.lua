@@ -67,7 +67,6 @@ local function update_weather()
 			"curl",
 			"--silent",
 			"wttr.in/Tokyo?format=%l+%c%m+%f",
-			-- "wttr.in/Tokyo?format=%l+%c%m+%f+%h+%p+%P",
 		})
 		if success then
 			wezterm.GLOBAL.weather = weather_info:gsub("\n", "")
