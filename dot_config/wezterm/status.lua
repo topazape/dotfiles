@@ -69,7 +69,7 @@ local function update_weather()
 			"wttr.in/Tokyo?format=%l+%c%m+%f+%h+%p+%P",
 		})
 		if success then
-			-- wezterm.GLOBAL.weather = weather_info:gsub("\n", "")
+			wezterm.GLOBAL.weather = weather_info:gsub("\n", "")
 		else
 			wezterm.GLOBAL.weather = "N/A"
 		end
