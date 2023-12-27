@@ -153,6 +153,10 @@ fi
 if type cookiecutter > /dev/null 2>&1; then
   export COOKIECUTTER_CONFIG=${XDG_CONFIG_HOME}/cookiecutter/config.yaml
 fi
+## R
+if type R > /dev/null 2>&1; then
+  export R_LIBS_USER=${XDG_DATA_HOME}/R/library
+fi
 ## Rust
 ### rustup
 if type rustup-init > /dev/null 2>&1; then
