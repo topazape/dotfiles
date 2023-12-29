@@ -131,6 +131,15 @@ if [[ -d $(brew --prefix openblas) ]]; then
 fi
 
 # Programing Languages
+## Go
+if type go > /dev/null 2>&1; then
+  export GOPATH=${XDG_DATA_HOME}/go
+  export GOCACHE=${XDG_CACHE_HOME}/go/go-build
+  export GOMODCACHE=${XDG_CACHE_HOME}/go/pkg/mod
+
+  export PATH=${GOPATH}/bin:${PATH}
+fi
+## Javascript
 ### npm
 if type npm > /dev/null 2>&1; then
   export NPM_CONFIG_USERCONFIG=${XDG_CONFIG_HOME}/npm/npmrc
@@ -153,6 +162,10 @@ fi
 if type cookiecutter > /dev/null 2>&1; then
   export COOKIECUTTER_CONFIG=${XDG_CONFIG_HOME}/cookiecutter/config.yaml
 fi
+## R
+if type R > /dev/null 2>&1; then
+  export R_ENVIRON=${XDG_CONFIG_HOME}/R/Renviron
+fi
 ## Rust
 ### rustup
 if type rustup-init > /dev/null 2>&1; then
@@ -162,15 +175,6 @@ if type rustup-init > /dev/null 2>&1; then
     source ${CARGO_HOME}/env
   fi
 fi
-## Go
-if type go > /dev/null 2>&1; then
-  export GOPATH=${XDG_DATA_HOME}/go
-  export GOCACHE=${XDG_CACHE_HOME}/go/go-build
-  export GOMODCACHE=${XDG_CACHE_HOME}/go/pkg/mod
-
-  export PATH=${GOPATH}/bin:${PATH}
-fi
-
 # for work
 if [[ -e ${XDG_CONFIG_HOME}/zsh/work.sh ]]; then
   source ${XDG_CONFIG_HOME}/zsh/work.sh
