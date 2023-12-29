@@ -142,32 +142,21 @@ return {
 	},
 
 	-- emphasis indent
-	-- {
-	-- 	"lukas-reineke/indent-blankline.nvim",
-	-- 	config = function()
-	-- 		require("ibl").setup({
-	-- 			indent = {
-	-- 				char = "╎",
-	-- 				tab_char = "╎",
-	-- 				smart_indent_cap = true,
-	-- 			},
-	-- 			scope = {
-	-- 				enabled = true,
-	-- 				show_start = false,
-	-- 				show_end = false,
-	-- 				injected_languages = true,
-	-- 			},
-	-- 			exclude = {
-	-- 				filetypes = { "dashboard" },
-	-- 			},
-	-- 		})
-	-- 	end,
-	-- },
 	{
 		"shellRaining/hlchunk.nvim",
 		event = { "UIEnter" },
 		config = function()
-			require("hlchunk").setup({})
+			require("hlchunk").setup({
+				chunk = {
+					chars = {
+						horizontal_line = "─",
+						vertical_line = "│",
+						left_top = "╭",
+						left_bottom = "╰",
+						right_arrow = "─",
+					},
+				},
+			})
 		end,
 	},
 
