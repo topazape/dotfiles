@@ -138,7 +138,7 @@ if type go > /dev/null 2>&1; then
   # export GOMODCACHE=${XDG_CACHE_HOME}/go/pkg/mod
   #
   # export PATH=${GOPATH}/bin:${PATH}
-  ;
+  :
 fi
 ## Javascript
 ### npm
