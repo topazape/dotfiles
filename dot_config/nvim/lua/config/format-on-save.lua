@@ -18,7 +18,6 @@ format_on_save.setup({
 			formatters.shell({ cmd = { "isort", "-" } }),
 		},
 		rust = {
-			-- formatters.shell({ cmd = { "rustfmt", "--edition", "2021", "--emit=stdout" } }),
 			formatters.lsp,
 		},
 		sh = {
