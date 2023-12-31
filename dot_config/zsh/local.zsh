@@ -131,12 +131,13 @@ if [[ -d $(brew --prefix openblas) ]]; then
 fi
 
 # Programing Languages
-## Go
+## Golang
 if type go > /dev/null 2>&1; then
   export GOPATH=${XDG_DATA_HOME}/go
   export GOCACHE=${XDG_CACHE_HOME}/go/go-build
-  export GOMODCACHE=${XDG_CACHE_HOME}/go/pkg/mod
+  export GOMODCACHE=${GOPATH}/pkg/mod
   export PATH=${GOPATH}/bin:${PATH}
+  export GOENV=${GOPATH}/env
 fi
 ## Javascript
 ### npm
