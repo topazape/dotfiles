@@ -11,7 +11,7 @@ format_on_save.setup({
 			formatters.lsp,
 		},
 		lua = {
-			formatters.stylua, -- default
+			formatters.lsp, -- default
 		},
 		python = {
 			formatters.shell({ cmd = { "ruff", "format", "--no-cache", "--respect-gitignore", "-" } }),
@@ -33,7 +33,7 @@ format_on_save.setup({
 			formatters.shell({ cmd = { "taplo", "format", "-" } }),
 		},
 		yaml = {
-			formatters.shell({ cmd = { "yamlfmt", "-" } }),
+			formatters.lsp,
 		},
 		fallback_formatter = {
 			formatters.remove_trailing_whitespace,
