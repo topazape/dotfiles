@@ -158,19 +158,7 @@ fi
 if type rye > /dev/null 2>&1; then
   export RYE_HOME=${XDG_DATA_HOME}/rye
 fi
-### cookiecutter
-if type cookiecutter > /dev/null 2>&1; then
-  export COOKIECUTTER_CONFIG=${XDG_CONFIG_HOME}/cookiecutter/config.yaml
-fi
-## Rust
-### rustup
-if type rustup-init > /dev/null 2>&1; then
-  export RUSTUP_HOME=${XDG_DATA_HOME}/rustup
-  export CARGO_HOME=${XDG_DATA_HOME}/cargo
-  if [[ -e ${CARGO_HOME}/env ]]; then
-    source ${CARGO_HOME}/env
-  fi
-fi
+
 # for work
 if [[ -e ${XDG_CONFIG_HOME}/zsh/work.sh ]]; then
   source ${XDG_CONFIG_HOME}/zsh/work.sh
