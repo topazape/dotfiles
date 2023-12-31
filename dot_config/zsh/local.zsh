@@ -147,7 +147,7 @@ if type npm > /dev/null 2>&1; then
 fi
 ## Python
 ### pip
-if type pip3 > /dev/null 2>&1; then
+if type pip > /dev/null 2>&1 || type pip3 > /dev/null 2>&1; then
   export PIP_CACHE_DIR=${XDG_CACHE_HOME}/pip
 fi
 ### pipenv
