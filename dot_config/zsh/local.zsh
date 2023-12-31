@@ -133,11 +133,12 @@ fi
 # Programing Languages
 ## Go
 if type go > /dev/null 2>&1; then
-  export GOPATH=${XDG_DATA_HOME}/go
-  export GOCACHE=${XDG_CACHE_HOME}/go/go-build
-  export GOMODCACHE=${XDG_CACHE_HOME}/go/pkg/mod
-
-  export PATH=${GOPATH}/bin:${PATH}
+  # export GOPATH=${XDG_DATA_HOME}/go
+  # export GOCACHE=${XDG_CACHE_HOME}/go/go-build
+  # export GOMODCACHE=${XDG_CACHE_HOME}/go/pkg/mod
+  #
+  # export PATH=${GOPATH}/bin:${PATH}
+  ;
 fi
 ## Javascript
 ### npm
