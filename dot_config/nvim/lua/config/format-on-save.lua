@@ -8,11 +8,10 @@ format_on_save.setup({
 			formatters.shell({ cmd = { "gofumpt" } }),
 		},
 		json = {
-			formatters.lsp,
-		},
+			formatters.lsp,},
 		lua = {
 			-- formatters.stylua, -- default
-			formatters.lua, -- default
+			formatters.lsp, -- default
 		},
 		python = {
 			formatters.shell({ cmd = { "ruff", "format", "--no-cache", "--respect-gitignore", "-" } }),
