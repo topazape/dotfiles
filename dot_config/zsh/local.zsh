@@ -66,20 +66,9 @@ if type less > /dev/null 2>&1; then
   export LESSHISTFILE=-
   export LESS='-gj10 --no-init --quit-if-one-screen --RAW-CONTROL-CHARS'
 fi
-## psql
-if type psql > /dev/null 2>&1; then
-  export PSQLRC=${XDG_CONFIG_HOME}/pg/psqlrc
-  export PGPASSFILE=${XDG_CONFIG_HOME}/pg/pgpass
-  export PSQL_HISTORY=${XDG_CACHE_HOME}/pg/psql_history
-  mkdir -p ${XDG_CACHE_HOME}/pg
-fi
 ## direnv
 if type direnv > /dev/null 2>&1; then
   eval "$(direnv hook zsh)"
-fi
-## zellij
-if type zellij > /dev/null 2>&1; then
-  export ZELLIJ_CONFIG_DIR=${XDG_CONFIG_HOME}/zellij
 fi
 ## bat
 if type bat > /dev/null 2>&1; then
@@ -124,11 +113,6 @@ if [[ -d $(brew --prefix)/share/google-cloud-sdk ]]; then
   source $(brew --prefix)/share/google-cloud-sdk/path.zsh.inc
   source $(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc
 fi
-## openblas
-if [[ -d $(brew --prefix openblas) ]]; then
-  export LDFLAGS="${LDFLAGS} -L$(brew --prefix openblas)/lib"
-  export CPPFLAGS="${CPPFLAGS} -I$(brew --prefix openblas)/include"
-fi
 
 # Programing Languages
 ## Golang
@@ -136,8 +120,8 @@ if type go > /dev/null 2>&1; then
   export GOPATH=${XDG_DATA_HOME}/go
   export GOCACHE=${XDG_CACHE_HOME}/go/go-build
   export GOMODCACHE=${GOPATH}/pkg/mod
-  export PATH=${GOPATH}/bin:${PATH}
   export GOENV=${GOPATH}/env
+  export PATH=${GOPATH}/bin:${PATH}
 fi
 ## Javascript
 ### npm
