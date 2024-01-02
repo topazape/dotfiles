@@ -14,7 +14,7 @@ format_on_save.setup({
 			formatters.stylua, -- default
 		},
 		python = {
-			formatters.shell({ cmd = { "ruff", "format", "--no-cache", "--respect-gitignore", "-" } }),
+			formatters.shell({ cmd = { "ruff", "format", "--no-cache", "--respect-gitignore", "-" } }), -- black compatible
 			formatters.shell({ cmd = { "isort", "-" } }),
 		},
 		rust = {
