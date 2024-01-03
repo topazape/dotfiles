@@ -55,6 +55,7 @@ local handlers = {
 						rope_autocomplete = { enabled = false },
 						rope_completion = { enabled = false },
 						yapf = { enabled = false },
+						YAPF = { enabled = false },
 						-- 3rd-party plugins
 						---- type checker
 						pylsp_mypy = {
