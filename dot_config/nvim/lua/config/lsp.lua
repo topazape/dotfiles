@@ -71,7 +71,7 @@ local handlers = {
 
 	["gopls"] = function()
 		require("lspconfig").gopls.setup({})
-		vim.env.GOPLS_CACHE = os.getenv("XDG_CACHE_HOME") .. "/gopls"
+		vim.env.GOPLSCACHE = os.getenv("XDG_CACHE_HOME") .. "/gopls"
 	end,
 
 	["golangci_lint_ls"] = function()
