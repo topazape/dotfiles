@@ -1,6 +1,41 @@
 require("mason").setup()
 require("mason-lspconfig").setup()
 
+-- cache dir
+local XDG_CACHE_HOME = os.getenv("XDG_CACHE_HOME")
+if not XDG_CACHE_HOME then
+	XDG_CACHE_HOME = os.getenv("HOME") .. "/.cache"
+end
+
+-- lua
+---@param names string[]
+---@return string[]
+local function get_plugin_paths(names)
+	local plugins = require("lazy.core.config").plugins
+	local paths = {}
+	for _, name in ipairs(names) do
+		if plugins[name] then
+			table.insert(paths, plugins[name].dir)
+		else
+			vim.notify("Invalid plugin name: " .. name)
+		end
+	end
+	return paths
+end
+
+---@param plugins string[]
+---@return string[]
+local function library(plugins)
+	local paths = get_plugin_paths(plugins)
+	table.insert(paths, vim.fn.stdpath("config"))
+	table.insert(paths, vim.env.VIMRUNTIME)
+	table.insert(paths, "${3rd}/luv/library")
+	table.insert(paths, "${3rd}/busted/library")
+	table.insert(paths, "${3rd}/luassert/library")
+	return paths
+end
+
+-- python
 local py_path = nil
 if vim.fn.executable("pylsp") then
 	local venv_path = os.getenv("VIRTUAL_ENV")
@@ -11,11 +46,6 @@ if vim.fn.executable("pylsp") then
 	else
 		py_path = vim.fn.exepath("python3")
 	end
-end
-
-local XDG_CACHE_HOME = os.getenv("XDG_CACHE_HOME")
-if not XDG_CACHE_HOME then
-	XDG_CACHE_HOME = os.getenv("HOME") .. "/.cache"
 end
 
 local handlers = {
@@ -30,6 +60,13 @@ local handlers = {
 		require("lspconfig").lua_ls.setup({
 			settings = {
 				Lua = {
+					runtime = {
+						version = "LuaJIT",
+					},
+					workspace = {
+						library = library({ "lazy.nvim", "nvim-insx" }),
+						checkThirdParty = false,
+					},
 					diagnostics = {
 						globals = { "vim" },
 					},
