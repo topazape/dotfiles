@@ -7,7 +7,7 @@ if not XDG_CACHE_HOME then
 	XDG_CACHE_HOME = os.getenv("HOME") .. "/.cache"
 end
 
--- lua
+-- lua (https://zenn.dev/uga_rosa/articles/afe384341fc2e1)
 ---@param names string[]
 ---@return string[]
 local function get_plugin_paths(names)
