@@ -13,6 +13,11 @@ if vim.fn.executable("pylsp") then
 	end
 end
 
+local XDG_CACHE_HOME = os.getenv("XDG_CACHE_HOME")
+if not XDG_CACHE_HOME then
+	XDG_CACHE_HOME = os.getenv("HOME") .. "/.cache"
+end
+
 local handlers = {
 	-- The first entry (without a key) will be the default handler
 	-- and will be called for each installed server that doesn"t have
@@ -71,7 +76,7 @@ local handlers = {
 
 	["gopls"] = function()
 		require("lspconfig").gopls.setup({})
-		vim.env.GOPLSCACHE = os.getenv("XDG_CACHE_HOME") .. "/gopls"
+		vim.env.GOPLSCACHE = XDG_CACHE_HOME .. "/gopls"
 	end,
 
 	["golangci_lint_ls"] = function()
@@ -90,7 +95,7 @@ local handlers = {
 				},
 			},
 		})
-		vim.env.GOLANGCI_LINT_CACHE = os.getenv("XDG_CACHE_HOME") .. "/golangci-lint"
+		vim.env.GOLANGCI_LINT_CACHE = XDG_CACHE_HOME .. "/golangci-lint"
 	end,
 }
 
