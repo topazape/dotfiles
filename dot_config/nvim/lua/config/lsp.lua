@@ -90,6 +90,7 @@ local handlers = {
 				},
 			},
 		})
+		vim.env.GOLANGCI_LINT_CACHE = os.getenv("XDG_CACHE_HOME") .. "/golangci-lint"
 	end,
 }
 
