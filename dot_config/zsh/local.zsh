@@ -141,6 +141,7 @@ fi
 ### rye
 if type rye > /dev/null 2>&1; then
   export RYE_HOME=${XDG_DATA_HOME}/rye
+  export PIP_TOOLS_CACHE_DIR=${XDG_CACHE_HOME}/pip-tools
 fi
 
 # for work
