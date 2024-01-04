@@ -143,6 +143,15 @@ if type rye > /dev/null 2>&1; then
   export RYE_HOME=${XDG_DATA_HOME}/rye
   export PIP_TOOLS_CACHE_DIR=${XDG_CACHE_HOME}/pip-tools
 fi
+## Rust
+### rustup
+if type rustup-init > /dev/null 2>&1; then
+  export RUSTUP_HOME=${XDG_DATA_HOME}/rustup
+  export CARGO_HOME=${XDG_DATA_HOME}/cargo
+  if [[ -e ${CARGO_HOME}/env ]]; then
+    source ${CARGO_HOME}/env
+  fi
+fi
 
 # for work
 if [[ -e ${XDG_CONFIG_HOME}/zsh/work.sh ]]; then
