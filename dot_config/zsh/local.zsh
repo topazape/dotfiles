@@ -147,6 +147,7 @@ fi
 ### rustup
 if type cargo > /dev/null 2>&1; then
   export CARGO_HOME=${XDG_DATA_HOME}/cargo
+  export PATH=${CARGO_HOME}/bin:${PATH}
 fi
 
 # for work
