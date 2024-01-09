@@ -8,6 +8,10 @@ return {
 			vim.cmd("highlight WinSeparator guifg=#424362")
 		end,
 	},
+	-- icons
+	{
+		"nvim-tree/nvim-web-devicons",
+	},
 
 	-- tree-sitter
 	{
