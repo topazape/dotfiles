@@ -76,7 +76,7 @@ local handlers = {
 						autoImportCompletions = true,
 						autoSearchPaths = true,
 						diagnosticMode = "workspace",
-						typeCheckingMode = "strict",
+						typeCheckingMode = "standard",
 						useLibraryCodeForTypes = true,
 					},
 				},
