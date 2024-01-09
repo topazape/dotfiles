@@ -80,6 +80,21 @@ local handlers = {
 		})
 	end,
 
+	["pyright"] = function()
+		require("lspconfig").pyright.setup({
+			settings = {
+				python = {
+					analysis = {
+						typeCheckingMode = "standard",
+						autoSearchPaths = true,
+						useLibraryCodeForTypes = true,
+						diagnosticMode = "workspace",
+					},
+				},
+			},
+		})
+	end,
+
 	["pylsp"] = function()
 		require("lspconfig").pylsp.setup({
 			settings = {
