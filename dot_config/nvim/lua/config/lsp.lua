@@ -105,6 +105,16 @@ local handlers = {
 		})
 	end,
 
+	["ruff-lsp"] = function()
+		require("lspconfig").ruff_lsp.setup({
+			init_options = {
+				settings = {
+					args = { "--config", vim.fn.expand("~/.config/ruff/ruff.toml") },
+				},
+			},
+		})
+	end,
+
 	["bashls"] = function()
 		require("lspconfig").bashls.setup({
 			filetypes = { "sh", "bash", "zsh" },
