@@ -1,7 +1,12 @@
 require("mason").setup()
 require("mason-lspconfig").setup()
 
--- cache dir
+-- xdg config dir
+local XDG_CONFIG_HOME = os.getenv("XDG_CONFIG_HOME")
+if not XDG_CONFIG_HOME then
+	XDG_CONFIG_HOME = os.getenv("HOME") .. "/.config"
+end
+-- xdg cache dir
 local XDG_CACHE_HOME = os.getenv("XDG_CACHE_HOME")
 if not XDG_CACHE_HOME then
 	XDG_CACHE_HOME = os.getenv("HOME") .. "/.cache"
@@ -106,10 +111,14 @@ local handlers = {
 	end,
 
 	["ruff_lsp"] = function()
+		local ruff_args = {}
+		if vim.fn.filereadable(XDG_CONFIG_HOME .. "/ruff/ruff.toml") == 1 then
+			ruff_args = { "--config", XDG_CONFIG_HOME .. "/ruff/ruff.toml" }
+		end
 		require("lspconfig").ruff_lsp.setup({
 			init_options = {
 				settings = {
-					args = { "--config", vim.fn.expand("~/.config/ruff/ruff.toml") },
+					args = ruff_args,
 				},
 			},
 		})
