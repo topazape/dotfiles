@@ -73,10 +73,11 @@ local handlers = {
 			settings = {
 				python = {
 					analysis = {
-						typeCheckingMode = "standard",
+						autoImportCompletions = true,
 						autoSearchPaths = true,
-						useLibraryCodeForTypes = true,
 						diagnosticMode = "workspace",
+						typeCheckingMode = "standard",
+						useLibraryCodeForTypes = true,
 					},
 				},
 			},
