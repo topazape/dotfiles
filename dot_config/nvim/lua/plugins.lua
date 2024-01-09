@@ -44,8 +44,8 @@ return {
 		end,
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
-			-- "nvim-tree/nvim-web-devicons",
 		},
+		event = "InsertEnter",
 	},
 
 	-- format on save
