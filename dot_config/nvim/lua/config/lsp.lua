@@ -105,7 +105,7 @@ local handlers = {
 		})
 	end,
 
-	["ruff-lsp"] = function()
+	["ruff_lsp"] = function()
 		require("lspconfig").ruff_lsp.setup({
 			init_options = {
 				settings = {
