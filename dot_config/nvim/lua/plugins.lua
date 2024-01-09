@@ -153,7 +153,8 @@ return {
 			require("hlchunk").setup({
 				chunk = {
 					chars = {
-						horizontal_line = "─",
+						-- horizontal_line = "─",
+						horizontal_line = "┄",
 						vertical_line = "│",
 						left_top = "╭",
 						left_bottom = "╰",
