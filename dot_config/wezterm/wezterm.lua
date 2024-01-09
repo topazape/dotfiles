@@ -20,7 +20,7 @@ return {
 	font = wezterm.font_with_fallback({
 		{ family = "Berkeley Mono" },
 		{ family = "Pretendard JP" },
-		{ family = "Symbols Nerd Font" },
+		{ family = "Symbols Nerd Font", assume_emoji_presentation = true },
 	}),
 	font_size = 14,
 	warn_about_missing_glyphs = false,
