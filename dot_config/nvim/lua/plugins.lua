@@ -77,6 +77,8 @@ return {
 			require("config/cmp")
 		end,
 	},
+
+	-- AI
 	---- copilot
 	{
 		"zbirenbaum/copilot.lua",
@@ -84,6 +86,19 @@ return {
 		config = function()
 			require("config/copilot")
 		end,
+	},
+	---- copilot chat
+	{
+		"sadkodev/ChatPilot.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("chatpilot").setup()
+		end,
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
 	},
 
 	-- dap
