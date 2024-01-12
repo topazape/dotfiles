@@ -148,6 +148,7 @@ fi
 if type rustup-init > /dev/null 2>&1; then
   export RUSTUP_HOME=${XDG_DATA_HOME}/rustup
   export CARGO_HOME=${XDG_DATA_HOME}/cargo
+  eval "$(rustup completions zsh)"
   if [[ -e ${CARGO_HOME}/env ]]; then
     source ${CARGO_HOME}/env
   fi
