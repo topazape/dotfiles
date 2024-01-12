@@ -153,7 +153,7 @@ if type rustup-init > /dev/null 2>&1; then
   fi
   if type rustup > /dev/null 2>&1; then
     echo "rustup is installed"
-    source "$(rustup completions zsh)"
+    eval "$(rustup completions zsh)"
   fi
 fi
 
