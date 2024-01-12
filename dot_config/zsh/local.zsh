@@ -151,6 +151,9 @@ if type rustup-init > /dev/null 2>&1; then
   if [[ -e ${CARGO_HOME}/env ]]; then
     source ${CARGO_HOME}/env
   fi
+  if tpye rustup > /dev/null 2>&1; then
+    source "$(rustup completions zsh)"
+  fi
 fi
 
 # for work
