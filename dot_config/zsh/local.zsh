@@ -153,8 +153,8 @@ if type rustup-init > /dev/null 2>&1; then
   fi
   # rust completions
   if type rustup > /dev/null 2>&1; then
-    source <(rustup completions zsh)
-    source <(rustup completions zsh cargo)
+    rustup completions zsh > ${XDG_DATA_HOME}/zsh/zfunc/_rustup
+    rustup completions zsh cargo > ${XDG_DATA_HOME}/zsh/zfunc/_cargo
   fi
 fi
 
