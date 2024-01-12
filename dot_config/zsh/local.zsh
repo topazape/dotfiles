@@ -151,9 +151,10 @@ if type rustup-init > /dev/null 2>&1; then
   if [[ -e ${CARGO_HOME}/env ]]; then
     source ${CARGO_HOME}/env
   fi
-
+  # rust completions
   if type rustup > /dev/null 2>&1; then
-    rustup completions zsh > ${XDG_DATA_HOME}/zsh/zfunc/_rustup
+    source <(rustup completions zsh)
+    source <(rustup completions zsh cargo)
   fi
 fi
 
