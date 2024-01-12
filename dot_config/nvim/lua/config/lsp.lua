@@ -40,8 +40,14 @@ local function library(plugins)
 	return paths
 end
 
--- python path for pylsp
-local py_path = nil
+-- python path
+local py_path = vim.fn.exepath("python3")
+if os.getenv("VIRTUAL_ENV") ~= nil then
+	py_path = os.getenv("VIRTUAL_ENV") .. "/bin/python3"
+elseif vim.g.python3_host_prog ~= nil then
+	py_path = vim.g.python3_host_prog
+end
+
 if vim.fn.executable("pylsp") then
 	local venv_path = os.getenv("VIRTUAL_ENV")
 	if venv_path ~= nil then
