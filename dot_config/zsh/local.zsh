@@ -151,9 +151,9 @@ if type rustup-init > /dev/null 2>&1; then
   if [[ -e ${CARGO_HOME}/env ]]; then
     source ${CARGO_HOME}/env
   fi
+
   if type rustup > /dev/null 2>&1; then
-    echo "rustup is installed"
-    eval "$(rustup completions zsh)"
+    rustup completions zsh > ${XDG_DATA_HOME}/zsh/zfunc/_rustup
   fi
 fi
 
