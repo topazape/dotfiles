@@ -1,19 +1,3 @@
-# homebrew
-if type brew > /dev/null 2>&1; then
-  # cache dir
-  if [[ ${OSTYPE} == "darwin"* ]]; then
-    export HOMEBREW_CACHE=${XDG_CACHE_HOME}/Homebrew
-    export HOMEBREW_LOGS=${HOMEBREW_CACHE}/Logs
-  fi
-  # enable brew's completion
-  fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
-
-  # use bat instead of cat
-  if type bat > /dev/null 2>&1; then
-    export HOMEBREW_BAT=1
-  fi
-fi
-
 # editor
 if type nvim > /dev/null 2>&1; then
   export EDITOR="nvim"
