@@ -17,7 +17,7 @@ lspsaga.setup({
 		width = 0.8,
 		height = 0.7,
 		keys = {
-			close = "k",
+			close = "q",
 			edit = "e",
 			split = "s",
 			vsplit = "v",
