@@ -15,7 +15,7 @@ export XDG_CONFIG_HOME=${HOME}/.config
 export XDG_CACHE_HOME=${HOME}/.cache
 export XDG_DATA_HOME=${HOME}/.local/share
 
-# create zsh completion dir
+# create local zsh functions (completions) dir if not exists
 if [ ! -d ${XDG_DATA_HOME}/zsh/zfunc ]; then
   mkdir -p ${XDG_DATA_HOME}/zsh/zfunc
 fi
@@ -31,11 +31,12 @@ if [ -d "$HOME/.local/bin" ]; then
   PATH="$HOME/.local/bin:$PATH"
 fi
 
-# brews
+# homebrew
+## linux
 [ -d /home/linuxbrew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+## mac
 [ -d /opt/homebrew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# homebrew
 if type brew > /dev/null 2>&1; then
   # cache dir
   if [[ ${OSTYPE} == "darwin"* ]]; then
