@@ -15,7 +15,7 @@ export XDG_CONFIG_HOME=${HOME}/.config
 export XDG_CACHE_HOME=${HOME}/.cache
 export XDG_DATA_HOME=${HOME}/.local/share
 
-# create local zsh functions (completions) dir if not exists
+# create zsh completion dir if not exists
 if [ ! -d ${XDG_DATA_HOME}/zsh/zfunc ]; then
   mkdir -p ${XDG_DATA_HOME}/zsh/zfunc
 fi
