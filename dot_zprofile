@@ -15,10 +15,11 @@ export XDG_CONFIG_HOME=${HOME}/.config
 export XDG_CACHE_HOME=${HOME}/.cache
 export XDG_DATA_HOME=${HOME}/.local/share
 
-# create zsh completion dir if not exists
+# create private zsh completion dir if not exists
 if [ ! -d ${XDG_DATA_HOME}/zsh/zfunc ]; then
   mkdir -p ${XDG_DATA_HOME}/zsh/zfunc
 fi
+# enable private zsh completion
 fpath=(${XDG_DATA_HOME}/zsh/zfunc $fpath)
 
 # set PATH so it includes user's private bin if it exists
