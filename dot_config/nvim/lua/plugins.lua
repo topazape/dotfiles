@@ -20,7 +20,6 @@ return {
 				},
 			})
 			vim.cmd.colorscheme("catppuccin")
-			vim.cmd("highlight WinSeparator guifg=#000000")
 		end,
 	},
 	-- icons
