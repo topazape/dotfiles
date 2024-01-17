@@ -7,17 +7,16 @@ return {
 			require("catppuccin").setup({
 				flavour = "mocha", -- latte, frappe, macchiato, mocha
 				integrations = {
-					dashboard = true,
 					cmp = true,
 					dap = true,
+					dap_ui = true,
+					dashboard = true,
+					gitsigns = true,
 					lsp_saga = true,
 					mason = true,
 					noice = true,
-					dap_ui = true,
-					gitsigns = true,
-					nvimtree = false,
-					treesitter = true,
 					notify = true,
+					treesitter = true,
 				},
 			})
 			vim.cmd.colorscheme("catppuccin")
