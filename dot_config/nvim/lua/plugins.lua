@@ -4,8 +4,24 @@ return {
 		"catppuccin/nvim",
 		priority = 1000,
 		config = function()
-			vim.cmd("colorscheme catppuccin")
-			vim.cmd("highlight WinSeparator guifg=#424362")
+			require("catppuccin").setup({
+				flavour = "mocha", -- latte, frappe, macchiato, mocha
+				integrations = {
+					dashboard = true,
+					cmp = true,
+					dap = true,
+					lsp_saga = true,
+					mason = true,
+					noice = true,
+					dap_ui = true,
+					gitsigns = true,
+					nvimtree = false,
+					treesitter = true,
+					notify = true,
+				},
+			})
+			vim.cmd.colorscheme("catppuccin")
+			-- vim.cmd("highlight WinSeparator guifg=#424362")
 		end,
 	},
 	-- icons
