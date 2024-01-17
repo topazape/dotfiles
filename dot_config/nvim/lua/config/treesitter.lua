@@ -1,6 +1,7 @@
 require("nvim-treesitter.configs").setup({
 	ensure_installed = {
 		"bash",
+		"c",
 		"comment",
 		"csv",
 		"dockerfile",
@@ -10,14 +11,11 @@ require("nvim-treesitter.configs").setup({
 		"gitignore",
 		"go",
 		"html",
-		"java",
 		"javascript",
-		"json",
 		"json",
 		"lua",
 		"markdown",
 		"markdown_inline",
-		"meson",
 		"python",
 		"regex",
 		"ruby",
@@ -32,17 +30,37 @@ require("nvim-treesitter.configs").setup({
 		"xml",
 		"yaml",
 	},
+
 	sync_install = false,
+
 	highlight = {
 		enable = true,
 		disable = {},
+		-- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+		-- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+		-- Using this option may slow down your editor, and you may see some duplicate highlights.
+		-- Instead of true it can also be a list of languages
+		additional_vim_regex_highlighting = false,
 	},
+
+	incremental_selection = {
+		enable = true,
+		keymaps = {
+			init_selection = "gnn", -- set to `false` to disable one of the mappings
+			node_incremental = "grn",
+			scope_incremental = "grc",
+			node_decremental = "grm",
+		},
+	},
+
 	indent = {
 		enable = true,
 		disable = {
 			"yaml",
 		},
 	},
+
+	-- used by treesitter-rainbow
 	rainbow = {
 		enable = true,
 	},
