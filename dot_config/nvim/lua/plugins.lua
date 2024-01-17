@@ -14,7 +14,7 @@ return {
 					gitsigns = true,
 					lsp_saga = true,
 					mason = true,
-					noice = true,
+					noice = false,
 					notify = true,
 					treesitter = true,
 				},
