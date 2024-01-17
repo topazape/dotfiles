@@ -63,5 +63,6 @@ require("nvim-treesitter.configs").setup({
 	-- used by treesitter-rainbow
 	rainbow = {
 		enable = true,
+		disable = {},
 	},
 })
