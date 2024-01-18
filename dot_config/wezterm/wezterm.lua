@@ -21,6 +21,7 @@ return {
 		{ family = "Berkeley Mono" },
 		{ family = "Pretendard JP" },
 		{ family = "Fira Code" },
+		{ family = "Fira Mono" },
 	}),
 	font_size = 14,
 	warn_about_missing_glyphs = false,
