@@ -16,7 +16,7 @@ return {
 					mason = true,
 					noice = true,
 					notify = true,
-					telescope = { enabled = true },
+					telescope = { enabled = false },
 					treesitter = true,
 				},
 			})
