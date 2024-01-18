@@ -20,6 +20,7 @@ return {
 	font = wezterm.font_with_fallback({
 		{ family = "Berkeley Mono" },
 		{ family = "Pretendard JP" },
+		{ family = "DejaVuSansM Nerd Font" },
 		{ family = "UbuntuMono Nerd Font Mono" },
 		{ family = "Symbols Nerd Font Mono" },
 	}),
