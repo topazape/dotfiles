@@ -18,8 +18,8 @@ return {
 
 	-- font
 	font = wezterm.font_with_fallback({
-		{ family = "Symbols Nerd Font Mono" },
 		{ family = "JetBrains Mono" },
+		{ family = "Symbols Nerd Font Mono" },
 
 		{ family = "Berkeley Mono" },
 		{ family = "Pretendard JP" },
