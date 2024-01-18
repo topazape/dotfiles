@@ -18,9 +18,9 @@ return {
 
 	-- font
 	font = wezterm.font_with_fallback({
-		{ family = "JetBrains Mono" },
 		{ family = "Berkeley Mono" },
 		{ family = "Pretendard JP" },
+		{ family = "monospace" },
 	}),
 	font_size = 14,
 	warn_about_missing_glyphs = false,
