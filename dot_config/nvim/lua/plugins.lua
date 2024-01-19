@@ -170,6 +170,8 @@ return {
 		config = function()
 			require("hlchunk").setup({
 				chunk = {
+					enable = true,
+					notify = true,
 					chars = {
 						horizontal_line = "─",
 						vertical_line = "│",
@@ -177,6 +179,15 @@ return {
 						left_bottom = "╰",
 						right_arrow = "▷",
 					},
+				},
+				indent = {
+					enable = false,
+				},
+				line_num = {
+					enable = false,
+				},
+				blank = {
+					enable = false,
 				},
 			})
 		end,
