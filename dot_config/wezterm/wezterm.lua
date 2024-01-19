@@ -20,7 +20,7 @@ return {
 	font = wezterm.font_with_fallback({
 		{ family = "Berkeley Mono" },
 		{ family = "DejaVu Sans Mono" },
-		{ family = "UDEV Gothic" },
+		{ family = "Pretendard JP" },
 	}),
 	font_size = 14,
 	warn_about_missing_glyphs = false,
