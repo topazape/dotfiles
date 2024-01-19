@@ -12,7 +12,7 @@ local DEFAULT_BG = { Color = "#073b4c" }
 
 local HEADER_TIME = { Foreground = { Color = "#118ab2" }, Text = " " }
 local HEADER_DATE = { Foreground = { Color = "#ef476f" }, Text = "󱪺 " }
-local HEADER_BATTERY = { Foreground = { Color = "#ffd166" }, Text = " " }
+local HEADER_BATTERY = { Foreground = { Color = "#ffd166" }, Text = "  " }
 local HEADER_HOSTNAME = { Foreground = { Color = "#06d6a0" }, Text = " " }
 local HEADER_WEATHER = { Foreground = { Color = "#ef476f" }, Text = "󰍛 " }
 
