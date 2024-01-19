@@ -172,6 +172,7 @@ return {
 				chunk = {
 					enable = true,
 					notify = true,
+					use_treesitter = true,
 					chars = {
 						horizontal_line = "─",
 						vertical_line = "│",
@@ -186,10 +187,10 @@ return {
 				},
 				line_num = {
 					enable = true,
-					use_treesitter = false,
+					use_treesitter = true,
 				},
 				blank = {
-					enable = false,
+					enable = true,
 				},
 			})
 		end,
