@@ -181,10 +181,10 @@ return {
 					},
 				},
 				indent = {
-					enable = true,
+					enable = false,
 				},
 				line_num = {
-					enable = false,
+					enable = true,
 				},
 				blank = {
 					enable = false,
