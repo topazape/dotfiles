@@ -2,26 +2,14 @@ local copilot = require("copilot")
 
 copilot.setup({
 	panel = {
-		enabled = true,
-		auto_refresh = false,
-		keymap = {
-			jump_prev = "[[",
-			jump_next = "]]",
-			accept = "<CR>",
-			refresh = "gr",
-			open = "<M-CR>",
-		},
-		layout = {
-			position = "bottom", -- | top | left | right
-			ratio = 0.4,
-		},
+		enabled = false,
 	},
 	suggestion = {
 		enabled = true,
-		auto_trigger = false,
-		debounce = 75,
+		auto_trigger = true,
+		debounce = 100,
 		keymap = {
-			accept = "<M-l>",
+			accept = "<TAB>",
 			accept_word = false,
 			accept_line = false,
 			next = "<M-]>",
@@ -30,14 +18,14 @@ copilot.setup({
 		},
 	},
 	filetypes = {
-		yaml = false,
-		markdown = false,
-		help = false,
+		cvs = false,
 		gitcommit = false,
 		gitrebase = false,
+		help = false,
 		hgcommit = false,
+		markdown = false,
 		svn = false,
-		cvs = false,
+		yaml = false,
 		["."] = false,
 	},
 	copilot_node_command = "node", -- Node.js version must be > 18.x
