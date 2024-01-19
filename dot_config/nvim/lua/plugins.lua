@@ -181,7 +181,7 @@ return {
 					},
 				},
 				indent = {
-					enable = true,
+					enable = false,
 				},
 				line_num = {
 					enable = false,
