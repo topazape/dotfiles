@@ -20,7 +20,7 @@ return {
 	font = wezterm.font_with_fallback({
 		{ family = "Berkeley Mono" },
 		{ family = "DejaVu Sans Mono" },
-		{ family = "pretendard JP" },
+		{ family = "Pretendard JP" },
 		{ family = "Symbols Nerd Font", weight = "Light" },
 	}),
 	font_size = 14,
