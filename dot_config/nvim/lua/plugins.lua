@@ -190,7 +190,7 @@ return {
 					use_treesitter = true,
 				},
 				blank = {
-					enable = true,
+					enable = false,
 				},
 			})
 		end,
