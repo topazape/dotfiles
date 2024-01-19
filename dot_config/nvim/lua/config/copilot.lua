@@ -25,8 +25,8 @@ copilot.setup({
 		hgcommit = false,
 		markdown = false,
 		svn = false,
+		text = false,
 		yaml = false,
-		txt = false,
 		["."] = false,
 	},
 	copilot_node_command = "node", -- Node.js version must be > 18.x
