@@ -21,7 +21,7 @@ return {
 		{ family = "Berkeley Mono" },
 		{ family = "DejaVu Sans Mono" },
 		{ family = "Pretendard JP" },
-		{ family = "Symbols Nerd Font", weight = "ExtraLight" },
+		{ family = "Symbols Nerd Font", weight = "Light" },
 	}),
 	font_size = 14,
 	warn_about_missing_glyphs = false,
