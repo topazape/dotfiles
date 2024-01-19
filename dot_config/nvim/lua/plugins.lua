@@ -182,11 +182,11 @@ return {
 				},
 				indent = {
 					enable = false,
-					-- use_treesitter = true,
+					use_treesitter = true,
 				},
 				line_num = {
 					enable = true,
-					use_treesitter = true,
+					use_treesitter = false,
 				},
 				blank = {
 					enable = false,
