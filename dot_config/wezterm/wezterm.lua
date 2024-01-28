@@ -18,7 +18,7 @@ return {
 
 	-- font
 	font = wezterm.font_with_fallback({
-		{ family = "Monaspace Neon" },
+		{ family = "Monaspace Argon" },
 		{ family = "Berkeley Mono" },
 		{ family = "Pretendard JP" },
 	}),
