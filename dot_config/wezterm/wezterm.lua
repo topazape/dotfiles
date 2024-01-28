@@ -21,8 +21,8 @@ return {
 		{ family = "Berkeley Mono" },
 		{ family = "Pretendard JP" },
 		{ family = "DejaVu Sans Mono" }, -- for check mark
-		{ family = "Noto Colur Emoji" },
-		{ family = "Apple Color Emoji" },
+		-- { family = "Noto Colur Emoji" },
+		-- { family = "Apple Color Emoji" },
 	}),
 	font_size = 14,
 	warn_about_missing_glyphs = false,
