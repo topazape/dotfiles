@@ -18,7 +18,7 @@ return {
 
 	-- font
 	font = wezterm.font_with_fallback({
-		{ family = "Berkeley Mono" },
+		{ family = "Berkeley Mono", weight = "Light" },
 		{ family = "DejaVu Sans Mono" },
 		{ family = "Pretendard JP" },
 		{ family = "Symbols Nerd Font", weight = "Light" },
