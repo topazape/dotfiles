@@ -19,8 +19,8 @@ return {
 	-- font
 	font = wezterm.font_with_fallback({
 		{ family = "Berkeley Mono" },
-		{ family = "Pretendard JP" },
 		{ family = "Menlo" }, -- for check box font
+		{ family = "Pretendard JP" },
 	}),
 	font_size = 14,
 	warn_about_missing_glyphs = false,
