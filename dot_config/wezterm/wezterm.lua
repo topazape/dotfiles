@@ -21,6 +21,7 @@ return {
 		{ family = "Berkeley Mono" },
 		{ family = "Pretendard JP" },
 		{ family = "PT Mono" },
+		{ family = "Andare Mono" },
 		-- { family = "DejaVu Sans Mono" }, -- for check box font
 	}),
 	font_size = 14,
