@@ -20,6 +20,8 @@ return {
 	font = wezterm.font_with_fallback({
 		{ family = "Berkeley Mono" },
 		{ family = "Pretendard JP" },
+		{ family = "Menlo" },
+		{ family = "BizUDGothic" },
 		{ family = "PT Mono" },
 		{ family = "Andare Mono" },
 		-- { family = "DejaVu Sans Mono" }, -- for check box font
