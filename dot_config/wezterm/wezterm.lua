@@ -23,7 +23,7 @@ return {
 		{ family = "Menlo" }, -- for check box font
 	}),
 	font_size = 14,
-	font_shaper = "Harfbuzz",
+	font_shaper = "Allsorts",
 	warn_about_missing_glyphs = false,
 	adjust_window_size_when_changing_font_size = false,
 
