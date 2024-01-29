@@ -21,6 +21,7 @@ return {
 		{ family = "Berkeley Mono" },
 		{ family = "Pretendard JP" },
 		{ family = "Menlo" }, -- for check box font
+		{ family = "Noto Emoji" },
 	}),
 	font_size = 14,
 	warn_about_missing_glyphs = false,
