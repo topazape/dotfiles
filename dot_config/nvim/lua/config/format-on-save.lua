@@ -15,7 +15,7 @@ format_on_save.setup({
 		},
 		python = {
 			formatters.shell({ cmd = { "ruff", "format", "--no-cache", "--respect-gitignore", "-" } }), -- black compatible
-			formatters.shell({ cmd = { "isort", "-" } }),
+			-- formatters.shell({ cmd = { "isort", "-" } }),
 		},
 		rust = {
 			formatters.lsp,
