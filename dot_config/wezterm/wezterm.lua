@@ -22,6 +22,7 @@ return {
 		{ family = "Menlo" }, -- for check box font
 		{ family = "Pretendard JP" },
 	}),
+	freetype_load_flags = "DEFAULT",
 	font_size = 14,
 	warn_about_missing_glyphs = false,
 	adjust_window_size_when_changing_font_size = false,
