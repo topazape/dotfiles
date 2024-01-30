@@ -3,6 +3,7 @@ local wezterm = require("wezterm")
 require("status")
 
 return {
+	front_end = "WebGpu",
 	-- color scheme
 	color_scheme = "Catppuccin Mocha",
 
