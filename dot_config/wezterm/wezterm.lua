@@ -24,7 +24,7 @@ return {
 	font_size = 14,
 	warn_about_missing_glyphs = false,
 	adjust_window_size_when_changing_font_size = false,
-	freetype_load_target = "Normal",
+	freetype_load_target = "Light",
 	freetype_load_flags = "DEFAULT",
 
 	-- look and feel
