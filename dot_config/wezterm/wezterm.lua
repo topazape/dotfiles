@@ -3,7 +3,7 @@ local wezterm = require("wezterm")
 require("status")
 
 return {
-	front_end = "cpu",
+	front_end = "Software",
 	-- color scheme
 	color_scheme = "Catppuccin Mocha",
 
