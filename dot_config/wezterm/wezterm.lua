@@ -3,7 +3,7 @@ local wezterm = require("wezterm")
 require("status")
 
 return {
-	front_end = "OpenGL",
+	front_end = "cpu",
 	-- color scheme
 	color_scheme = "Catppuccin Mocha",
 
@@ -20,7 +20,6 @@ return {
 	-- font
 	font = wezterm.font_with_fallback({
 		{ family = "Berkeley Mono" },
-		{ family = "Menlo" },
 		{ family = "Pretendard JP" },
 	}),
 	font_size = 14,
