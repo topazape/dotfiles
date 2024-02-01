@@ -19,7 +19,6 @@ return {
 
 	-- font
 	font = wezterm.font_with_fallback({
-		{ family = "0xProto Nerd Font Mono" },
 		{ family = "Berkeley Mono" },
 		{ family = "Pretendard JP" },
 	}),
