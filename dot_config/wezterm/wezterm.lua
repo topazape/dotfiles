@@ -3,7 +3,6 @@ local wezterm = require("wezterm")
 require("status")
 
 return {
-	front_end = "WebGpu",
 	-- color scheme
 	color_scheme = "Catppuccin Mocha",
 
@@ -19,7 +18,7 @@ return {
 
 	-- font
 	font = wezterm.font_with_fallback({
-		{ family = "Berkeley Mono", weight = "Light" },
+		{ family = "Berkeley Mono" },
 		{ family = "Pretendard JP" },
 	}),
 	font_size = 14,
