@@ -48,5 +48,5 @@ return {
 	---- set leader_key to achieve tmux-like keybinds
 	leader = { mods = "CTRL", key = "t", timeout_milliseconds = 1000 },
 
-	keys,
+	keys = keys,
 }
