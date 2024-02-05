@@ -1,4 +1,5 @@
 [gcloud]
+symbol = '️🇬️'
 format = '[$symbol$active]($style)'
 
 [custom.chezmoi]
