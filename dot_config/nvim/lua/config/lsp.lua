@@ -182,7 +182,7 @@ local handlers = {
 			filetypes = { "terraform", "terraform-vars", "tf", "hcl" },
 		})
 		vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-			pattern = { "*.tf,*.tfvars,*.hcl" },
+			pattern = { "*.tf", "*.tfvars", "*.hcl" },
 			callback = vim.lsp.buf.format(),
 		})
 	end,
