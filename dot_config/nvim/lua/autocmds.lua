@@ -78,6 +78,16 @@ autocmd({ "FileType" }, {
 		vim.opt_local.expandtab = true
 	end,
 })
+---- terraform, hcl
+autocmd({ "FileType" }, {
+	pattern = { "terraform", "hcl" },
+	callback = function()
+		vim.opt_local.tabstop = 2
+		vim.opt_local.shiftwidth = 2
+		vim.opt_local.softtabstop = 2
+		vim.opt_local.expandtab = true
+	end,
+})
 ---- json, yaml, toml
 autocmd({ "FileType" }, {
 	pattern = { "json", "yaml", "yml", "toml" },
