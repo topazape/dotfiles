@@ -179,7 +179,7 @@ local handlers = {
 
 	["terraformls"] = function()
 		require("lspconfig").terraformls.setup({
-			filetype = { "terraform", "terraform-vars", "tf" },
+			pattern = { ".tf", ".tfvars", ".hcl" },
 		})
 	end,
 }
