@@ -2,6 +2,9 @@
 symbol = '󰯽 '
 format = 'on [$symbol$account(@$domain) (\($project\))]($style) '
 
+[go]
+symbol = '󰜉 '
+
 [custom.chezmoi]
 command = 'echo chezmoi'
 when = ''' test "$CHEZMOI" = 1 '''
