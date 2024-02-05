@@ -2,7 +2,7 @@
 symbol = '󰯽 '
 format = 'on [$symbol$account(@$domain) (\($project\))]($style) '
 
-[go]
+[golang]
 symbol = '󰜉 '
 
 [custom.chezmoi]
