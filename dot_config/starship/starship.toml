@@ -3,7 +3,7 @@ symbol = '󰯽 '
 format = 'on [$symbol$account(@$domain) (\($project\))]($style) '
 
 [golang]
-symbol = '󰟓 '
+symbol = ' '
 
 [custom.chezmoi]
 command = 'echo chezmoi'
