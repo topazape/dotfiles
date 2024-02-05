@@ -1,6 +1,6 @@
 [gcloud]
 symbol = '️🇬️ '
-format = 'on $symbol'
+format = 'on $symbol ->'
 
 [custom.chezmoi]
 command = "echo chezmoi"
