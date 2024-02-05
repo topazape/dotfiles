@@ -1,5 +1,5 @@
 local wezterm = require("wezterm")
--- local keymaps = require("keymaps")
+local keymaps = require("keymaps")
 require("status")
 
 return {
@@ -45,5 +45,5 @@ return {
 	send_composed_key_when_right_alt_is_pressed = false,
 
 	-- keymaps
-	keymaps,
+	-- keymaps,
 }
