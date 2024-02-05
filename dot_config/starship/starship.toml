@@ -1,5 +1,5 @@
 [gcloud]
-format = '[$symbol$active]'
+format = '[$symbol$active]($style)'
 
 [custom.chezmoi]
 command = 'echo chezmoi'
