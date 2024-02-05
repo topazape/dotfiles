@@ -183,7 +183,7 @@ local handlers = {
 
 	["terraformls"] = function()
 		require("lspconfig").terraformls.setup({
-			filetypes = { "terraform", "terraform-vars", "tf", "hcl" },
+			filetypes = { "terraform", "terraform-vars", "hcl" },
 		})
 		vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 			pattern = { "*.tf", "*.tfvars", "*.hcl" },
