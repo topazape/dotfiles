@@ -176,6 +176,12 @@ local handlers = {
 		})
 		vim.env.GOLANGCI_LINT_CACHE = XDG_CACHE_HOME .. "/golangci-lint"
 	end,
+
+	["terraformls"] = function()
+		require("lspconfig").terraformls.setup({
+			filetype = { "terraform", "terraform-vars", "tf" },
+		})
+	end,
 }
 
 require("mason-lspconfig").setup_handlers(handlers)
