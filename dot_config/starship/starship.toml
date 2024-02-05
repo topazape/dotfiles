@@ -1,5 +1,5 @@
 [gcloud]
-symbol = '️󰯿 '
+symbol = '️󱍢 '
 format = 'on [$symbol$account(@$domain) (\($project\))]($style) '
 
 [custom.chezmoi]
