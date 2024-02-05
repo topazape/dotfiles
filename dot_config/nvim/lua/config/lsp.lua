@@ -181,17 +181,17 @@ local handlers = {
 		vim.env.GOLANGCI_LINT_CACHE = XDG_CACHE_HOME .. "/golangci-lint"
 	end,
 
-	-- ["terraformls"] = function()
-	-- 	require("lspconfig").terraformls.setup({
-	-- 		filetypes = { "terraform", "terraform-vars", "tf", "hcl" },
-	-- 	})
-	-- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-	-- 	pattern = { "*.tf", "*.tfvars", "*.hcl" },
-	-- callback = function()
-	-- 	vim.lsp.buf.format()
-	-- end,
-	-- })
-	-- end,
+	["terraformls"] = function()
+		require("lspconfig").terraformls.setup({
+			filetypes = { "terraform", "terraform-vars", "tf", "hcl" },
+		})
+		vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+			pattern = { "*.tf", "*.tfvars", "*.hcl" },
+			callback = function()
+				vim.lsp.buf.format()
+			end,
+		})
+	end,
 }
 
 require("mason-lspconfig").setup_handlers(handlers)
