@@ -3,6 +3,6 @@ symbol = '️🇬️ '
 format = 'on [$symbol$account(@$domain) (\($project\))]($style) '
 
 [custom.chezmoi]
-command = 'echo chezmoi'
-when = ''' test '$CHEZMOI' = '1' '''
-symbol = '🏡'
+command = "echo chezmoi"
+when = """ test "$CHEZMOI" = "1" """
+symbol = "🏡"
