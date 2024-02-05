@@ -183,7 +183,9 @@ local handlers = {
 		})
 		vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 			pattern = { "*.tf", "*.tfvars", "*.hcl" },
-			callback = vim.lsp.buf.format(),
+			callback = function()
+				vim.lsp.buf.format()
+			end,
 		})
 	end,
 }
