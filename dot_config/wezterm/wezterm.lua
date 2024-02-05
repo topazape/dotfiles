@@ -1,7 +1,6 @@
 local wezterm = require("wezterm")
-
-require("status")
 local keymaps = require("keymaps")
+require("status")
 
 return {
 	-- color scheme
