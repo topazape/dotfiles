@@ -1,15 +1,15 @@
+[docker_context]
+symbol = ' '
+
 [gcloud]
 symbol = '󰯽 '
 format = 'on [$symbol$account(@$domain) (\($project\))]($style) '
 
-[golang]
-symbol = ' '
-
-[docker_context]
-symbol = ' '
-
 [git_branch]
 symbol = ' '
+
+[golang]
+symbol = ' '
 
 [custom.chezmoi]
 command = 'echo chezmoi'
