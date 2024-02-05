@@ -1,13 +1,19 @@
 local augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
 local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
--- ファイルタイプ別設定
+-- 拡張子を元にファイルタイプを設定する
 ---- *.bq は SQL ファイルとして扱う
 autocmd({ "BufNewFile", "BufRead" }, {
 	pattern = { "*.bq" },
 	command = "setfiletype sql",
 })
+---- *.tf は Terraform ファイルとして扱う
+autocmd({ "BufNewFile", "BufRead" }, {
+	pattern = { "*.tf" },
+	command = "setfiletype terraform",
+})
 
+-- ファイルタイプ別設定
 ---- go
 autocmd({ "FileType" }, {
 	pattern = { "go" },
