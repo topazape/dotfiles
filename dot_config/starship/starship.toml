@@ -8,6 +8,9 @@ symbol = ' '
 [docker_context]
 symbol = ' '
 
+[git_branch]
+symbol = ' '
+
 [custom.chezmoi]
 command = 'echo chezmoi'
 when = ''' test "$CHEZMOI" = 1 '''
