@@ -183,12 +183,6 @@ local handlers = {
 
 	["dockerls"] = function()
 		require("lspconfig").dockerls.setup({})
-		vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-			pattern = { "Dockerfile" },
-			callback = function()
-				vim.lsp.buf.format()
-			end,
-		})
 	end,
 
 	["terraformls"] = function()
