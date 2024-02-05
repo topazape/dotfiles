@@ -5,7 +5,7 @@ format = 'on [$symbol$account(@$domain) (\($project\))]($style) '
 [golang]
 symbol = ' '
 
-[docker]
+[docker_context]
 symbol = ' '
 
 [custom.chezmoi]
