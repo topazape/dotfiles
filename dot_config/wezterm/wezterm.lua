@@ -45,5 +45,8 @@ return {
 	send_composed_key_when_right_alt_is_pressed = false,
 
 	-- keymaps
+	---- set leader_key to achieve tmux-like keybinds
+	leader = { mods = "CTRL", key = "t", timeout_milliseconds = 1000 },
+
 	keys,
 }
