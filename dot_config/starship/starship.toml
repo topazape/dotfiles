@@ -1,6 +1,6 @@
 [gcloud]
 symbol = '️🇬️ '
-format = '[$symbol$account]($style)'
+format = '[$symbol$account(@domain)]($style)'
 
 [custom.chezmoi]
 command = 'echo chezmoi'
