@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 
 require("status")
-require("keymaps")
+local keymaps = require("keymaps")
 
 return {
 	-- color scheme
@@ -40,4 +40,7 @@ return {
 
 	-- status
 	status_update_interval = 1000,
+
+	-- keymaps
+	keys = keymaps,
 }
