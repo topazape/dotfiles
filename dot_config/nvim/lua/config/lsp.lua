@@ -171,7 +171,7 @@ local handlers = {
 					"--enable",
 					"misspell",
 					"--enable",
-					"nosnakecase",
+					"revive",
 					"--out-format",
 					"json",
 					"--issues-exit-code=1",
