@@ -4,7 +4,7 @@ when = ''' test "$CHEZMOI" = 1 '''
 symbol = '🏡'
 
 [gcloud]
-symbol = '󰯽 '
+symbol = '󰬎 '
 format = 'on [$symbol$account(@$domain) (\($project\))]($style) '
 
 [aws]
