@@ -181,6 +181,16 @@ local handlers = {
 		vim.env.GOLANGCI_LINT_CACHE = XDG_CACHE_HOME .. "/golangci-lint"
 	end,
 
+	["dockerls"] = function()
+		require("lspconfig").dockerls.setup({})
+		vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+			pattern = { "Dockerfile" },
+			callback = function()
+				vim.lsp.buf.format()
+			end,
+		})
+	end,
+
 	["terraformls"] = function()
 		require("lspconfig").terraformls.setup({
 			filetypes = { "terraform", "terraform-vars", "hcl" },
