@@ -1,5 +1,5 @@
 local wezterm = require("wezterm")
-local keymaps = require("keymaps")
+-- local keymaps = require("keymaps")
 require("status")
 
 return {
