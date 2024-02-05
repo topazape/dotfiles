@@ -13,6 +13,7 @@ require("nvim-treesitter.configs").setup({
 		"gitcommit",
 		"gitignore",
 		"go",
+		"hcl",
 		"html",
 		"javascript",
 		"json",
