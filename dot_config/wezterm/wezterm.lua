@@ -31,6 +31,7 @@ return {
 	use_fancy_tab_bar = false,
 
 	-- window size
+	inital_cols = 100,
 	initial_rows = 30,
 
 	-- bell
