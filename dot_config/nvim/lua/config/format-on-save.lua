@@ -39,7 +39,7 @@ format_on_save.setup({
 			formatters.shell({ cmd = { "taplo", "format", "-" } }),
 		},
 		yaml = {
-			formatters.lsp,
+			formatters.shell({ cmd = { "yamlfmt", "-" } }),
 		},
 		fallback_formatter = {
 			formatters.remove_trailing_whitespace,
