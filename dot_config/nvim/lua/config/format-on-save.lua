@@ -46,6 +46,7 @@ format_on_save.setup({
 		},
 		fallback_formatter = {
 			formatters.remove_trailing_whitespace,
+			formatters.remove_trailing_newlines,
 		},
 	},
 })
