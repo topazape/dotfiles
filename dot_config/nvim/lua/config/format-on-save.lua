@@ -27,7 +27,7 @@ format_on_save.setup({
 			formatters.shfmt, -- default, Google style
 		},
 		json = {
-			formatters.shell({ cmd = { "jq", "-" } }),
+			formatters.shell({ cmd = { "jq", "." } }),
 		},
 		toml = {
 			formatters.shell({ cmd = { "taplo", "format", "-" } }),
