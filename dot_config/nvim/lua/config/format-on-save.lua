@@ -26,6 +26,9 @@ format_on_save.setup({
 		zsh = {
 			formatters.shfmt, -- default, Google style
 		},
+		dockerfile = {
+			formatters.lsp,
+		},
 		json = {
 			formatters.shell({ cmd = { "jq", "." } }),
 		},
