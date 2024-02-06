@@ -7,9 +7,6 @@ format_on_save.setup({
 			formatters.shell({ cmd = { "goimports" } }),
 			formatters.shell({ cmd = { "gofumpt" } }),
 		},
-		json = {
-			formatters.lsp,
-		},
 		lua = {
 			formatters.stylua, -- default
 		},
@@ -28,6 +25,9 @@ format_on_save.setup({
 		},
 		zsh = {
 			formatters.shfmt, -- default, Google style
+		},
+		json = {
+			formatters.lsp,
 		},
 		toml = {
 			formatters.shell({ cmd = { "taplo", "format", "-" } }),
