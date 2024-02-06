@@ -11,7 +11,7 @@ format_on_save.setup({
 			formatters.stylua, -- default
 		},
 		python = {
-			formatters.shell({ cmd = { "ruff", "format", "--no-cache", "--respect-gitignore", "-" } }), -- black compatible
+			formatters.ruff, --default
 			formatters.shell({ cmd = { "isort", "-" } }),
 		},
 		rust = {
@@ -27,7 +27,7 @@ format_on_save.setup({
 			formatters.shfmt, -- default, Google style
 		},
 		json = {
-			formatters.lsp,
+			formatters.shell({ cmd = { "jq", "-" } }),
 		},
 		toml = {
 			formatters.shell({ cmd = { "taplo", "format", "-" } }),
