@@ -29,6 +29,9 @@ format_on_save.setup({
 		terraform = {
 			formatters.lsp,
 		},
+		hcl = {
+			formatters.lsp,
+		},
 		dockerfile = {
 			formatters.lsp,
 		},
