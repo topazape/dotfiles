@@ -30,6 +30,9 @@ return {
 	macos_window_background_blur = 20,
 	use_fancy_tab_bar = false,
 
+	-- window size
+	initial_rows = 30,
+
 	-- bell
 	audible_bell = "Disabled",
 	visual_bell = {
