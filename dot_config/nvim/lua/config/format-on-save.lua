@@ -15,7 +15,7 @@ format_on_save.setup({
 			formatters.ruff, --default
 		},
 		rust = {
-			formatters.lsp,
+			formatters.shell({ cmd = { "rustfmt", "-" } }),
 		},
 		sh = {
 			formatters.shfmt, -- default, Google style
