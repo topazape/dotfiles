@@ -34,23 +34,11 @@ symbol = " "
 [hostname]
 ssh_symbol = " "
 
-[java]
-symbol = " "
-
-[julia]
-symbol = " "
-
 [lua]
 symbol = " "
 
 [memory_usage]
 symbol = "󰍛 "
-
-[meson]
-symbol = "󰔷 "
-
-[nim]
-symbol = "󰆥 "
 
 [nodejs]
 symbol = " "
@@ -58,23 +46,11 @@ symbol = " "
 [package]
 symbol = "󰏗 "
 
-[perl]
-symbol = " "
-
-[php]
-symbol = " "
-
 [python]
 symbol = " "
 
 [rlang]
 symbol = "󰟔 "
 
-[ruby]
-symbol = " "
-
 [rust]
 symbol = " "
-
-[zig]
-symbol = " "
