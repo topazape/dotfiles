@@ -26,6 +26,9 @@ format_on_save.setup({
 		zsh = {
 			formatters.shfmt, -- default, Google style
 		},
+		terraform = {
+			formatters.lsp,
+		},
 		dockerfile = {
 			formatters.lsp,
 		},
