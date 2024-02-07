@@ -5,7 +5,7 @@ symbol = ' '
 
 [gcloud]
 symbol = '󰬎 '
-format = '[$symbol$account(@$domain)  $project]($style) '
+format = ' [$symbol$account(@$domain)  $project]($style) '
 
 [aws]
 symbol = "󰸏 "
