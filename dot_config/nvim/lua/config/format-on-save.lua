@@ -26,7 +26,7 @@ if vim.fn.filereadable(XDG_CONFIG_HOME .. "/ruff/ruff.toml") == 1 then
 end
 
 vim.env.GOLANGCI_LINT_CACHE = XDG_CACHE_HOME .. "/golangci-lint"
-local golangci_lint_cmd = { "golangci-lint", "run", "--fix" }
+local golangci_lint_cmd = { "golangci-lint", "run", "--fix", "-" }
 
 format_on_save.setup({
 	formatter_by_ft = {
