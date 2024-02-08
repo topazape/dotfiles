@@ -169,6 +169,8 @@ local handlers = {
 					"--enable",
 					"goimports",
 					"--enable",
+					"gosec",
+					"--enable",
 					"misspell",
 					"--enable",
 					"revive",
