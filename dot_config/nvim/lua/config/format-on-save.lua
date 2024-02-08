@@ -22,7 +22,9 @@ end
 
 format_on_save.setup({
 	formatter_by_ft = {
-		go = {},
+		go = {
+			formatters.shell({ cmd = { "gofumpt", "-" } }),
+		},
 		lua = {
 			formatters.stylua, -- default
 		},
