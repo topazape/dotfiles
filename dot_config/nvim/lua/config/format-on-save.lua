@@ -26,12 +26,13 @@ if vim.fn.filereadable(XDG_CONFIG_HOME .. "/ruff/ruff.toml") == 1 then
 end
 
 vim.env.GOLANGCI_LINT_CACHE = XDG_CACHE_HOME .. "/golangci-lint"
-local golangci_lint_cmd = { "golangci-lint", "run", "--fix" }
+local golangci_lint_cmd = { "golangci-lint", "run", "--fix", "--allow-parallel-runners=false" }
 if vim.fn.filereadable(XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml") == 1 then
 	golangci_lint_cmd = {
 		"golangci-lint",
 		"run",
 		"--fix",
+		"--allow-parallel-runners=false",
 		"--config",
 		XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml",
 	}
@@ -39,9 +40,9 @@ end
 
 format_on_save.setup({
 	formatter_by_ft = {
-		-- go = {
-		-- 	formatters.shell({ cmd = golangci_lint_cmd }),
-		-- },
+		go = {
+			formatters.shell({ cmd = golangci_lint_cmd }),
+		},
 		lua = {
 			formatters.stylua, -- default
 		},
