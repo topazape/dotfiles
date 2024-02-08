@@ -12,7 +12,7 @@ format_on_save.setup({
 		},
 		python = {
 			formatters.shell({ cmd = { "isort", "-" } }),
-			formatters.ruff, --default
+			formatters.shell({ cmd = { "ruff", "format", "--no-cache", "--respect-gitignore", "-" } }),
 		},
 		rust = {
 			formatters.shell({ cmd = { "rustfmt", "--emit=stdout" } }),
