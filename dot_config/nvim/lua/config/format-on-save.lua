@@ -23,8 +23,8 @@ end
 format_on_save.setup({
 	formatter_by_ft = {
 		go = {
-			formatters.shell({ cmd = { "gci", "write" } }),
-			-- formatters.shell({ cmd = { "gofumpt" } }),
+			formatters.shell({ cmd = { "goimports" } }),
+			formatters.shell({ cmd = { "gofumpt" } }),
 		},
 		lua = {
 			formatters.stylua, -- default
