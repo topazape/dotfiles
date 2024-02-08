@@ -163,7 +163,6 @@ local handlers = {
 
 		local golangci_lint_command = { "golangci-lint", "run", "--out-format", "json" }
 		if vim.fn.filereadable(XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml") == 1 then
-			require("notify")(XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml")
 			golangci_lint_command = {
 				"golangci-lint",
 				"run",
