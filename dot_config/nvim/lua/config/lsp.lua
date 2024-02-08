@@ -168,7 +168,7 @@ local handlers = {
 				"golangci-lint",
 				"run",
 				"--config",
-				XDG_CONFIG_HOME .. "/golangci-lint/config.toml",
+				XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml",
 				"--out-format",
 				"json",
 			}
