@@ -161,24 +161,25 @@ local handlers = {
 	["golangci_lint_ls"] = function()
 		vim.env.GOLANGCI_LINT_CACHE = XDG_CACHE_HOME .. "/golangci-lint"
 
-		local golangci_lint_command = { "golangci-lint", "run", "--out-format", "json" }
-		if vim.fn.filereadable(XDG_CONFIG_HOME .. "/golangci-lint/config.toml") == 1 then
-			print("golangci-lint config found")
-			golangci_lint_command = {
-				"golangci-lint",
-				"run",
-				"--config",
-				XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml",
-				"--out-format",
-				"json",
-			}
-		end
-
-		require("lspconfig").golangci_lint_ls.setup({
-			init_options = {
-				command = golangci_lint_command,
-			},
-		})
+		-- local golangci_lint_command = { "golangci-lint", "run", "--out-format", "json" }
+		-- if vim.fn.filereadable(XDG_CONFIG_HOME .. "/golangci-lint/config.toml") == 1 then
+		-- 	print("golangci-lint config found")
+		-- 	golangci_lint_command = {
+		-- 		"golangci-lint",
+		-- 		"run",
+		-- 		"--config",
+		-- 		XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml",
+		-- 		"--out-format",
+		-- 		"json",
+		-- 	}
+		-- end
+		--
+		-- require("lspconfig").golangci_lint_ls.setup({
+		-- 	init_options = {
+		-- 		command = golangci_lint_command,
+		-- 	},
+		-- })
+		require("lspconfig").golangci_lint_ls.setup({})
 	end,
 
 	["dockerls"] = function()
