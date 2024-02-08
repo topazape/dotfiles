@@ -30,9 +30,9 @@ local golangci_lint_cmd = { "golangci-lint", "run", "--fix" }
 
 format_on_save.setup({
 	formatter_by_ft = {
-		go = {
-			formatters.shell({ cmd = golangci_lint_cmd }),
-		},
+		-- go = {
+		-- 	formatters.shell({ cmd = golangci_lint_cmd }),
+		-- },
 		lua = {
 			formatters.stylua, -- default
 		},
