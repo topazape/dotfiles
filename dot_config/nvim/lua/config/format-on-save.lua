@@ -6,11 +6,6 @@ local XDG_CONFIG_HOME = os.getenv("XDG_CONFIG_HOME")
 if not XDG_CONFIG_HOME then
 	XDG_CONFIG_HOME = os.getenv("HOME") .. "/.config"
 end
--- xdg cache dir
-local XDG_CACHE_HOME = os.getenv("XDG_CACHE_HOME")
-if not XDG_CACHE_HOME then
-	XDG_CACHE_HOME = os.getenv("HOME") .. "/.cache"
-end
 
 local ruff_cmd = { "ruff", "format", "--no-cache", "--respect-gitignore", "-" }
 if vim.fn.filereadable(XDG_CONFIG_HOME .. "/ruff/ruff.toml") == 1 then
@@ -25,25 +20,9 @@ if vim.fn.filereadable(XDG_CONFIG_HOME .. "/ruff/ruff.toml") == 1 then
 	}
 end
 
-vim.env.GOLANGCI_LINT_CACHE = XDG_CACHE_HOME .. "/golangci-lint"
-local golangci_lint_cmd = { "golangci-lint", "run", "--fix", "--allow-parallel-runners=false", "-" }
-if vim.fn.filereadable(XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml") == 1 then
-	golangci_lint_cmd = {
-		"golangci-lint",
-		"run",
-		"--fix",
-		"--allow-parallel-runners=false",
-		"--config",
-		XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml",
-		"-",
-	}
-end
-
 format_on_save.setup({
 	formatter_by_ft = {
-		go = {
-			formatters.shell({ cmd = golangci_lint_cmd }),
-		},
+		go = {},
 		lua = {
 			formatters.stylua, -- default
 		},
