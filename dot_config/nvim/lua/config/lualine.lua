@@ -24,7 +24,7 @@ lualine.setup({
 			{ "diff", symbols = { added = "󰐖 ", modified = "󰦓 ", removed = "󰍵 " } },
 		},
 		lualine_c = {
-			{ "filename", path = 1 },
+			{ "filename", path = 3 },
 		},
 		lualine_x = {
 			{ "filetype" },
