@@ -34,7 +34,6 @@ if vim.fn.filereadable(XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml") == 1 th
 		"--fix",
 		"--config",
 		XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml",
-		"%",
 	}
 end
 
