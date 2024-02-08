@@ -19,7 +19,7 @@ return {
 	-- font
 	font = wezterm.font_with_fallback({
 		{ family = "Berkeley Mono" },
-		{ family = "Pretendard JP" },
+		{ family = "IBM Plex Sans JP" },
 	}),
 	font_size = 14,
 	warn_about_missing_glyphs = false,
