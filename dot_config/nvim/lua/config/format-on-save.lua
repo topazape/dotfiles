@@ -26,7 +26,7 @@ if vim.fn.filereadable(XDG_CONFIG_HOME .. "/ruff/ruff.toml") == 1 then
 end
 
 vim.env.GOLANGCI_LINT_CACHE = XDG_CACHE_HOME .. "/golangci-lint"
-local golangci_lint_cmd = { "golangci-lint", "run", "--fix", "--allow-parallel-runners=false" }
+local golangci_lint_cmd = { "golangci-lint", "run", "--fix", "--allow-parallel-runners=false", "-" }
 if vim.fn.filereadable(XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml") == 1 then
 	golangci_lint_cmd = {
 		"golangci-lint",
@@ -35,6 +35,7 @@ if vim.fn.filereadable(XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml") == 1 th
 		"--allow-parallel-runners=false",
 		"--config",
 		XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml",
+		"-",
 	}
 end
 
