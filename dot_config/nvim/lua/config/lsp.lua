@@ -169,6 +169,8 @@ local handlers = {
 					"--enable",
 					"gofumpt",
 					"--enable",
+					"govet",
+					"--enable",
 					"misspell",
 					"--enable",
 					"revive",
