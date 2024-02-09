@@ -66,6 +66,7 @@ local handlers = {
 	function(server_name) -- default handler (optional)
 		require("lspconfig")[server_name].setup({})
 	end,
+
 	-- Next, you can provide a dedicated handler for specific servers.
 	["lua_ls"] = function()
 		require("lspconfig").lua_ls.setup({
