@@ -75,7 +75,7 @@ local handlers = {
 						version = "LuaJIT",
 					},
 					workspace = {
-						library = library({ "lazy.nvim", "nvim-insx" }),
+						library = library({ "lazy.nvim" }),
 						checkThirdParty = false,
 					},
 					diagnostics = {
