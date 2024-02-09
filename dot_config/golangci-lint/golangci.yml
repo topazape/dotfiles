@@ -9,5 +9,6 @@ linters:
     - unused
     - gci
     - gofumpt
+    - gosec
     - misspell
     - revive
