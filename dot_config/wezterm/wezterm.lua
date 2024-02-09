@@ -4,8 +4,7 @@ require("status")
 
 return {
 	-- color scheme
-	-- color_scheme = "Catppuccin Mocha",
-	color_scheme = "Catpuccin Macchiato",
+	color_scheme = "Catppuccin Macchiato",
 
 	-- colors
 	colors = {
