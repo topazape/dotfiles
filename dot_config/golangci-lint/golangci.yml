@@ -7,8 +7,8 @@ linters:
     - ineffassign
     - staticcheck
     - unused
-    - gci
     - gofumpt
+    - goimports
     - gosec
     - misspell
     - revive
