@@ -24,8 +24,8 @@ format_on_save.setup({
 	formatter_by_ft = {
 		go = {
 			formatters.lsp,
-			formatters.shell({ cmd = { "goimports" } }),
-			formatters.shell({ cmd = { "gofumpt" } }),
+			-- formatters.shell({ cmd = { "goimports" } }),
+			-- formatters.shell({ cmd = { "gofumpt" } }),
 		},
 		lua = {
 			formatters.stylua, -- default
