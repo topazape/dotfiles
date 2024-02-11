@@ -74,7 +74,6 @@ luv
 lz4
 lzo
 m4
-maven
 mpdecimal
 mpfr
 msgpack
@@ -84,7 +83,6 @@ node
 oniguruma
 openblas
 openexr
-openjdk
 openldap
 openssl@3
 pango
@@ -110,6 +108,7 @@ sqlite
 starship
 tcl-tk
 terraform
+terragrunt
 tree
 tree-sitter
 unibilium
@@ -120,16 +119,16 @@ xz
 zstd
 
 ==> Casks
-font-pretendard-jp
-font-sf-mono
+docker
+figma
+font-ibm-plex-sans-jp
 google-chrome
 google-cloud-sdk
 miro
-obsidian
+notion
 rstudio
 slack
 stats
-tableau-reader
 wezterm
 ```
 
@@ -138,18 +137,17 @@ wezterm
 ◍ bash-language-server bashls
 ◍ debugpy
 ◍ delve
+◍ dockerfile-language-server dockerls
 ◍ gofumpt
 ◍ goimports
 ◍ golangci-lint
 ◍ golangci-lint-langserver golangci_lint_ls
-◍ google-java-format
 ◍ gopls
 ◍ isort
-◍ java-language-server java_language_server
 ◍ jq
 ◍ json-lsp jsonls
 ◍ lua-language-server lua_ls
-◍ python-lsp-server pylsp
+◍ pyright
 ◍ ruff
 ◍ ruff-lsp ruff_lsp
 ◍ rust-analyzer rust_analyzer
