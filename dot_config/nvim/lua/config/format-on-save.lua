@@ -25,7 +25,7 @@ format_on_save.setup({
 		go = {
 			formatters.lsp,
 			-- formatters.shell({ cmd = { "goimports" } }),
-			formatters.shell({ cmd = { "gci", "print" } }),
+			-- formatters.shell({ cmd = { "gci", "print" } }),
 			formatters.shell({ cmd = { "gofumpt" } }),
 		},
 		lua = {
