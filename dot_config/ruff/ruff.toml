@@ -12,6 +12,7 @@ select = [
   "RUF", # ruff
   "UP",  # pyupgrade
   "D",   # pydocstyle
+  "ICN", # flake8-import-conventions
 ]
 ignore = [
   "D100",    # Missing docstring in public module
