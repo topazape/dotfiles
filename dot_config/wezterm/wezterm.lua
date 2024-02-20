@@ -18,7 +18,7 @@ return {
 
 	-- font
 	font = wezterm.font_with_fallback({
-		{ family = "Berkeley Mono" },
+		{ family = "Berkeley Mono", scale = 1.5 },
 		{ family = "IBM Plex Sans JP" },
 	}),
 	font_size = 14,
