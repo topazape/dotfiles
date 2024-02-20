@@ -93,6 +93,12 @@ return {
 	-- 		require("config/cmp")
 	-- 	end,
 	-- },
+	{
+		"nvimdev/epo.nvim",
+		config = function()
+			require("epo").setup()
+		end,
+	},
 
 	-- AI
 	---- copilot
