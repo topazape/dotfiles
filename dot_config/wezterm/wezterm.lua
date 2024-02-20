@@ -24,7 +24,6 @@ return {
 	font_size = 14,
 	warn_about_missing_glyphs = false,
 	adjust_window_size_when_changing_font_size = false,
-	font_shaper = "Allsorts",
 
 	-- look and feel
 	window_background_opacity = 0.90,
