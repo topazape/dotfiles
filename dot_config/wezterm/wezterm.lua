@@ -17,7 +17,7 @@ return {
 	},
 
 	-- font
-	line_height = 1.2,
+	line_height = 1.1,
 	font = wezterm.font_with_fallback({
 		{ family = "Berkeley Mono" },
 		{ family = "IBM Plex Sans JP" },
