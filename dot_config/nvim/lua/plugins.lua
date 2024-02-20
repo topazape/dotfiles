@@ -65,7 +65,6 @@ return {
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 		},
-		-- event = "InsertEnter",
 	},
 
 	-- format on save
