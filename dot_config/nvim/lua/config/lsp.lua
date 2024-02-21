@@ -87,35 +87,35 @@ local handlers = {
 		})
 	end,
 
-	["pylsp"] = function()
-		require("lspconfig").pylsp.setup({
-			settings = {
-				pylsp = {
-					plugins = {
-						-- python-lsp-server[all] plugins will be disabled
-						autopep8 = { enabled = false },
-						flake8 = { enabled = false },
-						mccabe = { enabled = false },
-						preload = { enabled = false },
-						pycodestyle = { enabled = false },
-						pydocstyle = { enabled = false },
-						pyflakes = { enabled = false },
-						pylint = { enabled = false },
-						rope_autocomplete = { enabled = false },
-						rope_completion = { enabled = false },
-						yapf = { enabled = false },
-						-- 3rd-party plugins
-						---- type checker
-						pylsp_mypy = {
-							enabled = true,
-							overrides = { "--python-executable", py_path, true },
-							report_progress = true,
-						},
-					},
-				},
-			},
-		})
-	end,
+	-- ["pylsp"] = function()
+	-- 	require("lspconfig").pylsp.setup({
+	-- 		settings = {
+	-- 			pylsp = {
+	-- 				plugins = {
+	-- 					-- python-lsp-server[all] plugins will be disabled
+	-- 					autopep8 = { enabled = false },
+	-- 					flake8 = { enabled = false },
+	-- 					mccabe = { enabled = false },
+	-- 					preload = { enabled = false },
+	-- 					pycodestyle = { enabled = false },
+	-- 					pydocstyle = { enabled = false },
+	-- 					pyflakes = { enabled = false },
+	-- 					pylint = { enabled = false },
+	-- 					rope_autocomplete = { enabled = false },
+	-- 					rope_completion = { enabled = false },
+	-- 					yapf = { enabled = false },
+	-- 					-- 3rd-party plugins
+	-- 					---- type checker
+	-- 					pylsp_mypy = {
+	-- 						enabled = true,
+	-- 						overrides = { "--python-executable", py_path, true },
+	-- 						report_progress = true,
+	-- 					},
+	-- 				},
+	-- 			},
+	-- 		},
+	-- 	})
+	-- end,
 
 	["ruff_lsp"] = function()
 		local ruff_args = {}
