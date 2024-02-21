@@ -31,7 +31,7 @@ format_on_save.setup({
 			formatters.stylua, -- default
 		},
 		python = {
-			-- formatters.shell({ cmd = { "isort", "-" } }),
+			formatters.shell({ cmd = { "isort", "-" } }),
 			formatters.shell({ cmd = ruff_cmd }),
 		},
 		rust = {
