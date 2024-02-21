@@ -117,23 +117,6 @@ local handlers = {
 		})
 	end,
 
-	["pyright"] = function()
-		require("lspconfig").pyright.setup({
-			-- https://github.com/microsoft/pyright/blob/main/docs/settings.md
-			settings = {
-				python = {
-					analysis = {
-						autoImportCompletions = true,
-						autoSearchPaths = true,
-						diagnosticMode = "workspace",
-						typeCheckingMode = "standard",
-						useLibraryCodeForTypes = true,
-					},
-				},
-			},
-		})
-	end,
-
 	["ruff_lsp"] = function()
 		local ruff_args = {}
 		if vim.fn.filereadable(XDG_CONFIG_HOME .. "/ruff/ruff.toml") == 1 then
