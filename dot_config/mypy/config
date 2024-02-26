@@ -19,5 +19,5 @@ warn_unused_ignores = True
 ; 不要な型キャストに警告します。
 warn_redundant_casts = True
 
-[mypy-kfp]
+[mypy-kfp.*]
 ignore_missing_imports = True
