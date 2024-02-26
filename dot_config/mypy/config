@@ -21,3 +21,6 @@ warn_redundant_casts = True
 
 [mypy-kfp.*]
 ignore_missing_imports = True
+
+[mypy-google_cloud_pipeline_components.*]
+ignore_missing_imports = True
