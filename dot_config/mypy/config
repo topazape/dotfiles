@@ -1,0 +1,20 @@
+# vim: set filetype=dosini:
+[mypy]
+# 基本設定
+; 厳格な型チェックを有効にします。これは多くの設定を厳格モードに設定するショートカットです。
+strict = True 
+; 戻り値がAny型になる場合に警告します。これにより、型の不明瞭さを減らすのに役立ちます。
+warn_return_any = True
+; 型注釈のない関数定義を禁止します。これにより、コードベース全体で型注釈の一貫性を保つのに役立ちます。
+; disallow_untyped_defs = True
+; 型注釈のない関数内のコードもチェックします。
+check_untyped_defs = True
+# 進んだ設定
+; ジェネリック型においてAnyの使用を禁止します。これにより、型安全性が向上します。
+disallow_any_generics = True
+; 明示的に None を許可しない限り、オプショナル型を暗黙的に作成しないようにします。
+no_implicit_optional = True
+; 使用されていない # type: ignore コメントに警告します。これにより、不要な型チェックの無視を避けることができます。
+warn_unused_ignores = True
+; 不要な型キャストに警告します。
+warn_redundant_casts = True
