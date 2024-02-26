@@ -6,7 +6,7 @@ strict = True
 ; 戻り値がAny型になる場合に警告します。これにより、型の不明瞭さを減らすのに役立ちます。
 warn_return_any = True
 ; 型注釈のない関数定義を禁止します。これにより、コードベース全体で型注釈の一貫性を保つのに役立ちます。
-; disallow_untyped_defs = True
+disallow_untyped_defs = True
 ; 型注釈のない関数内のコードもチェックします。
 check_untyped_defs = True
 # 進んだ設定
