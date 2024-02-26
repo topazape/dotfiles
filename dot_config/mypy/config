@@ -26,3 +26,6 @@ ignore_missing_imports = True
 
 [mypy-google_cloud_pipeline_components.*]
 ignore_missing_imports = True
+
+[mypy-requests.*]
+ignore_missing_imports = True
