@@ -168,16 +168,7 @@ return {
 		"mvllow/modes.nvim",
 		tag = "v0.2.0",
 		config = function()
-			require("modes").setup({
-				colors = {
-					insert = "green",
-					normal = "blue",
-					command = "red",
-					visual = "yellow",
-					replace = "magenta",
-					terminal = "cyan",
-				},
-			})
+			require("modes").setup({})
 		end,
 	},
 
