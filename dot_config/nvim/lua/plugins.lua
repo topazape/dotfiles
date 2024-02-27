@@ -165,10 +165,15 @@ return {
 
 	-- mode highlight
 	{
-		"mvllow/modes.nvim",
-		tag = "v0.2.0",
+		"rasulomaroff/reactive.nvim",
 		config = function()
-			require("modes").setup({})
+			require("reactive").setup({
+				builtin = {
+					cursorline = true,
+					cursor = true,
+					modemsg = true,
+				},
+			})
 		end,
 	},
 
