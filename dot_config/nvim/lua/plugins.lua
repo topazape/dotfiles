@@ -163,6 +163,24 @@ return {
 		end,
 	},
 
+	-- mode highlight
+	{
+		"mvllow/modes.nvim",
+		tag = "v0.2.0",
+		config = function()
+			require("modes").setup({
+				colors = {
+					insert = "green",
+					normal = "blue",
+					command = "red",
+					visual = "yellow",
+					replace = "magenta",
+					terminal = "cyan",
+				},
+			})
+		end,
+	},
+
 	-- emphasis indent
 	{
 		"shellRaining/hlchunk.nvim",
