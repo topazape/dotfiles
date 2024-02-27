@@ -169,8 +169,8 @@ return {
 		config = function()
 			require("reactive").setup({
 				load = {
-					"catpuccin-mocha-cursor",
-					"catppuccin-mocha-cursor-line",
+					"catppuccin-macchiato-cursor",
+					"catppuccin-macchiato-cursor-line",
 				},
 				builtin = {
 					cursorline = true,
