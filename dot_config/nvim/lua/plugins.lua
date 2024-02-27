@@ -168,7 +168,10 @@ return {
 		"rasulomaroff/reactive.nvim",
 		config = function()
 			require("reactive").setup({
-				load = { "catpuccin-macchiato-cursor", "catppuccin-macchiato-cursor-line" },
+				-- load = {
+				-- 	"catpuccin-macchiato-cursor",
+				-- 	"catppuccin-macchiato-cursor-line",
+				-- },
 				builtin = {
 					cursorline = true,
 					cursor = true,
