@@ -228,7 +228,8 @@ return {
 						hl = {
 							ReactiveCursor = { bg = "#c4b5fd" },
 							CursorLineNr = { fg = "#c4b5fd" },
-							Visual = { bg = "#2e1065" },
+							-- Visual = { bg = "#2e1065" },
+							Visual = { bg = "#2fffff" },
 						},
 					},
 					[{ "R", "niR", "niV" }] = {
