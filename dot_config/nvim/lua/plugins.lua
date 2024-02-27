@@ -18,6 +18,7 @@ return {
 					notify = true,
 					telescope = { enabled = true },
 					treesitter = true,
+					ts_rainbow2 = true,
 				},
 			})
 			vim.cmd.colorscheme("catppuccin")
