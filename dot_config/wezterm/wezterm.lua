@@ -33,7 +33,6 @@ return {
 
 	-- window size
 	initial_cols = 88,
-	-- initial_rows = 32,
 
 	-- bell
 	audible_bell = "Disabled",
