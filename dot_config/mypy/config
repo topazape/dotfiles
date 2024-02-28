@@ -24,7 +24,7 @@ disallow_untyped_decorators = False
 [mypy-pandas.*]
 ignore_missing_imports = True
 
-[mypy-scikit-learn.*]
+[mypy-sklearn.*]
 ignore_missing_imports = True
 
 [mypy-joblib.*]
