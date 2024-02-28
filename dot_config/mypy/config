@@ -1,5 +1,8 @@
 # vim: set filetype=dosini:
 [mypy]
+# global options
+; キャッシュディレクトリ
+cache_dir = ~/.cache/mypy
 # 基本設定
 ; 厳格な型チェックを有効にします。これは多くの設定を厳格モードに設定するショートカットです。
 strict = True 
