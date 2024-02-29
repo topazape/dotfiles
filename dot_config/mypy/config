@@ -41,3 +41,6 @@ ignore_missing_imports = True
 
 [mypy-requests.*]
 ignore_missing_imports = True
+
+[mypy-ts.*]
+ignore_missing_imports = True
