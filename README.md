@@ -6,6 +6,7 @@ managed by [chezmoi](https://github.com/twpayne/chezmoi).
 ```
 ==> Formulae
 aom
+bash
 bat
 brotli
 c-ares
@@ -32,6 +33,7 @@ git-delta
 glib
 glow
 gmp
+gnu-sed
 go
 graphite2
 graphviz
@@ -147,7 +149,7 @@ wezterm
 ◍ jq
 ◍ json-lsp jsonls
 ◍ lua-language-server lua_ls
-◍ pyright
+◍ python-lsp-server pylsp
 ◍ ruff
 ◍ ruff-lsp ruff_lsp
 ◍ rust-analyzer rust_analyzer
