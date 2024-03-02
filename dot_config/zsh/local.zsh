@@ -22,6 +22,9 @@ case ${OSTYPE} in
     if [[ -d $(brew --prefix findutils) ]]; then
       path=($(brew --prefix findutils)/libexec/gnubin $path)
     fi
+    if [[ -d $(brew --prefix gnu-sed) ]]; then
+      path=($(brew --prefix gnu-sed)/libexec/gnubin $path)
+    fi
     ;;
   linux*)
     # aliases
