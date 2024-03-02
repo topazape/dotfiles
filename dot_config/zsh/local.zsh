@@ -15,24 +15,35 @@ case ${OSTYPE} in
       alias ls="ls --classify --color=auto"
       alias ll="ls -lh"
       alias la="ls -a"
+    else
+      echo "coreutils is not installed"
     fi
     # findutils
     if [[ -d $(brew --prefix findutils) ]]; then
       path=($(brew --prefix findutils)/libexec/gnubin $path)
+    else
+      echo "findutils is not installed"
     fi
     # gnu-sed
     if [[ -d $(brew --prefix gnu-sed) ]]; then
       path=($(brew --prefix gnu-sed)/libexec/gnubin $path)
+    else
+      echo "gnu-sed is not installed"
     fi
     # gawk
     if [[ -d $(brew --prefix gawk) ]]; then
       path=($(brew --prefix gawk)/libexec/gnubin $path)
+    else
+      echo "gawk is not installed"
     fi
-    # grep
+    fi
+    # gnu-grep
     if [[ -d $(brew --prefix grep) ]]; then
       path=($(brew --prefix grep)/libexec/gnubin $path)
       # aliases
       alias grep="grep --color=auto"
+    else
+      echo "gnu-grep is not installed"
     fi
     ;;
   linux*)
