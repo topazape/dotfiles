@@ -36,7 +36,6 @@ case ${OSTYPE} in
     else
       echo "gawk is not installed"
     fi
-    fi
     # gnu-grep
     if [[ -d $(brew --prefix grep) ]]; then
       path=($(brew --prefix grep)/libexec/gnubin $path)
