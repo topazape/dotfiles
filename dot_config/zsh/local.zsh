@@ -7,6 +7,8 @@ fi
 case ${OSTYPE} in
   darwin*)
     alias rm="rm -i"
+
+    # coreutils
     if [[ -d $(brew --prefix coreutils) ]]; then
       path=($(brew --prefix coreutils)/libexec/gnubin $path)
       # aliases
@@ -14,16 +16,23 @@ case ${OSTYPE} in
       alias ll="ls -lh"
       alias la="ls -a"
     fi
+    # findutils
+    if [[ -d $(brew --prefix findutils) ]]; then
+      path=($(brew --prefix findutils)/libexec/gnubin $path)
+    fi
+    # gnu-sed
+    if [[ -d $(brew --prefix gnu-sed) ]]; then
+      path=($(brew --prefix gnu-sed)/libexec/gnubin $path)
+    fi
+    # gawk
+    if [[ -d $(brew --prefix gawk) ]]; then
+      path=($(brew --prefix gawk)/libexec/gnubin $path)
+    fi
+    # grep
     if [[ -d $(brew --prefix grep) ]]; then
       path=($(brew --prefix grep)/libexec/gnubin $path)
       # aliases
       alias grep="grep --color=auto"
-    fi
-    if [[ -d $(brew --prefix findutils) ]]; then
-      path=($(brew --prefix findutils)/libexec/gnubin $path)
-    fi
-    if [[ -d $(brew --prefix gnu-sed) ]]; then
-      path=($(brew --prefix gnu-sed)/libexec/gnubin $path)
     fi
     ;;
   linux*)
