@@ -24,9 +24,6 @@ warn_redundant_casts = True
 ; 型注釈のないデコレータを禁止します。
 disallow_untyped_decorators = False
 
-; plugin
-plugins = numpy.typing.mypy_plugin
-
 [mypy-pandas.*]
 ignore_missing_imports = True
 
