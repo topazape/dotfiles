@@ -3,9 +3,10 @@ return {
 	{
 		"catppuccin/nvim",
 		priority = 1000,
+		flavour = "macchiato", -- latte, frappe, macchiato, mocha
 		config = function()
 			require("catppuccin").setup({
-				flavour = "macchiato", -- latte, frappe, macchiato, mocha
+				flavour = flavour,
 				integrations = {
 					cmp = true,
 					dap = true,
@@ -22,6 +23,7 @@ return {
 				},
 			})
 			vim.cmd.colorscheme("catppuccin")
+			palette = require("catppuccin.palettes").get_palette(flavour)
 			vim.cmd("highlight WinSeparator guifg=orange")
 		end,
 	},
