@@ -3,7 +3,7 @@ local flavour = "macchiato"
 
 M.config = function()
 	require("catppuccin").setup({
-		flavour = "macchiato",
+		flavour = flavour,
 		integrations = {
 			cmp = true,
 			dap = true,
