@@ -6,7 +6,8 @@ return {
 		flavour = "macchiato", -- latte, frappe, macchiato, mocha
 		config = function()
 			require("catppuccin").setup({
-				flavour = flavour,
+				-- flavour = flavour,
+				flavour = "macchiato",
 				integrations = {
 					cmp = true,
 					dap = true,
