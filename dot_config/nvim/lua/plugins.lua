@@ -4,8 +4,8 @@ return {
 		"catppuccin/nvim",
 		priority = 1000,
 		config = function()
+      vim.cmd.colorscheme("catppuccin")
 			require("catppuccin").setup({
-        vim.cmd.colorscheme("catppuccin")
 				flavour = "macchiato",
 				integrations = {
 					cmp = true,
