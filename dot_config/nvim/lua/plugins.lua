@@ -4,7 +4,6 @@ return {
 		"catppuccin/nvim",
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme("catppuccin")
 			require("catppuccin").setup({
 				flavour = "macchiato",
 				integrations = {
@@ -22,6 +21,7 @@ return {
 					ts_rainbow2 = true,
 				},
 			})
+			vim.cmd.colorscheme("catppuccin")
 			vim.cmd("highlight WinSeparator guifg")
 		end,
 	},
