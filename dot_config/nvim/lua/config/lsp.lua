@@ -12,7 +12,7 @@ if not XDG_CACHE_HOME then
 	XDG_CACHE_HOME = os.getenv("HOME") .. "/.cache"
 end
 
--- lua (https://zenn.dev/uga_rosa/articles/afe384341fc2e1)
+-- lua path (https://zenn.dev/uga_rosa/articles/afe384341fc2e1)
 ---@param names string[]
 ---@return string[]
 local function get_plugin_paths(names)
@@ -164,16 +164,11 @@ local handlers = {
 				XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml",
 			}
 		end
-
 		require("lspconfig").golangci_lint_ls.setup({
 			init_options = {
 				command = golangci_lint_command,
 			},
 		})
-	end,
-
-	["dockerls"] = function()
-		require("lspconfig").dockerls.setup({})
 	end,
 
 	["terraformls"] = function()
