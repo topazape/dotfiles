@@ -1,29 +1,34 @@
+local M = {}
+local flavour = "macchiato"
+
+M.config = function()
+	require("catppuccin").setup({
+		flavour = "macchiato",
+		integrations = {
+			cmp = true,
+			dap = true,
+			dap_ui = true,
+			dashboard = true,
+			gitsigns = true,
+			lsp_saga = true,
+			mason = true,
+			noice = true,
+			notify = true,
+			telescope = { enabled = true },
+			treesitter = true,
+			ts_rainbow2 = true,
+		},
+	})
+	vim.cmd.colorscheme("catppuccin")
+	vim.cmd("highlight WinSeparator guifg=#3e4145")
+end
+
 return {
 	-- colorscheme
 	{
 		"catppuccin/nvim",
 		priority = 1000,
-		config = function()
-			require("catppuccin").setup({
-				flavour = "macchiato",
-				integrations = {
-					cmp = true,
-					dap = true,
-					dap_ui = true,
-					dashboard = true,
-					gitsigns = true,
-					lsp_saga = true,
-					mason = true,
-					noice = true,
-					notify = true,
-					telescope = { enabled = true },
-					treesitter = true,
-					ts_rainbow2 = true,
-				},
-			})
-			vim.cmd.colorscheme("catppuccin")
-			vim.cmd("highlight WinSeparator guifg=#3e4145")
-		end,
+		config = M.config,
 	},
 	-- icons
 	{
