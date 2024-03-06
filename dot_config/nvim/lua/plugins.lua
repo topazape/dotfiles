@@ -21,6 +21,7 @@ M.config = function()
 	})
 	vim.cmd.colorscheme("catppuccin")
 	local palette = require("catppuccin.palettes").get_palette(flavour)
+	print(palette)
 	vim.cmd("highlight WinSeparator guifg=#3e4145")
 end
 
