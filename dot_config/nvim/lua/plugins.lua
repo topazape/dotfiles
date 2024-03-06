@@ -21,8 +21,8 @@ return {
 					ts_rainbow2 = true,
 				},
 			})
-			vim.cmd.colorscheme("catppuccin")
-			vim.cmd("highlight WinSeparator guifg=green")
+			vim.cmd.colorscheme("catppuccin-macchiato")
+			vim.cmd("highlight WinSeparator guifg")
 		end,
 	},
 	-- icons
