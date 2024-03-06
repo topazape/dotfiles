@@ -22,6 +22,7 @@ return {
 				},
 			})
 			vim.cmd.colorscheme("catppuccin")
+			local macchiato = require("catppuccin.palettes").get_palette("macchiato")
 			-- vim.cmd("highlight WinSeparator guifg")
 		end,
 	},
