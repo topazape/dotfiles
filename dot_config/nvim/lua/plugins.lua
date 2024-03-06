@@ -28,8 +28,8 @@ return {
 		"catppuccin/nvim",
 		priority = 1000,
 		config = function()
-      M.config("macchiato")
-    end
+			M.config("macchiato")
+		end,
 	},
 	-- icons
 	{
