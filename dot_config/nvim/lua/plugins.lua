@@ -28,7 +28,7 @@ return {
 		"catppuccin/nvim",
 		priority = 1000,
 		config = function()
-			M.config("mocha")
+			M.config("latte")
 		end,
 	},
 	-- icons
