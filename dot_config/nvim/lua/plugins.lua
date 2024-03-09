@@ -19,7 +19,7 @@ M.config = function(flavour)
 	})
 	vim.cmd.colorscheme("catppuccin")
 	local colors = require("catppuccin.palettes").get_palette(flavour)
-	vim.cmd("highlight WinSeparator guifg=" .. colors.text)
+	vim.cmd("highlight WinSeparator guifg=" .. colors.subtext0)
 end
 
 return {
