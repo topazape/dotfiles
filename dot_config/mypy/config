@@ -24,6 +24,9 @@ warn_redundant_casts = True
 ; 型注釈のないデコレータを禁止します。
 disallow_untyped_decorators = False
 
+[mypy-numpy.*]
+ignore_missing_imports = True
+
 [mypy-pandas.*]
 ignore_missing_imports = True
 
