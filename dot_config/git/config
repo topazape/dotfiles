@@ -29,5 +29,5 @@
 	colorMoved = default
 [fetch]
 	prune = true
-[includeIf "gitdir:~/Develop/work/"]
+[includeIf "gitdir:~/Develop/work"]
 	path = ~/Develop/work/gitconfig
