@@ -1,5 +1,3 @@
-run:
-  tests: true
 linters:
   disable-all: true
   enable:
@@ -14,3 +12,5 @@ linters:
     - gosec
     - misspell
     - revive
+run:
+  tests: true
