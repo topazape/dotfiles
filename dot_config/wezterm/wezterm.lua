@@ -47,6 +47,7 @@ return {
 	-- key settings
 	send_composed_key_when_left_alt_is_pressed = false,
 	send_composed_key_when_right_alt_is_pressed = false,
+	macos_forward_to_ime_modifier_mask = "SHIFT|CTRL",
 
 	-- keymaps
 	---- set leader_key to achieve tmux-like keybinds
