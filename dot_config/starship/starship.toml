@@ -3,14 +3,15 @@ command = 'echo chezmoi'
 when = ''' test "$CHEZMOI" = 1 '''
 symbol = ' '
 
-
-[gcloud]
-symbol = '󰬎 '
-format = '[$symbol$account(@$domain)  $project]($style) '
 [custom.gitmail]
 command = 'git config user.email'
 when = ''' test -d .git '''
 format = ' $output '
+
+
+[gcloud]
+symbol = '󰬎 '
+format = '[$symbol$account(@$domain)  $project]($style) '
 
 [aws]
 symbol = '󰸏 '
