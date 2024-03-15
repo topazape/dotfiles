@@ -170,5 +170,8 @@ symbol = ' '
 [swift]
 symbol = ' '
 
+[terraform]
+symbol = '󱁢 '
+
 [zig]
 symbol = ' '
