@@ -27,7 +27,6 @@ symbol = ' '
 
 [git_branch]
 symbol = ' '
-format = 'on [$hash]($style) [$author]($style) '
 
 [golang]
 symbol = ' '
