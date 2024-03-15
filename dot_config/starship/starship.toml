@@ -5,7 +5,6 @@ symbol = ' '
 
 [gcloud]
 symbol = '󰬎 '
-when = ''' test -n "$CLOUDSDK_ACTIVE_CONFIG_NAME" '''
 format = '[$symbol$account(@$domain)  $project]($style) '
 
 # [custom.gitmail]
