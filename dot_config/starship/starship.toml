@@ -1,5 +1,5 @@
 format = """
-$custom.gitmail\
+$custom\
 $username\
 $hostname\
 $localip\
@@ -75,7 +75,6 @@ $azure\
 $direnv\
 $env_var\
 $crystal\
-$custom\
 $sudo\
 $cmd_duration\
 $line_break\
