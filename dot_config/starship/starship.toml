@@ -25,11 +25,9 @@ read_only = '󰌾 '
 [docker_context]
 symbol = ' '
 
-[git_commit]
-format = 'on [$hash]($style) [$author]($style) '
-
 [git_branch]
 symbol = ' '
+format = 'on [$hash]($style) [$author]($style) '
 
 [golang]
 symbol = ' '
