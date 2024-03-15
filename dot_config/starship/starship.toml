@@ -4,7 +4,7 @@ when = ''' test "$CHEZMOI" = 1 '''
 symbol = ' '
 
 [custom.gitmail]
-command = "git ocnfig user.email"
+command = 'git config user.email'
 when = ''' test -d .git '''
 format = ' $output '
 
