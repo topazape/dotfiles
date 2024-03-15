@@ -3,6 +3,10 @@ command = 'echo chezmoi'
 when = ''' test "$CHEZMOI" = 1 '''
 symbol = ' '
 
+[custom.gitmail]
+command = "git ocnfig user.email"
+when = ''' test -n "$(git config user.email)" '''
+
 [gcloud]
 symbol = '󰬎 '
 format = '[$symbol$account(@$domain)  $project]($style) '
@@ -27,7 +31,6 @@ symbol = ' '
 
 [git_branch]
 symbol = ' '
-format = '[$symbol$branch(:$remote_branch)]($style) '
 
 [golang]
 symbol = ' '
