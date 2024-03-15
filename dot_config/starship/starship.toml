@@ -1,12 +1,12 @@
-[custom.chezmoi]
-symbol = ' '
-command = 'echo chezmoi'
-when = ''' test "$CHEZMOI" = 1 '''
-
 [custom.gitmail]
 command = 'git config user.email'
 when = ''' test -d .git '''
 format = ' $output '
+
+[custom.chezmoi]
+symbol = ' '
+command = 'echo chezmoi'
+when = ''' test "$CHEZMOI" = 1 '''
 
 [gcloud]
 symbol = '󰬎 '
