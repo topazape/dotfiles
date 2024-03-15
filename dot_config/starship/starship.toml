@@ -27,7 +27,7 @@ symbol = ' '
 
 [git_branch]
 symbol = ' '
-format = '| [$branch(:$remote_branch)]($style)'
+format = '| [$symbol$branch(:$remote_branch)]($style)'
 style = 'underline purple'
 
 [golang]
