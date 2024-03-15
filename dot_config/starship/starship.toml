@@ -3,63 +3,7 @@ command = 'echo chezmoi'
 when = ''' test "$CHEZMOI" = 1 '''
 symbol = ' '
 
-[custom.gitmail]
-command = 'git config user.email'
-when = ''' test -d .git '''
-format = ' $output '
-
-
-[gcloud]
-symbol = '󰬎 '
-format = '[$symbol$account(@$domain)  $project]($style) '
-
-[aws]
-symbol = '󰸏 '
-
-[c]
-symbol = ' '
-
-[conda]
-symbol = ' '
-
-[dart]
-symbol = ' '
-
-[directory]
-read_only = '󰌾 '
-
-[docker_context]
-symbol = ' '
-
-[git_branch]
-symbol = ' '
-
-[golang]
-symbol = ' '
-
-[hostname]
-ssh_symbol = ' '
-
-[lua]
-symbol = ' '
-
-[memory_usage]
-symbol = '󰍛 '
-
-[nodejs]
-symbol = ' '
-
-[package]
-symbol = '󰏗 '
-
-[python]
-symbol = ' '
-
-[rlang]
-symbol = '󰟔 '
-
-[rust]
-symbol = ' '
-
-[terraform]
-symbol = '󱁢 '
+# [custom.gitmail]
+# command = 'git config user.email'
+# when = ''' test -d .git '''
+# format = ' $output '
