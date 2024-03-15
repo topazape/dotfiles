@@ -6,6 +6,7 @@ symbol = ' '
 [custom.gitmail]
 command = "git ocnfig user.email"
 when = ''' test -n "$(git config user.email)" '''
+format = ' $output '
 
 [gcloud]
 symbol = '󰬎 '
