@@ -1,5 +1,4 @@
 format = """
-$custom\
 $username\
 $hostname\
 $localip\
@@ -15,6 +14,7 @@ $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
+$custom\
 $hg_branch\
 $pijul_channel\
 $docker_context\
