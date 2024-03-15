@@ -8,52 +8,55 @@ symbol = '󰬎 '
 format = '[$symbol$account(@$domain)  $project]($style) '
 
 [aws]
-symbol = "󰸏 "
+symbol = '󰸏 '
 
 [c]
-symbol = " "
+symbol = ' '
 
 [conda]
-symbol = " "
+symbol = ' '
 
 [dart]
-symbol = " "
+symbol = ' '
 
 [directory]
-read_only = "󰌾 "
+read_only = '󰌾 '
 
 [docker_context]
-symbol = " "
+symbol = ' '
+
+[git_commit]
+format = 'on [$hash]($style) [$author]($style) '
 
 [git_branch]
-symbol = " "
+symbol = ' '
 
 [golang]
-symbol = " "
+symbol = ' '
 
 [hostname]
-ssh_symbol = " "
+ssh_symbol = ' '
 
 [lua]
-symbol = " "
+symbol = ' '
 
 [memory_usage]
-symbol = "󰍛 "
+symbol = '󰍛 '
 
 [nodejs]
-symbol = " "
+symbol = ' '
 
 [package]
-symbol = "󰏗 "
+symbol = '󰏗 '
 
 [python]
-symbol = " "
+symbol = ' '
 
 [rlang]
-symbol = "󰟔 "
+symbol = '󰟔 '
 
 [rust]
-symbol = " "
+symbol = ' '
 
 [terraform]
-symbol = "󱁢 "
+symbol = '󱁢 '
