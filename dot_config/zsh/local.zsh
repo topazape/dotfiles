@@ -82,7 +82,7 @@ if type bat > /dev/null 2>&1; then
 fi
 ## eza
 if type eza > /dev/null 2>&1; then
-  alias ls="eza -F --git"
+  alias ls="eza -F --git --sort=Name"
   alias la="eza -aF --git"
   alias ll="eza -F --git --header --long"
   alias tree="eza -F --tree --ignore-glob='node_modules|.git|.cache'"
