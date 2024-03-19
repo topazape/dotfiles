@@ -85,7 +85,7 @@ if type eza > /dev/null 2>&1; then
   alias ls="eza -F --git"
   alias la="eza -aF --git"
   alias ll="eza -F --git --header --long"
-  alias tree="eza -F --ignore-glob='node_modules|.git|.cache'"
+  alias tree="eza -F --tree --ignore-glob='node_modules|.git|.cache'"
 fi
 
 # Cloud
