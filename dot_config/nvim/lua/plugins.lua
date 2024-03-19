@@ -119,8 +119,13 @@ return {
 		config = function()
 			require("config/dap")
 		end,
+	},
+
+	{
+		"rcarriga/nvim-dap-ui",
 		dependencies = {
-			"rcarriga/nvim-dap-ui",
+			"mfussenegger/nvim-dap",
+			"nvim-neotest/nvim-nio",
 		},
 	},
 
