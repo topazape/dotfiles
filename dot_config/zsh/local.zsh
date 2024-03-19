@@ -83,9 +83,9 @@ fi
 ## eza
 if type eza > /dev/null 2>&1; then
   alias ls="eza -F --git --sort=Name"
-  alias la="eza -aF --git"
-  alias ll="eza -F --git --header --long"
-  alias tree="eza -F --tree --ignore-glob='node_modules|.git|.cache'"
+  alias la="eza -aF --git --sort=Name"
+  alias ll="eza -F --git --header --long --sort=Name"
+  alias tree="eza -F --tree --ignore-glob='node_modules|.git|.cache' --sort=Name"
 fi
 
 # Cloud
