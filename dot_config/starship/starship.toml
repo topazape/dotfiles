@@ -10,7 +10,7 @@ when = ''' test "$CHEZMOI" = 1 '''
 
 [gcloud]
 symbol = '󰬎 '
-format = '$symbol[$project]($style) '
+format = '[$symbol$project]($style) '
 
 [aws]
 symbol = '  '
