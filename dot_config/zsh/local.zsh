@@ -111,7 +111,7 @@ fi
 if type eza > /dev/null 2>&1; then
   alias ls="eza --git"
   alias la="eza -a --git"
-  alias ll="eza -aahl --git"
+  alias ll="eza -aahlF --git"
 fi
 
 # Cloud
