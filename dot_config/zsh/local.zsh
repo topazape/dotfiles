@@ -109,7 +109,7 @@ if type vivid > /dev/null 2>&1; then
 fi
 ## eza
 if type eza > /dev/null 2>&1; then
-  alias ls="eza --git"
+  alias ls="eza -F --git"
   alias la="eza -a --git"
   alias ll="eza -aahlF --git"
 fi
