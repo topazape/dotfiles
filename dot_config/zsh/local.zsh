@@ -112,7 +112,7 @@ if type eza > /dev/null 2>&1; then
   alias ls="eza -F --git"
   alias la="eza -a --git"
   alias ll="eza -ahlF --git"
-  alias tree="eza -T"
+  alias tree="eza -TF"
 fi
 
 # Cloud
