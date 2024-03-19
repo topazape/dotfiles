@@ -107,13 +107,6 @@ if type vivid > /dev/null 2>&1; then
   # export LS_COLORS="$(vivid generate solarized-dark)"
   # export LS_COLORS="$(vivid generate solarized-light)"
 fi
-## eza
-if type eza > /dev/null 2>&1; then
-  alias ls="eza -F --git"
-  alias la="eza -a --git"
-  alias ll="eza -ahlF --git"
-  alias tree="eza -TF"
-fi
 
 # Cloud
 ## aws-cli
