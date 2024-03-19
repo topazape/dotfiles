@@ -80,32 +80,10 @@ fi
 if type bat > /dev/null 2>&1; then
   export BAT_THEME="TwoDark"
 fi
-## vivid
-if type vivid > /dev/null 2>&1; then
-  # export LS_COLORS="$(vivid generate alabaster_dark)"
-  # export LS_COLORS="$(vivid generate ayu)"
-  # export LS_COLORS="$(vivid generate catppuccin-frappe)"
-  # export LS_COLORS="$(vivid generate catppuccin-latte)"
-  export LS_COLORS="$(vivid generate catppuccin-macchiato)"
-  # export LS_COLORS="$(vivid generate catppuccin-mocha)"
-  # export LS_COLORS="$(vivid generate dracula)"
-  # export LS_COLORS="$(vivid generate gruvbox-dark)"
-  # export LS_COLORS="$(vivid generate gruvbox-dark-hard)"
-  # export LS_COLORS="$(vivid generate gruvbox-dark-soft)"
-  # export LS_COLORS="$(vivid generate gruvbox-light)"
-  # export LS_COLORS="$(vivid generate gruvbox-light-hard)"
-  # export LS_COLORS="$(vivid generate gruvbox-light-soft)"
-  # export LS_COLORS="$(vivid generate iceberg-dark)"
-  # export LS_COLORS="$(vivid generate jellybeans)"
-  # export LS_COLORS="$(vivid generate lava)"
-  # export LS_COLORS="$(vivid generate modus-operandi)"
-  # export LS_COLORS="$(vivid generate molokai)"
-  # export LS_COLORS="$(vivid generate nord)"
-  # export LS_COLORS="$(vivid generate one-dark)"
-  # export LS_COLORS="$(vivid generate one-light)"
-  # export LS_COLORS="$(vivid generate snazzy)"
-  # export LS_COLORS="$(vivid generate solarized-dark)"
-  # export LS_COLORS="$(vivid generate solarized-light)"
+## eza
+if type eza > /dev/null 2>&1; then
+  alias ls="eza -F --git"
+  alias ll="eza -F --git --header --long"
 fi
 
 # Cloud
