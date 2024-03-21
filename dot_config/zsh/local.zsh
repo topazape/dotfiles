@@ -82,6 +82,8 @@ if type bat > /dev/null 2>&1; then
 fi
 ## eza
 if type eza > /dev/null 2>&1; then
+  fpath=($(brew --prefix eza)/share/zsh/site-functions $fpath)
+
   alias ls="eza -F --git --sort=Name"
   alias la="eza -aF --git --sort=Name"
   alias ll="eza -F --git --header --long --sort=Name"
