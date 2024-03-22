@@ -314,21 +314,14 @@ return {
 		end,
 	},
 
-	-- markdown previewer
+	-- markdown
 	{
-		"topazape/md-preview.nvim",
-		ft = { "md", "markdown", "mkd", "mkdn", "mdwn", "mdown", "mdtxt", "mdtext", "rmd", "wiki" },
+		"MeanderingProgrammer/markdown.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		config = function()
-			vim.keymap.set("n", "<leader>m", "<CMD>MPToggle<CR>", {})
-			require("md-preview").setup({
-				viewer = {
-					exec = "glow",
-					args = { "-s", "dracula" },
-				},
-			})
+			require("render-markdown").setup({})
 		end,
 	},
-
 	-- startup
 	{
 		"nvimdev/dashboard-nvim",
