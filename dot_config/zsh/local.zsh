@@ -85,7 +85,7 @@ if type eza > /dev/null 2>&1; then
   # completion
   fpath=($(brew --prefix eza)/share/zsh/site-functions $fpath)
 
-  alias ls="eza --classify=automatic --sort=Name --git"
+  alias ls="eza --classify=automatic --sort=Name"
   alias la="eza --classify=automatic --almost-all --sort=Name --git"
   alias ll="eza --classify=automatic --sort=Name --group --header --long --git"
   alias tree="eza --classify=automatic --sort=Name --tree --ignore-glob='node_modules|.git|.cache'"
