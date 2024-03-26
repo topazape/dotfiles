@@ -1,12 +1,17 @@
+[custom.jobcan]
+command = 'jobcan status'
+when = ''' test -n "$JOBCAN_EMAIL" '''
+format = "🙆"
+
 [custom.gitmail]
 command = 'git config user.email'
 when = ''' test -d .git '''
 format = ' $output '
 
 [custom.chezmoi]
-symbol = ' '
 command = 'echo chezmoi'
 when = ''' test "$CHEZMOI" = 1 '''
+symbol = ' '
 
 [gcloud]
 symbol = '󰬎 '
