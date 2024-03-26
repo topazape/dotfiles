@@ -48,6 +48,7 @@ local function update_working_status()
 		wezterm.GLOBAL.working_status = "N/A"
 	end
 
+	print(wezterm.GLOBAL.working_status)
 	return wezterm.GLOBAL.working_status
 end
 
