@@ -1,7 +1,7 @@
 [custom.jobcan]
 command = 'jobcan status'
 when = ''' test -n "$JOBCAN_EMAIL" '''
-format = "🙆"
+format = "󰱵 "
 
 [custom.gitmail]
 command = 'git config user.email'
