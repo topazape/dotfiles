@@ -39,14 +39,16 @@ local function update_working_status()
 	if success then
 		if status == "Working" then
 			wezterm.GLOBAL.working_status = "勤務中"
-		else
+		elseif status == "Resting" then
 			wezterm.GLOBAL.working_status = "休憩中"
+		else
+			wezterm.GLOBAL.working_status = "N/A"
 		end
 	else
 		wezterm.GLOBAL.working_status = "N/A"
 	end
 
-	return wezterm.GLOBAL.status
+	return wezterm.GLOBAL.working_status
 end
 
 local function get_date(elems)
