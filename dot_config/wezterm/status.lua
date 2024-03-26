@@ -110,12 +110,12 @@ end
 local function right_update(window)
 	local elems = {}
 
-	-- get_working_status(elems)
 	get_time(elems)
 	get_date(elems)
 	get_weather(elems)
 	get_battery(elems)
 	get_hostname(elems)
+	get_working_status(elems)
 
 	window:set_right_status(wezterm.format(elems))
 end
