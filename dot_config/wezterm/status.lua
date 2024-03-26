@@ -110,7 +110,7 @@ end
 local function right_update(window)
 	local elems = {}
 
-	get_working_status(elems)
+	-- get_working_status(elems)
 	get_time(elems)
 	get_date(elems)
 	get_weather(elems)
