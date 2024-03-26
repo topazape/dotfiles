@@ -15,7 +15,6 @@ local HEADER_DATE = { Foreground = { Color = "#ef476f" }, Text = "󱪺 " }
 local HEADER_BATTERY = { Foreground = { Color = "#ffd166" }, Text = " " }
 local HEADER_HOSTNAME = { Foreground = { Color = "#06d6a0" }, Text = " " }
 local HEADER_WEATHER = { Foreground = { Color = "#ef476f" }, Text = "󰍛 " }
-local HEADER_WORKING_STATUS = { Foreground = { Color = "#ef476f" }, Text = "○ " }
 
 local function add_element(elems, header, str)
 	table.insert(elems, { Foreground = header.Foreground })
@@ -25,31 +24,6 @@ local function add_element(elems, header, str)
 	table.insert(elems, { Foreground = DEFAULT_FG })
 	table.insert(elems, { Background = DEFAULT_BG })
 	table.insert(elems, { Text = str .. " " })
-end
-
-local function get_working_status(elems)
-	add_element(elems, HEADER_WORKING_STATUS, update_working_status())
-end
-
-local function update_working_status()
-	local success, status, _ = wezterm.run_child_process({
-		"jobcan",
-		"status",
-	})
-	if success then
-		if status == "Working" then
-			wezterm.GLOBAL.working_status = "勤務中"
-		elseif status == "Resting" then
-			wezterm.GLOBAL.working_status = "休憩中"
-		else
-			wezterm.GLOBAL.working_status = "N/A"
-		end
-	else
-		wezterm.GLOBAL.working_status = "N/A"
-	end
-
-	print(wezterm.GLOBAL.working_status)
-	return wezterm.GLOBAL.working_status
 end
 
 local function get_date(elems)
@@ -116,7 +90,6 @@ local function right_update(window)
 	get_weather(elems)
 	get_battery(elems)
 	get_hostname(elems)
-	get_working_status(elems)
 
 	window:set_right_status(wezterm.format(elems))
 end
