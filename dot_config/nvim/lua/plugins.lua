@@ -319,7 +319,9 @@ return {
 		"MeanderingProgrammer/markdown.nvim",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		config = function()
-			require("render-markdown").setup({})
+			require("render-markdown").setup({
+				bullet = "○ ",
+			})
 		end,
 	},
 	-- startup
