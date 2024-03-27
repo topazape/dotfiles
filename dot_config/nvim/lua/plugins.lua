@@ -321,7 +321,7 @@ return {
 		config = function()
 			require("render-markdown").setup({
 				-- Characters that will replace the # at the start of headings
-				headings = { "󰇊", "󰲣 ", "󰲥 ", "󰲧 ", "󰲩 ", "󰲫 " },
+				headings = { "󰇊 ", "󰇋 ", "󰲥 ", "󰲧 ", "󰲩 ", "󰲫 " },
 				-- Character to use for the bullet point in lists
 				bullet = "•",
 			})
