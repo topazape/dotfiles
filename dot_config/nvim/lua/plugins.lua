@@ -320,7 +320,10 @@ return {
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		config = function()
 			require("render-markdown").setup({
-				bullet = "·",
+				-- Characters that will replace the # at the start of headings
+				headings = { "󰇊", "󰲣 ", "󰲥 ", "󰲧 ", "󰲩 ", "󰲫 " },
+				-- Character to use for the bullet point in lists
+				bullet = "•",
 			})
 		end,
 	},
