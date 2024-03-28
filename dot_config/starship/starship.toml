@@ -1,8 +1,3 @@
-[custom.github]
-command = 'gh auth status | grep -B3 "Active account: true" | grep "Logged in to" | awk "{print $(NF)}"'
-when = ''' test -x "$(command -v gh)" '''
-format = ' $output '
-
 [custom.gitmail]
 command = 'git config user.email'
 when = ''' test -d .git '''
