@@ -1,5 +1,6 @@
 [custom.github]
 command = 'gh auth status | grep -B3 "Active account: true" | grep "Logged in to" | awk "{print $(NF-1)}"'
+when = ''' test -x "$(command -v gh)" '''
 format = ' $output '
 
 [custom.gitmail]
