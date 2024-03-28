@@ -1,4 +1,4 @@
-[custom.github_login_username]
+[custom.github]
 command = 'gh auth status | grep -B3 "Active account: true" | grep "Logged in to" | awk "{print $(NF-1)}"'
 format = ' $output '
 
