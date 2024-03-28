@@ -1,3 +1,5 @@
+[custom.github_login_username]
+command = 
 [custom.gitmail]
 command = 'git config user.email'
 when = ''' test -d .git '''
