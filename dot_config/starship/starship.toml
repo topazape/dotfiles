@@ -1,5 +1,7 @@
 [custom.github_login_username]
-command = 
+command = 'gh auth status | grep -B3 "Active account: true" | grep "Logged in to" | awk "{print $(NF-1)}"'
+format = ' $output '
+
 [custom.gitmail]
 command = 'git config user.email'
 when = ''' test -d .git '''
