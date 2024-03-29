@@ -3,7 +3,7 @@ local keys = require("keymaps")
 require("status")
 
 return {
-	front_end = "WebGpu",
+	front_end = "OpenGL",
 
 	-- color scheme
 	color_scheme = "Catppuccin Macchiato",
