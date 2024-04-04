@@ -321,7 +321,7 @@ return {
 		config = function()
 			require("render-markdown").setup({
 				-- Character to use for the bullet points in lists
-				bullets = { "•", "▪", "▫", "‣" },
+				bullets = { "•", "◦", "▪", "▫", "‣" },
 				"◦",
 			})
 		end,
