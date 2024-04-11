@@ -113,7 +113,8 @@ return {
 		end,
 	},
 
-	-- dap
+	-- debugging
+	---- dap
 	{
 		"mfussenegger/nvim-dap",
 		config = function()
@@ -127,6 +128,14 @@ return {
 			"mfussenegger/nvim-dap",
 			"nvim-neotest/nvim-nio",
 		},
+	},
+	---- debug print
+	{
+		"andrewferrier/debugprint.nvim",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+		version = "*",
 	},
 
 	-- telescopes
@@ -326,6 +335,7 @@ return {
 			})
 		end,
 	},
+
 	-- startup
 	{
 		"nvimdev/dashboard-nvim",
