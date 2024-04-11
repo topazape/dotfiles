@@ -136,6 +136,9 @@ return {
 			"nvim-treesitter/nvim-treesitter",
 		},
 		version = "*",
+		config = function()
+			require("debugprint").setup()
+		end,
 	},
 
 	-- telescopes
