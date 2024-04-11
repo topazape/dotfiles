@@ -120,6 +120,7 @@ return {
 		config = function()
 			require("config/dap")
 		end,
+		event = "VeryLazy",
 	},
 
 	{
@@ -128,6 +129,7 @@ return {
 			"mfussenegger/nvim-dap",
 			"nvim-neotest/nvim-nio",
 		},
+		event = "VeryLazy",
 	},
 	---- debug print
 	{
@@ -210,7 +212,7 @@ return {
 	-- emphasis indent
 	{
 		"shellRaining/hlchunk.nvim",
-		event = { "UIEnter" },
+		event = "UIEnter",
 		config = function()
 			require("hlchunk").setup({
 				chunk = {
