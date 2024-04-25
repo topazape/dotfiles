@@ -179,6 +179,7 @@ local handlers = {
 
 	["remark_ls"] = function()
 		require("lspconfig").remark_ls.setup({})
+		print("arfarfafra")
 	end,
 }
 
