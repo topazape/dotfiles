@@ -180,7 +180,7 @@ local handlers = {
 	["remark_ls"] = function()
 		require("lspconfig").remark_ls.setup({
 			settings = {
-				requireConfig = false,
+				requireConfig = true,
 			},
 		})
 	end,
