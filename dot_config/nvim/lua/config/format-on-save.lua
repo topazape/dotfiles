@@ -64,6 +64,9 @@ format_on_save.setup({
 		yaml = {
 			formatters.shell({ cmd = { "yamlfmt", "-" } }),
 		},
+		markdown = {
+			formatters.shell({ cmd = { "mdformat", "-" } }),
+		},
 		fallback_formatter = {
 			formatters.remove_trailing_whitespace,
 			formatters.remove_trailing_newlines,
