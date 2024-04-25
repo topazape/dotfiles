@@ -176,10 +176,6 @@ local handlers = {
 			filetypes = { "terraform", "terraform-vars", "hcl" },
 		})
 	end,
-
-	["remark_ls"] = function()
-		require("lspconfig").remark_ls.setup({ settings = { requireConfig = true } })
-	end,
 }
 
 require("mason-lspconfig").setup_handlers(handlers)
