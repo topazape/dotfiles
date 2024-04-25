@@ -178,7 +178,7 @@ local handlers = {
 	end,
 
 	["remark_ls"] = function()
-		print("arfarfafra")
+		require("notify")("My super important message")
 		require("lspconfig").remark_ls.setup({})
 	end,
 }
