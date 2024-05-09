@@ -112,6 +112,16 @@ return {
 			require("config/copilot")
 		end,
 	},
+	---- copilot chat
+	{
+		"CopilotC-Nvim/CopilotChat.nvim",
+		branch = "canary",
+		dependencies = {
+			"zbirenbaum/copilot.lua",
+			"nvim-lua/plenary.nvim",
+		},
+		event = "VeryLazy",
+	},
 
 	-- debugging
 	---- dap
