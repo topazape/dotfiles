@@ -121,6 +121,9 @@ return {
 			"nvim-lua/plenary.nvim",
 		},
 		event = "VeryLazy",
+		opts = {
+			debug = true,
+		},
 	},
 
 	-- debugging
