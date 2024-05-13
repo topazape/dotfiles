@@ -333,11 +333,11 @@ return {
 			})
 		end,
 	},
-	---- gitlinker
+	---- octo.nvim
 	{
-		"ruifm/gitlinker.nvim",
+		"pwntester/octo.nvim",
 		config = function()
-			require("gitlinker").setup()
+			require("octo").setup()
 		end,
 	},
 
