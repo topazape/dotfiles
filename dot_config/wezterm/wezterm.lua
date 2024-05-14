@@ -34,8 +34,8 @@ return {
 	use_fancy_tab_bar = false,
 
 	-- window size
-	initial_cols = 80 + 8 * 4,
-	initial_rows = 24 + 8 * 1,
+	initial_cols = 80 + 8 * 6,
+	initial_rows = 24 + 8 * 2,
 
 	-- bell
 	audible_bell = "Disabled",
