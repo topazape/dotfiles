@@ -23,10 +23,10 @@ return {
 		{ family = "Berkeley Mono" },
 		{ family = "IBM Plex Sans JP" },
 	}),
-	font_size = 16,
+	font_size = 15,
 	warn_about_missing_glyphs = false,
 	adjust_window_size_when_changing_font_size = false,
-	line_height = 1.1,
+	line_height = 1.0,
 
 	-- look and feel
 	window_background_opacity = 1.00,
