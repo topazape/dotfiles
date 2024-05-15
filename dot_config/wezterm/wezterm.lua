@@ -12,7 +12,7 @@ return {
 	colors = {
 		tab_bar = {
 			active_tab = {
-				bg_color = "#073b4c",
+				bg_color = "#c29df1",
 				fg_color = "#eeeeee",
 			},
 		},
@@ -29,7 +29,7 @@ return {
 	line_height = 1.0,
 
 	-- look and feel
-	window_background_opacity = 0.95,
+	window_background_opacity = 1.00,
 	macos_window_background_blur = 20,
 	use_fancy_tab_bar = false,
 
