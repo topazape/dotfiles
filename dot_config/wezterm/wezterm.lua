@@ -12,7 +12,7 @@ return {
 	colors = {
 		tab_bar = {
 			active_tab = {
-				bg_color = "#8aadf4",
+				bg_color = "#5b6078",
 				fg_color = "#eeeeee",
 			},
 		},
