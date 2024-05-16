@@ -25,6 +25,11 @@ ignore = [
 
 [lint.per-file-ignores]
 "__init__.py" = ["F401"]
+"**/tests/**/*.py" = [
+  "D100", # Missing docstring in public module
+  "D104", # Missing docstring in public package
+  "D105", # Missing docstring in magic method
+]
 
 [lint.pydocstyle]
 convention = "google"
