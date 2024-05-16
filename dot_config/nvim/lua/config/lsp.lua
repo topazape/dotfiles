@@ -132,7 +132,8 @@ local handlers = {
 		require("lspconfig").ruff_lsp.setup({
 			init_options = {
 				settings = {
-					args = ruff_args,
+					-- args = ruff_args,
+					args = { "--confg", "~/.config/ruff/ruff.toml" },
 				},
 			},
 		})
