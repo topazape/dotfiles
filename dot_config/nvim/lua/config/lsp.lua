@@ -131,9 +131,7 @@ local handlers = {
 		else
 			ruff_cmd = { "ruff", "server", "--preview" }
 		end
-		require("lspconfig").ruff.setup({
-			cmd = ruff_cmd,
-		})
+		require("lspconfig").ruff.setup({})
 	end,
 
 	["ruff_lsp"] = function()
