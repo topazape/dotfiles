@@ -216,7 +216,7 @@ return {
 				},
 				load = {
 					"catppuccin-macchiato-cursor",
-					-- "catppuccin-macchiato-cursor-line",
+					"catppuccin-macchiato-cursor-line",
 				},
 			})
 		end,
