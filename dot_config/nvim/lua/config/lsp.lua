@@ -133,7 +133,7 @@ local handlers = {
 			init_options = {
 				settings = {
 					-- args = ruff_args,
-					args = { "--confg", "~/.config/ruff/ruff.toml" },
+					args = { "--config", "~/.config/ruff/ruff.toml" },
 				},
 			},
 		})
