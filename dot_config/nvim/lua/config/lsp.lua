@@ -128,7 +128,6 @@ local handlers = {
 		local ruff_args = {}
 		if vim.fn.filereadable(XDG_CONFIG_HOME .. "/ruff/ruff.toml") == 1 then
 			ruff_args = { "--config", XDG_CONFIG_HOME .. "/ruff/ruff.toml" }
-			print(ruff_args)
 		end
 		require("lspconfig").ruff_lsp.setup({
 			init_options = {
