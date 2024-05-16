@@ -25,8 +25,6 @@ ignore = [
 
 [lint.per-file-ignores]
 "__init__.py" = ["F401"]
-"tests/*.py" = ["D"]
-"tests/*" = ["D"]
 "**/tests/*" = ["D"]
 
 [lint.pydocstyle]
