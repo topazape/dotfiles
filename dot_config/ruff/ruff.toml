@@ -25,7 +25,7 @@ ignore = [
 
 [lint.per-file-ignores]
 "__init__.py" = ["F401"]
-"**/{tests,docs,tools}/*" = ["E402", "D103"]
+"**/{tests,docs,tools}/*" = ["D"]
 
 [lint.pydocstyle]
 convention = "google"
