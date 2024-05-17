@@ -14,7 +14,6 @@ M.config = function(flavour)
 			notify = true,
 			telescope = { enabled = true },
 			treesitter = true,
-			ts_rainbow2 = true,
 		},
 	})
 	vim.cmd.colorscheme("catppuccin")
@@ -45,13 +44,6 @@ return {
 		build = ":TSUpdate",
 		config = function()
 			require("config/treesitter")
-		end,
-	},
-	-- ts-rainbow
-	{
-		"HiPhish/ts-rainbow",
-		config = function()
-			require("ts-rainbow").setup()
 		end,
 	},
 
