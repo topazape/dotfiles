@@ -47,6 +47,13 @@ return {
 			require("config/treesitter")
 		end,
 	},
+	-- ts-rainbow
+	{
+		"HiPhish/ts-rainbow",
+		config = function()
+			require("ts-rainbow").setup()
+		end,
+	},
 
 	-- lsp
 	{
