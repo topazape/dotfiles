@@ -61,10 +61,4 @@ require("nvim-treesitter.configs").setup({
 			"yaml",
 		},
 	},
-
-	-- used by treesitter-rainbow
-	rainbow = {
-		enable = true,
-		disable = {},
-	},
 })
