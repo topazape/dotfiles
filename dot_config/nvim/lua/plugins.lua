@@ -48,12 +48,12 @@ return {
 		end,
 	},
 	---- tree-sitter rainbow
-	{
-		"HiPhish/nvim-ts-rainbow2",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		},
-	},
+	-- {
+	-- 	"HiPhish/nvim-ts-rainbow2",
+	-- 	dependencies = {
+	-- 		"nvim-treesitter/nvim-treesitter",
+	-- 	},
+	-- },
 
 	-- lsp
 	{
