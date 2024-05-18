@@ -14,6 +14,7 @@ M.config = function(flavour)
 			notify = true,
 			telescope = { enabled = true },
 			treesitter = true,
+			rainbow_delimiters = true,
 		},
 	})
 	vim.cmd.colorscheme("catppuccin")
@@ -45,6 +46,10 @@ return {
 		config = function()
 			require("config/treesitter")
 		end,
+	},
+	---- rainbow
+	{
+		"HiPhish/rainbow-delimiters.nvim",
 	},
 
 	-- lsp
