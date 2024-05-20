@@ -109,19 +109,6 @@ return {
 			require("config/copilot")
 		end,
 	},
-	---- copilot chat
-	{
-		"CopilotC-Nvim/CopilotChat.nvim",
-		branch = "canary",
-		dependencies = {
-			"zbirenbaum/copilot.lua",
-			"nvim-lua/plenary.nvim",
-		},
-		event = "VeryLazy",
-		opts = {
-			debug = true,
-		},
-	},
 
 	-- debugging
 	---- dap
@@ -329,22 +316,6 @@ return {
 				highlights = { -- They must have background color, otherwise the default color will be used
 					incoming = "DiffAdd",
 					current = "DiffText",
-				},
-			})
-		end,
-	},
-	---- octo.nvim
-	{
-		"pwntester/octo.nvim",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-telescope/telescope.nvim",
-			"nvim-tree/nvim-web-devicons",
-		},
-		config = function()
-			require("octo").setup({
-				suppress_missing_scope = {
-					projects_v2 = true,
 				},
 			})
 		end,
