@@ -38,7 +38,6 @@ return {
 	-- icons
 	{
 		"nvim-tree/nvim-web-devicons",
-		config = true,
 	},
 
 	-- tree-sitter
@@ -52,7 +51,9 @@ return {
 	---- rainbow
 	{
 		"HiPhish/rainbow-delimiters.nvim",
-		-- config = true,
+		config = function()
+			require("rainbow_delimiters").setup()
+		end,
 	},
 
 	-- lsp
