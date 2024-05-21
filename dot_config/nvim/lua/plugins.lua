@@ -175,7 +175,7 @@ return {
 	-- highlight undo
 	{
 		"tzachar/highlight-undo.nvim",
-		opts = {},
+		config = true,
 	},
 
 	-- status line
@@ -189,52 +189,48 @@ return {
 	-- mode highlight
 	{
 		"rasulomaroff/reactive.nvim",
-		config = function()
-			require("reactive").setup({
-				builtin = {
-					cursorline = true,
-					cursor = true,
-					modemsg = true,
-				},
-				load = {
-					"catppuccin-macchiato-cursor",
-					"catppuccin-mocha-cursorline",
-				},
-			})
-		end,
+		opts = {
+			builtin = {
+				cursorline = true,
+				cursor = true,
+				modemsg = true,
+			},
+			load = {
+				"catppuccin-macchiato-cursor",
+				"catppuccin-mocha-cursorline",
+			},
+		},
 	},
 
 	-- emphasis indent
 	{
 		"shellRaining/hlchunk.nvim",
 		event = "UIEnter",
-		config = function()
-			require("hlchunk").setup({
-				chunk = {
-					enable = true,
-					notify = true,
-					use_treesitter = true,
-					chars = {
-						horizontal_line = "─",
-						vertical_line = "│",
-						left_top = "╭",
-						left_bottom = "╰",
-						right_arrow = "▷",
-					},
+		opts = {
+			chunk = {
+				enable = true,
+				notify = true,
+				use_treesitter = true,
+				chars = {
+					horizontal_line = "─",
+					vertical_line = "│",
+					left_top = "╭",
+					left_bottom = "╰",
+					right_arrow = "▷",
 				},
-				indent = {
-					enable = false,
-					use_treesitter = true,
-				},
-				line_num = {
-					enable = true,
-					use_treesitter = true,
-				},
-				blank = {
-					enable = false,
-				},
-			})
-		end,
+			},
+			indent = {
+				enable = false,
+				use_treesitter = true,
+			},
+			line_num = {
+				enable = true,
+				use_treesitter = true,
+			},
+			blank = {
+				enable = false,
+			},
+		},
 	},
 
 	-- dial
