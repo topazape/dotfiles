@@ -52,6 +52,7 @@ return {
 	---- rainbow
 	{
 		"HiPhish/rainbow-delimiters.nvim",
+		config = true,
 	},
 
 	-- lsp
@@ -68,12 +69,12 @@ return {
 	---- lspsaga
 	{
 		"nvimdev/lspsaga.nvim",
-		config = function()
-			require("config/lspsaga")
-		end,
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 		},
+		config = function()
+			require("config/lspsaga")
+		end,
 	},
 
 	-- format on save
@@ -138,9 +139,7 @@ return {
 			"nvim-treesitter/nvim-treesitter",
 		},
 		version = "*",
-		config = function()
-			require("debugprint").setup()
-		end,
+		config = true,
 	},
 
 	-- telescopes
@@ -160,6 +159,7 @@ return {
 		dependencies = {
 			"nvim-telescope/telescope.nvim",
 		},
+		config = true,
 	},
 
 	-- completely replaces the UI for messages, cmdline and the popupmenu
@@ -178,9 +178,7 @@ return {
 	-- highlight undo
 	{
 		"tzachar/highlight-undo.nvim",
-		config = function()
-			require("highlight-undo").setup()
-		end,
+		config = true,
 	},
 
 	-- status line
@@ -328,21 +326,16 @@ return {
 	{
 		"MeanderingProgrammer/markdown.nvim",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
-		config = function()
-			require("render-markdown").setup({
-				-- Character to use for the bullet points in lists
-				bullets = { "•", "◦", "▪", "▫", "‣" },
-				"◦",
-			})
-		end,
+		opts = {
+			-- Character to use for the bullet points in lists
+			bullets = { "•", "◦", "▪", "▫", "‣" },
+		},
 	},
 
 	-- startup
 	{
 		"nvimdev/dashboard-nvim",
 		event = "VimEnter",
-		config = function()
-			require("dashboard").setup()
-		end,
+		config = true,
 	},
 }
