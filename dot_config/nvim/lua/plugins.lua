@@ -34,9 +34,11 @@ return {
 			-- M.config("mocha")
 		end,
 	},
+
 	-- icons
 	{
 		"nvim-tree/nvim-web-devicons",
+		config = true,
 	},
 
 	-- tree-sitter
