@@ -217,11 +217,13 @@ return {
 		},
 	},
 
-	-- -- dial
-	-- {
-	-- 	"monaqa/dial.nvim",
-	-- 	config = "config/dial",
-	-- },
+	-- dial
+	{
+		"monaqa/dial.nvim",
+    config = function()
+      require("config/dial")
+    end
+	},
 
 	-- colorcode preview
 	{
