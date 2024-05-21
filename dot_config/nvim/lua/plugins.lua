@@ -44,9 +44,7 @@ return {
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
-		config = function()
-			require("config/treesitter")
-		end,
+		config = "config/treesitter",
 	},
 	---- rainbow
 	{
@@ -60,9 +58,7 @@ return {
 			"neovim/nvim-lspconfig",
 			"williamboman/mason-lspconfig.nvim",
 		},
-		config = function()
-			require("config/lsp")
-		end,
+		config = "config/lsp",
 	},
 	---- lspsaga
 	{
@@ -70,17 +66,13 @@ return {
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 		},
-		config = function()
-			require("config/lspsaga")
-		end,
+		config = "config/lspsaga",
 	},
 
 	-- format on save
 	{
 		"elentok/format-on-save.nvim",
-		config = function()
-			require("config/format-on-save")
-		end,
+		config = "config/format-on-save",
 	},
 
 	-- completion
@@ -96,9 +88,7 @@ return {
 			"hrsh7th/vim-vsnip-integ",
 		},
 		event = "InsertEnter",
-		config = function()
-			require("config/cmp")
-		end,
+		config = "config/cmp",
 	},
 
 	-- AI
@@ -106,9 +96,7 @@ return {
 	{
 		"zbirenbaum/copilot.lua",
 		event = "VeryLazy",
-		config = function()
-			require("config/copilot")
-		end,
+		config = "config/copilot",
 	},
 
 	-- debugging
@@ -116,9 +104,7 @@ return {
 	{
 		"mfussenegger/nvim-dap",
 		event = "VeryLazy",
-		config = function()
-			require("config/dap")
-		end,
+		config = "config/dap",
 	},
 	---- ui
 	{
@@ -147,9 +133,7 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
-		config = function()
-			require("config/telescope")
-		end,
+		config = "config/telescope",
 	},
 	---- file browser
 	{
@@ -182,9 +166,6 @@ return {
 	{
 		"hoob3rt/lualine.nvim",
 		config = "config/lualine",
-		-- config = function()
-		-- 	require("config/lualine")
-		-- end,
 	},
 
 	-- mode highlight
@@ -237,9 +218,7 @@ return {
 	-- dial
 	{
 		"monaqa/dial.nvim",
-		config = function()
-			require("config/dial")
-		end,
+		config = "config/dial",
 	},
 
 	-- colorcode preview
