@@ -99,22 +99,22 @@ return {
 		config = "config/copilot",
 	},
 
-	-- debugging
-	---- dap
-	{
-		"mfussenegger/nvim-dap",
-		event = "VeryLazy",
-		config = "config/dap",
-	},
-	---- ui
-	{
-		"rcarriga/nvim-dap-ui",
-		dependencies = {
-			"mfussenegger/nvim-dap",
-			"nvim-neotest/nvim-nio",
-		},
-		event = "VeryLazy",
-	},
+	-- -- debugging
+	-- ---- dap
+	-- {
+	-- 	"mfussenegger/nvim-dap",
+	-- 	event = "VeryLazy",
+	-- 	config = "config/dap",
+	-- },
+	-- ---- ui
+	-- {
+	-- 	"rcarriga/nvim-dap-ui",
+	-- 	dependencies = {
+	-- 		"mfussenegger/nvim-dap",
+	-- 		"nvim-neotest/nvim-nio",
+	-- 	},
+	-- 	event = "VeryLazy",
+	-- },
 	---- debug print
 	{
 		"andrewferrier/debugprint.nvim",
