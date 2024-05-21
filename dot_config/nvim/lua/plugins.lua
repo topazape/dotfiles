@@ -114,10 +114,10 @@ return {
 	---- dap
 	{
 		"mfussenegger/nvim-dap",
+		event = "VeryLazy",
 		config = function()
 			require("config/dap")
 		end,
-		event = "VeryLazy",
 	},
 
 	{
@@ -131,6 +131,7 @@ return {
 	---- debug print
 	{
 		"andrewferrier/debugprint.nvim",
+		event = "VeryLazy",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 		},
