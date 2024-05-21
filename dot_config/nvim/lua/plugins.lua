@@ -267,55 +267,51 @@ return {
 	---- gitsigns
 	{
 		"lewis6991/gitsigns.nvim",
-		config = function()
-			require("gitsigns").setup({
-				signs = {
-					add = { text = "│" },
-					change = { text = "│" },
-					delete = { text = "_" },
-					topdelete = { text = "‾" },
-					changedelete = { text = "~" },
-					untracked = { text = "┆" },
-				},
-				current_line_blame = false,
-				current_line_blame_opts = {
-					virt_text = true,
-					virt_text_pos = "eol",
-					delay = 100,
-					ignore_whitespace = true,
-				},
+		opts = {
+			signs = {
+				add = { text = "│" },
+				change = { text = "│" },
+				delete = { text = "_" },
+				topdelete = { text = "‾" },
+				changedelete = { text = "~" },
+				untracked = { text = "┆" },
+			},
+			current_line_blame = false,
+			current_line_blame_opts = {
+				virt_text = true,
+				virt_text_pos = "eol",
+				delay = 100,
+				ignore_whitespace = true,
+			},
 
-				on_attach = function(bufnr)
-					local gs = package.loaded.gitsigns
-					local function map(mode, l, r, opts)
-						opts = opts or {}
-						opts.buffer = bufnr
-						vim.keymap.set(mode, l, r, opts)
-					end
-					-- Actions
-					map("n", "<leader>hb", function()
-						gs.blame_line({ full = true })
-					end)
-					map("n", "<leader>tb", gs.toggle_current_line_blame)
-				end,
-			})
-		end,
+			on_attach = function(bufnr)
+				local gs = package.loaded.gitsigns
+				local function map(mode, l, r, opts)
+					opts = opts or {}
+					opts.buffer = bufnr
+					vim.keymap.set(mode, l, r, opts)
+				end
+				-- Actions
+				map("n", "<leader>hb", function()
+					gs.blame_line({ full = true })
+				end)
+				map("n", "<leader>tb", gs.toggle_current_line_blame)
+			end,
+		},
 	},
 	---- conflict
 	{
 		"akinsho/git-conflict.nvim",
-		config = function()
-			require("git-conflict").setup({
-				default_mappings = true, -- disable buffer local mapping created by this plugin
-				default_commands = true, -- disable commands created by this plugin
-				disable_diagnostics = false, -- This will disable the diagnostics in a buffer whilst it is conflicted
-				list_opener = "copen", -- command or function to open the conflicts list
-				highlights = { -- They must have background color, otherwise the default color will be used
-					incoming = "DiffAdd",
-					current = "DiffText",
-				},
-			})
-		end,
+		opts = {
+			default_mappings = true, -- disable buffer local mapping created by this plugin
+			default_commands = true, -- disable commands created by this plugin
+			disable_diagnostics = false, -- This will disable the diagnostics in a buffer whilst it is conflicted
+			list_opener = "copen", -- command or function to open the conflicts list
+			highlights = { -- They must have background color, otherwise the default color will be used
+				incoming = "DiffAdd",
+				current = "DiffText",
+			},
+		},
 	},
 
 	-- markdown
