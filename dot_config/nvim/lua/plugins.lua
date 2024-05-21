@@ -181,9 +181,10 @@ return {
 	-- status line
 	{
 		"hoob3rt/lualine.nvim",
-		config = function()
-			require("config/lualine")
-		end,
+		config = require("config/lualine"),
+		-- config = function()
+		-- 	require("config/lualine")
+		-- end,
 	},
 
 	-- mode highlight
