@@ -215,11 +215,11 @@ return {
 		},
 	},
 
-	-- dial
-	{
-		"monaqa/dial.nvim",
-		config = "config/dial",
-	},
+	-- -- dial
+	-- {
+	-- 	"monaqa/dial.nvim",
+	-- 	config = "config/dial",
+	-- },
 
 	-- colorcode preview
 	{
