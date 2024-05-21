@@ -157,7 +157,6 @@ return {
 		dependencies = {
 			"nvim-telescope/telescope.nvim",
 		},
-		config = true,
 	},
 
 	-- completely replaces the UI for messages, cmdline and the popupmenu
@@ -176,7 +175,6 @@ return {
 	-- highlight undo
 	{
 		"tzachar/highlight-undo.nvim",
-		config = true,
 	},
 
 	-- status line
