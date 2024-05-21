@@ -236,13 +236,11 @@ return {
 		end,
 	},
 
-	-- comment
-	{
-		"numToStr/Comment.nvim",
-		config = function()
-			require("Comment").setup()
-		end,
-	},
+	-- -- comment
+	-- {
+	-- 	"numToStr/Comment.nvim",
+	-- 	config = true,
+	-- },
 
 	-- dial
 	{
@@ -255,12 +253,10 @@ return {
 	-- colorcode preview
 	{
 		"brenoprata10/nvim-highlight-colors",
-		config = function()
-			require("nvim-highlight-colors").setup({
-				render = "virtual",
-				virtual_symbol = "●",
-			})
-		end,
+		opts = {
+			render = "virtual",
+			virtual_symbol = "●",
+		},
 	},
 
 	-- git
