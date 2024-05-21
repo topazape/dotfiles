@@ -220,9 +220,10 @@ return {
 	-- dial
 	{
 		"monaqa/dial.nvim",
-    config = function()
-      require("config/dial")
-    end
+    config = "config/dial"
+    -- config = function()
+    --   require("config/dial")
+    -- end
 	},
 
 	-- colorcode preview
