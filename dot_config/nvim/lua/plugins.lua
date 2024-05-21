@@ -51,9 +51,6 @@ return {
 	---- rainbow
 	{
 		"HiPhish/rainbow-delimiters.nvim",
-		config = function()
-			require("rainbow_delimiters").setup()
-		end,
 	},
 
 	-- lsp
