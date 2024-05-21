@@ -120,7 +120,7 @@ return {
 			require("config/dap")
 		end,
 	},
-
+	---- ui
 	{
 		"rcarriga/nvim-dap-ui",
 		dependencies = {
@@ -175,6 +175,7 @@ return {
 	-- highlight undo
 	{
 		"tzachar/highlight-undo.nvim",
+		opts = {},
 	},
 
 	-- status line
@@ -235,12 +236,6 @@ return {
 			})
 		end,
 	},
-
-	-- -- comment
-	-- {
-	-- 	"numToStr/Comment.nvim",
-	-- 	config = true,
-	-- },
 
 	-- dial
 	{
