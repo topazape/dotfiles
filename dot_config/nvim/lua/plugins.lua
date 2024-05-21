@@ -104,8 +104,9 @@ return {
 	{
 		"mfussenegger/nvim-dap",
 		event = "VeryLazy",
-    config = true,
-		-- config = "config/dap",
+    config = function()
+      require("config/dap")
+    end
 	},
 	---- ui
 	{
