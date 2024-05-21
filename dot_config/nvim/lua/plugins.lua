@@ -181,7 +181,7 @@ return {
 	-- status line
 	{
 		"hoob3rt/lualine.nvim",
-		config = require("config/lualine"),
+		config = "config/lualine",
 		-- config = function()
 		-- 	require("config/lualine")
 		-- end,
