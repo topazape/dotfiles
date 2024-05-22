@@ -91,7 +91,7 @@ local handlers = {
 		require("lspconfig").ruff_lsp.setup({
 			init_options = {
 				settings = {
-					args = { "--config", XDG_CONFIG_HOME .. "/ruff/ruff.toml" },
+					-- args = { "--config", XDG_CONFIG_HOME .. "/ruff/ruff.toml" },
 				},
 			},
 		})
