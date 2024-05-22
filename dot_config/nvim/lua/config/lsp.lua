@@ -92,7 +92,6 @@ local handlers = {
 		local ruff_config = XDG_CONFIG_HOME .. "/ruff/ruff.toml"
 
 		if vim.fn.filereadable(ruff_config) == 1 then
-			print("DEBUGPRINT[1]: lsp.lua:95 (after if vim.fn.filereadable(ruff_config) == 1…)")
 			ruff_cmd = { "ruff", "server", "--config", ruff_config, "--preview" }
 		end
 		require("lspconfig").ruff.setup({
