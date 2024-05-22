@@ -124,6 +124,16 @@ local handlers = {
 		})
 	end,
 
+	["ruff_lsp"] = function()
+		require("lspconfig").ruff_lsp.setup({
+			init_options = {
+				settings = {
+					args = { "--config", XDG_CONFIG_HOME .. "/ruff-lsp/ruff-lsp.toml" },
+				},
+			},
+		})
+	end,
+
 	["bashls"] = function()
 		require("lspconfig").bashls.setup({
 			filetypes = { "sh", "bash", "zsh" },
