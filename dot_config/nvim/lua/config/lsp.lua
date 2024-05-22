@@ -90,7 +90,7 @@ local handlers = {
 	["ruff"] = function()
 		require("lspconfig").ruff.setup({
 			default_config = {
-				cmd = { "ruff", "server" },
+				cmd = { "ruff", "server", "--config", XDG_CONFIG_HOME .. "/ruff/config.toml", "--preview" },
 			},
 		})
 	end,
