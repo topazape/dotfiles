@@ -125,12 +125,13 @@ local handlers = {
 	end,
 
 	["ruff"] = function()
-		local ruff_cmd = { "ruff", "server", "--preview" }
+		local ruff_cmd = { "ruff", "server" }
 		local config_path = XDG_CONFIG_HOME .. "/ruff/ruff.toml"
 
 		if vim.fn.filereadable(config_path) == 1 then
 			table.insert(ruff_cmd, "--config")
 			table.insert(ruff_cmd, config_path)
+			table.insert(ruff_cmd, "--preview")
 		end
 		require("lspconfig").ruff.setup({
 			cmd = ruff_cmd,
