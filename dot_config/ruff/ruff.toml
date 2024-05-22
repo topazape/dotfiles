@@ -14,10 +14,10 @@ select = [
   "D",   # pydocstyle
 ]
 ignore = [
-  "I001", # isort
-  # # "D100",    # Missing docstring in public module
-  # # "D104",    # Missing docstring in public package
-  # "D105",    # Missing docstring in magic method
+  "I001",    # isort
+  "D100",    # Missing docstring in public module
+  "D104",    # Missing docstring in public package
+  "D105",    # Missing docstring in magic method
   "E501",    # Line too long
   "PLR0913", # Too many arguments
   "PLR2004", # magic-value-comparison
