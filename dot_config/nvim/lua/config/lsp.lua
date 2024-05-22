@@ -92,9 +92,7 @@ local handlers = {
 		local ruff_config = XDG_CONFIG_HOME .. "/ruff/ruff.toml"
 
 		if vim.fn.filereadable(ruff_config) == 1 then
-			require("notify")(ruff_config)
 			ruff_cmd = { "ruff", "server", "--config", ruff_config, "--preview" }
-			require("notify")(ruff_cmd)
 		end
 		require("lspconfig").ruff.setup({
 			cmd = ruff_cmd,
