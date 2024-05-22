@@ -87,6 +87,14 @@ local handlers = {
 		})
 	end,
 
+	["ruff"] = function()
+		require("lspconfig").ruff.setup({
+			default_config = {
+				cmd = { "ruff", "server" },
+			},
+		})
+	end,
+
 	["pylsp"] = function()
 		require("lspconfig").pylsp.setup({
 			settings = {
