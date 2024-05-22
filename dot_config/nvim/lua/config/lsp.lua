@@ -124,6 +124,16 @@ local handlers = {
 		})
 	end,
 
+	["ruff"] = function()
+		local ruff_cmd = { "ruff", "server", "--preview" }
+		if vim.fn.filereadable(XDG_CONFIG_HOME .. "/ruff/ruff.toml") == 1 then
+			ruff_cmd = { "ruff", "server", "--config", XDG_CONFIG_HOME .. "/ruff/ruff.toml", "--preview" }
+		end
+		require("lspconfig").ruff.setup({
+			cmd = ruff_cmd,
+		})
+	end,
+
 	["bashls"] = function()
 		require("lspconfig").bashls.setup({
 			filetypes = { "sh", "bash", "zsh" },
