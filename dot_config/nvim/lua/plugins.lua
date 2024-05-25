@@ -30,7 +30,7 @@ return {
 		config = function()
 			-- M.config("latte")
 			-- M.config("frappe")
-			-- M.config("macchiato")
+			M.config("macchiato")
 			-- M.config("mocha")
 		end,
 	},
