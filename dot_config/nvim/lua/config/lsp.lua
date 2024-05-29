@@ -124,6 +124,22 @@ local handlers = {
 		})
 	end,
 
+	["ruff"] = function()
+		local ruff_root_files = {
+			"pyproject.toml",
+			"ruff.toml",
+			".ruff.toml",
+			"setup.py",
+			"setup.cfg",
+			"requirements.txt",
+			"Pipfile",
+		}
+		local util = require("lspconfig.util")
+		require("lspconfig").ruff.setup({
+			root_dir = util.root_pattern(unpack(ruff_root_files)) or util.find_git_ancestor,
+		})
+	end,
+
 	["bashls"] = function()
 		require("lspconfig").bashls.setup({
 			filetypes = { "sh", "bash", "zsh" },
