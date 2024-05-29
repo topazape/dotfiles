@@ -37,8 +37,8 @@ local options = {
 	splitbelow = true,
 	splitright = true,
 	equalalways = true, -- 画面分割時のリサイズを均等にする
-	---- floating windows を半透明にする
-	winblend = 100,
+	---- floating windows を半透明にする: 100 で透明
+	winblend = 0,
 	---- モデルラインの有効化
 	modeline = true,
 
