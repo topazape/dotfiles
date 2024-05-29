@@ -125,6 +125,11 @@ local handlers = {
 	end,
 
 	["ruff"] = function()
+		local ruff_cmd = { "ruff", "server", "--preview" }
+		if vim.fn.filereadable(XDG_CONFIG_HOME .. "/ruff/ruff.toml") == 1 then
+			ruff_cmd = { "ruff", "server", "--preview", "--config", XDG_CONFIG_HOME .. "/ruff/ruff.toml" }
+		end
+
 		local ruff_root_files = {
 			"pyproject.toml",
 			"ruff.toml",
@@ -137,6 +142,7 @@ local handlers = {
 		local util = require("lspconfig.util")
 		require("lspconfig").ruff.setup({
 			root_dir = util.root_pattern(unpack(ruff_root_files)) or util.find_git_ancestor,
+			cmd = ruff_cmd,
 		})
 	end,
 
