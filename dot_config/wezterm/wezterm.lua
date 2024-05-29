@@ -34,7 +34,7 @@ return {
 	use_fancy_tab_bar = false,
 
 	-- window size
-	initial_cols = 80 + 8 * 4,
+	initial_cols = 80 + 8 * 5,
 	initial_rows = 24 + 8 * 2,
 
 	-- bell
