@@ -37,15 +37,6 @@ return {
 	initial_cols = 80 + 8 * 7,
 	initial_rows = 24 + 8 * 3,
 
-	-- bell
-	audible_bell = "SystemBeep",
-	visual_bell = {
-		fade_in_function = "EaseIn",
-		fade_in_duration_ms = 150,
-		fade_out_function = "EaseOut",
-		fade_out_duration_ms = 150,
-	},
-
 	-- status
 	status_update_interval = 1000,
 
