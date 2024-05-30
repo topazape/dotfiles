@@ -34,8 +34,8 @@ return {
 	use_fancy_tab_bar = false,
 
 	-- window size
-	initial_cols = 80 + 8 * 7,
-	initial_rows = 24 + 8 * 3,
+	initial_cols = 80 + 8 * 8,
+	initial_rows = 24 + 8 * 4,
 
 	-- status
 	status_update_interval = 1000,
