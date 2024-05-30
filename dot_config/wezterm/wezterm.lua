@@ -37,8 +37,8 @@ return {
 	initial_cols = 80 + 8 * 7,
 	initial_rows = 24 + 8 * 3,
 
-	-- -- bell
-	-- audible_bell = "Disabled",
+	-- bell
+	audible_bell = "SystemBeep",
 	-- visual_bell = {
 	-- 	fade_in_duration_ms = 50,
 	-- 	fade_out_duration_ms = 50,
