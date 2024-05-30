@@ -37,12 +37,12 @@ return {
 	initial_cols = 80 + 8 * 7,
 	initial_rows = 24 + 8 * 3,
 
-	-- bell
-	audible_bell = "Disabled",
-	visual_bell = {
-		fade_in_duration_ms = 50,
-		fade_out_duration_ms = 50,
-	},
+	-- -- bell
+	-- audible_bell = "Disabled",
+	-- visual_bell = {
+	-- 	fade_in_duration_ms = 50,
+	-- 	fade_out_duration_ms = 50,
+	-- },
 
 	-- status
 	status_update_interval = 1000,
