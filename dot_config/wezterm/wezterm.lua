@@ -15,7 +15,6 @@ return {
 				bg_color = "#363a4f",
 				fg_color = "#eeeeee",
 			},
-			vidual_bel = "#202020",
 		},
 	},
 
@@ -39,6 +38,7 @@ return {
 	initial_rows = 24 + 8 * 4,
 
 	-- bell
+	audible_bell = "Disabled",
 	visual_bell = {
 		fade_in_function = "EaseIn",
 		fade_in_duration_ms = 150,
