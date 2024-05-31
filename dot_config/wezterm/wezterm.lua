@@ -38,7 +38,6 @@ return {
 	initial_rows = 24 + 8 * 4,
 
 	-- bell
-	audible_bell = "Disabled",
 	visual_bell = {},
 
 	-- status
