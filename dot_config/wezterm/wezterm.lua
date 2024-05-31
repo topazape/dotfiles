@@ -40,9 +40,9 @@ return {
 	-- bell
 	audible_bell = "Disabled",
 	visual_bell = {
-		-- fade_in_function = "EaseIn",
+		fade_in_function = "EaseIn",
 		fade_in_duration_ms = 65,
-		-- fade_out_function = "EaseOut",
+		fade_out_function = "EaseOut",
 		fade_out_duration_ms = 65,
 	},
 
