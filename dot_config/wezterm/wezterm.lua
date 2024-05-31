@@ -41,9 +41,9 @@ return {
 	audible_bell = "Disabled",
 	visual_bell = {
 		fade_in_function = "EaseIn",
-		fade_in_duration_ms = 100,
+		fade_in_duration_ms = 50,
 		fade_out_function = "EaseOut",
-		fade_out_duration_ms = 100,
+		fade_out_duration_ms = 50,
 	},
 
 	-- status
