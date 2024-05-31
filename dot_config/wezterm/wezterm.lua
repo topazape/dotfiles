@@ -39,6 +39,7 @@ return {
 
 	-- bell
 	audible_bell = "Disabled",
+	visual_bell = {},
 
 	-- status
 	status_update_interval = 1000,
