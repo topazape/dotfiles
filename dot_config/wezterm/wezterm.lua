@@ -15,6 +15,7 @@ return {
 				bg_color = "#363a4f",
 				fg_color = "#eeeeee",
 			},
+			vidual_bel = "#202020",
 		},
 	},
 
