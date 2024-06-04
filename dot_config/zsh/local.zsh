@@ -91,10 +91,6 @@ if type eza > /dev/null 2>&1; then
   alias ll="eza --classify=automatic --sort=Name --group --header --long --git"
   alias tree="eza --classify=automatic --sort=Name --tree --ignore-glob='node_modules|.git|.cache'"
 fi
-## k9s
-if type k9s > /dev/null 2>&1; then
-  export K9S_LOGS_DIR=${XDG_DATA_HOME}/k9s
-fi
 
 # Cloud
 ## aws-cli
