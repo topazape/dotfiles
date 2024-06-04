@@ -93,7 +93,7 @@ if type eza > /dev/null 2>&1; then
 fi
 ## k9s
 if type k9s > /dev/null 2>&1; then
-  export K9S_LOGS_DIR=${XDG_DATA_HOME}/k9s
+  export K9S_LOGS_DIR=${XDG_DATA_HOME}/k9s/logs
 fi
 
 # Cloud
