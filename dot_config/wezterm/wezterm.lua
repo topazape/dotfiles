@@ -49,6 +49,9 @@ return {
 	-- status
 	status_update_interval = 1000,
 
+	-- misc
+	check_for_updates = false,
+
 	-- key settings
 	send_composed_key_when_left_alt_is_pressed = false,
 	send_composed_key_when_right_alt_is_pressed = false,
