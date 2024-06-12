@@ -61,9 +61,9 @@ format_on_save.setup({
 		toml = {
 			formatters.shell({ cmd = { "taplo", "format", "-" } }),
 		},
-		yaml = {
-			formatters.shell({ cmd = { "yamlfmt", "-" } }),
-		},
+		-- yaml = {
+		-- 	formatters.shell({ cmd = { "yamlfmt", "-" } }),
+		-- },
 		-- markdown = {
 		-- 	formatters.shell({ cmd = { "mdformat", "-" } }),
 		-- },
