@@ -1,8 +1,6 @@
 [user]
 	email = topazape@gmail.com
 	name = topazape
-[credential]
-	helper = cache
 [push]
 	default = nothing
 [pull]
