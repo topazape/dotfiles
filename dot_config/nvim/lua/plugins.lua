@@ -112,7 +112,7 @@ return {
 
 	-- quickfix
 	{
-		"yorickpeterse/nvim-pqf",
+		"kevinhwang91/nvim-bqf",
 		config = true,
 	},
 
