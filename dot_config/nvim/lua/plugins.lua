@@ -110,6 +110,12 @@ return {
 		end,
 	},
 
+	-- quickfix
+	{
+		"yorickpeterse/nvim-pqf",
+		config = true,
+	},
+
 	-- AI
 	---- copilot
 	{
