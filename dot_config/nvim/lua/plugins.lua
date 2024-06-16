@@ -110,11 +110,9 @@ return {
 		end,
 	},
 
-	--quickfix
+	-- quickfix
 	{
 		"kevinhwang91/nvim-pqf",
-		event = "BufRead",
-		config = true,
 	},
 
 	-- AI
