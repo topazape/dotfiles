@@ -110,11 +110,6 @@ return {
 		end,
 	},
 
-	-- quickfix
-	{
-		"kevinhwang91/nvim-pqf",
-	},
-
 	-- AI
 	---- copilot
 	{
