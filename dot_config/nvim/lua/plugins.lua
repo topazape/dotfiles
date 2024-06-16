@@ -84,7 +84,7 @@ return {
 		end,
 	},
 
-	-- format on save
+	-- format-on-save
 	{
 		"elentok/format-on-save.nvim",
 		config = function()
@@ -108,6 +108,13 @@ return {
 		config = function()
 			require("config/cmp")
 		end,
+	},
+
+	--quickfix
+	{
+		"kevinhwang91/nvim-pqf",
+		event = "BufRead",
+		config = true,
 	},
 
 	-- AI
