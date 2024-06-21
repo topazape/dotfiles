@@ -126,6 +126,7 @@ if type pip > /dev/null 2>&1 || type pip3 > /dev/null 2>&1; then
 fi
 ### pipenv
 if type pipenv > /dev/null 2>&1; then
+  export VIRTUALENV_CONFIG_FILE=${XDG_CONFIG_HOME}/virtualenv/virtualenv.ini
   export PIPENV_CACHE_DIR=${XDG_CACHE_HOME}/pipenv
 fi
 ### rye
