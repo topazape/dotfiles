@@ -324,6 +324,16 @@ return {
 		},
 	},
 
+	-- typst
+	{
+		"chomosuke/typst-preview.nvim",
+		ft = "typst", -- or ft = 'typst'
+		version = "0.3.*",
+		build = function()
+			require("typst-preview").update()
+		end,
+	},
+
 	-- startup
 	{
 		"nvimdev/dashboard-nvim",
