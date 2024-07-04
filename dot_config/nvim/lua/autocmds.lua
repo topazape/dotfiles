@@ -104,6 +104,17 @@ autocmd({ "FileType" }, {
 		vim.opt_local.expandtab = true
 	end,
 })
+---- typst
+autocmd({ "FileType" }, {
+	pattern = { "typst" },
+	callback = function()
+		vim.opt_local.tabstop = 2
+		vim.opt_local.shiftwidth = 2
+		vim.opt_local.softtabstop = 2
+		vim.opt_local.expandtab = true
+		vim.keymap.set("n", "<LEADER>pr", "<CMD>TypstPreviewToggle<CR>", { noremap = true, silent = true })
+	end,
+})
 
 -- ターミナルモード
 ---- 常にインサートモードで開く
