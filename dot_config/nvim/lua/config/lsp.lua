@@ -173,6 +173,15 @@ local handlers = {
 		})
 	end,
 
+	["tinymist"] = function()
+		require("lspconfig").tinymist.setup({
+			settings = {
+				formatterMode = "typstyle",
+				exportPdf = "onSave",
+			},
+		})
+	end,
+
 	["terraformls"] = function()
 		require("lspconfig").terraformls.setup({
 			filetypes = { "terraform", "terraform-vars", "hcl" },

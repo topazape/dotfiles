@@ -58,6 +58,11 @@ format_on_save.setup({
 		markdown = {
 			formatters.shell({ cmd = { "mdformat", "-" } }),
 		},
+		typst = {
+			-- formatters.shell({ cmd = { "typstyle" } }),
+			formatters.lsp,
+		},
+
 		fallback_formatter = {
 			formatters.remove_trailing_whitespace,
 			formatters.remove_trailing_newlines,
