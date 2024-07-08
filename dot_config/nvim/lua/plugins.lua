@@ -88,7 +88,7 @@ return {
   {
     "elentok/format-on-save.nvim",
     config = function()
-      require("format-on-save")
+      require("config/format-on-save")
     end,
   },
 
