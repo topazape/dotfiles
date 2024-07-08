@@ -87,7 +87,7 @@ return {
 	{
 		"nvimtools/none-ls.nvim",
 		config = function()
-			require("config/null-ls")
+			require("config/none-ls")
 		end,
 	},
 
