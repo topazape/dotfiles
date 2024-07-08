@@ -84,13 +84,13 @@ return {
 		end,
 	},
 
-  -- format-on-save
-  {
-    "elentok/format-on-save.nvim",
-    config = function()
-      require("config/format-on-save")
-    end,
-  },
+	-- format-on-save
+	{
+		"elentok/format-on-save.nvim",
+		config = function()
+			require("config/format-on-save")
+		end,
+	},
 
 	-- completion
 	{
