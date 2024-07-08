@@ -83,13 +83,14 @@ return {
 			require("config/lspsaga")
 		end,
 	},
-	---- null-ls
-	{
-		"nvimtools/none-ls.nvim",
-		config = function()
-			require("config/none-ls")
-		end,
-	},
+
+  -- format-on-save
+  {
+    "elentok/format-on-save.nvim",
+    config = function()
+      require("format-on-save")
+    end,
+  },
 
 	-- completion
 	{
