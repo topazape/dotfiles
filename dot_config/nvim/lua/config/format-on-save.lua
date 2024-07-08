@@ -59,8 +59,7 @@ format_on_save.setup({
 			formatters.shell({ cmd = { "mdformat", "-" } }),
 		},
 		typst = {
-			-- formatters.shell({ cmd = { "typstyle" } }),
-			formatters.lsp,
+			formatters.lsp, -- tinymist.typstyle
 		},
 
 		fallback_formatter = {
