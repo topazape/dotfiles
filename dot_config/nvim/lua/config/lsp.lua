@@ -176,7 +176,7 @@ local handlers = {
 	["tinymist"] = function()
 		require("lspconfig").tinymist.setup({
 			settings = {
-				formatterMode = "typstyle",
+				formatterMode = "typstfmt",
 				exportPdf = "onSave",
 			},
 		})
