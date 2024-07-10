@@ -56,7 +56,7 @@ format_on_save.setup({
 			formatters.shell({ cmd = { "yamlfmt", "-" } }),
 		},
 		markdown = {
-			formatters.shell({ cmd = { "mdformat", "-" } }),
+			formatters.shell({ cmd = { "prettier", "--stdin-filepath", vim.api.nvim_buf_get_name(0) } }),
 		},
 		typst = {
 			formatters.lsp, -- tinymist.typstyle
