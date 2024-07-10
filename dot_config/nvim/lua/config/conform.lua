@@ -1,11 +1,10 @@
-conform = require("conform")
+local conform = require("conform")
+print("conform loaded")
 
 conform.setup({
   lsp_format = "first",
-  formatters_by_ft = {
-    go = {
-      "goimports",
-      "gofumpt",
+  formatters_by_ft = {go = {
+      "goimports", "gofumpt",
     },
     lua = {
       "stylua",
