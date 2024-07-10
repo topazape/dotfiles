@@ -173,5 +173,8 @@ symbol = ' '
 [terraform]
 symbol = '󱁢 '
 
+[typst]
+symbol = '󰷈 '
+
 [zig]
 symbol = ' '
