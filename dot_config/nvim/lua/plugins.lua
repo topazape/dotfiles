@@ -319,8 +319,8 @@ return {
 		"MeanderingProgrammer/markdown.nvim",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		opts = {
-			-- Character to use for the bullet points in lists
-			bullets = { "•", "◦", "▪", "▫", "‣" },
+			max_file_size = 1.5, -- MB
+			bullet = { icons = "•", "◦", "▪", "▫", "‣" },
 		},
 	},
 
