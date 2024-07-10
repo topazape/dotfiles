@@ -84,11 +84,11 @@ return {
 		end,
 	},
 
-	-- format-on-save
+	-- formatter
 	{
-		"elentok/format-on-save.nvim",
+		"stevearc/conform.nvim",
 		config = function()
-			require("config/format-on-save")
+			require("config/conform")
 		end,
 	},
 
