@@ -2,7 +2,9 @@ local conform = require("conform")
 print("conform loaded")
 
 conform.setup({
-  lsp_format = "first",
+  format_on_save = {
+    lsp_format = "first",
+  },
   formatters_by_ft = {go = {
       "goimports", "gofumpt",
     },
