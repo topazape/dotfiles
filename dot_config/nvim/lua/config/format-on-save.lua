@@ -56,7 +56,7 @@ format_on_save.setup({
 			formatters.shell({ cmd = { "yamlfmt", "-" } }),
 		},
 		markdown = {
-			formatters.shell({ cmd = { "mdslw", "-" } }),
+			formatters.shell({ cmd = { "mdformat", "-" } }),
 		},
 		typst = {
 			formatters.lsp, -- tinymist.typstyle
