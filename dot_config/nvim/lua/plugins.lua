@@ -111,16 +111,6 @@ return {
 		end,
 	},
 
-	-- quickfix
-	{
-		"yorickpeterse/nvim-pqf",
-		config = true,
-	},
-	{
-		"kevinhwang91/nvim-bqf",
-		config = true,
-	},
-
 	-- AI
 	---- copilot
 	{
