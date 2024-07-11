@@ -84,7 +84,7 @@ return {
 		end,
 	},
 
-	formatter
+	-- formatter
 	{
 		"stevearc/conform.nvim",
 		event = { "BufWritePre" },
