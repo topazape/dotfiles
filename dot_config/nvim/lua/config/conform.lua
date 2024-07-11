@@ -6,7 +6,7 @@ conform.setup({
 		lsp_format = "first",
 	},
 	formatters_by_ft = {
-		[""] = {
+		["*"] = {
 			"trim_newlines",
 			"trim_whitespace",
 		},
