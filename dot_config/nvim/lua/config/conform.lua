@@ -1,5 +1,4 @@
 local conform = require("conform")
-print("conform loaded")
 
 conform.setup({
 	format_on_save = {
