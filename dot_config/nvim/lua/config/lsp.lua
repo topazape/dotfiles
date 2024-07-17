@@ -182,7 +182,7 @@ local handlers = {
 					},
 					-- checkOnSave = {
 					-- 	command = "clippy",
-					},
+					-- },
 				},
 			},
 		})
