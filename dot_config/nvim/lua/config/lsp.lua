@@ -173,6 +173,18 @@ local handlers = {
 		})
 	end,
 
+	["rust-analyzer"] = function()
+		require("lspconfig").rust_analyzer.setup({
+			settings = {
+				["rust-analyzer"] = {
+					check = {
+						command = "clippy",
+					},
+				},
+			},
+		})
+	end,
+
 	["tinymist"] = function()
 		require("lspconfig").tinymist.setup({
 			settings = {
