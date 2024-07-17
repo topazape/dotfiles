@@ -180,6 +180,9 @@ local handlers = {
 					check = {
 						command = "clippy",
 					},
+					checkOnSave = {
+						command = "clippy",
+					},
 				},
 			},
 		})
