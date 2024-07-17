@@ -6,10 +6,6 @@ conform.setup({
 		lsp_format = "fallback",
 	},
 	formatters_by_ft = {
-		["*"] = {
-			"trim_newlines",
-			"trim_whitespace",
-		},
 		go = {
 			"goimports",
 			"gofumpt",
@@ -41,6 +37,10 @@ conform.setup({
 		},
 		markdown = {
 			"prettier",
+		},
+		["*"] = {
+			"trim_newlines",
+			"trim_whitespace",
 		},
 	},
 })
