@@ -61,11 +61,6 @@ return {
 	{
 		"HiPhish/rainbow-delimiters.nvim",
 	},
-	---- commentstring
-	{
-		"JoosepAlviste/nvim-ts-context-commentstring",
-		config = true,
-	},
 
 	-- lsp
 	{
