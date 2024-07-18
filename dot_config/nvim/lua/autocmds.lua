@@ -130,10 +130,3 @@ autocmd({ "TermOpen" }, {
 		vim.opt_local.signcolumn = "no"
 	end,
 })
-
--- 補完
-autocmd({ "LspAttach" }, {
-	callback = function(ev)
-		vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
-	end,
-})
