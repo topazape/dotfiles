@@ -67,9 +67,14 @@ local options = {
 	---- 24-bit RGB カラーを有効化(TUI時)
 	termguicolors = true,
 }
+
+-- apply options
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
+
+-- individual settings
+--------
 
 -- Diagnostic signs
 local diagnostic_signs = {
@@ -78,6 +83,7 @@ local diagnostic_signs = {
 	{ name = "DiagnosticSignHint", text = "" },
 	{ name = "DiagnosticSignInfo", text = "" },
 }
+
 for _, sign in ipairs(diagnostic_signs) do
 	vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = sign.name })
 end
