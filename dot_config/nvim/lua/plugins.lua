@@ -3,6 +3,7 @@ M.config = function(flavour)
 	require("catppuccin").setup({
 		flavour = flavour,
 		integrations = {
+			cmp = true,
 			dap = true,
 			dap_ui = true,
 			dashboard = true,
