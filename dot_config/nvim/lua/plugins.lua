@@ -94,21 +94,17 @@ return {
 
 	-- completion
 	{
-		"nvimdev/epo.nvim",
-		config = true,
+		"hrsh7th/nvim-cmp",
+		dependencies = {
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
+		},
+		event = "InsertEnter",
+		config = function()
+			require("config/cmp")
+		end,
 	},
-	-- {
-	-- 	"hrsh7th/nvim-cmp",
-	-- 	dependencies = {
-	-- 		"hrsh7th/cmp-nvim-lsp",
-	-- 		"hrsh7th/cmp-buffer",
-	-- 		"hrsh7th/cmp-path",
-	-- 	},
-	-- 	event = "InsertEnter",
-	-- 	config = function()
-	-- 		require("config/cmp")
-	-- 	end,
-	-- },
 
 	-- AI
 	---- copilot
