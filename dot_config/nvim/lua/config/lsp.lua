@@ -173,7 +173,7 @@ local handlers = {
 		})
 	end,
 
-	["rust-analyzer"] = function()
+	["rust_analyzer"] = function()
 		require("lspconfig").rust_analyzer.setup({
 			settings = {
 				["rust-analyzer"] = {
