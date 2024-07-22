@@ -10,7 +10,7 @@ M.config = function(flavour)
 			gitsigns = true,
 			lsp_saga = true,
 			mason = true,
-			mini = true,
+			mini = { enabled = true },
 			noice = true,
 			notify = true,
 			telescope = { enabled = true },
