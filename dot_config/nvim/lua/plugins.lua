@@ -75,15 +75,15 @@ return {
 		end,
 	},
 	---- lspsaga
-	-- {
-	-- 	"nvimdev/lspsaga.nvim",
-	-- 	dependencies = {
-	-- 		"nvim-treesitter/nvim-treesitter",
-	-- 	},
-	-- 	config = function()
-	-- 		require("config/lspsaga")
-	-- 	end,
-	-- },
+	{
+		"nvimdev/lspsaga.nvim",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+		config = function()
+			require("config/lspsaga")
+		end,
+	},
 
 	-- completion
 	-- {
