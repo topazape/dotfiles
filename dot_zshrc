@@ -3,12 +3,12 @@ export HISTSIZE=10000
 export SAVEHIST=100000
 
 # sheldon
-if type sheldon > /dev/null 2>&1; then
+if type sheldon >/dev/null 2>&1; then
   eval "$(sheldon source)"
 fi
 
 # starship
-if type starship > /dev/null 2>&1; then
+if type starship >/dev/null 2>&1; then
   export STARSHIP_CONFIG=${XDG_CONFIG_HOME}/starship/starship.toml
   eval "$(starship init zsh)"
 fi
