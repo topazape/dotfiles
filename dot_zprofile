@@ -1,13 +1,13 @@
 # XDG
-if [ ! -d "${HOME}/.config" ]; then
+if [[ ! -d ${HOME}/.config ]]; then
   mkdir -p "${HOME}/.config"
 fi
 
-if [ ! -d "${HOME}/.cache" ]; then
+if [[ ! -d ${HOME}/.cache ]]; then
   mkdir -p "${HOME}/.cache"
 fi
 
-if [ ! -d "${HOME}/.local/share" ]; then
+if [[ ! -d ${HOME}/.local/share ]]; then
   mkdir -p "${HOME}/.local/share"
 fi
 
@@ -17,27 +17,27 @@ export XDG_DATA_HOME=${HOME}/.local/share
 export XDG_STATE_HOME=${HOME}/.local/state
 
 # create private zsh completion dir if not exists
-if [ ! -d "${XDG_DATA_HOME}/zsh/zfunc" ]; then
+if [[ ! -d ${XDG_DATA_HOME}/zsh/zfunc ]]; then
   mkdir -p "${XDG_DATA_HOME}/zsh/zfunc"
 fi
 # enable private zsh completion
 fpath=(${XDG_DATA_HOME}/zsh/zfunc $fpath)
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ]; then
-  PATH="$HOME/bin:$PATH"
+if [[ -d ${HOME}/bin ]]; then
+  PATH="${HOME}/bin:${PATH}"
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ]; then
+if [[ -d ${HOME}/.local/bin ]]; then
   PATH="$HOME/.local/bin:$PATH"
 fi
 
 # homebrew
 ## linux
-[ -d /home/linuxbrew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+[[ -d /home/linuxbrew ]] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 ## mac
-[ -d /opt/homebrew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+[[ -d /opt/homebrew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
 if type brew >/dev/null 2>&1; then
   # cache dir
