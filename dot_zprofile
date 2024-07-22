@@ -1,14 +1,14 @@
 # XDG
-if [ ! -d ${HOME}/.config ]; then
-  mkdir -p ${HOME}/.config
+if [ ! -d "${HOME}/.config" ]; then
+  mkdir -p "${HOME}/.config"
 fi
 
-if [ ! -d ${HOME}/.cache ]; then
-  mkdir -p ${HOME}/.cache
+if [ ! -d "${HOME}/.cache" ]; then
+  mkdir -p "${HOME}/.cache"
 fi
 
-if [ ! -d ${HOME}/.local/share ]; then
-  mkdir -p ${HOME}/.local/share
+if [ ! -d "${HOME}/.local/share" ]; then
+  mkdir -p "${HOME}/.local/share"
 fi
 
 export XDG_CONFIG_HOME=${HOME}/.config
@@ -17,8 +17,8 @@ export XDG_DATA_HOME=${HOME}/.local/share
 export XDG_STATE_HOME=${HOME}/.local/state
 
 # create private zsh completion dir if not exists
-if [ ! -d ${XDG_DATA_HOME}/zsh/zfunc ]; then
-  mkdir -p ${XDG_DATA_HOME}/zsh/zfunc
+if [ ! -d "${XDG_DATA_HOME}/zsh/zfunc" ]; then
+  mkdir -p "${XDG_DATA_HOME}/zsh/zfunc"
 fi
 # enable private zsh completion
 fpath=(${XDG_DATA_HOME}/zsh/zfunc $fpath)
