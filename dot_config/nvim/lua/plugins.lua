@@ -74,35 +74,35 @@ return {
 		end,
 	},
 	---- lspsaga
-	{
-		"nvimdev/lspsaga.nvim",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		},
-		config = function()
-			require("config/lspsaga")
-		end,
-	},
+	-- {
+	-- 	"nvimdev/lspsaga.nvim",
+	-- 	dependencies = {
+	-- 		"nvim-treesitter/nvim-treesitter",
+	-- 	},
+	-- 	config = function()
+	-- 		require("config/lspsaga")
+	-- 	end,
+	-- },
+
+	-- completion
+	-- {
+	-- 	"hrsh7th/nvim-cmp",
+	-- 	dependencies = {
+	-- 		"hrsh7th/cmp-nvim-lsp",
+	-- 		"hrsh7th/cmp-buffer",
+	-- 		"hrsh7th/cmp-path",
+	-- 	},
+	-- 	event = "InsertEnter",
+	-- 	config = function()
+	-- 		require("config/cmp")
+	-- 	end,
+	-- },
 
 	-- formatter
 	{
 		"stevearc/conform.nvim",
 		config = function()
 			require("config/conform")
-		end,
-	},
-
-	-- completion
-	{
-		"hrsh7th/nvim-cmp",
-		dependencies = {
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-path",
-		},
-		event = "InsertEnter",
-		config = function()
-			require("config/cmp")
 		end,
 	},
 
