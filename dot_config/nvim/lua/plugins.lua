@@ -97,6 +97,11 @@ return {
 	-- 		require("config/cmp")
 	-- 	end,
 	-- },
+	{
+		"echasnovski/mini.completion",
+		version = false,
+		config = true,
+	},
 
 	-- formatter
 	{
