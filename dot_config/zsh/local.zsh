@@ -138,6 +138,7 @@ fi
 if type rustup >/dev/null 2>&1; then
   export RUSTUP_HOME=${XDG_DATA_HOME}/rustup
   export CARGO_HOME=${XDG_DATA_HOME}/cargo
+  export PATH=${RUSTUP_HOME}/bin:${PATH}
   if [[ -e ${CARGO_HOME}/env ]]; then
     source ${CARGO_HOME}/env
   fi
