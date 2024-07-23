@@ -134,19 +134,8 @@ if type rye >/dev/null 2>&1; then
   export UV_CACHE_DIR=${XDG_CACHE_HOME}/uv
 fi
 ## Rust
-### rustup
-# if type rustup >/dev/null 2>&1; then
-#   export RUSTUP_HOME=${XDG_DATA_HOME}/rustup
+# if type cargo >/dev/null 2>&1; then
 #   export CARGO_HOME=${XDG_DATA_HOME}/cargo
-#   export PATH=${RUSTUP_HOME}/bin:${PATH}
-#   if [[ -e ${CARGO_HOME}/env ]]; then
-#     source ${CARGO_HOME}/env
-#   fi
-#   # rust completions
-#   if type rustup >/dev/null 2>&1; then
-#     rustup completions zsh >${XDG_DATA_HOME}/zsh/zfunc/_rustup
-#     rustup completions zsh cargo >${XDG_DATA_HOME}/zsh/zfunc/_cargo
-#   fi
 # fi
 
 # for work
