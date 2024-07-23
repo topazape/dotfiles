@@ -134,9 +134,10 @@ if type rye >/dev/null 2>&1; then
   export UV_CACHE_DIR=${XDG_CACHE_HOME}/uv
 fi
 ## Rust
-# if type cargo >/dev/null 2>&1; then
-#   export CARGO_HOME=${XDG_DATA_HOME}/cargo
-# fi
+### cargo
+if type cargo >/dev/null 2>&1; then
+  export CARGO_HOME=${XDG_DATA_HOME}/cargo
+fi
 
 # for work
 if [[ -e ${XDG_CONFIG_HOME}/zsh/work.sh ]]; then
