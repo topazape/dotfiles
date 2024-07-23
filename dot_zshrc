@@ -13,4 +13,4 @@ if type starship >/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
 
-source ${XDG_CONFIG_HOME}/zsh/local.zsh
+source "${XDG_CONFIG_HOME}/zsh/local.zsh"
