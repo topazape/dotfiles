@@ -135,7 +135,7 @@ if type rye >/dev/null 2>&1; then
 fi
 ## Rust
 ### rustup
-if type rustup-init >/dev/null 2>&1; then
+if type rustup >/dev/null 2>&1; then
   export RUSTUP_HOME=${XDG_DATA_HOME}/rustup
   export CARGO_HOME=${XDG_DATA_HOME}/cargo
   if [[ -e ${CARGO_HOME}/env ]]; then
