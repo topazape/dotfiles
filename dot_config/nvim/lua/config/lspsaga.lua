@@ -34,6 +34,9 @@ lspsaga.setup({
 			vsplit = "v",
 		},
 	},
+	outline = {
+		win_position = "left",
+	},
 	ui = {
 		border = "rounded", -- Can be single, double, rounded, solid, shadow.
 		lines = { "└", "├", "│", "─", "┌" },
