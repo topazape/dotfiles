@@ -35,7 +35,7 @@ lspsaga.setup({
 		},
 	},
 	outline = {
-		win_position = "left",
+		win_width = 100,
 	},
 	ui = {
 		border = "rounded", -- Can be single, double, rounded, solid, shadow.
