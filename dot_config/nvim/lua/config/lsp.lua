@@ -163,6 +163,7 @@ local handlers = {
 				["rust-analyzer"] = {
 					check = {
 						command = "clippy",
+						allTargets = true,
 					},
 					checkOnSave = {
 						command = "clippy",
