@@ -73,6 +73,12 @@ if type less >/dev/null 2>&1; then
   export LESSHISTFILE=-
   export LESS='-gj10 --no-init --quit-if-one-screen --RAW-CONTROL-CHARS'
 fi
+## chezmoi
+if type chezmoi >/dev/null 2>&1; then
+  # completion
+  eval "$(chezmoi completion zsh)"
+
+fi
 ## direnv
 if type direnv >/dev/null 2>&1; then
   eval "$(direnv hook zsh)"
