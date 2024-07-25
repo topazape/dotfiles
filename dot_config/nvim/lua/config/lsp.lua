@@ -164,6 +164,7 @@ local handlers = {
 					check = {
 						command = "clippy",
 						allTargets = true,
+						features = "all",
 					},
 					checkOnSave = {
 						command = "clippy",
