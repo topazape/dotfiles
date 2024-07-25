@@ -36,9 +36,6 @@ lspsaga.setup({
 	},
 	outline = {
 		close_after_jump = true,
-		keys = {
-			toggle_or_jump = "<ctrl-]>",
-		},
 	},
 	ui = {
 		border = "rounded", -- Can be single, double, rounded, solid, shadow.
