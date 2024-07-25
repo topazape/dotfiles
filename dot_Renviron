@@ -1,3 +1,0 @@
-R_LIBS_USER=${HOME}/.local/share/R/lib
-R_HISTFILE=${HOME}/.cache/R/Rhistory
-R_HISTSIZE=65535
