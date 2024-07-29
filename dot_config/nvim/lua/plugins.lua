@@ -299,6 +299,11 @@ return {
 			},
 		},
 	},
+	---- diffview
+	{
+		"sindrets/diffview.nvim",
+		config = true,
+	},
 
 	-- markdown
 	{
