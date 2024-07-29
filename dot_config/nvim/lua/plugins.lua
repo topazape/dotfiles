@@ -253,12 +253,9 @@ return {
 	---- gitsigns
 	{
 		"lewis6991/gitsigns.nvim",
-		opts = {
-			signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
-			numhl = true, -- Toggle with `:Gitsigns toggle_numhl`
-			linehl = true, -- Toggle with `:Gitsigns toggle_linehl`
-			word_diff = true, -- Toggle with `:Gitsigns toggle_word_diff`
-		},
+		config = function()
+			require("config/gitsigns")
+		end,
 	},
 	---- conflict
 	{
