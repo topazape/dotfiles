@@ -11,7 +11,7 @@ lspsaga.setup({
 	vim.keymap.set("n", "go", "<CMD>Lspsaga outline<CR>", { noremap = true }),
 	vim.keymap.set("n", "g]", "<CMD>Lspsaga diagnostic_jump_next<CR>", { noremap = true }),
 	vim.keymap.set("n", "g[", "<CMD>Lspsaga diagnostic_jump_prev<CR>", { noremap = true }),
-	vim.keymap.set("n", "<C-\\", "<CMD>Lspsaga term_toggle<CR>", { noremap = true }),
+	vim.keymap.set("n", "<C-\\>", "<CMD>Lspsaga term_toggle<CR>", { noremap = true }),
 
 	definition = {
 		width = 0.8,
