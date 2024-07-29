@@ -320,6 +320,13 @@ return {
 		end,
 	},
 
+	-- terminal
+	{
+		"akinsho/toggleterm.nvim",
+		version = "*",
+		config = true,
+	},
+
 	-- startup
 	{
 		"nvimdev/dashboard-nvim",
