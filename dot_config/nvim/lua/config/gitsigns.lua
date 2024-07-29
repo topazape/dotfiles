@@ -6,7 +6,7 @@ gitsigns.setup({
 	word_diff = true, -- Toggle with `:Gitsigns toggle_word_diff`
 	current_line_blame = false,
 	current_line_blame_opts = {
-		delay = 10,
+		delay = 100,
 	},
 
 	on_attach = function(bufnr)
