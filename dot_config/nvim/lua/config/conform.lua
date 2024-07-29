@@ -6,12 +6,30 @@ conform.setup({
 		lsp_format = "fallback",
 	},
 	formatters_by_ft = {
+		css = {
+			"prettier",
+		},
+		bash = {
+			"shfmt",
+		},
 		go = {
 			"goimports",
 			"gofumpt",
 		},
+		html = {
+			"prettier",
+		},
+		javascript = {
+			"prettier",
+		},
+		json = {
+			"prettier",
+		},
 		lua = {
 			"stylua",
+		},
+		markdown = {
+			"prettier",
 		},
 		python = {
 			"ruff_organize_imports",
@@ -20,24 +38,16 @@ conform.setup({
 		sh = {
 			"shfmt",
 		},
-		bash = {
-			"shfmt",
-		},
-		zsh = {
-			"shfmt",
-		},
-		json = {
-			"prettier",
-		},
 		toml = {
 			"taplo",
 		},
 		yaml = {
 			"prettier",
 		},
-		markdown = {
-			"prettier",
+		zsh = {
+			"shfmt",
 		},
+
 		["*"] = {
 			"trim_newlines",
 			"trim_whitespace",
