@@ -10,3 +10,7 @@ tools:
       - "%f:%l:%c: %trror: %m"
       - "%f:%l:%c: %tarning: %m"
       - "%f:%l:%c: %tote: %m"
+
+languages:
+  python:
+    - <<: *python-mypy
