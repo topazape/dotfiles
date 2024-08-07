@@ -186,7 +186,23 @@ local handlers = {
 
 	["efm"] = function()
 		require("lspconfig").efm.setup({
-			-- init_options = { documentFormatting = true },
+			init_options = { documentFormatting = true },
+			filetypes = { "python" },
+			settings = {
+				rootMarkers = { ".git/" },
+				languages = {
+					python = {
+						mypy = {
+							lintCommand = "mypy --show-column-numbers",
+							lintFormats = {
+								"%f:%l:%c: %trror: %m",
+								"%f:%l:%c: %tarning: %m",
+								"%f:%l:%c: %tote: %m",
+							},
+						},
+					},
+				},
+			},
 		})
 	end,
 }
