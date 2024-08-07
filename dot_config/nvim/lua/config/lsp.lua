@@ -186,6 +186,7 @@ local handlers = {
 
 	["efm"] = function()
 		require("lspconfig").efm.setup({
+			cmd = { "efm-langserver", "-logfile", "/Users/kawai/efm.log", "-loglevel", "1" },
 			init_options = { documentFormatting = true },
 			filetypes = { "python" },
 			settings = {
