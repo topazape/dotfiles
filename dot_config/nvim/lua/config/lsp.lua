@@ -190,17 +190,16 @@ local handlers = {
 			init_options = { documentFormatting = true },
 			filetypes = { "python" },
 			settings = {
-				rootMarkers = { ".git/" },
+				rootMarkers = { ".git/", "pyproject.toml" },
 				languages = {
 					python = {
 						mypy = {
-							lintCommand = "mypy --show-column-numbers --ignore-missing-imports",
+							lintCommand = "mypy --show-column-numbers",
 							lintFormats = {
 								"%f:%l:%c: %trror: %m",
 								"%f:%l:%c: %tarning: %m",
 								"%f:%l:%c: %tote: %m",
 							},
-							lintSource = "mypy",
 						},
 					},
 				},
