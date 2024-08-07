@@ -194,18 +194,18 @@ local handlers = {
 				"python",
 			},
 			settings = {
-				rootMarkers = { ".git/", "pyproject.toml" },
+				rootMarkers = { ".git/", "pyproject.toml", "Pipfile" },
 				languages = {
-					-- python = {
-					-- 	mypy = {
-					-- 		lintCommand = "mypy --show-column-numbers",
-					-- 		lintFormats = {
-					-- 			"%f:%l:%c: %trror: %m",
-					-- 			"%f:%l:%c: %tarning: %m",
-					-- 			"%f:%l:%c: %tote: %m",
-					-- 		},
-					-- 	},
-					-- },
+					python = {
+						mypy = {
+							lintCommand = "mypy --show-column-numbers",
+							lintFormats = {
+								"%f:%l:%c: %trror: %m",
+								"%f:%l:%c: %tarning: %m",
+								"%f:%l:%c: %tote: %m",
+							},
+						},
+					},
 				},
 			},
 		})
