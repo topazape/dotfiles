@@ -183,6 +183,20 @@ local handlers = {
 			filetypes = { "terraform", "terraform-vars", "hcl" },
 		})
 	end,
+
+	["efm"] = function()
+		require("lspconfig").efm.setup({
+			init_options = { documentFormatting = true },
+			settings = {
+				rootMarkers = { ".git/" },
+				languages = {
+					lua = {
+						{},
+					},
+				},
+			},
+		})
+	end,
 }
 
 require("mason-lspconfig").setup_handlers(handlers)
