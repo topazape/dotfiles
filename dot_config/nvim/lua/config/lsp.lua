@@ -187,14 +187,6 @@ local handlers = {
 	["efm"] = function()
 		require("lspconfig").efm.setup({
 			init_options = { documentFormatting = true },
-			settings = {
-				rootMarkers = { ".git/" },
-				languages = {
-					lua = {
-						{},
-					},
-				},
-			},
 		})
 	end,
 }
