@@ -204,6 +204,7 @@ local handlers = {
 								"%f:%l:%c: %tarning: %m",
 								"%f:%l:%c: %tote: %m",
 							},
+							lintSource = "mypy",
 						},
 					},
 				},
