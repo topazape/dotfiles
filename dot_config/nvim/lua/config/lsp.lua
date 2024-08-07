@@ -186,7 +186,7 @@ local handlers = {
 
 	["efm"] = function()
 		require("lspconfig").efm.setup({
-			init_options = { documentFormatting = true },
+			-- init_options = { documentFormatting = true },
 		})
 	end,
 }
