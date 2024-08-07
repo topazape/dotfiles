@@ -198,12 +198,13 @@ local handlers = {
 				languages = {
 					python = {
 						mypy = {
-							lintCommand = "mypy ${INPUT} --show-column-numbers",
+							lintCommand = "mypy --show-column-numbers",
 							lintFormats = {
 								"%f:%l:%c: %trror: %m",
 								"%f:%l:%c: %tarning: %m",
 								"%f:%l:%c: %tote: %m",
 							},
+							lintStdin = true,
 						},
 					},
 				},
