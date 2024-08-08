@@ -195,6 +195,7 @@ local handlers = {
 
 	["efm"] = function()
 		require("lspconfig").efm.setup({
+			cmd = { "efm-langserver", "-logfile", "/tmp/efm.log", "-loglevel", "5" },
 			init_options = {
 				documentFormatting = true,
 				rangeFormatting = true,
