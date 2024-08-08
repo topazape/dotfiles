@@ -191,6 +191,14 @@ local handlers = {
 
 	["efm"] = function()
 		require("lspconfig").efm.setup({
+			init_options = {
+				documentFormatting = true,
+				rangeFormatting = true,
+				hover = true,
+				documentSymbol = true,
+				codeAction = true,
+				completion = false,
+			},
 			filetypes = { "python" },
 			settings = {
 				rootMarkers = { ".git/" },
