@@ -174,7 +174,7 @@ local handlers = {
 			settings = {
 				formatterMode = "typstyle",
 				exportPdf = "onSave",
-				noSystemFonts = false,
+				noSystemFonts = true,
 			},
 		})
 	end,
