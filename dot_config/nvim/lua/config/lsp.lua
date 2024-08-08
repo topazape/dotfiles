@@ -185,29 +185,6 @@ local handlers = {
 			filetypes = { "terraform", "terraform-vars", "hcl" },
 		})
 	end,
-
-	["efm"] = function()
-		require("lspconfig").efm.setup({
-			cmd = { "efm-langserver", "-logfile", "/Users/kawai/efm.log", "-loglevel", "5" },
-			init_options = { documentFormatting = true },
-			filetypes = { "python" },
-			settings = {
-				rootMarkers = { ".git/", "pyproject.toml" },
-				languages = {
-					python = {
-						{
-							lintCommand = "/Users/kawai/.local/share/nvim/mason/bin/mypy --show-column-numbers",
-							lintFormats = {
-								"%f:%l:%c: %trror: %m",
-								"%f:%l:%c: %tarning: %m",
-								"%f:%l:%c: %tote: %m",
-							},
-						},
-					},
-				},
-			},
-		})
-	end,
 }
 
 require("mason-lspconfig").setup_handlers(handlers)
