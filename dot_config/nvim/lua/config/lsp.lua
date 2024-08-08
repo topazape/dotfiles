@@ -201,7 +201,7 @@ local handlers = {
 			},
 			filetypes = { "python" },
 			settings = {
-				rootMarkers = { ".git/" },
+				rootMarkers = { ".git/", "pyproject.toml" },
 				languages = {
 					python = { mypy },
 				},
