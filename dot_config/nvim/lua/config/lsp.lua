@@ -1,6 +1,17 @@
 require("mason").setup()
 require("mason-lspconfig").setup()
 
+local mypy = {
+	lintCommand = "mypy ${INPUT} --show-column-numbers --ignore-missing-imports --show-error-codes",
+	lintStdin = true,
+	lintFormats = {
+		"%f:%l:%c: %trror: %m",
+		"%f:%l:%c: %tarning: %m",
+		"%f:%l:%c: %tote: %m",
+	},
+	lintSource = "mypy",
+}
+
 -- xdg config dir
 local XDG_CONFIG_HOME = os.getenv("XDG_CONFIG_HOME")
 if not XDG_CONFIG_HOME then
@@ -186,30 +197,11 @@ local handlers = {
 
 	["efm"] = function()
 		require("lspconfig").efm.setup({
-			init_options = { documentFormatting = true },
 			filetypes = { "python" },
 			settings = {
 				rootMarkers = { ".git/" },
 				languages = {
-					python = {
-						mypy = {
-							source = "mypy",
-							args = { "--show-column-numbers", "--show-error-codes", "--follow-imports", "silent" },
-							formatPattern = {
-								"^(.*):(\\d+):(\\d+): (\\w+): (.*)$",
-								{
-									line = 2,
-									column = 3,
-									message = { "[", 4, "] ", 5 },
-								},
-							},
-							parseJson = {
-								line = "line",
-								column = "column",
-								message = "message",
-							},
-						},
-					},
+					python = { mypy },
 				},
 			},
 		})
