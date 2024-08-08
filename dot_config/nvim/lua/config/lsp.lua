@@ -2,8 +2,12 @@ require("mason").setup()
 require("mason-lspconfig").setup()
 
 local mypy = {
-	lintCommand = "mypy --show-column-numbers --strict --strict-equality",
-	lintFormats = "%f:%l:%c: %t%*[^:]: %m",
+	lintCommand = "mypy --show-column-numbers",
+	lintFormats = {
+		"%f:%l:%c: %trror: %m",
+		"%f:%l:%c: %tarning: %m",
+		"%f:%l:%c: %tote: %m",
+	},
 }
 
 -- xdg config dir
