@@ -202,7 +202,7 @@ local handlers = {
 				rootMarkers = { ".git/", "pyproject.toml" },
 				languages = {
 					python = {
-						mypy = {
+						{
 							lintCommand = "/Users/kawai/.local/share/nvim/mason/bin/mypy --show-column-numbers",
 							lintFormats = {
 								"%f:%l:%c: %trror: %m",
