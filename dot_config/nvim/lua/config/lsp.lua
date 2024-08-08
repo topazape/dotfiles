@@ -183,6 +183,37 @@ local handlers = {
 			filetypes = { "terraform", "terraform-vars", "hcl" },
 		})
 	end,
+
+	["efm"] = function()
+		require("lspconfig").efm.setup({
+			init_options = { documentFormatting = true },
+			filetypes = { "python" },
+			settings = {
+				rootMarkers = { ".git/" },
+				languages = {
+					python = {
+						mypy = {
+							source = "mypy",
+							args = { "--show-column-numbers", "--show-error-codes", "--follow-imports", "silent" },
+							formatPattern = {
+								"^(.*):(\\d+):(\\d+): (\\w+): (.*)$",
+								{
+									line = 2,
+									column = 3,
+									message = { "[", 4, "] ", 5 },
+								},
+							},
+							parseJson = {
+								line = "line",
+								column = "column",
+								message = "message",
+							},
+						},
+					},
+				},
+			},
+		})
+	end,
 }
 
 require("mason-lspconfig").setup_handlers(handlers)
