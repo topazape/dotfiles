@@ -1,14 +1,7 @@
 require("mason").setup()
 require("mason-lspconfig").setup()
 
-local mypy = {
-	lintCommand = "mypy --show-column-numbers",
-	lintFormats = {
-		"%f:%l:%c: %trror: %m",
-		"%f:%l:%c: %tarning: %m",
-		"%f:%l:%c: %tote: %m",
-	},
-}
+local mypy = {}
 
 -- xdg config dir
 local XDG_CONFIG_HOME = os.getenv("XDG_CONFIG_HOME")
@@ -208,7 +201,16 @@ local handlers = {
 			settings = {
 				rootMarkers = { ".git/", "pyproject.toml" },
 				languages = {
-					python = { mypy },
+					python = {
+						mypy = {
+							lintCommand = "/Users/kawai/.local/share/nvim/mason/bin/mypy --show-column-numbers",
+							lintFormats = {
+								"%f:%l:%c: %trror: %m",
+								"%f:%l:%c: %tarning: %m",
+								"%f:%l:%c: %tote: %m",
+							},
+						},
+					},
 				},
 			},
 		})
