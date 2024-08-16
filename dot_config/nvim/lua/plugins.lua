@@ -1,38 +1,10 @@
-local M = {}
-M.config = function(flavour)
-	require("catppuccin").setup({
-		flavour = flavour,
-		integrations = {
-			cmp = true,
-			dap = true,
-			dap_ui = true,
-			dashboard = true,
-			gitsigns = true,
-			lsp_saga = true,
-			mason = true,
-			noice = true,
-			notify = true,
-			telescope = { enabled = true },
-			treesitter = true,
-			rainbow_delimiters = true,
-		},
-	})
-	vim.cmd.colorscheme("catppuccin")
-	local colors = require("catppuccin.palettes").get_palette(flavour)
-	vim.cmd("highlight WinSeparator guifg=" .. colors.overlay0)
-end
-
 return {
 	-- colorscheme
 	{
-		"catppuccin/nvim",
-		-- priority = 1000,
-		config = function()
-			-- M.config("latte")
-			-- M.config("frappe")
-			M.config("macchiato")
-			-- M.config("mocha")
-		end,
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		config = true,
 	},
 
 	-- devicon
