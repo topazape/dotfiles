@@ -29,9 +29,9 @@ return {
 		-- priority = 1000,
 		config = function()
 			-- M.config("latte")
-			M.config("frappe")
+			-- M.config("frappe")
 			-- M.config("macchiato")
-			-- M.config("mocha")
+			M.config("mocha")
 		end,
 	},
 
