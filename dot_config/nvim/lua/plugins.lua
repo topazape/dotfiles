@@ -174,10 +174,6 @@ return {
 				cursor = true,
 				modemsg = true,
 			},
-			load = {
-				"catppuccin-macchiato-cursor",
-				"catppuccin-mocha-cursorline",
-			},
 		},
 	},
 
