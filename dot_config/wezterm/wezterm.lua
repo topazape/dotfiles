@@ -7,7 +7,7 @@ return {
 
 	-- color scheme
 	-- color_scheme = "Tokyo Night Storm (Gogh)",
-	color_scheme = "Tokyo Night Storm",
+	color_scheme = "Kanagawa (Gogh)",
 
 	-- colors
 	colors = {
