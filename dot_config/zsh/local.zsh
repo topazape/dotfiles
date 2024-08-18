@@ -111,6 +111,12 @@ if [[ -d $(brew --prefix)/share/google-cloud-sdk ]]; then
 fi
 
 # Programing Languages
+## LLVM
+if [[ -d $(brew --prefix llvm) ]]; then
+  export PATH="$(brew --prefix llvm)/bin:${PATH}"
+  export LDFLAGS="-L$(brew --prefix llvm)/lib"
+  export CPPFLAGS="-I$(brew --prefix llvm)/include"
+fi
 ## Golang
 if type go >/dev/null 2>&1; then
   export GOPATH=${XDG_DATA_HOME}/go
