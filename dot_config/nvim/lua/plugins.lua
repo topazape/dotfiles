@@ -259,6 +259,15 @@ return {
 		end,
 	},
 
+	-- quarto
+	{
+		"quarto-dev/quarto.nvim",
+		dependencies = {
+			"jmbuhr/otter.nvim",
+			"nvim-treesitter/nvim-treesitter",
+		},
+	},
+
 	-- startup
 	{
 		"nvimdev/dashboard-nvim",
