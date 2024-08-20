@@ -6,7 +6,7 @@ return {
 		priority = 1000,
 		config = function()
 			vim.cmd.colorscheme("tokyonight-moon")
-			vim.cmd("highlight WinSeparator guifg=#888888")
+			vim.cmd("highlight WinSeparator guifg=#999999")
 		end,
 	},
 
