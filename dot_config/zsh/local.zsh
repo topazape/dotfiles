@@ -140,11 +140,6 @@ fi
 if type pipenv >/dev/null 2>&1; then
   export PIPENV_CACHE_DIR=${XDG_CACHE_HOME}/pipenv
 fi
-### rye
-if type rye >/dev/null 2>&1; then
-  export RYE_HOME=${XDG_DATA_HOME}/rye
-  export UV_CACHE_DIR=${XDG_CACHE_HOME}/uv
-fi
 ## Rust
 ### cargo
 if type cargo >/dev/null 2>&1; then
