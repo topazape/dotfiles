@@ -1,9 +1,5 @@
 #!/bin/sh
 
-layout_rye() {
-  source .venv/bin/activate
-}
-
 layout_ipython() {
   export IPYTHONDIR=${XDG_CONFIG_HOME}/ipython
 }
