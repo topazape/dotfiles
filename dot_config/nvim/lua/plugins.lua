@@ -242,7 +242,7 @@ return {
 
 	-- markdown
 	{
-		"MeanderingProgrammer/markdown.nvim",
+		"MeanderingProgrammer/render-markdown.nvim",
 		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		opts = {
 			-- max_file_size = 1.5, -- MB
