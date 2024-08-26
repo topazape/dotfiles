@@ -1,1 +1,2 @@
+export R_LIBS_USER=${XDG_DATA_HOME}/R/library
 export RENV_PATHS_CACHE=${XDG_CACHE_HOME}/renv
