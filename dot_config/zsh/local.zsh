@@ -77,7 +77,6 @@ fi
 if type chezmoi >/dev/null 2>&1; then
   # completion
   eval "$(chezmoi completion zsh)"
-
 fi
 ## direnv
 if type direnv >/dev/null 2>&1; then
