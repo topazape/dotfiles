@@ -1,2 +1,2 @@
 R_LIBS_USER = ~/.local/share/R/library
-RENV_PATHS_ROOT = ~/.cache/renv
+RENV_PATHS_ROOT = ~/.cache/R/renv
