@@ -92,23 +92,6 @@ return {
 	},
 
 	-- debugging
-	---- dap
-	{
-		"mfussenegger/nvim-dap",
-		event = "VeryLazy",
-		config = function()
-			require("config/dap")
-		end,
-	},
-	---- ui
-	{
-		"rcarriga/nvim-dap-ui",
-		dependencies = {
-			"mfussenegger/nvim-dap",
-			"nvim-neotest/nvim-nio",
-		},
-		event = "VeryLazy",
-	},
 	---- debug print
 	{
 		"andrewferrier/debugprint.nvim",
