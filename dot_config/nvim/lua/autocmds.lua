@@ -117,6 +117,13 @@ autocmd({ "FileType" }, {
 		vim.keymap.set("n", "<LEADER>pr", "<CMD>TypstPreviewToggle<CR>", { noremap = true, silent = true })
 	end,
 })
+---- octo
+autocmd({ "FileType" }, {
+	pattern = { "octo" },
+	callback = function()
+		vim.bo.filetype = "markdown"
+	end,
+})
 
 -- ターミナルモード
 ---- 常にインサートモードで開く
