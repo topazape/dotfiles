@@ -217,11 +217,21 @@ return {
 		version = "*",
 		config = true,
 	},
-	---- diffview
+	---- GitHub
 	{
-		"sindrets/diffview.nvim",
+		"pwntester/octo.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+			"nvim-tree/nvim-web-devicons",
+		},
 		config = true,
 	},
+	---- diffview
+	-- {
+	-- 	"sindrets/diffview.nvim",
+	-- 	config = true,
+	-- },
 
 	-- markdown
 	{
