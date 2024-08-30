@@ -225,7 +225,9 @@ return {
 			"nvim-telescope/telescope.nvim",
 			"nvim-tree/nvim-web-devicons",
 		},
-		config = true,
+		config = {
+      ssh_aliases = { github-tver = "github.com" },
+    }
 	},
 	---- diffview
 	-- {
