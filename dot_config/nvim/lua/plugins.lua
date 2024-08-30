@@ -226,7 +226,7 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 		config = {
-      ssh_aliases = { github-tver = "github.com" },
+      ssh_aliases = { "github-tver" = "github.com" },
     }
 	},
 	---- diffview
