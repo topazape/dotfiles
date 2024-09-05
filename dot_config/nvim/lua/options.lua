@@ -66,7 +66,6 @@ local options = {
 	mouse = "",
 	---- 24-bit RGB カラーを有効化(TUI時)
 	termguicolors = true,
-	laststatus = 3,
 }
 
 -- apply options
