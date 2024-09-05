@@ -77,12 +77,12 @@ local handlers = {
 	end,
 
 	["basedpyright"] = function()
-		require("lspconfig").basedpyright({
+		require("lspconfig").basedpyright.setup({
 			settings = {
 				basedpyright = {
-					-- analysis = {
-					-- 	diagnosticMode = "workspace",
-					-- },
+					analysis = {
+						diagnosticMode = "workspace",
+					},
 				},
 			},
 		})
