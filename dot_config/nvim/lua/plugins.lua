@@ -36,6 +36,13 @@ return {
 	{
 		"HiPhish/rainbow-delimiters.nvim",
 	},
+	---- comment
+	{
+		"folke/ts-comments.nvim",
+		event = "VeryLazy",
+		config = true,
+		enable = vim.fn.has("nvim-0.10.0") == 1,
+	},
 
 	-- lsp
 	{
