@@ -79,9 +79,11 @@ local handlers = {
 	["basedpyright"] = function()
 		require("lspconfig").basedpyright({
 			settings = {
-				analysis = {
-					diagnosticMode = "workspace",
-					useLibraryCodeForTypes = true,
+				basedpyright = {
+					analysis = {
+						diagnosticMode = "workspace",
+						useLibraryCodeForTypes = true,
+					},
 				},
 			},
 		})
