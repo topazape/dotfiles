@@ -82,7 +82,6 @@ local handlers = {
 				basedpyright = {
 					analysis = {
 						diagnosticMode = "workspace",
-						useLibraryCodeForTypes = true,
 					},
 				},
 			},
