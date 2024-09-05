@@ -80,9 +80,9 @@ local handlers = {
 		require("lspconfig").basedpyright({
 			settings = {
 				basedpyright = {
-					analysis = {
-						diagnosticMode = "workspace",
-					},
+					-- analysis = {
+					-- 	diagnosticMode = "workspace",
+					-- },
 				},
 			},
 		})
