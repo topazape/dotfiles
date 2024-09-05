@@ -132,7 +132,21 @@ local handlers = {
 
 	["gopls"] = function()
 		vim.env.GOPLSCACHE = XDG_CACHE_HOME .. "/gopls"
-		require("lspconfig").gopls.setup({})
+		require("lspconfig").gopls.setup({
+			settings = {
+				gopls = {
+					hints = {
+						rangeVariableTypes = true,
+						parameterNames = true,
+						constantValues = true,
+						assignVariableTypes = true,
+						compositeLiteralFields = true,
+						compositeLiteralTypes = true,
+						functionTypeParameters = true,
+					},
+				},
+			},
+		})
 	end,
 
 	["golangci_lint_ls"] = function()
