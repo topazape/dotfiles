@@ -58,6 +58,13 @@ return {
 			require("config/lspsaga")
 		end,
 	},
+	---- inlay hints
+	{
+		"MysticalDevil/inlay-hints.nvim",
+		event = "LspAttach",
+		dependencies = { "neovim/nvim-lspconfig" },
+		config = true,
+	},
 
 	-- completion
 	{
