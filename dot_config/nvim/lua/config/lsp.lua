@@ -1,8 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup()
 
-local mypy = {}
-
 -- xdg config dir
 local XDG_CONFIG_HOME = os.getenv("XDG_CONFIG_HOME")
 if not XDG_CONFIG_HOME then
