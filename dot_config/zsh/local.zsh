@@ -122,7 +122,6 @@ if type go >/dev/null 2>&1; then
   export GOCACHE=${XDG_CACHE_HOME}/go/go-build
   export GOMODCACHE=${GOPATH}/pkg/mod
   export GOENV=${GOPATH}/env
-  export GOTELEMETRY="off"
   export PATH=${GOPATH}/bin:${PATH}
 fi
 ## Javascript
