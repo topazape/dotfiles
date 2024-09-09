@@ -17,9 +17,6 @@ return {
 	-- nice devicon colors
 	{
 		"rachartier/tiny-devicons-auto-colors.nvim",
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
 		event = "VeryLazy",
 		config = true,
 	},
@@ -47,10 +44,6 @@ return {
 	-- lsp
 	{
 		"williamboman/mason.nvim",
-		dependencies = {
-			"neovim/nvim-lspconfig",
-			"williamboman/mason-lspconfig.nvim",
-		},
 		config = function()
 			require("config/lsp")
 		end,
@@ -58,9 +51,6 @@ return {
 	---- lspsaga
 	{
 		"nvimdev/lspsaga.nvim",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		},
 		config = function()
 			require("config/lspsaga")
 		end,
@@ -69,18 +59,12 @@ return {
 	{
 		"MysticalDevil/inlay-hints.nvim",
 		event = "LspAttach",
-		dependencies = { "neovim/nvim-lspconfig" },
 		config = true,
 	},
 
 	-- completion
 	{
 		"hrsh7th/nvim-cmp",
-		dependencies = {
-			"hrsh7th/cmp-nvim-lsp",
-			"hrsh7th/cmp-buffer",
-			"hrsh7th/cmp-path",
-		},
 		event = "InsertEnter",
 		config = function()
 			require("config/cmp")
@@ -110,9 +94,6 @@ return {
 	{
 		"andrewferrier/debugprint.nvim",
 		event = "VeryLazy",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		},
 		version = "*",
 		config = true,
 	},
@@ -121,9 +102,6 @@ return {
 	{
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
 		config = function()
 			require("config/telescope")
 		end,
@@ -131,18 +109,11 @@ return {
 	---- file browser
 	{
 		"nvim-telescope/telescope-file-browser.nvim",
-		dependencies = {
-			"nvim-telescope/telescope.nvim",
-		},
 	},
 
 	-- completely replaces the UI for messages, cmdline and the popupmenu
 	{
 		"folke/noice.nvim",
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-			"rcarriga/nvim-notify",
-		},
 		config = function()
 			require("notify").setup({ timeout = 100, top_down = true })
 			require("config/noice")
@@ -234,11 +205,6 @@ return {
 	---- GitHub
 	{
 		"pwntester/octo.nvim",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-telescope/telescope.nvim",
-			"nvim-tree/nvim-web-devicons",
-		},
 		config = {
 			ssh_aliases = {
 				["github-tver"] = "github.com",
@@ -257,7 +223,6 @@ return {
 	-- markdown
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
-		dependencies = { "nvim-treesitter/nvim-treesitter" },
 		opts = {
 			-- max_file_size = 1.5, -- MB
 			bullet = { icons = { "•", "◦", "▪", "▫", "‣" } },
