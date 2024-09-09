@@ -40,14 +40,6 @@ local function library(plugins)
 	return paths
 end
 
--- python path
--- local py_path = vim.fn.exepath("python3")
--- if os.getenv("VIRTUAL_ENV") ~= nil then
--- 	py_path = os.getenv("VIRTUAL_ENV") .. "/bin/python3"
--- elseif vim.g.python3_host_prog ~= nil then
--- 	py_path = vim.g.python3_host_prog
--- end
-
 local handlers = {
 	-- The first entry (without a key) will be the default handler
 	-- and will be called for each installed server that doesn"t have
