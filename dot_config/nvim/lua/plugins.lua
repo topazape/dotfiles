@@ -68,8 +68,9 @@ return {
 	---- inlay hints
 	{
 		"MysticalDevil/inlay-hints.nvim",
-		dependencies = { "neovim/nvim-lspconfig" },
-
+		dependencies = {
+			"neovim/nvim-lspconfig",
+		},
 		event = "LspAttach",
 		config = true,
 	},
@@ -122,6 +123,9 @@ return {
 	{
 		"nvim-telescope/telescope.nvim",
 		branch = "0.1.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
 		config = function()
 			require("config/telescope")
 		end,
@@ -129,11 +133,18 @@ return {
 	---- file browser
 	{
 		"nvim-telescope/telescope-file-browser.nvim",
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+		},
 	},
 
 	-- completely replaces the UI for messages, cmdline and the popupmenu
 	{
 		"folke/noice.nvim",
+		dependencies = {
+			"MunifTanjim/nui.nvim",
+			"rcarriga/nvim-notify",
+		},
 		config = function()
 			require("notify").setup({ timeout = 100, top_down = true })
 			require("config/noice")
@@ -225,6 +236,11 @@ return {
 	---- GitHub
 	{
 		"pwntester/octo.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+			"nvim-tree/nvim-web-devicons",
+		},
 		config = {
 			ssh_aliases = {
 				["github-tver"] = "github.com",
@@ -234,15 +250,13 @@ return {
 			},
 		},
 	},
-	---- diffview
-	-- {
-	-- 	"sindrets/diffview.nvim",
-	-- 	config = true,
-	-- },
 
 	-- markdown
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
 		opts = {
 			-- max_file_size = 1.5, -- MB
 			bullet = { icons = { "•", "◦", "▪", "▫", "‣" } },
