@@ -17,6 +17,9 @@ return {
 	-- nice devicon colors
 	{
 		"rachartier/tiny-devicons-auto-colors.nvim",
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
 		event = "VeryLazy",
 		config = true,
 	},
@@ -44,6 +47,10 @@ return {
 	-- lsp
 	{
 		"williamboman/mason.nvim",
+		dependencies = {
+			"neovim/nvim-lspconfig",
+			"williamboman/mason-lspconfig.nvim",
+		},
 		config = function()
 			require("config/lsp")
 		end,
@@ -51,6 +58,9 @@ return {
 	---- lspsaga
 	{
 		"nvimdev/lspsaga.nvim",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
 		config = function()
 			require("config/lspsaga")
 		end,
@@ -58,6 +68,8 @@ return {
 	---- inlay hints
 	{
 		"MysticalDevil/inlay-hints.nvim",
+		dependencies = { "neovim/nvim-lspconfig" },
+
 		event = "LspAttach",
 		config = true,
 	},
@@ -65,6 +77,11 @@ return {
 	-- completion
 	{
 		"hrsh7th/nvim-cmp",
+		dependencies = {
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
+		},
 		event = "InsertEnter",
 		config = function()
 			require("config/cmp")
@@ -93,6 +110,9 @@ return {
 	---- debug print
 	{
 		"andrewferrier/debugprint.nvim",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
 		event = "VeryLazy",
 		version = "*",
 		config = true,
