@@ -41,9 +41,6 @@ conform.setup({
 		toml = {
 			"taplo",
 		},
-		xml = {
-			"xmlformat",
-		},
 		yaml = {
 			"prettier",
 		},
