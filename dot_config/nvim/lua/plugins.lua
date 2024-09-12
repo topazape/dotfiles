@@ -5,7 +5,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("cyverdream").setup({
+			require("cyberdream").setup({
 				transparent = false,
 				italic_comments = true,
 				borderless_telescope = true,
