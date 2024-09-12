@@ -5,7 +5,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("cyberdream").setup({
+			require("tokyodark").setup({
 				transparent_background = false,
 				gamma = 1.00,
 				styles = {
