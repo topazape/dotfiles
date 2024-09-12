@@ -6,7 +6,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("onedark").setup({
-				style = "dark",
+				style = "deep",
 			})
 			vim.cmd.colorscheme("onedark")
 			vim.cmd("highlight WinSeparator guifg=#999999")
