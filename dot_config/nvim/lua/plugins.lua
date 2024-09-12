@@ -1,22 +1,14 @@
 return {
 	-- colorscheme
 	{
-		"tiagovla/tokyodark.nvim",
+		"navarasu/onedark.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("tokyodark").setup({
-				transparent_background = false,
-				gamma = 1.00,
-				styles = {
-					comments = { italic = true },
-					keywords = { italic = true },
-					identifiers = { italic = true },
-					functions = {},
-					variables = {},
-				},
+			require("onedark").setup({
+				style = "darker",
 			})
-			vim.cmd.colorscheme("tokyodark")
+			vim.cmd.colorscheme("onedark")
 			vim.cmd("highlight WinSeparator guifg=#999999")
 		end,
 	},
