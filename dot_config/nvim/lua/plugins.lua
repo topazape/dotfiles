@@ -6,7 +6,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("tokyonight").setup({})
-			vim.cmd.colorscheme("tokyonight")
+			vim.cmd.colorscheme("tokyonight-storm")
 			vim.cmd("highlight WinSeparator guifg=#999999")
 		end,
 	},
