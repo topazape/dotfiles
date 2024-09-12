@@ -1,17 +1,22 @@
 return {
 	-- colorscheme
 	{
-		"scottmckendry/cyberdream.nvim",
+		"tiagovla/tokyodark.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
 			require("cyberdream").setup({
-				transparent = false,
-				italic_comments = true,
-				borderless_telescope = true,
-				theme = {},
+				transparent_background = false,
+				gamma = 1.00,
+				styles = {
+					comments = { italic = true },
+					keywords = { italic = true },
+					identifiers = { italic = true },
+					functions = {},
+					variables = {},
+				},
 			})
-			vim.cmd.colorscheme("cyberdream")
+			vim.cmd.colorscheme("tokyodark")
 			vim.cmd("highlight WinSeparator guifg=#999999")
 		end,
 	},
