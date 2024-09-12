@@ -1,11 +1,17 @@
 return {
 	-- colorscheme
 	{
-		"folke/tokyonight.nvim",
+		"scottmckendry/cyberdream.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme("tokyonight-moon")
+			require("cyverdream").setup({
+				transparent = false,
+				italic_comments = true,
+				borderless_telescope = true,
+				theme = {},
+			})
+			vim.cmd.colorscheme("cyberdream")
 			vim.cmd("highlight WinSeparator guifg=#999999")
 		end,
 	},
