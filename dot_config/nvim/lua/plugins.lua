@@ -1,14 +1,12 @@
 return {
 	-- colorscheme
 	{
-		"navarasu/onedark.nvim",
+		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("onedark").setup({
-				style = "deep",
-			})
-			vim.cmd.colorscheme("onedark")
+			require("tokyonight").setup({})
+			vim.cmd.colorscheme("tokyonight")
 			vim.cmd("highlight WinSeparator guifg=#999999")
 		end,
 	},
