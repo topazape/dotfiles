@@ -6,7 +6,7 @@ return {
 	front_end = "OpenGL",
 
 	-- color scheme
-	color_scheme = "OneHalfDark",
+	color_scheme = "OneDark (base16)",
 
 	-- colors
 	colors = {
