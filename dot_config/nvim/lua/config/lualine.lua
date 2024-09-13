@@ -14,6 +14,7 @@ lualine.setup({
 		section_separators = { left = "", right = "" },
 		component_separators = { left = "", right = "" },
 		globalstatus = true,
+		theme = "tokyonight",
 	},
 	sections = {
 		lualine_a = {
