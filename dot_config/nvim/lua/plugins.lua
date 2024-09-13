@@ -9,7 +9,7 @@ return {
 				style = "night",
 				styles = {},
 				dim_inactive = true,
-				lualine_bold = true,
+				-- lualine_bold = true,
 			})
 			vim.cmd.colorscheme("tokyonight")
 			vim.cmd("highlight WinSeparator guifg=#999999")
