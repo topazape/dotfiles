@@ -7,9 +7,9 @@ return {
 		config = function()
 			require("tokyonight").setup({
 				style = "night",
-				styles = {
-					keywords = { italic = false },
-				},
+				styles = {},
+				dim_inactive = true,
+				lualine_bold = true,
 			})
 			vim.cmd.colorscheme("tokyonight")
 			vim.cmd("highlight WinSeparator guifg=#999999")
