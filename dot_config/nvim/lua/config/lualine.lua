@@ -10,11 +10,11 @@ end
 
 lualine.setup({
 	options = {
-		theme = "auto",
+		-- theme = "auto",
+		theme = "tokyonight",
 		section_separators = { left = "", right = "" },
 		component_separators = { left = "", right = "" },
 		globalstatus = true,
-		theme = "tokyonight",
 	},
 	sections = {
 		lualine_a = {
