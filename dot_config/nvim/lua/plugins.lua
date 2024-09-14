@@ -6,7 +6,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("tokyonight").setup({
-				style = "moon",
+				style = "night",
 				styles = {},
 				dim_inactive = true,
 				lualine_bold = true,
