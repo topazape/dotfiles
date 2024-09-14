@@ -19,7 +19,7 @@ return {
 		"projekt0n/github-nvim-theme",
 		config = function()
 			require("github-theme").setup({})
-			vim.cmd.colorscheme("github_dark_default")
+			vim.cmd.colorscheme("github_dark_dimmed")
 			vim.cmd("highlight WinSeparator guifg=#999999")
 		end,
 	},
