@@ -16,7 +16,7 @@ local options = {
 	---- 特殊文字表示
 	list = true,
 	listchars = { eol = "¬", tab = "› ", trail = "˽", extends = "»", precedes = "«", nbsp = "·" },
-	fillchars = { vert = "¦", fold = "‣", eob = "◦" },
+	fillchars = { vert = "⏐", fold = "‣", eob = "◦" },
 	---- ビジュアルベル
 	visualbell = true,
 	---- モード表示
