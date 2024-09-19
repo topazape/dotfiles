@@ -68,6 +68,18 @@ local handlers = {
 		})
 	end,
 
+	["basedpyright"] = function()
+		require("lspconfig").basedpyright.setup({
+			settings = {
+				basedpyright = {
+					analysis = {
+						diagnosticMode = "workspace",
+					},
+				},
+			},
+		})
+	end,
+
 	["bashls"] = function()
 		require("lspconfig").bashls.setup({
 			filetypes = { "sh", "bash", "zsh" },
