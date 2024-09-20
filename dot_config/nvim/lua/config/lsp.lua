@@ -72,6 +72,7 @@ local handlers = {
 		require("lspconfig").basedpyright.setup({
 			settings = {
 				basedpyright = {
+					typeCheckingMode = "standard",
 					analysis = {
 						diagnosticMode = "workspace",
 					},
