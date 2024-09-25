@@ -28,7 +28,8 @@ return {
 		},
 		event = "VeryLazy",
 		config = function()
-			local c = require("tokyonight.util").mod("tokyonight.colors.night")
+			local theme_colors = require("tokyonight.util").mod("tokyonight.colors.night")
+			require("tiny-devicons-auto-colors").setup({ colors = theme_colors })
 		end,
 	},
 
