@@ -23,7 +23,7 @@ return {
 	---- adjust devicon color
 	{
 		"rachartier/tiny-devicons-auto-colors.nvim",
-		event = "VeeryLazy",
+		event = "VeryLazy",
 		config = true,
 	},
 
