@@ -20,6 +20,12 @@ return {
 	{
 		"nvim-tree/nvim-web-devicons",
 	},
+	---- adjust devicon color
+	{
+		"rachartier/tiny-devicons-auto-colors.nvim",
+		event = "VeeryLazy",
+		config = true,
+	},
 
 	-- tree-sitter
 	{
