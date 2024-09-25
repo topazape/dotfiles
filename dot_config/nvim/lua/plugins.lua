@@ -12,7 +12,7 @@ return {
 				lualine_bold = true,
 			})
 			local c = require("tokyonight.util").mod("tokyonight.colors.night")
-			print(c)
+			echo(c)
 			vim.cmd.colorscheme("tokyonight")
 			vim.cmd("highlight WinSeparator guifg=#999999")
 		end,
