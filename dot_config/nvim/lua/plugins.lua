@@ -11,8 +11,6 @@ return {
 				dim_inactive = true,
 				lualine_bold = true,
 			})
-			local c = require("tokyonight.util").mod("tokyonight.colors.night")
-			echo(c)
 			vim.cmd.colorscheme("tokyonight")
 			vim.cmd("highlight WinSeparator guifg=#999999")
 		end,
@@ -29,7 +27,9 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 		event = "VeryLazy",
-		config = true,
+		config = function()
+			local c = require("tokyonight.util").mod("tokyonight.colors.night")
+		end,
 	},
 
 	-- tree-sitter
