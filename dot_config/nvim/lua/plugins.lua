@@ -27,10 +27,7 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 		event = "VeryLazy",
-		config = function()
-			local theme_colors = require("tokyonight.util").mod("tokyonight.colors.night")
-			require("tiny-devicons-auto-colors").setup({ colors = theme_colors })
-		end,
+		config = true,
 	},
 
 	-- tree-sitter
