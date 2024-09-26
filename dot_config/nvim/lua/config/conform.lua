@@ -5,12 +5,6 @@ conform.setup({
 		timeout_ms = 500,
 		lsp_format = "fallback",
 	},
-	formatters = {
-		gofumpt = {
-			command = "gofumpt",
-			args = { "$FILENAME" },
-		},
-	},
 	formatters_by_ft = {
 		css = {
 			"prettier",
