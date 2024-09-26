@@ -289,12 +289,6 @@ return {
 		},
 	},
 
-	{
-		"Tyler-Barham/floating-help.nvim",
-		lazy = false,
-		config = true,
-	},
-
 	-- startup
 	{
 		"nvimdev/dashboard-nvim",
