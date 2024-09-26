@@ -9,7 +9,6 @@ conform.setup({
 		gofumpt = {
 			command = "gofumpt",
 			args = { "$FILENAME" },
-			stdin = false,
 		},
 	},
 	formatters_by_ft = {
