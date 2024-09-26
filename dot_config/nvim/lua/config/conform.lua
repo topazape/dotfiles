@@ -5,6 +5,13 @@ conform.setup({
 		timeout_ms = 500,
 		lsp_format = "fallback",
 	},
+	formatters = {
+		gofumpt = {
+			command = "gofumpt",
+			args = { "$FILENAME" },
+			stdin = false,
+		},
+	},
 	formatters_by_ft = {
 		css = {
 			"prettier",
@@ -47,7 +54,6 @@ conform.setup({
 		zsh = {
 			"shfmt",
 		},
-
 		["*"] = {
 			"trim_newlines",
 			"trim_whitespace",
