@@ -93,13 +93,13 @@ local handlers = {
 			settings = {
 				gopls = {
 					hints = {
-						rangeVariableTypes = true,
-						parameterNames = true,
-						constantValues = true,
 						assignVariableTypes = true,
 						compositeLiteralFields = true,
 						compositeLiteralTypes = true,
+						constantValues = true,
 						functionTypeParameters = true,
+						parameterNames = false,
+						rangeVariableTypes = true,
 					},
 				},
 			},
