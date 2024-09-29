@@ -80,11 +80,11 @@ local handlers = {
 							reportUnknownArgumentType = false,
 							reportUnknownMemberType = false,
 							reportUnknownVariableType = false,
-							inlayHints = {
-								functionReturnTypes = false,
-								variableTypes = false,
-								parameterTypes = false,
-							},
+						},
+						inlayHints = {
+							functionReturnTypes = false,
+							variableTypes = false,
+							parameterTypes = false,
 						},
 					},
 				},
