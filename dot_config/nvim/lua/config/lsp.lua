@@ -83,9 +83,9 @@ local handlers = {
 						},
 					},
 					inlayHints = {
-						functionReturnTypes = true,
-						variableTypes = true,
-						parameterTypes = true,
+						functionReturnTypes = false,
+						variableTypes = false,
+						parameterTypes = false,
 					},
 				},
 			},
