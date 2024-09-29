@@ -77,6 +77,7 @@ local handlers = {
 						diagnosticMode = "workspace",
 						diagnosticSeverityOverrides = {
 							reportUnknownMemberType = "warning",
+							reportUnknownVariableType = false,
 							reportAttributeAccessIssue = "none",
 						},
 					},
