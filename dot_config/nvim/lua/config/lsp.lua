@@ -75,7 +75,9 @@ local handlers = {
 					analysis = {
 						typeCheckingMode = "standard", -- off, basic, standard, strict, all
 						diagnosticMode = "workspace",
-						diagnosticSeverityOverrides = {},
+						diagnosticSeverityOverrides = {
+							reportAttributeAccessIssue = "none",
+						},
 					},
 				},
 			},
