@@ -75,7 +75,7 @@ local handlers = {
 
 					analysis = {
 						inlayHints = {
-							callArgumentNames = "partial",
+							callArgumentNames = "none", -- "all", "partial",
 							functionReturnTypes = true,
 							pytestParameters = true,
 							variableTypes = true,
