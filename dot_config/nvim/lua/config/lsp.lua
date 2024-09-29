@@ -73,9 +73,9 @@ local handlers = {
 			settings = {
 				basedpyright = {
 					analysis = {
-						typeCheckingMode = "strict", -- off, basic, standard, strict, all
+						typeCheckingMode = "standard", -- off, basic, standard, strict, all
 						diagnosticMode = "workspace",
-						reportMissingTypeStubs = false,
+						diagnosticSeverityOverrides = {},
 					},
 				},
 			},
