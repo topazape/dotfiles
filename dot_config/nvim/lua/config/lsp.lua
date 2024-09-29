@@ -74,12 +74,6 @@ local handlers = {
 				basedpyright = {
 
 					analysis = {
-						inlayHints = {
-							callArgumentNames = "off", -- "all", "partial",
-							functionReturnTypes = false,
-							pytestParameters = false,
-							variableTypes = false,
-						},
 						typeCheckingMode = "strict", -- off, basic, standard, strict, all
 						diagnosticMode = "workspace",
 						diagnosticSeverityOverrides = {
