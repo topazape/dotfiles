@@ -75,10 +75,10 @@ local handlers = {
 
 					analysis = {
 						inlayHints = {
-							callArgumentNames = "none", -- "all", "partial",
-							functionReturnTypes = true,
-							pytestParameters = true,
-							variableTypes = true,
+							callArgumentNames = false, -- "all", "partial",
+							functionReturnTypes = false,
+							pytestParameters = false,
+							variableTypes = false,
 						},
 						typeCheckingMode = "strict", -- off, basic, standard, strict, all
 						diagnosticMode = "workspace",
