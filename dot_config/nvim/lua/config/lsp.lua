@@ -82,6 +82,11 @@ local handlers = {
 							reportUnknownVariableType = false,
 						},
 					},
+					inlayHints = {
+						functionReturnTypes = true,
+						variableTypes = true,
+						parameterTypes = true,
+					},
 				},
 			},
 		})
