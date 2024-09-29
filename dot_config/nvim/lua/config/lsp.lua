@@ -75,6 +75,7 @@ local handlers = {
 					analysis = {
 						typeCheckingMode = "strict", -- off, basic, standard, strict, all
 						diagnosticMode = "workspace",
+						reportMissingTypeStubs = false,
 					},
 				},
 			},
