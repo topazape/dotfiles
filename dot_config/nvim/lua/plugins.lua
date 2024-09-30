@@ -157,12 +157,6 @@ return {
 		end,
 	},
 
-	-- highlight undo
-	{
-		"tzachar/highlight-undo.nvim",
-		config = true,
-	},
-
 	-- status line
 	{
 		"hoob3rt/lualine.nvim",
