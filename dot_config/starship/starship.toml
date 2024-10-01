@@ -154,7 +154,7 @@ symbol = ' '
 
 [python]
 symbol = ' '
-format = '[ ${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)'
+format = 'via [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 
 [rlang]
 symbol = '󰟔 '
