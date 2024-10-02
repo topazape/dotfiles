@@ -242,6 +242,7 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 		config = {
+			use_local_fs = true,
 			ssh_aliases = {
 				["github-tver"] = "github.com",
 			},
