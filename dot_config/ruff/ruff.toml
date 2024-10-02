@@ -18,6 +18,7 @@ ignore = [
   "D104",    # Missing docstring in public package
   "D105",    # Missing docstring in magic method
   "E501",    # Line too long
+  "PLR0912", # Too many branches
   "PLR0913", # Too many arguments
   "PLR2004", # magic-value-comparison
 ]
