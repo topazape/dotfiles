@@ -24,7 +24,6 @@ copilot.setup({
 		go = false,
 		help = false,
 		hgcommit = false,
-		markdown = false,
 		rust = false,
 		svn = false,
 		text = false,
