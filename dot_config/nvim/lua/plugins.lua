@@ -121,6 +121,9 @@ return {
 			},
 			filetypes = {
 				go = false,
+				markdown = true,
+				python = false,
+				rust = false,
 			},
 		},
 	},
