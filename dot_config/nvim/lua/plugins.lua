@@ -119,6 +119,7 @@ return {
 					go = false,
 					python = false,
 					rust = false,
+					markdown = true,
 				},
 			},
 		},
