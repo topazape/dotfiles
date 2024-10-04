@@ -115,12 +115,7 @@ return {
 				keymap = {
 					accept = "<TAB>",
 				},
-				filetypes = {
-					go = false,
-					python = false,
-					rust = false,
-					markdown = true,
-				},
+				filetypes = {},
 			},
 		},
 	},
