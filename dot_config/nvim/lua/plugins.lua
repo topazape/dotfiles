@@ -108,9 +108,21 @@ return {
 	{
 		"zbirenbaum/copilot.lua",
 		event = "VeryLazy",
-		config = function()
-			require("config/copilot")
-		end,
+		config = {
+			suggestion = {
+				enabled = true,
+				auto_trigger = true,
+				keymap = {
+					accept = "<TAB>",
+				},
+				filetypes = {
+					go = false,
+					markdown = true,
+					python = false,
+					rust = false,
+				},
+			},
+		},
 	},
 
 	-- debugging
