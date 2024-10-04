@@ -119,6 +119,9 @@ return {
 					markdown = true,
 				},
 			},
+			filetypes = {
+				go = false,
+			},
 		},
 	},
 
