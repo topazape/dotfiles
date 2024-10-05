@@ -9,7 +9,7 @@ copilot.setup({
 		auto_trigger = true,
 		debounce = 100,
 		keymap = {
-			accept = "<TAB>",
+			accept = "<C-f>",
 			accept_word = false,
 			accept_line = false,
 			next = "<M-]>",
