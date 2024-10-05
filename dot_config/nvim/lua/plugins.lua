@@ -113,7 +113,7 @@ return {
 				enabled = true,
 				auto_trigger = true,
 				keymap = {
-					accept = "<M-l>",
+					accept = "<C-l>",
 				},
 				filetypes = {
 					markdown = true,
