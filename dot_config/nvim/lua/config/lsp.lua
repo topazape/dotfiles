@@ -72,11 +72,6 @@ local handlers = {
 		require("lspconfig").basedpyright.setup({
 			settings = {
 				basedpyright = {
-					inlayHints = {
-						callArgumentNames = false,
-						functionReturnTypes = false,
-						variableTypes = false,
-					},
 					analysis = {
 						typeCheckingMode = "strict", -- off, basic, standard, strict, all
 						diagnosticMode = "workspace",
