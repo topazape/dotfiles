@@ -83,13 +83,6 @@ local handlers = {
 						},
 					},
 				},
-				python = {
-					inlayHints = {
-						callArgumentNames = false,
-						functionReturnTypes = false,
-						variableTypes = false,
-					},
-				},
 			},
 		})
 	end,
