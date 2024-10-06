@@ -72,12 +72,11 @@ local handlers = {
 		require("lspconfig").basedpyright.setup({
 			settings = {
 				python = {
-					analysis = {
-						inlayHints = {
-							callArgumentNames = false,
-							functionReturnTypes = false,
-							variableTypes = false,
-						},
+					analysis = {},
+					inlayHints = {
+						callArgumentNames = false,
+						functionReturnTypes = false,
+						variableTypes = false,
 					},
 				},
 				basedpyright = {
