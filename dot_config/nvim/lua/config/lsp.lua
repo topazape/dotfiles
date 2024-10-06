@@ -82,9 +82,9 @@ local handlers = {
 							reportUnknownVariableType = false,
 						},
 						inlayHints = {
-							callArgumentNames = false,
-							functionReturnTypes = false,
-							variableTypes = false,
+							callArgumentNames = "off",
+							functionReturnTypes = "off",
+							variableTypes = "off",
 						},
 					},
 				},
