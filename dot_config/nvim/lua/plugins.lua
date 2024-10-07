@@ -223,9 +223,7 @@ return {
 	-- highlight-undo
 	{
 		"tzachar/highlight-undo.nvim",
-    opts = {
-      duration = 300,
-    },
+		opts = {},
 	},
 
 	-- colorcode preview
@@ -261,7 +259,7 @@ return {
 			"nvim-telescope/telescope.nvim",
 			"nvim-tree/nvim-web-devicons",
 		},
-		config = {
+		opts = {
 			use_local_fs = true,
 			ssh_aliases = {
 				["github-tver"] = "github.com",
