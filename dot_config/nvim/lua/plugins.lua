@@ -108,7 +108,7 @@ return {
 	{
 		"zbirenbaum/copilot.lua",
 		event = "VeryLazy",
-		config = {
+		opts = {
 			suggestion = {
 				enabled = true,
 				auto_trigger = true,
@@ -218,6 +218,13 @@ return {
 				enable = false,
 			},
 		},
+	},
+
+	-- highlight-undo
+	{
+		"tzachar/highlight-undo.nvim",
+    opts = {
+      duration = 300,
 	},
 
 	-- colorcode preview
