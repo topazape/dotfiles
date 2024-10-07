@@ -31,7 +31,7 @@ vim.keymap.set("i", "<C-d>", "<Del>", { noremap = true, silent = true })
 ---- C-h を BS に
 vim.keymap.set("i", "<C-h>", "<BS>", { noremap = true, silent = true })
 ---- C-l で直前の入力を大文字に変換する
-vim.keymap.set("i", "<C-l>", function()
+vim.keymap.set("i", "<C-u>", function()
 	local line = vim.fn.getline(".")
 	local col = vim.fn.getpos(".")[3]
 	local substring = line:sub(1, col - 1)
