@@ -106,9 +106,9 @@ return {
 				select_prev = "<C-p>",
 				select_next = "<C-n>",
 			},
-		},
-		windows = {
-			autocomplete = { border = "solid" },
+			windows = {
+				autocomplete = { border = "solid" },
+			},
 		},
 	},
 
