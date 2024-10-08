@@ -93,7 +93,7 @@ return {
 		config = function()
 			require("config/cmp")
 		end,
-	}),
+	},
 
 	-- formatter
 	{
