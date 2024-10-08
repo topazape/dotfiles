@@ -100,7 +100,13 @@ return {
 			"rafamadriz/friendly-snippets",
 		},
 		version = "v0.*",
-		config = true,
+		opts = {
+			keymap = {
+				accept = "<C-f>",
+				select_prev = "<C-p>",
+				select_next = "<C-n>",
+			},
+		},
 	},
 
 	-- formatter
