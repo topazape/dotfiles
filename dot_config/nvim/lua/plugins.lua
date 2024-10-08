@@ -107,6 +107,9 @@ return {
 				select_next = "<C-n>",
 			},
 		},
+		windows = {
+			autocomplete = { configborder = "rounded" },
+		},
 	},
 
 	-- formatter
