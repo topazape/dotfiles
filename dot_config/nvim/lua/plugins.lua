@@ -108,7 +108,7 @@ return {
 			},
 		},
 		windows = {
-			autocomplete = { configborder = "rounded" },
+			autocomplete = { border = "rounded" },
 		},
 	},
 
