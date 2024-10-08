@@ -112,8 +112,8 @@ return {
 			suggestion = {
 				enabled = true,
 				auto_trigger = true,
-				filetypes = {
-					markdown = true,
+				keymap = {
+					accept = "<C-f>",
 				},
 			},
 			filetypes = {
