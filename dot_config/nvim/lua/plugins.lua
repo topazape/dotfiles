@@ -102,7 +102,7 @@ return {
 		version = "v0.*",
 		opts = {
 			keymap = {
-				accept = "<C-f>",
+				accept = { "<C-f>", "<CR>" },
 				select_prev = "<C-p>",
 				select_next = "<C-n>",
 			},
