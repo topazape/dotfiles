@@ -107,7 +107,9 @@ return {
 				select_next = "<C-n>",
 			},
 			windows = {
-				autocomplete = { border = "solid" },
+				autocomplete = {
+					border = "rounded",
+				},
 			},
 		},
 	},
