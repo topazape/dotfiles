@@ -81,38 +81,18 @@ return {
 		config = true,
 	},
 
-	-- completion
-	-- {
-	-- 	"hrsh7th/nvim-cmp",
-	-- 	dependencies = {
-	-- 		"hrsh7th/cmp-nvim-lsp",
-	-- 		"hrsh7th/cmp-buffer",
-	-- 		"hrsh7th/cmp-path",
-	-- 	},
-	-- 	event = "InsertEnter",
-	-- 	config = function()
-	-- 		require("config/cmp")
-	-- 	end,
-	-- },
-	{
-		"saghen/blink.cmp",
+	completion({
+		"hrsh7th/nvim-cmp",
 		dependencies = {
-			"rafamadriz/friendly-snippets",
+			"hrsh7th/cmp-nvim-lsp",
+			"hrsh7th/cmp-buffer",
+			"hrsh7th/cmp-path",
 		},
-		version = "v0.*",
-		opts = {
-			keymap = {
-				accept = { "<C-f>", "<CR>" },
-				select_prev = "<C-p>",
-				select_next = "<C-n>",
-			},
-			windows = {
-				autocomplete = {
-					border = "rounded",
-				},
-			},
-		},
-	},
+		event = "InsertEnter",
+		config = function()
+			require("config/cmp")
+		end,
+	}),
 
 	-- formatter
 	{
