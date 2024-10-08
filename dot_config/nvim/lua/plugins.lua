@@ -108,7 +108,7 @@ return {
 			},
 		},
 		windows = {
-			autocomplete = { border = "rounded" },
+			autocomplete = { border = "solid" },
 		},
 	},
 
