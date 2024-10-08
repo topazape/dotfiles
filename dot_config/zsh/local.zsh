@@ -56,10 +56,16 @@ linux*)
   ;;
 esac
 
+# unzip
+
 # build
 ## pkg-config
 if type brew >/dev/null 2>&1 && type pkg-config >/dev/null 2>&1 && [[ -z ${PKG_CONFIG_PATH} ]]; then
   export PKG_CONFIG_PATH=$(brew --prefix)/lib/pkgconfig
+fi
+## unzip
+if [[ -d $(brew --prefix unzip) ]]; then
+  path=($(brew --prefix unzip)/bin $path)
 fi
 
 # Applications
