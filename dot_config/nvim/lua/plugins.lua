@@ -221,10 +221,10 @@ return {
 	},
 
 	-- highlight-undo
-	-- {
-	-- 	"tzachar/highlight-undo.nvim",
-	-- 	config = true,
-	-- },
+	{
+		"tzachar/highlight-undo.nvim",
+		config = true,
+	},
 
 	-- colorcode preview
 	{
