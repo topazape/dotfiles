@@ -97,13 +97,17 @@ return {
 			},
 			windows = {
 				autocomplete = {
-					border = "single", -- single, double, shadow, none
+					border = "single",
+					draw = "simple",
 				},
-				documentaion = {
-					border = "single", -- single, double, shadow, none
+				documentation = {
+					border = "single",
+					auto_show = true,
+					auto_show_delay_ms = 100,
+					update_delay_ms = 100,
 				},
 				signature_help = {
-					border = "single", -- single, double, shadow, none
+					border = "single",
 				},
 			},
 			highlight = {
