@@ -97,7 +97,7 @@ return {
 			},
 			windows = {
 				autocomplete = {
-					border = "single",
+					border = "shadow",
 				},
 			},
 			highlight = {
