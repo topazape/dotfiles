@@ -103,9 +103,6 @@ return {
 				documentation = {
 					border = "single",
 				},
-				signature_help = {
-					border = "none",
-				},
 			},
 			highlight = {
 				use_nvim_cmp_as_default = true,
