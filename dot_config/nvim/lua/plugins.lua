@@ -171,17 +171,13 @@ return {
 			"nvim-telescope/telescope.nvim",
 		},
 	},
+
+	-- UI
 	---- notify
 	{
 		"rcarriga/nvim-notify",
 	},
 
-	-- UI
-	---- ui
-	{
-		"stevearc/dressing.nvim",
-		opts = {},
-	},
 	---- status line
 	{
 		"hoob3rt/lualine.nvim",
