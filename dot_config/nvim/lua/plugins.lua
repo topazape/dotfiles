@@ -90,6 +90,16 @@ return {
 		},
 		version = "v0.*",
 		opts = {
+			keymap = {
+				accept = { "<C-f>" },
+				select_prev = { "<C-p>", "<Up>" },
+				select_next = { "<C-n>", "<Down>" },
+			},
+			windows = {
+				autocomplete = {
+					border = "solid",
+				},
+			},
 			highlight = {
 				use_nvim_cmp_as_default = true,
 			},
@@ -115,7 +125,7 @@ return {
 				enabled = true,
 				auto_trigger = true,
 				keymap = {
-					accept = "<C-f>",
+					accept = "<M-f>",
 				},
 			},
 			filetypes = {
