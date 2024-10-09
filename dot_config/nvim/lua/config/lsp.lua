@@ -83,8 +83,8 @@ local handlers = {
 						},
 						inlayHints = {
 							callArgumentNames = false,
-							functionReturnTypes = false,
-							variableTypes = false,
+							functionReturnTypes = true,
+							variableTypes = true,
 						},
 					},
 				},
