@@ -135,7 +135,7 @@ return {
 			filetypes = {
 				go = false,
 				markdown = true,
-				python = false,
+				python = true,
 				rust = false,
 			},
 		},
