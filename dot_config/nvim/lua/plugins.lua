@@ -104,7 +104,7 @@ return {
 					border = "single",
 				},
 				signature_help = {
-					border = "double",
+					border = "none",
 				},
 			},
 			highlight = {
