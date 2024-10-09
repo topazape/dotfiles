@@ -179,10 +179,10 @@ return {
 			"MunifTanjim/nui.nvim",
 			"rcarriga/nvim-notify",
 		},
-		config = function()
-			require("notify").setup({ timeout = 100, top_down = true })
-			require("config/noice")
-		end,
+		-- config = function()
+		-- 	require("notify").setup({ timeout = 100, top_down = true })
+		-- 	require("config/noice")
+		-- end,
 	},
 
 	-- status line
