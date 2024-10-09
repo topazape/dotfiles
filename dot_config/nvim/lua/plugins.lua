@@ -172,19 +172,6 @@ return {
 		},
 	},
 
-	-- completely replaces the UI for messages, cmdline and the popupmenu
-	{
-		"folke/noice.nvim",
-		dependencies = {
-			"MunifTanjim/nui.nvim",
-			"rcarriga/nvim-notify",
-		},
-		config = function()
-			require("notify").setup({ timeout = 100, top_down = true })
-			require("config/noice")
-		end,
-	},
-
 	-- status line
 	{
 		"hoob3rt/lualine.nvim",
