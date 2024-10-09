@@ -1,7 +1,7 @@
 local lspsaga = require("lspsaga")
 lspsaga.setup({
 	-- keymaps for lspsaga
-	vim.keymap.set("n", "K", "<CMD>Lspsaga hover_doc<CR>", { noremap = true }),
+	vim.keymap.set("n", "K", "<CMD>Lspsaga hover_doc", { noremap = true }),
 	vim.keymap.set("n", "gd", "<CMD>Lspsaga peek_definition<CR>", { noremap = true }),
 	vim.keymap.set("n", "gk", "<CMD>Lspsaga peek_type_definition<CR>", { noremap = true }),
 	vim.keymap.set("n", "gr", "<CMD>Lspsaga finder<CR>", { noremap = true }),
