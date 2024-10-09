@@ -99,6 +99,9 @@ return {
 				autocomplete = {
 					border = "single", -- single, double, shadow, none
 				},
+				documentaion = {
+					border = "single", -- single, double, shadow, none
+				},
 			},
 			highlight = {
 				use_nvim_cmp_as_default = true,
