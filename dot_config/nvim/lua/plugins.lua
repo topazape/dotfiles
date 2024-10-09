@@ -171,8 +171,18 @@ return {
 			"nvim-telescope/telescope.nvim",
 		},
 	},
+	---- notify
+	{
+		"rcarriga/nvim-notify",
+	},
 
-	-- status line
+	-- UI
+	---- ui
+	{
+		"stevearc/dressing.nvim",
+		opts = {},
+	},
+	---- status line
 	{
 		"hoob3rt/lualine.nvim",
 		config = function()
@@ -190,6 +200,22 @@ return {
 				modemsg = true,
 			},
 		},
+	},
+	---- help
+	{
+		"OXY2DEV/helpview.nvim",
+		lazy = false,
+
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+	},
+
+	---- startup
+	{
+		"nvimdev/dashboard-nvim",
+		event = "VimEnter",
+		config = true,
 	},
 
 	-- emphasis indent
@@ -293,27 +319,5 @@ return {
 		build = function()
 			require("typst-preview").update()
 		end,
-	},
-
-	-- help
-	{
-		"OXY2DEV/helpview.nvim",
-		lazy = false,
-
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		},
-	},
-
-	-- notify
-	{
-		"rcarriga/nvim-notify",
-	},
-
-	-- startup
-	{
-		"nvimdev/dashboard-nvim",
-		event = "VimEnter",
-		config = true,
 	},
 }
