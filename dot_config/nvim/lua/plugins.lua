@@ -106,8 +106,9 @@ return {
 			},
 			highlight = {
 				use_nvim_cmp_as_default = true,
+				winhighlight = "Normal:BlinkCmpMenu,FloatBorder:BlinkCmpMenuBorder,CursorLine:BlinkCmpMenuSelection,Search:None",
 			},
-			nerd_font_variant = "mono", -- 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
+			nerd_font_variant = "mono",
 		},
 	},
 
