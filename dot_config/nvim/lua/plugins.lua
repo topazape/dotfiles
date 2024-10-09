@@ -305,6 +305,11 @@ return {
 		},
 	},
 
+	-- notify
+	{
+		"rcarriga/nvim-notify",
+	},
+
 	-- startup
 	{
 		"nvimdev/dashboard-nvim",
