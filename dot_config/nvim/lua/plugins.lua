@@ -102,9 +102,6 @@ return {
 				},
 				documentation = {
 					border = "single",
-					auto_show = true,
-					auto_show_delay_ms = 100,
-					update_delay_ms = 100,
 				},
 				signature_help = {
 					border = "single",
