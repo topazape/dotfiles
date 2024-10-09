@@ -4,6 +4,7 @@ local builtin = require("telescope.builtin")
 
 -- extentions
 telescope.load_extension("file_browser")
+telescope.load_extension("notify")
 
 -- mappings
 vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
