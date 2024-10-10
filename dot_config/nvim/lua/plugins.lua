@@ -226,6 +226,9 @@ return {
 				chars = {
 					right_arrow = "▷",
 				},
+				line_num = {
+					enable = true,
+				},
 			},
 		},
 	},
