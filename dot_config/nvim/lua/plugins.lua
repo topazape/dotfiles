@@ -227,9 +227,6 @@ return {
 					right_arrow = "▷",
 				},
 			},
-			indent = {
-				enable = true,
-			},
 		},
 	},
 
