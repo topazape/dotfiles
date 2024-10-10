@@ -102,14 +102,14 @@ return {
 			},
 			windows = {
 				autocomplete = {
-					border = "single",
+					border = "rounded",
 					draw = "reversed",
 				},
 				documentation = {
-					border = "single",
+					border = "rounded",
 				},
 				signature_help = {
-					border = "single",
+					border = "rounded",
 				},
 			},
 			nerd_font_variant = "mono",
