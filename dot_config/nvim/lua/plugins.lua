@@ -118,9 +118,7 @@ return {
 					border = "rounded",
 				},
 			},
-			highlight = {
-				ns = vim.api.nvim_create_namespace("blink.cmp"),
-			},
+			highlight = {},
 		},
 	},
 
