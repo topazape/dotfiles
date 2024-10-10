@@ -76,6 +76,7 @@ local handlers = {
 						typeCheckingMode = "strict", -- off, basic, standard, strict, all
 						diagnosticMode = "workspace",
 						diagnosticSeverityOverrides = {
+							reportUnusedImport = false,
 							reportAttributeAccessIssue = false,
 							reportUnknownArgumentType = false,
 							reportUnknownMemberType = false,
