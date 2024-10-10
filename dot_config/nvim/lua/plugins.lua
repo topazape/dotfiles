@@ -96,7 +96,7 @@ return {
 		version = "v0.*",
 		opts = {
 			keymap = {
-				accept = { "<C-f>", "<CR>" },
+				accept = { "<C-f>" },
 				select_prev = { "<C-p>", "<Up>" },
 				select_next = { "<C-n>", "<Down>" },
 			},
