@@ -80,6 +80,11 @@ return {
 		event = "LspAttach",
 		config = true,
 	},
+	---- progress
+	{
+		"j-hui/fidget.nvim",
+		config = true,
+	},
 
 	-- completion
 	{
