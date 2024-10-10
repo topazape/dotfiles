@@ -119,7 +119,7 @@ return {
 				},
 			},
 			highlight = {
-				use_nvim_cmp_as_default = true,
+				ns = vim.api.nvim_create_namespace("blink.cmp"),
 			},
 		},
 	},
