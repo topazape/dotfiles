@@ -97,9 +97,9 @@ return {
 		opts = {
 			nerd_font_variant = "mono",
 			keymap = {
-				accept = { "<TAB>", "<C-f>" },
-				select_prev = { "<C-p>", "<UP>" },
-				select_next = { "<C-n>", "<DOWN>" },
+				accept = { "<Tab>", "<C-f>" },
+				select_prev = { "<C-p>", "<Up>" },
+				select_next = { "<C-n>", "<Down>" },
 			},
 			trigger = {
 				signature_help = {
