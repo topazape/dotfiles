@@ -97,7 +97,7 @@ return {
 		opts = {
 			nerd_font_variant = "mono",
 			keymap = {
-				accept = { "<Tab>", "<C-f>" },
+				accept = { "<C-f>", "<Tab>" },
 				select_prev = { "<C-p>", "<Up>" },
 				select_next = { "<C-n>", "<Down>" },
 			},
