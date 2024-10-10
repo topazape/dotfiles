@@ -95,10 +95,16 @@ return {
 		},
 		version = "v0.*",
 		opts = {
+			nerd_font_variant = "mono",
 			keymap = {
 				accept = { "<C-f>" },
 				select_prev = { "<C-p>", "<Up>" },
 				select_next = { "<C-n>", "<Down>" },
+			},
+			trigger = {
+				signature_help = {
+					enabled = true,
+				},
 			},
 			windows = {
 				autocomplete = {
@@ -112,11 +118,8 @@ return {
 					border = "rounded",
 				},
 			},
-			nerd_font_variant = "mono",
-			trigger = {
-				signature_help = {
-					enabled = true,
-				},
+			highlight = {
+				use_nvim_cmp_as_default = true,
 			},
 		},
 	},
