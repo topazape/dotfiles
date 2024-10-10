@@ -108,6 +108,9 @@ return {
 				documentation = {
 					border = "single",
 				},
+				signature_help = {
+					border = "single",
+				},
 			},
 			nerd_font_variant = "mono",
 			trigger = {
