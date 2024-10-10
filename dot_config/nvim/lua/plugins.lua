@@ -222,10 +222,13 @@ return {
 		event = { "BufReadPre", "BufNewFile" },
 		opts = {
 			chunk = {
-				enable = false,
+				enable = true,
 				chars = {
 					right_arrow = "▷",
 				},
+			},
+			indent = {
+				enable = true,
 			},
 		},
 	},
