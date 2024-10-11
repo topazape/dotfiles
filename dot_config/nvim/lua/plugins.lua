@@ -143,12 +143,7 @@ return {
 					accept = "<M-f>",
 				},
 			},
-			filetypes = {
-				go = false,
-				markdown = true,
-				python = true,
-				rust = false,
-			},
+			filetypes = {},
 		},
 	},
 
