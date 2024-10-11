@@ -87,40 +87,40 @@ return {
 	},
 
 	-- completion
-	-- {
-	-- 	"saghen/blink.cmp",
-	-- 	lazy = false,
-	-- 	version = "v0.*",
-	-- 	dependencies = {
-	-- 		"rafamadriz/friendly-snippets",
-	-- 	},
-	-- 	opts = {
-	-- 		nerd_font_variant = "mono",
-	-- 		keymap = {
-	-- 			accept = { "<C-f>", "<Tab>" },
-	-- 			select_prev = { "<C-p>", "<Up>" },
-	-- 			select_next = { "<C-n>", "<Down>" },
-	-- 		},
-	-- 		trigger = {
-	-- 			signature_help = {
-	-- 				enabled = true,
-	-- 			},
-	-- 		},
-	-- 		windows = {
-	-- 			autocomplete = {
-	-- 				border = "rounded",
-	-- 				draw = "reversed",
-	-- 			},
-	-- 			documentation = {
-	-- 				border = "rounded",
-	-- 			},
-	-- 			signature_help = {
-	-- 				border = "rounded",
-	-- 			},
-	-- 		},
-	-- 		highlight = {},
-	-- 	},
-	-- },
+	{
+		"saghen/blink.cmp",
+		lazy = false,
+		version = "v0.*",
+		dependencies = {
+			"rafamadriz/friendly-snippets",
+		},
+		opts = {
+			nerd_font_variant = "mono",
+			keymap = {
+				accept = { "<C-f>", "<Tab>" },
+				select_prev = { "<C-p>", "<Up>" },
+				select_next = { "<C-n>", "<Down>" },
+			},
+			trigger = {
+				signature_help = {
+					enabled = true,
+				},
+			},
+			windows = {
+				autocomplete = {
+					border = "rounded",
+					draw = "reversed",
+				},
+				documentation = {
+					border = "rounded",
+				},
+				signature_help = {
+					border = "rounded",
+				},
+			},
+			highlight = {},
+		},
+	},
 
 	-- formatter
 	{
