@@ -203,12 +203,7 @@ return {
 		},
 	},
 	---- help with floating window
-	{
-		"nil70n/floating-help.nvim",
-		opts = {
-			border = "single",
-		},
-	},
+	{},
 	---- help
 	{
 		"OXY2DEV/helpview.nvim",
