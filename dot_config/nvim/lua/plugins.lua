@@ -1,12 +1,12 @@
 return {
 	{
-		"neanias/everforest-nvim",
+		"ribu17/bamboo.nvim",
 		version = false,
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("everforest").setup({})
-			vim.cmd.colorscheme("everforest")
+			require("bamboo").setup({})
+			vim.cmd.colorscheme("bamboo")
 			vim.cmd("highlight WinSeparator guifg=#999999")
 		end,
 	},
