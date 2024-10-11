@@ -1,6 +1,6 @@
 return {
 	{
-		"ribu17/bamboo.nvim",
+		"ribru17/bamboo.nvim",
 		version = false,
 		lazy = false,
 		priority = 1000,
