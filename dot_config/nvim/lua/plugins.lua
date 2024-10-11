@@ -143,7 +143,6 @@ return {
 					accept = "<M-f>",
 				},
 			},
-			filetypes = {},
 		},
 	},
 
