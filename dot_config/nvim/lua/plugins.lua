@@ -90,7 +90,8 @@ return {
 	{
 		"saghen/blink.cmp",
 		lazy = false,
-		version = "v0.*",
+		-- version = "v0.*",
+		build = "cargo build --release",
 		dependencies = {
 			"rafamadriz/friendly-snippets",
 		},
