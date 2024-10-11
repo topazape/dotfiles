@@ -9,7 +9,7 @@ return {
 				dim_inactive = true,
 				ending_tildes = true,
 				code_style = {
-					comments = { italic = false },
+					-- comments = { italic = false },
 				},
 			})
 			vim.cmd.colorscheme("bamboo")
