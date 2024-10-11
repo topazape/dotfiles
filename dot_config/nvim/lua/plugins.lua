@@ -208,6 +208,13 @@ return {
 			},
 		},
 	},
+	---- help with floating window
+	{
+		"nil70n/floating-help",
+		opts = {
+			border = "rounded",
+		},
+	},
 	---- help
 	{
 		"OXY2DEV/helpview.nvim",
