@@ -93,7 +93,6 @@ return {
 		dependencies = {
 			"rafamadriz/friendly-snippets",
 		},
-		version = "v0.*",
 		opts = {
 			nerd_font_variant = "mono",
 			keymap = {
