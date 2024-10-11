@@ -211,9 +211,7 @@ return {
 	---- help with floating window
 	{
 		"nil70n/floating-help",
-		opts = {
-			border = "rounded",
-		},
+		config = true,
 	},
 	---- help
 	{
