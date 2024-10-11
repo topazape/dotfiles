@@ -1,16 +1,16 @@
 return {
 	{
-		"ribru17/bamboo.nvim",
+		"rose-pine/neovim",
+		name = "rose-pine",
 		version = false,
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("bamboo").setup({
-				dim_inactive = true,
-				ending_tildes = true,
+			require("rose-pine").setup({
+				dim_inactive_windows = true,
 			})
-			vim.cmd.colorscheme("bamboo")
-			vim.cmd("highlight WinSeparator guifg=#999999")
+			vim.cmd.colorscheme("rose-pine")
+			-- vim.cmd("highlight WinSeparator guifg=#999999")
 		end,
 	},
 
