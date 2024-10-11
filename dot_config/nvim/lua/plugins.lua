@@ -1,28 +1,11 @@
 return {
-	-- colorscheme
-	-- {
-	-- 	"folke/tokyonight.nvim",
-	-- 	lazy = false,
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		require("tokyonight").setup({
-	-- 			style = "night",
-	-- 			styles = {},
-	-- 			dim_inactive = true,
-	-- 			lualine_bold = true,
-	-- 		})
-	-- 		vim.cmd.colorscheme("tokyonight")
-	-- 		vim.cmd("highlight WinSeparator guifg=#999999")
-	-- 	end,
-	-- },
 	{
-		"rose-pine/neovim",
-		name = "rose-pine",
+		"rebelot/kanagawa.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("rose-pine").setup({})
-			vim.cmd.colorscheme("rose-pine")
+			require("kanagawa").setup({})
+			vim.cmd.colorscheme("kanagawa")
 			vim.cmd("highlight WinSeparator guifg=#999999")
 		end,
 	},
