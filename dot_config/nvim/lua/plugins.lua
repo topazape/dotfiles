@@ -8,9 +8,6 @@ return {
 			require("bamboo").setup({
 				dim_inactive = true,
 				ending_tildes = true,
-				code_style = {
-					-- comments = { italic = false },
-				},
 			})
 			vim.cmd.colorscheme("bamboo")
 			vim.cmd("highlight WinSeparator guifg=#999999")
