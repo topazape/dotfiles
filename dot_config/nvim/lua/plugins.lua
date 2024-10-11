@@ -22,7 +22,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("rose-pine").setup({})
-			vim.cmd.colorscheme("tokyonight")
+			vim.cmd.colorscheme("rose-pine")
 			vim.cmd("highlight WinSeparator guifg=#999999")
 		end,
 	},
