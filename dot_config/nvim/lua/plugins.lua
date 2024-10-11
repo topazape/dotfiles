@@ -202,11 +202,6 @@ return {
 			},
 		},
 	},
-	---- help with floating window
-	{
-		"Tyler-Barham/floating-help.nvim",
-		config = true,
-	},
 	---- help
 	{
 		"OXY2DEV/helpview.nvim",
