@@ -5,7 +5,9 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("bamboo").setup({})
+			require("bamboo").setup({
+				transparent = true,
+			})
 			vim.cmd.colorscheme("bamboo")
 			vim.cmd("highlight WinSeparator guifg=#999999")
 		end,
