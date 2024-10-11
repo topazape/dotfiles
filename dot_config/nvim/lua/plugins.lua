@@ -5,7 +5,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("kanagawa").setup({})
-			vim.cmd.colorscheme("kanagawa")
+			vim.cmd.colorscheme("kanagawa-dragon")
 			vim.cmd("highlight WinSeparator guifg=#999999")
 		end,
 	},
