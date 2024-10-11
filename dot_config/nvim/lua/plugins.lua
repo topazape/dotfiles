@@ -211,7 +211,10 @@ return {
 	---- help with floating window
 	{
 		"nil70n/floating-help",
-		config = true,
+		opts = {
+			border = "single",
+			ratio = 1.0,
+		},
 	},
 	---- help
 	{
