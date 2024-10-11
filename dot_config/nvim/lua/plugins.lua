@@ -1,11 +1,12 @@
 return {
 	{
-		"rebelot/kanagawa.nvim",
+		"neanias/everforest-nvim",
+		version = false,
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("kanagawa").setup({})
-			vim.cmd.colorscheme("kanagawa-wave")
+			require("everforest").setup({})
+			vim.cmd.colorscheme("everforest")
 			vim.cmd("highlight WinSeparator guifg=#999999")
 		end,
 	},
