@@ -14,8 +14,10 @@ vim.keymap.set("n", "s", '"_s', { noremap = true, silent = true })
 ---- tmux ライクなウィンドウ操作
 vim.keymap.set("n", "<C-w>{", "<C-w><C-x>", { noremap = true, silent = false })
 vim.keymap.set("n", "<C-w>}", "<C-w><C-x>", { noremap = true, silent = false })
+vim.keymap.set("n", "<C-w>H", "<C-w><", { noremap = true, silent = false })
 vim.keymap.set("n", "<C-w>J", "<C-w>+", { noremap = true, silent = false })
 vim.keymap.set("n", "<C-w>K", "<C-w>-", { noremap = true, silent = false })
+vim.keymap.set("n", "<C-w>L", "<C-w>>", { noremap = true, silent = false })
 
 -- Insert
 ---- Emacs ライクな操作
