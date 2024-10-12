@@ -5,7 +5,7 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("alduin").setup({})
+			-- require("alduin").setup({})
 			vim.cmd.colorscheme("alduin")
 		end,
 	},
