@@ -1,11 +1,10 @@
 return {
 	{
-		"baliestri/aura-theme",
+		"Mofiqul/dracula.nvim",
 		lazy = false,
 		priority = 1000,
-		config = function(plugin)
-			vim.opt.rtp:append(plugin.dir .. "/packages/neovim")
-			vim.cmd.colorscheme("aura-dark-soft-text")
+		config = function()
+			vim.cmd.colorscheme("dracula")
 		end,
 	},
 
