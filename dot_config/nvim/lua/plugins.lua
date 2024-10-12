@@ -1,7 +1,6 @@
 return {
 	{
 		"bakageddy/alduin.nvim",
-		name = "github-theme",
 		lazy = false,
 		priority = 1000,
 		config = function()
