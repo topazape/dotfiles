@@ -1,13 +1,13 @@
 return {
 	{
-		"yorik1984/newpaper.nvim",
+		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("newpaper").setup({
-				style = "dark",
+			require("tokyonight").setup({
+				style = "night",
 			})
-			vim.cmd.colorscheme("newpaper")
+			vim.cmd.colorscheme("tokyonight")
 		end,
 	},
 
