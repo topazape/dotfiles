@@ -4,7 +4,9 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("newpaper").setup({})
+			require("newpaper").setup({
+				style = "dark",
+			})
 			vim.cmd.colorscheme("newpaper")
 		end,
 	},
