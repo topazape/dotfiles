@@ -5,7 +5,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("neon").setup({})
-			vim.cmd.colorscheme("neon-netrunner-night")
+			vim.cmd.colorscheme("neon-punkpeach-night")
 		end,
 	},
 
