@@ -1,11 +1,11 @@
 return {
 	{
-		"bakageddy/alduin.nvim",
+		"yorik1984/newpaper.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			-- require("alduin").setup({})
-			vim.cmd.colorscheme("alduin")
+			require("newpaper").setup({})
+			vim.cmd.colorscheme("newpaper")
 		end,
 	},
 
