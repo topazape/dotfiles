@@ -1,12 +1,12 @@
 return {
 	{
-		"projekt0n/github-nvim-theme",
+		"bakageddy/alduin.nvim",
 		name = "github-theme",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("github-theme").setup({})
-			vim.cmd.colorscheme("github_dark")
+			require("alduin").setup({})
+			vim.cmd.colorscheme("alduin")
 		end,
 	},
 
