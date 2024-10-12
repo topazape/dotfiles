@@ -1,15 +1,12 @@
 return {
 	{
-		"rose-pine/neovim",
-		name = "rose-pine",
-		version = false,
+		"projeekt0n/github-nvim-theme",
+		name = "github-theme",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("rose-pine").setup({
-				dim_inactive_windows = true,
-			})
-			vim.cmd.colorscheme("rose-pine")
+			require("github-theme").setup({})
+			vim.cmd.colorscheme("github_dark")
 		end,
 	},
 
