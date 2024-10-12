@@ -10,7 +10,6 @@ return {
 				dim_inactive_windows = true,
 			})
 			vim.cmd.colorscheme("rose-pine")
-			-- vim.cmd("highlight WinSeparator guifg=#999999")
 		end,
 	},
 
