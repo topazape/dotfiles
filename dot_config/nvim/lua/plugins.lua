@@ -7,6 +7,9 @@ return {
       style = "day"
     },
     config = function()
+      require("tokyonight").setup({
+        style = "day",
+      })
       vim.cmd.colorscheme("tokyonight")
     end
   },
