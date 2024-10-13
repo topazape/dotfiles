@@ -1,13 +1,12 @@
 return {
   {
-    "cdmill/neomodern.nvim",
+    "rmehri01/onenord.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      require("neomodern").setup({
-        style = "darkforest",
+      require("onenord").setup({
       })
-      vim.cmd.colorscheme("neomodern")
+      vim.cmd.colorscheme("onenord")
     end,
   },
 
