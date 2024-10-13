@@ -1,14 +1,12 @@
 return {
   {
-    "cdmill/neomodern.nvim",
+    "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
+    opts = {},
     config = function()
-      require("neomodern").setup({
-        style = "coffeecat",
-      })
-      require("neomodern").load()
-    end,
+      vim.cmd.colorscheme("tokyonight")
+    end
   },
 
   -- devicon
