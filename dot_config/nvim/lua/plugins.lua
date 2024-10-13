@@ -5,7 +5,8 @@ return {
     priority = 1000,
     config = function()
       require("neomodern").setup({
-        style = "cofffeecat",
+        -- style = "cofffeecat",
+        style = "darkforest",
       })
       vim.cmd.colorscheme("neomodern")
     end,
