@@ -6,7 +6,7 @@ return {
     config = function()
       require("neomodern").setup({
         -- style = "cofffeecat",
-        style = "daylight",
+        style = "iceclimber",
       })
       require("neomodern").load()
     end,
