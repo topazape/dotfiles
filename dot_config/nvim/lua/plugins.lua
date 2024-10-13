@@ -5,7 +5,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("everforest").setup({
-				style = "hardness",
+				background = "hard",
 			})
 			vim.cmd.colorscheme("everforest")
 		end,
