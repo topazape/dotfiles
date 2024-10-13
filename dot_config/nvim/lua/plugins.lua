@@ -8,7 +8,7 @@ return {
         -- style = "cofffeecat",
         style = "daylight",
       })
-      vim.cmd.colorscheme("neomodern")
+      require("neomodern").load()
     end,
   },
 
