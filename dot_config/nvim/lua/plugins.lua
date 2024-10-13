@@ -1,13 +1,11 @@
 return {
   {
-    "neanias/everforest-nvim",
+    "vague2k/vague",
     lazy = false,
     priority = 1000,
     config = function()
-      require("everforest").setup({
-        background = "hard",
-      })
-      vim.cmd.colorscheme("everforest")
+      require("vague").setup({})
+      vim.cmd.colorscheme("vague")
     end,
   },
 
