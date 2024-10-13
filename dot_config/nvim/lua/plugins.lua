@@ -211,6 +211,8 @@ return {
     dir = "~/Develop/local/floating-help",
     opts = {
       border = "rounded",
+      h_ratio = 0.8,
+      w_ratio = 0.8,
     }
   },
 
