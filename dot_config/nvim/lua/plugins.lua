@@ -4,7 +4,9 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      require("neomodern").setup({})
+      require("neomodern").setup({
+        style = "darkforest",
+      })
       vim.cmd.colorscheme("neomodern")
     end,
   },
