@@ -205,17 +205,6 @@ return {
       "nvim-treesitter/nvim-treesitter",
     },
   },
-  ---- floating help
-  {
-    name = "floating-help",
-    dir = "~/Develop/local/floating-help",
-    dev = true,
-    opts = {
-      border = "rounded",
-      height_ratio = 0.8,
-      width_ratio = 0.8,
-    },
-  },
 
   ---- startup
   {
