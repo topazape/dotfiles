@@ -5,7 +5,7 @@ return {
     priority = 1000,
     config = function()
       require("neomodern").setup({
-        style = "iceclimber",
+        style = "coffeecat",
       })
       require("neomodern").load()
     end,
