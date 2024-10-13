@@ -6,7 +6,7 @@ return {
     config = function()
       require("neomodern").setup({
         -- style = "cofffeecat",
-        style = "roseprime",
+        style = "daylight",
       })
       vim.cmd.colorscheme("neomodern")
     end,
