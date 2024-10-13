@@ -210,6 +210,7 @@ return {
     name = "floating-help",
     dir = "~/Develop/local/floating-help",
     opts = {
+      border = "rounded",
     }
   },
 
