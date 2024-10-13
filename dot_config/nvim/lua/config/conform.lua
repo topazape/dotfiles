@@ -25,9 +25,9 @@ conform.setup({
 		json = {
 			"prettier",
 		},
-		lua = {
-			"stylua",
-		},
+		-- lua = {
+		-- 	"stylua",
+		-- },
 		markdown = {
 			"prettier",
 		},
