@@ -206,12 +206,15 @@ return {
 		},
 	},
 	---- floating help
-  {
-    name = "floating-help",
-    dir = "~/Develop/local/floating-help",
-    dev = true,
-    config = true,
-  },
+	{
+		name = "floating-help",
+		dir = "~/Develop/local/floating-help",
+		dev = true,
+		opts = {
+			border = "rounded",
+			ratio = 0.8,
+		},
+	},
 
 	---- startup
 	{
