@@ -208,7 +208,7 @@ return {
 	---- floating help
   {
     name = "floating-help",
-    dir = "~/Develop/local/floating-help"
+    dir = "~/Develop/local/floating-help",
     dev = true,
     config = true,
   },
