@@ -93,8 +93,8 @@ return {
 			nerd_font_variant = "mono",
 			keymap = {
 				accept = { "<C-f>", "<Tab>" },
-				select_prev = { "<C-p>", "<Up>" },
-				select_next = { "<C-n>", "<Down>" },
+				scroll_documentation_up = "<C-k>",
+				scroll_documentation_down = "<C-j>",
 			},
 			trigger = {
 				signature_help = {
@@ -114,9 +114,7 @@ return {
 					border = "rounded",
 				},
 			},
-			highlight = {
-				use_nvim_cmp_as_default = true,
-			},
+			highlight = {},
 		},
 	},
 
