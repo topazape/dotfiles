@@ -108,7 +108,7 @@ return {
 				},
 				documentation = {
 					border = "rounded",
-					audo_show = true,
+					auto_show = true,
 				},
 				signature_help = {
 					border = "rounded",
