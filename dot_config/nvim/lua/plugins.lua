@@ -114,7 +114,9 @@ return {
 					border = "rounded",
 				},
 			},
-			highlight = {},
+			highlight = {
+				use_nvim_cmp_as_default = true,
+			},
 		},
 	},
 
