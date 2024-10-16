@@ -76,6 +76,7 @@ local handlers = {
 						typeCheckingMode = "recommended", -- off, basic, standard, strict, recommended, all
 						diagnosticMode = "workspace",
 						diagnosticSeverityOverrides = {
+							reportAny = false,
 							-- reportUnusedImport = false,
 							-- reportUnusedVariable = false,
 							-- reportAttributeAccessIssue = false,
