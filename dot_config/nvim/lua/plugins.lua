@@ -104,6 +104,7 @@ return {
 			windows = {
 				autocomplete = {
 					border = "rounded",
+					selection = "auto_insert",
 					draw = "reversed",
 				},
 				documentation = {
