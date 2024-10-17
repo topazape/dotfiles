@@ -8,7 +8,7 @@ return {
 				style = "night",
 			})
 			vim.cmd.colorscheme("tokyonight")
-			vim.cmd.highlight("WinSeparator", { guifg = "#99999999", guibg = "none" })
+			vim.cmd("highlight WinSeparator guibg=None")
 		end,
 	},
 
