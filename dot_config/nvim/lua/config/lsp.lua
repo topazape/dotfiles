@@ -72,8 +72,6 @@ local handlers = {
 		require("lspconfig").basedpyright.setup({
 			settings = {
 				python = {
-					venvPath = ".",
-					venv = ".venv",
 					pythonPath = "./.venv/bin/python",
 				},
 				basedpyright = {
