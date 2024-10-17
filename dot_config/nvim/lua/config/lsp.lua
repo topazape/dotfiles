@@ -73,7 +73,7 @@ local handlers = {
 			settings = {
 				python = {
 					venvPath = ".",
-					venv = ".venv",
+					-- venv = ".venv",
 				},
 				basedpyright = {
 					analysis = {
