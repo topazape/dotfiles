@@ -72,7 +72,8 @@ local handlers = {
 		require("lspconfig").basedpyright.setup({
 			settings = {
 				python = {
-					venvPath = vim.env.PWD .. ".venv",
+					venvPath = ".",
+					venv = ".venv",
 				},
 				basedpyright = {
 					analysis = {
