@@ -72,8 +72,8 @@ local handlers = {
 		require("lspconfig").basedpyright.setup({
 			settings = {
 				basedpyright = {
+					venvPath = ".venv",
 					analysis = {
-						venvPath = ".venv",
 						typeCheckingMode = "recommended", -- off, basic, standard, strict, recommended, all
 						diagnosticMode = "workspace",
 						diagnosticSeverityOverrides = {
