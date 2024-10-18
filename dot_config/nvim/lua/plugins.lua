@@ -296,7 +296,7 @@ return {
 			},
 			code = {
 				sign = true,
-				style = "language",
+				style = "normal",
 			},
 		},
 	},
