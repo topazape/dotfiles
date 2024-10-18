@@ -294,6 +294,9 @@ return {
 			heading = {
 				border = true,
 			},
+			codes = {
+				style = "language",
+			},
 		},
 	},
 
