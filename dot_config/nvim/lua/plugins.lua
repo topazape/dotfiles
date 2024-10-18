@@ -295,7 +295,7 @@ return {
 				border = true,
 			},
 			codes = {
-				style = "language",
+				style = "normal",
 			},
 		},
 	},
