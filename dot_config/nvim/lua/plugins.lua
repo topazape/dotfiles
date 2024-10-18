@@ -292,6 +292,7 @@ return {
 		},
 		opts = {
 			heading = { border = true },
+			code = { width = "block" },
 		},
 	},
 
