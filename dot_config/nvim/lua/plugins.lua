@@ -294,10 +294,6 @@ return {
 			heading = {
 				border = true,
 			},
-			code = {
-				sign = true,
-				style = "none",
-			},
 		},
 	},
 
