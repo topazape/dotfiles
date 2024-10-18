@@ -292,7 +292,6 @@ return {
 		},
 		opts = {
 			heading = {
-				position = "inline",
 				border = true,
 			},
 		},
