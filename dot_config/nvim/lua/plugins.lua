@@ -295,6 +295,7 @@ return {
 				border = true,
 			},
 			code = {
+				sign = true,
 				style = "normal",
 			},
 		},
