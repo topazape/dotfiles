@@ -294,7 +294,7 @@ return {
 			heading = {
 				border = true,
 			},
-			codes = {
+			code = {
 				style = "normal",
 			},
 		},
