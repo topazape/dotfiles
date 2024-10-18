@@ -209,13 +209,6 @@ return {
 		},
 	},
 
-	---- startup
-	{
-		"nvimdev/dashboard-nvim",
-		event = "VimEnter",
-		config = true,
-	},
-
 	-- emphasis indent
 	{
 		"shellRaining/hlchunk.nvim",
