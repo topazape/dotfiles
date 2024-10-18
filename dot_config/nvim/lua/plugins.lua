@@ -291,9 +291,8 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 		opts = {
-			heading = {
-				border = true,
-			},
+			heading = { border = true },
+			code = { enable = false },
 		},
 	},
 
