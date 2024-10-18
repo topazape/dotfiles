@@ -284,16 +284,16 @@ return {
 	},
 
 	-- markdown
-	{
-		"MeanderingProgrammer/render-markdown.nvim",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		},
-		opts = {
-			-- max_file_size = 1.5, -- MB
-			bullet = { icons = { "•", "◦", "▪", "▫", "‣" } },
-		},
-	},
+	-- {
+	-- 	"MeanderingProgrammer/render-markdown.nvim",
+	-- 	dependencies = {
+	-- 		"nvim-treesitter/nvim-treesitter",
+	-- 	},
+	-- 	opts = {
+	-- 		-- max_file_size = 1.5, -- MB
+	-- 		bullet = { icons = { "•", "◦", "▪", "▫", "‣" } },
+	-- 	},
+	-- },
 
 	-- typst
 	{
