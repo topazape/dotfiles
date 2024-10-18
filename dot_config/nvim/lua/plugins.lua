@@ -292,7 +292,7 @@ return {
 		},
 		opts = {
 			heading = { border = true },
-			code = { enabled = false },
+			code = { enabled = true },
 		},
 	},
 
