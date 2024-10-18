@@ -291,7 +291,10 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 		opts = {
-			heading = { position = "inline" },
+			heading = {
+				position = "inline",
+				border = true,
+			},
 		},
 	},
 
