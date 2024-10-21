@@ -130,19 +130,19 @@ return {
 
 	-- AI
 	---- copilot
-	{
-		"zbirenbaum/copilot.lua",
-		event = "VeryLazy",
-		opts = {
-			suggestion = {
-				enabled = true,
-				auto_trigger = true,
-				keymap = {
-					accept = "<M-f>",
-				},
-			},
-		},
-	},
+	-- {
+	-- 	"zbirenbaum/copilot.lua",
+	-- 	event = "VeryLazy",
+	-- 	opts = {
+	-- 		suggestion = {
+	-- 			enabled = true,
+	-- 			auto_trigger = true,
+	-- 			keymap = {
+	-- 				accept = "<M-f>",
+	-- 			},
+	-- 		},
+	-- 	},
+	-- },
 
 	-- debugging
 	---- debug print
