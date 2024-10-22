@@ -132,17 +132,7 @@ return {
 	{
 		"zbirenbaum/copilot.lua",
 		event = "VeryLazy",
-		opts = {
-			panel = {
-				layout = { position = "right" },
-			},
-			suggestion = {
-				auto_trigger = true,
-				debounce = 10,
-				keymap = {
-					accept = "<M-f>",
-				},
-			},
+    config = true,
 		},
 	},
 
