@@ -98,7 +98,7 @@ return {
 			},
 			trigger = {
 				completion = {
-					show_on_insert_on_trigger_character = true,
+					show_on_insert_on_trigger_character = false,
 				},
 				signature_help = {
 					enabled = true,
