@@ -91,31 +91,31 @@ return {
 			"rafamadriz/friendly-snippets",
 		},
 		opts = {
-			-- 	keymap = {
-			-- 		accept = { "<C-f>", "<Tab>" },
-			-- 		scroll_documentation_up = "<C-k>",
-			-- 		scroll_documentation_down = "<C-j>",
-			-- 	},
-			-- 	trigger = {
-			-- 		signature_help = {
-			-- 			enabled = true,
-			-- 		},
-			-- 	},
-			-- 	windows = {
-			-- 		autocomplete = {
-			-- 			border = "rounded",
-			-- 			draw = "reversed",
-			-- 		},
-			-- 		documentation = {
-			-- 			border = "rounded",
-			-- 			auto_show = true,
-			-- 		},
-			-- 		signature_help = {
-			-- 			border = "rounded",
-			-- 		},
-			-- 	},
-			-- 	highlight = {},
-			-- 	nerd_font_variant = "mono",
+			keymap = {
+				accept = { "<C-f>", "<Tab>" },
+				scroll_documentation_up = "<C-k>",
+				scroll_documentation_down = "<C-j>",
+			},
+			trigger = {
+				signature_help = {
+					enabled = true,
+				},
+			},
+			windows = {
+				autocomplete = {
+					border = "rounded",
+					draw = "reversed",
+				},
+				documentation = {
+					border = "rounded",
+					auto_show = true,
+				},
+				signature_help = {
+					border = "rounded",
+				},
+			},
+			highlight = {},
+			nerd_font_variant = "mono",
 		},
 	},
 
