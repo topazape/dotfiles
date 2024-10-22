@@ -116,7 +116,7 @@ return {
 		-- 	},
 		-- 	highlight = {},
 		-- 	nerd_font_variant = "mono",
-		-- },
+		},
 	},
 
 	-- formatter
