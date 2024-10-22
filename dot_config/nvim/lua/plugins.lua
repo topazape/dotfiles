@@ -97,11 +97,8 @@ return {
 				scroll_documentation_down = "<C-j>",
 			},
 			trigger = {
-				completion = {
-					show_on_insert_on_trigger_character = false,
-				},
 				signature_help = {
-					enabled = true,
+					-- enabled = true,
 				},
 			},
 			windows = {
