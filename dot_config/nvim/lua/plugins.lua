@@ -137,6 +137,7 @@ return {
 			suggestion = {
 				enabled = true,
 				auto_trigger = true,
+				debounce = 10,
 				keymap = {
 					accept = "<M-f>",
 				},
