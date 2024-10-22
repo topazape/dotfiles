@@ -135,7 +135,7 @@ return {
 		event = "VeryLazy",
 		opts = {
 			panel = {
-				layout = { posision = "left" },
+				layout = { position = "left" },
 			},
 			suggestion = {
 				auto_trigger = true,
