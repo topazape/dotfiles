@@ -91,13 +91,15 @@ return {
 			"rafamadriz/friendly-snippets",
 		},
 		opts = {
-			nerd_font_variant = "mono",
 			keymap = {
 				accept = { "<C-f>", "<Tab>" },
 				scroll_documentation_up = "<C-k>",
 				scroll_documentation_down = "<C-j>",
 			},
 			trigger = {
+				completion = {
+					show_on_insert_on_trigger_character = true,
+				},
 				signature_help = {
 					enabled = true,
 				},
@@ -116,6 +118,7 @@ return {
 				},
 			},
 			highlight = {},
+			nerd_font_variant = "mono",
 		},
 	},
 
