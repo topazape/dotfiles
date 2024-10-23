@@ -224,7 +224,11 @@ return {
 		"zbirenbaum/copilot.lua",
 		opt = {
 			suggestion = {
+				enabled = true,
 				auto_trigger = true,
+				keymap = {
+					accept = "<M-f>",
+				},
 			},
 		},
 	},
