@@ -225,7 +225,13 @@ return {
 		cmd = "Copilot",
 		build = ":Copilot auth",
 		opts = {
-			suggestion = { enabled = true },
+			panel = {
+				enabled = false,
+			},
+			suggestion = {
+				enabled = true,
+				auto_trigger = true,
+			},
 			filetypes = {},
 		},
 	},
