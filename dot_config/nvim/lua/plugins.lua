@@ -223,6 +223,7 @@ return {
 	{
 		"zbirenbaum/copilot.lua",
 		opt = {
+			panel = { enabled = false },
 			suggestion = {
 				enabled = true,
 				auto_trigger = true,
