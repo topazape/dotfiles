@@ -221,24 +221,7 @@ return {
 	-- AI
 	---- copilot
 	{
-		"zbirenbaum/copilot.lua",
-		opts = {
-			panel = {
-				auto_refresh = true,
-				layout = {
-					position = "right",
-					ratio = 0.2,
-				},
-			},
-			suggestion = {
-				auto_trigger = true,
-				debounce = 10,
-				keymap = {
-					accept = "<M-f>",
-				},
-			},
-			filetypes = {},
-		},
+		"github/copilot.vim",
 	},
 
 	-- git
