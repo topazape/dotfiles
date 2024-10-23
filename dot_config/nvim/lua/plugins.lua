@@ -232,6 +232,7 @@ return {
       help = true,
     },
   },
+},
 
 	-- git
 	---- gitsigns
