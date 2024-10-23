@@ -224,11 +224,18 @@ return {
 		"zbirenbaum/copilot.lua",
 		opts = {
 			panel = {
-				enabled = false,
+				auto_refresh = true,
+				layout = {
+					position = "right",
+					ratio = 0.2,
+				},
 			},
 			suggestion = {
-				enabled = true,
 				auto_trigger = true,
+				debounce = 10,
+				keymap = {
+					accept = "<M-f>",
+				},
 			},
 			filetypes = {},
 		},
