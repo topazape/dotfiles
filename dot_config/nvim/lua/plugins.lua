@@ -83,45 +83,45 @@ return {
 	},
 
 	-- completion
-	-- {
-	-- 	"saghen/blink.cmp",
-	-- 	lazy = false,
-	-- 	version = "v0.*",
-	-- 	dependencies = {
-	-- 		"rafamadriz/friendly-snippets",
-	-- 	},
-	-- 	opts = {
-	-- 		keymap = {
-	-- 			accept = { "<C-f>", "<Tab>" },
-	-- 			scroll_documentation_up = "<C-k>",
-	-- 			scroll_documentation_down = "<C-j>",
-	-- 		},
-	-- 		trigger = {
-	-- 			completion = {
-	-- 				show_on_insert_on_trigger_character = false,
-	-- 			},
-	-- 			signature_help = {
-	-- 				enabled = true,
-	-- 			},
-	-- 		},
-	-- 		windows = {
-	-- 			autocomplete = {
-	-- 				border = "rounded",
-	-- 				selection = "manual",
-	-- 				draw = "reversed",
-	-- 			},
-	-- 			documentation = {
-	-- 				border = "rounded",
-	-- 				auto_show = true,
-	-- 			},
-	-- 			signature_help = {
-	-- 				border = "rounded",
-	-- 			},
-	-- 		},
-	-- 		highlight = {},
-	-- 		nerd_font_variant = "mono",
-	-- 	},
-	-- },
+	{
+		"saghen/blink.cmp",
+		lazy = false,
+		version = "v0.*",
+		dependencies = {
+			"rafamadriz/friendly-snippets",
+		},
+		opts = {
+			keymap = {
+				accept = { "<C-f>", "<Tab>" },
+				scroll_documentation_up = "<C-k>",
+				scroll_documentation_down = "<C-j>",
+			},
+			trigger = {
+				completion = {
+					show_on_insert_on_trigger_character = false,
+				},
+				signature_help = {
+					enabled = true,
+				},
+			},
+			windows = {
+				autocomplete = {
+					border = "rounded",
+					selection = "manual",
+					draw = "reversed",
+				},
+				documentation = {
+					border = "rounded",
+					auto_show = true,
+				},
+				signature_help = {
+					border = "rounded",
+				},
+			},
+			highlight = {},
+			nerd_font_variant = "mono",
+		},
+	},
 
 	-- formatter
 	{
