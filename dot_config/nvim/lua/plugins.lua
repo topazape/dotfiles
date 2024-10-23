@@ -222,8 +222,6 @@ return {
 	---- copilot
 	{
 		"zbirenbaum/copilot.lua",
-		cmd = "Copilot",
-		build = ":Copilot auth",
 		opts = {
 			panel = {
 				enabled = false,
