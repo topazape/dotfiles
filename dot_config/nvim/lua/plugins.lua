@@ -222,12 +222,7 @@ return {
 	---- copilot
 	{
 		"zbirenbaum/copilot.lua",
-		opt = {
-			panel = { enabled = false },
-			suggestion = {
-				enabled = true,
-			},
-		},
+		config = true,
 	},
 
 	-- git
