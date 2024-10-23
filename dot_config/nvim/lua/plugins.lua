@@ -223,7 +223,7 @@ return {
 	{
 		"zbirenbaum/copilot.lua",
 		cmd = "Copilot",
-		event = "LspAttach",
+		event = "VeryLazy",
 		opt = {
 			panel = { enabled = false },
 			suggestion = {
