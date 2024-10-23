@@ -13,14 +13,11 @@ brotli
 c-ares
 ca-certificates
 cairo
-certifi
+cmake
 coreutils
-csvlens
 curl
 diffutils
 direnv
-docker
-docker-completion
 duckdb
 eza
 fd
@@ -46,17 +43,17 @@ graphviz
 grep
 gts
 harfbuzz
-helix
 highway
 icu4c
+icu4c@75
 imath
 isl
 jasper
 jpeg-turbo
 jpeg-xl
 jq
-k9s
 libavif
+libdeflate
 libgit2
 libgit2@1.7
 libidn2
@@ -95,21 +92,20 @@ node
 oniguruma
 openblas
 openexr
-openldap
 openssl@3
 pango
 pcre2
-pipenv
 pixman
 pkg-config
+python-packaging
 python@3.12
+python@3.13
 r
 readline
 ripgrep
 rtmpdump
 rust
 rustfmt
-rye
 sheldon
 sqlfluff
 sqlite
@@ -118,6 +114,8 @@ tcl-tk
 tree-sitter
 typst
 unibilium
+unzip
+uv
 webp
 xh
 xorgproto
@@ -126,25 +124,23 @@ z3
 zstd
 
 ==> Casks
-chatgpt
 docker
 figma
 font-ibm-plex-sans-jp
 google-chrome
 google-cloud-sdk
-miro
 notion
 rstudio
 slack
 stats
 tunnelblick
 wezterm
-
 ```
 
 ## LSP
 
 ```
+    ◍ basedpyright
     ◍ bash-language-server bashls
     ◍ gofumpt
     ◍ goimports
@@ -154,12 +150,12 @@ wezterm
     ◍ json-lsp jsonls
     ◍ lua-language-server lua_ls
     ◍ prettier
-    ◍ python-lsp-server pylsp
     ◍ ruff
     ◍ rust-analyzer rust_analyzer
     ◍ shfmt
     ◍ stylua
     ◍ taplo
+    ◍ terraform-ls terraformls
     ◍ tinymist
     ◍ yaml-language-server yamlls
 ```
