@@ -223,7 +223,7 @@ return {
   {
     "zbirenbaum/copilot.lua",
     opt = {},
-  }
+  },
 
 	-- git
 	---- gitsigns
