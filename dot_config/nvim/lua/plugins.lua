@@ -223,7 +223,7 @@ return {
 	{
 		"zbirenbaum/copilot.lua",
 		cmd = "Copilot",
-		event = "InsertEnter",
+		event = "LspAttach",
 		opt = {
 			panel = { enabled = false },
 			suggestion = {
