@@ -127,26 +127,6 @@ return {
 		end,
 	},
 
-	-- AI
-	---- copilot
-	-- {
-	-- 	"zbirenbaum/copilot.lua",
-	-- 	event = "VeryLazy",
-	--    config = true,
-	-- },
-
-	-- debugging
-	---- debug print
-	{
-		"andrewferrier/debugprint.nvim",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		},
-		event = "VeryLazy",
-		version = "*",
-		config = true,
-	},
-
 	-- telescopes
 	{
 		"nvim-telescope/telescope.nvim",
@@ -232,6 +212,14 @@ return {
 			virtual_symbol_prefix = " ",
 			virtual_symbol_position = "eol",
 		},
+	},
+
+	-- AI
+	---- copilot
+	{
+		"zbirenbaum/copilot.lua",
+		event = "VeryLazy",
+		config = true,
 	},
 
 	-- git
