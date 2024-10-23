@@ -12,6 +12,12 @@ return {
 		end,
 	},
 
+	{
+		"zbirenbaum/copilot.lua",
+		event = "VeryLazy",
+		config = true,
+	},
+
 	-- devicon
 	{
 		"nvim-tree/nvim-web-devicons",
@@ -129,11 +135,11 @@ return {
 
 	-- AI
 	---- copilot
-	{
-		"zbirenbaum/copilot.lua",
-		event = "VeryLazy",
-    config = true,
-	},
+	-- {
+	-- 	"zbirenbaum/copilot.lua",
+	-- 	event = "VeryLazy",
+	--    config = true,
+	-- },
 
 	-- debugging
 	---- debug print
