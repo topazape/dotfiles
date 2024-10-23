@@ -220,10 +220,9 @@ return {
 
 	-- AI
 	---- copilot
-  {
-    "zbirenbaum/copilot.lua",
-    opt = {},
-  },
+	{
+		"zbirenbaum/copilot.lua",
+	},
 
 	-- git
 	---- gitsigns
