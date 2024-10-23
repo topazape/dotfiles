@@ -1,1 +1,2 @@
 cache=${XDG_CACHE_HOME}/npm
+strict-ssl=false
