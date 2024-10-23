@@ -222,7 +222,11 @@ return {
 	---- copilot
 	{
 		"zbirenbaum/copilot.lua",
-		config = true,
+		opt = {
+			suggestion = {
+				auto_trigger = true,
+			},
+		},
 	},
 
 	-- git
