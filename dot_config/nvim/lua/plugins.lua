@@ -223,7 +223,12 @@ return {
 	{
 		"zbirenbaum/copilot.lua",
 		event = "VeryLazy",
-		config = true,
+		opt = {
+			panel = { enabled = false },
+			suggestion = {
+				enabled = true,
+			},
+		},
 	},
 
 	-- git
