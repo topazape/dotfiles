@@ -222,8 +222,7 @@ return {
 	---- copilot
 	{
 		"zbirenbaum/copilot.lua",
-		cmd = "Copilot",
-		config = true,
+		event = "VeryLazy",
 	},
 
 	-- git
