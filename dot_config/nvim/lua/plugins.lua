@@ -222,7 +222,6 @@ return {
 	---- copilot
 	{
 		"zbirenbaum/copilot.lua",
-		cmd = "Copilot",
 		opt = {
 			panel = { enabled = false },
 			suggestion = {
