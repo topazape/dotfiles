@@ -222,6 +222,7 @@ return {
 	---- copilot
 	{
 		"zbirenbaum/copilot.lua",
+		config = true,
 	},
 
 	-- git
