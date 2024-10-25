@@ -271,7 +271,10 @@ return {
 		},
 		opts = {
 			heading = { border = true },
-			code = { width = "block" },
+			code = {
+				width = "block",
+				left_margin = 2,
+			},
 			-- for blink.cmp documentation and signature_help
 			overrides = {
 				buftype = {
