@@ -279,7 +279,7 @@ return {
 						render_modes = { "n", "c", "i" },
 						code = {
 							width = "full",
-							border = "tick",
+							left_margin = 3,
 						},
 						debounce = 10,
 					},
