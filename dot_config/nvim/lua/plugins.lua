@@ -278,7 +278,6 @@ return {
 					nofile = {
 						render_modes = { "n", "c", "i" },
 						code = { width = "full" },
-						debounce = 10,
 					},
 				},
 			},
