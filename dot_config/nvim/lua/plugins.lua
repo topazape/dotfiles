@@ -97,9 +97,6 @@ return {
 				scroll_documentation_down = "<C-j>",
 			},
 			trigger = {
-				completion = {
-					show_on_insert_on_trigger_character = false,
-				},
 				signature_help = {
 					enabled = true,
 				},
@@ -107,7 +104,6 @@ return {
 			windows = {
 				autocomplete = {
 					border = "rounded",
-					selection = "manual",
 					draw = "reversed",
 				},
 				documentation = {
@@ -118,7 +114,6 @@ return {
 					border = "rounded",
 				},
 			},
-			highlight = {},
 			nerd_font_variant = "mono",
 		},
 	},
