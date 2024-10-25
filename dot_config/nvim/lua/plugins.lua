@@ -278,9 +278,8 @@ return {
 					nofile = {
 						render_modes = { "n", "c", "i" },
 						code = {
-							style = "language",
-							position = "right",
 							width = "full",
+							border = "tick",
 						},
 						debounce = 10,
 					},
