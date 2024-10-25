@@ -83,40 +83,40 @@ return {
 	},
 
 	-- completion
-	{
-		"saghen/blink.cmp",
-		lazy = false,
-		version = "v0.*",
-		dependencies = {
-			"rafamadriz/friendly-snippets",
-		},
-		opts = {
-			keymap = {
-				accept = { "<C-f>", "<Tab>" },
-				scroll_documentation_up = "<C-k>",
-				scroll_documentation_down = "<C-j>",
-			},
-			trigger = {
-				signature_help = {
-					enabled = true,
-				},
-			},
-			windows = {
-				autocomplete = {
-					border = "rounded",
-					draw = "reversed",
-				},
-				documentation = {
-					border = "rounded",
-					auto_show = true,
-				},
-				signature_help = {
-					border = "rounded",
-				},
-			},
-			nerd_font_variant = "mono",
-		},
-	},
+	-- {
+	-- 	"saghen/blink.cmp",
+	-- 	lazy = false,
+	-- 	version = "v0.*",
+	-- 	dependencies = {
+	-- 		"rafamadriz/friendly-snippets",
+	-- 	},
+	-- 	opts = {
+	-- 		keymap = {
+	-- 			accept = { "<C-f>", "<Tab>" },
+	-- 			scroll_documentation_up = "<C-k>",
+	-- 			scroll_documentation_down = "<C-j>",
+	-- 		},
+	-- 		trigger = {
+	-- 			signature_help = {
+	-- 				enabled = true,
+	-- 			},
+	-- 		},
+	-- 		windows = {
+	-- 			autocomplete = {
+	-- 				border = "rounded",
+	-- 				draw = "reversed",
+	-- 			},
+	-- 			documentation = {
+	-- 				border = "rounded",
+	-- 				auto_show = true,
+	-- 			},
+	-- 			signature_help = {
+	-- 				border = "rounded",
+	-- 			},
+	-- 		},
+	-- 		nerd_font_variant = "mono",
+	-- 	},
+	-- },
 
 	-- formatter
 	{
