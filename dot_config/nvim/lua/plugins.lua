@@ -263,17 +263,17 @@ return {
 	},
 
 	-- markdown
-	-- {
-	-- 	"MeanderingProgrammer/render-markdown.nvim",
-	-- 	dependencies = {
-	-- 		"nvim-treesitter/nvim-treesitter",
-	-- 		"nvim-tree/nvim-web-devicons",
-	-- 	},
-	-- 	opts = {
-	-- 		heading = { border = true },
-	-- 		code = { width = "block" },
-	-- 	},
-	-- },
+	{
+		"MeanderingProgrammer/render-markdown.nvim",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			"nvim-tree/nvim-web-devicons",
+		},
+		opts = {
+			heading = { border = true },
+			code = { width = "block" },
+		},
+	},
 
 	-- typst
 	{
