@@ -277,9 +277,8 @@ return {
 				buftype = {
 					nofile = {
 						render_modes = { "n", "c", "i" },
-						code = {
-							width = "full",
-						},
+						code = { width = "full" },
+						debounce = 10,
 					},
 				},
 			},
