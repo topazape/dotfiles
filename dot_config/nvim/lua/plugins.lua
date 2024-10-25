@@ -291,7 +291,7 @@ return {
 	{
 		"chomosuke/typst-preview.nvim",
 		ft = "typst", -- or ft = 'typst'
-		version = "0.3.*",
+		version = "1.*",
 		build = function()
 			require("typst-preview").update()
 		end,
