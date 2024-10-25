@@ -272,16 +272,11 @@ return {
 		opts = {
 			heading = { border = true },
 			code = { width = "block" },
+			-- for blink.cmp documentation and signature_help
 			overrides = {
 				buftype = {
 					nofile = {
 						render_modes = { "n", "c", "i" },
-						debounce = 5,
-						code = {
-							left_pad = 0,
-							right_pad = 0,
-							language_pad = 0,
-						},
 					},
 				},
 			},
