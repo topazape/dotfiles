@@ -40,6 +40,7 @@ lspsaga.setup({
 	ui = {
 		border = "rounded", -- Can be single, double, rounded, solid, shadow.
 		lines = { "└", "├", "│", "─", "┌" },
+		code_action = " ",
 	},
 	scroll_preview = {
 		scroll_down = "<C-n>",
