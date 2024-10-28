@@ -37,6 +37,9 @@ lspsaga.setup({
 	outline = {
 		close_after_jump = true,
 	},
+	lightbulb = {
+		virtual_text = false,
+	},
 	ui = {
 		border = "rounded",
 		code_action = " ",
