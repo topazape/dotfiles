@@ -85,7 +85,9 @@ return {
 	---- diagnostics
 	{
 		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-		config = true,
+		opts = {
+			virtual_text = false,
+		},
 	},
 
 	-- completion
