@@ -82,17 +82,6 @@ return {
 		"j-hui/fidget.nvim",
 		config = true,
 	},
-	---- diagnostics display
-	{
-		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-		config = function()
-			vim.diagnostic.config({
-				virtual_text = false,
-				virtual_lines = { highlight_whole_line = false },
-			})
-			require("lsp_lines").setup()
-		end,
-	},
 
 	-- completion
 	{
