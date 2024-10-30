@@ -69,14 +69,14 @@ return {
 	-- 	end,
 	-- },
 	---- inlay hints
-	{
-		"MysticalDevil/inlay-hints.nvim",
-		dependencies = {
-			"neovim/nvim-lspconfig",
-		},
-		event = "LspAttach",
-		config = true,
-	},
+	-- {
+	-- 	"MysticalDevil/inlay-hints.nvim",
+	-- 	dependencies = {
+	-- 		"neovim/nvim-lspconfig",
+	-- 	},
+	-- 	event = "LspAttach",
+	-- 	config = true,
+	-- },
 	---- progress
 	{
 		"j-hui/fidget.nvim",
