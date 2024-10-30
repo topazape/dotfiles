@@ -27,9 +27,6 @@ lspsaga.setup({
 			vsplit = "v",
 		},
 	},
-	diagnostic = {
-		show_layout = "cursor",
-	},
 	finder = {
 		max_height = 0.8,
 		left_width = 0.3,
