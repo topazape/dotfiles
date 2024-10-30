@@ -88,6 +88,7 @@ return {
 		config = function()
 			vim.diagnostic.config({
 				virtual_text = false,
+				virtual_lines = { heighlight_whoel_line = false },
 			})
 			require("lsp_lines").setup()
 		end,
