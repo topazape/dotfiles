@@ -85,11 +85,7 @@ return {
 	---- diagnostics
 	{
 		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-		config = function()
-			require("lsp_lines").setup({
-				virtual_text = false,
-			})
-		end,
+		opts = { virtual_text = false },
 	},
 
 	-- completion
