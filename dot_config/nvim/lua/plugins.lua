@@ -82,6 +82,10 @@ return {
 		"j-hui/fidget.nvim",
 		config = true,
 	},
+	---- diagnostics
+	{
+		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+	},
 
 	-- completion
 	{
