@@ -13,6 +13,10 @@ lspsaga.setup({
 	vim.keymap.set("n", "g[", "<CMD>Lspsaga diagnostic_jump_prev<CR>", { noremap = true }),
 	vim.keymap.set("n", "<C-\\>", "<CMD>Lspsaga term_toggle<CR>", { noremap = true }),
 
+	vim.diagnostic.config({
+		virtual_text = false,
+	}),
+
 	definition = {
 		width = 0.8,
 		height = 0.7,
