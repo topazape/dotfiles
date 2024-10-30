@@ -28,7 +28,7 @@ lspsaga.setup({
 		},
 	},
 	diagnostic = {
-		show_layout = "line",
+		show_layout = "cursor",
 	},
 	finder = {
 		max_height = 0.8,
