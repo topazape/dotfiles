@@ -92,11 +92,11 @@ return {
 			"rafamadriz/friendly-snippets",
 		},
 		opts = {
-			keymap = {
-				accept = { "<C-f>", "<Tab>" },
-				scroll_documentation_up = "<C-k>",
-				scroll_documentation_down = "<C-j>",
-			},
+			-- keymap = {
+			-- 	accept = { "<C-f>", "<Tab>" },
+			-- 	scroll_documentation_up = "<C-k>",
+			-- 	scroll_documentation_down = "<C-j>",
+			-- },
 			trigger = {
 				signature_help = {
 					enabled = true,
