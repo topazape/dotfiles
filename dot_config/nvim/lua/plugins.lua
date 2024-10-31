@@ -92,6 +92,7 @@ return {
 			"rafamadriz/friendly-snippets",
 		},
 		opts = {
+      keypmap = {C-k
 			-- keymap = {
 			-- 	accept = { "<C-f>", "<Tab>" },
 			-- 	scroll_documentation_up = "<C-k>",
@@ -116,7 +117,6 @@ return {
 				signature_help = {
 					border = "rounded",
 				},
-				ghost_text = { enabled = true },
 			},
 			nerd_font_variant = "mono",
 		},
