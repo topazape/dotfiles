@@ -92,7 +92,10 @@ return {
 			"rafamadriz/friendly-snippets",
 		},
 		opts = {
-			keymap = {},
+			keymap = {
+				["<C-f>"] = { "accept" },
+				["<Tab>"] = { "accept" },
+			},
 			-- keymap = {
 			-- 	accept = { "<C-f>", "<Tab>" },
 			-- 	scroll_documentation_up = "<C-k>",
