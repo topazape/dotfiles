@@ -90,6 +90,7 @@ local handlers = {
 						inlayHints = {
 							callArgumentNames = false,
 							functionReturnTypes = false,
+							genericTypes = true,
 							variableTypes = true,
 						},
 					},
