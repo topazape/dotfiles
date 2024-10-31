@@ -92,11 +92,11 @@ return {
 			"rafamadriz/friendly-snippets",
 		},
 		opts = {
-			keymap = {
-				accept = { "<C-f>", "<Tab>" },
-				scroll_documentation_up = "<C-k>",
-				scroll_documentation_down = "<C-j>",
-			},
+			-- keymap = {
+			-- 	accept = { "<C-f>", "<Tab>" },
+			-- 	scroll_documentation_up = "<C-k>",
+			-- 	scroll_documentation_down = "<C-j>",
+			-- },
 			trigger = {
 				signature_help = {
 					enabled = true,
@@ -105,15 +105,18 @@ return {
 			windows = {
 				autocomplete = {
 					border = "rounded",
+					selection = "auto_insert",
 					draw = "reversed",
 				},
 				documentation = {
 					border = "rounded",
 					auto_show = true,
+					auto_show_delay_ms = 100,
 				},
 				signature_help = {
 					border = "rounded",
 				},
+				ghost_text = { enabled = true },
 			},
 			nerd_font_variant = "mono",
 		},
