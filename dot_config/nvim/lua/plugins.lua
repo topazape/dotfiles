@@ -94,13 +94,9 @@ return {
 		opts = {
 			keymap = {
 				["<C-f>"] = { "accept" },
-				["<Tab>"] = { "accept" },
+				["<C-j>"] = { "scroll_documentation_down" },
+				["<C-k>"] = { "scroll_documentation_up" },
 			},
-			-- keymap = {
-			-- 	accept = { "<C-f>", "<Tab>" },
-			-- 	scroll_documentation_up = "<C-k>",
-			-- 	scroll_documentation_down = "<C-j>",
-			-- },
 			trigger = {
 				signature_help = {
 					enabled = true,
