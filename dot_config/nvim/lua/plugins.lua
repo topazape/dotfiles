@@ -93,7 +93,7 @@ return {
 		},
 		opts = {
 			keymap = {
-				["<C-g>"] = { "show", "show_documentation", "hide_documentation" },
+				["<C-;>"] = { "show", "show_documentation", "hide_documentation" },
 				["<C-f>"] = { "accept" },
 				["<TAB>"] = { "accept" },
 				["<C-p>"] = { "select_prev", "fallback" },
