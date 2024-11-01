@@ -93,7 +93,8 @@ return {
 		},
 		opts = {
 			keymap = {
-				["<C-f>"] = { "accept" },
+				["<C-f>"] = { "show", "show_documentation", "hide_documentation" },
+				["<TAB>"] = { "accept" },
 				["<C-p>"] = { "select_prev", "fallback" },
 				["<C-n>"] = { "select_next", "fallback" },
 				["<C-j>"] = { "scroll_documentation_down" },
