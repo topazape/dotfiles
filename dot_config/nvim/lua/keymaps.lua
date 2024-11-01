@@ -1,6 +1,3 @@
--- delete all without register
-vim.keymap.set("n", "<LEADER>D", "<CMD>%d _<CR>", { noremap = true, silent = true })
-
 -- Normal
 ---- バッファ切り替え
 vim.keymap.set("n", "<M-n>", "<CMD>bnext<CR>", { noremap = true, silent = true })
