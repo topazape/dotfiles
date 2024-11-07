@@ -303,16 +303,4 @@ return {
 			require("typst-preview").update()
 		end,
 	},
-
-	{
-		"Kurama622/profile.nvim",
-		dependencies = { "3rd/image.nvim" },
-		config = function()
-			require("profile").setup({
-				avatar_path = "<your avatar path>", -- default: profile.nvim/resources/profile.png
-				user = "topazape",
-			})
-			vim.api.nvim_set_keymap("n", "<leader>p", "<cmd>Profile<cr>", { silent = true })
-		end,
-	},
 }
