@@ -190,14 +190,15 @@ local handlers = {
 		})
 	end,
 
-	-- ["tinymist"] = function()
-	-- 	require("lspconfig").tinymist.setup({
-	-- 		settings = {
-	-- 			exportPdf = "never",
-	-- 			formatterMode = "typstyle",
-	-- 		},
-	-- 	})
-	-- end,
+	["tinymist"] = function()
+		require("lspconfig").tinymist.setup({
+			offset_encoding = "utf-8",
+			settings = {
+				exportPdf = "never",
+				formatterMode = "typstyle",
+			},
+		})
+	end,
 
 	["terraformls"] = function()
 		require("lspconfig").terraformls.setup({
