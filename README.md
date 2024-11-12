@@ -11,7 +11,6 @@ bat
 brotli
 c-ares
 ca-certificates
-cmake
 coreutils
 curl
 diffutils
@@ -53,7 +52,8 @@ node
 oniguruma
 openssl@3
 pcre2
-pkg-config
+pkgconf
+python@3.11
 python@3.13
 readline
 ripgrep
@@ -64,6 +64,7 @@ sheldon
 sqlfluff
 sqlite
 starship
+tenv
 tree-sitter
 typst
 unibilium
@@ -75,6 +76,7 @@ z3
 zstd
 
 ==> Casks
+claude
 docker
 figma
 font-ibm-plex-sans-jp
