@@ -222,19 +222,19 @@ return {
 
 	-- AI
 	---- copilot
-	{
-		"zbirenbaum/copilot.lua",
-		opts = {
-			panel = { enabled = false },
-			suggestion = {
-				enabled = true,
-				auto_trigger = true,
-				keymap = {
-					accept = "<M-f>",
-				},
-			},
-		},
-	},
+	-- {
+	-- 	"zbirenbaum/copilot.lua",
+	-- 	opts = {
+	-- 		panel = { enabled = false },
+	-- 		suggestion = {
+	-- 			enabled = true,
+	-- 			auto_trigger = true,
+	-- 			keymap = {
+	-- 				accept = "<M-f>",
+	-- 			},
+	-- 		},
+	-- 	},
+	-- },
 
 	-- git
 	---- gitsigns
