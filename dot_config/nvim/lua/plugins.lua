@@ -230,8 +230,7 @@ return {
 				enabled = true,
 				auto_trigger = true,
 				keymap = {
-					-- accept = "<M-f>",
-					accept = "<M-l>",
+					accept = "<M-f>",
 				},
 			},
 		},
