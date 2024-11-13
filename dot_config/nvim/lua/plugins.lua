@@ -186,23 +186,6 @@ return {
 		},
 	},
 
-	-- emphasis indent
-	{
-		"shellRaining/hlchunk.nvim",
-		event = { "BufReadPre", "BufNewFile" },
-		opts = {
-			chunk = {
-				enable = true,
-				chars = {
-					right_arrow = "▷",
-				},
-			},
-			line_num = {
-				enable = true,
-			},
-		},
-	},
-
 	-- highlight-undo
 	{
 		"tzachar/highlight-undo.nvim",
