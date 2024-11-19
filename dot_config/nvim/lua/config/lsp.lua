@@ -1,6 +1,8 @@
 require("mason").setup()
 require("mason-lspconfig").setup()
 
+--
+vim.lsp.util.apply_text_document_edit = "utf-8"
 -- xdg config dir
 local XDG_CONFIG_HOME = os.getenv("XDG_CONFIG_HOME")
 if not XDG_CONFIG_HOME then
