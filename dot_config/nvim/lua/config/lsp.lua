@@ -46,7 +46,7 @@ local handlers = {
 	-- a dedicated handler.
 	function(server_name) -- default handler (optional)
 		require("lspconfig")[server_name].setup({
-			offset_encoding = "utf-8",
+			offset_encoding = "utf-16",
 		})
 	end,
 
