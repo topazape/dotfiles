@@ -216,7 +216,6 @@ return {
 					accept = "<M-f>",
 				},
 			},
-			filetypes = { python = false },
 		},
 	},
 
