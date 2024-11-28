@@ -101,8 +101,17 @@ return {
 				["<C-j>"] = { "scroll_documentation_down" },
 				["<C-k>"] = { "scroll_documentation_up" },
 			},
-			appearance = {
-				use_nvim_cmp_as_default = false,
+			menu = {
+				border = "rounded",
+			},
+			documentation = {
+				border = "rounded",
+			},
+			signature = {
+				enabled = true,
+				window = {
+					border = "rounded",
+				},
 			},
 		},
 	},
