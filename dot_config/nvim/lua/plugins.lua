@@ -110,6 +110,19 @@ return {
 			signature = {
 				enabled = true,
 			},
+			windows = {
+				autocomplete = {
+					border = "rounded",
+					selection = "manual",
+				},
+				documentation = {
+					border = "rounded",
+					auto_show = true,
+				},
+				signature_help = {
+					border = "rounded",
+				},
+			},
 		},
 	},
 
