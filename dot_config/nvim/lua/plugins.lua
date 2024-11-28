@@ -108,7 +108,7 @@ return {
 			documentation = {
 				auto_show = true,
 				window = {
-					border = "rounded",
+					border = "solid",
 				},
 				ghost_text = {
 					enabled = true,
