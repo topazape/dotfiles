@@ -105,7 +105,10 @@ return {
 				border = "rounded",
 			},
 			documentation = {
-				border = "rounded",
+				auto_show = true,
+				window = {
+					border = "rounded",
+				},
 			},
 			signature = {
 				enabled = true,
