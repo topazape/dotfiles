@@ -103,12 +103,12 @@ return {
 			},
 			menu = {
 				enabled = true,
-				border = "solid",
+				border = "single",
 			},
 			documentation = {
 				auto_show = true,
 				window = {
-					border = "solid",
+					border = "single",
 				},
 				ghost_text = {
 					enabled = true,
@@ -117,7 +117,7 @@ return {
 			signature = {
 				enabled = true,
 				window = {
-					border = "rounded",
+					border = "single",
 				},
 			},
 		},
