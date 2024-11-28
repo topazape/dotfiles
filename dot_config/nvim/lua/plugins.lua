@@ -102,12 +102,16 @@ return {
 				["<C-k>"] = { "scroll_documentation_up" },
 			},
 			menu = {
-				border = "rounded",
+				enabled = true,
+				border = "single",
 			},
 			documentation = {
 				auto_show = true,
 				window = {
 					border = "rounded",
+				},
+				ghost_text = {
+					enabled = true,
 				},
 			},
 			signature = {
