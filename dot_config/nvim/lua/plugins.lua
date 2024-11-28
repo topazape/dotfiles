@@ -101,27 +101,9 @@ return {
 				["<C-j>"] = { "scroll_documentation_down" },
 				["<C-k>"] = { "scroll_documentation_up" },
 			},
-			trigger = {
-				signature_help = {
-					enabled = true,
-				},
+			appearance = {
+				use_nvim_cmp_as_default = false,
 			},
-			windows = {
-				autocomplete = {
-					border = "rounded",
-					selection = "auto_insert",
-					draw = "reversed",
-				},
-				documentation = {
-					border = "rounded",
-					auto_show = true,
-					auto_show_delay_ms = 100,
-				},
-				signature_help = {
-					border = "rounded",
-				},
-			},
-			nerd_font_variant = "mono",
 		},
 	},
 
