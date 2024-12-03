@@ -113,7 +113,7 @@ return {
 					auto_show = true,
 					auto_show_delay_ms = 50,
 					window = {
-						border = "solid",
+						border = "rounded",
 					},
 					ghost_text = {
 						enabled = false,
@@ -122,7 +122,7 @@ return {
 				signature = {
 					enabled = true,
 					window = {
-						border = "solid",
+						border = "rounded",
 					},
 				},
 			},
