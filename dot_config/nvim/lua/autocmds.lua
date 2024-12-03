@@ -128,6 +128,7 @@ autocmd({ "FileType" }, {
 	callback = function()
 		-- タグの折りたたみ
 		vim.opt_local.foldmethod = "indent"
+		vim.opt.fillchars = { fold = " " }
 	end,
 })
 
