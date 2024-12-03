@@ -123,6 +123,21 @@ return {
 					border = "solid",
 				},
 			},
+			windows = {
+				autocomplete = {
+					border = "rounded",
+					selection = "auto_insert",
+				},
+				documentation = {
+					border = "rounded",
+					auto_show = true,
+					auto_show_delay_ms = 50,
+					update_delay_ms = 50,
+				},
+				signature_help = {
+					border = "rounded",
+				},
+			},
 		},
 	},
 
