@@ -127,7 +127,7 @@ autocmd({ "FileType" }, {
 	pattern = { "xml" },
 	callback = function()
 		-- タグの折りたたみ
-		vim.opt_local.foldmethod = "syntax"
+		vim.opt_local.foldmethod = "indent"
 	end,
 })
 
