@@ -119,7 +119,7 @@ return {
 			},
 			signature = {
 				enabled = true,
-				windows = {
+				window = {
 					border = "rounded",
 				},
 			},
