@@ -105,13 +105,13 @@ return {
 				selection = "auto_insert",
 			},
 			menu = {
-				border = "rounded",
+				border = "solid",
 			},
 			documentation = {
 				auto_show = true,
 				auto_show_delay_ms = 50,
 				window = {
-					border = "rounded",
+					border = "solid",
 				},
 				ghost_text = {
 					enabled = false,
@@ -120,7 +120,7 @@ return {
 			signature = {
 				enabled = true,
 				window = {
-					border = "rounded",
+					border = "solid",
 				},
 			},
 		},
