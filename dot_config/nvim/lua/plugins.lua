@@ -92,50 +92,38 @@ return {
 			"rafamadriz/friendly-snippets",
 		},
 		opts = {
-			-- keymap = {
-			-- 	["<C-g>"] = { "show", "show_documentation", "hide_documentation" },
-			-- 	["<C-f>"] = { "accept" },
-			-- 	["<TAB>"] = { "accept" },
-			-- 	["<C-p>"] = { "select_prev", "fallback" },
-			-- 	["<C-n>"] = { "select_next", "fallback" },
-			-- 	["<C-j>"] = { "scroll_documentation_down" },
-			-- 	["<C-k>"] = { "scroll_documentation_up" },
-			-- },
-			-- list = {
-			-- 	selection = "auto_insert",
-			-- },
-			-- menu = {
-			-- 	border = "solid",
-			-- },
-			-- documentation = {
-			-- 	auto_show = true,
-			-- 	auto_show_delay_ms = 50,
-			-- 	window = {
-			-- 		border = "solid",
-			-- 	},
-			-- 	ghost_text = {
-			-- 		enabled = false,
-			-- 	},
-			-- },
-			-- signature = {
-			-- 	enabled = true,
-			-- 	window = {
-			-- 		border = "solid",
-			-- 	},
-			-- },
-			windows = {
-				autocomplete = {
-					border = "rounded",
+			keymap = {
+				["<C-g>"] = { "show", "show_documentation", "hide_documentation" },
+				["<C-f>"] = { "accept" },
+				["<TAB>"] = { "accept" },
+				["<C-p>"] = { "select_prev", "fallback" },
+				["<C-n>"] = { "select_next", "fallback" },
+				["<C-j>"] = { "scroll_documentation_down" },
+				["<C-k>"] = { "scroll_documentation_up" },
+			},
+			completion = {
+				list = {
 					selection = "auto_insert",
 				},
-				documentation = {
+				menu = {
+					enabled = true,
 					border = "rounded",
+				},
+				documentation = {
 					auto_show = true,
 					auto_show_delay_ms = 50,
-					update_delay_ms = 50,
+					window = {
+						border = "solid",
+					},
+					ghost_text = {
+						enabled = false,
+					},
 				},
-				signature_help = {
-					border = "rounded",
+				signature = {
+					enabled = true,
+					window = {
+						border = "solid",
+					},
 				},
 			},
 		},
