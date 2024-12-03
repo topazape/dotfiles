@@ -128,7 +128,7 @@ autocmd({ "FileType" }, {
 	callback = function()
 		-- タグの折りたたみ
 		vim.opt_local.foldmethod = "indent"
-		vim.opt.foldtext = "v:lua.vim.treesitter.foldtext()"
+		vim.opt_local.foldtext = "v:lua.vim.treesitter.foldtext()"
 		-- vim.opt.fillchars = { fold = " " }
 	end,
 })
