@@ -228,7 +228,7 @@ return {
 				help = false,
 				hgcommit = false,
 				markdown = false,
-				python = false,
+				python = true,
 				rust = false,
 				svn = false,
 				yaml = false,
