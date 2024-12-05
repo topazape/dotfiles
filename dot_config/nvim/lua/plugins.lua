@@ -161,7 +161,6 @@ return {
 	{
 		"rcarriga/nvim-notify",
 	},
-
 	---- status line
 	{
 		"hoob3rt/lualine.nvim",
@@ -169,8 +168,7 @@ return {
 			require("config/lualine")
 		end,
 	},
-
-	-- mode highlight
+	---- mode highlight
 	{
 		"rasulomaroff/reactive.nvim",
 		opts = {
@@ -189,14 +187,12 @@ return {
 			"nvim-treesitter/nvim-treesitter",
 		},
 	},
-
-	-- highlight-undo
+	---- highlight-undo
 	{
 		"tzachar/highlight-undo.nvim",
 		config = true,
 	},
-
-	-- colorcode preview
+	---- colorcode preview
 	{
 		"brenoprata10/nvim-highlight-colors",
 		opts = {
@@ -205,6 +201,11 @@ return {
 			virtual_symbol_prefix = " ",
 			virtual_symbol_position = "eol",
 		},
+	},
+	---- fold
+	{
+		"anuvyklack/pretty-fold.nvim",
+		config = true,
 	},
 
 	-- AI
