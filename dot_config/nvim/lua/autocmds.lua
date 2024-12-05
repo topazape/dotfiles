@@ -132,6 +132,13 @@ autocmd({ "FileType" }, {
 		vim.bo.filetype = "markdown"
 	end,
 })
+---- xml
+autocmd({ "FileType" }, {
+	pattern = { "xml" },
+	callback = function()
+		vim.opt_local.foldmethod = "indent"
+	end,
+})
 
 -- ターミナルモード
 ---- 常にインサートモードで開く
