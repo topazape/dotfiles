@@ -202,6 +202,14 @@ return {
 			virtual_symbol_position = "eol",
 		},
 	},
+	---- fold
+	{
+		"kevimhwang/nvim-ufo",
+		dependencies = {
+			"kevinhwang91/promise-async",
+		},
+		config = true,
+	},
 
 	-- AI
 	---- copilot
