@@ -80,6 +80,7 @@ local handlers = {
 						diagnosticMode = "workspace",
 						diagnosticSeverityOverrides = {
 							reportAny = false,
+							reportExplicitAny = false,
 							reportUnusedImport = false,
 							reportUnusedVariable = false,
 							reportAttributeAccessIssue = false,
