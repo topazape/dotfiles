@@ -205,7 +205,9 @@ return {
 	---- fold
 	{
 		"anuvyklack/pretty-fold.nvim",
-		config = true,
+		config = function()
+			require("pretty-fold").setup()
+		end,
 	},
 
 	-- AI
