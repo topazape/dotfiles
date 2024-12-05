@@ -202,13 +202,6 @@ return {
 			virtual_symbol_position = "eol",
 		},
 	},
-	---- fold
-	{
-		"anuvyklack/pretty-fold.nvim",
-		config = function()
-			require("pretty-fold").setup()
-		end,
-	},
 
 	-- AI
 	---- copilot
