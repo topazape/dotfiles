@@ -13,9 +13,9 @@ conform.setup({
 			"shfmt",
 		},
 		go = {
-			"golines",
-			"gofumpt",
 			"goimports",
+			"gofumpt",
+			"golines",
 		},
 		html = {
 			"prettier",
