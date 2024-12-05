@@ -202,6 +202,11 @@ return {
 			virtual_symbol_position = "eol",
 		},
 	},
+	---- fold
+	{
+		"OXY2DEV/foldtext.nvim",
+		lazy = false,
+	},
 
 	-- AI
 	---- copilot
