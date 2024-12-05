@@ -204,7 +204,7 @@ return {
 	},
 	---- fold
 	{
-		"kevimhwang/nvim-ufo",
+		"kevimhwang91/nvim-ufo",
 		dependencies = {
 			"kevinhwang91/promise-async",
 		},
