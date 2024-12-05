@@ -137,7 +137,7 @@ autocmd({ "FileType" }, {
 	pattern = { "xml" },
 	callback = function()
 		vim.opt_local.foldmethod = "indent"
-		vim.opt_local.foldlevel = 4
+		vim.opt_local.foldlevel = 3
 
 		vim.opt_local.tabstop = 2
 		vim.opt_local.shiftwidth = 2
