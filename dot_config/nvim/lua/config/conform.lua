@@ -13,6 +13,7 @@ conform.setup({
 			"shfmt",
 		},
 		go = {
+			"golines",
 			"gofumpt",
 			"goimports",
 		},
