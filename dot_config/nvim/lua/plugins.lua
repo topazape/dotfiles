@@ -17,7 +17,7 @@ return {
 	{
 		"nvim-tree/nvim-web-devicons",
 	},
-	---- adjust devicon
+	---- adjust devicon colors
 	{
 		"rachartier/tiny-devicons-auto-colors.nvim",
 		dependencies = {
@@ -200,6 +200,7 @@ return {
 			virtual_symbol = "",
 			virtual_symbol_prefix = " ",
 			virtual_symbol_position = "eol",
+			exclude_filetypes = { "lazy" },
 		},
 	},
 	---- fold
