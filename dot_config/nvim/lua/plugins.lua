@@ -200,7 +200,7 @@ return {
 			virtual_symbol = "",
 			virtual_symbol_prefix = " ",
 			virtual_symbol_position = "eol",
-			exclude_filetypes = { "lazy" },
+			exclude_filetypes = { "lazy", "mason" },
 		},
 	},
 	---- fold
