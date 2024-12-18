@@ -223,7 +223,7 @@ return {
 				-- 元の関数を呼び出す
 				return original_apply_text_edits(edits, bufnr, encoding)
 			end
-		end,
+		end
 		require("copilot").setup({
 			panel = { enabled = false },
 			suggestion = {
