@@ -143,15 +143,16 @@ fi
 if type pip >/dev/null 2>&1 || type pip3 >/dev/null 2>&1; then
   export PIP_CACHE_DIR=${XDG_CACHE_HOME}/pip
 fi
-### pipenv
-if type pipenv >/dev/null 2>&1; then
-  export PIPENV_CACHE_DIR=${XDG_CACHE_HOME}/pipenv
-fi
 ## Rust
 ### cargo
 if type cargo >/dev/null 2>&1; then
   export CARGO_HOME=${XDG_DATA_HOME}/cargo
   export PATH=${CARGO_HOME}/bin:${PATH}
+fi
+## Typst
+if type typst >/dev/null 2>&1; then
+  export TYPST_PACKAGE_PATH=${XDG_DATA_HOME}/typst
+  export TYPST_PACKAGE_CACHE_PATH=${XDG_CACHE_HOME}/typst
 fi
 
 # for work
