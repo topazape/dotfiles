@@ -213,7 +213,18 @@ return {
 	---- copilot
 	{
 		"zbirenbaum/copilot.lua",
-		opts = {
+		config = function()
+			-- 元の vim.lsp.util.apply_text_edits をラップ
+			local original_apply_text_edits = vim.lsp.util.apply_text_edits
+			-- 新しい apply_text_edits を定義し、utf-8 に強制する
+			vim.lsp.util.apply_text_edits = function(edits, bufnr, encoding)
+				-- encoding を utf-8 に強制
+				encoding = "utf-8"
+				-- 元の関数を呼び出す
+				return original_apply_text_edits(edits, bufnr, encoding)
+			end
+		end,
+		require("copilot").setup({
 			panel = { enabled = false },
 			suggestion = {
 				enabled = true,
@@ -236,7 +247,7 @@ return {
 				yaml = false,
 				["."] = false,
 			},
-		},
+		}),
 	},
 
 	-- git
