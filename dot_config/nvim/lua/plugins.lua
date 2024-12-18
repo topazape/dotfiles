@@ -247,7 +247,7 @@ return {
         -- 	yaml = false,
         -- 	["."] = false,
         -- },
-      }),
+      })
     end,
 	},
 
