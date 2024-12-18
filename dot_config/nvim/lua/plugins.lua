@@ -224,31 +224,31 @@ return {
 				return original_apply_text_edits(edits, bufnr, encoding)
 			end
 
-      require("copilot").setup({
-        -- panel = { enabled = false },
-        -- suggestion = {
-        -- 	enabled = true,
-        -- 	auto_trigger = true,
-        -- 	keymap = {
-        -- 		accept = "<M-f>",
-        -- 	},
-        -- },
-        -- filetypes = {
-        -- 	cvs = false,
-        -- 	gitcommit = false,
-        -- 	gitrebase = false,
-        -- 	go = false,
-        -- 	help = false,
-        -- 	hgcommit = false,
-        -- 	markdown = false,
-        -- 	python = true,
-        -- 	rust = false,
-        -- 	svn = false,
-        -- 	yaml = false,
-        -- 	["."] = false,
-        -- },
-      })
-    end,
+			require("copilot").setup({
+				panel = { enabled = false },
+				suggestion = {
+					enabled = true,
+					auto_trigger = true,
+					keymap = {
+						accept = "<M-f>",
+					},
+				},
+				filetypes = {
+					cvs = false,
+					gitcommit = false,
+					gitrebase = false,
+					go = false,
+					help = false,
+					hgcommit = false,
+					markdown = false,
+					python = true,
+					rust = false,
+					svn = false,
+					yaml = false,
+					["."] = false,
+				},
+			})
+		end,
 	},
 
 	-- git
