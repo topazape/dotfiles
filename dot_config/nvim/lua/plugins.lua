@@ -248,6 +248,7 @@ return {
 			-- 	["."] = false,
 			-- },
 		}),
+  end
 	},
 
 	-- git
