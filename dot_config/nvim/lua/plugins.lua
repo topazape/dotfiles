@@ -120,7 +120,12 @@ return {
 					enabled = false,
 				},
 			},
-			signature = { enabled = true },
+			signature = {
+				enabled = true,
+				window = {
+					border = "rounded",
+				},
+			},
 		},
 	},
 
