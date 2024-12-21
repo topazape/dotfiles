@@ -121,9 +121,6 @@ return {
 				},
 				signature = {
 					enabled = true,
-					window = {
-						border = "rounded",
-					},
 				},
 			},
 		},
