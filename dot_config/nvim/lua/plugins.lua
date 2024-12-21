@@ -237,7 +237,6 @@ return {
 					cvs = false,
 					gitcommit = false,
 					gitrebase = false,
-					go = false,
 					help = false,
 					hgcommit = false,
 					markdown = false,
