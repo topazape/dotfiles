@@ -101,10 +101,11 @@ return {
 				["<C-j>"] = { "scroll_documentation_down" },
 				["<C-k>"] = { "scroll_documentation_up" },
 			},
-			-- completion = {
-			-- 	list = {
-			-- 		selection = "auto_insert",
-			-- 	},
+			completion = {
+				list = {
+					selection = "auto_insert",
+				},
+			},
 			-- 	menu = {
 			-- 		enabled = true,
 			-- 		border = "rounded",
