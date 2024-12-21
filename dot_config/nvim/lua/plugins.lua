@@ -101,31 +101,31 @@ return {
 				["<C-j>"] = { "scroll_documentation_down" },
 				["<C-k>"] = { "scroll_documentation_up" },
 			},
-			completion = {
-				list = {
-					selection = "auto_insert",
-				},
-				menu = {
-					enabled = true,
-					border = "rounded",
-				},
-				documentation = {
-					auto_show = true,
-					auto_show_delay_ms = 50,
-					window = {
-						border = "rounded",
-					},
-					ghost_text = {
-						enabled = false,
-					},
-				},
-				signature = {
-					enabled = true,
-					window = {
-						border = "rounded",
-					},
-				},
-			},
+			-- completion = {
+			-- 	list = {
+			-- 		selection = "auto_insert",
+			-- 	},
+			-- 	menu = {
+			-- 		enabled = true,
+			-- 		border = "rounded",
+			-- 	},
+			-- 	documentation = {
+			-- 		auto_show = true,
+			-- 		auto_show_delay_ms = 50,
+			-- 		window = {
+			-- 			border = "rounded",
+			-- 		},
+			-- 		ghost_text = {
+			-- 			enabled = false,
+			-- 		},
+			-- 	},
+			-- 	signature = {
+			-- 		enabled = true,
+			-- 		window = {
+			-- 			border = "rounded",
+			-- 		},
+			-- 	},
+			-- },
 		},
 	},
 
