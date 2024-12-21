@@ -105,21 +105,21 @@ return {
 				list = {
 					selection = "auto_insert",
 				},
+				menu = {
+					enabled = true,
+					border = "rounded",
+				},
+				documentation = {
+					auto_show = true,
+					auto_show_delay_ms = 50,
+					window = {
+						border = "rounded",
+					},
+					ghost_text = {
+						enabled = false,
+					},
+				},
 			},
-			-- 	menu = {
-			-- 		enabled = true,
-			-- 		border = "rounded",
-			-- 	},
-			-- 	documentation = {
-			-- 		auto_show = true,
-			-- 		auto_show_delay_ms = 50,
-			-- 		window = {
-			-- 			border = "rounded",
-			-- 		},
-			-- 		ghost_text = {
-			-- 			enabled = false,
-			-- 		},
-			-- 	},
 			-- 	signature = {
 			-- 		enabled = true,
 			-- 		window = {
