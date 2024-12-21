@@ -115,9 +115,9 @@ return {
 					window = {
 						border = "rounded",
 					},
-					ghost_text = {
-						enabled = false,
-					},
+				},
+				ghost_text = {
+					enabled = false,
 				},
 			},
 			-- 	signature = {
