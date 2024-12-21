@@ -119,12 +119,12 @@ return {
 				ghost_text = {
 					enabled = false,
 				},
-				-- signature = {
-				-- 	enabled = true,
-				-- 	window = {
-				-- 		border = "rounded",
-				-- 	},
-				-- },
+				signature = {
+					enabled = true,
+					window = {
+						border = "rounded",
+					},
+				},
 			},
 		},
 	},
