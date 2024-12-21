@@ -119,6 +119,7 @@ return {
 				ghost_text = {
 					enabled = false,
 				},
+				signature = { enabled = true },
 			},
 		},
 	},
