@@ -107,7 +107,7 @@ return {
 				},
 				menu = {
 					enabled = true,
-					border = "solid",
+					border = "rounded",
 				},
 				documentation = {
 					auto_show = true,
