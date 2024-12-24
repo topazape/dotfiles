@@ -106,8 +106,8 @@ return {
 					selection = "auto_insert",
 				},
 				menu = {
-					enabled = false,
-					border = "rounded",
+					enabled = true,
+					border = "solid",
 				},
 				documentation = {
 					auto_show = true,
