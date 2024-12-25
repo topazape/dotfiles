@@ -95,11 +95,9 @@ return {
 			keymap = {
 				["<C-g>"] = { "show", "show_documentation", "hide_documentation" },
 				["<C-f>"] = { "accept" },
-				["<CR>"] = { "accept" },
+				["<TAB>"] = { "accept" },
 				["<C-p>"] = { "select_prev", "fallback" },
 				["<C-n>"] = { "select_next", "fallback" },
-				["<TAB>"] = { "select_next", "fallback" },
-				["<S-TAB>"] = { "select_prev", "fallback" },
 				["<C-j>"] = { "scroll_documentation_down" },
 				["<C-k>"] = { "scroll_documentation_up" },
 			},
