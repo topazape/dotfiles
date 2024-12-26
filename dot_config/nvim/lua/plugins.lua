@@ -96,13 +96,13 @@ return {
 				preset = "none",
 
 				["<C-g>"] = { "show", "show_documentation", "hide_documentation" },
-				["<C-f>"] = { "accept" },
+				["<C-f>"] = { "accept", "fallback" },
 				["<C-e>"] = { "accept", "fallback" },
 				-- ["<TAB>"] = { "accept" },
 				["<C-p>"] = { "select_prev", "fallback" },
 				["<C-n>"] = { "select_next", "fallback" },
-				["<C-j>"] = { "scroll_documentation_down" },
-				["<C-k>"] = { "scroll_documentation_up" },
+				["<C-j>"] = { "scroll_documentation_down", "fallback" },
+				["<C-k>"] = { "scroll_documentation_up", "fallback" },
 			},
 			completion = {
 				list = {
