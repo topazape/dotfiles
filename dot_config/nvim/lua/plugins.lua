@@ -93,9 +93,12 @@ return {
 		},
 		opts = {
 			keymap = {
+				preset = "none",
+
 				["<C-g>"] = { "show", "show_documentation", "hide_documentation" },
 				["<C-f>"] = { "accept" },
-				["<TAB>"] = { "accept" },
+				["<C-e>"] = { "accept", "fallback" },
+				-- ["<TAB>"] = { "accept" },
 				["<C-p>"] = { "select_prev", "fallback" },
 				["<C-n>"] = { "select_next", "fallback" },
 				["<C-j>"] = { "scroll_documentation_down" },
