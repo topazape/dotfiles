@@ -97,13 +97,16 @@ return {
 
 				["<C-g>"] = { "show", "show_documentation", "hide_documentation" },
 				["<C-f>"] = { "accept", "fallback" },
-				["<C-e>"] = { "accept", "fallback" },
-				["<TAB>"] = { "select_prev", "fallback" },
-				["<S-TAB>"] = { "select_next", "fallback" },
+				["<CR>"] = { "accept", "fallback" },
 				["<C-p>"] = { "select_prev", "fallback" },
 				["<C-n>"] = { "select_next", "fallback" },
 				["<C-j>"] = { "scroll_documentation_down", "fallback" },
 				["<C-k>"] = { "scroll_documentation_up", "fallback" },
+
+				cmdline = {
+					["<S-TAB>"] = { "select_prev", "fallback" },
+					["<TAB>"] = { "select_next", "fallback" },
+				},
 			},
 			completion = {
 				list = {
