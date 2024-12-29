@@ -14,7 +14,7 @@ return {
 			active_tab = {
 				-- bg_color = "#363a4f",
 				bg_color = "#1f2335",
-				fg_color = "#414868",
+				fg_color = "#a9b1d6",
 			},
 		},
 	},
