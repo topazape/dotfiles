@@ -44,7 +44,7 @@ return {
 		inactive_titlebar_bg = "#1a1b26",
 		font_size = 15,
 		font = wezterm.font_with_fallback({
-			{ family = "Berkeley Mono Bold" },
+			{ family = "Berkeley Mono" },
 			{ family = "IBM Plex Sans JP" },
 		}),
 	},
