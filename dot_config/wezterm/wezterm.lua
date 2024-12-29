@@ -40,8 +40,10 @@ return {
 	use_fancy_tab_bar = true,
 	show_new_tab_button_in_tab_bar = false,
 	window_frame = {
-		inactive_titlebar_bg = "#1a1b26",
 		active_titlebar_bg = "#1a1b26",
+		active_titlebar_border_bottom = "#2b2042",
+		inactive_titlebar_bg = "#1a1b26",
+		inactive_titlebar_border_bottom = "#2b2042",
 		font = wezterm.font_with_fallback({
 			{ family = "Berkeley Mono" },
 			{ family = "IBM Plex Sans JP" },
