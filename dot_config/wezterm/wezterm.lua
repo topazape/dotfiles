@@ -1,4 +1,3 @@
-require("status")
 local DEFAULT_BG = "#1a1b26"
 local DEFAULT_FG = "#c0caf5"
 local FONT_SIZE = 15
@@ -9,6 +8,7 @@ local FONT_FALLBACKS = {
 
 local wezterm = require("wezterm")
 local keys = require("keymaps")
+require("status")
 
 return {
 	front_end = "OpenGL",
