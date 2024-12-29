@@ -1,4 +1,5 @@
-local DEFAULT_BG = "#1a1b26"
+-- local DEFAULT_BG = "#1a1b26"
+local DEFAULT_BG = "#ffffff"
 local DEFAULT_FG = "#c0caf5"
 local FONT_SIZE = 15
 local FONT_FALLBACKS = {
