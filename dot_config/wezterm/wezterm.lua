@@ -36,6 +36,7 @@ return {
 	use_fancy_tab_bar = true,
 	show_new_tab_button_in_tab_bar = false,
 	window_frame = {
+		font = wezterm.font("JetBrains Mono"),
 		font_size = 18,
 	},
 
