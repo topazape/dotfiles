@@ -37,6 +37,7 @@ return {
 	show_new_tab_button_in_tab_bar = false,
 	window_frame = {
 		inactive_titlebar_bg = "#1f2335",
+		active_titlebar_bg = "#1f2335",
 		font = wezterm.font_with_fallback({
 			{ family = "Berkeley Mono" },
 			{ family = "IBM Plex Sans JP" },
