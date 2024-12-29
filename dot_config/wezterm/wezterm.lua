@@ -35,11 +35,11 @@ return {
 	macos_window_background_blur = 20,
 	use_fancy_tab_bar = true,
 	show_new_tab_button_in_tab_bar = false,
+	show_close_tab_button_in_tabs = false,
 
 	-- window size
 	initial_cols = 80 + 8 * 9,
 	initial_rows = 24 + 8 * 3,
-
 	-- bell
 	audible_bell = "Disabled",
 	visual_bell = {
