@@ -1,12 +1,5 @@
 local wezterm = require("wezterm")
 
--- palette
--- #073b4c
--- #118ab2
--- #06d6a0
--- #ffd166
--- #ef476f
-
 local DEFAULT_BG = { Color = "#1a1b26" }
 local DEFAULT_FG = { Color = "#c0caf5" }
 
