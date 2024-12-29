@@ -7,7 +7,7 @@ local wezterm = require("wezterm")
 -- #ffd166
 -- #ef476f
 
-local DEFAULT_FG = { Color = "#eeeeee" }
+local DEFAULT_FG = { Color = "#c0caf5" }
 -- local DEFAULT_BG = { Color = "#363a4f" }
 local DEFAULT_BG = { Color = "#1f2335" }
 
