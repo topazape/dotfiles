@@ -20,7 +20,6 @@ return {
 
 	-- font
 	font = wezterm.font_with_fallback({
-		-- { family = "JetBrains Mono" },
 		{ family = "Berkeley Mono" },
 		{ family = "IBM Plex Sans JP" },
 	}),
@@ -36,7 +35,10 @@ return {
 	use_fancy_tab_bar = true,
 	show_new_tab_button_in_tab_bar = false,
 	window_frame = {
-		font = wezterm.font("JetBrains Mono"),
+		font = wezterm.font_with_fallback({
+			{ family = "Berkeley Mono" },
+			{ family = "IBM Plex Sans JP" },
+		}),
 		font_size = 18,
 	},
 
