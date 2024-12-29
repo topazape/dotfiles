@@ -41,14 +41,12 @@ return {
 	show_new_tab_button_in_tab_bar = false,
 	window_frame = {
 		active_titlebar_bg = "#1a1b26",
-		active_titlebar_border_bottom = "#ffffff",
 		inactive_titlebar_bg = "#1a1b26",
-		inactive_titlebar_border_bottom = "#2b2042",
+		font_size = 15,
 		font = wezterm.font_with_fallback({
 			{ family = "Berkeley Mono" },
 			{ family = "IBM Plex Sans JP" },
 		}),
-		font_size = 15,
 	},
 
 	-- window size
