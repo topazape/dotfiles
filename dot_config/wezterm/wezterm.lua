@@ -35,7 +35,7 @@ return {
 
 	-- look and feel
 	window_decorations = "RESIZE",
-	window_background_opacity = 0.98,
+	-- window_background_opacity = 0.98,
 	macos_window_background_blur = 20,
 	use_fancy_tab_bar = true,
 	show_new_tab_button_in_tab_bar = false,
