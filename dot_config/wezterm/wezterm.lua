@@ -39,7 +39,7 @@ return {
 			{ family = "Berkeley Mono" },
 			{ family = "IBM Plex Sans JP" },
 		}),
-		font_size = 16,
+		font_size = 14,
 	},
 
 	-- window size
