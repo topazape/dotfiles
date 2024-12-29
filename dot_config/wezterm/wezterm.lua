@@ -42,7 +42,7 @@ return {
 	window_frame = {
 		active_titlebar_bg = "#1a1b26",
 		inactive_titlebar_bg = "#1a1b26",
-		font_size = 15,
+		font_size = 14,
 		font = wezterm.font_with_fallback({
 			{ family = "Berkeley Mono" },
 			{ family = "IBM Plex Sans JP" },
