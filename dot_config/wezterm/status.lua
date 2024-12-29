@@ -87,6 +87,6 @@ local function right_update(window)
 	window:set_right_status(wezterm.format(elems))
 end
 
-wezterm.on("update-status", function(window)
+wezterm.on("update-right-status", function(window)
 	right_update(window)
 end)
