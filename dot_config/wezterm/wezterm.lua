@@ -34,6 +34,7 @@ return {
 	window_background_opacity = 0.98,
 	macos_window_background_blur = 20,
 	use_fancy_tab_bar = true,
+	show_new_tab_button_in_tab_bar = false,
 
 	-- window size
 	initial_cols = 80 + 8 * 9,
