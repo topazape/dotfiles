@@ -16,7 +16,7 @@ return {
 				fg_color = "#c0caf5",
 			},
 			inactive_tab = {
-				bg_color = "#1f2335",
+				bg_color = "#999999",
 				fg_color = "#c0caf5",
 			},
 		},
