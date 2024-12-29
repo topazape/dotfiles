@@ -1,7 +1,14 @@
 local wezterm = require("wezterm")
 
-local DEFAULT_BG = "#1a1b26"
-local DEFAULT_FG = "#c0caf5"
+-- palette
+-- #073b4c
+-- #118ab2
+-- #06d6a0
+-- #ffd166
+-- #ef476f
+
+local DEFAULT_BG = { Color = "#1a1b26" }
+local DEFAULT_FG = { Color = "#c0caf5" }
 
 local HEADER_TIME = { Foreground = { Color = "#118ab2" }, Text = " " }
 local HEADER_DATE = { Foreground = { Color = "#ef476f" }, Text = "󱪺 " }
@@ -87,7 +94,6 @@ local function right_update(window)
 	window:set_right_status(wezterm.format(elems))
 end
 
-wezterm.on("update-right-status", function(window)
-	window:set_right_status("This is a custom right status")
-	-- right_update(window)
+wezterm.on("update-status", function(window)
+	right_update(window)
 end)
