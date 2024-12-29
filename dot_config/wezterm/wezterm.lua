@@ -18,7 +18,7 @@ return {
 			},
 			inactive_tab = {
 				bg_color = "#1f2335",
-				fg_color = "#292e42",
+				fg_color = "#3b4261",
 			},
 		},
 	},
