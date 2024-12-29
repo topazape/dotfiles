@@ -1,5 +1,8 @@
 local wezterm = require("wezterm")
 local keys = require("keymaps")
+local DEFAULT_BG = "#1a1b26"
+local DEFAULT_FG = "#c0caf5"
+local FONT_SIZE = 15
 require("status")
 
 return {
@@ -13,11 +16,11 @@ return {
 		tab_bar = {
 			inactive_tab_edge = "none",
 			active_tab = {
-				bg_color = "#1a1b26",
-				fg_color = "#c0caf5",
+				bg_color = DEFAULT_BG,
+				fg_color = DEFAULT_FG,
 			},
 			inactive_tab = {
-				bg_color = "#1a1b26",
+				bg_color = DEFAULT_BG,
 				fg_color = "#3b4261",
 			},
 		},
@@ -28,7 +31,7 @@ return {
 		{ family = "Berkeley Mono" },
 		{ family = "IBM Plex Sans JP" },
 	}),
-	font_size = 15,
+	font_size = font_size,
 	warn_about_missing_glyphs = false,
 	adjust_window_size_when_changing_font_size = false,
 	line_height = 1.10,
@@ -42,7 +45,7 @@ return {
 	window_frame = {
 		active_titlebar_bg = "#1a1b26",
 		inactive_titlebar_bg = "#1a1b26",
-		font_size = 14,
+		font_size = font_size,
 		font = wezterm.font_with_fallback({
 			{ family = "Berkeley Mono" },
 			{ family = "IBM Plex Sans JP" },
