@@ -36,7 +36,7 @@ return {
 	use_fancy_tab_bar = true,
 	show_new_tab_button_in_tab_bar = false,
 	window_frame = {
-		font_size = 12,
+		font_size = 18,
 	},
 
 	-- window size
