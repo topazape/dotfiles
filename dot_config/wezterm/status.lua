@@ -88,5 +88,6 @@ local function right_update(window)
 end
 
 wezterm.on("update-right-status", function(window)
-	right_update(window)
+	window:set_right_status("This is a custom right status")
+	-- right_update(window)
 end)
