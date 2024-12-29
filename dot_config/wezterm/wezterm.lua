@@ -3,6 +3,10 @@ local keys = require("keymaps")
 local DEFAULT_BG = "#1a1b26"
 local DEFAULT_FG = "#c0caf5"
 local FONT_SIZE = 15
+local FONT_FALLBACKS = {
+	{ family = "Berkeley Mono" },
+	{ family = "IBM Plex Sans JP" },
+}
 require("status")
 
 return {
@@ -27,10 +31,7 @@ return {
 	},
 
 	-- font
-	font = wezterm.font_with_fallback({
-		{ family = "Berkeley Mono" },
-		{ family = "IBM Plex Sans JP" },
-	}),
+	font = wezterm.font_with_fallback(FONT_FALLBACKS),
 	font_size = FONT_SIZE,
 	warn_about_missing_glyphs = false,
 	adjust_window_size_when_changing_font_size = false,
@@ -43,13 +44,10 @@ return {
 	use_fancy_tab_bar = true,
 	show_new_tab_button_in_tab_bar = false,
 	window_frame = {
-		active_titlebar_bg = "#1a1b26",
-		inactive_titlebar_bg = "#1a1b26",
+		active_titlebar_bg = DEFAULT_BG,
+		inactive_titlebar_bg = DEFAULT_BG,
 		font_size = FONT_SIZE,
-		font = wezterm.font_with_fallback({
-			{ family = "Berkeley Mono" },
-			{ family = "IBM Plex Sans JP" },
-		}),
+		font = wezterm.font_with_fallback(FONT_FALLBACKS),
 	},
 
 	-- window size
