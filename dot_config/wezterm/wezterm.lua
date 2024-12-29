@@ -45,11 +45,8 @@ return {
 	use_fancy_tab_bar = true,
 	show_new_tab_button_in_tab_bar = false,
 	window_frame = {
-		active_titlebar_bg = "none",
-		inactive_titlebar_bg = "none",
-		--
-		-- active_titlebar_bg = DEFAULT_BG,
-		-- inactive_titlebar_bg = DEFAULT_BG,
+		active_titlebar_bg = DEFAULT_BG,
+		inactive_titlebar_bg = DEFAULT_BG,
 		font_size = FONT_SIZE,
 		font = wezterm.font_with_fallback(FONT_FALLBACKS),
 	},
