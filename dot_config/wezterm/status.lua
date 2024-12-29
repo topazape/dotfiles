@@ -1,4 +1,3 @@
-print("Loading status.lua")
 local wezterm = require("wezterm")
 
 local DEFAULT_BG = "#1a1b26"
