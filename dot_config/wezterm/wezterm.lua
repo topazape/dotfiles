@@ -11,6 +11,7 @@ return {
 	-- colors
 	colors = {
 		tab_bar = {
+			inactive_tab_edge = "none",
 			active_tab = {
 				bg_color = "#1f2335",
 				fg_color = "#c0caf5",
