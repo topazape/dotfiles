@@ -39,7 +39,7 @@ return {
 	line_height = 1.10,
 
 	-- look and feel
-	window_decorations = "TITLE|RESIZE",
+	window_decorations = "RESIZE",
 	window_background_opacity = 0.98,
 	macos_window_background_blur = 20,
 	use_fancy_tab_bar = true,
