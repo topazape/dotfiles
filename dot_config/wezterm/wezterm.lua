@@ -56,7 +56,7 @@ return {
 		active_titlebar_bg = DEFAULT_BG,
 		inactive_titlebar_bg = DEFAULT_BG,
 		font_size = FONT_SIZE,
-		font = wezterm.font_with_fallback(convert_font_weight("Black")),
+		font = wezterm.font_with_fallback(convert_font_weight("ExtraBold")),
 	},
 
 	-- window size
