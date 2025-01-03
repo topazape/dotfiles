@@ -5,6 +5,13 @@ local FONT_FALLBACKS = {
 	{ family = "TX-02", weight = "Regular" },
 	{ family = "IBM Plex Sans JP" },
 }
+local function convert_font_weightt(weight)
+	local converted = {}
+	for i, font in ipairs(FONT_FALLBACKS) do
+		converted[i] = { family = font.family, weight = weight }
+	end
+	return converted
+end
 
 local wezterm = require("wezterm")
 local keys = require("keymaps")
@@ -32,7 +39,7 @@ return {
 	},
 
 	-- font
-	font = wezterm.font_with_fallback(FONT_FALLBACKS),
+	font = wezterm.font_with_fallback(convert_font_weightt("Regular")),
 	font_size = FONT_SIZE,
 	warn_about_missing_glyphs = false,
 	adjust_window_size_when_changing_font_size = false,
