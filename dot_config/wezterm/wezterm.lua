@@ -1,5 +1,5 @@
 local DEFAULT_BG = "#1a1b26"
-local DEFAULT_ACTIVE_FG = "#7aa2f7"
+local DEFAULT_ACTIVE_FG = "#7dcfff"
 local DEFAULT_INACTIVE_FG = "#3d59a1"
 local FONT_SIZE = 15
 local CONSOLE_FONTS = {
