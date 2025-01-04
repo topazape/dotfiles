@@ -1,7 +1,7 @@
 local wezterm = require("wezterm")
 
 local DEFAULT_BG = { Color = "#1a1b26" }
-local DEFAULT_FG = { Color = "#4fd6be" }
+local DEFAULT_FG = { Color = "#3d59a1" }
 
 local HEADER_TIME = { Foreground = { Color = "#118ab2" }, Text = " " }
 local HEADER_DATE = { Foreground = { Color = "#ef476f" }, Text = "󱪺 " }
