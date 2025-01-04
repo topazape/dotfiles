@@ -135,6 +135,13 @@ if type npm >/dev/null 2>&1; then
   eval "$(npm completion)"
 fi
 ## Python
+if type python3 2>&1; then
+  export IPYTHONDIR=${XDG_CONFIG_HOME}/ipython
+  export JUPYTER_CONFIG_DIR=${XDG_CONFIG_HOME}/jupyter
+  export MPLCONFIGDIR=${XDG_CONFIG_HOME}/matplotlib
+  export SEABORN_DATA=${XDG_DATA_HOME}/seaborn
+  export PYTENSOR_FLAGS="base_compiledir=${XDG_CACHE_HOME}/pytensor"
+fi
 ### pip
 if type pip >/dev/null 2>&1 || type pip3 >/dev/null 2>&1; then
   export PIP_CACHE_DIR=${XDG_CACHE_HOME}/pip
