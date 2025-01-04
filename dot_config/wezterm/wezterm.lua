@@ -59,7 +59,7 @@ return {
 		active_titlebar_bg = DEFAULT_BG,
 		inactive_titlebar_bg = DEFAULT_BG,
 		font_size = FONT_SIZE,
-		font = wezterm.font_with_fallback(retrieve_font_settings(TABBAR_FONTS, "Regular")),
+		font = wezterm.font_with_fallback(retrieve_font_settings(TABBAR_FONTS, "Bold")),
 	},
 
 	-- window size
