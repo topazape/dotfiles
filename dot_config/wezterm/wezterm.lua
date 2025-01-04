@@ -30,7 +30,7 @@ return {
 			inactive_tab_edge = "none",
 			active_tab = {
 				bg_color = DEFAULT_BG,
-				fg_color = DEFAULT_FG,
+				fg_color = "#565f89",
 			},
 			inactive_tab = {
 				bg_color = DEFAULT_BG,
