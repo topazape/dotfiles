@@ -82,10 +82,6 @@ if type chezmoi >/dev/null 2>&1; then
   # completion
   eval "$(chezmoi completion zsh)"
 fi
-## direnv
-if type direnv >/dev/null 2>&1; then
-  eval "$(direnv hook zsh)"
-fi
 ## bat
 if type bat >/dev/null 2>&1; then
   export BAT_THEME="TwoDark"
