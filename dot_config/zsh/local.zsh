@@ -135,7 +135,7 @@ if type npm >/dev/null 2>&1; then
   eval "$(npm completion)"
 fi
 ## Python
-if type python3 2>&1; then
+if type python3 >/dev/null 2>&1; then
   export IPYTHONDIR=${XDG_CONFIG_HOME}/ipython
   export JUPYTER_CONFIG_DIR=${XDG_CONFIG_HOME}/jupyter
   export MPLCONFIGDIR=${XDG_CONFIG_HOME}/matplotlib
