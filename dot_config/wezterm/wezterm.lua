@@ -1,6 +1,6 @@
 local DEFAULT_BG = "#1a1b26"
-local DEFAULT_INACTIVE_FG = "#c0caf5"
-local DEFAULT_ACTIVE_FG = "#ffc777"
+local DEFAULT_INACTIVE_FG = "#a9b1d6"
+local DEFAULT_ACTIVE_FG = "#"
 local FONT_SIZE = 15
 local CONSOLE_FONTS = {
 	{ family = "TX-02" },
