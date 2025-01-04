@@ -217,6 +217,12 @@ return {
 		"OXY2DEV/foldtext.nvim",
 		lazy = false,
 	},
+	---- window separator
+	{
+		"nvim-zh/colorful-winsep.nvim",
+		config = true,
+		event = { "WinLeave" },
+	},
 
 	-- AI
 	---- copilot
