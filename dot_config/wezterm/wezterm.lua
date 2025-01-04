@@ -5,9 +5,6 @@ local CONSOLE_FONTS = {
 	{ family = "TX-02" },
 	{ family = "IBM Plex Sans JP" },
 }
-local TABBAR_FONTS = {
-	{ family = "Spot Mono" },
-}
 
 local function retrieve_font_settings(fonts, weight)
 	local converted = {}
@@ -59,7 +56,7 @@ return {
 		active_titlebar_bg = DEFAULT_BG,
 		inactive_titlebar_bg = DEFAULT_BG,
 		font_size = FONT_SIZE,
-		font = wezterm.font_with_fallback(retrieve_font_settings(TABBAR_FONTS, "Bold")),
+		font = wezterm.font_with_fallback(retrieve_font_settings(CONSOLE_FONTS, "Black")),
 	},
 
 	-- window size
