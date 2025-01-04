@@ -1,14 +1,17 @@
 local DEFAULT_BG = "#1a1b26"
 local DEFAULT_FG = "#c0caf5"
 local FONT_SIZE = 15
-local FONT_FALLBACKS = {
+local CONSOLE_FONTS = {
 	{ family = "TX-02" },
 	{ family = "IBM Plex Sans JP" },
 }
+local TABBAR_FONTS = {
+	{ family = "Spot Mono" },
+}
 
-local function convert_font_weight(weight)
+local function retrieve_font_settings(fonts, weight)
 	local converted = {}
-	for i, font in ipairs(FONT_FALLBACKS) do
+	for i, font in ipairs(fonts) do
 		converted[i] = { family = font.family, weight = weight }
 	end
 	return converted
@@ -40,7 +43,7 @@ return {
 	},
 
 	-- font
-	font = wezterm.font_with_fallback(convert_font_weight("Regular")),
+	font = wezterm.font_with_fallback(retrieve_font_settings(CONSOLE_FONTS, "Regular")),
 	font_size = FONT_SIZE,
 	warn_about_missing_glyphs = false,
 	adjust_window_size_when_changing_font_size = false,
@@ -56,7 +59,7 @@ return {
 		active_titlebar_bg = DEFAULT_BG,
 		inactive_titlebar_bg = DEFAULT_BG,
 		font_size = FONT_SIZE,
-		font = wezterm.font_with_fallback(convert_font_weight("ExtraBold")),
+		font = wezterm.font_with_fallback(retrieve_font_settings(TABBAR_FONTS, "Regular")),
 	},
 
 	-- window size
