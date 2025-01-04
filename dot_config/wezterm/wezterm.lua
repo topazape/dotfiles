@@ -55,7 +55,7 @@ return {
 	window_frame = {
 		active_titlebar_bg = DEFAULT_BG,
 		inactive_titlebar_bg = DEFAULT_BG,
-		font_size = FONT_SIZE + 2,
+		font_size = FONT_SIZE - 1.5,
 		font = wezterm.font_with_fallback(retrieve_font_settings(CONSOLE_FONTS, "Black")),
 	},
 
