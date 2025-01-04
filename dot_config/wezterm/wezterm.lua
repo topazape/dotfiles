@@ -1,5 +1,6 @@
 local DEFAULT_BG = "#1a1b26"
-local DEFAULT_FG = "#c0caf5"
+local DEFAULT_ACTIVE_FG = "#c0caf5"
+local DEFAULT_INACTIVE_FG = "#ffc777"
 local FONT_SIZE = 15
 local CONSOLE_FONTS = {
 	{ family = "TX-02" },
@@ -30,11 +31,11 @@ return {
 			inactive_tab_edge = "none",
 			active_tab = {
 				bg_color = DEFAULT_BG,
-				fg_color = "#565f89",
+				fg_color = DEFAULT_ACTIVE_FG,
 			},
 			inactive_tab = {
 				bg_color = DEFAULT_BG,
-				fg_color = "#3b4261",
+				fg_color = DEFAULT_INACTIVE_FG,
 			},
 		},
 	},
