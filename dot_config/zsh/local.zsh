@@ -146,6 +146,10 @@ fi
 if type pip >/dev/null 2>&1 || type pip3 >/dev/null 2>&1; then
   export PIP_CACHE_DIR=${XDG_CACHE_HOME}/pip
 fi
+### R language
+if type R >/dev/null 2>&1; then
+  export RENV_PATHS_ROOT=${XDG_CACHE_HOME}/R/renv
+fi
 ## Rust
 ### cargo
 if type cargo >/dev/null 2>&1; then
