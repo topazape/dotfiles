@@ -8,8 +8,8 @@ return {
 				style = "night",
 			})
 			vim.cmd.colorscheme("tokyonight")
-			-- vim.cmd("highlight WinSeparator guifg=#3d59a1 guibg=None")
-			-- vim.cmd("highlight DiagnosticHint guifg=#ffc777 guibg=None")
+			vim.cmd("highlight WinSeparator guifg=#3d59a1 guibg=None")
+			vim.cmd("highlight DiagnosticHint guifg=#ffc777 guibg=None")
 		end,
 	},
 
@@ -216,12 +216,6 @@ return {
 	{
 		"OXY2DEV/foldtext.nvim",
 		lazy = false,
-	},
-	---- window separator
-	{
-		"nvim-zh/colorful-winsep.nvim",
-		config = true,
-		event = { "WinLeave" },
 	},
 
 	-- AI
