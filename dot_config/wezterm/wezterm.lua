@@ -2,7 +2,6 @@ local DEFAULT_BG = "#1a1b26"
 local DEFAULT_FG = "#c0caf5"
 local FONT_SIZE = 15
 local FONT_FALLBACKS = {
-	{ family = "Spot Mono" },
 	{ family = "TX-02" },
 	{ family = "IBM Plex Sans JP" },
 }
