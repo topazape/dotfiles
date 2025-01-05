@@ -18,7 +18,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("fluoromachine").setup({
-				theme = "delta",
+				theme = "retrowave",
 			})
 			vim.cmd.colorscheme("fluoromachine")
 		end,
