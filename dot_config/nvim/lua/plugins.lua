@@ -16,9 +16,12 @@ return {
 		"maxmx03/fluoromachine.nvim",
 		lazy = false,
 		priority = 1000,
-		opts = {
-			theme = "fluoromachine",
-		},
+		config = function()
+			require("fluoromachine").setup({
+				theme = "fluoromachine",
+			})
+			vim.cmd.colorscheme("fluoromachine")
+		end,
 	},
 
 	-- devicon
