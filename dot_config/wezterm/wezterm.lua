@@ -1,7 +1,7 @@
 local DEFAULT_BG = "#1a1b26"
 local DEFAULT_ACTIVE_FG = "#a9b1d6"
 local DEFAULT_INACTIVE_FG = "#394b70"
-local FONT_SIZE = 14.5
+local FONT_SIZE = 15
 local CONSOLE_FONTS = {
 	{ family = "TX-02" },
 	{ family = "IBM Plex Sans JP" },
@@ -45,7 +45,7 @@ return {
 	font_size = FONT_SIZE,
 	warn_about_missing_glyphs = false,
 	adjust_window_size_when_changing_font_size = false,
-	line_height = 1.00,
+	line_height = 1.05,
 
 	-- look and feel
 	window_decorations = "RESIZE",
