@@ -1,26 +1,15 @@
 return {
-	-- {
-	-- 	"folke/tokyonight.nvim",
-	-- 	lazy = false,
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		require("tokyonight").setup({
-	-- 			style = "night",
-	-- 		})
-	-- 		vim.cmd.colorscheme("tokyonight")
-	-- 		vim.cmd("highlight WinSeparator guifg=#3d59a1 guibg=None")
-	-- 		vim.cmd("highlight DiagnosticHint guifg=#ffc777 guibg=None")
-	-- 	end,
-	-- },
 	{
-		"maxmx03/fluoromachine.nvim",
+		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("fluoromachine").setup({
-				theme = "retrowave",
+			require("tokyonight").setup({
+				style = "night",
 			})
-			vim.cmd.colorscheme("fluoromachine")
+			vim.cmd.colorscheme("tokyonight")
+			vim.cmd("highlight WinSeparator guifg=#3d59a1 guibg=None")
+			vim.cmd("highlight DiagnosticHint guifg=#ffc777 guibg=None")
 		end,
 	},
 
