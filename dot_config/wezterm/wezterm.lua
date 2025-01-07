@@ -41,7 +41,7 @@ return {
 	},
 
 	-- font
-	font = wezterm.font_with_fallback(retrieve_font_settings(CONSOLE_FONTS, "Bold")),
+	font = wezterm.font_with_fallback(retrieve_font_settings(CONSOLE_FONTS, "Normal")),
 	font_size = FONT_SIZE,
 	warn_about_missing_glyphs = false,
 	adjust_window_size_when_changing_font_size = false,
