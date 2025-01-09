@@ -258,9 +258,6 @@ return {
           Optimize = {
             prompt = '/COPILOT_OPTIMIZE 選択したコードを最適化し、パフォーマンスと可読性を向上させてください。',
           },
-          Docs = {
-            prompt = '/COPILOT_DOCS 選択したコードのドキュメントを書いてください。',
-          },
           Tests = {
             prompt = '/COPILOT_TESTS 選択したコードの詳細な単体テスト関数を書いてください。',
           },
