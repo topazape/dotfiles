@@ -126,6 +126,9 @@ return {
 					enabled = false,
 				},
 			},
+			sources = {
+				cmdline = {},
+			},
 			signature = {
 				enabled = true,
 				window = {
