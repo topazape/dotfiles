@@ -246,7 +246,48 @@ return {
 	{
 		"CopilotC-Nvim/CopilotChat.nvim",
 		build = "make tiktoken", -- Only on MacOS or Linux
-		opts = {},
+    opts = {
+      prompts = {
+          Explain = {
+            prompt = '/COPILOT_EXPLAIN 選択したコードの説明を段落をつけて書いてください。',
+          },
+          Review = {},
+          Fix = {
+            prompt = '/COPILOT_FIX このコードには問題があります。バグを修正したコードに書き換えてください。',
+          },
+          Optimize = {
+            prompt = '/COPILOT_OPTIMIZE 選択したコードを最適化し、パフォーマンスと可読性を向上させてください。',
+          },
+          Docs = {
+            prompt = '/COPILOT_DOCS 選択したコードのドキュメントを書いてください。',
+          },
+          Tests = {
+            prompt = '/COPILOT_TESTS 選択したコードの詳細な単体テスト関数を書いてください。',
+          },
+          Commit = {
+            prompt = '/COPILOT_COMMIT この変更をコミットしてください。',
+          },
+        },
+        window = {
+          layout = 'vertical',
+          width = 0.3,
+          height = 0.3,
+          relative = 'editor',
+          border = 'single',
+          row = 0,
+          col = 0,
+          title = 'Copilot Chat',
+          footer = nil,
+          zindex = 1,
+        },
+      },
+    },
+    config = function(_, opts)
+      local chat = require("CopilotChat")
+      chat.setup(opts)
+
+      local select = require("CopilotChat.select")
+    end
 	},
 
 	-- git
