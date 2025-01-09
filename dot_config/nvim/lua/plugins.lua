@@ -224,6 +224,10 @@ return {
 		version = false,
 		opts = {},
 		build = "make",
+		dependencies = {
+			"stevearc/dressing.nvim",
+			"MunifTanjim/nui.nvim",
+		},
 	},
 	---- copilot
 	{
