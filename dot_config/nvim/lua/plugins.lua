@@ -117,9 +117,7 @@ return {
 					border = "rounded",
 					draw = {
 						columns = {
-							label = {
-								width = 40,
-							},
+							{ "label" },
 						},
 					},
 				},
