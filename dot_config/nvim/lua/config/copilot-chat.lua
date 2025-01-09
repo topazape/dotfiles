@@ -73,7 +73,7 @@ copilot_chat.setup({
 		width = 0.3,
 		height = 0.3,
 		relative = "editor",
-		border = "single",
+		border = "double",
 		row = 0,
 		col = 0,
 		title = "Copilot Chat",
