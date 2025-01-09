@@ -9,7 +9,7 @@ copilot_chat.setup({
 		},
 		-- 選択されたコードのコードレビューを実行
 		Review = {
-			prompt = "> /COPILOT_REVIEW\n\n選択されたコードを日本語でレビューしてください。",
+			prompt = "> /COPILOT_REVIEW\n\n選択されたコードをレビューしてください。",
 			-- 注：追加の実装詳細はconfig.luaにあります
 		},
 		-- 問題のあるコードの修正版を生成
