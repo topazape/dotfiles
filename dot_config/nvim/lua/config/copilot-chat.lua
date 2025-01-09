@@ -35,11 +35,17 @@ copilot_chat.setup({
 		},
 		FixDiagnostic = {
 			prompt = "ファイル内の次の問題を支援してください:",
-			selection = select.diagnostics,
+			selection = function()
+				local select = require("CopilotChat.select")
+				return select.diagnostics
+			end,
 		},
 		Commit = {
 			prompt = "変更のコミットメッセージをcommitizenの規約に従って日本語で書いてください。タイトルは最大50文字、メッセージは72文字で折り返してください。メッセージ全体をgitcommit言語のコードブロックで囲んでください。",
-			selection = select.gitdiff,
+			selection = function()
+				local select = require("CopilotChat.select")
+				return select.gitdiff
+			end,
 		},
 		CommitStaged = {
 			prompt = "変更のコミットメッセージをcommitizenの規約に従って日本語で書いてください。タイトルは最大50文字、メッセージは72文字で折り返してください。メッセージ全体をgitcommit言語のコードブロックで囲んでください。",
