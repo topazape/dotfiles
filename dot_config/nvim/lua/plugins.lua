@@ -223,7 +223,6 @@ return {
 		lazy = false,
 		version = false,
 		opts = {},
-		build = "make",
 		dependencies = {
 			"stevearc/dressing.nvim",
 			"MunifTanjim/nui.nvim",
