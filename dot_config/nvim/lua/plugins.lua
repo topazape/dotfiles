@@ -216,6 +216,14 @@ return {
 	},
 
 	-- AI
+	---- AI IDE
+	{
+		"yetone/avante.nvim",
+		event = "VeryLazy",
+		lazy = false,
+		version = false,
+		opts = {},
+	},
 	---- copilot
 	{
 		"zbirenbaum/copilot.lua",
