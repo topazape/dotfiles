@@ -3,34 +3,50 @@ local copilot_chat = require("CopilotChat")
 copilot_chat.setup({
 	model = "claude-3.5-sonnet",
 	prompts = {
-		-- 選択されたコードの説明を段落形式で生成
 		Explain = {
-			prompt = "> /COPILOT_EXPLAIN\n\n選択されたコードの説明を段落のテキストとして書いてください。",
+			prompt = "/COPILOT_EXPLAIN アクティブな選択範囲の説明を段落形式で書いてください。日本語で返答ください。",
 		},
-		-- 選択されたコードのコードレビューを実行
 		Review = {
-			prompt = "> /COPILOT_REVIEW\n\n選択されたコードをレビューしてください。",
-			-- 注：追加の実装詳細はconfig.luaにあります
+			prompt = "/COPILOT_REVIEW 選択されたコードをレビューしてください。日本語で返答ください。",
 		},
-		-- 問題のあるコードの修正版を生成
-		Fix = {
-			prompt = "> /COPILOT_GENERATE\n\nこのコードには問題があります。バグを修正したコードを書き直してください。",
+		FixCode = {
+			prompt = "/COPILOT_GENERATE このコードには問題があります。バグを修正したコードに書き直してください。日本語で返答ください。",
 		},
-		-- コードの性能と可読性を向上させる最適化
-		Optimize = {
-			prompt = "> /COPILOT_GENERATE\n\n選択されたコードの性能と可読性を改善するために最適化してください。",
+		Refactor = {
+			prompt = "/COPILOT_GENERATE 明瞭性と可読性を向上させるために、次のコードをリファクタリングしてください。日本語で返答ください。",
 		},
-		-- コードにドキュメンテーションコメントを追加
-		Docs = {
-			prompt = "> /COPILOT_GENERATE\n\n選択されたコードにドキュメンテーションコメントを追加してください。",
+		BetterNamings = {
+			prompt = "/COPILOT_GENERATE 選択されたコードの変数名や関数名を改善してください。日本語で返答ください。",
 		},
-		-- コードのテストを生成
+		Documentation = {
+			prompt = "/COPILOT_GENERATE 選択範囲にドキュメントコメントを追加してください。日本語で返答ください。",
+		},
 		Tests = {
-			prompt = "> /COPILOT_GENERATE\n\nコードのテストを生成してください。",
+			prompt = "/COPILOT_GENERATE コードのテストを生成してください。日本語で返答ください。",
 		},
-		-- commitizenの規約に従ってコミットメッセージを生成
+		Wording = {
+			prompt = "/COPILOT_GENERATE 次のテキストの文法と表現を改善してください。日本語で返答ください。",
+		},
+		Summarize = {
+			prompt = "/COPILOT_GENERATE 選択範囲の要約を書いてください。日本語で返答ください。",
+		},
+		Spelling = {
+			prompt = "/COPILOT_GENERATE 次のテキストのスペルミスを修正してください。日本語で返答ください。",
+		},
+		FixDiagnostic = {
+			prompt = "ファイル内の次の問題を支援してください:",
+			selection = select.diagnostics,
+		},
 		Commit = {
-			prompt = "> #git:staged\n\ncommitizenの規約に従ってコミットメッセージを書いてください。タイトルは最大50文字とし、メッセージは72文字で折り返してください。メッセージ全体をgitcommit言語のコードブロックで囲んでください。",
+			prompt = "変更のコミットメッセージをcommitizenの規約に従って日本語で書いてください。タイトルは最大50文字、メッセージは72文字で折り返してください。メッセージ全体をgitcommit言語のコードブロックで囲んでください。",
+			selection = select.gitdiff,
+		},
+		CommitStaged = {
+			prompt = "変更のコミットメッセージをcommitizenの規約に従って日本語で書いてください。タイトルは最大50文字、メッセージは72文字で折り返してください。メッセージ全体をgitcommit言語のコードブロックで囲んでください。",
+			selection = function(source)
+				local select = require("CopilotChat.select")
+				return select.gitdiff(source, true)
+			end,
 		},
 	},
 })
