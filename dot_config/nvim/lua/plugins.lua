@@ -115,6 +115,12 @@ return {
 				menu = {
 					enabled = true,
 					border = "rounded",
+					draw = {
+						columns = {
+							{ "label", "label_desription" },
+							{ "kind_icon", "kind" },
+						},
+					},
 				},
 				documentation = {
 					auto_show = true,
