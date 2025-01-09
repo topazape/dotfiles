@@ -4,68 +4,36 @@ copilot_chat.setup({
 	model = "claude-3.5-sonnet",
 	prompts = {
 		Explain = {
-			prompt = "/COPILOT_EXPLAIN アクティブな選択範囲の説明を段落形式で書いてください。日本語で返答ください。",
+			prompt = "/COPILOT_EXPLAIN 選択されたコードの説明を段落形式のテキストで詳しく解説してください。日本語で返答してください。",
 			mapping = "<Leader>ccex",
 		},
 		Review = {
-			prompt = "/COPILOT_REVIEW 選択されたコードをレビューしてください。日本語で返答ください。",
-			mapping = "<Leader>ccrv",
+			prompt = "/COPILOT_REVIEW 選択されたコードをレビューしてください。日本語で返答してください。",
+			mapping = "<Leader>ccrev",
 		},
-		FixCode = {
-			prompt = "/COPILOT_GENERATE このコードには問題があります。バグを修正したコードに書き直してください。日本語で返答ください。",
-			mapping = "<Leader>ccfx",
+		Fix = {
+			prompt = "/COPILOT_GENERATE このコードには問題があります。バグを修正したコードに書き直してください。日本語で返答してください。",
+			mapping = "<Leader>ccfix",
 		},
-		Refactor = {
-			prompt = "/COPILOT_GENERATE 明瞭性と可読性を向上させるために、次のコードをリファクタリングしてください。日本語で返答ください。",
-			mapping = "<Leader>ccrf",
+		Optimize = {
+			prompt = "/COPILOT_GENERATE 選択されたコードのパフォーマンスと可読性を向上させるため最適化してください。日本語で返答してください。",
+			mapping = "<Leader>ccopt",
 		},
-		BetterNamings = {
-			prompt = "/COPILOT_GENERATE 選択されたコードの変数名や関数名を改善してください。日本語で返答ください。",
-			mapping = "<Leader>ccbn",
-		},
-		Documentation = {
-			prompt = "/COPILOT_GENERATE 選択範囲にドキュメントコメントを追加してください。日本語で返答ください。",
-			mapping = "<Leader>ccdc",
+		Docs = {
+			prompt = "/COPILOT_GENERATE 選択されたコードにドキュメンテーションコメントを追加してください。日本語で返答してください。",
+			mapping = "<Leader>ccdoc",
 		},
 		Tests = {
-			prompt = "/COPILOT_GENERATE コードのテストを生成してください。日本語で返答ください。",
+			prompt = "/COPILOT_GENERATE このコードのテストを生成してください。日本語で返答してください。",
 			mapping = "<Leader>cctt",
 		},
-		Wording = {
-			prompt = "/COPILOT_GENERATE 次のテキストの文法と表現を改善してください。日本語で返答ください。",
-			mapping = "<Leader>ccwd",
-		},
-		Summarize = {
-			prompt = "/COPILOT_GENERATE 選択範囲の要約を書いてください。日本語で返答ください。",
-			mapping = "<Leader>ccsm",
-		},
-		Spelling = {
-			prompt = "/COPILOT_GENERATE 次のテキストのスペルミスを修正してください。日本語で返答ください。",
-			mapping = "<Leader>ccsp",
-		},
-		FixDiagnostic = {
-			prompt = "ファイル内の次の問題を支援してください:",
-			selection = function()
-				local select = require("CopilotChat.select")
-				return select.diagnostics
-			end,
-			mapping = "<Leader>ccfd",
-		},
 		Commit = {
-			prompt = "変更のコミットメッセージをcommitizenの規約に従って日本語で書いてください。タイトルは最大50文字、メッセージは72文字で折り返してください。メッセージ全体をgitcommit言語のコードブロックで囲んでください。",
+			prompt = "commitizen の規約に従ったコミットメッセージを日本語で書いてください。",
 			selection = function()
 				local select = require("CopilotChat.select")
 				return select.gitdiff
 			end,
 			mapping = "<Leader>cccm",
-		},
-		CommitStaged = {
-			prompt = "変更のコミットメッセージをcommitizenの規約に従って日本語で書いてください。タイトルは最大50文字、メッセージは72文字で折り返してください。メッセージ全体をgitcommit言語のコードブロックで囲んでください。",
-			selection = function(source)
-				local select = require("CopilotChat.select")
-				return select.gitdiff(source, true)
-			end,
-			mapping = "<Leader>cccs",
 		},
 	},
 	window = {
