@@ -115,7 +115,13 @@ return {
 				menu = {
 					enabled = true,
 					border = "rounded",
-					draw = {},
+					draw = {
+						columns = {
+							label = {
+								width = 40,
+							},
+						},
+					},
 				},
 				documentation = {
 					auto_show = true,
