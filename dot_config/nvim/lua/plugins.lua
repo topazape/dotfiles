@@ -115,12 +115,7 @@ return {
 				menu = {
 					enabled = true,
 					border = "rounded",
-					draw = {
-						columns = {
-							-- { "label", "label_desription", gap = 1 },
-							-- { "kind_icon", "kind" },
-						},
-					},
+					draw = {},
 				},
 				documentation = {
 					auto_show = true,
