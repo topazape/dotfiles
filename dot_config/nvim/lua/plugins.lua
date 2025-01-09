@@ -216,18 +216,6 @@ return {
 	},
 
 	-- AI
-	---- AI IDE
-	-- {
-	-- 	"yetone/avante.nvim",
-	-- 	event = "VeryLazy",
-	-- 	lazy = false,
-	-- 	version = false,
-	-- 	opts = {},
-	-- 	dependencies = {
-	-- 		"stevearc/dressing.nvim",
-	-- 		"MunifTanjim/nui.nvim",
-	-- 	},
-	-- },
 	---- copilot
 	{
 		"zbirenbaum/copilot.lua",
@@ -253,6 +241,12 @@ return {
 				},
 			})
 		end,
+	},
+	---- copilot chat
+	{
+		"CopilotC-Nvim/CopilotChat.nvim",
+		build = "make tiktoken", -- Only on MacOS or Linux
+		opts = {},
 	},
 
 	-- git
