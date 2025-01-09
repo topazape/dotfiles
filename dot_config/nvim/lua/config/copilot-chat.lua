@@ -1,4 +1,4 @@
-local copilot_chat = require("copilot-chat")
+local copilot_chat = require("CopilotChat")
 
 copilot_chat.setup({
 	model = "claude-3.5-sonnet",
