@@ -265,27 +265,8 @@ return {
             prompt = '/COPILOT_COMMIT この変更をコミットしてください。',
           },
         },
-        window = {
-          layout = 'vertical',
-          width = 0.3,
-          height = 0.3,
-          relative = 'editor',
-          border = 'single',
-          row = 0,
-          col = 0,
-          title = 'Copilot Chat',
-          footer = nil,
-          zindex = 1,
-        },
       },
     },
-    config = function(_, opts)
-      local chat = require("CopilotChat")
-      chat.setup(opts)
-
-      local select = require("CopilotChat.select")
-    end
-	},
 
 	-- git
 	---- gitsigns
