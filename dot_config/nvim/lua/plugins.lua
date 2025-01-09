@@ -223,6 +223,7 @@ return {
 		lazy = false,
 		version = false,
 		opts = {},
+		build = "make",
 	},
 	---- copilot
 	{
