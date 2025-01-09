@@ -117,7 +117,7 @@ return {
 					border = "rounded",
 					draw = {
 						columns = {
-							{ "label", "label_desription" },
+							{ "label", "label_desription", gap = 1 },
 							{ "kind_icon", "kind" },
 						},
 					},
