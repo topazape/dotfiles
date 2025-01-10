@@ -182,11 +182,11 @@ return {
 		"zbirenbaum/copilot.lua",
 		opts = {
 			panel = { enabled = false },
-			auto_trigger = true,
-			hide_during_completion = true,
-			debounce = 50,
 			suggestion = {
 				enabled = true,
+				auto_trigger = true,
+				hide_during_completion = true,
+				debounce = 25,
 				keymap = {
 					accept = "<M-f>",
 					next = "<M-n>",
