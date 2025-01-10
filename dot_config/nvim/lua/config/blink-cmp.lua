@@ -47,8 +47,8 @@ blinkcmp.setup({
 			copilot = {
 				name = "copilot",
 				module = "blink-cmp-copilot",
-				score_offset = 10000,
 				async = true,
+				score_offset = 0,
 			},
 		},
 		cmdline = {},
