@@ -23,7 +23,8 @@ return {
 	front_end = "OpenGL",
 
 	-- color scheme
-	color_scheme = "tokyonight_night",
+	-- color_scheme = "tokyonight_night",
+	color_scheme = "Dracula+",
 
 	-- colors
 	colors = {
