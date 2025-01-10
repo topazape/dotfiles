@@ -6,7 +6,6 @@ blinkcmp.setup({
 
 		["<C-g>"] = { "show", "show_documentation", "hide_documentation" },
 		["<C-f>"] = { "accept", "fallback" },
-		["<CR>"] = { "accept", "fallback" },
 		["<C-n>"] = { "select_next", "fallback" },
 		["<C-p>"] = { "select_prev", "fallback" },
 		["<C-j>"] = { "scroll_documentation_down", "fallback" },
