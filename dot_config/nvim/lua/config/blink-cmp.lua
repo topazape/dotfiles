@@ -24,7 +24,7 @@ blinkcmp.setup({
 			border = "rounded",
 			draw = {
 				columns = {
-					{ "kind_icon", gap = 1, "label" },
+					{ "kind_icon", gap = 2, "label" },
 				},
 				treesitter = { "lsp" },
 			},
