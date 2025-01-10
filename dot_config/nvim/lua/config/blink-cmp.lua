@@ -42,15 +42,6 @@ blinkcmp.setup({
 		},
 	},
 	sources = {
-		default = { "lsp", "path", "snippets", "buffer", "copilot" },
-		providers = {
-			copilot = {
-				name = "copilot",
-				module = "blink-cmp-copilot",
-				async = true,
-				score_offset = -100,
-			},
-		},
 		cmdline = {},
 	},
 	signature = {
