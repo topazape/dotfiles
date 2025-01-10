@@ -182,7 +182,7 @@ return {
 		"zbirenbaum/copilot.lua",
 		opts = {
 			panel = { enabled = false },
-			auto_trigger = false,
+			auto_trigger = true,
 			hide_during_completion = true,
 			debounce = 50,
 			suggestion = {
