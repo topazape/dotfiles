@@ -22,12 +22,12 @@ blinkcmp.setup({
 		menu = {
 			enabled = true,
 			border = "rounded",
-			draw = {
-				columns = {
-					{ "label", "label_description", gap = 1 },
-					{ "kind_icon", gap = 1, "kind" },
-				},
-			},
+			-- draw = {
+			-- 	columns = {
+			-- 		{ "label", "label_description", gap = 1 },
+			-- 		{ "kind_icon", gap = 1, "kind" },
+			-- 	},
+			-- },
 		},
 		documentation = {
 			auto_show = true,
