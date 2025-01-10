@@ -90,7 +90,6 @@ return {
 		version = "*",
 		dependencies = {
 			"rafamadriz/friendly-snippets",
-			"giuxtaposition/blink-cmp-copilot",
 		},
 		config = function()
 			require("config/blink-cmp")
@@ -182,8 +181,16 @@ return {
 	{
 		"zbirenbaum/copilot.lua",
 		opts = {
-			suggestion = { enabled = false },
 			panel = { enabled = false },
+			suggestion = {
+				enabled = true,
+				keymap = {
+					accept = "<M-f>",
+					next = "<M-n>",
+					prev = "<M-p>",
+					dissmiss = "<M-q>",
+				},
+			},
 		},
 	},
 	---- copilot chat
