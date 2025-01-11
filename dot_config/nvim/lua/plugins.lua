@@ -95,6 +95,15 @@ return {
 			require("config/blink-cmp")
 		end,
 	},
+	---- inline diagnostics
+	{
+		"rachartier/tiny-inline-diagnostic.nvim",
+		event = "LspAttach",
+		priority = 1000,
+		opts = {
+			preset = "classic",
+		},
+	},
 
 	-- formatter
 	{
