@@ -88,7 +88,7 @@ return {
 		event = "LspAttach",
 		priority = 1000,
 		config = function()
-			require("tiny-inline-diagnostic").setup({})
+			require("tiny-inline-diagnostic").setup()
 		end,
 	},
 
