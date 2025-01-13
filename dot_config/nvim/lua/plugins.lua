@@ -20,9 +20,9 @@ return {
 			require("oldworld").setup({
 				highlight_overrides = {
 					Comment = { fg = "#5a585c" },
-					NonText = { fg = "#5a585c" },
-					SpecialKey = { fg = "#5a585c" },
-					Whitespace = { fg = "#5a585c" }, -- 一部のNeovimバージョンで使用される可能性がある
+					NonText = { fg = "#2a282c" },
+					SpecialKey = { fg = "#2a282c" },
+					Whitespace = { fg = "#2a282c" }, -- 一部のNeovimバージョンで使用される可能性がある
 				},
 			})
 			vim.cmd.colorscheme("oldworld")
