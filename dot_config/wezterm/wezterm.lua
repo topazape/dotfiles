@@ -23,7 +23,7 @@ return {
 	front_end = "OpenGL",
 
 	-- color scheme
-	color_scheme = "Gnometerm (terminal.sexy)",
+	color_scheme = "Gogh (Gogh)",
 
 	-- colors
 	colors = {
