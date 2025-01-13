@@ -12,13 +12,22 @@ return {
 	-- 		vim.cmd("highlight DiagnosticHint guifg=#ffc777 guibg=None")
 	-- 	end,
 	-- },
+	-- {
+	-- 	"dgox16/oldworld.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("oldworld").setup({})
+	-- 		vim.cmd.colorscheme("oldworld")
+	-- 	end,
+	-- },
 	{
-		"dgox16/oldworld.nvim",
+		"olimorris/onedarkpro.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("oldworld").setup({})
-			vim.cmd.colorscheme("oldworld")
+			require("onedarkpro").setup({})
+			vim.cmd.colorscheme("onedark")
 		end,
 	},
 
