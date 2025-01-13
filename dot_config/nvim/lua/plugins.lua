@@ -28,10 +28,10 @@ return {
 					Whitespace = { fg = "#403e42" },
 
 					-- for Lspsaga
-					SagaBorder = { fg = "#c9c7cd" },
-					SagaVirtLine = { fg = "#85BBBA" }, -- デフォルトの青緑系を使用
-					SagaBeacon = { bg = "#EA83A5" }, -- デフォルトのピンク系を使用
-					SagaCount = { bg = "#92A2D5", fg = "#161617", bold = true }, -- 背景に紫系、文字は暗い色
+					SagaBorder = { link = "FloatBorder" },
+					SagaVirtLine = { fg = "#85bbba" },
+					SagaBeacon = { bg = "#ea83a5" },
+					SagaCount = { bg = "#92a2d5", fg = "#161617", bold = true },
 				},
 			})
 			vim.cmd.colorscheme("oldworld")
