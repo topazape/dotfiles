@@ -19,7 +19,7 @@ return {
 		config = function()
 			require("oldworld").setup({
 				highlight_overrides = {
-					Comment = { fg = "#A09EA4" },
+					Comment = { fg = "#706e74" },
 				},
 			})
 			vim.cmd.colorscheme("oldworld")
