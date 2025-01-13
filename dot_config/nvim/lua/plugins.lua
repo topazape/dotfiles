@@ -1,15 +1,26 @@
 return {
+	-- {
+	-- 	"folke/tokyonight.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("tokyonight").setup({
+	-- 			style = "night",
+	-- 		})
+	-- 		vim.cmd.colorscheme("tokyonight")
+	-- 		vim.cmd("highlight WinSeparator guifg=#3d59a1 guibg=None")
+	-- 		vim.cmd("highlight DiagnosticHint guifg=#ffc777 guibg=None")
+	-- 	end,
+	-- },
 	{
-		"folke/tokyonight.nvim",
+		"dgox16/oldworld.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("tokyonight").setup({
-				style = "night",
-			})
-			vim.cmd.colorscheme("tokyonight")
-			vim.cmd("highlight WinSeparator guifg=#3d59a1 guibg=None")
-			vim.cmd("highlight DiagnosticHint guifg=#ffc777 guibg=None")
+			require("oldworld").setup({})
+			vim.cmd.colorscheme("oldworld")
+			-- vim.cmd("highlight WinSeparator guifg=#3d59a1 guibg=None")
+			-- vim.cmd("highlight DiagnosticHint guifg=#ffc777 guibg=None")
 		end,
 	},
 
