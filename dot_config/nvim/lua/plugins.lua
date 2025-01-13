@@ -17,7 +17,11 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("oldworld").setup({})
+			require("oldworld").setup({
+				highlight_overrides = {
+					Comment = { fg = "#7c7c7c" },
+				},
+			})
 			vim.cmd.colorscheme("oldworld")
 		end,
 	},
