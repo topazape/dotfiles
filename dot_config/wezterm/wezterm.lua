@@ -23,7 +23,7 @@ return {
 	front_end = "OpenGL",
 
 	-- color scheme
-	color_scheme = "Gogh (Gogh)",
+	color_scheme = "tokyonight_night",
 
 	-- colors
 	colors = {
