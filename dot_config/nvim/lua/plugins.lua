@@ -28,7 +28,7 @@ return {
 					Whitespace = { fg = "#403e42" },
 
 					-- for Lspsaga
-					SagaBorder = { fg = "#90B99F" },
+					SagaBorder = { fg = "#c9c7cd" },
 					SagaVirtLine = { fg = "#85bbba" },
 					SagaBeacon = { bg = "#ea83a5" },
 					SagaCount = { bg = "#92a2d5", fg = "#161617", bold = true },
