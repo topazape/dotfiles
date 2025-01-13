@@ -19,8 +19,6 @@ return {
 		config = function()
 			require("oldworld").setup({})
 			vim.cmd.colorscheme("oldworld")
-			-- vim.cmd("highlight WinSeparator guifg=#3d59a1 guibg=None")
-			-- vim.cmd("highlight DiagnosticHint guifg=#ffc777 guibg=None")
 		end,
 	},
 
