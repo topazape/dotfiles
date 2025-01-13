@@ -27,7 +27,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("onedarkpro").setup({})
-			vim.cmd.colorscheme("onedark")
+			vim.cmd.colorscheme("onedark dark")
 		end,
 	},
 
