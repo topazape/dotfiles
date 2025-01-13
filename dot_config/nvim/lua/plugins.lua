@@ -19,10 +19,46 @@ return {
 		config = function()
 			require("oldworld").setup({
 				highlight_overrides = {
+					-- oldworld
 					Comment = { fg = "#5a585c" },
+
+					-- listchars
 					NonText = { fg = "#403e42" },
 					SpecialKey = { fg = "#403e42" },
 					Whitespace = { fg = "#403e42" },
+
+					-- for Lspsaga
+					LspSagaFinderSelection = { bg = "#2A282C", fg = "#90B99F" }, -- 選択項目を目立たせつつ、控えめに
+					LspFloatWinNormal = { bg = "NONE" },
+					LspFloatWinBorder = { fg = "#5a585c" },
+					LspSagaBorderTitle = { fg = "#90B99F" }, -- oldworldの緑を使用
+
+					-- 診断関連
+					DiagnosticError = { fg = "#EA83A5" }, -- oldworldのピンク系を使用
+					DiagnosticWarning = { fg = "#ACAICF" }, -- 紫系を使用
+					DiagnosticInformation = { fg = "#85BBBA" }, -- 水色系を使用
+					DiagnosticHint = { fg = "#5a585c" },
+
+					-- 境界線関連（統一感のため同じ色を使用）
+					LspSagaRenameBorder = { fg = "#5a585c" },
+					LspSagaHoverBorder = { fg = "#5a585c" },
+					LspSagaSignatureHelpBorder = { fg = "#5a585c" },
+					LspSagaCodeActionBorder = { fg = "#5a585c" },
+					LspSagaDefPreviewBorder = { fg = "#5a585c" },
+					LspLinesDiagBorder = { fg = "#5a585c" },
+
+					-- その他の要素
+					TargetWord = { fg = "#90B99F" },
+					DefinitionIcon = { fg = "#85BBBA" },
+					ReferencesIcon = { fg = "#85BBBA" },
+
+					-- 切り詰め線の設定
+					SagaShadow = { fg = "#403E42" },
+					DiagnosticTruncateLine = { fg = "#403E42" },
+					LspSagaShTruncateLine = { fg = "#403E42" },
+					LspSagaDocTruncateLine = { fg = "#403E42" },
+					LineDiagTuncateLine = { fg = "#403E42" },
+					LspSagaCodeActionTruncateLine = { fg = "#403E42" },
 				},
 			})
 			vim.cmd.colorscheme("oldworld")
