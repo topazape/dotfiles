@@ -22,7 +22,7 @@ return {
 					Comment = { fg = "#5a585c" },
 					NonText = { fg = "#403e42" },
 					SpecialKey = { fg = "#403e42" },
-					Whitespace = { fg = "#403e42" }, -- 一部のNeovimバージョンで使用される可能性がある
+					Whitespace = { fg = "#403e42" },
 				},
 			})
 			vim.cmd.colorscheme("oldworld")
