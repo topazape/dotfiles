@@ -13,28 +13,12 @@ return {
 	-- 	end,
 	-- },
 	{
-		"dgox16/oldworld.nvim",
+		"rebelot/kanagawa.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("oldworld").setup({
-				highlight_overrides = {
-					-- oldworld
-					Comment = { fg = "#5a585c" },
-
-					-- listchars
-					NonText = { fg = "#403e42" },
-					SpecialKey = { fg = "#403e42" },
-					Whitespace = { fg = "#403e42" },
-
-					-- for Lspsaga
-					SagaBorder = { fg = "#90b99f" },
-					SagaVirtLine = { fg = "#85bbba" },
-					SagaBeacon = { bg = "#ea83a5" },
-					SagaCount = { bg = "#92a2d5", fg = "#161617", bold = true },
-				},
-			})
-			vim.cmd.colorscheme("oldworld")
+			require("kanagawa").setup({})
+			vim.cmd.colorscheme("kanagawa")
 		end,
 	},
 
