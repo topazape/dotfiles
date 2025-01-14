@@ -45,7 +45,7 @@ return {
 	font_size = FONT_SIZE,
 	warn_about_missing_glyphs = false,
 	adjust_window_size_when_changing_font_size = false,
-	line_height = 1.05,
+	line_height = 1.10,
 
 	-- look and feel
 	window_decorations = "RESIZE",
