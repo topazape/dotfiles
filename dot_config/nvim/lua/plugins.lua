@@ -230,12 +230,12 @@ return {
 
 	-- git
 	---- gitsigns
-	{
-		"lewis6991/gitsigns.nvim",
-		config = function()
-			require("config/gitsigns")
-		end,
-	},
+	-- {
+	-- 	"lewis6991/gitsigns.nvim",
+	-- 	config = function()
+	-- 		require("config/gitsigns")
+	-- 	end,
+	-- },
 	---- conflict
 	{
 		"akinsho/git-conflict.nvim",
