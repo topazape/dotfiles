@@ -16,10 +16,7 @@ return {
 		"wevilb/aurora-nvim",
 		-- lazy = false,
 		-- priority = 1000,
-		config = function()
-			require("aurora").setup()
-			vim.cmd("colorscheme aurora")
-		end,
+		config = true,
 	},
 
 	-- devicon
