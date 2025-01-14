@@ -253,6 +253,7 @@ return {
 			"nvim-tree/nvim-web-devicons",
 		},
 		config = function()
+			echo("octo")
 			require("octo").setup({
 				ssh_aliases = {
 					["github-tver"] = "github.com",
