@@ -245,23 +245,19 @@ return {
 		config = true,
 	},
 	---- GitHub
-	-- {
-	-- 	"pwntester/octo.nvim",
-	-- 	dependencies = {
-	-- 		"nvim-lua/plenary.nvim",
-	-- 		"nvim-telescope/telescope.nvim",
-	-- 		"nvim-tree/nvim-web-devicons",
-	-- 	},
-	-- 	opts = {
-	-- 		use_local_fs = true,
-	-- 		ssh_aliases = {
-	-- 			["github-tver"] = "github.com",
-	-- 		},
-	-- 		suppress_missing_scope = {
-	-- 			projects_v2 = true,
-	-- 		},
-	-- 	},
-	-- },
+	{
+		"pwntester/octo.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+			"nvim-tree/nvim-web-devicons",
+		},
+		opts = {
+			ssh_aliases = {
+				["github-tver"] = "github.com",
+			},
+		},
+	},
 
 	-- markdown
 	{
