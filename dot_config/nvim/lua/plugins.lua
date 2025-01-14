@@ -232,10 +232,9 @@ return {
 	---- gitsigns
 	{
 		"lewis6991/gitsigns.nvim",
-		config = true,
-		-- config = function()
-		-- 	require("config/gitsigns")
-		-- end,
+		config = function()
+			require("config/gitsigns")
+		end,
 	},
 	---- conflict
 	{
