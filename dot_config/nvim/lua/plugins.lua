@@ -200,11 +200,6 @@ return {
 			exclude_filetypes = { "lazy", "mason" },
 		},
 	},
-	---- fold
-	{
-		"OXY2DEV/foldtext.nvim",
-		lazy = false,
-	},
 
 	-- AI
 	---- copilot
