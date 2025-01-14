@@ -1,6 +1,7 @@
 return {
 	{
-		{ dir = "~/Develop/local/oldtale.nvim" },
+    "oldtale.nivm",
+		dir = "~/Develop/local/oldtale.nvim",
 		lazy = false,
 		-- config = function()
 		-- 	require("oldtale").setup({})
