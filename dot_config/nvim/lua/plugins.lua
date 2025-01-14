@@ -4,7 +4,21 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require("oldworld").setup({})
+			require("oldworld").setup({
+				highlight_overrides = {
+					-- oldworld
+					Comment = { fg = "#5a585c" },
+					-- listchars
+					NonText = { fg = "#403e42" },
+					SpecialKey = { fg = "#403e42" },
+					Whitespace = { fg = "#403e42" },
+					-- for Lspsaga
+					SagaBorder = { fg = "#90B99F" },
+					SagaVirtLine = { fg = "#85BBBA" },
+					SagaBeacon = { bg = "#EA83A5" },
+					SagaCount = { bg = "#92A2D5", fg = "#161617", bold = true },
+				},
+			})
 			vim.cmd.colorscheme("oldworld")
 		end,
 	},
