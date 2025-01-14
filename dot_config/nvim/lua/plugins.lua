@@ -13,11 +13,11 @@ return {
 	-- 	end,
 	-- },
 	{
-		"killitar/obscure.nvim",
+		"mellow-theme/mellow.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd.colorscheme("obscure")
+			vim.cmd.colorscheme("mellow")
 		end,
 	},
 
