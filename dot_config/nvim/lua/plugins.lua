@@ -1,40 +1,40 @@
 return {
-	{
-		"dgox16/oldworld.nvim",
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("oldworld").setup({
-				highlight_overrides = {
-					-- oldworld
-					Comment = { fg = "#5a585c" },
-					-- listchars
-					NonText = { fg = "#403e42" },
-					SpecialKey = { fg = "#403e42" },
-					Whitespace = { fg = "#403e42" },
-					-- for Lspsaga
-					SagaBorder = { fg = "#90b99f" },
-					SagaVirtLine = { fg = "#85bbba" },
-					SagaBeacon = { bg = "#ea83a5" },
-					SagaCount = { bg = "#92a2d5", fg = "#161617", bold = true },
-				},
-			})
-			vim.cmd.colorscheme("oldworld")
-		end,
-	},
 	-- {
-	-- 	"folke/tokyonight.nvim",
+	-- 	"dgox16/oldworld.nvim",
 	-- 	lazy = false,
 	-- 	priority = 1000,
 	-- 	config = function()
-	-- 		require("tokyonight").setup({
-	-- 			style = "night",
+	-- 		require("oldworld").setup({
+	-- 			highlight_overrides = {
+	-- 				-- oldworld
+	-- 				Comment = { fg = "#5a585c" },
+	-- 				-- listchars
+	-- 				NonText = { fg = "#403e42" },
+	-- 				SpecialKey = { fg = "#403e42" },
+	-- 				Whitespace = { fg = "#403e42" },
+	-- 				-- for Lspsaga
+	-- 				SagaBorder = { fg = "#90b99f" },
+	-- 				SagaVirtLine = { fg = "#85bbba" },
+	-- 				SagaBeacon = { bg = "#ea83a5" },
+	-- 				SagaCount = { bg = "#92a2d5", fg = "#161617", bold = true },
+	-- 			},
 	-- 		})
-	-- 		vim.cmd.colorscheme("tokyonight")
-	-- 		vim.cmd("highlight WinSeparator guifg=#3d59a1 guibg=None")
-	-- 		vim.cmd("highlight DiagnosticHint guifg=#ffc777 guibg=None")
+	-- 		vim.cmd.colorscheme("oldworld")
 	-- 	end,
 	-- },
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require("tokyonight").setup({
+				style = "night",
+			})
+			vim.cmd.colorscheme("tokyonight")
+			vim.cmd("highlight WinSeparator guifg=#3d59a1 guibg=None")
+			vim.cmd("highlight DiagnosticHint guifg=#ffc777 guibg=None")
+		end,
+	},
 
 	-- devicon
 	{
