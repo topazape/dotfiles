@@ -1,6 +1,7 @@
 return {
 	{
 		{ dir = "~/Develop/local/oldtale.nvim" },
+		lazy = false,
 		-- config = function()
 		-- 	require("oldtale").setup({})
 		-- 	vim.cmd.colorscheme("oldtale")
