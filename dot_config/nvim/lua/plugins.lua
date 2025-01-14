@@ -8,7 +8,8 @@ return {
 
 			fm.setup({
 				glow = true,
-				theme = "fluoromachine",
+				-- theme = "fluoromachine",
+				theme = "retrowave",
 				transparent = true,
 			})
 
