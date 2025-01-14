@@ -13,12 +13,11 @@ return {
 	-- 	end,
 	-- },
 	{
-		"rose-pine/neovim",
+		"killitar/obscure.nvim",
 		lazy = false,
 		priority = 1000,
-		name = "rose-pine",
 		config = function()
-			vim.cmd.colorscheme("rose-pine-main")
+			vim.cmd.colorscheme("obscure")
 		end,
 	},
 
