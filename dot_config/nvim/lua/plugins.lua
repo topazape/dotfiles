@@ -1,12 +1,12 @@
 return {
 	{
 		{ dir = "~/Develop/local/oldtale.nvim" },
-		lazy = false,
-		priority = 1000,
-		config = function()
-			require("oldtale").setup({})
-			vim.cmd.colorscheme("oldtale")
-		end,
+		-- lazy = false,
+		-- priority = 1000,
+		-- config = function()
+		-- 	require("oldtale").setup({})
+		-- 	vim.cmd.colorscheme("oldtale")
+		-- end,
 	},
 	-- {
 	-- 	"dgox16/oldworld.nvim",
