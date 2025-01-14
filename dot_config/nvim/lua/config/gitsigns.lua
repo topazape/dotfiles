@@ -1,7 +1,7 @@
 local gitsigns = require("gitsigns")
 gitsigns.setup({
 	signcolumn = true, -- Toggle with `:Gitsigns toggle_signs`
-	numhl = true, -- Toggle with `:Gitsigns toggle_numhl`
+	numhl = false, -- Toggle with `:Gitsigns toggle_numhl`
 	linehl = false, -- Toggle with `:Gitsigns toggle_linehl`
 	word_diff = false, -- Toggle with `:Gitsigns toggle_word_diff`
 	current_line_blame = false,
