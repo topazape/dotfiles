@@ -252,13 +252,11 @@ return {
 			"nvim-telescope/telescope.nvim",
 			"nvim-tree/nvim-web-devicons",
 		},
-		config = function()
-			require("octo").setup({
-				ssh_aliases = {
-					["github-tver"] = "github.com",
-				},
-			})
-		end,
+		opts = {
+			ssh_aliases = {
+				["github-tver"] = "github.com",
+			},
+		},
 	},
 
 	-- markdown
