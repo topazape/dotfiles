@@ -14,8 +14,8 @@ return {
 	-- },
 	{
 		"wevilb/aurora-nvim",
-		lazy = false,
-		priority = 1000,
+		-- lazy = false,
+		-- priority = 1000,
 		config = function()
 			-- require("aurora").setup({})
 			-- -- vim.cmd("colorscheme aurora")
