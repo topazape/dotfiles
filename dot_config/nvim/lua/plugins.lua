@@ -13,10 +13,10 @@ return {
 					SpecialKey = { fg = "#403e42" },
 					Whitespace = { fg = "#403e42" },
 					-- for Lspsaga
-					SagaBorder = { fg = "#90B99F" },
-					SagaVirtLine = { fg = "#85BBBA" },
-					SagaBeacon = { bg = "#EA83A5" },
-					SagaCount = { bg = "#92A2D5", fg = "#161617", bold = true },
+					SagaBorder = { fg = "#90b99f" },
+					SagaVirtLine = { fg = "#85bbba" },
+					SagaBeacon = { bg = "#ea83a5" },
+					SagaCount = { bg = "#92a2d5", fg = "#161617", bold = true },
 				},
 			})
 			vim.cmd.colorscheme("oldworld")
