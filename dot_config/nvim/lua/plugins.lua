@@ -17,7 +17,7 @@ return {
 		-- lazy = false,
 		-- priority = 1000,
 		config = function()
-			require("aurora").setup({})
+			require("aurora").setup()
 			-- -- vim.cmd("colorscheme aurora")
 		end,
 	},
