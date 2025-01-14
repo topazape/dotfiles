@@ -139,6 +139,8 @@ autocmd({ "FileType" }, {
 		vim.opt_local.foldmethod = "expr"
 		vim.opt_local.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 		vim.opt_local.foldlevel = 3
+		vim.opt_local.foldtext =
+			[[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend))]]
 
 		vim.opt_local.tabstop = 2
 		vim.opt_local.shiftwidth = 2
