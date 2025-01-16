@@ -2,7 +2,7 @@ local conform = require("conform")
 
 conform.setup({
 	format_on_save = {
-		-- async = true,
+		timeout_ms = 1000,
 		lsp_format = "fallback",
 	},
 	formatters_by_ft = {
@@ -15,7 +15,6 @@ conform.setup({
 		go = {
 			"goimports",
 			"gofumpt",
-			"golines",
 		},
 		html = {
 			"prettier",
