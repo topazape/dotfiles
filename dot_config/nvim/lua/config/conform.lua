@@ -2,7 +2,7 @@ local conform = require("conform")
 
 conform.setup({
 	format_on_save = {
-		async = true,
+		-- async = true,
 		lsp_format = "fallback",
 	},
 	formatters_by_ft = {
