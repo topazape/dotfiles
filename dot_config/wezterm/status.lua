@@ -3,11 +3,11 @@ local wezterm = require("wezterm")
 local DEFAULT_BG = { Color = "#121213" }
 local DEFAULT_FG = { Color = "#c9c7cd" }
 
-local HEADER_TIME = { Foreground = { Color = "#118ab2" }, Text = " " }
-local HEADER_DATE = { Foreground = { Color = "#ef476f" }, Text = "󱪺 " }
-local HEADER_BATTERY = { Foreground = { Color = "#ffd166" }, Text = " " }
-local HEADER_HOSTNAME = { Foreground = { Color = "#06d6a0" }, Text = " " }
-local HEADER_WEATHER = { Foreground = { Color = "#ef476f" }, Text = "󰍛 " }
+local HEADER_TIME = { Foreground = { Color = "#aabbdf" }, Text = " " }
+local HEADER_DATE = { Foreground = { Color = "#ed8f89" }, Text = "󱪺 " }
+local HEADER_BATTERY = { Foreground = { Color = "#deb094" }, Text = " " }
+local HEADER_WEATHER = { Foreground = { Color = "#e57099" }, Text = "󰍛 " }
+local HEADER_HOSTNAME = { Foreground = { Color = "#88b099" }, Text = " " }
 
 local function add_element(elems, header, str)
 	table.insert(elems, { Foreground = header.Foreground })
