@@ -3,28 +3,7 @@ return {
 		dir = "~/Develop/local/oldtale.nvim",
 		lazy = false,
 		config = function()
-			require("oldtale").setup({
-				integrations = { -- You can disable/enable integrations
-					alpha = false,
-					flash = false,
-					gitsigns = true,
-					hop = false,
-					indent_blankline = false,
-					navic = false,
-					neo_tree = false,
-					neorg = false,
-					noice = true,
-					notify = true,
-					lazy = true,
-					lsp = true,
-					cmp = true,
-					mason = true,
-					markdown = true,
-					rainbow_delimiters = true,
-					telescope = true,
-					treesitter = true,
-				},
-			})
+			require("oldtale").setup({})
 			vim.cmd.colorscheme("oldtale")
 		end,
 	},
