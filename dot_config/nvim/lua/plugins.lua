@@ -239,15 +239,6 @@ return {
 				width = "block",
 				left_margin = 2,
 			},
-			-- for blink.cmp documentation and signature_help
-			overrides = {
-				buftype = {
-					nofile = {
-						render_modes = { "n", "c", "i" },
-						code = { width = "full" },
-					},
-				},
-			},
 		},
 	},
 
