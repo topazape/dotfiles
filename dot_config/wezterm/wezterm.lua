@@ -23,6 +23,7 @@ return {
 	front_end = "OpenGL",
 
 	-- color scheme
+	color_scheme_dirs = { "~/.config/wezterm/colors" },
 	color_scheme = "tokyonight_night",
 
 	-- colors
