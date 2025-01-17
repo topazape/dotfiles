@@ -255,6 +255,8 @@ return {
 				width = "block",
 				left_margin = 2,
 			},
+			file_types = { "markdown", "Avante" },
+			log_level = "debug",
 			overrides = {
 				buftype = {
 					nofile = {
@@ -265,6 +267,7 @@ return {
 				filetype = {},
 			},
 		},
+		ft = { "markdown", "Avante" },
 	},
 
 	-- typst
