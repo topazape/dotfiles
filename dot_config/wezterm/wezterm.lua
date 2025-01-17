@@ -24,7 +24,7 @@ return {
 
 	-- color scheme
 	color_scheme_dirs = { "~/.config/wezterm/colors" },
-	color_scheme = "tokyonight_night",
+	color_scheme = "oldtale",
 
 	-- colors
 	colors = {
