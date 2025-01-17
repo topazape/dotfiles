@@ -4,21 +4,21 @@ return {
 		lazy = false,
 		config = function()
 			require("oldtale").setup({
-				-- integrations = {
-				-- 	blink = true,
-				-- 	cmp = false,
-				-- 	gitsigns = true,
-				-- 	indent_blankline = false,
-				-- 	lazy = true,
-				-- 	lsp = true,
-				-- 	markdown = true,
-				-- 	mason = true,
-				-- 	noice = false,
-				-- 	notify = false,
-				-- 	rainbow_delimiters = true,
-				-- 	telescope = true,
-				-- 	treesitter = true,
-				-- },
+				integrations = {
+					blink = true,
+					cmp = false,
+					gitsigns = true,
+					indent_blankline = false,
+					lazy = true,
+					lsp = true,
+					markdown = true,
+					mason = true,
+					noice = false,
+					notify = false,
+					rainbow_delimiters = true,
+					telescope = true,
+					treesitter = true,
+				},
 			})
 			vim.cmd.colorscheme("oldtale")
 		end,
