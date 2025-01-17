@@ -255,6 +255,15 @@ return {
 				width = "block",
 				left_margin = 2,
 			},
+			overrides = {
+				buftype = {
+					nofile = {
+						render_modes = { "n", "c", "i" },
+						debounce = 5,
+					},
+				},
+				filetype = {},
+			},
 		},
 	},
 
