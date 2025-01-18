@@ -82,7 +82,7 @@ local function right_update(window)
 	get_date(elems)
 	get_weather(elems)
 	get_battery(elems)
-	get_hostname(elems)
+	-- get_hostname(elems)
 
 	window:set_right_status(wezterm.format(elems))
 end
