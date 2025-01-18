@@ -147,16 +147,16 @@ return {
 		end,
 	},
 	---- mode highlight
-	{
-		"rasulomaroff/reactive.nvim",
-		opts = {
-			builtin = {
-				cursorline = true,
-				cursor = true,
-				modemsg = true,
-			},
-		},
-	},
+	-- {
+	-- 	"rasulomaroff/reactive.nvim",
+	-- 	opts = {
+	-- 		builtin = {
+	-- 			cursorline = true,
+	-- 			cursor = true,
+	-- 			modemsg = true,
+	-- 		},
+	-- 	},
+	-- },
 	---- help
 	{
 		"OXY2DEV/helpview.nvim",
