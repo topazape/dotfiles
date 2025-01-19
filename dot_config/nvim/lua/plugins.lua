@@ -9,7 +9,7 @@ return {
 					cmp = false,
 					gitsigns = true,
 					indent_blankline = false,
-					lazy = false,
+					lazy = true,
 					lsp = true,
 					markdown = true,
 					mason = true,
