@@ -8,7 +8,6 @@ return {
 					blink = true,
 					cmp = false,
 					gitsigns = true,
-					indent_blankline = false,
 					lazy = true,
 					lsp = true,
 					markdown = true,
