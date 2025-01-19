@@ -6,7 +6,6 @@ linters:
     - govet
     - ineffassign
     - staticcheck
-    - shadow
     - unused
     - gofumpt
     - goimports
