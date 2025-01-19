@@ -12,5 +12,9 @@ linters:
     - gosec
     - misspell
     - revive
+    - shadow
+linters-settings:
+  shadow:
+    strict: true
 run:
   tests: true
