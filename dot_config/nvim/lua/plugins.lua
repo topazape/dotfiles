@@ -15,6 +15,7 @@ return {
 					noice = false,
 					notify = false,
 					rainbow_delimiters = true,
+          saga = true,
 					telescope = true,
 					treesitter = true,
 				},
