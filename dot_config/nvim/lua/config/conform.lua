@@ -15,7 +15,7 @@ conform.setup({
 		go = {
 			"goimports",
 			"gofumpt",
-			"golines",
+			-- "golines",
 		},
 		html = {
 			"prettier",
