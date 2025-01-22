@@ -5,18 +5,18 @@ return {
 		config = function()
 			require("oldtale").setup({
 				integrations = {
-					blink = true,
+					blink = false,
 					cmp = false,
-					gitsigns = true,
-					lazy = true,
-					lsp = true,
-					markdown = true,
-					mason = true,
+					gitsigns = false,
+					lazy = false,
+					lsp = false,
+					markdown = false,
+					mason = false,
 					noice = false,
 					notify = false,
-					rainbow_delimiters = true,
-          saga = true,
-					telescope = true,
+					rainbow_delimiters = false,
+          saga = false,
+					telescope = false,
 					treesitter = false,
 				},
 			})
