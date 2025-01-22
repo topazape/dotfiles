@@ -5,19 +5,18 @@ return {
 		config = function()
 			require("oldtale").setup({
 				integrations = {
-					blink = false,
-					cmp = false,
-					gitsigns = false,
-					lazy = false,
-					lsp = false,
-					markdown = false,
-					mason = false,
-					noice = false,
-					notify = false,
-					rainbow_delimiters = false,
-          saga = false,
-					telescope = false,
-					treesitter = false,
+					blink = true,
+					gitsigns = true,
+					lazy = true,
+					lsp = true,
+					markdown = true,
+					mason = true,
+					noice = true,
+					notify = true,
+					rainbow_delimiters = true,
+          saga = true,
+					telescope = true,
+					treesitter = true,
 				},
 			})
 			vim.cmd.colorscheme("oldtale")
