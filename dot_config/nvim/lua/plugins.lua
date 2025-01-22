@@ -17,7 +17,7 @@ return {
 					rainbow_delimiters = true,
           saga = true,
 					telescope = true,
-					treesitter = true,
+					treesitter = false,
 				},
 			})
 			vim.cmd.colorscheme("oldtale")
