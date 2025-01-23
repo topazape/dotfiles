@@ -223,7 +223,6 @@ return {
 		config = function()
 			require("octo").setup({
 				ssh_aliases = {
-					["github"] = "github.com",
 					["github-tver"] = "github.com",
 				},
 			})
