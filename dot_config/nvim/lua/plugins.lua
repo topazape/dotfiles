@@ -186,6 +186,9 @@ return {
 					prev = "<M-p>",
 					dissmiss = "<M-q>",
 				},
+				filetypes = {
+					go = false,
+				},
 			},
 		},
 	},
