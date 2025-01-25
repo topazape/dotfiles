@@ -12,5 +12,6 @@ linters:
     - gosec
     - misspell
     - revive
+    - wrapcheck
 run:
   tests: true
