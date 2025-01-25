@@ -5,7 +5,6 @@ linters:
     - gosec
     - misspell
     - revive
-    - structcheck
     - wrapcheck
     - wsl
 run:
