@@ -1,17 +1,11 @@
 linters:
-  disable-all: true
   enable:
-    - errcheck
-    - gosimple
-    - govet
-    - ineffassign
-    - staticcheck
-    - unused
     - gofumpt
     - goimports
     - gosec
     - misspell
     - revive
+    - structcheck
     - wrapcheck
     - wsl
 run:
