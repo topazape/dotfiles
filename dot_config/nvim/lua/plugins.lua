@@ -65,7 +65,7 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 		},
 		config = function()
-			require("config/lsp")
+			require("config/lspconfig")
 		end,
 	},
 	---- lspsaga
