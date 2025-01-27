@@ -27,6 +27,7 @@ return {
 	---- devicon
 	{
 		"nvim-tree/nvim-web-devicons",
+		config = true,
 	},
 	---- adjust devicon colors
 	{
