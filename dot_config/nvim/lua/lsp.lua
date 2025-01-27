@@ -1,4 +1,5 @@
 vim.diagnostic.config({
+	severity_sort = true,
 	signs = {
 		text = {
 			[vim.diagnostic.severity.ERROR] = "",
@@ -7,9 +8,8 @@ vim.diagnostic.config({
 			[vim.diagnostic.severity.HINT] = "",
 		},
 	},
-	severity_sort = true,
 	virtual_text = {
-		prefix = "",
+		prefix = "|",
 	},
 	virtual_lines = true,
 })
