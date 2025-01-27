@@ -1,4 +1,6 @@
 return {
+	-- Look and feel
+	---- colorscheme
 	{
 		dir = "~/Develop/local/oldtale.nvim",
 		lazy = false,
@@ -22,8 +24,7 @@ return {
 			vim.cmd.colorscheme("oldtale")
 		end,
 	},
-
-	-- devicon
+	---- devicon
 	{
 		"nvim-tree/nvim-web-devicons",
 	},
@@ -134,10 +135,6 @@ return {
 	},
 
 	-- UI
-	---- notify
-	{
-		"rcarriga/nvim-notify",
-	},
 	---- status line
 	{
 		"hoob3rt/lualine.nvim",
@@ -145,6 +142,7 @@ return {
 			require("config/lualine")
 		end,
 	},
+	---- help
 	{
 		"OXY2DEV/helpview.nvim",
 		lazy = false,
@@ -166,6 +164,14 @@ return {
 			virtual_symbol_prefix = " ",
 			virtual_symbol_position = "eol",
 			exclude_filetypes = { "lazy", "mason" },
+		},
+	},
+	---- f/F moving hilights
+	{
+		"jinh0/eyeliner.nvim",
+		opts = {
+			highlight_on_key = true,
+			dim = true,
 		},
 	},
 
