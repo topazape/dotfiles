@@ -1,3 +1,16 @@
+-- global options
+local globals = {
+	-- disable netrw
+	loadded_netrw = 1,
+	loadded_netrwPlugin = 1,
+}
+
+-- apply globals
+for k, v in pairs(globals) do
+	vim.opt[k] = v
+end
+
+-- options
 local options = {
 	-- 種々ファイルの出力
 	backup = false,
@@ -73,9 +86,6 @@ for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
--- individual settings
---------
-
 -- Diagnostic signs
 local diagnostic_signs = {
 	{ name = "DiagnosticSignError", text = "" },
@@ -88,6 +98,4 @@ for _, sign in ipairs(diagnostic_signs) do
 	vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = sign.name })
 end
 
--- disable netrw
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
+vim.diagnostic.config({ virtual_lines = true })
