@@ -7,7 +7,7 @@ local globals = {
 
 -- apply globals
 for k, v in pairs(globals) do
-	vim.global[k] = v
+	vim.g[k] = v
 end
 
 -- options
