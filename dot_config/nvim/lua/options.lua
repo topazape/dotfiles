@@ -8,9 +8,9 @@ vim.g.loaded_netrwPlugin = 1
 vim.g.loaded_netrw = 1
 
 -- apply globals
-for k, v in pairs(globals) do
-	vim.g[k] = v
-end
+-- for k, v in pairs(globals) do
+--	vim.g[k] = v
+--end
 
 -- options
 local options = {
