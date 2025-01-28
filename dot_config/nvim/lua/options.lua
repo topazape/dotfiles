@@ -1,9 +1,11 @@
--- global options
-local globals = {
-	-- disable netrw
-	loadded_netrw = 1,
-	loadded_netrwPlugin = 1,
-}
+-- -- global options
+-- local globals = {
+-- 	-- disable netrw
+-- 	loadded_netrw = 1,
+-- 	loadded_netrwPlugin = 1,
+-- }
+vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
 
 -- apply globals
 for k, v in pairs(globals) do
