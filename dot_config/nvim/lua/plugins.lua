@@ -29,15 +29,6 @@ return {
 		"nvim-tree/nvim-web-devicons",
 		config = true,
 	},
-	---- adjust devicon colors
-	-- {
-	-- 	"rachartier/tiny-devicons-auto-colors.nvim",
-	-- 	dependencies = {
-	-- 		"nvim-tree/nvim-web-devicons",
-	-- 	},
-	-- 	event = "VeryLazy",
-	-- 	config = true,
-	-- },
 
 	-- tree-sitter
 	{
