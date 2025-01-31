@@ -1,5 +1,7 @@
 linters:
   enable:
+    - bodyclose
+    - gocritic
     - gofumpt
     - goimports
     - gosec
