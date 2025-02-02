@@ -9,7 +9,7 @@ vim.diagnostic.config({
 		},
 	},
 	virtual_text = {
-		prefix = "‣",
+		prefix = "⁕",
 	},
 	virtual_lines = true,
 })
