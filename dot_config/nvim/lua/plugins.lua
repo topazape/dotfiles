@@ -68,7 +68,7 @@ return {
 			"nvim-treesitter/nvim-treesitter",
 		},
 		config = function()
-			require("config/lspsaga")
+			require("config/saga")
 		end,
 	},
 	---- inlay hints
