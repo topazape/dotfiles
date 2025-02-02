@@ -12,6 +12,11 @@ autocmd({ "BufNewFile", "BufRead" }, {
 	pattern = { "*.tf" },
 	command = "setfiletype terraform",
 })
+---- *.golden は JSON ファイルとして扱う
+autocmd({ "BufNewFile", "BufRead" }, {
+	pattern = { "*.golden" },
+	command = "setfiletype json",
+})
 
 -- ファイルタイプ別設定
 ---- go
