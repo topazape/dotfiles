@@ -106,7 +106,7 @@ autocmd({ "FileType" }, {
 })
 ---- json, yaml, toml
 autocmd({ "FileType" }, {
-	pattern = { "json", "yaml", "yml", "toml", "golden" },
+	pattern = { "json", "yaml", "yml", "toml" },
 	callback = function()
 		vim.opt_local.tabstop = 2
 		vim.opt_local.shiftwidth = 2
