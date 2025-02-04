@@ -186,7 +186,7 @@ return {
 				},
 			},
 			filetypes = {
-				go = false,
+				go = true,
 			},
 		},
 	},
