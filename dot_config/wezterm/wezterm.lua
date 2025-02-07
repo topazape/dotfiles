@@ -3,7 +3,7 @@ local DEFAULT_INACTIVE_FG = "#3a3a3e"
 local DEFAULT_BG = "#121213"
 local FONT_SIZE = 15
 local CONSOLE_FONTS = {
-	{ family = "Brass Mono" },
+	{ family = "Brass Mono Code" },
 	{ family = "TX-02" },
 	{ family = "IBM Plex Sans JP" },
 }
