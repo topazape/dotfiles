@@ -121,11 +121,6 @@ if [[ -d $(brew --prefix llvm) ]]; then
   export CPPFLAGS="-I$(brew --prefix llvm)/include"
 fi
 ## Golang
-###goenv
-if type goenv >/dev/null 2>&1; then
-  eval "$(goenv init -)"
-  export PATH=${GOROOT}/bin:${PATH}
-fi
 ### golang
 if type go >/dev/null 2>&1; then
   export GOPATH=${XDG_DATA_HOME}/go
