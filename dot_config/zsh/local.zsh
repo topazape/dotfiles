@@ -123,9 +123,10 @@ fi
 ## Golang
 ### goenv
 if type goenv >/dev/null 2>&1; then
-  export PATH=${GOROOT}/bin:${PATH}
   export GOENV_ROOT=${XDG_DATA_HOME}/goenv
+  export PATH=${GOENV_ROOT}/bin:${PATH}
   eval "$(goenv init -)"
+  export PATH=${GOROOT}/bin:${PATH}
 fi
 ### golang
 if type go >/dev/null 2>&1; then
