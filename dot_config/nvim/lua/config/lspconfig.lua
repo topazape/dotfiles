@@ -111,6 +111,9 @@ local handlers = {
 		require("lspconfig").gopls.setup({
 			settings = {
 				gopls = {
+					analyses = {
+						fillstruct = true,
+					},
 					hints = {
 						assignVariableTypes = true,
 						compositeLiteralFields = true,
