@@ -1,0 +1,50 @@
+[server]
+browser = "default"
+follow_symlink = false
+
+[experimental]
+
+[display]
+code_editor_font_size = 15
+default_width = "full"
+dataframes = "plain"
+cell_output = "above"
+theme = "dark"
+
+[save]
+format_on_save = false
+autosave_delay = 1000
+autosave = "after_delay"
+
+[snippets]
+custom_paths = []
+include_default_snippets = true
+
+[runtime]
+auto_reload = "off"
+watcher_on_save = "lazy"
+on_cell_change = "autorun"
+auto_instantiate = true
+
+[keymap]
+preset = "default"
+
+[keymap.overrides]
+
+[formatting]
+line_length = 79
+
+[completion]
+activate_on_typing = true
+copilot = false
+
+[ai]
+rules = ""
+[ai.open_ai]
+
+[ai.anthropic]
+
+[ai.google]
+
+[package_management]
+manager = "pip"
