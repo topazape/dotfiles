@@ -41,6 +41,10 @@ blinkcmp.setup({
 		},
 	},
 
+  cmdline = {
+    menu = { enabled = false },
+  }
+
 	signature = {
 		enabled = true,
 		window = {
