@@ -19,6 +19,7 @@ blinkcmp.setup({
 			["<C-n>"] = { "select_next", "fallback" },
 			["<C-p>"] = { "select_prev", "fallback" },
 		},
+		sources = {},
 	},
 
 	appearance = {
@@ -47,9 +48,6 @@ blinkcmp.setup({
 		ghost_text = {
 			enabled = false,
 		},
-	},
-	sources = {
-		cmdline = {},
 	},
 	signature = {
 		enabled = true,
