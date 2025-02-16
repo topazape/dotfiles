@@ -38,7 +38,11 @@ lspsaga.setup({
 		close_after_jump = true,
 	},
 	lightbulb = {
-		enable = false,
+		virtual_text = false,
+	},
+	code_action = {
+		show_server_name = true,
+		extend_gitsigns = true,
 	},
 	ui = {
 		border = "rounded",
