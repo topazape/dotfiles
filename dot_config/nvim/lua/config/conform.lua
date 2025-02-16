@@ -16,6 +16,9 @@ conform.setup({
 			"goimports",
 			"gofumpt",
 		},
+		golden = {
+			"prettier",
+		},
 		html = {
 			"prettier",
 		},
