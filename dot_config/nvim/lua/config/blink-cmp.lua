@@ -45,6 +45,10 @@ blinkcmp.setup({
 		enabled = false,
 	},
 
+	term = {
+		enabled = false,
+	},
+
 	signature = {
 		enabled = true,
 		window = {
