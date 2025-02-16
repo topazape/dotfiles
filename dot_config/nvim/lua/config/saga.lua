@@ -46,7 +46,7 @@ lspsaga.setup({
 	},
 	ui = {
 		border = "rounded",
-		code_action = "󱐋",
+		code_action = "󱐋 ",
 		lines = { "└", "├", "│", "─", "┌" },
 	},
 	scroll_preview = {
