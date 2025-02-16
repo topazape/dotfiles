@@ -42,7 +42,9 @@ blinkcmp.setup({
 	},
 
 	cmdline = {
-		menu = { enabled = false },
+		completion = {
+			menu = { enabled = false },
+		},
 	},
 
 	signature = {
