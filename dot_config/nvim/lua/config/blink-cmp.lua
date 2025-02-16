@@ -15,6 +15,18 @@ blinkcmp.setup({
 	cmdline = {
 		enabled = true,
 		keymap = nil, -- Inherits from top level `keymap` config when not set
+		sources = function()
+			local type = vim.fn.getcmdtype()
+			-- Search forward and backward
+			if type == "/" or type == "?" then
+				return { "buffer" }
+			end
+			-- Commands
+			if type == ":" or type == "@" then
+				return { "cmdline" }
+			end
+			return {}
+		end,
 	},
 
 	appearance = {
