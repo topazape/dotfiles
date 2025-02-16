@@ -15,6 +15,7 @@ blinkcmp.setup({
 	cmdline = {
 		keymap = {
 			preset = "none",
+
 			["<TAB>"] = { "select_next", "fallback" },
 			["<S-TAB>"] = { "select_prev", "fallback" },
 			["<C-n>"] = { "select_next", "fallback" },
@@ -27,6 +28,7 @@ blinkcmp.setup({
 		use_nvim_cmp_as_default = true,
 		nerd_font_variant = "mono",
 	},
+
 	completion = {
 		menu = {
 			enabled = true,
@@ -50,6 +52,7 @@ blinkcmp.setup({
 			enabled = false,
 		},
 	},
+
 	signature = {
 		enabled = true,
 		window = {
