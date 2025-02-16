@@ -14,12 +14,13 @@ blinkcmp.setup({
 
 	cmdline = {
 		keymap = {
+			preset = "none",
+
 			["<TAB>"] = { "select_next", "fallback" },
 			["<S-TAB>"] = { "select_prev", "fallback" },
 			["<C-n>"] = { "select_next", "fallback" },
 			["<C-p>"] = { "select_prev", "fallback" },
 		},
-		sources = {},
 	},
 
 	appearance = {
