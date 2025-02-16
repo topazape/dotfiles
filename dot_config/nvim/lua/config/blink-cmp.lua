@@ -12,23 +12,6 @@ blinkcmp.setup({
 		["<C-k>"] = { "scroll_documentation_up", "fallback" },
 	},
 
-	cmdline = {
-		enabled = true,
-		keymap = nil, -- Inherits from top level `keymap` config when not set
-		sources = function()
-			local type = vim.fn.getcmdtype()
-			-- Search forward and backward
-			if type == "/" or type == "?" then
-				return { "buffer" }
-			end
-			-- Commands
-			if type == ":" or type == "@" then
-				return { "cmdline" }
-			end
-			return {}
-		end,
-	},
-
 	appearance = {
 		use_nvim_cmp_as_default = true,
 		nerd_font_variant = "mono",
