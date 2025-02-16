@@ -40,10 +40,6 @@ lspsaga.setup({
 	lightbulb = {
 		virtual_text = false,
 	},
-	code_action = {
-		show_server_name = true,
-		extend_gitsigns = true,
-	},
 	ui = {
 		border = "rounded",
 		code_action = "󱐋 ",
