@@ -113,7 +113,6 @@ local handlers = {
 				gopls = {
 					analyses = {
 						fillstruct = true,
-						shadow = true,
 					},
 					hints = {
 						assignVariableTypes = true,
