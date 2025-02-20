@@ -163,6 +163,8 @@ return {
 			dim = true,
 		},
 	},
+	---- super cursor
+	{ "sphamba/smear-cursor.nvim", opts = {} },
 
 	-- AI
 	---- copilot
