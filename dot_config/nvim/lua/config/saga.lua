@@ -13,16 +13,21 @@ lspsaga.setup({
 	vim.keymap.set("n", "g[", "<CMD>Lspsaga diagnostic_jump_prev<CR>", { noremap = true }),
 	vim.keymap.set("n", "<C-\\>", "<CMD>Lspsaga term_toggle<CR>", { noremap = true }),
 
-	definition = {
-		width = 0.8,
-		height = 0.7,
-		keys = {
-			close = "q",
-			edit = "o",
-			split = "s",
-			vsplit = "v",
-		},
+	ui = {
+		border = "rounded",
+		code_action = "󱐋 ",
+		lines = { "└", "├", "│", "─", "┌" },
 	},
+
+	lightbulb = {
+		virtual_text = false,
+	},
+
+	scroll_preview = {
+		scroll_down = "<C-n>",
+		scroll_up = "<C-p>",
+	},
+
 	finder = {
 		max_height = 0.8,
 		left_width = 0.3,
@@ -34,19 +39,18 @@ lspsaga.setup({
 			vsplit = "v",
 		},
 	},
+	definition = {
+		width = 0.8,
+		height = 0.7,
+		keys = {
+			close = "q",
+			edit = "o",
+			split = "s",
+			vsplit = "v",
+		},
+	},
+
 	outline = {
 		close_after_jump = true,
-	},
-	lightbulb = {
-		virtual_text = false,
-	},
-	ui = {
-		border = "rounded",
-		code_action = "󱐋 ",
-		lines = { "└", "├", "│", "─", "┌" },
-	},
-	scroll_preview = {
-		scroll_down = "<C-n>",
-		scroll_up = "<C-p>",
 	},
 })
