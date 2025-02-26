@@ -229,7 +229,7 @@ return {
 				left_margin = 2,
 			},
 			bullet = {
-				icons = { "●", "∘", "▪", "▫" },
+				icons = { "•", "∘", "▪", "▫" },
 			},
 		},
 	},
