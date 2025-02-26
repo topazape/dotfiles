@@ -228,6 +228,9 @@ return {
 				width = "block",
 				left_margin = 2,
 			},
+			bullet = {
+				icons = { "•", "∘", "▪", "▫" },
+			},
 		},
 	},
 
