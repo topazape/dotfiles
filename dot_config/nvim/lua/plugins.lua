@@ -184,9 +184,6 @@ return {
 					dissmiss = "<M-q>",
 				},
 			},
-			filetypes = {
-				go = true,
-			},
 		},
 	},
 	---- copilot chat
