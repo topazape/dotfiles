@@ -203,6 +203,9 @@ return {
 		opts = {
 			provider = "copilot",
 			auto_suggestions_provider = "copilot",
+			copilot = {
+				model = "claude-3.5-sonnet",
+			},
 			behaviour = {
 				auto_suggestions = true,
 				auto_set_highlight_group = true,
@@ -235,6 +238,7 @@ return {
 			"nvim-treesitter/nvim-treesitter",
 			"nvim-tree/nvim-web-devicons",
 		},
+		ft = { "markdown", "Avante" },
 		opts = {
 			heading = {
 				position = "inline",
