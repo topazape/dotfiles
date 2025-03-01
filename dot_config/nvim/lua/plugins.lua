@@ -198,6 +198,7 @@ return {
 			"stevearc/dressing.nvim",
 			"nvim-lua/plenary.nvim",
 			"MunifTanjim/nui.nvim",
+			"zbirenbaum/copilot.lua",
 		},
 		opts = {
 			provider = "copilot",
