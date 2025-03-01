@@ -186,12 +186,14 @@ return {
 			},
 		},
 	},
-	---- copilot chat
+	---- avante
 	{
-		"CopilotC-Nvim/CopilotChat.nvim",
-		build = "make tiktoken", -- Only on MacOS or Linux
+		"yetone/avante.nvim",
+		event = "VeryLazy",
+		lazy = false,
+		version = false,
 		config = function()
-			require("config/copilot-chat")
+			require("config/avante")
 		end,
 	},
 
