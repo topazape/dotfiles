@@ -198,7 +198,17 @@ return {
 			"nvim-lua/plenary.nvim",
 			"MunifTanjim/nui.nvim",
 		},
-		opts = {},
+		opts = {
+			provider = "copilot",
+			auto_suggestions_provider = "copilot",
+			behaviour = {
+				auto_suggestions = true,
+				auto_set_highlight_group = true,
+				auto_set_keymaps = true,
+				auto_apply_diff_after_generation = true,
+				support_paste_from_clipboard = true,
+			},
+		},
 	},
 
 	-- git
