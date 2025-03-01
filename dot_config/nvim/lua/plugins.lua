@@ -198,9 +198,7 @@ return {
 			"nvim-lua/plenary.nvim",
 			"MunifTanjim/nui.nvim",
 		},
-		config = function()
-			require("config/avante")
-		end,
+		opts = {},
 	},
 
 	-- git
