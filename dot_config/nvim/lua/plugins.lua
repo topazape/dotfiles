@@ -221,7 +221,7 @@ return {
 		event = "VeryLazy",
 		build = "make tiktoken",
 		opts = {
-			model = "claude-3.7y-sonnet",
+			model = "claude-3.7-sonnet",
 		},
 	},
 
