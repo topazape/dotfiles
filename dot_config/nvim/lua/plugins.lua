@@ -205,6 +205,9 @@ return {
 			copilot = {
 				model = "claude-3.7-sonnet",
 			},
+			windows = {
+				width = 40,
+			},
 		},
 	},
 
