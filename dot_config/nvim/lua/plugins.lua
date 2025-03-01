@@ -202,26 +202,22 @@ return {
 		},
 		opts = {
 			provider = "copilot",
-			auto_suggestions_provider = "copilot",
 			copilot = {
 				model = "claude-3.7-sonnet",
 			},
 			behaviour = {
-				auto_suggestions = true,
+				auto_focus_sidebar = true,
+				auto_suggestions = false, -- Experimental stage
+				auto_suggestions_respect_ignore = false,
 				auto_set_highlight_group = true,
 				auto_set_keymaps = true,
-				auto_apply_diff_after_generation = true,
-				support_paste_from_clipboard = true,
+				auto_apply_diff_after_generation = false,
+				jump_result_buffer_on_finish = false,
+				support_paste_from_clipboard = false,
+				minimize_diff = true,
+				enable_token_counting = true,
+				enable_cursor_planning_mode = false,
 			},
-		},
-	},
-	---- Copilot Chat (to use another llm model)
-	{
-		"CopilotC-Nvim/CopilotChat.nvim",
-		event = "VeryLazy",
-		build = "make tiktoken",
-		opts = {
-			model = "claude-3.7-sonnet",
 		},
 	},
 
