@@ -204,7 +204,7 @@ return {
 			provider = "copilot",
 			auto_suggestions_provider = "copilot",
 			copilot = {
-				model = "claude-3-5-sonnet",
+				model = "claude-3.7-sonnet",
 			},
 			behaviour = {
 				auto_suggestions = true,
@@ -213,6 +213,15 @@ return {
 				auto_apply_diff_after_generation = true,
 				support_paste_from_clipboard = true,
 			},
+		},
+	},
+	---- Copilot Chat (to use another llm model)
+	{
+		"CopilotC-Nvim/CopilotChat.nvim",
+		event = "VeryLazy",
+		build = "make tiktoken",
+		opts = {
+			model = "claude-3.7y-sonnet",
 		},
 	},
 
