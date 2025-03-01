@@ -192,6 +192,7 @@ return {
 		event = "VeryLazy",
 		lazy = false,
 		version = false,
+		build = "make",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 			"stevearc/dressing.nvim",
