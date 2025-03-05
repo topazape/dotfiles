@@ -82,6 +82,10 @@ if type chezmoi >/dev/null 2>&1; then
   # completion
   eval "$(chezmoi completion zsh)"
 fi
+## gtrash (https://github.com/umlx5h/gtrash)
+if type gtrash >/dev/null 2>&1; then
+  eval "$(gtrash completion zsh)"
+fi
 ## bat
 if type bat >/dev/null 2>&1; then
   export BAT_THEME="TwoDark"
