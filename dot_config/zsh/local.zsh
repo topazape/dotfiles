@@ -85,7 +85,7 @@ fi
 ## gtrash (https://github.com/umlx5h/gtrash)
 if type gtrash >/dev/null 2>&1; then
   eval "$(gtrash completion zsh)"
-  alias gm="gtrash put"
+  alias tm="gtrash put"
   alias rm="echo -e 'If you want to use rm really, then use \"\\\\rm\" instead.'; false"
 fi
 ## bat
