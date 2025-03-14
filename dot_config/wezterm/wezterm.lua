@@ -5,7 +5,6 @@ local FONT_SIZE = 15
 local CONSOLE_FONTS = {
 	{ family = "TX-02" },
 	{ family = "Pretendard JP" },
-	{ family = "IBM Plex Sans JP" },
 }
 
 local function retrieve_font_settings(fonts, weight)
