@@ -4,6 +4,7 @@ local DEFAULT_BG = "#121213"
 local FONT_SIZE = 15
 local CONSOLE_FONTS = {
 	{ family = "TX-02" },
+	{ family = "Pretendard JP" },
 	{ family = "IBM Plex Sans JP" },
 }
 
