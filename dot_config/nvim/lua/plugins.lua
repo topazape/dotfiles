@@ -127,6 +127,10 @@ return {
 	},
 
 	-- UI
+	---- key speed
+	{
+		"rainbowhxch/accelerated-jk.nvim",
+	},
 	---- status line
 	{
 		"hoob3rt/lualine.nvim",
