@@ -213,6 +213,11 @@ return {
 			copilot = {
 				model = "claude-3.7-sonnet",
 			},
+			mappings = {
+				sidebar = {
+					close = { "q" },
+				},
+			},
 			windows = {
 				width = 40,
 			},
