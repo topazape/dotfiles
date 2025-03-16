@@ -39,9 +39,9 @@ return {
 		end,
 	},
 	---- rainbow
-	{
-		"HiPhish/rainbow-delimiters.nvim",
-	},
+	-- {
+	-- 	"HiPhish/rainbow-delimiters.nvim",
+	-- },
 	---- comment
 	{
 		"folke/ts-comments.nvim",
