@@ -244,7 +244,11 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
-		opts = {},
+		opts = {
+			ssh_aliases = {
+				["github-tver"] = "github.com",
+			},
+		},
 	},
 
 	-- markdown
