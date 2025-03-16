@@ -246,7 +246,7 @@ return {
 		},
 		opts = {
 			ssh_aliases = {
-				["github-tver"] = "github.com",
+				["github-work"] = "github.com",
 			},
 		},
 	},
