@@ -20,10 +20,6 @@ lspsaga.setup({
 		lines = { "└", "├", "│", "─", "┌" },
 	},
 
-	symbols_in_winbar = {
-		enable = true,
-	},
-
 	lightbulb = {
 		virtual_text = false,
 	},
@@ -54,6 +50,10 @@ lspsaga.setup({
 			split = "s",
 			vsplit = "v",
 		},
+	},
+
+	implement = {
+		enable = true,
 	},
 
 	outline = {
