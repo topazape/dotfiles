@@ -18,6 +18,7 @@ lspsaga.setup({
 		border = "rounded",
 		code_action = "󱐋 ",
 		lines = { "└", "├", "│", "─", "┌" },
+		imp_sign = "󰰃 ",
 	},
 
 	lightbulb = {
