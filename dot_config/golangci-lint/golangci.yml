@@ -15,5 +15,6 @@ linters:
     - stylecheck # Enforces Go style guide rules (similar to golint but stricter)
     - thelper # Ensures test helpers call t.Helper()
     - wsl # Controls whitespace and empty lines
+    - gosimple
 run:
   tests: true
