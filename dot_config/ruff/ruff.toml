@@ -9,9 +9,9 @@ select = [
   "PL",  # pylint
   "PD",  # pandas-vet
   "NPY", # numpy
-  # "RUF", # ruff
-  "UP", # pyupgrade
-  "D",  # pydocstyle
+  "RUF", # ruff
+  "UP",  # pyupgrade
+  "D",   # pydocstyle
 ]
 ignore = [
   "D100",    # Missing docstring in public module
