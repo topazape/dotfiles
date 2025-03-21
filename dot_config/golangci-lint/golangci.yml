@@ -1,5 +1,13 @@
 linters:
+  disable-all: true
   enable:
+    # enabled by default
+    - errcheck
+    - gosimple
+    - govet
+    - ineffassign
+    - staticcheck
+
     - bodyclose # Checks if HTTP response body is properly closed
     - containedctx # Detects struct fields containing context.Context
     - errname # Validates error variable naming conventions
@@ -15,6 +23,5 @@ linters:
     - stylecheck # Enforces Go style guide rules (similar to golint but stricter)
     - thelper # Ensures test helpers call t.Helper()
     - wsl # Controls whitespace and empty lines
-    - gosimple
 run:
   tests: true
