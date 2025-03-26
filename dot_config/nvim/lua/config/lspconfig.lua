@@ -46,7 +46,7 @@ lspconfig.configs.sqruff = {
 	default_config = {
 		cmd = { "sqruff", "lsp" },
 		filetypes = { "sql" },
-		root_dir = lspconfig.util.root_pattern(".sqruff"),
+		-- root_dir = lspconfig.util.root_pattern(".sqruff"),
 	},
 }
 
