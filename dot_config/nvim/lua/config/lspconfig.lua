@@ -43,7 +43,7 @@ end
 local lspconfig = require("lspconfig")
 local handlers = {
 	function()
-		lspconfig.configs.sqruff = {
+		lspconfig.sqruff = {
 			default_config = {
 				cmd = { "sqruff", "lsp" },
 				filetypes = { "sql" },
