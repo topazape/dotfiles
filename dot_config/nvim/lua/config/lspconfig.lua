@@ -41,12 +41,10 @@ local function library(plugins)
 end
 
 local lspconfig = require("lspconfig")
-
-lspconfig.configs.sqruff = {
+require("lspconfig.configs").sqruff = {
 	default_config = {
 		cmd = { "sqruff", "lsp" },
 		filetypes = { "sql" },
-		root_dir = lspconfig.util.root_pattern(".sqruff"),
 	},
 }
 
