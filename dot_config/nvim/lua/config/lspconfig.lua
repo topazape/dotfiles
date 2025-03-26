@@ -216,6 +216,10 @@ local handlers = {
 			filetypes = { "terraform", "terraform-vars", "hcl" },
 		})
 	end,
+
+	["sqruff"] = function()
+		lspconfig.sqruff.setup({})
+	end,
 }
 
 require("mason-lspconfig").setup_handlers(handlers)
