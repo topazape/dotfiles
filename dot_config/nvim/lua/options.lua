@@ -20,7 +20,7 @@ local options = {
 	ruler = false,
 	---- 特殊文字表示
 	list = true,
-	listchars = { eol = "↴", tab = "› ", trail = "˽", extends = "»", precedes = "«", nbsp = "·" },
+	listchars = { eol = "¬", tab = "› ", trail = "˽", extends = "»", precedes = "«", nbsp = "·" },
 	fillchars = { fold = "‣", eob = "◦" },
 	---- ビジュアルベル
 	visualbell = true,
