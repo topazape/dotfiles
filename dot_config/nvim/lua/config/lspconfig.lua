@@ -41,6 +41,14 @@ local function library(plugins)
 end
 
 local handlers = {
+	function()
+		require("lspconfig.configs").sqruff = {
+			default_config = {
+				cmd = { "sqruff", "lsp" },
+				filetypes = { "sql" },
+			},
+		}
+	end,
 	-- The first entry (without a key) will be the default handler
 	-- and will be called for each installed server that doesn"t have
 	-- a dedicated handler.
@@ -207,15 +215,6 @@ local handlers = {
 		require("lspconfig").terraformls.setup({
 			filetypes = { "terraform", "terraform-vars", "hcl" },
 		})
-	end,
-
-	["sqruff"] = function()
-		require("lspconfig").configs.sqruff = {
-			default_config = {
-				cmd = { "sqruff", "lsp" },
-				filetypes = { "sql" },
-			},
-		}
 	end,
 }
 
