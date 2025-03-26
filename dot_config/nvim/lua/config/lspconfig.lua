@@ -40,25 +40,17 @@ local function library(plugins)
 	return paths
 end
 
-local lspconfig = require("lspconfig")
-require("lspconfig.configs").sqruff = {
-	default_config = {
-		cmd = { "sqruff", "lsp" },
-		filetypes = { "sql" },
-	},
-}
-
 local handlers = {
 	-- The first entry (without a key) will be the default handler
 	-- and will be called for each installed server that doesn"t have
 	-- a dedicated handler.
 	function(server_name) -- default handler (optional)
-		lspconfig[server_name].setup({})
+		require("lspconfig")[server_name].setup({})
 	end,
 
 	-- Next, you can provide a dedicated handler for specific servers.
 	["lua_ls"] = function()
-		lspconfig.lua_ls.setup({
+		require("lspconfig").lua_ls.setup({
 			settings = {
 				Lua = {
 					runtime = {
@@ -77,7 +69,7 @@ local handlers = {
 	end,
 
 	["basedpyright"] = function()
-		lspconfig.basedpyright.setup({
+		require("lspconfig").basedpyright.setup({
 			settings = {
 				python = {
 					pythonPath = "./.venv/bin/python",
@@ -109,14 +101,14 @@ local handlers = {
 	end,
 
 	["bashls"] = function()
-		lspconfig.bashls.setup({
+		require("lspconfig").bashls.setup({
 			filetypes = { "sh", "bash", "zsh" },
 		})
 	end,
 
 	["gopls"] = function()
 		vim.env.GOPLSCACHE = XDG_CACHE_HOME .. "/gopls"
-		lspconfig.gopls.setup({
+		require("lspconfig").gopls.setup({
 			settings = {
 				gopls = {
 					analyses = {
@@ -151,7 +143,7 @@ local handlers = {
 				XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml",
 			}
 		end
-		lspconfig.golangci_lint_ls.setup({
+		require("lspconfig").golangci_lint_ls.setup({
 			init_options = {
 				command = golangci_lint_command,
 			},
@@ -159,7 +151,7 @@ local handlers = {
 	end,
 
 	["rust_analyzer"] = function()
-		lspconfig.rust_analyzer.setup({
+		require("lspconfig").rust_analyzer.setup({
 			settings = {
 				["rust-analyzer"] = {
 					check = {
@@ -203,7 +195,7 @@ local handlers = {
 	end,
 
 	["tinymist"] = function()
-		lspconfig.tinymist.setup({
+		require("lspconfig").tinymist.setup({
 			settings = {
 				exportPdf = "never",
 				formatterMode = "typstyle",
@@ -212,13 +204,9 @@ local handlers = {
 	end,
 
 	["terraformls"] = function()
-		lspconfig.terraformls.setup({
+		require("lspconfig").terraformls.setup({
 			filetypes = { "terraform", "terraform-vars", "hcl" },
 		})
-	end,
-
-	["sqruff"] = function()
-		lspconfig.sqruff.setup({})
 	end,
 }
 
