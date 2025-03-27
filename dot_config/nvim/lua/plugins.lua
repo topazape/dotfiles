@@ -53,7 +53,10 @@ return {
 	-- lsp
 	{
 		"williamboman/mason.nvim",
-    config = true,
+		config = function()
+			require("mason").setup({})
+			vim.lsp.enable({ "lua-language-server" })
+		end,
 		-- dependencies = {
 		-- 	"neovim/nvim-lspconfig",
 		-- 	"williamboman/mason-lspconfig.nvim",
