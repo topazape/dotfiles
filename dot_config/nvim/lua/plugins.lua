@@ -53,13 +53,13 @@ return {
 	-- lsp
 	{
 		"williamboman/mason.nvim",
-		dependencies = {
-			"neovim/nvim-lspconfig",
-			"williamboman/mason-lspconfig.nvim",
-		},
-		config = function()
-			require("config/lspconfig")
-		end,
+		-- dependencies = {
+		-- 	"neovim/nvim-lspconfig",
+		-- 	"williamboman/mason-lspconfig.nvim",
+		-- },
+		-- config = function()
+		-- 	require("config/lspconfig")
+		-- end,
 	},
 	---- lspsaga
 	{
@@ -72,14 +72,14 @@ return {
 		end,
 	},
 	---- inlay hints
-	{
-		"MysticalDevil/inlay-hints.nvim",
-		dependencies = {
-			"neovim/nvim-lspconfig",
-		},
-		event = "LspAttach",
-		config = true,
-	},
+	-- {
+	-- 	"MysticalDevil/inlay-hints.nvim",
+	-- 	dependencies = {
+	-- 		"neovim/nvim-lspconfig",
+	-- 	},
+	-- 	event = "LspAttach",
+	-- 	config = true,
+	-- },
 	---- progress
 	{
 		"j-hui/fidget.nvim",
