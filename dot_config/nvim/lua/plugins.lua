@@ -54,8 +54,8 @@ return {
 	{
 		"williamboman/mason.nvim",
 		config = function()
-			require("mason").setup({})
-			-- vim.lsp.enable({ "lua-language-server" })
+			require("mason").setup()
+			vim.lsp.enable({ "lua-language-server" })
 		end,
 		-- dependencies = {
 		-- 	"neovim/nvim-lspconfig",
