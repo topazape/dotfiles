@@ -14,3 +14,9 @@ vim.diagnostic.config({
 	virtual_text = false,
 	virtual_lines = true,
 })
+
+vim.lsp.config("*", {
+	root_markers = { ".git" },
+})
+
+vim.iter(vim.api.nvim_getrun
