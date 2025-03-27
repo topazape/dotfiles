@@ -18,5 +18,3 @@ vim.diagnostic.config({
 vim.lsp.config("*", {
 	root_markers = { ".git" },
 })
-
-vim.iter(vim.api.nvim_getrun
