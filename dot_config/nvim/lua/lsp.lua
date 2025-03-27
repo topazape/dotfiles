@@ -18,3 +18,11 @@ vim.diagnostic.config({
 vim.lsp.config("*", {
 	root_markers = { ".git" },
 })
+
+vim.iter(vim.api.nvim_get_runtime_file("lsp/*.lua", true))
+	:map(function(file)
+		return vim.fs.basename(file):match("^(.*)%.lua$")
+	end)
+	:each(function(server_name)
+		vim.lsp.enable(server_name)
+	end)
