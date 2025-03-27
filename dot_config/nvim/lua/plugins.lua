@@ -51,19 +51,19 @@ return {
 	},
 
 	-- lsp
+	---- lspconfig
+	{
+		"neovim/nvim-lspconfig",
+	},
+	-- mason
 	{
 		"williamboman/mason.nvim",
 		config = function()
-			require("mason").setup()
-			vim.lsp.enable({ "lua-language-server", "gopls" })
+			require("config/lspconfig")
 		end,
-		-- dependencies = {
-		-- 	"neovim/nvim-lspconfig",
-		-- 	"williamboman/mason-lspconfig.nvim",
-		-- },
-		-- config = function()
-		-- 	require("config/lspconfig")
-		-- end,
+		dependencies = {
+			"williamboman/mason-lspconfig.nvim",
+		},
 	},
 	---- lspsaga
 	{
