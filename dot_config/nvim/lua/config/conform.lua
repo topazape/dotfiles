@@ -5,6 +5,12 @@ conform.setup({
 		timeout_ms = 1000,
 		lsp_format = "fallback",
 	},
+	formatters = {
+		sqlfluff = {
+			command = "sqlfluff",
+			args = { "fix", "--nocolor", "-" },
+		},
+	},
 	formatters_by_ft = {
 		css = {
 			"prettier",
