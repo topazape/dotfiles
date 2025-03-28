@@ -9,7 +9,9 @@ conform.setup({
 		sqlfluff = {
 			command = "sqlfluff",
 			args = { "format", "--dialect=bigquery", "-" },
-			cwd = vim.fn.getcwd(),
+			cwd = function()
+				return vim.fn.getcwd()
+			end,
 		},
 	},
 	formatters_by_ft = {
