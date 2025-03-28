@@ -8,7 +8,7 @@ conform.setup({
 	formatters = {
 		sqlfluff = {
 			command = "sqlfluff",
-			args = { "format", "--dialect=bigquery", "-" },
+			args = { "format", "-" },
 			cwd = function()
 				return vim.fn.getcwd()
 			end,
