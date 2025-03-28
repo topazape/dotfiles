@@ -8,7 +8,7 @@ conform.setup({
 	formatters = {
 		sqlfluff = {
 			command = "sqlfluff",
-			args = { "fix", "--nocolor", "-" },
+			args = { "fix", "$FILENAME" },
 		},
 	},
 	formatters_by_ft = {
