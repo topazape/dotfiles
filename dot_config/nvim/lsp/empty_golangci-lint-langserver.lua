@@ -16,7 +16,6 @@ return {
 			end
 			return { "golangci-lint", "run", "--fix=false", "--output.json.path=stdout", "--show-stats=false" }
 		end)(),
-		command = { "golangci-lint", "run", "--output.json.path=stdout", "--show-stats=false" },
 	},
 	filetypes = { "go", "gomod" },
 	root_markers = {
