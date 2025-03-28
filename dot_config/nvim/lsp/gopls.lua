@@ -1,6 +1,6 @@
 return {
 	cmd = { "gopls" },
-	cmd_env = { GOPLSCACHE = vim.env.XDG_CACHE_HOME .. "/gopls--" },
+	cmd_env = { GOPLSCACHE = vim.env.XDG_CACHE_HOME .. "/gopls" },
 	filetypes = { "go", "gomod", "gowork", "gotmpl" },
 	root_markers = { "go.work", "go.mod" },
 	settings = {
