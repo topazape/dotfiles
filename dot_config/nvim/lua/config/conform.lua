@@ -8,8 +8,8 @@ conform.setup({
 	formatters = {
 		sqlfluff = {
 			command = "sqlfluff",
-			args = { "format", "-" },
-    },
+			args = { "format", "--dialect=bigquery", "-" },
+		},
 	},
 	formatters_by_ft = {
 		css = {
