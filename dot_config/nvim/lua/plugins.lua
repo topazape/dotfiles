@@ -75,12 +75,6 @@ return {
 			require("config/saga")
 		end,
 	},
-	---- inlay hints
-	{
-		"MysticalDevil/inlay-hints.nvim",
-		event = "LspAttach",
-		config = true,
-	},
 	---- progress
 	{
 		"j-hui/fidget.nvim",
