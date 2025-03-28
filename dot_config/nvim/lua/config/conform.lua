@@ -9,15 +9,9 @@ conform.setup({
 		sqlfluff = {
 			command = "sqlfluff",
 			args = { "format", "-" },
-			cwd = (function()
-				local f = require("conform.util").root_file({ ".git", ".sqlfluff" })
-				return function()
-					local dir = f()
-					local final = dir or vim.fn.getcwd()
-					print("formatter cwd = " .. final)
-					return final
-				end
-			end)(),
+			cwd = function()
+				return vim.fn.getcwd()
+			end,
 		},
 	},
 	formatters_by_ft = {
