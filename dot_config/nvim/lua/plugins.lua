@@ -58,9 +58,9 @@ return {
 	-- mason
 	{
 		"williamboman/mason.nvim",
-		config = function()
-			require("config/lspconfig")
-		end,
+		-- config = function()
+		-- 	require("config/lspconfig")
+		-- end,
 		dependencies = {
 			"williamboman/mason-lspconfig.nvim",
 		},
