@@ -1,6 +1,6 @@
 return {
-  cmd = { 'basedpyright-langserver', '--stdio' },
-  filetypes = { 'python' },
+  -- cmd = { 'basedpyright-langserver', '--stdio' },
+  -- filetypes = { 'python' },
 	root_markers = {
 		"Pipfile",
 		"pyproject.toml",
