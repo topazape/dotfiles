@@ -8,13 +8,13 @@ return {
 					"golangci-lint",
 					"run",
 					"--fix=false",
-					"--out-format",
-					"json",
+					"--output.json.path=stdout",
+					"--show-status=false",
 					"--config",
 					vim.env.XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml",
 				}
 			end
-			return { "golangci-lint", "run", "--fix=false", "--out-format", "json" }
+			return { "golangci-lint", "run", "--fix=false", "--output.json.path=stdout", "--show-status=false" }
 		end)(),
 	},
 	filetypes = { "go", "gomod" },
