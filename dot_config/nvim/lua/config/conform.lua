@@ -34,6 +34,9 @@ conform.setup({
 		sh = {
 			"shfmt",
 		},
+		sql = {
+			"sqlfluff",
+		},
 		toml = {
 			"taplo",
 		},
