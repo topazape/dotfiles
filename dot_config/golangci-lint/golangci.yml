@@ -19,7 +19,6 @@ linters:
     - makezero # Finds slice declarations with non-zero initial length
     - misspell # Finds commonly misspelled English words
     - revive # Fast and configurable replacement for golint
-    - stylecheck # Enforces Go style guide rules (similar to golint but stricter)
     - thelper # Ensures test helpers call t.Helper()
     - wsl # Controls whitespace and empty lines
 run:
@@ -29,3 +28,4 @@ run:
     # - gofumpt # Enhanced gofmt with additional rules
     # - goimports # Formats imports and code according to 'goimports'
     # - gosimple
+    # - stylecheck # Enforces Go style guide rules (similar to golint but stricter)
