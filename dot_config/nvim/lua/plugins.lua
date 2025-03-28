@@ -58,12 +58,13 @@ return {
 	-- mason
 	{
 		"williamboman/mason.nvim",
+    config = true,
 		-- config = function()
 		-- 	require("config/lspconfig")
 		-- end,
-		dependencies = {
-			"williamboman/mason-lspconfig.nvim",
-		},
+		-- dependencies = {
+		-- 	"williamboman/mason-lspconfig.nvim",
+		-- },
 	},
 	---- lspsaga
 	{
