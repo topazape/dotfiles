@@ -1,4 +1,6 @@
 return {
+  cmd = { 'basedpyright-langserver', '--stdio' },
+  filetypes = { 'python' },
 	root_markers = {
 		"Pipfile",
 		"pyproject.toml",
@@ -7,7 +9,6 @@ return {
 		"setup.cfg",
 		"setup.py",
 	},
-
 	settings = {
 		-- python = {
 		-- 	pythonPath = "./.venv/bin/python",
