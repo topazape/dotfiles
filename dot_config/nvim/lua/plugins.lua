@@ -51,20 +51,10 @@ return {
 	},
 
 	-- lsp
-	---- lspconfig
-	{
-		"neovim/nvim-lspconfig",
-	},
-	-- mason
+	---- mason
 	{
 		"williamboman/mason.nvim",
-    config = true,
-		-- config = function()
-		-- 	require("config/lspconfig")
-		-- end,
-		-- dependencies = {
-		-- 	"williamboman/mason-lspconfig.nvim",
-		-- },
+		config = true,
 	},
 	---- lspsaga
 	{
