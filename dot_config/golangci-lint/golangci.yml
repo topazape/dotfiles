@@ -24,4 +24,5 @@ linters:
     - thelper # Ensures test helpers call t.Helper()
     - wsl # Controls whitespace and empty lines
 run:
+  go: "1.23"
   tests: true
