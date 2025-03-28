@@ -12,10 +12,6 @@ conform.setup({
 		bash = {
 			"shfmt",
 		},
-		go = {
-			"goimports",
-			"gofumpt",
-		},
 		html = {
 			"prettier",
 		},
