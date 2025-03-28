@@ -78,6 +78,7 @@ return {
 
 	-- misc
 	check_for_updates = false,
+	native_macos_fullscreen_mode = true,
 
 	-- key settings
 	send_composed_key_when_left_alt_is_pressed = false,
