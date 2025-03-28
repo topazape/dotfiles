@@ -10,7 +10,7 @@ conform.setup({
 			command = "sqlfluff",
 			args = { "format", "-" },
 			cwd = function()
-				return vim.fn.getcwd() or require("conform.util").root_file({ ".git", ".sqlfluff" })
+				return require("conform.util").root_file({ ".git", ".sqlfluff" })
 			end,
 		},
 	},
