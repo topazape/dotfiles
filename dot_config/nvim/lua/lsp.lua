@@ -8,11 +8,10 @@ vim.diagnostic.config({
 			[vim.diagnostic.severity.HINT] = "",
 		},
 	},
-	-- virtual_text = {
-	-- 	prefix = "",
-	-- },
-	virtual_text = false,
-	virtual_lines = true,
+	virtual_text = {
+		prefix = "",
+	},
+	-- virtual_lines = true,
 })
 
 -- setup lsp
