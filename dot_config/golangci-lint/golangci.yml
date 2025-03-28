@@ -21,11 +21,13 @@ linters:
     - revive # Fast and configurable replacement for golint
     - thelper # Ensures test helpers call t.Helper()
     - wsl # Controls whitespace and empty lines
+formatters:
+  # - gofumpt # Enhanced gofmt with additional rules
+  # - goimports # Formats imports and code according to 'goimports'
+
 run:
   tests:
     false
 
-    # - gofumpt # Enhanced gofmt with additional rules
-    # - goimports # Formats imports and code according to 'goimports'
     # - gosimple
     # - stylecheck # Enforces Go style guide rules (similar to golint but stricter)
