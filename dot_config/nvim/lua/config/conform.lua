@@ -9,6 +9,7 @@ conform.setup({
 		sqlfluff = {
 			command = "sqlfluff",
 			args = { "format", "-" },
+    },
 	},
 	formatters_by_ft = {
 		css = {
