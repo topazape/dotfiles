@@ -76,11 +76,11 @@ return {
 		end,
 	},
 	---- inlay hints
-	-- {
-	-- 	"MysticalDevil/inlay-hints.nvim",
-	-- 	event = "LspAttach",
-	-- 	config = true,
-	-- },
+	{
+		"MysticalDevil/inlay-hints.nvim",
+		event = "LspAttach",
+		config = true,
+	},
 	---- progress
 	{
 		"j-hui/fidget.nvim",
