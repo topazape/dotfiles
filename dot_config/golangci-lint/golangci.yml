@@ -4,10 +4,10 @@ linters:
   enable:
     # enabled by default
     - errcheck
-    - gosimple
     - govet
     - ineffassign
     - staticcheck
+    - unused
 
     - bodyclose # Checks if HTTP response body is properly closed
     - containedctx # Detects struct fields containing context.Context
@@ -15,8 +15,6 @@ linters:
     - errorlint # Ensures proper error wrapping (Go 1.13+)
     - exhaustive # Verifies exhaustiveness of enum switch statements
     - gocritic # Provides diagnostics for bugs, performance and style
-    # - gofumpt # Enhanced gofmt with additional rules
-    # - goimports # Formats imports and code according to 'goimports'
     - gosec # Inspects source code for security problems
     - makezero # Finds slice declarations with non-zero initial length
     - misspell # Finds commonly misspelled English words
@@ -25,4 +23,9 @@ linters:
     - thelper # Ensures test helpers call t.Helper()
     - wsl # Controls whitespace and empty lines
 run:
-  tests: false
+  tests:
+    false
+
+    # - gofumpt # Enhanced gofmt with additional rules
+    # - goimports # Formats imports and code according to 'goimports'
+    # - gosimple
