@@ -31,7 +31,7 @@ vim.iter(vim.api.nvim_get_runtime_file("lsp/*.lua", true))
 ---- enable inlay hints
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)
-		local clienst = assert(vim.lsp.get_client_by_id(args.data.client_id))
+		local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
 		-- skip proxy LSPs
 		local proxy_lsps = { "copilot" }
 		local is_proxy = false
@@ -40,6 +40,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 				is_proxy = true
 				break
 			end
+		end
+		-- enable inlay hints if supported
+		if not is_proxy and client:supports_method("textDocument/inlayHint") then
+			vim.lsp.inlay_hint.enable(true, { bufnr = args.buf })
 		end
 	end,
 })
