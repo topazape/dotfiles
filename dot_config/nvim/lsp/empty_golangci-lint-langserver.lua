@@ -17,7 +17,7 @@ return {
       return { "golangci-lint", "run", "--fix=false", "--out-format", "json" }
     end,
   }
-	filetypes = { "go", "gomod" },
+	filetypes = { "go", "gomod" }
   root_markers = {
             '.golangci.yml',
         '.golangci.yaml',
