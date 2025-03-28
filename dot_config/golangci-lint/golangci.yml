@@ -1,5 +1,6 @@
+version: "2"
 linters:
-  disable-all: true
+  default: none
   enable:
     # enabled by default
     - errcheck
@@ -24,5 +25,4 @@ linters:
     - thelper # Ensures test helpers call t.Helper()
     - wsl # Controls whitespace and empty lines
 run:
-  go: "1.22"
-  tests: true
+  tests: false
