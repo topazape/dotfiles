@@ -12,8 +12,9 @@ conform.setup({
 			cwd = function()
 				local util = require("conform.util")
 				local root = util.root_file({ ".git", ".sqlfluff" })
-				print("formatter cwd = ", root or vim.fn.getcwd())
-				return root or vim.fn.getcwd()
+				local cwd = root or vim.fn.getcwd()
+				print("formatter cwd = " .. cwd)
+				return cwd
 			end,
 		},
 	},
