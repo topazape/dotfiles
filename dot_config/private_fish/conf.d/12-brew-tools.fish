@@ -1,3 +1,9 @@
+# editor
+if type -q nvim
+  set -gx EDITOR "nvim"
+  alias vim="nvim"
+end
+
 # starship
 if type -q starship
   set -gx STARSHIP_CONFIG $XDG_CONFIG_HOME/starship/starship.toml
