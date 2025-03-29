@@ -16,8 +16,6 @@ end
 
 # eza
 if type -q eza
-    # fish already has eza completions by default
-
     alias ls="eza --classify=automatic --sort=Name"
     alias la="eza --classify=automatic --almost-all --sort=Name --git"
     alias ll="eza --classify=automatic --sort=Name --group --header --long --git"
