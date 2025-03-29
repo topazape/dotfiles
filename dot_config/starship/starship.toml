@@ -1,6 +1,6 @@
 [custom.gitmail]
 command = 'git config --get uuser.email 2>/dev/null || echo'
-when = ''' test -n "$GIT_DIR" '''
+when = ''' test -d .git '''
 format = ' $output '
 shell = ['sh']
 
