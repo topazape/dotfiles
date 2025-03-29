@@ -1,5 +1,5 @@
 [custom.gitmail]
-command = 'git config --get uuser.email 2>/dev/null || echo'
+command = 'git config --get user.email 2>/dev/null || echo'
 when = ''' test -d .git '''
 format = ' $output '
 shell = ['sh']
