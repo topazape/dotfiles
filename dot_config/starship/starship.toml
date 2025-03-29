@@ -1,3 +1,7 @@
+[custom.chezmoi]
+when = '''test "$CHEZMOI" = "1"'''
+shell = ["bash", "--noprofile", "--norc", "-eo", "pipefail", "-c"]
+
 [gcloud]
 symbol = '󱇶 '
 format = '[$symbol$project]($style) '
