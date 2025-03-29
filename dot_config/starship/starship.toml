@@ -1,5 +1,5 @@
 [custom.gitmail]
-command = 'git config user.email'
+# command = 'git config user.email'
 when = ''' test -d .git '''
 format = ' $output '
 
