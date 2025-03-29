@@ -1,6 +1,6 @@
 [custom.gitmail]
 command = 'git config --get user.email 2>/dev/null || echo'
-when = 'git rev-parse --is-inside-work-tree 2>/dev/null'
+when = 'test -f .git/config 2>/dev/null || test -f "$(git rev-parse --git-dir 2>/dev/null)/config" 2>/dev/null'
 format = ' $output '
 
 [custom.chezmoi]
