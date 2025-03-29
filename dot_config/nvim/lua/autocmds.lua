@@ -71,7 +71,7 @@ autocmd({ "FileType" }, {
 })
 ---- sh (Google Shell Style Guide)
 autocmd({ "FileType" }, {
-	pattern = { "sh", "bash", "zsh" },
+	pattern = { "sh", "bash", "zsh", "fish" },
 	callback = function()
 		vim.opt_local.tabstop = 2
 		vim.opt_local.shiftwidth = 2
