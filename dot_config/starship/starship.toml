@@ -2,7 +2,6 @@
 command = 'echo foo'
 when = ''' test "$HOME" = "$PWD" '''
 symbol = '󱂵 '
-shell = ['bash', '-c']
 
 [gcloud]
 symbol = '󱇶 '
