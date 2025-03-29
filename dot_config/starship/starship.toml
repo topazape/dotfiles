@@ -1,6 +1,6 @@
 [custom.gitmail]
-command = 'git config --get user.email 2>/dev/null || echo'
-when = 'test -f .git/config 2>/dev/null || test -f "$(git rev-parse --git-dir 2>/dev/null)/config" 2>/dev/null'
+command = 'git config user.email'
+when = ''' test -d .git '''
 format = ' $output '
 
 [custom.chezmoi]
