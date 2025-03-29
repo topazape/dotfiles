@@ -1,7 +1,8 @@
 [custom.chezmoi]
+command = 'echo foo'
 when = '''test "$CHEZMOI" = "1"'''
 symbol = '󱂵 '
-shell = ["bash", "-c"]
+shell = ['bash', '-c']
 
 [gcloud]
 symbol = '󱇶 '
