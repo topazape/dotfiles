@@ -21,6 +21,9 @@ conform.setup({
 		bash = {
 			"shfmt",
 		},
+		fish = {
+			"fish_indent",
+		},
 		html = {
 			"prettier",
 		},
