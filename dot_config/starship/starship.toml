@@ -1,7 +1,6 @@
 [custom.chezmoi]
 when = '''test "$CHEZMOI" = "1"'''
-symbol = ' '
-format = "[$symbol]"
+symbol = '󱂵 '
 shell = ["bash", "--noprofile", "--norc", "-eo", "pipefail", "-c"]
 
 [gcloud]
