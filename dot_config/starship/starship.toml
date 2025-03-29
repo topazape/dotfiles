@@ -2,6 +2,7 @@
 command = 'git config --get uuser.email 2>/dev/null || echo'
 when = ''' test -n "$GIT_DIR" '''
 format = ' $output '
+shell = ['sh']
 
 [custom.chezmoi]
 when = ''' test "$CHEZMOI" = "1" '''
