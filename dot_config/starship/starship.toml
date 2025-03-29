@@ -1,6 +1,6 @@
 [custom.chezmoi]
 command = 'echo foo'
-when = '''test "$CHEZMOI" = "1"'''
+when = ''' test "$HOME" = "$PWD" '''
 symbol = '󱂵 '
 shell = ['bash', '-c']
 
