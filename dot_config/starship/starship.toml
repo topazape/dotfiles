@@ -1,8 +1,3 @@
-[directory]
-style = "#ba55d3"
-truncation_length = 0
-truncate_to_repo = false
-
 [custom.gitmail]
 command = 'git config --get user.email 2>/dev/null || echo'
 when = ''' test -d .git '''
@@ -38,6 +33,7 @@ symbol = ' '
 
 [directory]
 read_only = ' 󰌾'
+truncation_length = 0
 
 [docker_context]
 symbol = ' '
