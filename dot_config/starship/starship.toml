@@ -33,7 +33,8 @@ symbol = ' '
 
 [directory]
 read_only = ' 󰌾'
-truncation_length = 0
+truncation_length = 4
+truncation_symbol = ""
 
 [docker_context]
 symbol = ' '
