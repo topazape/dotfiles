@@ -12,6 +12,8 @@ return {
 	---- fullscreen
 	{ key = "Enter", mods = "ALT", action = act.ToggleFullScreen },
 	---- scroll
+	{ key = "p", mods = "LEADER", action = act.ScrollByPage(-1) },
+	{ key = "n", mods = "LEADER", action = act.ScrollByPage(1) },
 	{ key = "p", mods = "ALT", action = act.ScrollToPrompt(-1) },
 	{ key = "n", mods = "ALT", action = act.ScrollToPrompt(1) },
 	-- pane
