@@ -17,7 +17,7 @@ local function retrieve_font_settings(fonts, weight)
 end
 
 local wezterm = require("wezterm")
-local keys = require("keymaps")
+local keymaps = require("keymaps")
 require("status")
 
 return {
@@ -90,5 +90,5 @@ return {
 	disable_default_key_bindings = true,
 	---- set leader_key to achieve tmux-like keybinds
 	leader = { mods = "CTRL", key = "t", timeout_milliseconds = 1000 },
-	keys = keys,
+	keys = keymaps.keys,
 }
