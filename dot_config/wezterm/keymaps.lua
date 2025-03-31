@@ -4,7 +4,7 @@ return {
 	-- copy paste
 	-- screen
 	---- fullscreen
-	{ key = "Enter", mods = "ALT", action = wezterm.action.ToggleFullScreen },
+	-- { key = "Enter", mods = "ALT", action = wezterm.action.ToggleFullScreen },
 	---- scroll
 	-- pane
 	---- split
