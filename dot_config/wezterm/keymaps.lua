@@ -4,16 +4,12 @@ return {
 	-- copy mode
 	{ key = "Space", mods = "LEADER", action = act.ActivateCopyMode },
 	---- copy & paste
-	{ key = "c", mods = "LEADER", action = act.CopyMode("Copy") },
-	{ key = "v", mods = "LEADER", action = act.CopyMode("Paste") },
 	{ key = "c", mods = "SUPER", action = act.CopyTo("Clipboard") },
 	{ key = "v", mods = "SUPER", action = act.PasteFrom("Clipboard") },
 	-- screen
 	---- fullscreen
 	{ key = "Enter", mods = "ALT", action = act.ToggleFullScreen },
 	---- scroll
-	{ key = "p", mods = "LEADER", action = act.ScrollByPage(-1) },
-	{ key = "n", mods = "LEADER", action = act.ScrollByPage(1) },
 	{ key = "p", mods = "ALT", action = act.ScrollToPrompt(-1) },
 	{ key = "n", mods = "ALT", action = act.ScrollToPrompt(1) },
 	-- pane
