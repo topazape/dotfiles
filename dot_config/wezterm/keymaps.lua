@@ -1,6 +1,8 @@
 local act = require("wezterm").action
 
 return {
+	-- copy
+	{ key = "[", mods = "LEADER", action = act.ActivateCopyMode },
 	-- screen
 	---- fullscreen
 	{ key = "Enter", mods = "ALT", action = act.ToggleFullScreen },
