@@ -1,6 +1,13 @@
 local wezterm = require("wezterm")
 
 return {
+	-- copy paste
+	{ key = "[", mods = "LEADER", action = wezterm.action.ActivateCopyMode },
+	{ key = "]", mods = "LEADER", action = wezterm.action.PasteFrom("Clipboard") },
+	-- screen
+	---- fullscreen
+	{ key = "Enter", mods = "ALT", action = wezterm.action.ToggleFullScreen },
+	---- scroll
 	-- pane
 	---- split
 	{ key = "-", mods = "LEADER", action = wezterm.action.SplitVertical({ domain = "CurrentPaneDomain" }) },
@@ -45,8 +52,6 @@ return {
 	{ key = "F11", mods = "NONE", action = wezterm.action.ActivateTabRelative(-1) },
 	{ key = "]", mods = "LEADER", action = wezterm.action.ActivateTabRelative(1) },
 	{ key = "F12", mods = "NONE", action = wezterm.action.ActivateTabRelative(1) },
-	-- screen
-	{ key = "Enter", mods = "ALT", action = wezterm.action.ToggleFullScreen },
 }
 
 -- default keybinds
