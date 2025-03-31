@@ -2,7 +2,7 @@ local wezterm = require("wezterm")
 
 return {
 	-- copy paste
-	{ key = "[", mods = "LEADER", action = wezterm.action.ActivateCopyMode },
+	{ key = "x", mods = "LEADER", action = wezterm.action.ActivateCopyMode },
 	{ key = "]", mods = "LEADER", action = wezterm.action.PasteFrom("Clipboard") },
 	-- screen
 	---- fullscreen
