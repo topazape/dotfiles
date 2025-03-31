@@ -2,7 +2,7 @@ local act = require("wezterm").action
 
 return {
 	-- copy mode
-	{ key = "[", mods = "LEADER", action = act.ActivateCopyMode },
+	{ key = "Space", mods = "LEADER", action = act.ActivateCopyMode },
 	---- copy
 	{ key = "c", mods = "SUPER", action = act.CopyTo("Clipboard") },
 	{ key = "v", mods = "SUPER", action = act.PasteFrom("Clipboard") },
