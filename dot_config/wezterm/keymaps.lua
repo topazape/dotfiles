@@ -2,8 +2,6 @@ local wezterm = require("wezterm")
 
 return {
 	-- copy paste
-	{ key = "j", mods = "LEADER", action = wezterm.action.ActivateCopyMode },
-	{ key = "]", mods = "LEADER", action = wezterm.action.PasteFrom("Clipboard") },
 	-- screen
 	---- fullscreen
 	{ key = "Enter", mods = "ALT", action = wezterm.action.ToggleFullScreen },
