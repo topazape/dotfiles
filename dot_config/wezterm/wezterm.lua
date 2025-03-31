@@ -86,8 +86,9 @@ return {
 	macos_forward_to_ime_modifier_mask = "SHIFT|CTRL",
 
 	-- keymaps
+	---- disable default keymaps
+	disable_default_key_bindings = true,
 	---- set leader_key to achieve tmux-like keybinds
 	leader = { mods = "CTRL", key = "t", timeout_milliseconds = 1000 },
-
 	keys = keys,
 }
