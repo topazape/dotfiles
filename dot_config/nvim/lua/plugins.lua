@@ -15,6 +15,7 @@ return {
 					mason = true,
 					noice = true,
 					notify = true,
+					octo = true,
 					rainbow_delimiters = true,
 					saga = true,
 					telescope = true,
