@@ -160,13 +160,6 @@ return {
 	},
 	---- super cursor
 	{ "sphamba/smear-cursor.nvim", opts = {} },
-	---- diff mode
-	{
-		"sindrets/diffview.nvim",
-		opts = {
-			enbanced_diff_hl = true,
-		},
-	},
 
 	-- AI
 	---- copilot
