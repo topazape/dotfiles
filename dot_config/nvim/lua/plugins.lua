@@ -159,6 +159,11 @@ return {
 	},
 	---- super cursor
 	{ "sphamba/smear-cursor.nvim", opts = {} },
+	---- diff mode
+	{
+		"sindrets/diffview.nvim",
+		config = true,
+	},
 
 	-- AI
 	---- copilot
