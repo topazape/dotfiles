@@ -15,7 +15,7 @@ return {
 					mason = true,
 					noice = true,
 					notify = true,
-          octo = true,
+					octo = true,
 					rainbow_delimiters = true,
 					saga = true,
 					telescope = true,
@@ -163,7 +163,9 @@ return {
 	---- diff mode
 	{
 		"sindrets/diffview.nvim",
-		config = true,
+		opts = {
+			enbanced_diff_hl = true,
+		},
 	},
 
 	-- AI
