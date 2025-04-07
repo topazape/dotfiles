@@ -21,9 +21,6 @@ conform.setup({
 		bash = {
 			"shfmt",
 		},
-		go = {
-			lsp_format = "fallback",
-		},
 		fish = {
 			"fish_indent",
 		},
