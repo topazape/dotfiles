@@ -22,8 +22,8 @@ linters:
     - thelper # Ensures test helpers call t.Helper()
     - wsl # Controls whitespace and empty lines
 formatters:
-  settings:
-    gofumpt:
-    goimports:
+  enable:
+    - gofumpt
+    - goimports
 run:
   tests: true
