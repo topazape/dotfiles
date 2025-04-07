@@ -65,7 +65,7 @@ conform.setup({
 			"xmlformatter",
 		},
 		yaml = {
-			"prettier",
+			-- "prettier",
 		},
 		zsh = {
 			"shfmt",
