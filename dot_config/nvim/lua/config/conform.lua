@@ -3,6 +3,7 @@ local conform = require("conform")
 conform.setup({
 	format_on_save = {
 		timeout_ms = 1000,
+		lsp_format = "fallback",
 	},
 	formatters = {
 		sqlfluff = {
@@ -21,7 +22,7 @@ conform.setup({
 			"shfmt",
 		},
 		go = {
-			lspformat = "fallback",
+			lsp_format = "fallback",
 		},
 		fish = {
 			"fish_indent",
