@@ -30,7 +30,7 @@ conform.setup({
 			"fish_indent",
 		},
 		go = {
-			"golangci-lint",
+			"golangci_lint",
 		},
 		html = {
 			"prettier",
