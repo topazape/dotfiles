@@ -13,7 +13,9 @@ conform.setup({
 				return vim.fn.getcwd()
 			end,
 		},
-		["golangci-lint"] = {
+		golangci_lint = {
+			command = "golangci-lint",
+			args = { "fmt", "--stdin" },
 			env = { GOLANGCI_LINT_CONFIG = vim.fn.expand("~/.config/golangci-lint/golangci.yml") },
 		},
 	},
@@ -28,7 +30,7 @@ conform.setup({
 			"fish_indent",
 		},
 		go = {
-			"golangci-lint",
+			"golangci_lint",
 		},
 		html = {
 			"prettier",
