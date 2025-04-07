@@ -6,11 +6,11 @@ return {
 			if vim.fn.filereadable(vim.env.XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml") == 1 then
 				return {
 					"golangci-lint",
+					"--config",
+					vim.env.XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml",
 					"run",
 					"--output.json.path=stdout",
 					"--show-stats=false",
-					"--config",
-					vim.env.XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml",
 				}
 			end
 			return { "golangci-lint", "run", "--output.json.path=stdout", "--show-stats=false" }
