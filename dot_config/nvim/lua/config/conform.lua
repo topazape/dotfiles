@@ -14,9 +14,9 @@ conform.setup({
 			end,
 		},
 		golangci_lint = {
-			env = {
-				GOLANGCI_LINT_CONFIG = vim.fn.expand("~/.config/golangci-lint/golangci.yml"),
-			},
+			command = { "golangci-lint" },
+			args = { "fmt", "--stdin" },
+			env = { GOLANGCI_LINT_CONFIG = vim.fn.expand("~/.config/golangci-lint/golangci.yml") },
 		},
 	},
 	formatters_by_ft = {
