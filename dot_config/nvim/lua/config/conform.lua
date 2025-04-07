@@ -14,9 +14,7 @@ conform.setup({
 			end,
 		},
 		["golangci-lint"] = {
-			command = "golangci-lint",
-			args = { "fmt", "--stdin" },
-			env = { GOLANGCI_LINT_CONFIG = vim.fn.expand("~/.config/golangci-lint/golangci.yml") },
+			args = { "--config", vim.env.XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml", "fmt", "--stdin" },
 		},
 	},
 	formatters_by_ft = {
