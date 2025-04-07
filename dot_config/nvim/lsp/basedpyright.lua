@@ -20,6 +20,7 @@ return {
 				diagnosticSeverityOverrides = {
 					reportAny = false,
 					reportExplicitAny = false,
+					reportCallInDefaultInitializer = false,
 					reportUnusedImport = false,
 					reportUnusedVariable = false,
 					reportAttributeAccessIssue = false,
