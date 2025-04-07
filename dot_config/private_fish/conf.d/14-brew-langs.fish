@@ -9,13 +9,13 @@ if type -q goenv
     fish_add_path $GOROOT/bin
 end
 ## golang
-if type -q go
-    set -gx GOPATH $XDG_DATA_HOME/go
-    set -gx GOCACHE $XDG_CACHE_HOME/go/go-build
-    set -gx GOMODCACHE $GOPATH/pkg/mod
-    set -gx GOENV $GOPATH/env
-    fish_add_path $GOPATH/bin
-end
+# if type -q go
+#     set -gx GOPATH $XDG_DATA_HOME/go
+#     set -gx GOCACHE $XDG_CACHE_HOME/go/go-build
+#     set -gx GOMODCACHE $GOPATH/pkg/mod
+#     set -gx GOENV $GOPATH/env
+#     fish_add_path $GOPATH/bin
+# end
 
 # Javascript
 ## npm
