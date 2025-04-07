@@ -19,14 +19,14 @@ return {
 				diagnosticMode = "workspace",
 				diagnosticSeverityOverrides = {
 					reportAny = false,
-					reportExplicitAny = false,
-					reportCallInDefaultInitializer = false,
-					reportUnusedImport = false,
-					reportUnusedVariable = false,
 					reportAttributeAccessIssue = false,
+					reportCallInDefaultInitializer = false,
+					reportExplicitAny = false,
 					reportUnknownArgumentType = false,
 					reportUnknownMemberType = false,
 					reportUnknownVariableType = false,
+					reportUnusedImport = false,
+					reportUnusedVariable = false,
 				},
 				inlayHints = {
 					callArgumentNames = false,
