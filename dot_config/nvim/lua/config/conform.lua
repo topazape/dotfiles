@@ -13,7 +13,7 @@ conform.setup({
 				return vim.fn.getcwd()
 			end,
 		},
-		["golangci-lint"] = {
+		golangci_lint = {
 			env = {
 				GOLANGCI_LINT_CONFIG = vim.fn.expand("~/.config/golangci-lint/golangci.yml"),
 			},
