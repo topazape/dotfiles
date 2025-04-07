@@ -24,6 +24,9 @@ conform.setup({
 		fish = {
 			"fish_indent",
 		},
+		go = {
+			"golangci-lint",
+		},
 		html = {
 			"prettier",
 		},
