@@ -25,6 +25,5 @@ formatters:
   settings:
     gofumpt:
     goimports:
-    golines:
 run:
   tests: true
