@@ -21,6 +21,7 @@ linters:
     - misspell # Finds commonly misspelled English words
     - thelper # Ensures test helpers call t.Helper()
     - wsl # Controls whitespace and empty lines
+  disable:
 formatters:
   enable:
     - gofumpt
