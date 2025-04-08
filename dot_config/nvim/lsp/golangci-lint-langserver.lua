@@ -7,7 +7,7 @@ return {
 			"run",
 			-- "--config=~/.config/golangci-lint/golangci.yml",
 			"--default=none",
-			"--enable wsl",
+			"--enable=wsl",
 			"--output.json.path=stdout",
 			"--show-stats=false",
 		},
