@@ -23,7 +23,7 @@ linters:
   #   - wsl # Controls whitespace and empty lines
 formatters:
   enable:
-    - goimports
     - gofumpt
+    - goimports
 run:
   tests: true
