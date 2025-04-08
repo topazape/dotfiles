@@ -28,7 +28,9 @@ conform.setup({
 			"fish_indent",
 		},
 		go = {
-			"golangci-lint",
+			"gofumpt",
+			"goimports",
+			-- "golangci-lint",
 		},
 		html = {
 			"prettier",
@@ -65,7 +67,7 @@ conform.setup({
 			"xmlformatter",
 		},
 		yaml = {
-			-- "prettier",
+			"prettier",
 		},
 		zsh = {
 			"shfmt",
