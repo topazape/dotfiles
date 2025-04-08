@@ -5,6 +5,8 @@ return {
 		command = {
 			"golangci-lint",
 			"run",
+			"--config",
+			vim.env.XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml",
 			"--output.json.path",
 			"stdout",
 			"--issues-exit-code=1",
