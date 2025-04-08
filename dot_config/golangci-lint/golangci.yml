@@ -1,29 +1,29 @@
 version: "2"
-linters:
-  default: none
-  enable:
-    # enabled by default
-    - errcheck
-    - govet
-    - ineffassign
-    - staticcheck
-    - unused
-
-    - bodyclose # Checks if HTTP response body is properly closed
-    - containedctx # Detects struct fields containing context.Context
-    - errname # Validates error variable naming conventions
-    - errorlint # Ensures proper error wrapping (Go 1.13+)
-    - exhaustive # Verifies exhaustiveness of enum switch statements
-    - gocritic # Provides diagnostics for bugs, performance and style
-    - gosec # Inspects source code for security problems
-    - makezero # Finds slice declarations with non-zero initial length
-    - misspell # Finds commonly misspelled English words
-    - revive # Fast and configurable replacement for golint
-    - thelper # Ensures test helpers call t.Helper()
-    - wsl # Controls whitespace and empty lines
-formatters:
-  enable:
-    - gofumpt
-    - goimports
-run:
-  tests: true
+# linters:
+#   default: none
+#   enable:
+#     # enabled by default
+#     - errcheck
+#     - govet
+#     - ineffassign
+#     - staticcheck
+#     - unused
+#
+#     - bodyclose # Checks if HTTP response body is properly closed
+#     - containedctx # Detects struct fields containing context.Context
+#     - errname # Validates error variable naming conventions
+#     - errorlint # Ensures proper error wrapping (Go 1.13+)
+#     - exhaustive # Verifies exhaustiveness of enum switch statements
+#     - gocritic # Provides diagnostics for bugs, performance and style
+#     - gosec # Inspects source code for security problems
+#     - makezero # Finds slice declarations with non-zero initial length
+#     - misspell # Finds commonly misspelled English words
+#     - revive # Fast and configurable replacement for golint
+#     - thelper # Ensures test helpers call t.Helper()
+#     - wsl # Controls whitespace and empty lines
+# formatters:
+#   enable:
+#     - gofumpt
+#     - goimports
+# run:
+#   tests: true
