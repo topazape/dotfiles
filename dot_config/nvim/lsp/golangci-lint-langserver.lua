@@ -5,8 +5,7 @@ return {
 		command = {
 			"golangci-lint",
 			"run",
-			"--config",
-			vim.env.XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml",
+			"--config=" .. vim.env.XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml",
 		},
 	},
 	filetypes = { "go", "gomod" },
