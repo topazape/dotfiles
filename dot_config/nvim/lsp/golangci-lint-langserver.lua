@@ -9,6 +9,7 @@ local command = {
 -- 設定ファイルが存在する場合のみ追加
 if vim.fn.filereadable(vim.env.XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml") == 1 then
 	table.insert(command, 2, "--config=" .. vim.env.XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml")
+	print(command)
 end
 
 return {
