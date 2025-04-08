@@ -25,6 +25,5 @@ formatters:
   enable:
     - goimports
     - gofumpt
-    - gci
 run:
   tests: true
