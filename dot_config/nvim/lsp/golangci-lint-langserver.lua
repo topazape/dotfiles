@@ -4,8 +4,8 @@ return {
 	init_options = {
 		command = {
 			"golangci-lint",
-			"run",
 			"--config=" .. vim.env.XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml",
+			"run",
 		},
 	},
 	filetypes = { "go", "gomod" },
