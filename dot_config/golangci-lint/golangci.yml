@@ -1,6 +1,6 @@
 version: "2"
 linters:
-  default: ll
+  # default: all
 #   enable:
 #     # enabled by default
 #     - errcheck
