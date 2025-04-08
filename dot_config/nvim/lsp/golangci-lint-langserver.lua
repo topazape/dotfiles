@@ -6,6 +6,7 @@ return {
 			"golangci-lint",
 			"run",
 			"--default=standard",
+			"--enable=wsl",
 			"--output.json.path=stdout",
 			"--show-stats=false",
 		},
