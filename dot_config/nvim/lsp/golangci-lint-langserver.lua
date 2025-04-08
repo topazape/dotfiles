@@ -5,9 +5,8 @@ return {
 		command = {
 			"golangci-lint",
 			"run",
-			"--config=/Users/kawai/.config/golangci-lint/golangci.yml",
-			-- "--default=standard",
-			-- "--enable=bodyclose,containedctx,errname,errorlint,exhaustive,gocritic,gosec,makezero,misspell,thelper,wsl",
+			"--default=standard",
+			"--enable=bodyclose,containedctx,errname,errorlint,exhaustive,gocritic,gosec,makezero,misspell,thelper,wsl",
 			"--output.json.path=stdout",
 			"--show-stats=false",
 		},
