@@ -7,8 +7,6 @@ return {
 			"run",
 			"--config",
 			vim.env.XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml",
-			"--output.json.path",
-			"stdout",
 		},
 	},
 	filetypes = { "go", "gomod" },
