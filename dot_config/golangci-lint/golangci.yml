@@ -23,8 +23,8 @@ linters:
     - wsl # Controls whitespace and empty lines
 formatters:
   enable:
-    - gci
-    - gofumpt
     - goimports
+    - gofumpt
+    - gci
 run:
   tests: true
