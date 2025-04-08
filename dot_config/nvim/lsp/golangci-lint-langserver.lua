@@ -9,15 +9,20 @@ return {
 					"--config",
 					vim.env.XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml",
 					"run",
-					"--out-format",
-					"json",
-					"issues-exit-code=1",
-					-- "--output.json.path=stdout",
-					-- "--show-stats=false",
+					"--output.json.path",
+					"stdout",
+					"--issues-exit-code=1",
+					"--show-stats=false",
 				}
 			end
-			-- return { "golangci-lint", "run", "--output.json.path=stdout", "--show-stats=false" }
-			return { "golangci-lint", "run", "--out-format", "json", "issues-exit-code=1" }
+			return {
+				"golangci-lint",
+				"run",
+				"--output.json.path",
+				"stdout",
+				"--issues-exit-code=1",
+				"--show-stats=false",
+			}
 		end)(),
 	},
 	filetypes = { "go", "gomod" },
