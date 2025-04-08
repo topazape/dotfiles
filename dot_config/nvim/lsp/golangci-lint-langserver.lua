@@ -8,6 +8,7 @@ return {
 			"--output.json.path",
 			"stdout",
 			"--show-stats=false",
+			"--issues-exit-code=1",
 		},
 		-- command = (function()
 		-- 	if vim.fn.filereadable(vim.env.XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml") == 1 then
