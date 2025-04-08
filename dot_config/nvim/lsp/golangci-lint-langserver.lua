@@ -5,7 +5,7 @@ return {
 		command = {
 			"golangci-lint",
 			"run",
-			"--config=~/.config/golangci-lint/config.yml",
+			"--config=/Users/kawai/.config/golangci-lint/config.yml",
 			-- "--default=standard",
 			-- "--enable=bodyclose,containedctx,errname,errorlint,exhaustive,gocritic,gosec,makezero,misspell,thelper,wsl",
 			"--output.json.path=stdout",
