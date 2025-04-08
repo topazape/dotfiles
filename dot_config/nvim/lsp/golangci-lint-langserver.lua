@@ -5,9 +5,7 @@ return {
 		command = {
 			"golangci-lint",
 			"run",
-			-- "--config=~/.config/golangci-lint/golangci.yml",
-			"--default=none",
-			"--enable=wsl",
+			"--default=standard",
 			"--output.json.path=stdout",
 			"--show-stats=false",
 		},
