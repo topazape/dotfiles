@@ -18,7 +18,6 @@ linters:
     - gosec # Inspects source code for security problems
     - makezero # Finds slice declarations with non-zero initial length
     - misspell # Finds commonly misspelled English words
-    - revive # Fast and configurable replacement for golint
     - thelper # Ensures test helpers call t.Helper()
     - wsl # Controls whitespace and empty lines
 formatters:
