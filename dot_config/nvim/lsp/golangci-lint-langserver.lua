@@ -9,7 +9,6 @@ return {
 			vim.env.XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml",
 			"--output.json.path",
 			"stdout",
-			"--issues-exit-code=1",
 			"--show-stats=false",
 		},
 	},
