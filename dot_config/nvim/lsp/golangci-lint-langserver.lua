@@ -6,7 +6,7 @@ return {
 			"golangci-lint",
 			"run",
 			"--default=standard",
-			"--enable=bodyclose,containedctx,errname,errorlint,exhaustive,gocritic,gosec,makezero,misspell,thelper,wsl",
+			-- "--enable=bodyclose,containedctx,errname,errorlint,exhaustive,gocritic,gosec,makezero,misspell,thelper,wsl",
 			"--output.json.path=stdout",
 			"--show-stats=false",
 		},
