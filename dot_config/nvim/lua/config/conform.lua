@@ -55,6 +55,9 @@ conform.setup({
 		sql = {
 			"sqlfluff",
 		},
+		terraform = {
+			"terraform_fmt",
+		},
 		toml = {
 			"taplo",
 		},
