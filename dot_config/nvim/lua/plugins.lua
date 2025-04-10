@@ -4,6 +4,7 @@ return {
 	{
 		dir = "~/Develop/local/oldtale.nvim",
 		lazy = false,
+		priority = 1000,
 		config = function()
 			require("oldtale").setup({
 				integrations = {
