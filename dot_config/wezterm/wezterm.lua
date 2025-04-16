@@ -52,6 +52,7 @@ return {
 
 	-- look and feel
 	window_decorations = "INTEGRATED_BUTTONS|RESIZE",
+	integrated_title_buttons = { "Close" },
 	window_background_opacity = 1.00,
 	macos_window_background_blur = 20,
 	use_fancy_tab_bar = true,
