@@ -53,6 +53,7 @@ return {
 	-- look and feel
 	window_decorations = "INTEGRATED_BUTTONS|RESIZE",
 	integrated_title_button_alignment = "Left",
+	integrated_title_button_color = DEFAULT_ACTIVE_FG,
 	integrated_title_button_style = "MacOsNative",
 	integrated_title_buttons = { "Close" },
 	window_background_opacity = 1.00,
