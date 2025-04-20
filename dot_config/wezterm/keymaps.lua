@@ -7,7 +7,7 @@ return {
 	{ key = "c", mods = "SUPER", action = act.CopyTo("Clipboard") },
 	{ key = "v", mods = "SUPER", action = act.PasteFrom("Clipboard") },
 	-- font size
-	{ key = "+", mods = "CTRL", action = act.IncreaseFontSize },
+	{ key = "=", mods = "CTRL", action = act.IncreaseFontSize },
 	{ key = "-", mods = "CTRL", action = act.DecreaseFontSize },
 	-- screen
 	---- fullscreen
