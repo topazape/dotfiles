@@ -3,19 +3,15 @@
 if type -q goenv
     set -gx GOENV_ROOT $XDG_DATA_HOME/goenv
     fish_add_path -p $GOENV_ROOT/shims
-    fish_add_path $GOENV_ROOT/bin
-    # Initialize goenv
     status --is-interactive; and source (goenv init -|psub)
-    # Add GOROOT/bin to PATH
-    fish_add_path -p $GOROOT/bin
 end
 ## golang
 if type -q go
-    set -gx GOPATH $XDG_DATA_HOME/go
-    set -gx GOCACHE $XDG_CACHE_HOME/go/go-build
+    # set -gx GOPATH $XDG_DATA_HOME/go
+    # set -gx GOCACHE $XDG_CACHE_HOME/go/go-build
     set -gx GOMODCACHE $GOPATH/pkg/mod
     set -gx GOENV $GOPATH/env
-    fish_add_path $GOPATH/bin
+    fish_add_path -a $GOPATH/bin
 end
 
 # Javascript
