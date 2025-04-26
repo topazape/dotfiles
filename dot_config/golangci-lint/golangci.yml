@@ -25,6 +25,6 @@ linters:
 formatters:
   enable:
     - gofumpt
-    # - goimports
+    - goimports
 run:
   tests: true
