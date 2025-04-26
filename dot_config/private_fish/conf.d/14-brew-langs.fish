@@ -2,11 +2,12 @@
 ## goenv
 if type -q goenv
     set -gx GOENV_ROOT $XDG_DATA_HOME/goenv
+    fish_add_path -p $GOENV_ROOT/shims
     fish_add_path $GOENV_ROOT/bin
     # Initialize goenv
     status --is-interactive; and source (goenv init -|psub)
     # Add GOROOT/bin to PATH
-    set -gx PATH $GOPATH/bin $PATH
+    fish_add_path -p $GOROOT/bin
 end
 ## golang
 if type -q go
