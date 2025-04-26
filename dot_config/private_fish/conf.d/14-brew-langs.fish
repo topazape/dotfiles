@@ -2,7 +2,7 @@
 ## goenv
 if type -q goenv
     set -gx GOENV_ROOT $XDG_DATA_HOME/goenv
-    fish_add_path -p $GOENV_ROOT/shims
+    fish_add_path -p $GOENV_ROOT/shims $GOENV_ROOT/bin
     status --is-interactive; and source (goenv init -|psub)
 end
 ## golang
