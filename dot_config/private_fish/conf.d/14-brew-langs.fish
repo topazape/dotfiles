@@ -8,7 +8,7 @@ end
 ## golang
 if type -q go
     # set -gx GOPATH $XDG_DATA_HOME/go
-    # set -gx GOCACHE $XDG_CACHE_HOME/go/go-build
+    set -gx GOCACHE $XDG_CACHE_HOME/go-build
     set -gx GOMODCACHE $GOPATH/pkg/mod
     set -gx GOENV $GOPATH/env
     fish_add_path -a $GOPATH/bin
