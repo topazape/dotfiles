@@ -7,6 +7,7 @@ if type -q goenv
     status --is-interactive; and source (goenv init -|psub)
     # Add GOROOT/bin to PATH
     fish_add_path $GOROOT/bin
+    fish_add_path $GOPATH/bin
 end
 ## golang
 if type -q go
