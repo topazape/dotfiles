@@ -2,6 +2,21 @@ local act = require("wezterm").action
 
 return {
 	{
+		event = { Down = { streak = 3, button = "Left" } },
+		mods = "NONE",
+		action = act.SelectTextAtMouseCursor("Line"),
+	},
+	{
+		event = { Down = { streak = 2, button = "Left" } },
+		mods = "NONE",
+		action = act.SelectTextAtMouseCursor("Word"),
+	},
+	{
+		event = { Down = { streak = 1, button = "Left" } },
+		mods = "NONE",
+		action = act.SelectTextAtMouseCursor("Cell"),
+	},
+	{
 		event = { Up = { streak = 1, button = "Left" } },
 		mods = "NONE",
 		action = act.CompleteSelection("ClipboardAndPrimarySelection"),
@@ -17,6 +32,7 @@ return {
 		action = act.Nop,
 	},
 }
+
 --
 -- Mouse
 -- -----
