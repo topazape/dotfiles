@@ -1,0 +1,3 @@
+return {
+	mouse_bindings = {},
+}
