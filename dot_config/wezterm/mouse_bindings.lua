@@ -3,12 +3,12 @@ local act = require("wezterm").action
 return {
 	-- Scroll wheel
 	{
-		event = { Down = { streak = 1, button = "WheelUp(1)" } },
+		event = { Down = { streak = 1, button = "WheelUp" } },
 		mods = "NONE",
 		action = act.ScrollByCurrentEventWheelDelta,
 	},
 	{
-		event = { Down = { streak = 1, button = "WheelDown(1)" } },
+		event = { Down = { streak = 1, button = "WheelDown" } },
 		mods = "NONE",
 		action = act.ScrollByCurrentEventWheelDelta,
 	},
