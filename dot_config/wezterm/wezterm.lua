@@ -95,5 +95,6 @@ return {
 	leader = { mods = "CTRL", key = "t", timeout_milliseconds = 1000 },
 	keys = keymaps,
 	---- set mouse bindings
-	mouse_bindings = mouse_bindings,
+	-- disable_default_mouse_bindings = true,
+	-- mouse_bindings = mouse_bindings,
 }
