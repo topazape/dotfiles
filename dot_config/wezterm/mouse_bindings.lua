@@ -11,4 +11,9 @@ return {
 		mods = "SUPER",
 		action = act.OpenLinkAtMouseCursor,
 	},
+	{
+		event = { Down = { streak = 1, button = "Left" } },
+		mods = "SUPER",
+		action = act.Nop,
+	},
 }
