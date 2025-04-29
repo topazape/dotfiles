@@ -96,5 +96,5 @@ return {
 	keys = keymaps,
 	---- set mouse bindings
 	disable_default_mouse_bindings = true,
-	-- mouse_bindings = mouse_bindings,
+	mouse_bindings = mouse_bindings,
 }
