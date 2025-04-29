@@ -9,7 +9,7 @@ return {
 	{
 		event = { Up = { streak = 1, button = "Left" } },
 		mods = "SUPER",
-		action = act.OpenLinkAtMouseCursor,
+		action = act.OpenLinkAtMouseCursor("PrimarySelection"),
 	},
 	{
 		event = { Down = { streak = 1, button = "Left" } },
