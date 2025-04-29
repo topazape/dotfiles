@@ -19,6 +19,7 @@ end
 local wezterm = require("wezterm")
 local keymaps = require("keymaps")
 require("status")
+require("mouse_bindings")
 
 return {
 	front_end = "OpenGL",
