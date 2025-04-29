@@ -1,3 +1,1 @@
-return {
-	mouse_bindings = {},
-}
+return {}
