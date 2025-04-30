@@ -270,4 +270,13 @@ return {
 			require("typst-preview").update()
 		end,
 	},
+
+	-- dbt
+	{
+		"PedramNavid/dbtpal",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		config = true,
+	},
 }
