@@ -12,6 +12,14 @@ return {
 		mods = "NONE",
 		action = act.ScrollByCurrentEventWheelDelta,
 	},
+
+	-- Drag
+	{
+		event = { Drag = { streak = 1, button = "Left" } },
+		mods = "NONE",
+		action = act.ExtendSelectionToMouseCursor("Cell"),
+	},
+
 	-- Triple-click
 	{
 		event = { Down = { streak = 3, button = "Left" } },
