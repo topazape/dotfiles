@@ -272,11 +272,11 @@ return {
 	},
 
 	-- dbt
-	{
-		"PedramNavid/dbtpal",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
-		config = true,
-	},
+	-- {
+	-- 	"PedramNavid/dbtpal",
+	-- 	dependencies = {
+	-- 		"nvim-lua/plenary.nvim",
+	-- 	},
+	-- 	config = true,
+	-- },
 }
