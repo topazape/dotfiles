@@ -24,6 +24,9 @@ conform.setup({
 		bash = {
 			"shfmt",
 		},
+		dbt = {
+			"sqlfmt",
+		},
 		fish = {
 			"fish_indent",
 		},
