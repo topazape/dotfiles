@@ -1,29 +1,38 @@
 return {
 	-- Look and feel
 	---- colorscheme
+	-- {
+	-- 	dir = "~/Develop/local/oldtale.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("oldtale").setup({
+	-- 			integrations = {
+	-- 				blink = true,
+	-- 				gitsigns = true,
+	-- 				lazy = true,
+	-- 				lsp = true,
+	-- 				markdown = true,
+	-- 				mason = true,
+	-- 				noice = true,
+	-- 				notify = true,
+	-- 				octo = true,
+	-- 				rainbow_delimiters = true,
+	-- 				saga = true,
+	-- 				telescope = true,
+	-- 				treesitter = true,
+	-- 			},
+	-- 		})
+	-- 		vim.cmd.colorscheme("oldtale")
+	-- 	end,
+	-- },
 	{
-		dir = "~/Develop/local/oldtale.nvim",
-		lazy = false,
-		priority = 1000,
+		"vague2k/vague.nvim",
 		config = function()
-			require("oldtale").setup({
-				integrations = {
-					blink = true,
-					gitsigns = true,
-					lazy = true,
-					lsp = true,
-					markdown = true,
-					mason = true,
-					noice = true,
-					notify = true,
-					octo = true,
-					rainbow_delimiters = true,
-					saga = true,
-					telescope = true,
-					treesitter = true,
-				},
+			-- NOTE: you do not need to call setup if you don't want to.
+			require("vague").setup({
+				-- optional configuration here
 			})
-			vim.cmd.colorscheme("oldtale")
 		end,
 	},
 	---- devicon
