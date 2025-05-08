@@ -67,6 +67,7 @@ return {
 			},
 			runtime = {
 				version = "LuaJIT",
+				pathStrict = true,
 			},
 			workspace = {
 				library = {
