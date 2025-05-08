@@ -48,7 +48,7 @@ return {
 	font_size = FONT_SIZE,
 	warn_about_missing_glyphs = false,
 	cell_width = 1.0,
-	line_height = 1.1,
+	line_height = 1.05,
 	adjust_window_size_when_changing_font_size = false,
 
 	-- look and feel
