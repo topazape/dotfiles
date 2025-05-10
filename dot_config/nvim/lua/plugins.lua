@@ -279,4 +279,24 @@ return {
 		},
 		config = true,
 	},
+
+	-- obsidian
+	{
+		"obsidian/obsidian.nvim",
+		version = "*",
+		lazy = true,
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		event = {
+			"BufReadPre ~/Documents/vaults/*.md",
+			"BufNewFile ~/Documents/vaults/*.md",
+		},
+		opts = {
+			workspaces = {
+				name = "personal",
+				path = "~/Documents/vaults/personal",
+			},
+		},
+	},
 }
