@@ -279,21 +279,4 @@ return {
 		},
 		config = true,
 	},
-
-	-- obsidian
-	{
-		"obsidian-nvim/obsidian.nvim",
-		version = "*",
-		lazy = true,
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
-		ft = "markdown",
-		opts = {
-			workspaces = {
-				name = "personal",
-				path = "~/Documents/vaults/personal",
-			},
-		},
-	},
 }
