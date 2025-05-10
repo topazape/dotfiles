@@ -288,10 +288,7 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
-		event = {
-			"BufReadPre ~/Documents/vaults/*.md",
-			"BufNewFile ~/Documents/vaults/*.md",
-		},
+		ft = "markdown",
 		opts = {
 			workspaces = {
 				name = "personal",
