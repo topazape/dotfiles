@@ -282,7 +282,7 @@ return {
 
 	-- obsidian
 	{
-		"obsidian/obsidian.nvim",
+		"obsidian-nvim/obsidian.nvim",
 		version = "*",
 		lazy = true,
 		dependencies = {
