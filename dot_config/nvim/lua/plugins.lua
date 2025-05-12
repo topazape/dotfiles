@@ -160,7 +160,12 @@ return {
 		},
 	},
 	---- super cursor
-	{ "sphamba/smear-cursor.nvim", opts = {} },
+	{
+		"sphamba/smear-cursor.nvim",
+		opts = {
+			cursor_color = "none",
+		},
+	},
 
 	-- AI
 	---- copilot
