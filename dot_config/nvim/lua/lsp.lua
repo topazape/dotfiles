@@ -11,7 +11,7 @@ vim.diagnostic.config({
 	virtual_text = {
 		prefix = "",
 	},
-	-- virtual_lines = true,
+	virtual_lines = true,
 })
 
 -- setup lsp
