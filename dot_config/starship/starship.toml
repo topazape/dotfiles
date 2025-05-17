@@ -14,7 +14,7 @@ symbol = ' '
 format = '[$symbol$project]($style) '
 
 [aws]
-symbol = '  '
+symbol = ' '
 
 [buf]
 symbol = ' '
