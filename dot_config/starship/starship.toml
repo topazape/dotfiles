@@ -10,7 +10,7 @@ symbol = '󱂵 '
 shell = ['sh']
 
 [gcloud]
-symbol = ' '
+symbol = ' '
 format = '[$symbol$project]($style) '
 
 [aws]
