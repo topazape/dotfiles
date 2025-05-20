@@ -10,7 +10,7 @@ symbol = '󱂵 '
 shell = ['sh']
 
 [gcloud]
-symbol = ' '
+symbol = ' :'
 style = 'underline fg:blue'
 format = '[$symbol$project]($style) '
 
