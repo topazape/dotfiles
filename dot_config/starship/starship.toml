@@ -11,7 +11,7 @@ shell = ['sh']
 
 [gcloud]
 symbol = ' '
-format = 'underline[$symbol$project]($style) '
+format = '[$symbol$project]($style)(underline) '
 
 [aws]
 symbol = ' '
