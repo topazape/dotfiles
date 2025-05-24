@@ -14,7 +14,7 @@ function fish_title
         set -l cmd (status current-command)
         # replace "fish" with custom prompt indicator
         if string match -q fish $cmd
-            set cmd " "
+            set cmd " "
         end
         echo -- $ssh$cmd
     end
