@@ -11,8 +11,11 @@ function fish_title
         set -l cmd (string split ' ' $argv[1])[1]
         echo -- $ssh$cmd
     else
-        # set -l command (status current-command)
-        # echo -- $ssh$command
-        echo -- $ssh
+        set -l cmd (status current-command)
+        # replace "fish" with custom prompt indicator
+        if string match -q fish $cmd
+            set cmd ">_"
+        end
+        echo -- $ssh$cmd
     end
 end
