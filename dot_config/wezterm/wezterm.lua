@@ -21,6 +21,23 @@ local keymaps = require("keymaps")
 local mouse_bindings = require("mouse_bindings")
 require("status")
 
+wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
+	local title = tab.active_pane.title
+	local process_name = tab.active_pane.foreground_process_name
+
+	-- プロセス名からファイル名部分を取得
+	if process_name then
+		process_name = process_name:match("([^/\\]+)$") or process_name
+	end
+
+	-- シェルの場合はアイコンを表示
+	if process_name == "zsh" or process_name == "bash" or process_name == "fish" then
+		return " 🐚 " .. (tab.tab_index + 1)
+	else
+		return " " .. (process_name or "unknown") .. " "
+	end
+end)
+
 return {
 	front_end = "OpenGL",
 
