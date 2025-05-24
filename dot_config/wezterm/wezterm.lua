@@ -32,7 +32,7 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 
 	-- シェルの場合
 	if process_name == "zsh" or process_name == "bash" or process_name == "fish" then
-		return " ❯_ " .. (tab.tab_index + 1)
+		return " >_ " .. (tab.tab_index + 1)
 	else
 		return " " .. (process_name or "unknown") .. " "
 	end
