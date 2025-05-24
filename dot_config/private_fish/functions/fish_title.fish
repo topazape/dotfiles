@@ -11,6 +11,7 @@ function fish_title
         echo -- $ssh$cmd
     else
         set -l command (status current-command)
-        echo -- $ssh$command
+        # echo -- $ssh$command
+        echo -- $ssh"> "$command
     end
 end
