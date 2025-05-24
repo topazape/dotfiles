@@ -30,7 +30,7 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
 		process_name = process_name:match("([^/\\]+)$") or process_name
 	end
 
-	-- シェルの場合はアイコンを表示
+	-- シェルの場合
 	if process_name == "zsh" or process_name == "bash" or process_name == "fish" then
 		return " 🐚 " .. (tab.tab_index + 1)
 	else
