@@ -81,6 +81,7 @@ return {
 		version = "*",
 		dependencies = {
 			"rafamadriz/friendly-snippets",
+			"fang2hou/blink-copilot",
 		},
 		config = function()
 			require("config/blink-cmp")
@@ -184,9 +185,6 @@ return {
 					prev = "<M-p>",
 					dissmiss = "<M-q>",
 				},
-			},
-			filetypes = {
-				["."] = false,
 			},
 		},
 	},
