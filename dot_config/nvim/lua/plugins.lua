@@ -185,6 +185,9 @@ return {
 					dissmiss = "<M-q>",
 				},
 			},
+			filetypes = {
+				["."] = false,
+			},
 		},
 	},
 	---- avante
