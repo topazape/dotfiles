@@ -42,7 +42,7 @@ blinkcmp.setup({
 	},
 
 	sources = {
-		default = { "lsp", "copilot", "buffer", "path", "snippets" },
+		default = { "function", "lsp", "copilot", "buffer", "path", "snippets" },
 		providers = {
 			copilot = {
 				name = "copilot",
