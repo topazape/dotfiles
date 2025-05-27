@@ -9,7 +9,7 @@ function fish_title
     # show current command if any
     if set -q argv[1]
         set -l cmd (string split ' ' $argv[1])[1]
-        echo -- $ssh"" "$cmd
+        echo -- $ssh" "$cmd
     else
         set -l cmd (status current-command)
         # replace "fish" with custom prompt indicator
