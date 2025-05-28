@@ -5,5 +5,6 @@ return {
 		"pyproject.toml",
 		"ruff.toml",
 		".ruff.toml",
+		".git",
 	},
 }
