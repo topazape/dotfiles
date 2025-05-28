@@ -9,13 +9,11 @@ return {
 		"setup.cfg",
 		"setup.py",
 	},
-	init_options = {
-		settings = {
-			ty = {
-				experimental = {
-					completions = {
-						enable = true,
-					},
+	settings = {
+		ty = {
+			experimental = {
+				completions = {
+					enable = true,
 				},
 			},
 		},
