@@ -12,7 +12,7 @@ return {
 	settings = {
 		basedpyright = {
 			analysis = {
-				typeCheckingMode = "recommended", -- off, basic, standard, strict, recommended, all
+				typeCheckingMode = "off", -- off, basic, standard, strict, recommended, all
 				diagnosticMode = "workspace",
 				diagnosticSeverityOverrides = {
 					reportAny = false,
