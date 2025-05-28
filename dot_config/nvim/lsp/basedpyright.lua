@@ -8,6 +8,7 @@ return {
 		"requirements.txt",
 		"setup.cfg",
 		"setup.py",
+		"git",
 	},
 	settings = {
 		basedpyright = {
