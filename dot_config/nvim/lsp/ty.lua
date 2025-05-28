@@ -11,9 +11,11 @@ return {
 	},
 	init_options = {
 		settings = {
-			experimental = {
-				completions = {
-					enable = true,
+			ty = {
+				experimental = {
+					completions = {
+						enable = true,
+					},
 				},
 			},
 		},
