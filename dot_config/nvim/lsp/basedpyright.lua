@@ -10,9 +10,6 @@ return {
 		"setup.py",
 	},
 	settings = {
-		-- python = {
-		-- 	pythonPath = "./.venv/bin/python",
-		-- },
 		basedpyright = {
 			analysis = {
 				typeCheckingMode = "recommended", -- off, basic, standard, strict, recommended, all
