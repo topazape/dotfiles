@@ -4,5 +4,5 @@ return {
 	init_options = {
 		ignoreSingleFileWarning = true,
 	},
-	root_markers = { ".terraform", "git" },
+	root_markers = { ".terraform", ".git" },
 }
