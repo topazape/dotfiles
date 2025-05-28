@@ -4,18 +4,11 @@ return {
 	root_markers = {
 		"Pipfile",
 		"pyproject.toml",
-		"pyrightconfig.json",
 		"requirements.txt",
 		"setup.cfg",
 		"setup.py",
+		"ty.toml",
+		".git",
 	},
-	settings = {
-		ty = {
-			experimental = {
-				completions = {
-					enable = true,
-				},
-			},
-		},
-	},
+	settings = {},
 }
