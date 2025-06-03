@@ -192,34 +192,34 @@ return {
 		},
 	},
 	---- avante
-	{
-		"yetone/avante.nvim",
-		event = "VeryLazy",
-		lazy = false,
-		version = false,
-		build = "make",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-			"stevearc/dressing.nvim",
-			"nvim-lua/plenary.nvim",
-			"MunifTanjim/nui.nvim",
-			"zbirenbaum/copilot.lua",
-		},
-		opts = {
-			provider = "copilot",
-			copilot = {
-				model = "claude-3.7-sonnet",
-			},
-			mappings = {
-				sidebar = {
-					close = { "q" },
-				},
-			},
-			windows = {
-				width = 40,
-			},
-		},
-	},
+	-- {
+	-- 	"yetone/avante.nvim",
+	-- 	event = "VeryLazy",
+	-- 	lazy = false,
+	-- 	version = false,
+	-- 	build = "make",
+	-- 	dependencies = {
+	-- 		"nvim-treesitter/nvim-treesitter",
+	-- 		"stevearc/dressing.nvim",
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"MunifTanjim/nui.nvim",
+	-- 		"zbirenbaum/copilot.lua",
+	-- 	},
+	-- 	opts = {
+	-- 		provider = "copilot",
+	-- 		copilot = {
+	-- 			model = "claude-3.7-sonnet",
+	-- 		},
+	-- 		mappings = {
+	-- 			sidebar = {
+	-- 				close = { "q" },
+	-- 			},
+	-- 		},
+	-- 		windows = {
+	-- 			width = 40,
+	-- 		},
+	-- 	},
+	-- },
 
 	-- git
 	---- gitsigns
