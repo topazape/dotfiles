@@ -16,7 +16,7 @@
 	diffFilter = delta --color-only
 [delta]
 	navigate = true    # use n and N to move between diff sections
-	side-by-side = false
+	side-by-side = true
 	line-numbers = true
 	diff-so-funcy = true
 	syntax-theme = Monokai Extended
