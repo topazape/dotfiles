@@ -19,6 +19,17 @@ autocmd({ "BufNewFile", "BufRead" }, {
 })
 
 -- ファイルタイプ別設定
+---- dbt
+autocmd({ "FileType" }, {
+	pattern = { "dbt" },
+	callback = function()
+		vim.opt_local.tabstop = 4
+		vim.opt_local.shiftwidth = 4
+		vim.opt_local.softtabstop = 4
+		vim.opt_local.expandtab = true
+	end,
+})
+
 ---- go
 autocmd({ "FileType" }, {
 	pattern = { "go" },
