@@ -23,6 +23,7 @@ require("status")
 
 return {
 	front_end = "OpenGL",
+	scrollback_lines = 10000,
 
 	-- color scheme
 	color_scheme_dirs = { "~/.config/wezterm/colors" },
