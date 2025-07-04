@@ -13,7 +13,7 @@ return {
 	settings = {
 		basedpyright = {
 			analysis = {
-				typeCheckingMode = "basic", -- off, basic, standard, strict, recommended, all
+				typeCheckingMode = "off", -- off, basic, standard, strict, recommended, all
 				diagnosticMode = "workspace",
 				inlayHints = {
 					callArgumentNames = false,
