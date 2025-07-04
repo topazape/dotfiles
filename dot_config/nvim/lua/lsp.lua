@@ -30,7 +30,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)
 		local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
 		-- skip proxy LSPs
-		local proxy_lsps = { "copilot" }
+		local proxy_lsps = { "copilot", "ty" }
 		local is_proxy = false
 		for _, name in ipairs(proxy_lsps) do
 			if client.name == name then
