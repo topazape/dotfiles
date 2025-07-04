@@ -173,6 +173,14 @@ return {
 	{
 		"zbirenbaum/copilot.lua",
 		opts = {
+			filetypes = {
+				txt = true,
+				markdown = true,
+				json = true,
+				yaml = true,
+				toml = true,
+				["*"] = false,
+			},
 			panel = {
 				enabled = false,
 			},
