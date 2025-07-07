@@ -15,12 +15,12 @@ return {
 			analysis = {
 				typeCheckingMode = "off", -- off, basic, standard, strict, recommended, all
 				diagnosticMode = "workspace",
-				inlayHints = {
-					callArgumentNames = false,
-					functionReturnTypes = false,
-					genericTypes = true,
-					variableTypes = true,
-				},
+				-- inlayHints = {
+				-- 	callArgumentNames = false,
+				-- 	functionReturnTypes = false,
+				-- 	genericTypes = true,
+				-- 	variableTypes = true,
+				-- },
 			},
 		},
 	},
