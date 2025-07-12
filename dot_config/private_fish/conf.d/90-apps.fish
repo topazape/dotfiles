@@ -13,4 +13,5 @@ end
 
 # claude code
 if type -q claude
+    set -gx CLAUDE_CONFIG_DIR $XDG_CONFIG_HOME/claude
 end
