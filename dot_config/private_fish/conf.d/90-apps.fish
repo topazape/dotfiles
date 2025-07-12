@@ -10,3 +10,7 @@ if type -q gtrash
     alias tm="gtrash put"
     alias rm="echo -e 'If you want to use rm really, then use \"\\\\rm\" instead.'; false"
 end
+
+# claude code
+if type -q claude
+end
