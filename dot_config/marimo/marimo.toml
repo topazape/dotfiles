@@ -72,5 +72,5 @@ mode = "manual"
 [ai.anthropic]
 
 [snipets]
-custom_paths = ["~/.config/marimo/custom.css"]
-include_default_snipetts = true
+custom_paths = ["/Users/kawai/.config/marimo/custom.css"]
+# include_default_snipetts = true
