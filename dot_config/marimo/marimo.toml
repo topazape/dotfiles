@@ -70,7 +70,3 @@ mode = "manual"
 [ai.bedrock]
 
 [ai.anthropic]
-
-[snipets]
-custom_paths = ["~/.config/marimo/snippets"]
-include_default_snipetts = true
