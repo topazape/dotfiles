@@ -73,4 +73,4 @@ mode = "manual"
 
 [snipets]
 custom_paths = ["/Users/kawai/.config/marimo/custom.css"]
-# include_default_snipetts = true
+include_default_snipetts = false
