@@ -6,7 +6,11 @@ conform.setup({
 		lsp_format = "fallback",
 	},
 	formatters = {
-		sqlfluff = {
+		["hclfmt"] = {
+			command = "hclfmt",
+			args = { "-" },
+		},
+		["sqlfluff"] = {
 			command = "sqlfluff",
 			args = { "format", "-" },
 			cwd = function()
