@@ -34,7 +34,7 @@ conform.setup({
 			"golangci-lint",
 		},
 		hcl = {
-			"terraform_fmt",
+			"hclfmt",
 		},
 		html = {
 			"prettier",
