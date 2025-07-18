@@ -33,6 +33,9 @@ conform.setup({
 		go = {
 			"golangci-lint",
 		},
+		hcl = {
+			"terraform_fmt",
+		},
 		html = {
 			"prettier",
 		},
@@ -54,9 +57,6 @@ conform.setup({
 		},
 		sh = {
 			"shfmt",
-		},
-		sql = {
-			-- "sqlfluff",
 		},
 		terraform = {
 			"terraform_fmt",
