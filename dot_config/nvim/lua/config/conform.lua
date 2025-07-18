@@ -8,7 +8,6 @@ conform.setup({
 	formatters = {
 		["hclfmt"] = {
 			command = "hclfmt",
-			args = { "-" },
 		},
 		["sqlfluff"] = {
 			command = "sqlfluff",
