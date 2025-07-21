@@ -1,5 +1,5 @@
 return {
-	cmd = { "dbt-lsp", "--socket", "99999" },
+	cmd = { "dbt-lsp", "--socket", "3333" },
 	filetypes = { "sql", "yaml" },
 	root_markers = {
 		"dbt_project.yml",
