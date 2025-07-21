@@ -61,6 +61,9 @@ conform.setup({
 		sh = {
 			"shfmt",
 		},
+		sql = {
+			"sqlfluff",
+		},
 		terraform = {
 			"terraform_fmt",
 		},
