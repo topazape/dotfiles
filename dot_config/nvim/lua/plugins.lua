@@ -276,7 +276,6 @@ return {
 				icons = { "•", "∘", "▪", "▫" },
 			},
 			completions = {
-				lsp = { enabled = true },
 				blink = { enabled = true },
 			},
 		},
