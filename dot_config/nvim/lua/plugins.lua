@@ -277,7 +277,7 @@ return {
 			},
 			completions = {
 				lsp = { enabled = true },
-				blink = { enabled = true },
+				-- blink = { enabled = true },
 			},
 		},
 	},
