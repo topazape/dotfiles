@@ -13,7 +13,7 @@ follow_symlink = false
 manager = "uv"
 
 [language_servers.pylsp]
-enabled = false
+enabled = true
 enable_pydocstyle = false
 enable_pyflakes = false
 enable_ruff = true
