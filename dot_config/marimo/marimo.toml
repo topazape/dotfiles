@@ -15,6 +15,9 @@ manager = "uv"
 [language_servers.ty]
 enabled = true
 
+[diagnostics]
+enabled = true
+
 [display]
 cell_output = "below"
 code_editor_font_size = 14
@@ -27,9 +30,6 @@ default_width = "full"
 [snippets]
 custom_paths = []
 include_default_snippets = true
-
-[diagnostics]
-enabled = false
 
 [runtime]
 reactive_tests = true
