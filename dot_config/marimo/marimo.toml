@@ -21,6 +21,9 @@ enable_mypy = true
 enable_flake8 = false
 enable_pylint = false
 
+[language_servers.ty]
+enabled = true
+
 [display]
 cell_output = "below"
 code_editor_font_size = 14
