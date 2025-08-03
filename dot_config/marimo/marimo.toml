@@ -12,15 +12,6 @@ follow_symlink = false
 [package_management]
 manager = "uv"
 
-[language_servers.pylsp]
-enabled = true
-enable_pydocstyle = false
-enable_pyflakes = false
-enable_ruff = true
-enable_mypy = true
-enable_flake8 = false
-enable_pylint = false
-
 [language_servers.ty]
 enabled = true
 
