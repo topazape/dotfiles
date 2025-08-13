@@ -9,7 +9,7 @@ if type -q gtrash
     gtrash completion fish | source
     alias tm="gtrash put"
     function rm
-        echo 'If you want to use rm really, then use "\rm" instead.'
+        echo 'If you want to use rm really, then use "command rm" instead.'
         return 1
     end
 end
