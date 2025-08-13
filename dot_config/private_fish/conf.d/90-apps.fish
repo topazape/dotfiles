@@ -8,7 +8,7 @@ end
 if type -q gtrash
     gtrash completion fish | source
     alias tm="gtrash put"
-    alias rm="echo -e 'If you want to use rm really, then use \"\\\\rm\" instead.'; false"
+    alias rm="echo -e 'If you want to use rm really, then use \"\rm\" instead.'; false"
 end
 
 # claude code
