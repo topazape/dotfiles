@@ -206,6 +206,8 @@ return {
 		config = true,
 		opts = {
 			terminal = {
+				split_side = "right",
+				split_width_percentage = 0.40,
 				auto_close = false,
 			},
 		},
