@@ -26,3 +26,17 @@ end
 if test -d (brew --prefix unzip)
     fish_add_path (brew --prefix unzip)/bin
 end
+
+# gtrash
+if type -q gtrash
+    alias tm="gtrash put"
+    function rm
+        echo 'If you want to use rm really, then use "command rm" instead.'
+        return 1
+    end
+end
+
+# claude code
+if type -q claude
+    set -gx CLAUDE_CONFIG_DIR $XDG_CONFIG_HOME/claude
+end
