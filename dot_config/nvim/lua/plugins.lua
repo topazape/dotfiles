@@ -2,55 +2,30 @@ return {
 	-- Look and feel
 	---- colorscheme
 	{
-		"projekt0n/github-nvim-theme",
+		dir = "~/Develop/local/oldtale.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			-- require("oldtale").setup({
-			-- 	integrations = {
-			-- 		blink = true,
-			-- 		gitsigns = true,
-			-- 		lazy = true,
-			-- 		lsp = true,
-			-- 		markdown = true,
-			-- 		mason = true,
-			-- 		noice = true,
-			-- 		notify = true,
-			-- 		octo = true,
-			-- 		rainbow_delimiters = true,
-			-- 		saga = true,
-			-- 		telescope = true,
-			-- 		treesitter = true,
-			-- 	},
-			-- })
-			vim.cmd.colorscheme("github_dark_dimmed")
+			require("oldtale").setup({
+				integrations = {
+					blink = true,
+					gitsigns = true,
+					lazy = true,
+					lsp = true,
+					markdown = true,
+					mason = true,
+					noice = true,
+					notify = true,
+					octo = true,
+					rainbow_delimiters = true,
+					saga = true,
+					telescope = true,
+					treesitter = true,
+				},
+			})
+			vim.cmd.colorscheme("oldtale")
 		end,
 	},
-	-- {
-	-- 	dir = "~/Develop/local/oldtale.nvim",
-	-- 	lazy = false,
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		require("oldtale").setup({
-	-- 			integrations = {
-	-- 				blink = true,
-	-- 				gitsigns = true,
-	-- 				lazy = true,
-	-- 				lsp = true,
-	-- 				markdown = true,
-	-- 				mason = true,
-	-- 				noice = true,
-	-- 				notify = true,
-	-- 				octo = true,
-	-- 				rainbow_delimiters = true,
-	-- 				saga = true,
-	-- 				telescope = true,
-	-- 				treesitter = true,
-	-- 			},
-	-- 		})
-	-- 		vim.cmd.colorscheme("oldtale")
-	-- 	end,
-	-- },
 	---- devicon
 	{
 		"nvim-tree/nvim-web-devicons",
