@@ -57,6 +57,18 @@ return {
 		"williamboman/mason.nvim",
 		config = true,
 	},
+	---- lspsaga
+	{
+		"nvimdev/lspsaga.nvim",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+		config = function()
+			require("config/saga")
+		end,
+	},
+
+	-- completion
 	{
 		"saghen/blink.cmp",
 		lazy = false,
@@ -69,18 +81,6 @@ return {
 			require("config/blink-cmp")
 		end,
 	},
-	---- lspsaga
-	{
-		"nvimdev/lspsaga.nvim",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		},
-		config = function()
-			require("config/saga")
-		end,
-	},
-	---- lspsaga
-	{},
 
 	{
 		"j-hui/fidget.nvim",
