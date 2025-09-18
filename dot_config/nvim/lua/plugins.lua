@@ -80,7 +80,7 @@ return {
 			require("config/blink-cmp")
 		end,
 	},
-	-- notification
+	---- notification
 	{
 		"j-hui/fidget.nvim",
 		config = true,
