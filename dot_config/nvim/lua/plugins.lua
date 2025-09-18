@@ -57,62 +57,17 @@ return {
 		"williamboman/mason.nvim",
 		config = true,
 	},
-	---- trouble
+	---- lspsaga
 	{
-		"folke/trouble.nvim",
-		opts = {
-			modes = {
-				preview_float = {
-					mode = "diagnostics",
-					preview = {
-						type = "float",
-						relative = "editor",
-						border = "rounded",
-						title = "Preview",
-						title_pos = "center",
-						position = { 0, -2 },
-						size = { width = 0.3, height = 0.3 },
-						zindex = 200,
-					},
-				},
-			},
+		"nvimdev/lspsaga.nvim",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
 		},
-		cmd = "Trouble",
-		keys = {
-			{
-				"<leader>xx",
-				"<cmd>Trouble diagnostics toggle<cr>",
-				desc = "Diagnostics (Trouble)",
-			},
-			{
-				"<leader>xX",
-				"<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
-				desc = "Buffer Diagnostics (Trouble)",
-			},
-			{
-				"<leader>cs",
-				"<cmd>Trouble symbols toggle focus=false<cr>",
-				desc = "Symbols (Trouble)",
-			},
-			{
-				"<leader>cl",
-				"<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
-				desc = "LSP Definitions / references / ... (Trouble)",
-			},
-			{
-				"<leader>xL",
-				"<cmd>Trouble loclist toggle<cr>",
-				desc = "Location List (Trouble)",
-			},
-			{
-				"<leader>xQ",
-				"<cmd>Trouble qflist toggle<cr>",
-				desc = "Quickfix List (Trouble)",
-			},
-		},
+		config = function()
+			require("config/saga")
+		end,
 	},
-
-	-- completion
+	---- completion
 	{
 		"saghen/blink.cmp",
 		lazy = false,
@@ -125,7 +80,7 @@ return {
 			require("config/blink-cmp")
 		end,
 	},
-
+	-- notification
 	{
 		"j-hui/fidget.nvim",
 		config = true,
