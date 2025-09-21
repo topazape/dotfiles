@@ -6,9 +6,6 @@ conform.setup({
 		lsp_format = "fallback",
 	},
 	formatters = {
-		["hclfmt"] = {
-			command = "hclfmt",
-		},
 		["sqlfluff"] = {
 			command = "sqlfluff",
 			args = { "format", "-" },
@@ -21,6 +18,9 @@ conform.setup({
 		},
 	},
 	formatters_by_ft = {
+		r = {
+			"air",
+		},
 		css = {
 			"prettier",
 		},
@@ -37,7 +37,7 @@ conform.setup({
 			"golangci-lint",
 		},
 		hcl = {
-			"hclfmt",
+			"hcl",
 		},
 		html = {
 			"prettier",
@@ -65,7 +65,7 @@ conform.setup({
 			"sqlfluff",
 		},
 		terraform = {
-			"terraform_fmt",
+			"hcl",
 		},
 		toml = {
 			"taplo",
@@ -76,9 +76,9 @@ conform.setup({
 		xml = {
 			"xmlformatter",
 		},
-		-- yaml = {
-		-- 	"prettier",
-		-- },
+		yaml = {
+			"prettier",
+		},
 		zsh = {
 			"shfmt",
 		},
