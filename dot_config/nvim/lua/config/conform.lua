@@ -6,13 +6,13 @@ conform.setup({
 		lsp_format = "fallback",
 	},
 	formatters = {
-		["sqlfluff"] = {
-			command = "sqlfluff",
-			args = { "format", "-" },
-			cwd = function()
-				return vim.fn.getcwd()
-			end,
-		},
+		-- ["sqlfluff"] = {
+		-- 	command = "sqlfluff",
+		-- 	args = { "format", "-" },
+		-- 	cwd = function()
+		-- 		return vim.fn.getcwd()
+		-- 	end,
+		-- },
 		["golangci-lint"] = {
 			args = { "--config", vim.env.XDG_CONFIG_HOME .. "/golangci-lint/golangci.yml", "fmt", "--stdin" },
 		},
@@ -63,6 +63,7 @@ conform.setup({
 		},
 		sql = {
 			"sqlfluff",
+			reqiure_cwd = false,
 		},
 		terraform = {
 			"hcl",
