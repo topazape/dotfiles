@@ -63,7 +63,7 @@ conform.setup({
 		},
 		sql = {
 			"sqlfluff",
-			reqiure_cwd = false,
+			require_cwd = true,
 		},
 		terraform = {
 			"hcl",
