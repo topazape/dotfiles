@@ -159,7 +159,7 @@ autocmd({ "FileType" }, {
 		vim.opt_local.shiftwidth = 2
 		vim.opt_local.softtabstop = 2
 		vim.opt_local.expandtab = true
-		vim.keymap.set("n", "<LEADER>pr", "<CMD>TypstPreviewToggle<CR>", { noremap = true, silent = true })
+		vim.keymap.set("n", "<leader>pr", "<cmd>typstpreviewtoggle<cr>", { noremap = true, silent = true })
 	end,
 })
 ---- octo
