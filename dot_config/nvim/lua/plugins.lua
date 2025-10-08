@@ -212,7 +212,8 @@ return {
     -- Diff management
     { "<leader>aa", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Accept diff" },
     { "<leader>ad", "<cmd>ClaudeCodeDiffDeny<cr>", desc = "Deny diff" },
-  },
+  }
+},
 
 	-- git
 	---- gitsigns
