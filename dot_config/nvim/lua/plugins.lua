@@ -197,7 +197,7 @@ return {
 			terminal = {
 				split_side = "right", -- "left" or "right"
 				split_width_percentage = 0.40,
-				provider = "auto", -- "auto", "snacks", "native", "external", "none", or custom provider table
+				provider = "native", -- "auto", "snacks", "native", "external", "none", or custom provider table
 				auto_close = true,
 				snacks_win_opts = {}, -- Opts to pass to `Snacks.terminal.open()` - see Floating Window section below
 			},
