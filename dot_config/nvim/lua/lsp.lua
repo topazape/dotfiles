@@ -13,14 +13,18 @@ vim.diagnostic.config({
 })
 
 -- setup lsp
----- default
+---- default root_markers
 vim.lsp.config("*", {
 	root_markers = { ".git" },
 })
 ---- enable each lsp server at lsp directory if exists
+local disabled_lsps = { "basedpyright" }
 vim.iter(vim.api.nvim_get_runtime_file("lsp/*.lua", true))
 	:map(function(file)
 		return vim.fs.basename(file):match("^(.*)%.lua$")
+	end)
+	:filter(function(server_name)
+		return not vim.tbl_contains(disabled_lsps, server_name)
 	end)
 	:each(function(server_name)
 		vim.lsp.enable(server_name)
@@ -30,7 +34,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)
 		local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
 		-- skip proxy LSPs
-		local proxy_lsps = { "copilot", "lua-language-server" }
+		local proxy_lsps = { "copilot", "ruff" }
 		local is_proxy = false
 		for _, name in ipairs(proxy_lsps) do
 			if client.name == name then
