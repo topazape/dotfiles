@@ -5,7 +5,7 @@ local lsp_names = function()
 	for _, client in ipairs(vim.lsp.get_active_clients({ bufnr = 0 })) do
 		table.insert(clients, client.name)
 	end
-	return " " .. table.concat(clients, ", ")
+	return "  " .. table.concat(clients, ", ")
 end
 
 lualine.setup({
