@@ -30,6 +30,7 @@ vim.iter(vim.api.nvim_get_runtime_file("lsp/*.lua", true))
 		vim.lsp.enable(server_name)
 	end)
 
+---- inlayHint
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)
 		local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
