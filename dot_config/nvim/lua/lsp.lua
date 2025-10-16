@@ -18,7 +18,7 @@ vim.lsp.config("*", {
 	root_markers = { ".git" },
 })
 ---- enable each lsp server at lsp directory if exists
-local disabled_lsps = { "ty" }
+local disabled_lsps = {}
 vim.iter(vim.api.nvim_get_runtime_file("lsp/*.lua", true))
 	:map(function(file)
 		return vim.fs.basename(file):match("^(.*)%.lua$")
