@@ -29,21 +29,17 @@ vim.iter(vim.api.nvim_get_runtime_file("lsp/*.lua", true))
 	:each(function(server_name)
 		vim.lsp.enable(server_name)
 	end)
----- enable inlay hints
+
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)
 		local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
-		-- skip proxy LSPs
-		local proxy_lsps = { "copilot", "ruff" }
-		local is_proxy = false
-		for _, name in ipairs(proxy_lsps) do
-			if client.name == name then
-				is_proxy = true
-				break
-			end
-		end
-		-- enable inlay hints if supported
-		if not is_proxy and client:supports_method("textDocument/inlayHint") then
+
+		-- LSPs that should not have inlay hints enabled
+		local skip_inlay_hint_lsps = { "copilot", "ruff" }
+		local should_skip = vim.tbl_contains(skip_inlay_hint_lsps, client.name)
+
+		-- enable inlay hints if not in skip list and supported by the client
+		if not should_skip and client:supports_method("textDocument/inlayHint") then
 			vim.lsp.inlay_hint.enable(true, { bufnr = args.buf })
 		end
 	end,
