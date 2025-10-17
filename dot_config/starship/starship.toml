@@ -9,13 +9,6 @@ when = ''' test "$CHEZMOI" = "1" '''
 symbol = '󱂵 '
 shell = ['sh']
 
-[custom.uv_python]
-command = 'uv python find --show-version'
-detect_files = ['.python-version', 'pyproject.toml', 'uv.lock']
-symbol = "uv "
-style = "bold purple"
-format = 'via [${symbol}(${output} )]($style)'
-
 [gcloud]
 symbol = ' '
 format = '[$symbol$project]($style) '
