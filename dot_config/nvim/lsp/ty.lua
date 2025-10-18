@@ -12,7 +12,9 @@ return {
 	},
 	settings = {
 		ty = {
-			["missing-argument"] = "ignore",
+			rules = {
+				["missing-argument"] = "ignore",
+			},
 		},
 	},
 }
