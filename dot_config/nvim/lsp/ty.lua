@@ -11,6 +11,8 @@ return {
 		"ty.toml",
 	},
 	settings = {
-		ty = {},
+		ty = {
+			["missing-argument"] = "ignore",
+		},
 	},
 }
