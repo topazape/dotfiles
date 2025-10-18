@@ -11,6 +11,16 @@ return {
 		"ty.toml",
 	},
 	settings = {
-		ty = {},
+		diagnosticMode = "workspace",
+		ty = {
+			experimental = {
+				rename = true,
+				autoImport = true,
+			},
+			inlayHints = {
+				variableTypes = true,
+				callArgumentNames = true,
+			},
+		},
 	},
 }
