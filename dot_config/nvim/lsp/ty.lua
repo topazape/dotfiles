@@ -10,4 +10,7 @@ return {
 		"setup.py",
 		"ty.toml",
 	},
+	settings = {
+		ty = {},
+	},
 }
