@@ -64,7 +64,7 @@ conform.setup({
 			"hcl",
 		},
 		toml = {
-			"taplo",
+			"tombi",
 		},
 		typescript = {
 			"prettier",
