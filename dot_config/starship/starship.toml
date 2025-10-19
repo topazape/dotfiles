@@ -155,7 +155,7 @@ symbol = " "
 
 [python]
 symbol = " "
-format = 'via [jj${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+python_binary = [["uv", "run", "--no-python-downloads", "python"]]
 
 [rlang]
 symbol = "󰟔 "
