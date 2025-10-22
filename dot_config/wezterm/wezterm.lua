@@ -4,7 +4,9 @@ local DEFAULT_BG = "#121213"
 local FONT_SIZE = 16
 local CONSOLE_FONTS = {
 	{ family = "TX-02" },
+
 	{ family = "Maple Mono" },
+	{ family = "UDEV Gothic" },
 	{ family = "Pretendard JP" },
 }
 
