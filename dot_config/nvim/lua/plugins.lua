@@ -2,42 +2,30 @@ return {
 	-- Look and feel
 	---- colorscheme
 	{
-		"vague-theme/vague.nvim",
-		lazy = false, -- make sure we load this during startup if it is your main colorscheme
-		priority = 1000, -- make sure to load this before all the other plugins
+		dir = "~/Develop/local/oldtale.nvim",
+		lazy = false,
+		priority = 1000,
 		config = function()
-			-- NOTE: you do not need to call setup if you don't want to.
-			require("vague").setup({
-				-- optional configuration here
+			require("oldtale").setup({
+				integrations = {
+					blink = true,
+					gitsigns = true,
+					lazy = true,
+					lsp = true,
+					markdown = true,
+					mason = true,
+					noice = true,
+					notify = true,
+					octo = true,
+					rainbow_delimiters = true,
+					saga = true,
+					telescope = true,
+					treesitter = true,
+				},
 			})
-			vim.cmd("colorscheme vague")
+			vim.cmd.colorscheme("oldtale")
 		end,
 	},
-	-- {
-	-- 	dir = "~/Develop/local/oldtale.nvim",
-	-- 	lazy = false,
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		require("oldtale").setup({
-	-- 			integrations = {
-	-- 				blink = true,
-	-- 				gitsigns = true,
-	-- 				lazy = true,
-	-- 				lsp = true,
-	-- 				markdown = true,
-	-- 				mason = true,
-	-- 				noice = true,
-	-- 				notify = true,
-	-- 				octo = true,
-	-- 				rainbow_delimiters = true,
-	-- 				saga = true,
-	-- 				telescope = true,
-	-- 				treesitter = true,
-	-- 			},
-	-- 		})
-	-- 		vim.cmd.colorscheme("oldtale")
-	-- 	end,
-	-- },
 	---- devicon
 	{
 		"nvim-tree/nvim-web-devicons",
