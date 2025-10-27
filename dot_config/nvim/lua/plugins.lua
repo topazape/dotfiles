@@ -169,6 +169,8 @@ return {
 				json = true,
 				yaml = true,
 				toml = true,
+				sql = true,
+				dbt = true,
 				["*"] = false,
 			},
 			panel = {
