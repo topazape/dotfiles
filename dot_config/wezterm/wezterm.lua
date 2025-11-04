@@ -3,7 +3,7 @@ local DEFAULT_INACTIVE_FG = "#3a3a3e"
 local DEFAULT_BG = "#121213"
 local FONT_SIZE = 16
 local CONSOLE_FONTS = {
-	{ family = "TX-02" },
+	{ family = "Berkeley Mono" },
 	{ family = "Maple Mono" },
 	{ family = "Pretendard JP" },
 }
