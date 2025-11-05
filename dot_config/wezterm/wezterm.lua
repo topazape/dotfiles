@@ -5,6 +5,7 @@ local FONT_SIZE = 16
 local CONSOLE_FONTS = {
 	{ family = "Berkeley Mono" },
 	{ family = "Maple Mono" },
+	{ family = "IBM Plex Sans JP" },
 	{ family = "WDXL Lubrifont JP N" },
 	{ family = "Pretendard JP" },
 }
