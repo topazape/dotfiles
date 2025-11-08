@@ -1,17 +1,8 @@
 # Golang
-## goenv
-if type -q goenv
-    set -gx GOENV_ROOT $XDG_DATA_HOME/goenv
-    set -gx GOENV_GOPATH_PREFIX $XDG_DATA_HOME/go
-    fish_add_path --global --move --path $GOENV_ROOT/shims
-    status --is-interactive; and source (goenv init -|psub)
-end
-## golang
 if type -q go
     set -gx GOPATH $XDG_DATA_HOME/go
     set -gx GOCACHE $XDG_CACHE_HOME/go-build
     set -gx GOMODCACHE $GOPATH/pkg/mod
-    set -gx GOENV $GOPATH/env
     fish_add_path -p $GOROOT/bin
     fish_add_path -a $GOPATH/bin
 end
