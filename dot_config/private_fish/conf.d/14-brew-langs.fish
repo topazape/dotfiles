@@ -1,8 +1,7 @@
 # Golang
 if type -q go
-    set -gx GOPATH $XDG_DATA_HOME/go
-    set -gx GOCACHE $XDG_CACHE_HOME/go-build
-    set -gx GOMODCACHE $GOPATH/pkg/mod
+    set -Ux GOPATH $XDG_DATA_HOME/go
+    set -Ux GOCACHE $XDG_CACHE_HOME/go-build
     fish_add_path -gp $GOROOT/bin
     fish_add_path -ga $GOPATH/bin
 end
@@ -10,7 +9,7 @@ end
 # Javascript
 ## npm
 if type -q npm
-    set -gx NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
+    set -Ux NPM_CONFIG_USERCONFIG $XDG_CONFIG_HOME/npm/npmrc
     # Fish has npm completions built-in
 end
 
@@ -30,12 +29,12 @@ end
 # Rust
 ## cargo
 if type -q cargo
-    set -gx CARGO_HOME $XDG_DATA_HOME/cargo
+    set -Ux CARGO_HOME $XDG_DATA_HOME/cargo
     fish_add_path -g $CARGO_HOME/bin
 end
 
 # Typst
 if type -q typst
-    set -gx TYPST_PACKAGE_PATH $XDG_DATA_HOME/typst
-    set -gx TYPST_PACKAGE_CACHE_PATH $XDG_CACHE_HOME/typst
+    set -Ux TYPST_PACKAGE_PATH $XDG_DATA_HOME/typst
+    set -Ux TYPST_PACKAGE_CACHE_PATH $XDG_CACHE_HOME/typst
 end
