@@ -85,6 +85,10 @@ return {
 		"j-hui/fidget.nvim",
 		config = true,
 	},
+	---- schemaStore
+	{
+		"b0o/schemastore.nvim",
+	},
 
 	-- formatter
 	{
