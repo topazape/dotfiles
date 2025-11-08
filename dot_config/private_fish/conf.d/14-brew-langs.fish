@@ -3,8 +3,8 @@ if type -q go
     set -gx GOPATH $XDG_DATA_HOME/go
     set -gx GOCACHE $XDG_CACHE_HOME/go-build
     set -gx GOMODCACHE $GOPATH/pkg/mod
-    fish_add_path -p $GOROOT/bin
-    fish_add_path -a $GOPATH/bin
+    fish_add_path -gp $GOROOT/bin
+    fish_add_path -ga $GOPATH/bin
 end
 
 # Javascript
@@ -31,7 +31,7 @@ end
 ## cargo
 if type -q cargo
     set -gx CARGO_HOME $XDG_DATA_HOME/cargo
-    fish_add_path $CARGO_HOME/bin
+    fish_add_path -g $CARGO_HOME/bin
 end
 
 # Typst
