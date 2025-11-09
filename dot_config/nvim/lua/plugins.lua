@@ -247,7 +247,9 @@ return {
 		dependencies = {
 			"folke/snacks.nvim",
 		},
-		opts = {},
+		opts = {
+			picker = { type = "snacks" },
+		},
 	},
 	---- typst
 	{
