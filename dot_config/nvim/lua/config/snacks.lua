@@ -1,6 +1,4 @@
-local snacks = require("snacks")
-
-snacks.setup({
+return {
 	bigfile = { enabled = true },
 	dashboard = { enabled = false },
 	explorer = { enabled = true },
@@ -584,4 +582,4 @@ snacks.setup({
 			end,
 		})
 	end,
-})
+}
