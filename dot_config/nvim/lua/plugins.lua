@@ -150,7 +150,7 @@ return {
 		lazy = false,
 		opts = {
 			animate = {
-				duration = 5,
+				duration = 1000,
 			},
 			bigfile = { enabled = true },
 			dashboard = { enabled = true },
