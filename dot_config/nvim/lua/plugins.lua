@@ -236,18 +236,6 @@ return {
 		version = "*",
 		config = true,
 	},
-	---- github
-	{
-		"pwntester/octo.nvim",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
-		opts = {
-			ssh_aliases = {
-				["github-work"] = "github.com",
-			},
-		},
-	},
 
 	-- markdown
 	{
