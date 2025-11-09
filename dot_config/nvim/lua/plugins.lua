@@ -149,9 +149,6 @@ return {
 		priority = 1000,
 		lazy = false,
 		opts = {
-			animate = {
-				duration = 1000,
-			},
 			bigfile = { enabled = true },
 			dashboard = { enabled = true },
 			explorer = { enabled = true },
@@ -242,7 +239,36 @@ return {
 		config = true,
 	},
 
-	-- markdown
+	-- languages
+	---- golang
+	{
+		"fredrikaverpil/godoc.nvim",
+		version = "*",
+		dependencies = {
+			"folke/snacks.nvim",
+		},
+		opts = {},
+	},
+	---- typst
+	{
+		"chomosuke/typst-preview.nvim",
+		ft = "typst", -- or ft = 'typst'
+		version = "1.*",
+		build = function()
+			require("typst-preview").update()
+		end,
+	},
+
+	---- dbt
+	{
+		"PedramNavid/dbtpal",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		config = true,
+	},
+
+	---- markdown
 	{
 		"MeanderingProgrammer/render-markdown.nvim",
 		dependencies = {
@@ -265,24 +291,5 @@ return {
 				lsp = { enabled = true },
 			},
 		},
-	},
-
-	-- typst
-	{
-		"chomosuke/typst-preview.nvim",
-		ft = "typst", -- or ft = 'typst'
-		version = "1.*",
-		build = function()
-			require("typst-preview").update()
-		end,
-	},
-
-	-- dbt
-	{
-		"PedramNavid/dbtpal",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
-		config = true,
 	},
 }
