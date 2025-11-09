@@ -149,6 +149,9 @@ return {
 		priority = 1000,
 		lazy = false,
 		opts = {
+			animate = {
+				duration = 5,
+			},
 			bigfile = { enabled = true },
 			dashboard = { enabled = true },
 			explorer = { enabled = true },
