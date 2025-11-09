@@ -19,7 +19,7 @@ return {
 					octo = true,
 					rainbow_delimiters = true,
 					saga = true,
-					telescope = true,
+					telescope = false,
 					treesitter = true,
 				},
 			})
@@ -96,25 +96,6 @@ return {
 		config = function()
 			require("config/conform")
 		end,
-	},
-
-	-- telescopes
-	{
-		"nvim-telescope/telescope.nvim",
-		branch = "0.1.x",
-		dependencies = {
-			"nvim-lua/plenary.nvim",
-		},
-		config = function()
-			require("config/telescope")
-		end,
-	},
-	---- file browser
-	{
-		"nvim-telescope/telescope-file-browser.nvim",
-		dependencies = {
-			"nvim-telescope/telescope.nvim",
-		},
 	},
 
 	-- UI
