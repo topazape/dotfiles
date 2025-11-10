@@ -10,6 +10,8 @@ require("snacks").setup({
 			input = {
 				keys = {
 					["<Esc>"] = { "close", mode = { "n", "i" } },
+					["<M-s>"] = { "edit_split", mode = { "i", "n" } },
+					["<M-v>"] = { "edit_vsplit", mode = { "i", "n" } },
 				},
 			},
 			list = {
