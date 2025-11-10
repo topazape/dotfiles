@@ -98,6 +98,14 @@ return {
 		end,
 	},
 
+	-- picker
+	{
+		"folke/snacks.nvim",
+		priority = 1000,
+		lazy = false,
+		opt = require("config/snacks"),
+	},
+
 	-- UI
 	---- key speed
 	{
@@ -142,14 +150,6 @@ return {
 			cursor_color = "none",
 		},
 	},
-
-	-- picker
-	{
-		"folke/snacks.nvim",
-		priority = 1000,
-		lazy = false,
-		opt = require("config/snacks"),
-  },
 
 	-- AI
 	---- copilot
