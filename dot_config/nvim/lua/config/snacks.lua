@@ -14,8 +14,8 @@ require("snacks").setup({
 			},
 			list = {
 				keys = {
-					["<C-s>"] = "edit_split",
-					["<C-v>"] = "edit_vsplit",
+					["<a-s>"] = "edit_split",
+					["<a-v>"] = "edit_vsplit",
 				},
 			},
 		},
