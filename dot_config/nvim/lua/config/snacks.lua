@@ -1,3 +1,4 @@
+print("aaaA")
 require("snacks").setup({
 	{
 		bigfile = { enabled = true },
