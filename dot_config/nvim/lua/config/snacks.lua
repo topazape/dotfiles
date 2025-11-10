@@ -1,4 +1,4 @@
-return {
+require("snacks").setup({
 	bigfile = { enabled = true },
 	dashboard = { enabled = false },
 	explorer = { enabled = true },
@@ -13,7 +13,6 @@ return {
 	words = { enabled = true },
 
 	keys = {
-		-- Top Pickers & Explorer
 		{
 			"<leader><space>",
 			function()
@@ -582,4 +581,4 @@ return {
 			end,
 		})
 	end,
-}
+})
