@@ -149,6 +149,7 @@ return {
 		priority = 1000,
 		lazy = false,
 		opt = require("config/snacks"),
+  },
 
 	-- AI
 	---- copilot
