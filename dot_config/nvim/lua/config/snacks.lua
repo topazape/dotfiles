@@ -1,4 +1,4 @@
-return {
+require("snacks").setup({
 	{
 		bigfile = { enabled = true },
 		dashboard = { enabled = false },
@@ -583,4 +583,4 @@ return {
 			})
 		end,
 	},
-}
+})
