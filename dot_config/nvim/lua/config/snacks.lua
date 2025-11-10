@@ -1,4 +1,4 @@
-require("snacks").setup({
+return require("snacks").setup({
 	bigfile = { enabled = true },
 	dashboard = { enabled = false },
 	explorer = { enabled = true },
