@@ -103,29 +103,9 @@ return {
 		"folke/snacks.nvim",
 		priority = 1000,
 		lazy = false,
-		opts = {
-			bigfile = { enabled = true },
-			dashboard = { enabled = false },
-			explorer = { enabled = true },
-			indent = { enabled = true },
-			input = { enabled = true },
-			picker = {
-				enabled = true,
-				win = {
-					input = {
-						keys = {
-							["<Esc>"] = { "close", mode = { "n", "i" } },
-						},
-					},
-				},
-			},
-			notifier = { enabled = true },
-			quickfile = { enabled = true },
-			scope = { enabled = true },
-			scroll = { enabled = true },
-			statuscolumn = { enabled = true },
-			words = { enabled = true },
-		},
+		config = function()
+			require("config/snacks")
+		end,
 		keys = require("config/snacks_keys"),
 	},
 
