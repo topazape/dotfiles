@@ -117,6 +117,7 @@ return {
 			statuscolumn = { enabled = true },
 			words = { enabled = true },
 		},
+		keys = require("config/snacks_keys"),
 	},
 
 	-- UI
