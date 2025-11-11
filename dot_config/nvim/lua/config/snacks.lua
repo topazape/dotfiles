@@ -43,6 +43,6 @@ require("snacks").setup({
 	toggle = { enabled = false },
 	util = { enabled = false },
 	win = { enebled = false },
-	words = { enabled = false },
+	words = { enabled = true },
 	zen = { enabled = false },
 })
