@@ -9,10 +9,10 @@ return {
 			},
 			schemas = require("schemastore").yaml.schemas({
 				["Argo Events"] = {
-					fileMatch = { "**/*manifest*/*.yml" },
+					fileMatch = { "**/*manifest*/**/*.yml" },
 				},
 				["Argo Workflows"] = {
-					fileMatch = { "**/*manifest*/*.yml" },
+					fileMatch = { "**/*manifest*/**/*.yml" },
 				},
 			}),
 		},
