@@ -8,11 +8,19 @@ return {
 				url = "",
 			},
 			schemas = require("schemastore").yaml.schemas({
-				["Argo Events"] = {
-					fileMatch = { "**/*manifest*/**/*.yml" },
-				},
-				["Argo Workflows"] = {
-					fileMatch = { "**/*manifest*/**/*.yml" },
+				replace = {
+					["Argo Events"] = {
+						description = "Argo Events Event Sources and Sensors",
+						fileMatch = { "**/*manifest*/**/*.yml" },
+						name = "Argo Events",
+						url = "https://raw.githubusercontent.com/argoproj/argo-events/master/api/jsonschema/schema.json",
+					},
+					["Argo Workflows"] = {
+						description = "Argo Workflow configuration file",
+						fileMatch = { "**/*manifest*/**/*.yml" },
+						name = "Argo Workflows",
+						url = "https://raw.githubusercontent.com/argoproj/argo-workflows/master/api/jsonschema/schema.json",
+					},
 				},
 			}),
 		},
