@@ -1,11 +1,20 @@
 require("snacks").setup({
-	bigfile = { enabled = true },
+	animate = { enabled = false },
+	bigfile = { enabled = false },
+	bufdelete = { enabled = false },
 	dashboard = { enabled = false },
+	debug = { enabled = false },
+	dim = { enabled = false },
 	explorer = { enabled = true },
-	indent = { enabled = true },
+	gh = { enabled = false },
+	git = { enabled = false },
+	gitbrowse = { enabled = false },
+	image = { enabled = false },
+	indent = { enabled = false },
 	input = { enabled = true },
+	keymap = { enabled = false },
 	picker = {
-		enabled = true,
+		enabled = false,
 		win = {
 			input = {
 				keys = {
