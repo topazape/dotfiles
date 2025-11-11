@@ -8,7 +8,7 @@ return {
 				url = "",
 			},
 			schemas = require("schemastore").yaml.schemas({
-				replace = {
+				extra = {
 					["Argo Events"] = {
 						description = "Argo Events Event Sources and Sensors",
 						fileMatch = { "**/*manifest*/**/*.yml" },
