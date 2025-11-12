@@ -24,5 +24,6 @@ require("lazy").setup({
 		{ import = "plugins.blink-cmp" },
 		{ import = "plugins.conform" },
 		{ import = "plugins.gitsigns" },
+		{ import = "plugins.lspsaga" },
 	},
 })
