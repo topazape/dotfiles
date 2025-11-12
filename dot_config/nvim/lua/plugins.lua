@@ -59,19 +59,7 @@ return {
 			require("config/saga")
 		end,
 	},
-	---- completion
-	{
-		"saghen/blink.cmp",
-		lazy = false,
-		version = "*",
-		dependencies = {
-			"rafamadriz/friendly-snippets",
-			"fang2hou/blink-copilot",
-		},
-		config = function()
-			require("config/blink-cmp")
-		end,
-	},
+
 	---- notification
 	{
 		"j-hui/fidget.nvim",
