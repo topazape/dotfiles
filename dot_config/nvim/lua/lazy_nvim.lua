@@ -209,5 +209,6 @@ require("lazy").setup({
 		{ import = "plugins.lspsaga" },
 		{ import = "plugins.snacks" },
 		{ import = "plugins.lualine" },
+		{ import = "plugins.copilot" },
 	},
 })
