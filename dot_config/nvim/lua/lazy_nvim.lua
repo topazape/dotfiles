@@ -177,6 +177,7 @@ require("lazy").setup({
 			end,
 		},
 
+		{ import = "plugins.oldtale" },
 		{ import = "plugins.treesitter" },
 		{ import = "plugins.blink-cmp" },
 		{ import = "plugins.conform" },
