@@ -22,5 +22,6 @@ require("lazy").setup({
 		{ import = "plugins" },
 		{ import = "plugins.treesitter" },
 		{ import = "plugins.blink-cmp" },
+		{ import = "plugins.conform" },
 	},
 })
