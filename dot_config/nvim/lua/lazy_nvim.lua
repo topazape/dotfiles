@@ -54,7 +54,7 @@ require("lazy").setup({
 		-- { "HiPhish/rainbow-delimiters.nvim" },
 		-- { "williamboman/mason.nvim" },
 		-- { "j-hui/fidget.nvim" },
-		-- { "b0o/schemastore.nvim" },
+		{ "b0o/schemastore.nvim" },
 		-- { "OXY2DEV/helpview.nvim" },
 		-- { "tzachar/highlight-undo.nvim" },
 		-- {
