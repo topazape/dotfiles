@@ -49,16 +49,6 @@ return {
 		"williamboman/mason.nvim",
 		config = true,
 	},
-	---- lspsaga
-	{
-		"nvimdev/lspsaga.nvim",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		},
-		config = function()
-			require("config/saga")
-		end,
-	},
 
 	---- notification
 	{
