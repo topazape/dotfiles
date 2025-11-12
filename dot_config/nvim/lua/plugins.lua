@@ -32,14 +32,6 @@ return {
 		config = true,
 	},
 
-	-- tree-sitter
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-		config = function()
-			require("config/treesitter")
-		end,
-	},
 	---- rainbow
 	{
 		"HiPhish/rainbow-delimiters.nvim",
