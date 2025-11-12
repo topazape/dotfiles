@@ -52,7 +52,7 @@ require("lazy").setup({
 
 		{ "nvim-tree/nvim-web-devicons" },
 		{ "HiPhish/rainbow-delimiters.nvim" },
-		{ "williamboman/mason.nvim" },
+		{ "williamboman/mason.nvim", opts= {} },
 		{ "j-hui/fidget.nvim" },
 		{ "b0o/schemastore.nvim" },
 		{ "OXY2DEV/helpview.nvim" },
