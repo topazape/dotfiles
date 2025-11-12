@@ -50,13 +50,13 @@ require("lazy").setup({
 			enable = vim.fn.has("nvim-0.10.0") == 1,
 		},
 
-		{ "nvim-tree/nvim-web-devicons" },
+		{ "nvim-tree/nvim-web-devicons", config = true },
 		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "williamboman/mason.nvim", config = true },
-		{ "j-hui/fidget.nvim" },
+		{ "j-hui/fidget.nvim", config = true },
 		{ "b0o/schemastore.nvim" },
 		{ "OXY2DEV/helpview.nvim" },
-		{ "tzachar/highlight-undo.nvim" },
+		{ "tzachar/highlight-undo.nvim", config = true },
 		{
 			"brenoprata10/nvim-highlight-colors",
 			opts = {
