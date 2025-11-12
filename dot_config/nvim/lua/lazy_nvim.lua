@@ -25,5 +25,6 @@ require("lazy").setup({
 		{ import = "plugins.conform" },
 		{ import = "plugins.gitsigns" },
 		{ import = "plugins.lspsaga" },
+		{ import = "plugins.snacks" },
 	},
 })
