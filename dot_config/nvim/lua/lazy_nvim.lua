@@ -81,7 +81,6 @@ require("lazy").setup({
 			config = true,
 		},
 
-		---- markdown
 		{
 			"MeanderingProgrammer/render-markdown.nvim",
 			dependencies = {
@@ -122,5 +121,6 @@ require("lazy").setup({
 		{ import = "plugins.snacks" },
 		{ import = "plugins.lualine" },
 		{ import = "plugins.copilot" },
+		{ import = "plugins.claudecode" },
 	},
 })
