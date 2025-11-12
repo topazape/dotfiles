@@ -70,14 +70,6 @@ return {
 		"b0o/schemastore.nvim",
 	},
 
-	-- formatter
-	{
-		"stevearc/conform.nvim",
-		config = function()
-			require("config/conform")
-		end,
-	},
-
 	-- picker
 	{
 		"folke/snacks.nvim",
@@ -195,13 +187,6 @@ return {
 	},
 
 	-- git
-	---- gitsigns
-	{
-		"lewis6991/gitsigns.nvim",
-		config = function()
-			require("config/gitsigns")
-		end,
-	},
 	---- conflict
 	{
 		"akinsho/git-conflict.nvim",
