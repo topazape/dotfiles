@@ -24,7 +24,6 @@ require("lazy").setup({
 			config = true,
 			enable = vim.fn.has("nvim-0.10.0") == 1,
 		},
-
 		{ "nvim-tree/nvim-web-devicons", config = true },
 		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "williamboman/mason.nvim", config = true },
@@ -40,69 +39,6 @@ require("lazy").setup({
 				virtual_symbol_prefix = " ",
 				virtual_symbol_position = "eol",
 				exclude_filetypes = { "lazy", "mason" },
-			},
-		},
-		{
-			"sphamba/smear-cursor.nvim",
-			opts = {
-				cursor_color = "none",
-			},
-		},
-		{
-			"zbirenbaum/copilot.lua",
-			opts = {
-				filetypes = {
-					txt = true,
-					markdown = true,
-					json = true,
-					yaml = true,
-					toml = true,
-					sql = true,
-					dbt = true,
-					["*"] = false,
-				},
-				panel = {
-					enabled = false,
-				},
-				suggestion = {
-					-- enabled = true,
-					enabled = false,
-					auto_trigger = true,
-					hide_during_completion = true,
-					debounce = 25,
-					keymap = {
-						accept = "<M-f>",
-						next = "<M-n>",
-						prev = "<M-p>",
-						dissmiss = "<M-q>",
-					},
-				},
-			},
-		},
-		---- claude
-		{
-			"coder/claudecode.nvim",
-			opts = {
-				terminal = {
-					split_side = "right", -- "left" or "right"
-					split_width_percentage = 0.40,
-					provider = "native", -- "auto", "snacks", "native", "external", "none", or custom provider table
-					auto_close = true,
-					snacks_win_opts = {}, -- Opts to pass to `Snacks.terminal.open()` - see Floating Window section below
-				},
-			},
-			keys = {
-				{ "<leader>a", nil, desc = "AI/Claude Code" },
-				{ "<leader>ac", "<cmd>ClaudeCode<cr>", desc = "Toggle Claude" },
-				{ "<leader>af", "<cmd>ClaudeCodeFocus<cr>", desc = "Focus Claude" },
-				{ "<leader>ar", "<cmd>ClaudeCode --resume<cr>", desc = "Resume Claude" },
-				{ "<leader>aC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue Claude" },
-				{ "<leader>am", "<cmd>ClaudeCodeSelectModel<cr>", desc = "Select Claude model" },
-				{ "<leader>ab", "<cmd>ClaudeCodeAdd %<cr>", desc = "Add current buffer" },
-				{ "<leader>as", "<cmd>ClaudeCodeSend<cr>", mode = "v", desc = "Send to Claude" },
-				-- Diff management
-				{ "<leader>aa", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Accept diff" },
-				{ "<leader>ad", "<cmd>ClaudeCodeDiffDeny<cr>", desc = "Deny diff" },
 			},
 		},
 
