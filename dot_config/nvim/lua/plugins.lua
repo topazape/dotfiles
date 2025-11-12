@@ -69,13 +69,6 @@ return {
 			vim.api.nvim_set_keymap("n", "k", "<Plug>(accelerated_jk_gk)", {})
 		end,
 	},
-	---- status line
-	{
-		"hoob3rt/lualine.nvim",
-		config = function()
-			require("config/lualine")
-		end,
-	},
 	---- help
 	{
 		"OXY2DEV/helpview.nvim",
