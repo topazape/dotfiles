@@ -33,7 +33,6 @@ require("lazy").setup({
 		{ "HiPhish/rainbow-delimiters.nvim", config = true },
 		{ "folke/ts-comments.nvim", event = "VeryLazy", config = true },
 		{ "nvim-tree/nvim-web-devicons", config = true },
-		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "williamboman/mason.nvim", config = true },
 		{ "j-hui/fidget.nvim", config = true },
 		{ "b0o/schemastore.nvim" },
