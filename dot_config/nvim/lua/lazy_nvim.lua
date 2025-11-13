@@ -30,7 +30,7 @@ require("lazy").setup({
 		{ import = "plugins.claudecode" },
 		{ import = "plugins.render-markdown" },
 
-		{ "HiPhish/rainbow-delimiters.nvim" },
+		{ "HiPhish/rainbow-delimiters.nvim", opts = {} },
 		{ "folke/ts-comments.nvim", event = "VeryLazy", config = true },
 		{ "nvim-tree/nvim-web-devicons", config = true },
 		{ "williamboman/mason.nvim", config = true },
