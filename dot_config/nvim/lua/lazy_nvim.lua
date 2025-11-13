@@ -44,12 +44,8 @@ require("lazy").setup({
 		{
 			"fredrikaverpil/godoc.nvim",
 			version = "*",
-			dependencies = {
-				"folke/snacks.nvim",
-			},
-			opts = {
-				picker = { type = "snacks" },
-			},
+			dependencies = { "folke/snacks.nvim" },
+			opts = { picker = { type = "snacks" } },
 		},
 		{
 			"rainbowhxch/accelerated-jk.nvim",
