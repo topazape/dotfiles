@@ -6,7 +6,8 @@ return {
 	opts = {
 		bigfile = { enable = true },
 		indent = { enabled = true },
-
+		input = { enabled = true },
+		notifier = { enabled = true },
 		picker = {
 			prompt = "> ",
 			win = {
@@ -19,8 +20,6 @@ return {
 				},
 			},
 		},
-
-		notifier = { enabled = true },
 	},
 
 	keys = {
