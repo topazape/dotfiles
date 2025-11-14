@@ -6,7 +6,9 @@ return {
 	opts = {
 		picker = {
 			input = {
-				keys = {},
+				keys = {
+					["<c-s>"] = false,
+				},
 			},
 		},
 	},
