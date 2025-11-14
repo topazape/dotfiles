@@ -6,6 +6,7 @@ return {
 	opts = {
 		picker = {
 			prompt = "> ",
+      win = {
 			input = {
 				keys = {
 					["<Esc>"] = { "close", mode = { "n", "i" } },
