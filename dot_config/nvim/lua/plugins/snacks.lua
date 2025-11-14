@@ -5,6 +5,8 @@ return {
 
 	opts = {
 		bigfile = { enable = true },
+		dashboard = { enabled = false },
+		explorer = { enabled = true },
 		indent = { enabled = true },
 		input = { enabled = true },
 		notifier = { enabled = true },
@@ -20,6 +22,11 @@ return {
 				},
 			},
 		},
+		quickfile = { enabled = false },
+		scope = { enabled = false },
+		scroll = { enabled = true },
+		statuscolumn = { enabled = false },
+		words = { enabled = false },
 	},
 
 	keys = {
