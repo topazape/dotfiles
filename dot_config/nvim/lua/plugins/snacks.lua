@@ -8,6 +8,7 @@ return {
 			input = {
 				keys = {
 					["<c-s>"] = false,
+					["<a-s>"] = "edit_split",
 				},
 			},
 		},
