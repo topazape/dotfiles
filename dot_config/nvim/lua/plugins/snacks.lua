@@ -9,7 +9,11 @@ return {
 			win = {
 				input = {
 					keys = {
+						["*"] = false,
 						["<Esc>"] = { "close", mode = { "n", "i" } },
+						-- ["<c-n>"] = { "list_down", mode = { "i", "n" } },
+						-- ["<c-p>"] = { "list_up", mode = { "i", "n" } },
+
 						["/"] = false,
 						["<C-Down>"] = false,
 						["<C-Up>"] = false,
@@ -36,8 +40,6 @@ return {
 						["<c-g>"] = false,
 						["<c-j>"] = false,
 						["<c-k>"] = false,
-						["<c-n>"] = false,
-						["<c-p>"] = false,
 						["<c-q>"] = false,
 						["<c-s>"] = false,
 						["<c-t>"] = false,
