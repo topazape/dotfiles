@@ -5,6 +5,7 @@ return {
 
 	opts = {
 		picker = {
+			prompt = "> ",
 			input = {
 				keys = {},
 			},
