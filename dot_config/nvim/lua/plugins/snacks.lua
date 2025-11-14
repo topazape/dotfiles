@@ -4,6 +4,9 @@ return {
 	lazy = false,
 
 	opts = {
+		bigfile = { enable = true },
+		indent = { enabled = true },
+
 		picker = {
 			prompt = "> ",
 			win = {
@@ -16,6 +19,8 @@ return {
 				},
 			},
 		},
+
+		notifier = { enabled = true },
 	},
 
 	keys = {
