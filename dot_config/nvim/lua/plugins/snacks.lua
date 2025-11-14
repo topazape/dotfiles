@@ -7,9 +7,13 @@ return {
 		picker = {
 			prompt = "> ",
 		},
-		win = { input = { keys = {
-			["<Esc>"] = { "close", mode = { "n", "i" } },
-		} } },
+		win = {
+			input = {
+				keys = {
+					["<Esc>"] = { "close", mode = { "n", "i" } },
+				},
+			},
+		},
 	},
 
 	keys = {
