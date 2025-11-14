@@ -41,11 +41,18 @@ return {
 			desc = "Find Files",
 		},
 		{
-			"<leader>.",
+			"<leader>s",
 			function()
 				Snacks.scratch()
 			end,
 			desc = "Toggle Scratch Buffer",
+		},
+		{
+			"<leader>bd",
+			function()
+				Snacks.bufdelete()
+			end,
+			desc = "Delete Buffer",
 		},
 	},
 }
