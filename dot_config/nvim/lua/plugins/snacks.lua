@@ -11,7 +11,6 @@ return {
 		input = { enabled = true },
 		notifier = { enabled = true },
 		picker = {
-			prompt = "> ",
 			win = {
 				input = {
 					keys = {
