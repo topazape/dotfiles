@@ -9,7 +9,6 @@ return {
 			win = {
 				input = {
 					keys = {
-						["*"] = false,
 						["<Esc>"] = { "close", mode = { "n", "i" } },
 						-- ["<c-n>"] = { "list_down", mode = { "i", "n" } },
 						-- ["<c-p>"] = { "list_up", mode = { "i", "n" } },
