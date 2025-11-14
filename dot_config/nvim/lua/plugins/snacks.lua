@@ -6,11 +6,46 @@ return {
 	opts = {
 		picker = {
 			input = {
-				keys = {
-					["<c-s>"] = false,
-					["<a-s>"] = "edit_split",
-				},
+				keys = {},
 			},
+		},
+	},
+
+	keys = {
+		{
+			"<leader>fb",
+			function()
+				Snacks.picker.buffers()
+			end,
+			desc = "Buffers",
+		},
+		{
+			"<leader>fg",
+			function()
+				Snacks.picker.grep()
+			end,
+			desc = "Grep",
+		},
+		{
+			"<leader>fe",
+			function()
+				Snacks.explorer()
+			end,
+			desc = "File Explorer",
+		},
+		{
+			"<leader>ff",
+			function()
+				Snacks.picker.files()
+			end,
+			desc = "Find Files",
+		},
+		{
+			"<leader>.",
+			function()
+				Snacks.scratch()
+			end,
+			desc = "Toggle Scratch Buffer",
 		},
 	},
 }
