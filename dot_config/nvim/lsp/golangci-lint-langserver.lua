@@ -1,5 +1,7 @@
 return {
 	cmd = { "golangci-lint-langserver" },
+	cmd_env = { GOLANGCI_LINT_CACHE = vim.env.XDG_CACHE_HOME .. "/golangci-lint" },
+
 	init_options = {
 		command = {
 			"golangci-lint",
