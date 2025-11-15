@@ -6,7 +6,7 @@ return {
 			"run",
 			"--no-config",
 			"--default=standard",
-			"--enable=bodyclose,containedctx,errname,errorlint,exhaustive,gocritic,gosec,makezero,misspell,theper,wsl",
+			"--enable=bodyclose,containedctx,errname,errorlint,exhaustive,gocritic,gosec,makezero,misspell,wsl_v5",
 			"--output.json.path=stdout",
 			"--show-stats=false",
 		},
