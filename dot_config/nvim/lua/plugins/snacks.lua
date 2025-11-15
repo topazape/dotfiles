@@ -9,7 +9,9 @@ return {
 		explorer = { enabled = true },
 		indent = {
 			enabled = true,
-			char = "┆",
+			indent = {
+				char = "┆",
+			},
 		},
 		input = { enabled = true },
 		notifier = { enabled = true },
