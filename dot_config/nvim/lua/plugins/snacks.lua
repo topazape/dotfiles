@@ -22,7 +22,7 @@ return {
 			},
 		},
 		quickfile = { enabled = false },
-		scope = { enabled = true },
+		scope = { enabled = false },
 		scroll = { enabled = true },
 		statuscolumn = { enabled = false },
 		words = { enabled = false },
