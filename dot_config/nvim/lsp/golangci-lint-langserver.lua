@@ -1,18 +1,14 @@
-local golanci_lint_config_file = vim.env.XDG_CONFIG_HOME .. "/golangci-lint" .. "/golangci.yml"
-
 return {
 	cmd = { "golangci-lint-langserver" },
-	cmd_env = { GOLANGCI_LINT_CACHE = vim.env.XDG_CACHE_HOME .. "/golangci-lint" },
 	init_options = {
 		command = {
 			"golangci-lint",
 			"run",
-			"-c",
-			golanci_lint_config_file,
-			-- "--default=standard",
-			-- "--enable=bodyclose,containedctx,errname,errorlint,exhaustive,gocritic,gosec,makezero,misspell,theper,wsl",
-			-- "--output.json.path=stdout",
-			-- "--show-stats=false",
+			"--no-config",
+			"--default=standard",
+			"--enable=bodyclose,containedctx,errname,errorlint,exhaustive,gocritic,gosec,makezero,misspell,theper,wsl",
+			"--output.json.path=stdout",
+			"--show-stats=false",
 		},
 	},
 	filetypes = { "go", "gomod" },
