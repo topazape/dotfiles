@@ -8,7 +8,6 @@ return {
 		dashboard = { enabled = false },
 		explorer = { enabled = true },
 		indent = {
-			enabled = true,
 			indent = {
 				char = "┆",
 			},
