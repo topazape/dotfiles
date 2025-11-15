@@ -58,7 +58,7 @@ return {
 			desc = "Find Files",
 		},
 		{
-			"<leader>s",
+			"<leader>.",
 			function()
 				Snacks.scratch()
 			end,
@@ -70,6 +70,13 @@ return {
 				Snacks.bufdelete()
 			end,
 			desc = "Delete Buffer",
+		},
+		{
+			"<leader>tb",
+			function()
+				Snacks.git.blame_line()
+			end,
+			desc = "Git Blame",
 		},
 	},
 }
