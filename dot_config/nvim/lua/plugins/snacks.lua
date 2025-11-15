@@ -8,8 +8,16 @@ return {
 		dashboard = { enabled = false },
 		explorer = { enabled = true },
 		indent = {
+			enabled = true,
 			indent = {
 				char = "┆",
+				hl = (function()
+					local groups = {}
+					for i = 1, 12 do
+						groups[i] = "RainbowDarkDelim" .. i
+					end
+					return groups
+				end)(),
 			},
 		},
 		input = { enabled = true },
