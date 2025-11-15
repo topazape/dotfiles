@@ -1,4 +1,4 @@
-local golanci_lint_config_file = vim.env.XDG_CONFIG_HOME .. "/golangci-lint" .. "golangci.yml"
+local golanci_lint_config_file = vim.env.XDG_CONFIG_HOME .. "/golangci-lint" .. "/golangci.yml"
 
 return {
 	cmd = { "golangci-lint-langserver" },
