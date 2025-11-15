@@ -1,5 +1,7 @@
 return {
 	"coder/claudecode.nvim",
+	dependencies = { "folke/snacks.nvim" },
+
 	opts = {
 		terminal = {
 			split_side = "right", -- "left" or "right"
