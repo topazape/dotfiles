@@ -9,8 +9,8 @@ return {
 		explorer = { enabled = true },
 		indent = {
 			enabled = true,
-			indent = { char = "│", hl = "LineNr" },
-			scope = { char = "┊", hl = "LineNr" },
+			indent = { char = "┊", hl = "LineNr" },
+			scope = { char = "│", hl = "LineNr" },
 		},
 		input = { enabled = true },
 		notifier = { enabled = true },
