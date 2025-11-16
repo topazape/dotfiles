@@ -42,12 +42,6 @@ require("lazy").setup({
 		{ "chomosuke/typst-preview.nvim", ft = "typst", version = "1.*", config = true },
 		{ "PedramNavid/dbtpal", dependencies = { "nvim-lua/plenary.nvim" }, config = true },
 		{
-			"fredrikaverpil/godoc.nvim",
-			version = "*",
-			dependencies = { "folke/snacks.nvim" },
-			opts = { picker = { type = "snacks" } },
-		},
-		{
 			"rainbowhxch/accelerated-jk.nvim",
 			config = function()
 				vim.api.nvim_set_keymap("n", "j", "<Plug>(accelerated_jk_gj)", {})
