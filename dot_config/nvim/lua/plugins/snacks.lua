@@ -9,7 +9,7 @@ return {
 		explorer = { enabled = true },
 		indent = {
 			enabled = true,
-			indent = { char = "│" },
+			indent = { char = "│", hl = "LineNr" },
 			scope = { char = "┊", hl = "LineNr" },
 		},
 		input = { enabled = true },
