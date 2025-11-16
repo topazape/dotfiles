@@ -10,7 +10,7 @@ return {
 		indent = {
 			enabled = true,
 			indent = { char = "│" },
-			scope = { char = "┊", hl = "Conceal" },
+			scope = { char = "┊", hl = "LineNr" },
 		},
 		input = { enabled = true },
 		notifier = { enabled = true },
