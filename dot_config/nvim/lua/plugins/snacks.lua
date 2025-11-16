@@ -7,7 +7,11 @@ return {
 		bigfile = { enable = true },
 		dashboard = { enabled = false },
 		explorer = { enabled = true },
-		indent = { enabled = true, indent = { char = "┆" } },
+		indent = {
+			enabled = true,
+			indent = { char = "┆" },
+			scope = { char = "┆" },
+		},
 		input = { enabled = true },
 		notifier = { enabled = true },
 		picker = {
