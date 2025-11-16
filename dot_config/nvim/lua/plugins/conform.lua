@@ -11,7 +11,7 @@ return {
 				require_cwd = false,
 			},
 			["golangci-lint"] = {
-				args = { "--no-config", "--stdin" },
+				args = { "--no-config", "--enable=", "fmt", "--stdin" },
 			},
 		},
 		formatters_by_ft = {
