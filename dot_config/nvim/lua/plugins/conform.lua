@@ -58,9 +58,9 @@ return {
 			sh = {
 				"shfmt",
 			},
-			sql = {
-				"sqlfluff",
-			},
+			-- sql = {
+			-- 	"sqlfluff",
+			-- },
 			terraform = {
 				"hcl",
 			},
@@ -73,9 +73,9 @@ return {
 			xml = {
 				"xmlformatter",
 			},
-			-- yaml = {
-			-- 	"prettier",
-			-- },
+			yaml = {
+				"prettier",
+			},
 			zsh = {
 				"shfmt",
 			},
