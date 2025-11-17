@@ -12,7 +12,7 @@ return {
 			indent = { char = "┊", hl = "LineNr" },
 			scope = { char = "│", hl = "Question" },
 		},
-		input = { enabled = false },
+		input = { enabled = true },
 		notifier = { enabled = true },
 		picker = {
 			win = {
