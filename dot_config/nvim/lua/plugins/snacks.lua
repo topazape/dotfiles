@@ -48,6 +48,13 @@ return {
 			desc = "Grep",
 		},
 		{
+			"<leader>n",
+			function()
+				Snacks.picker.notifications()
+			end,
+			desc = "Notification History",
+		},
+		{
 			"<leader>fe",
 			function()
 				Snacks.explorer()
