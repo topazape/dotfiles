@@ -30,6 +30,7 @@ require("lazy").setup({
 		{ import = "plugins.claudecode" },
 		{ import = "plugins.render-markdown" },
 		{ import = "plugins.gopher" },
+		{ import = "plugins.godoc" },
 
 		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "folke/ts-comments.nvim", event = "VeryLazy", config = true },
