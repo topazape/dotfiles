@@ -76,6 +76,14 @@ return {
 			desc = "Find Files",
 		},
 		{
+			"<leader>fd",
+			function()
+				Snacks.picker.diagnostics()
+			end,
+			desc = "Diagnostics",
+		},
+
+		{
 			"<leader>.",
 			function()
 				Snacks.scratch()
