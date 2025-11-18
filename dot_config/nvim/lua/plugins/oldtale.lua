@@ -16,6 +16,7 @@ return {
 				octo = true,
 				rainbow_delimiters = true,
 				saga = true,
+				snacks = true,
 				telescope = false,
 				treesitter = true,
 			},
