@@ -13,7 +13,10 @@ return {
 			scope = { char = "│" },
 		},
 		input = { enabled = true },
-		notifier = { enabled = true },
+		notifier = {
+      enabled = true
+      top_down = false,
+    },
 		picker = {
 			win = {
 				input = {
