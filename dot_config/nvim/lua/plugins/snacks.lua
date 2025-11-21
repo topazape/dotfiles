@@ -76,7 +76,7 @@ return {
 			desc = "Find Files",
 		},
 		{
-			"<leader>fd",
+			"<leader>sd",
 			function()
 				Snacks.picker.diagnostics()
 			end,
