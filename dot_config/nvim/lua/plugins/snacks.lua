@@ -19,6 +19,7 @@ return {
 			gap = 1,
 			top_down = false,
 			style = "fancy",
+			zindex = 10,
 		},
 		picker = {
 			win = {
