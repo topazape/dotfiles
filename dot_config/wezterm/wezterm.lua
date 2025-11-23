@@ -5,6 +5,7 @@ local FONT_SIZE = 16
 local CONSOLE_FONTS = {
 	{ family = "Berkeley Mono" },
 	{ family = "Maple Mono" },
+	{ family = "LINE Seed JP" },
 	{ family = "Pretendard JP" },
 }
 
