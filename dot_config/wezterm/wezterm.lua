@@ -6,7 +6,6 @@ local CONSOLE_FONTS = {
 	{ family = "Berkeley Mono" },
 	{ family = "Maple Mono" },
 	{ family = "LINE Seed JP" },
-	{ family = "Pretendard JP" },
 }
 
 local function retrieve_font_settings(fonts, weight)
