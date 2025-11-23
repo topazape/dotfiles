@@ -5,7 +5,7 @@ local FONT_SIZE = 16
 local CONSOLE_FONTS = {
 	{ family = "Berkeley Mono" },
 	{ family = "Maple Mono" },
-	{ family = "LINE Seed JP" },
+	{ family = "LINE Seed JP", weight = "Thin" },
 }
 
 local function retrieve_font_settings(fonts, weight)
