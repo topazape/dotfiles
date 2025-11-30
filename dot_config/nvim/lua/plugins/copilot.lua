@@ -8,7 +8,7 @@ return {
 			yaml = true,
 			toml = true,
 			sql = true,
-			py = true,
+			python = true,
 			go = true,
 			["*"] = false,
 		},
