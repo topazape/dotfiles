@@ -8,7 +8,8 @@ return {
 			yaml = true,
 			toml = true,
 			sql = true,
-			dbt = true,
+			py = true,
+			go = true,
 			["*"] = false,
 		},
 		panel = {
