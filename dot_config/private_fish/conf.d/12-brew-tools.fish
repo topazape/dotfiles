@@ -9,19 +9,9 @@ if type -q starship
     set -gx STARSHIP_CONFIG $XDG_CONFIG_HOME/starship/starship.toml
 end
 
-# pager
-if type -q ov
-    set -gx PAGER ov
-    alias less="ov"
-end
-
 # bat
 if type -q bat
     set -gx BAT_THEME TwoDark
-    # set ov for bat pager if exists
-    if type -q ov
-        set -gx BAT_PAGER "ov -F -H3"
-    end
 end
 
 # eza
