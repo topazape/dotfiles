@@ -111,5 +111,12 @@ return {
 			end,
 			desc = "Git Blame",
 		},
+		{
+			"<leader>gg",
+			function()
+				Snacks.lazygit()
+			end,
+			desc = "Lazygit",
+		},
 	},
 }
