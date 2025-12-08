@@ -162,7 +162,7 @@ return {
 			desc = "Git Blame",
 		},
 		{
-			"<leader>gl",
+			"<leader>gg",
 			function()
 				Snacks.lazygit()
 			end,
