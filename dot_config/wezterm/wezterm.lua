@@ -3,8 +3,8 @@ local DEFAULT_INACTIVE_FG = "#3a3a3e"
 local DEFAULT_BG = "#121213"
 local FONT_SIZE = 16
 local CONSOLE_FONTS = {
-	{ family = "Berkeley Mono" },
 	{ family = "psudoFont Liga Mono" },
+	{ family = "Berkeley Mono" },
 	{ family = "LINE Seed JP" },
 }
 
