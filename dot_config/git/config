@@ -2,7 +2,7 @@
 	email = topazape@gmail.com
 	name = topazape
 [push]
-	default = nothing
+	default = simple
 [pull]
 	rebase = false
 [alias]
