@@ -4,3 +4,10 @@ gui:
 git:
   pagers:
     - pager: delta --paging=never
+
+customCommands:
+  - key: "<c-a>"
+    description: "Generate commit message with AI"
+    command: ""
+    context: "files" # Run this command from the 'files' panel
+    loadingText: "Generating AI commit message..."
