@@ -8,6 +8,6 @@ git:
 customCommands:
   - key: "<c-a>"
     description: "Generate commit message with AI"
-    command: ""
-    context: "files" # Run this command from the 'files' panel
+    command: "claude -p 'git diff を確認して、日本語1行コミットメッセージ(AI署名なし)だけを出力してください。'"
+    context: "files"
     loadingText: "Generating AI commit message..."
