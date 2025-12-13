@@ -51,4 +51,5 @@ customCommands:
         fi
         git commit -e -m "$commit_message"
       '
+    subprocess: true
     loadingText: "Generating commit message..."
