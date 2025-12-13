@@ -39,9 +39,6 @@ customCommands:
         title: "(Optional) Enter the scope"
         key: "Scope"
         initialValue: ""
-      - type: "confirm"
-        title: "Commit"
-        body: "{{.Form.Type}}{{if .Form.Scope}}({{.Form.Scope}}){{end}}: {{ `git diff --staged | claude -p \"この git diff を確認して、日本語1行コミットメッセージ(prefix不要、AI署名なし)だけを出力してください。\"` | lines | first }}\n\nCommit with this message?"
     command: >-
       bash -c '
         type="{{.Form.Type}}"
@@ -52,6 +49,6 @@ customCommands:
         else
           commit_message="$type: $message"
         fi
-        git commit -m "$commit_message"
+        git commit -e -m "$commit_message"
       '
     loadingText: "Generating commit message..."
