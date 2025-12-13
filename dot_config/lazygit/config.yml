@@ -49,7 +49,6 @@ customCommands:
         else
           commit_message="$type: $message"
         fi
-        git commit -e -m "$commit_message"
+        git commit -m "$commit_message"
       '
-    subprocess: true
     loadingText: "Generating commit message..."
