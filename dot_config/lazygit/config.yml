@@ -4,3 +4,54 @@ gui:
 git:
   pagers:
     - pager: delta --paging=never
+
+customCommands:
+  - key: "C"
+    context: "files"
+    description: "commit files with AI-generated message"
+    prompts:
+      - type: "menu"
+        title: "What kind of commit type is it?"
+        key: "Type"
+        options:
+          - name: "feat"
+            description: "新機能の追加"
+            value: "feat"
+          - name: "fix"
+            description: "バグや不具合の修正"
+            value: "fix"
+          - name: "refactor"
+            description: "機能変更を伴わないコード改善"
+            value: "refactor"
+          - name: "docs"
+            description: "ドキュメントのみの変更"
+            value: "docs"
+          - name: "chore"
+            description: "ビルド、依存関係、設定などの雑務"
+            value: "chore"
+          - name: "test"
+            description: "テストの追加・修正"
+            value: "test"
+          - name: "perf"
+            description: "パフォーマンス改善"
+            value: "perf"
+      - type: "input"
+        title: "(Optional) Enter the scope"
+        key: "Scope"
+        initialValue: ""
+      - type: "confirm"
+        title: "Commit"
+        body: "{{.Form.Type}}{{if .Form.Scope}}({{.Form.Scope}}){{end}}: {{ `git diff --staged | claude -p \"この git diff を確認して、日本語1行コミットメッセージ(prefix不要、AI署名なし)だけを出力してください。\"` | lines | first }}\n\nCommit with this message?"
+    command: >-
+      bash -c '
+        type="{{.Form.Type}}"
+        scope="{{.Form.Scope}}"
+        message=$(git diff --staged | claude -p "この git diff を確認して、日本語1行コミットメッセージ(prefix不要、AI署名なし)だけを出力してください。")
+        if [ -n "$scope" ]; then
+          commit_message="$type($scope): $message"
+        else
+          commit_message="$type: $message"
+        fi
+        git commit -m "$commit_message"
+      '
+    loadingText: "Generating commit message..."
