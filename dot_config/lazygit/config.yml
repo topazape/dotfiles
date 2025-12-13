@@ -6,8 +6,27 @@ git:
     - pager: delta --paging=never
 
 customCommands:
-  - key: "<c-a>"
-    description: "Generate commit message with AI"
-    command: "claude -p 'git diff を確認して、日本語1行コミットメッセージ(AI署名なし)だけを出力してください。'"
+  - key: "<c-c>"
     context: "files"
-    loadingText: "Generating AI commit message..."
+    description: "commit files with format"
+    prompts:
+      - type: "menu"
+        title: "What kind of commit type is it?"
+        key: "Type"
+        options:
+          - name: "fix"
+            description: "バグや不具合の修正"
+            value: "fix"
+      - type: "input"
+        title: "(Optional) Enter the scope"
+        key: "Scope"
+        initialValue: ""
+      - type: "input"
+        title: "Enter the Message"
+        key: "Message"
+        initialValue: ""
+      - type: "confirm"
+        title: "Commit"
+        body: "Commit with the message '{{.Form.Type}}{{.Form.Scope}}: {{.Form.Message}}{{.Form.Emoji}}'. Is this okay?"
+    command: "bash -c 'type=\"{{.Form.Type}}\"; scope=\"{{.Form.Scope}}\"; message=\"{{.Form.Message}}\"; emoji=\"{{.Form.Emoji}}\"; commit_message=\"$type${scope:+($scope)}: $message $emoji\"; git commit -m \"$commit_message\"'"
+    loadingText: "Commiting..."
