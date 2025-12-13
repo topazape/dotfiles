@@ -6,7 +6,7 @@ git:
     - pager: delta --paging=never
 
 customCommands:
-  - key: "<c-c>"
+  - key: "<c-a>"
     context: "files"
     description: "commit files with format"
     prompts:
