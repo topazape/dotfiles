@@ -6,6 +6,8 @@ gui:
   nerdFontsVersion: "3"
 
 git:
+  mainBranches:
+    - main
   pagers:
     - pager: delta --paging=never
 
