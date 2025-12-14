@@ -2,7 +2,7 @@ gui:
   switchTabsWithPanelJumpKeys: true
   showRandomTip: false
   showCommandLog: false
-  showBottomLine: false
+  showBottomLine: true
   nerdFontsVersion: "3"
 
 git:
