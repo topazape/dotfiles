@@ -13,13 +13,14 @@ return {
 	settings = {
 		ty = {
 			diagnosticMode = "workspace",
-			experimental = {
-				rename = true,
-				autoImport = true,
-			},
+
 			inlayHints = {
 				variableTypes = true,
 				callArgumentNames = true,
+			},
+
+			completions = {
+				autoImport = true,
 			},
 		},
 	},
