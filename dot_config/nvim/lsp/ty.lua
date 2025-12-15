@@ -11,8 +11,8 @@ return {
 		"ty.toml",
 	},
 	settings = {
-		diagnosticMode = "workspace",
 		ty = {
+			diagnosticMode = "workspace",
 			experimental = {
 				rename = true,
 				autoImport = true,
