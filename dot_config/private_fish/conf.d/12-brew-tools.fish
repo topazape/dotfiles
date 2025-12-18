@@ -40,3 +40,8 @@ end
 if type -q claude
     set -gx CLAUDE_CONFIG_DIR $XDG_CONFIG_HOME/claude
 end
+
+# docker
+if type -q docker
+    set -gx DOCKER_CONFIG $XDG_CONFIG_HOME/docker
+end
