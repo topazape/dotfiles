@@ -13,7 +13,6 @@ end
 # terraform
 if type -q terraform
     set -gx TF_PLUGIN_CACHE_DIR $XDG_CACHE_HOME/terraform
-    set -gx CHECKPOINT_DISABLE 1
 end
 
 # kubernetes
