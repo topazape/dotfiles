@@ -12,6 +12,5 @@ end
 
 # terraform
 if type -q terraform
-    set -gx TF_CLI_CONFIG_FILe $XDG_CONFIG_HOME/terraform
     set -gx TF_PLUGIN_CACHE_DIR $XDG_CACHE_HOME/terraform
 end
