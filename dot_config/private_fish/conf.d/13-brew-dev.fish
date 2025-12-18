@@ -14,3 +14,13 @@ end
 if type -q terraform
     set -gx TF_PLUGIN_CACHE_DIR $XDG_CACHE_HOME/terraform
 end
+
+# kubernetes
+if type -q kubectl
+    set -gx KUBECONFIG $XDG_CONFIG_HOME/kube/config
+end
+
+# dbt
+if type -q dbt
+    set -gx DBT_PROFILES_DIR $XDG_CONFIG_HOME/dbt
+end
