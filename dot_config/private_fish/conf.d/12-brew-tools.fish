@@ -41,12 +41,17 @@ if type -q claude
     set -gx CLAUDE_CONFIG_DIR $XDG_CONFIG_HOME/claude
 end
 
-# colima
-if type -q colima
-    set -gx COLIMA_HOME $XDG_CONFIG_HOME/colima
-end
+# colima and docker setup
+if status is-interactive
+    if type -q colima and type -q docker
+        # use XDG Base Directory
+        set -gx COLIMA_HOME $XDG_CONFIG_HOME/colima
+        set -gx DOCKER_CONFIG $XDG_CONFIG_HOME/docker
 
-# docker
-if type -q docker
-    set -gx DOCKER_CONFIG $XDG_CONFIG_HOME/docker
+        # start colima if not running
+        if not colima status &>/dev/null
+            colima start &>/dev/null &
+            disown
+        end
+    end
 end
