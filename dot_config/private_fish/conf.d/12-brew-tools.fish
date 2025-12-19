@@ -48,7 +48,7 @@ if status is-interactive
         set -gx COLIMA_HOME $XDG_CONFIG_HOME/colima
         set -gx DOCKER_CONFIG $XDG_CONFIG_HOME/docker
 
-        # start colima if not running
+        # start colima if not running (background)
         fish -c 'colima status &>/dev/null; or colima start &>/dev/null' &
     end
 end
