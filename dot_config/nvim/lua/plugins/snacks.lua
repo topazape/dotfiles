@@ -37,14 +37,14 @@ return {
 						list = {
 							keys = {
 								["<BS>"] = "explorer_up",
-								["l"] = "confirm",
+								["l"] = false,
 								["h"] = "explorer_close", -- close directory
 								["a"] = "explorer_add",
 								["d"] = "explorer_del",
 								["r"] = "explorer_rename",
 								["c"] = "explorer_copy",
 								["m"] = "explorer_move",
-								["o"] = "explorer_open", -- open with system application
+								["o"] = "confirm",
 								["P"] = "toggle_preview",
 								["y"] = { "explorer_yank", mode = { "n", "x" } },
 								["p"] = "explorer_paste",
