@@ -36,11 +36,9 @@ return {
 					win = {
 						list = {
 							keys = {
-								-- ["<BS>"] = "explorer_up",
-								["<BS>"] = false,
+								["<BS>"] = "explorer_up",
 								["l"] = "confirm",
-								-- ["h"] = "explorer_close", -- close directory
-								["h"] = false, -- close directory
+								["h"] = "explorer_close", -- close directory
 								["a"] = "explorer_add",
 								["d"] = "explorer_del",
 								["r"] = "explorer_rename",
