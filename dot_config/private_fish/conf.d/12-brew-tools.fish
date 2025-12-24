@@ -52,3 +52,9 @@ if status is-interactive
         fish -c 'colima status &>/dev/null; or colima start &>/dev/null' &
     end
 end
+
+# chezmoi
+if type -q chezmoi
+    # completion
+    chezmoi completion fish | source
+end
