@@ -36,7 +36,7 @@ return {
 					win = {
 						list = {
 							keys = {
-								["l"] = false,
+								["<CR"] = false,
 								["o"] = "confirm",
 								["<M-s>"] = "edit_split",
 								["<M-v>"] = "edit_vsplit",
