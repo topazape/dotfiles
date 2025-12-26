@@ -1,7 +1,7 @@
 gui:
   switchTabsWithPanelJumpKeys: true
   showRandomTip: false
-  showCommandLog: false
+  showCommandLog: true
   showBottomLine: true
   nerdFontsVersion: "3"
 
