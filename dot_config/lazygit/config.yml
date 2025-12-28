@@ -52,7 +52,7 @@ customCommands:
       bash -c '
         type="{{.Form.Type}}"
         scope="{{.Form.Scope}}"
-        message=$(git diff --staged | claude -p "この git diff を確認して、日本語1行コミットメッセージ(prefix不要、AI署名なし)だけを出力してください。")
+        message=$(git diff --staged | claude -c -p "この git diff を確認して、日本語1行コミットメッセージ(prefix不要、AI署名なし)だけを出力してください。")
         if [ -n "$scope" ]; then
           commit_message="$type($scope): $message"
         else
