@@ -3,7 +3,7 @@ return {
 
 	opts = {
 		terminal = {
-			split_width_percentage = 0.40,
+			split_width_percentage = 0.30,
 			provider = "native",
 		},
 	},
