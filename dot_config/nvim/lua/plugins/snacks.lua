@@ -22,17 +22,9 @@ return {
 			style = "fancy",
 		},
 		picker = {
-			win = {
-				input = {
-					keys = {
-						["<Esc>"] = { "close", mode = { "n", "i" } },
-						["<M-s>"] = { "edit_split", mode = { "n", "i" } },
-						["<M-v>"] = { "edit_vsplit", mode = { "n", "i" } },
-					},
-				},
-			},
 			sources = {
 				explorer = {
+					layout = { preset = "sidebar", preview = true },
 					win = {
 						list = {
 							keys = {
@@ -42,6 +34,15 @@ return {
 								["<M-v>"] = "edit_vsplit",
 							},
 						},
+					},
+				},
+			},
+			win = {
+				input = {
+					keys = {
+						["<Esc>"] = { "close", mode = { "n", "i" } },
+						["<M-s>"] = { "edit_split", mode = { "n", "i" } },
+						["<M-v>"] = { "edit_vsplit", mode = { "n", "i" } },
 					},
 				},
 			},
