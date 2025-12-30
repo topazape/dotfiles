@@ -28,6 +28,7 @@ return {
 					win = {
 						list = {
 							keys = {
+								["<ESC>"] = false,
 								["<CR>"] = false,
 								["o"] = "confirm",
 								["<M-s>"] = "edit_split",
