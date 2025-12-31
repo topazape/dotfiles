@@ -24,7 +24,6 @@ return {
 		picker = {
 			sources = {
 				explorer = {
-					layout = { preset = "sidebar", preview = true },
 					win = {
 						list = {
 							keys = {
