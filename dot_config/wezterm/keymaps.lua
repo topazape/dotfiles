@@ -2,7 +2,7 @@ local act = require("wezterm").action
 
 return {
 	-- generic
-	{ key = "Enter", mods = "SHIFT", action = act.SendString("\x1b\r") },
+	{ key = "Enter", mods = "SHIFT", action = act.SendString("\n") },
 	-- copy mode
 	{ key = "Space", mods = "LEADER", action = act.ActivateCopyMode },
 	---- copy & paste
