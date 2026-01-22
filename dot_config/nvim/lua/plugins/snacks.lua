@@ -163,6 +163,20 @@ return {
 			desc = "Git Diff (Hunks)",
 		},
 		{
+			"<leader>gD",
+			function()
+				Snacks.picker.git_branches({
+					confirm = function(picker, item)
+						picker:close()
+						if item then
+							Snacks.picker.git_diff({ base = item.branch })
+						end
+					end,
+				})
+			end,
+			desc = "Git Diff against branch...",
+		},
+		{
 			"<leader>gf",
 			function()
 				Snacks.picker.git_log_file()
