@@ -59,9 +59,3 @@ if type -q chezmoi
     # completion
     chezmoi completion fish | source
 end
-
-# ngrok
-if type -q ngrok
-    # completion
-    ngrok completion | source
-end
