@@ -73,9 +73,9 @@ return {
 			xml = {
 				"xmlformatter",
 			},
-			-- yaml = {
-			-- 	"prettier",
-			-- },
+			yaml = {
+				"prettier",
+			},
 			zsh = {
 				"shfmt",
 			},
