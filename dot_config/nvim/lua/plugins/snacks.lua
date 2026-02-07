@@ -37,7 +37,7 @@ return {
 						},
 					},
 					format = function(item, picker)
-						local ret = Snacks.picker.format.explorer(item, picker)
+						local ret = Snacks.picker.format.filename(item, picker)
 						if item.file then
 							local bufnr = vim.fn.bufnr(item.file)
 							if bufnr ~= -1 and vim.bo[bufnr].modified then
