@@ -60,9 +60,9 @@ return {
 					name = "Dataform",
 					module = "dataform.completion.blink",
 				},
-				per_filetype = {
-					sqlx = { "dataform", "lsp", "path", "buffer", "snippets", "copilot" },
-				},
+			},
+			per_filetype = {
+				sqlx = { "dataform", "lsp", "path", "buffer", "snippets", "copilot" },
 			},
 		},
 
