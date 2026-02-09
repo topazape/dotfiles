@@ -48,13 +48,20 @@ return {
 		},
 
 		sources = {
-			default = { "lsp", "copilot", "buffer", "path", "snippets" },
+			default = { "lsp", "path", "buffer", "snippets", "copilot" },
 			providers = {
 				copilot = {
 					name = "copilot",
 					module = "blink-copilot",
 					score_offset = 100,
 					async = true,
+				},
+				dataform = {
+					name = "Dataform",
+					module = "dataform.completion.blink",
+				},
+				per_filetype = {
+					sqlx = { "dataform", "lsp", "path", "buffer", "snippets", "copilot" },
 				},
 			},
 		},
