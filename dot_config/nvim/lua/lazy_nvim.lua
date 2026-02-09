@@ -32,6 +32,7 @@ require("lazy").setup({
 		{ import = "plugins.gopher" },
 		{ import = "plugins.godoc" },
 
+		{ "magal1337/dataform.nvim", config = true },
 		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "folke/ts-comments.nvim", event = "VeryLazy", config = true },
 		{ "nvim-tree/nvim-web-devicons", config = true },
