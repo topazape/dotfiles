@@ -9,7 +9,7 @@ return {
 		-- デフォルト設定
 		chat = {
 			window = {
-				position = "current", -- "current" | "right" | "left" | "float"
+				position = "right", -- "current" | "right" | "left" | "float"
 				width = 0.4,
 				border = "rounded",
 			},
