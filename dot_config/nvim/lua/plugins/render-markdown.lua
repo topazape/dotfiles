@@ -4,14 +4,19 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		"nvim-tree/nvim-web-devicons",
 	},
-	ft = { "markdown", "Avante" },
+	ft = { "markdown" },
 	opts = {
 		heading = {
 			position = "inline",
+			sign = false,
 		},
 		code = {
-			width = "block",
-			left_margin = 2,
+			style = "normal",
+			border = "thick",
+			sign = false,
+		},
+		pipe_table = {
+			enabled = false,
 		},
 		bullet = {
 			icons = { "•", "∘", "▪", "▫" },
