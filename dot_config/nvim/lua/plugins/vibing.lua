@@ -50,7 +50,7 @@ return {
 			-- "nvim": Neovimのデフォルトを尊重（ラップ設定を変更しない）
 			-- "on": wrap + linebreakを有効化（チャット可読性のため推奨）
 			-- "off": 行の折り返しを無効化
-			tool_result_display = "compact", -- ツール実行結果の表示モード
+			tool_result_display = "none", -- ツール実行結果の表示モード
 			-- "none": ツール結果を表示しない
 			-- "compact": 最初の100文字のみ表示（デフォルト）
 			-- "full": 完全なツール出力を表示
