@@ -21,8 +21,9 @@ return {
 			rules = {}, -- オプション：きめ細かい権限ルール
 		},
 		chat = {
-			save_location_type = "project", -- "project" | "user" | "custom"
-			auto_context = true,
+			save_location_type = "custom", -- "project" | "user" | "custom"
+			save_dir = "~/.local/share/nvim/vibing/chats",
+			auto_context = true, -- 開いているバッファを自動的にコンテキストに追加
 			context_position = "append", -- "prepend" | "append"
 			window = {
 				position = "right", -- "current" | "right" | "left" | "float"
