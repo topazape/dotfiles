@@ -28,7 +28,7 @@ require("lazy").setup({
 		{ import = "plugins.lualine" },
 		{ import = "plugins.copilot" },
 		{ import = "plugins.claudecode" },
-		{ import = "plugins.render-markdown" },
+		-- { import = "plugins.render-markdown" },
 		{ import = "plugins.gopher" },
 		{ import = "plugins.godoc" },
 		{ import = "plugins.vibing" },
