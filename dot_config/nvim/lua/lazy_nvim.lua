@@ -31,6 +31,7 @@ require("lazy").setup({
 		{ import = "plugins.render-markdown" },
 		{ import = "plugins.gopher" },
 		{ import = "plugins.godoc" },
+		{ import = "plugins.vibing" },
 
 		{ "magal1337/dataform.nvim", config = true },
 		{ "HiPhish/rainbow-delimiters.nvim" },
