@@ -32,7 +32,7 @@ return {
 				border = "rounded", -- ボーダースタイル："rounded" | "single" | "double" | "none"
 			},
 			auto_context = true, -- 開いているバッファを自動的にコンテキストに追加
-			save_location_type = "project", -- チャットファイルの保存場所
+			save_location_type = "user", -- チャットファイルの保存場所
 			-- "project": プロジェクトルートの.vibing/chat/
 			-- "user": ~/.local/share/nvim/vibing/chats/
 			-- "custom": save_dirパスを使用
