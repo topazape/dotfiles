@@ -1,6 +1,7 @@
 return {
 	"carlos-algms/agentic.nvim",
 	opts = {
+		provider = "claude-acp",
 		acp_providers = {
 			["claude-acp"] = {
 				env = {
