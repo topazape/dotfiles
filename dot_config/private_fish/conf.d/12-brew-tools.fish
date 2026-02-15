@@ -36,11 +36,6 @@ if type -q gtrash
     end
 end
 
-# claude code
-if type -q claude
-    set -gx CLAUDE_CONFIG_DIR $XDG_CONFIG_HOME/claude
-end
-
 # colima and docker setup
 if status is-interactive
     if type -q colima and type -q docker
