@@ -19,6 +19,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	spec = {
 		{ import = "plugins.oldtale" },
+
 		{ import = "plugins.treesitter" },
 		{ import = "plugins.blink-cmp" },
 		{ import = "plugins.conform" },
@@ -30,20 +31,19 @@ require("lazy").setup({
 		{ import = "plugins.render-markdown" },
 		{ import = "plugins.gopher" },
 		{ import = "plugins.godoc" },
-		{ import = "plugins.vibing" },
 
-		{ "magal1337/dataform.nvim", config = true },
 		{ "HiPhish/rainbow-delimiters.nvim" },
-		{ "folke/ts-comments.nvim", event = "VeryLazy", config = true },
-		{ "nvim-tree/nvim-web-devicons", config = true },
-		{ "williamboman/mason.nvim", config = true },
-		{ "j-hui/fidget.nvim", config = true },
-		{ "b0o/schemastore.nvim" },
 		{ "OXY2DEV/helpview.nvim" },
-		{ "tzachar/highlight-undo.nvim", config = true },
+		{ "PedramNavid/dbtpal", config = true },
 		{ "akinsho/git-conflict.nvim", version = "*", config = true },
+		{ "b0o/schemastore.nvim" },
 		{ "chomosuke/typst-preview.nvim", ft = "typst", version = "1.*", config = true },
-		{ "PedramNavid/dbtpal", dependencies = { "nvim-lua/plenary.nvim" }, config = true },
+		{ "folke/ts-comments.nvim", event = "VeryLazy", config = true },
+		{ "j-hui/fidget.nvim", config = true },
+		{ "magal1337/dataform.nvim", config = true },
+		{ "nvim-tree/nvim-web-devicons", config = true },
+		{ "tzachar/highlight-undo.nvim", config = true },
+		{ "williamboman/mason.nvim", config = true },
 		{
 			"rainbowhxch/accelerated-jk.nvim",
 			config = function()
