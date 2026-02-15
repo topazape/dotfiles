@@ -34,7 +34,7 @@ require("lazy").setup({
 
 		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "OXY2DEV/helpview.nvim" },
-		{ "PedramNavid/dbtpal", config = true },
+		{ "PedramNavid/dbtpal", dependencies = { "nvim-lua/plenary.nvim" }, config = true },
 		{ "akinsho/git-conflict.nvim", version = "*", config = true },
 		{ "b0o/schemastore.nvim" },
 		{ "chomosuke/typst-preview.nvim", ft = "typst", version = "1.*", config = true },
