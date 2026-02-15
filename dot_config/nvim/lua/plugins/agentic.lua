@@ -12,7 +12,7 @@ return {
 	-- these are just suggested keymaps; customize as desired
 	keys = {
 		{
-			"<leader>a\\",
+			"<leader>aa",
 			function()
 				require("agentic").toggle()
 			end,
