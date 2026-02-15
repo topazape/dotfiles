@@ -54,3 +54,8 @@ if type -q chezmoi
     # completion
     chezmoi completion fish | source
 end
+
+# claude
+if type -q claude
+    set -gx CLAUDE_CONFIG_DIR $XDG_CONFIG_HOME/claude
+end
