@@ -4,13 +4,18 @@ return {
 		provider = "claude-acp",
 		acp_providers = {
 			["claude-acp"] = {
+				name = "Claude ACP",
+				command = "claude-code-acp",
 				env = {
 					CLAUDE_CONFIG_DIR = os.getenv("CLAUDE_CONFIG_DIR"),
 				},
 			},
 		},
+		windows = {
+			position = "right",
+			width = "30%",
+		},
 	},
-	-- these are just suggested keymaps; customize as desired
 	keys = {
 		{
 			"<leader>aa",
