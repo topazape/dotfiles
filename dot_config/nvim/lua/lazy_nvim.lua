@@ -54,10 +54,14 @@ require("lazy").setup({
 
 		{
 			"carlos-algms/agentic.nvim",
-
 			opts = {
-				-- Available by default: "claude-acp" | "gemini-acp" | "codex-acp" | "opencode-acp" | "cursor-acp" | "auggie-acp"
-				provider = "claude-acp", -- setting the name here is all you need to get started
+				acp_providers = {
+					["claude-acp"] = {
+						env = {
+							CLAUDE_CONFIG_DIR = os.getenv("CLAUDE_CONFIG_DIR"),
+						},
+					},
+				},
 			},
 
 			-- these are just suggested keymaps; customize as desired
