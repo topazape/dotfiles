@@ -5,3 +5,7 @@ end
 if test -d $HOME/.local/bin
     fish_add_path -g $HOME/.local/bin
 end
+
+if test -d $HOME/.local/share/npm/bin
+    fish_add_path -g $HOME/.local/share/npm/bin
+end
