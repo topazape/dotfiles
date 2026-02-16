@@ -15,6 +15,10 @@ return {
 			section_separators = { left = "", right = "" },
 			component_separators = { left = "", right = "" },
 			globalstatus = true,
+			disabled_filetypes = {
+				statusline = { "AgenticChat", "AgenticInput", "AgenticCode", "AgenticFiles" },
+				winbar = { "AgenticChat", "AgenticInput", "AgenticCode", "AgenticFiles" },
+			},
 		},
 		sections = {
 			lualine_a = {
