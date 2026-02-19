@@ -5,7 +5,7 @@ return {
 		acp_providers = {
 			["claude-acp"] = {
 				name = "Claude ACP",
-				command = "claude-code-acp",
+				command = "claude-agent-acp",
 				env = {
 					CLAUDE_CONFIG_DIR = os.getenv("CLAUDE_CONFIG_DIR"),
 				},
