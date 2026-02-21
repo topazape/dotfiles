@@ -16,7 +16,7 @@ return {
 			sign = false,
 		},
 		pipe_table = {
-			enabled = false,
+			enabled = true,
 		},
 		bullet = {
 			icons = { "•", "∘", "▪", "▫" },
