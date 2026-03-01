@@ -2,7 +2,7 @@ return {
 	"olexsmir/gopher.nvim",
 	ft = "go",
 	build = function()
-		vim.cmd.GoInstallDeps()
+		require("gopher.installer").install_deps()
 	end,
 	opts = {},
 }
