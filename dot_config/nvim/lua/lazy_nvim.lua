@@ -30,8 +30,6 @@ require("lazy").setup({
 		{ import = "plugins.lualine" },
 		{ import = "plugins.copilot" },
 		{ import = "plugins.render-markdown" },
-		{ import = "plugins.gopher" },
-		{ import = "plugins.godoc" },
 
 		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "OXY2DEV/helpview.nvim" },
