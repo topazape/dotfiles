@@ -1,5 +1,5 @@
 font-family = "Berkeley Mono"
 font-size = 16
 
-cursor-style = block
+cursor-style = "block"
 cursor-style-blink = false
