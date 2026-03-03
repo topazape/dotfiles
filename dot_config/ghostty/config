@@ -37,3 +37,80 @@ palette = 12=#9dadd5
 palette = 13=#e4a6d0
 palette = 14=#8cbcc0
 palette = 15=#c9c7cd
+
+
+# Converted from WezTerm keybindings
+# LEADER は ctrl+a を想定（元の設定に合わせて変更してください）
+
+# --- generic ---
+keybind = shift+enter=text:\n
+
+# --- copy mode ---
+# Ghostty にはコピーモードがないため省略
+# (マウス選択 + cmd+c で代替)
+
+# --- copy & paste ---
+keybind = super+c=copy_to_clipboard
+keybind = super+v=paste_from_clipboard
+
+# --- font size ---
+keybind = super+equal=increase_font_size
+keybind = super+minus=decrease_font_size
+
+# --- screen ---
+keybind = alt+enter=toggle_fullscreen
+keybind = alt+p=jump_to_prompt:-1
+keybind = alt+n=jump_to_prompt:1
+
+# --- pane: split ---
+keybind = ctrl+a>minus=new_split:down
+keybind = ctrl+a>shift+backslash=new_split:right
+
+# --- pane: move ---
+keybind = ctrl+a>h=goto_split:left
+keybind = ctrl+a>j=goto_split:bottom
+keybind = ctrl+a>k=goto_split:top
+keybind = ctrl+a>l=goto_split:right
+
+# --- pane: resize ---
+# WezTerm は 1 セル単位、Ghostty は px 単位なので 10 に調整
+keybind = ctrl+a>shift+h=resize_split:left,10
+keybind = ctrl+a>shift+j=resize_split:down,10
+keybind = ctrl+a>shift+k=resize_split:up,10
+keybind = ctrl+a>shift+l=resize_split:right,10
+keybind = ctrl+a>arrow_left=resize_split:left,10
+keybind = ctrl+a>arrow_down=resize_split:down,10
+keybind = ctrl+a>arrow_up=resize_split:up,10
+keybind = ctrl+a>arrow_right=resize_split:right,10
+
+# --- tab: create ---
+keybind = ctrl+a>t=new_tab
+
+# --- tab: select (LEADER + number) ---
+# Ghostty は 1-indexed
+keybind = ctrl+a>one=goto_tab:1
+keybind = ctrl+a>two=goto_tab:2
+keybind = ctrl+a>three=goto_tab:3
+keybind = ctrl+a>four=goto_tab:4
+keybind = ctrl+a>five=goto_tab:5
+keybind = ctrl+a>six=goto_tab:6
+keybind = ctrl+a>seven=goto_tab:7
+keybind = ctrl+a>eight=goto_tab:8
+keybind = ctrl+a>nine=goto_tab:9
+
+# --- tab: select (F-key) ---
+keybind = f1=goto_tab:1
+keybind = f2=goto_tab:2
+keybind = f3=goto_tab:3
+keybind = f4=goto_tab:4
+keybind = f5=goto_tab:5
+keybind = f6=goto_tab:6
+keybind = f7=goto_tab:7
+keybind = f8=goto_tab:8
+keybind = f9=goto_tab:9
+
+# --- tab: relative ---
+keybind = ctrl+a>left_bracket=previous_tab
+keybind = f11=previous_tab
+keybind = ctrl+a>right_bracket=next_tab
+keybind = f12=next_tab
