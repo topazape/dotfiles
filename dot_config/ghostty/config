@@ -4,3 +4,35 @@ font-size = 16
 shell-integration-features = no-cursor
 cursor-style = block
 cursor-style-blink = false
+
+foreground = #b4b1ba
+background = #121213
+
+cursor-color = #666370
+cursor-text = #121213
+
+selection-background = #363639
+selection-foreground = #b4b1ba
+
+# WezTerm の split に相当（要動作確認）
+# split-divider-color = #504d54
+
+# ansi (0-7)
+palette = 0=#202023
+palette = 1=#e27598
+palette = 2=#80a891
+palette = 3=#d4a48c
+palette = 4=#8292c7
+palette = 5=#d68abc
+palette = 6=#76a5aa
+palette = 7=#b4b1ba
+
+# brights (8-15)
+palette = 8=#3a3a3e
+palette = 9=#e996b0
+palette = 10=#9bc3ab
+palette = 11=#e6b9a3
+palette = 12=#9dadd5
+palette = 13=#e4a6d0
+palette = 14=#8cbcc0
+palette = 15=#c9c7cd
