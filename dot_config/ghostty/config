@@ -3,7 +3,7 @@ keybind = super+c=copy_to_clipboard
 keybind = super+v=paste_from_clipboard
 
 # --- font size ---
-# keybind = super+equal=increase_font_size
+keybind = super+equal=increase_font_size
 # keybind = super+minus=decrease_font_size
 
 # --- screen ---
