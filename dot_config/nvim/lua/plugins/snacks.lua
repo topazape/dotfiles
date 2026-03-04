@@ -53,6 +53,11 @@ return {
 		scroll = { enabled = true },
 		statuscolumn = { enabled = false },
 		words = { enabled = false },
+		styles = {
+			notification = {
+				wo = { wrap = true },
+			},
+		},
 	},
 
 	keys = {
