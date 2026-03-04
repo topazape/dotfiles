@@ -7,10 +7,26 @@ keybind = super+equal=increase_font_size
 keybind = super+minus=decrease_font_size
 
 # --- screen ---
-keybind = alt+enter=toggle_fullscreen
+keybind = super+enter=toggle_fullscreen
 # keybind = alt+p=jump_to_prompt:-1
 # keybind = alt+n=jump_to_prompt:1
 
 # --- pane: split ---
 keybind = ctrl+t>minus=new_split:down
 keybind = ctrl+t>shift+backslash=new_split:right
+
+# --- pane: move ---
+keybind = ctrl+t>h=goto_split:left
+keybind = ctrl+t>j=goto_split:bottom
+keybind = ctrl+t>k=goto_split:top
+keybind = ctrl+t>l=goto_split:right
+
+# --- pane: resize ---
+keybind = ctrl+t>shift+h=resize_split:left,10
+keybind = ctrl+t>shift+j=resize_split:down,10
+keybind = ctrl+t>shift+k=resize_split:up,10
+keybind = ctrl+t>shift+l=resize_split:right,10
+keybind = ctrl+t>arrow_left=resize_split:left,10
+keybind = ctrl+t>arrow_down=resize_split:down,10
+keybind = ctrl+t>arrow_up=resize_split:up,10
+keybind = ctrl+t>arrow_right=resize_split:right,10
