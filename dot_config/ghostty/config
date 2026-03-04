@@ -1,9 +1,3 @@
-# Converted from WezTerm keybindings
-# LEADER は ctrl+a を想定（元の設定に合わせて変更してください）
-
-# --- generic ---
-keybind = shift+enter=text:\n
-
 # --- copy & paste ---
 keybind = super+c=copy_to_clipboard
 keybind = super+v=paste_from_clipboard
@@ -13,7 +7,7 @@ keybind = super+equal=increase_font_size
 keybind = super+minus=decrease_font_size
 
 # --- screen ---
-# keybind = alt+enter=toggle_fullscreen
+keybind = alt+enter=toggle_fullscreen
 # keybind = alt+p=jump_to_prompt:-1
 # keybind = alt+n=jump_to_prompt:1
 
