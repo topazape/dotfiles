@@ -10,7 +10,7 @@ keybind = super+v=paste_from_clipboard
 
 # --- font size ---
 keybind = super+equal=increase_font_size
-# keybind = super+minus=decrease_font_size
+keybind = super+minus=decrease_font_size
 
 # --- screen ---
 # keybind = alt+enter=toggle_fullscreen
