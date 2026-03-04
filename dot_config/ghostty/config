@@ -10,8 +10,8 @@ keybind = super+minus=decrease_font_size
 keybind = super+enter=toggle_fullscreen
 
 # --- pane: split ---
-# keybind = ctrl+t>minus=new_split:down
-# keybind = ctrl+t>shift+backslash=new_split:right
+keybind = ctrl+t>minus=new_split:down
+keybind = ctrl+t>shift+backslash=new_split:right
 #
 # # --- pane: move ---
 # keybind = ctrl+t>h=goto_split:left
