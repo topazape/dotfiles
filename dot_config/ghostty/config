@@ -8,12 +8,12 @@ keybind = super+enter=toggle_fullscreen
 # --- pane: split ---
 keybind = ctrl+t>minus=new_split:down
 keybind = ctrl+t>shift+backslash=new_split:right
-#
-# # --- pane: move ---
-# keybind = ctrl+t>h=goto_split:left
-# keybind = ctrl+t>j=goto_split:bottom
-# keybind = ctrl+t>k=goto_split:top
-# keybind = ctrl+t>l=goto_split:right
+
+# --- pane: move ---
+keybind = ctrl+t>h=goto_split:left
+keybind = ctrl+t>j=goto_split:bottom
+keybind = ctrl+t>k=goto_split:top
+keybind = ctrl+t>l=goto_split:right
 #
 # # --- pane: resize ---
 # keybind = ctrl+t>shift+h=resize_split:left,10
