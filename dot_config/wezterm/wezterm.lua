@@ -50,6 +50,7 @@ return {
 	cell_width = 1.00,
 	line_height = 1.05,
 	adjust_window_size_when_changing_font_size = false,
+	dpi = 144.0,
 
 	-- look and feel
 	window_decorations = "INTEGRATED_BUTTONS|RESIZE",
