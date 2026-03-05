@@ -1,3 +1,14 @@
+# --- font ---
+font-family = "Berkeley Mono"
+font-family = "LINE Seed JP"
+font-size = 15
+font-feature = "liga"
+
+# --- cursor ---
+shell-integration-features = no-cursor
+cursor-style = block
+cursor-style-blink = false
+
 # --- copy & paste ---
 keybind = super+c=copy_to_clipboard
 keybind = super+v=paste_from_clipboard
