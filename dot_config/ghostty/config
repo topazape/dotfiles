@@ -44,7 +44,7 @@ cursor-color = #666370
 cursor-text = #121213
 selection-background = #363639
 selection-foreground = #b4b1ba
-# split-divider-color = #504d54
+split-divider-color = #504d54
 # ansi (0-7)
 palette = 0=#202023
 palette = 1=#e27598
