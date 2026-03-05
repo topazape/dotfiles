@@ -3,8 +3,8 @@ font-family = "Berkeley Mono"
 font-family = "LINE Seed JP"
 font-size = 16
 font-feature = "liga"
-# font-thicken = true
-# font-thicken-strength = 50
+font-thicken = true
+font-thicken-strength = 10
 
 # --- cursor ---
 shell-integration-features = no-cursor
