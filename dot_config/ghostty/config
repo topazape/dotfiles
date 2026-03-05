@@ -10,6 +10,8 @@ shell-integration-features = no-cursor
 cursor-style = block
 cursor-style-blink = false
 
+window-show-tab-bar = always
+
 # --- copy & paste ---
 keybind = super+c=copy_to_clipboard
 keybind = super+v=paste_from_clipboard
