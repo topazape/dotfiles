@@ -1,11 +1,9 @@
 return {
 	"carlos-algms/agentic.nvim",
 	opts = {
-		provider = "claude-acp",
+		provider = "claude-agent-acp",
 		acp_providers = {
-			["claude-acp"] = {
-				name = "Claude ACP",
-				command = "claude-agent-acp",
+			["claude-agent-acp"] = {
 				env = {
 					CLAUDE_CONFIG_DIR = os.getenv("CLAUDE_CONFIG_DIR"),
 				},
