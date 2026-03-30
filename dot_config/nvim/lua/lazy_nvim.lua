@@ -18,7 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
-		{ import = "plugins.oldtale" },
+		-- { import = "plugins.oldtale" },
 
 		-- { import = "plugins.agentic" },
 		-- { import = "plugins.blink-cmp" },
