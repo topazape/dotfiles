@@ -2,7 +2,9 @@
 require("options")
 require("autocmds")
 require("keymaps")
-require("lsp")
 
 -- load lazy.nvim
 require("lazy_nvim")
+
+-- load lsp
+require("lsp")
