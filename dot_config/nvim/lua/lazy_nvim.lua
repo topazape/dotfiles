@@ -18,39 +18,39 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
-		-- { import = "plugins.oldtale" },
+		{ import = "plugins.oldtale" },
 
-		-- { import = "plugins.agentic" },
-		-- { import = "plugins.blink-cmp" },
-		-- { import = "plugins.conform" },
-		-- { import = "plugins.copilot" },
-		-- { import = "plugins.gitsigns" },
-		-- { import = "plugins.lspsaga" },
-		-- { import = "plugins.lualine" },
-		-- { import = "plugins.render-markdown" },
-		-- { import = "plugins.snacks" },
-		-- { import = "plugins.treesitter" },
-		-- { import = "plugins.gopher" },
-		-- { import = "plugins.godoc" },
-		--
-		-- { "HiPhish/rainbow-delimiters.nvim" },
-		-- { "OXY2DEV/helpview.nvim" },
-		-- { "PedramNavid/dbtpal", dependencies = { "nvim-lua/plenary.nvim" }, config = true },
-		-- { "akinsho/git-conflict.nvim", version = "*", config = true },
-		-- { "b0o/schemastore.nvim" },
-		-- { "chomosuke/typst-preview.nvim", ft = "typst", version = "1.*", config = true },
-		-- { "folke/ts-comments.nvim", event = "VeryLazy", config = true },
-		-- { "j-hui/fidget.nvim", config = true },
-		-- { "magal1337/dataform.nvim", config = true },
-		-- { "nvim-tree/nvim-web-devicons", config = true },
-		-- { "tzachar/highlight-undo.nvim", config = true },
-		-- { "williamboman/mason.nvim", config = true },
-		-- {
-		-- 	"rainbowhxch/accelerated-jk.nvim",
-		-- 	config = function()
-		-- 		vim.api.nvim_set_keymap("n", "j", "<Plug>(accelerated_jk_gj)", {})
-		-- 		vim.api.nvim_set_keymap("n", "k", "<Plug>(accelerated_jk_gk)", {})
-		-- 	end,
-		-- },
+		{ import = "plugins.agentic" },
+		{ import = "plugins.blink-cmp" },
+		{ import = "plugins.conform" },
+		{ import = "plugins.copilot" },
+		{ import = "plugins.gitsigns" },
+		{ import = "plugins.lspsaga" },
+		{ import = "plugins.lualine" },
+		{ import = "plugins.render-markdown" },
+		{ import = "plugins.snacks" },
+		{ import = "plugins.treesitter" },
+		{ import = "plugins.gopher" },
+		{ import = "plugins.godoc" },
+
+		{ "HiPhish/rainbow-delimiters.nvim" },
+		{ "OXY2DEV/helpview.nvim" },
+		{ "PedramNavid/dbtpal", dependencies = { "nvim-lua/plenary.nvim" }, config = true },
+		{ "akinsho/git-conflict.nvim", version = "*", config = true },
+		{ "b0o/schemastore.nvim" },
+		{ "chomosuke/typst-preview.nvim", ft = "typst", version = "1.*", config = true },
+		{ "folke/ts-comments.nvim", event = "VeryLazy", config = true },
+		{ "j-hui/fidget.nvim", config = true },
+		{ "magal1337/dataform.nvim", config = true },
+		{ "nvim-tree/nvim-web-devicons", config = true },
+		{ "tzachar/highlight-undo.nvim", config = true },
+		{ "williamboman/mason.nvim", config = true },
+		{
+			"rainbowhxch/accelerated-jk.nvim",
+			config = function()
+				vim.api.nvim_set_keymap("n", "j", "<Plug>(accelerated_jk_gj)", {})
+				vim.api.nvim_set_keymap("n", "k", "<Plug>(accelerated_jk_gk)", {})
+			end,
+		},
 	},
 })
