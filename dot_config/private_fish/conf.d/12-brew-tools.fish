@@ -22,6 +22,11 @@ if type -q eza
     alias tree="eza --classify=automatic --sort=Name --tree --ignore-glob='node_modules|.git|.cache'"
 end
 
+# fzf
+if type -q fzf
+    fzf --fish | source
+end
+
 # unzip
 if test -d (brew --prefix unzip)
     fish_add_path (brew --prefix unzip)/bin
