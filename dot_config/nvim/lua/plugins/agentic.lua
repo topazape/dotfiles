@@ -11,7 +11,7 @@ return {
 		},
 		windows = {
 			position = "right",
-			width = "35%",
+			width = "30%",
 		},
 	},
 	keys = {
