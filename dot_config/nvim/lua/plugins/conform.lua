@@ -59,7 +59,7 @@ return {
 				"shfmt",
 			},
 			sql = {
-				"sqlfluff",
+				-- "sqlfluff",
 			},
 			terraform = {
 				"hcl",
