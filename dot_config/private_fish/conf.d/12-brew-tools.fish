@@ -63,4 +63,6 @@ end
 # claude
 if type -q claude
     set -gx CLAUDE_CONFIG_DIR $XDG_CONFIG_HOME/claude
+    set -gx CLAUDE_CODE_EFFORT_LEVEL max
+
 end
