@@ -32,10 +32,8 @@ require("lazy").setup({
 		{ import = "plugins.render-markdown" },
 		{ import = "plugins.snacks" },
 		{ import = "plugins.treesitter" },
-		{
-			"esmuellert/codediff.nvim",
-			cmd = "CodeDiff",
-		},
+
+		{ "esmuellert/codediff.nvim", cmd = "CodeDiff" },
 		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "OXY2DEV/helpview.nvim" },
 		{ "PedramNavid/dbtpal", dependencies = { "nvim-lua/plenary.nvim" }, config = true },
