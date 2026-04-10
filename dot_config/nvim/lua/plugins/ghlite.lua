@@ -1,5 +1,6 @@
 return {
 	"daliusd/ghlite.nvim",
+	lazy = false,
 	opts = {
 		debug = false, -- if set to true debugging information is written to ~/.ghlite.log file
 		view_split = "vsplit", -- set to empty string '' to open in active buffer, use 'tabnew' to open in tab
