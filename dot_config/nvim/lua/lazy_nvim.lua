@@ -33,8 +33,6 @@ require("lazy").setup({
 		{ import = "plugins.gopher" },
 		{ import = "plugins.godoc" },
 
-		{ "gh-tui-tools/gh-review.nvim" },
-
 		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "OXY2DEV/helpview.nvim" },
 		{ "PedramNavid/dbtpal", dependencies = { "nvim-lua/plenary.nvim" }, config = true },
