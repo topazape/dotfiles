@@ -33,6 +33,16 @@ require("lazy").setup({
 		{ import = "plugins.gopher" },
 		{ import = "plugins.godoc" },
 
+		{
+			"otavioschwanck/github-pr-reviewer.nvim",
+			opts = {
+				-- options here
+			},
+			keys = {
+				{ "<leader>p", "<cmd>PRReviewMenu<cr>", desc = "PR Review Menu" },
+				{ "<leader>p", ":<C-u>'<,'>PRSuggestChange<CR>", desc = "Suggest change", mode = "v" },
+			},
+		},
 		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "OXY2DEV/helpview.nvim" },
 		{ "PedramNavid/dbtpal", dependencies = { "nvim-lua/plenary.nvim" }, config = true },
