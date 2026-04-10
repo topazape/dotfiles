@@ -24,7 +24,6 @@ require("lazy").setup({
 		{ import = "plugins.blink-cmp" },
 		{ import = "plugins.conform" },
 		{ import = "plugins.copilot" },
-		{ import = "plugins.gitsigns" },
 		{ import = "plugins.lspsaga" },
 		{ import = "plugins.lualine" },
 		{ import = "plugins.render-markdown" },
@@ -40,7 +39,7 @@ require("lazy").setup({
 					debug = false, -- if set to true debugging information is written to ~/.ghlite.log file
 					view_split = "vsplit", -- set to empty string '' to open in active buffer, use 'tabnew' to open in tab
 					diff_split = "vsplit", -- set to empty string '' to open in active buffer, use 'tabnew' to open in tab
-					diff_tool = "auto", -- 'diffview', 'codediff', or 'auto' - which tool to use for GHLitePRDiffview
+					diff_tool = "codediff", -- 'diffview', 'codediff', or 'auto' - which tool to use for GHLitePRDiffview
 					comment_split = "split", -- set to empty string '' to open in active buffer, use 'tabnew' to open in tab
 					open_command = "open", -- open command to use, e.g. on Linux you might want to use xdg-open
 					merge = {
@@ -91,6 +90,10 @@ require("lazy").setup({
 				{ "<leader>ud", ":GHLitePRDeleteComment<cr>", silent = true, desc = "PR Delete comment" },
 				{ "<leader>ug", ":GHLitePROpenComment<cr>", silent = true, desc = "PR Open comment" },
 			},
+		},
+		{
+			"esmuellert/codediff.nvim",
+			cmd = "CodeDiff",
 		},
 		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "OXY2DEV/helpview.nvim" },
