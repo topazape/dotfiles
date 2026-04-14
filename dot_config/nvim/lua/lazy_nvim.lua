@@ -22,6 +22,7 @@ require("lazy").setup({
 
 		{ import = "plugins.agentic" },
 		{ import = "plugins.blink-cmp" },
+		{ import = "plugins.codediff" },
 		{ import = "plugins.conform" },
 		{ import = "plugins.copilot" },
 		{ import = "plugins.ghlite" },
@@ -32,7 +33,6 @@ require("lazy").setup({
 		{ import = "plugins.render-markdown" },
 		{ import = "plugins.snacks" },
 		{ import = "plugins.treesitter" },
-		{ import = "plugins.codediff" },
 
 		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "OXY2DEV/helpview.nvim" },
