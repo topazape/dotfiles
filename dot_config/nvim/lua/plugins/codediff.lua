@@ -3,6 +3,7 @@ return {
 	cmd = "CodeDiff",
 	opts = {
 		diff = {
+			layout = "inline", -- side-by-side | inline
 			compute_moves = true,
 		},
 		explorer = {
