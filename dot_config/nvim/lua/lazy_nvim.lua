@@ -33,6 +33,7 @@ require("lazy").setup({
 		{ import = "plugins.render-markdown" },
 		{ import = "plugins.snacks" },
 		{ import = "plugins.treesitter" },
+		{ import = "plugins.diffview" },
 
 		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "OXY2DEV/helpview.nvim" },
