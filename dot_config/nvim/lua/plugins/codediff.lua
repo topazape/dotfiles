@@ -11,10 +11,5 @@ return {
 			flatten_dirs = false,
 			focus_on_select = true,
 		},
-		keymaps = {
-			explorer = {
-				select = "<TAB>",
-			},
-		},
 	},
 }
