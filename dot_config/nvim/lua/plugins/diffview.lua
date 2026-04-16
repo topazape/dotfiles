@@ -6,4 +6,7 @@ return {
 			DiffviewFileHistory = {},
 		},
 	},
+	keys = {
+		{},
+	},
 }
