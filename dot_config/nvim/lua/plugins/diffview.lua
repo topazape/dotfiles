@@ -1,7 +1,14 @@
 return {
 	"sindrets/diffview.nvim",
 
-	cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles", "DiffviewRefresh" },
+	cmd = {
+		"DiffviewClose",
+		"DiffviewFileHistory",
+		"DiffviewFocusFiles",
+		"DiffviewOpen",
+		"DiffviewRefresh",
+		"DiffviewToggleFiles",
+	},
 
 	opts = {
 		default_args = { -- Default args prepended to the arg-list for the listed commands
