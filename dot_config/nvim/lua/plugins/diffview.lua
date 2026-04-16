@@ -3,6 +3,6 @@ return {
 	cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewFileHistory" },
 	opts = {},
 	keys = {
-		{ "<leader>gdc", "<CMD>DiffviewClose<bar>qa<CR>", desc = "Diffview Close & Quit" },
+		{ "<leader>gdc", "<CMD>DiffviewClose<CR>", desc = "Diffview Close & Quit" },
 	},
 }
