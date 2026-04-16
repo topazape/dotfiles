@@ -11,6 +11,6 @@ return {
 	},
 
 	keys = {
-		{ "<LEADER>gdc", "<CMD>DiffviewClose<CR>", noremap = true },
+		{ "q", "<CMD>DiffviewClose<CR>", noremap = true },
 	},
 }
