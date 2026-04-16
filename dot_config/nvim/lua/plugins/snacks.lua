@@ -3,63 +3,6 @@ return {
 	priority = 1000,
 	lazy = false,
 
-	opts = {
-		bigfile = { enable = true },
-		dashboard = { enabled = false },
-		explorer = {
-			enabled = true,
-			replace_netrw = true,
-			trash = true,
-			git_status = true,
-		},
-		indent = {
-			enabled = true,
-			indent = { char = "┊" },
-			scope = { char = "│" },
-		},
-		input = { enabled = true },
-		notifier = {
-			enabled = true,
-			style = "fancy",
-		},
-		picker = {
-			sources = {
-				explorer = {
-					win = {
-						list = {
-							keys = {
-								["<ESC>"] = false,
-								["<CR>"] = false,
-								["o"] = "confirm",
-								["<M-s>"] = "edit_split",
-								["<M-v>"] = "edit_vsplit",
-							},
-						},
-					},
-				},
-			},
-			win = {
-				input = {
-					keys = {
-						["<Esc>"] = { "close", mode = { "n", "i" } },
-						["<M-s>"] = { "edit_split", mode = { "n", "i" } },
-						["<M-v>"] = { "edit_vsplit", mode = { "n", "i" } },
-					},
-				},
-			},
-		},
-		quickfile = { enabled = false },
-		scope = { enabled = false },
-		scroll = { enabled = true },
-		statuscolumn = { enabled = false },
-		words = { enabled = false },
-		styles = {
-			notification = {
-				wo = { wrap = true },
-			},
-		},
-	},
-
 	keys = {
 		{
 			"<leader>fb",
@@ -202,6 +145,63 @@ return {
 				Snacks.lazygit()
 			end,
 			desc = "Lazygit",
+		},
+	},
+
+	opts = {
+		bigfile = { enable = true },
+		dashboard = { enabled = false },
+		explorer = {
+			enabled = true,
+			replace_netrw = true,
+			trash = true,
+			git_status = true,
+		},
+		indent = {
+			enabled = true,
+			indent = { char = "┊" },
+			scope = { char = "│" },
+		},
+		input = { enabled = true },
+		notifier = {
+			enabled = true,
+			style = "fancy",
+		},
+		picker = {
+			sources = {
+				explorer = {
+					win = {
+						list = {
+							keys = {
+								["<ESC>"] = false,
+								["<CR>"] = false,
+								["o"] = "confirm",
+								["<M-s>"] = "edit_split",
+								["<M-v>"] = "edit_vsplit",
+							},
+						},
+					},
+				},
+			},
+			win = {
+				input = {
+					keys = {
+						["<Esc>"] = { "close", mode = { "n", "i" } },
+						["<M-s>"] = { "edit_split", mode = { "n", "i" } },
+						["<M-v>"] = { "edit_vsplit", mode = { "n", "i" } },
+					},
+				},
+			},
+		},
+		quickfile = { enabled = false },
+		scope = { enabled = false },
+		scroll = { enabled = true },
+		statuscolumn = { enabled = false },
+		words = { enabled = false },
+		styles = {
+			notification = {
+				wo = { wrap = true },
+			},
 		},
 	},
 }

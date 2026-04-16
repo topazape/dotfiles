@@ -1,19 +1,6 @@
 return {
 	"carlos-algms/agentic.nvim",
-	opts = {
-		provider = "claude-agent-acp",
-		acp_providers = {
-			["claude-agent-acp"] = {
-				env = {
-					CLAUDE_CONFIG_DIR = os.getenv("CLAUDE_CONFIG_DIR"),
-				},
-			},
-		},
-		windows = {
-			position = "right",
-			width = "30%",
-		},
-	},
+
 	keys = {
 		{
 			"<leader>aa",
@@ -47,6 +34,21 @@ return {
 			desc = "Agentic Restore session",
 			silent = true,
 			mode = { "n", "v", "i" },
+		},
+	},
+
+	opts = {
+		provider = "claude-agent-acp",
+		acp_providers = {
+			["claude-agent-acp"] = {
+				env = {
+					CLAUDE_CONFIG_DIR = os.getenv("CLAUDE_CONFIG_DIR"),
+				},
+			},
+		},
+		windows = {
+			position = "right",
+			width = "30%",
 		},
 	},
 }

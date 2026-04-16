@@ -1,6 +1,21 @@
 return {
 	"daliusd/ghlite.nvim",
 	lazy = false,
+
+	keys = {
+		{ "<LEADER>us", ":GHLitePRSelect<CR>", silent = true, desc = "PR Select" },
+		{ "<LEADER>uo", ":GHLitePRCheckout<CR>", silent = true, desc = "PR Checkout" },
+		{ "<LEADER>uv", ":GHLitePRView<CR>", silent = true, desc = "PR View" },
+		{ "<LEADER>uu", ":GHLitePRLoadComments<CR>", silent = true, desc = "PR Load Comments" },
+		{ "<LEADER>up", ":GHLitePRDiff<CR>", silent = true, desc = "PR Diff" },
+		{ "<LEADER>ul", ":GHLitePRDiffview<CR>", silent = true, desc = "PR Diffview" },
+		{ "<LEADER>ua", ":GHLitePRAddComment<CR>", silent = true, desc = "PR Add comment" },
+		{ "<LEADER>ua", ":GHLitePRAddComment<CR>", mode = "x", silent = true, desc = "PR Add comment" },
+		{ "<leader>uc", ":GHLitePRUpdateComment<CR>", silent = true, desc = "PR Update comment" },
+		{ "<leader>ud", ":GHLitePRDeleteComment<CR>", silent = true, desc = "PR Delete comment" },
+		{ "<leader>ug", ":GHLitePROpenComment<CR>", silent = true, desc = "PR Open comment" },
+	},
+
 	opts = {
 		debug = false, -- if set to true debugging information is written to ~/.ghlite.log file
 		view_split = "vsplit", -- set to empty string '' to open in active buffer, use 'tabnew' to open in tab
@@ -35,18 +50,5 @@ return {
 				diff = "cp",
 			},
 		},
-	},
-	keys = {
-		{ "<LEADER>us", ":GHLitePRSelect<CR>", silent = true, desc = "PR Select" },
-		{ "<LEADER>uo", ":GHLitePRCheckout<CR>", silent = true, desc = "PR Checkout" },
-		{ "<LEADER>uv", ":GHLitePRView<CR>", silent = true, desc = "PR View" },
-		{ "<LEADER>uu", ":GHLitePRLoadComments<CR>", silent = true, desc = "PR Load Comments" },
-		{ "<LEADER>up", ":GHLitePRDiff<CR>", silent = true, desc = "PR Diff" },
-		{ "<LEADER>ul", ":GHLitePRDiffview<CR>", silent = true, desc = "PR Diffview" },
-		{ "<LEADER>ua", ":GHLitePRAddComment<CR>", silent = true, desc = "PR Add comment" },
-		{ "<LEADER>ua", ":GHLitePRAddComment<CR>", mode = "x", silent = true, desc = "PR Add comment" },
-		{ "<leader>uc", ":GHLitePRUpdateComment<CR>", silent = true, desc = "PR Update comment" },
-		{ "<leader>ud", ":GHLitePRDeleteComment<CR>", silent = true, desc = "PR Delete comment" },
-		{ "<leader>ug", ":GHLitePROpenComment<CR>", silent = true, desc = "PR Open comment" },
 	},
 }

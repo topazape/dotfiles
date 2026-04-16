@@ -6,6 +6,7 @@ return {
 		"rafamadriz/friendly-snippets",
 		"fang2hou/blink-copilot",
 	},
+
 	opts = {
 		keymap = {
 			preset = "none",
