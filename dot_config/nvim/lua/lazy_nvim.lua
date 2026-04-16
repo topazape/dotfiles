@@ -22,7 +22,6 @@ require("lazy").setup({
 
 		{ import = "plugins.agentic" },
 		{ import = "plugins.blink-cmp" },
-		{ import = "plugins.codediff" },
 		{ import = "plugins.conform" },
 		{ import = "plugins.copilot" },
 		{ import = "plugins.ghlite" },
