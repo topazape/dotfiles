@@ -47,6 +47,10 @@ require("lazy").setup({
 			},
 		},
 
+		{
+			"lewis6991/gitsigns.nvim",
+		},
+
 		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "OXY2DEV/helpview.nvim" },
 		{ "PedramNavid/dbtpal", dependencies = { "nvim-lua/plenary.nvim" }, config = true },
