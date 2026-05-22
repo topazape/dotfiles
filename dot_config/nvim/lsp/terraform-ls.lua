@@ -5,4 +5,7 @@ return {
 		ignoreSingleFileWarning = true,
 	},
 	root_markers = { ".terraform.lock.hcl", "versions.tf" },
+	on_init = function(client)
+		client.server_capabilities.semanticTokensProvider = nil
+	end,
 }
