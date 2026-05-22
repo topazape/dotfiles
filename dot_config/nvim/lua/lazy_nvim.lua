@@ -26,6 +26,7 @@ require("lazy").setup({
 		{ import = "plugins.copilot" },
 		{ import = "plugins.diffview" },
 		{ import = "plugins.ghlite" },
+		{ import = "plugins.gitsigns" },
 		{ import = "plugins.godoc" },
 		{ import = "plugins.gopher" },
 		{ import = "plugins.lspsaga" },
@@ -45,10 +46,6 @@ require("lazy").setup({
 				{ "<leader>mt", "<Plug>(md-render-preview-tab)", desc = "Markdown preview in tab (toggle)" },
 				{ "<leader>md", "<Plug>(md-render-demo)", desc = "Markdown render demo" },
 			},
-		},
-
-		{
-			"lewis6991/gitsigns.nvim",
 		},
 
 		{ "HiPhish/rainbow-delimiters.nvim" },
