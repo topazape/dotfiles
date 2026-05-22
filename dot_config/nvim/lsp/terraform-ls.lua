@@ -4,5 +4,5 @@ return {
 	init_options = {
 		ignoreSingleFileWarning = true,
 	},
-	root_markers = {},
+	root_markers = { ".terraform.lock.hcl", "versions.tf" },
 }
