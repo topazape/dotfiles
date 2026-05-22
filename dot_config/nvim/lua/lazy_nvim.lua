@@ -66,10 +66,5 @@ require("lazy").setup({
 				vim.api.nvim_set_keymap("n", "k", "<Plug>(accelerated_jk_gk)", {})
 			end,
 		},
-
-		{
-			"jmbuhr/otter.nvim",
-			opts = {},
-		},
 	},
 })
