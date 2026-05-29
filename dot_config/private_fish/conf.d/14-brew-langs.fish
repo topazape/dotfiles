@@ -15,7 +15,7 @@ end
 
 # Python
 if type -q python3
-    # set -gx IPYTHONDIR $XDG_CONFIG_HOME/ipython
+    set -gx IPYTHONDIR $XDG_CONFIG_HOME/ipython
     # set -gx JUPYTER_CONFIG_DIR $XDG_CONFIG_HOME/jupyter
     set -gx MPLCONFIGDIR $XDG_CONFIG_HOME/matplotlib
     set -gx SEABORN_DATA $XDG_DATA_HOME/seaborn
