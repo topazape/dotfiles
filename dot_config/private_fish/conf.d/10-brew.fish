@@ -10,7 +10,7 @@ if test -d /opt/homebrew
 end
 
 if type -q brew
-    #
+    # allow non-official taps
     set -gx HOMEBREW_NO_REQUIRE_TAP_TRUST 1
 
     # cache dir
