@@ -3,12 +3,16 @@
 if test -d /home/linuxbrew
     eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 end
+
 ## mac
 if test -d /opt/homebrew
     eval (/opt/homebrew/bin/brew shellenv)
 end
 
 if type -q brew
+    #
+    set -gx HOMEBREW_NO_REQUIRE_TAP_TRUST 1
+
     # cache dir
     if test (uname) = Darwin
         set -gx HOMEBREW_CACHE $XDG_CACHE_HOME/Homebrew
