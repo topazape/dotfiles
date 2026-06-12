@@ -60,10 +60,6 @@ return {
 			},
 		},
 
-		breadcrumbs = {
-			enable = true,
-		},
-
 		implement = {
 			enable = true,
 		},
