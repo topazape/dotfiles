@@ -21,7 +21,7 @@ require("lazy").setup({
 		{ import = "plugins.oldtale" },
 
 		-- { import = "plugins.agentic" },
-		-- { import = "plugins.blink-cmp" },
+		{ import = "plugins.blink-cmp" },
 		-- { import = "plugins.conform" },
 		-- { import = "plugins.diffview" },
 		-- { import = "plugins.ghlite" },
