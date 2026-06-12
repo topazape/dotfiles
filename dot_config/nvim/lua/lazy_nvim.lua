@@ -32,7 +32,7 @@ require("lazy").setup({
 		{ import = "plugins.lualine" },
 		{ import = "plugins.snacks" },
 
-		{ "HiPhish/rainbow-delimiters.nvim", config = true },
+		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "OXY2DEV/helpview.nvim", config = true },
 		{ "b0o/schemastore.nvim", config = true },
 		{ "chomosuke/typst-preview.nvim", ft = "typst", version = "1.*", config = true },
