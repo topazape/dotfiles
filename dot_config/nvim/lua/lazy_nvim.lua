@@ -41,7 +41,7 @@ require("lazy").setup({
 		{ "j-hui/fidget.nvim", config = true },
 		{ "magal1337/dataform.nvim", config = true },
 		{ "nvim-tree/nvim-web-devicons", config = true },
-		{ "romus204/tree-sitter-manager.nvim", config = true },
+		{ "romus204/tree-sitter-manager.nvim", opts = { auto_install = true } },
 		{ "tzachar/highlight-undo.nvim", config = true },
 		{ "williamboman/mason.nvim", config = true },
 		{
