@@ -1,10 +1,6 @@
 return {
 	"nvimdev/lspsaga.nvim",
 
-	dependencies = {
-		"nvim-treesitter/nvim-treesitter",
-	},
-
 	keys = {
 		{ "K", "<CMD>Lspsaga hover_doc<CR>", noremap = true },
 		{ "KK", "<CMD>Lspsaga hover_doc ++keep<CR>", noremap = true },
