@@ -4,6 +4,8 @@ return {
 	ft = { "markdown", "quarto", "AgenticChat" },
 
 	opts = {
+		anti_conceal = { enabled = false },
+
 		heading = {
 			position = "inline",
 			sign = false,
