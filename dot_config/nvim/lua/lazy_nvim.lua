@@ -32,24 +32,15 @@ require("lazy").setup({
 		{ import = "plugins.lualine" },
 		{ import = "plugins.snacks" },
 
-		{ "HiPhish/rainbow-delimiters.nvim" },
-		{ "OXY2DEV/helpview.nvim" },
-		{ "PedramNavid/dbtpal", dependencies = { "nvim-lua/plenary.nvim" }, config = true },
-		{ "b0o/schemastore.nvim" },
+		{ "HiPhish/rainbow-delimiters.nvim", config = true },
+		{ "OXY2DEV/helpview.nvim", config = true },
+		{ "b0o/schemastore.nvim", config = true },
 		{ "chomosuke/typst-preview.nvim", ft = "typst", version = "1.*", config = true },
-		{ "folke/ts-comments.nvim", event = "VeryLazy", config = true },
+		{ "folke/ts-comments.nvim", config = true },
 		{ "j-hui/fidget.nvim", config = true },
-		{ "magal1337/dataform.nvim", config = true },
 		{ "nvim-tree/nvim-web-devicons", config = true },
 		{ "romus204/tree-sitter-manager.nvim", opts = { auto_install = true } },
 		{ "tzachar/highlight-undo.nvim", config = true },
 		{ "williamboman/mason.nvim", config = true },
-		{
-			"rainbowhxch/accelerated-jk.nvim",
-			config = function()
-				vim.api.nvim_set_keymap("n", "j", "<Plug>(accelerated_jk_gj)", {})
-				vim.api.nvim_set_keymap("n", "k", "<Plug>(accelerated_jk_gk)", {})
-			end,
-		},
 	},
 })
