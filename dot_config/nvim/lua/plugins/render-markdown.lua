@@ -1,26 +1,31 @@
 return {
 	"MeanderingProgrammer/render-markdown.nvim",
-	dependencies = {
-		"nvim-treesitter/nvim-treesitter",
-		"nvim-tree/nvim-web-devicons",
-	},
-	ft = { "markdown", "AgenticChat" },
+
+	ft = { "markdown", "quarto", "AgenticChat" },
+
 	opts = {
 		heading = {
 			position = "inline",
 			sign = false,
 		},
+
 		code = {
-			style = "normal",
-			border = "thick",
-			sign = false,
+			style = "full",
+			width = "block",
+			border = "thin",
 		},
+
 		pipe_table = {
-			enabled = true,
+			preset = "round",
+			style = "full",
+			cell = "padded",
+			alignment_indicator = "━",
 		},
+
 		bullet = {
 			icons = { "•", "∘", "▪", "▫" },
 		},
+
 		completions = {
 			lsp = { enabled = true },
 		},
