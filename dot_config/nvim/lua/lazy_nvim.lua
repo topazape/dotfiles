@@ -30,7 +30,7 @@ require("lazy").setup({
 		-- { import = "plugins.gopher" },
 		{ import = "plugins.lspsaga" },
 		-- { import = "plugins.lualine" },
-		-- { import = "plugins.snacks" },
+		{ import = "plugins.snacks" },
 		--
 		-- { "HiPhish/rainbow-delimiters.nvim" },
 		-- { "MeanderingProgrammer/render-markdown.nvim", config = true },
