@@ -32,7 +32,6 @@ require("lazy").setup({
 		{ import = "plugins.lualine" },
 		{ import = "plugins.snacks" },
 
-		{ "romus204/tree-sitter-manager.nvim", opts = { ensure_installed = "all" } },
 		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "OXY2DEV/helpview.nvim" },
 		{ "PedramNavid/dbtpal", dependencies = { "nvim-lua/plenary.nvim" }, config = true },
@@ -42,6 +41,7 @@ require("lazy").setup({
 		{ "j-hui/fidget.nvim", config = true },
 		{ "magal1337/dataform.nvim", config = true },
 		{ "nvim-tree/nvim-web-devicons", config = true },
+		{ "romus204/tree-sitter-manager.nvim", config = true },
 		{ "tzachar/highlight-undo.nvim", config = true },
 		{ "williamboman/mason.nvim", config = true },
 		{
