@@ -4,6 +4,7 @@ return {
 	ft = { "markdown", "quarto", "AgenticChat" },
 
 	opts = {
+		render_modes = { "n", "c", "t" },
 		anti_conceal = { enabled = false },
 
 		heading = {
