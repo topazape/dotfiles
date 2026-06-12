@@ -35,7 +35,7 @@ require("lazy").setup({
 		-- { "HiPhish/rainbow-delimiters.nvim" },
 		-- { "MeanderingProgrammer/render-markdown.nvim", config = true },
 		-- { "OXY2DEV/helpview.nvim", config = true },
-		-- { "b0o/schemastore.nvim" },
+		{ "b0o/schemastore.nvim" },
 		-- { "chomosuke/typst-preview.nvim", ft = "typst", version = "1.*", config = true },
 		-- { "folke/ts-comments.nvim", config = true },
 		-- { "j-hui/fidget.nvim", config = true },
