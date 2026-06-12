@@ -31,7 +31,6 @@ require("lazy").setup({
 		{ import = "plugins.lspsaga" },
 		{ import = "plugins.lualine" },
 		{ import = "plugins.snacks" },
-		{ import = "plugins.treesitter" },
 
 		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "OXY2DEV/helpview.nvim" },
