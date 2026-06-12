@@ -17,6 +17,10 @@ return {
 	},
 
 	opts = {
+		symbol_in_winbar = {
+			enable = true,
+		},
+
 		ui = {
 			border = "rounded",
 			code_action = "󱐋 ",
@@ -54,6 +58,10 @@ return {
 				split = "s",
 				vsplit = "v",
 			},
+		},
+
+		breadcrumbs = {
+			enable = true,
 		},
 
 		implement = {
