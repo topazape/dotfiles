@@ -43,5 +43,12 @@ require("lazy").setup({
 		{ "romus204/tree-sitter-manager.nvim", opts = { auto_install = true } },
 		{ "tzachar/highlight-undo.nvim", config = true },
 		{ "williamboman/mason.nvim", config = true },
+		{
+			"rainbowhxch/accelerated-jk.nvim",
+			keys = {
+				{ "j", "<Plug>(accelerated_jk_gj)", mode = "n" },
+				{ "k", "<Plug>(accelerated_jk_gk)", mode = "n" },
+			},
+		},
 	},
 })
