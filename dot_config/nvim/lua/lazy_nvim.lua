@@ -32,6 +32,7 @@ require("lazy").setup({
 		{ import = "plugins.lualine" },
 		{ import = "plugins.snacks" },
 
+		{ "romus204/tree-sitter-manager.nvim", opts = { ensure_installed = "all" } },
 		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "OXY2DEV/helpview.nvim" },
 		{ "PedramNavid/dbtpal", dependencies = { "nvim-lua/plenary.nvim" }, config = true },
