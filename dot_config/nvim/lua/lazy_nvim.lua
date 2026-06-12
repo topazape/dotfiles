@@ -18,7 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
-		{ import = "plugins.oldtale" },
+		-- { import = "plugins.oldtale" },
 
 		-- { import = "plugins.agentic" },
 		{ import = "plugins.blink-cmp" },
@@ -40,7 +40,7 @@ require("lazy").setup({
 		-- { "folke/ts-comments.nvim", config = true },
 		{ "j-hui/fidget.nvim", config = true },
 		-- { "nvim-tree/nvim-web-devicons", config = true },
-		-- { "romus204/tree-sitter-manager.nvim", opts = { auto_install = true } },
+		{ "romus204/tree-sitter-manager.nvim", opts = { auto_install = true } },
 		-- { "tzachar/highlight-undo.nvim", config = true },
 		-- { "williamboman/mason.nvim", config = true },
 	},
