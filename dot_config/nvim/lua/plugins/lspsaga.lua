@@ -1,5 +1,6 @@
 return {
 	"nvimdev/lspsaga.nvim",
+	event = "LspAttach",
 
 	keys = {
 		{ "K", "<CMD>Lspsaga hover_doc<CR>", noremap = true },
@@ -17,10 +18,6 @@ return {
 	},
 
 	opts = {
-		symbol_in_winbar = {
-			enable = true,
-		},
-
 		ui = {
 			border = "rounded",
 			code_action = "󱐋 ",
