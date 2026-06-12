@@ -44,7 +44,6 @@ return {
 				env = {
 					CLAUDE_CONFIG_DIR = os.getenv("CLAUDE_CONFIG_DIR"),
 				},
-				initial_model = "claude-fable-5",
 			},
 		},
 		windows = {
