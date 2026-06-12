@@ -38,7 +38,7 @@ require("lazy").setup({
 		{ "b0o/schemastore.nvim" },
 		-- { "chomosuke/typst-preview.nvim", ft = "typst", version = "1.*", config = true },
 		-- { "folke/ts-comments.nvim", config = true },
-		-- { "j-hui/fidget.nvim", config = true },
+		{ "j-hui/fidget.nvim", config = true },
 		-- { "nvim-tree/nvim-web-devicons", config = true },
 		-- { "romus204/tree-sitter-manager.nvim", opts = { auto_install = true } },
 		-- { "tzachar/highlight-undo.nvim", config = true },
