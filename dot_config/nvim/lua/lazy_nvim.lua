@@ -42,6 +42,6 @@ require("lazy").setup({
 		-- { "nvim-tree/nvim-web-devicons", config = true },
 		{ "romus204/tree-sitter-manager.nvim", opts = { auto_install = true } },
 		-- { "tzachar/highlight-undo.nvim", config = true },
-		-- { "williamboman/mason.nvim", config = true },
+		{ "williamboman/mason.nvim", config = true },
 	},
 })
