@@ -33,7 +33,6 @@ require("lazy").setup({
 		{ import = "plugins.snacks" },
 
 		{ "HiPhish/rainbow-delimiters.nvim" },
-		{ "MeanderingProgrammer/render-markdown.nvim", config = true },
 		{ "OXY2DEV/helpview.nvim", config = true },
 		{ "b0o/schemastore.nvim" },
 		{ "chomosuke/typst-preview.nvim", ft = "typst", version = "1.*", config = true },
