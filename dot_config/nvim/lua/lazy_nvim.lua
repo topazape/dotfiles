@@ -32,6 +32,7 @@ require("lazy").setup({
 		{ import = "plugins.lualine" },
 		{ import = "plugins.render-markdown" },
 		{ import = "plugins.snacks" },
+		{ import = "plugins.iron" },
 
 		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "OXY2DEV/helpview.nvim", config = true },
