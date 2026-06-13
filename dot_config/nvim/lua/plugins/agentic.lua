@@ -39,6 +39,7 @@ return {
 
 	opts = {
 		provider = "claude-agent-acp",
+
 		acp_providers = {
 			["claude-agent-acp"] = {
 				env = {
@@ -47,9 +48,15 @@ return {
 				initial_model = "opus[1m]",
 			},
 		},
+
 		windows = {
 			position = "right",
 			width = "30%",
+		},
+
+		diff_preview = {
+			enabled = true,
+			layout = "inline",
 		},
 	},
 }
