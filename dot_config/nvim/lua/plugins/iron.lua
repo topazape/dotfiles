@@ -19,7 +19,7 @@ return {
 					},
 				},
 
-				repl_open_cmd = view.split.vertical.botright(60),
+				repl_open_cmd = view.split.vertical.botright(80),
 			},
 
 			keymaps = {
