@@ -11,13 +11,15 @@ return {
 		iron.setup({
 			config = {
 				scratch_repl = true,
+
 				repl_definition = {
 					r = {
 						command = { "arf" },
 						format = common.bracketed_paste,
 					},
 				},
-				repl_open_cmd = view.bottom(40),
+
+				repl_open_cmd = view.split.vertical.botright(80),
 			},
 
 			keymaps = {
