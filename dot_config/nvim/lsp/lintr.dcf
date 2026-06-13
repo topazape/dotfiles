@@ -1,0 +1,13 @@
+linters: linters_with_defaults(
+    defaults = list(),
+    object_usage_linter(),
+    unused_import_linter(),
+    seq_linter(),
+    equals_na_linter(),
+    vector_logic_linter(),
+    unreachable_code_linter(),
+    duplicate_argument_linter(),
+    missing_argument_linter(),
+    redundant_equals_linter(),
+    T_and_F_symbol_linter()
+  )
