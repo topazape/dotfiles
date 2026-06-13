@@ -1,9 +1,7 @@
 return {
-	cmd = {
-		"R",
-		"--no-echo",
-		"-e",
-		"options(lintr.linter_file='" .. vim.fn.stdpath("config") .. "/lsp/lintr.dcf'); languageserver::run()",
+	cmd = { "R", "--no-echo", "-e", "languageserver::run()" },
+	cmd_env = {
+		R_LINTR_LINTER_FILE = vim.fn.stdpath("config") .. "/lsp/lintr.dcf",
 	},
 	filetypes = { "r" },
 	root_markers = { "DESCRIPTION", "renv.lock", "rproject.toml" },
