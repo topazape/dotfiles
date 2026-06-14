@@ -1,7 +1,7 @@
 return {
 	"MeanderingProgrammer/render-markdown.nvim",
 
-	ft = { "markdown", "quarto", "AgenticChat" },
+	ft = { "markdown", "md", "quarto", "AgenticChat" },
 
 	opts = {
 		anti_conceal = { enabled = false },
