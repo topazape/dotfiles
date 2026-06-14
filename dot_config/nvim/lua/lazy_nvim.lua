@@ -20,7 +20,6 @@ require("lazy").setup({
 	spec = {
 		{ import = "plugins.oldtale" },
 
-		{ import = "plugins.agentic" },
 		{ import = "plugins.blink-cmp" },
 		{ import = "plugins.conform" },
 		{ import = "plugins.diffview" },
@@ -33,6 +32,8 @@ require("lazy").setup({
 		{ import = "plugins.render-markdown" },
 		{ import = "plugins.snacks" },
 		{ import = "plugins.iron" },
+
+		{ import = "plugins.agentic" },
 
 		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "OXY2DEV/helpview.nvim", config = true },
