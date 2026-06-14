@@ -19,7 +19,7 @@ return {
 					},
 
 					python = {
-						command = { "ptpython" },
+						command = { "uv", "run", "--with", "ptpython", "ptpython" },
 						format = common.bracketed_paste,
 					},
 				},
