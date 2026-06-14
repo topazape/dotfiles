@@ -1,16 +1,19 @@
 return {
 	"MeanderingProgrammer/render-markdown.nvim",
 
-	init = function()
-		vim.api.nvim_create_autocmd("FileType", {
-			pattern = "AgenticChat",
-			callback = function(ev)
-				pcall(vim.treesitter.start, ev.buf, "markdown")
-			end,
-		})
-	end,
-
 	opts = {
+		on = {
+			attach = function(ctx)
+				-- 既にハイライタが動いていれば何もしない（markdown 等で二重起動を防ぐ）
+				if vim.treesitter.highlighter.active[ctx.buf] then
+					return
+				end
+				local ft = vim.bo[ctx.buf].filetype
+				local lang = vim.treesitter.language.get_lang(ft) or ft
+				pcall(vim.treesitter.start, ctx.buf, lang)
+			end,
+		},
+
 		file_types = { "markdown", "md", "AgenticChat" },
 
 		anti_conceal = { enabled = false },
