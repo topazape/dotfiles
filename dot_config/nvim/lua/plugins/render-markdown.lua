@@ -1,6 +1,15 @@
 return {
 	"MeanderingProgrammer/render-markdown.nvim",
 
+	init = function()
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = "AgenticChat",
+			callback = function(ev)
+				pcall(vim.treesitter.start, ev.buf, "markdown")
+			end,
+		})
+	end,
+
 	opts = {
 		file_types = { "markdown", "md", "AgenticChat" },
 
