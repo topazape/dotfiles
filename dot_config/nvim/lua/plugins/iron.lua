@@ -1,7 +1,7 @@
 return {
 	"Vigemus/iron.nvim",
 
-	ft = "r",
+	ft = { "r", "python" },
 
 	config = function()
 		local iron = require("iron.core")
@@ -15,6 +15,11 @@ return {
 				repl_definition = {
 					r = {
 						command = { "arf" },
+						format = common.bracketed_paste,
+					},
+
+					python = {
+						command = { "ptpython" },
 						format = common.bracketed_paste,
 					},
 				},
