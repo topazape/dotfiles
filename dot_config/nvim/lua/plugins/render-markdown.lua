@@ -1,9 +1,9 @@
 return {
 	"MeanderingProgrammer/render-markdown.nvim",
 
-	ft = { "markdown", "md", "quarto", "AgenticChat" },
-
 	opts = {
+		file_types = { "markdown", "md", "AgenticChat" },
+
 		anti_conceal = { enabled = false },
 
 		heading = {
