@@ -8,10 +8,9 @@ return {
 			["claude-agent-acp"] = {
 				env = {
 					CLAUDE_CONFIG_DIR = os.getenv("CLAUDE_CONFIG_DIR"),
+					ANTHROPIC_DEFAULT_OPUS_MODEL = "claude-opus-4-6",
 				},
-				-- initial_model = "opus[1m]",
-				-- initial_model = "claude-opus-4-6",
-				initial_model = "claude-opus-4-8",
+				initial_model = "opus[1m]",
 			},
 		},
 
