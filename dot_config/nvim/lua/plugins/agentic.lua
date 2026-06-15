@@ -10,7 +10,8 @@ return {
 					CLAUDE_CONFIG_DIR = os.getenv("CLAUDE_CONFIG_DIR"),
 				},
 				-- initial_model = "opus[1m]",
-				initial_model = "claude-opus-4-6",
+				-- initial_model = "claude-opus-4-6",
+				initial_model = "claude-opus-4-8",
 			},
 		},
 
