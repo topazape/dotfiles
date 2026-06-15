@@ -6,6 +6,7 @@ return {
 
 		acp_providers = {
 			["claude-agent-acp"] = {
+				initial_model = "claude-opus-4-6",
 				env = {
 					CLAUDE_CONFIG_DIR = os.getenv("CLAUDE_CONFIG_DIR"),
 					ANTHROPIC_DEFAULT_OPUS_MODEL = "claude-opus-4-6",
