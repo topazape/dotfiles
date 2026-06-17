@@ -1,27 +1,28 @@
 [lint]
 select = [
-  "E",   # pycodestyle
-  "F",   # pyflakes
-  "W",   # pycodestyle
-  "I",   # isort
-  "N",   # pep8-naming
-  "B",   # flake8-bugbear
+  "E",  # pycodestyle
+  "F",  # pyflakes
+  "W",  # pycodestyle
+  "I",  # isort
+  "N",  # pep8-naming
+  "B",  # flake8-bugbear
   "PL",  # pylint
   "PD",  # pandas-vet
-  "NPY", # numpy
-  "RUF", # ruff
+  "NPY",  # numpy
+  "RUF",  # ruff
   "UP",  # pyupgrade
-  "D",   # pydocstyle
+  "D",  # pydocstyle
 ]
 ignore = [
-  "D100",    # Missing docstring in public module
-  "D104",    # Missing docstring in public package
-  "D105",    # Missing docstring in magic method
-  "E501",    # Line too long
-  "PLR0911", # Too many return statements
-  "PLR0912", # Too many branches
-  "PLR0913", # Too many arguments
-  "PLR2004", # magic-value-comparison
+  "D100",  # Missing docstring in public module
+  "D101",  # undocumented-public-class
+  "D104",  # Missing docstring in public package
+  "D105",  # Missing docstring in magic method
+  "E501",  # Line too long
+  "PLR0911",  # Too many return statements
+  "PLR0912",  # Too many branches
+  "PLR0913",  # Too many arguments
+  "PLR2004",  # magic-value-comparison
 ]
 
 [lint.per-file-ignores]
