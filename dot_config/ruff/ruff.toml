@@ -15,7 +15,7 @@ select = [
 ]
 ignore = [
   "D100",  # Missing docstring in public module
-  "D101",  # undocumented-public-class
+  "D102",  # Missing docstring in public method
   "D104",  # Missing docstring in public package
   "D105",  # Missing docstring in magic method
   "E501",  # Line too long
