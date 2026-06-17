@@ -24,7 +24,7 @@ return {
 					},
 				},
 
-				repl_open_cmd = view.split.vertical.botright(80),
+				repl_open_cmd = view.split.vertical.botleft(80),
 			},
 
 			-- repl 名前空間 <space>r に全集約。高頻度ほど低打鍵。
