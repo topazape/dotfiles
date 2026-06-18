@@ -15,7 +15,7 @@ return {
 
 		windows = {
 			position = "right",
-			width = "30%",
+			width = "50%",
 		},
 
 		diff_preview = {
