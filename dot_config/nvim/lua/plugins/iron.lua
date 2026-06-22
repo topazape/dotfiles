@@ -19,7 +19,7 @@ return {
 					},
 
 					python = {
-						command = { "uv", "run", "--with", "ptpython", "ptpython" },
+						command = { "uv", "run", "--with", "ptpython", "ptpython", "--dark-bg" },
 						format = common.bracketed_paste,
 					},
 				},
