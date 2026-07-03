@@ -2,9 +2,7 @@ return {
 	"daliusd/ghlite.nvim",
 	lazy = false,
 
-	dependencies = {
-		{ "nvim-lua/plenary.nvim" },
-	},
+	dependencies = { "lewis6991/async.nvim" },
 
 	keys = {
 		{ "<LEADER>us", ":GHLitePRSelect<CR>", silent = true, desc = "PR Select" },
