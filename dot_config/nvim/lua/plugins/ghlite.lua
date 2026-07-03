@@ -3,7 +3,7 @@ return {
 	lazy = false,
 
 	dependencies = {
-		dependencies = { "nvim-lua/plenary.nvim" },
+		{ "nvim-lua/plenary.nvim" },
 	},
 
 	keys = {
