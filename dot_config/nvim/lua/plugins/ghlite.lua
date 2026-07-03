@@ -2,6 +2,10 @@ return {
 	"daliusd/ghlite.nvim",
 	lazy = false,
 
+	dependencies = {
+		dependencies = { "nvim-lua/plenary.nvim" },
+	},
+
 	keys = {
 		{ "<LEADER>us", ":GHLitePRSelect<CR>", silent = true, desc = "PR Select" },
 		{ "<LEADER>uo", ":GHLitePRCheckout<CR>", silent = true, desc = "PR Checkout" },
