@@ -17,8 +17,8 @@ window-width = 176
 window-height = 48
 
 # ==== padding ====
-window-padding-x = 12
-window-padding-y = 12
+window-padding-x = 8
+window-padding-y = 8
 
 # ==== cursor ====
 cursor-style = block
