@@ -16,10 +16,10 @@ end
 
 # eza
 if type -q eza
-    alias ls="eza --classify=automatic --sort=Name"
-    alias la="eza --classify=automatic --almost-all --sort=Name --git"
-    alias ll="eza --classify=automatic --sort=Name --group --header --long --git"
-    alias tree="eza --classify=automatic --sort=Name --tree --ignore-glob='node_modules|.git|.cache'"
+    alias ls="eza --classify=auto --sort=Name"
+    alias la="eza --classify=auto --almost-all --sort=Name --git"
+    alias ll="eza --classify=auto --sort=Name --group --header --long --git"
+    alias tree="eza --classify=auto --sort=Name --tree --ignore-glob='node_modules|.git|.cache'"
 end
 
 # fzf
