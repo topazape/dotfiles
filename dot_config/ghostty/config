@@ -23,6 +23,7 @@ window-padding-y = 10
 # ==== cursor ====
 cursor-style = block
 cursor-style-blink = false
+shell-integration-features = no-cursor
 
 # ==== scrollback ====
 scrollback-limit = 10000000
