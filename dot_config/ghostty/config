@@ -1,0 +1,155 @@
+# Ghostty config — wezterm.lua / keymaps.lua / mouse_bindings.lua からの移植
+# 配置先: ~/.config/ghostty/config
+# テーマ: ~/.config/ghostty/themes/oldtale(同梱の oldtale ファイル)
+
+# ==== color scheme(wezterm: color_scheme = "oldtale")====
+theme = oldtale
+
+# ==== font ====
+# font_with_fallback 相当。記述順 = フォールバック順
+font-family = Berkeley Mono
+font-family = LINE Seed JP
+font-family = Symbols Nerd Font Mono
+font-size = 17
+# line_height = 1.05 相当(セル高を +5%)。cell_width = 1.00 は既定値のため指定不要
+adjust-cell-height = 5%
+# dpi = 144 相当の設定は無い。macOS 側スケーリングで 17pt @ 2px/pt = 34px となり実質同一
+# warn_about_missing_glyphs 相当の設定は無い(Ghostty は警告を出さない)
+
+# ==== look and feel ====
+# window_decorations = "INTEGRATED_BUTTONS|RESIZE" + use_fancy_tab_bar 相当。
+# tabs スタイルはタブバーをタイトルバーに統合し、背景は常に端末背景色(#121213)に一致。
+# active/inactive タブの文字色 (#b4b1ba / #3a3a3e) を個別指定する設定は macOS には無い
+macos-titlebar-style = tabs
+# window_frame.font 相当(family のみ指定可。weight = Black / font_size は指定不可)
+window-title-font-family = Berkeley Mono
+# window_background_opacity = 1.00(既定値だが明示)。blur は opacity < 1 のときのみ意味を持つ
+background-opacity = 1
+
+# ==== window size(initial_cols = 80+96 = 176, initial_rows = 24+24 = 48)====
+window-width = 176
+window-height = 48
+
+# ==== cursor(WezTerm 既定の SteadyBlock を明示。Ghostty 既定は点滅)====
+cursor-style = block
+cursor-style-blink = false
+
+# ==== scrollback ====
+# 単位が「行」ではなく「バイト」。10MB は 10,000 行 × 176 桁を十分に包含する
+scrollback-limit = 10000000
+
+# ==== selection / clipboard ====
+# CompleteSelection("ClipboardAndPrimarySelection") 相当:
+# 選択確定時に selection clipboard と system clipboard の両方へ書き込む
+copy-on-select = clipboard
+
+# ==== bell ====
+# audible_bell = "Disabled" 相当: audio / system は既定で無効のため設定不要。
+# visual_bell(背景フラッシュ)は非対応。最近接は border(BEL 受信面に枠を表示):
+# bell-features = border
+
+# ==== fullscreen(native_macos_fullscreen_mode = true 相当。既定値の明示)====
+macos-non-native-fullscreen = false
+
+# ==== key settings ====
+# send_composed_key_when_{left,right}_alt_is_pressed = false 相当(Option を Alt として送出)
+macos-option-as-alt = true
+# macos_forward_to_ime_modifier_mask = "SHIFT|CTRL" に相当する設定は存在しない(IME 転送は自動処理)
+
+# ==== misc ====
+# check_for_updates = false 相当
+auto-update = off
+# front_end = "OpenGL" 相当は無い(macOS では常に Metal)
+# status_update_interval / 右ステータスバーは非対応(下部の説明参照)
+
+# ================= keybinds =================
+# disable_default_key_bindings = true 相当。既定バインドを全消去
+keybind = clear
+
+# clear はメニューのショートカット(cmd+w, cmd+n, 設定リロード等)も消す。
+# 必要なら以下を有効化:
+# keybind = super+w=close_surface
+# keybind = super+n=new_window
+# keybind = super+shift+comma=reload_config
+
+# ---- generic ----
+keybind = shift+enter=text:\n
+
+# ---- copy mode ----
+# { key = "Space", mods = "LEADER" } → ActivateCopyMode は移植不可。
+# Ghostty に copy mode は無い。近似は key tables(1.3.0+)+ adjust_selection の自作、
+# または start_search / write_scrollback_file:open
+
+# ---- copy & paste ----
+keybind = super+c=copy_to_clipboard
+keybind = super+v=paste_from_clipboard
+
+# ---- font size ----
+keybind = super+equal=increase_font_size:1
+keybind = super+minus=decrease_font_size:1
+
+# ---- screen ----
+keybind = alt+enter=toggle_fullscreen
+# ScrollToPrompt 相当。shell integration(OSC 133 プロンプトマーク)前提な点は WezTerm と同条件
+keybind = alt+p=jump_to_prompt:-1
+keybind = alt+n=jump_to_prompt:1
+
+# ---- leader(CTRL+t)----
+# WezTerm の leader は timeout 1000ms。Ghostty の key sequence は無期限待機で
+# timeout 指定は不可。escape で取消(何も送信しない)できるようにしておく
+keybind = ctrl+t>escape=ignore
+
+# ---- pane: split ----
+keybind = ctrl+t>-=new_split:down
+# US 配列前提(| = shift+\)。JIS 配列の場合は shift+¥ 等に読み替え
+keybind = ctrl+t>shift+\=new_split:right
+
+# ---- pane: move ----
+keybind = ctrl+t>h=goto_split:left
+keybind = ctrl+t>j=goto_split:down
+keybind = ctrl+t>k=goto_split:up
+keybind = ctrl+t>l=goto_split:right
+
+# ---- pane: resize ----
+# 単位は px(WezTerm は 1 セル単位)。17pt @ 2x では 1 セル ≈ 幅 20px / 高さ 36px
+keybind = ctrl+t>shift+h=resize_split:left,20
+keybind = ctrl+t>shift+j=resize_split:down,36
+keybind = ctrl+t>shift+k=resize_split:up,36
+keybind = ctrl+t>shift+l=resize_split:right,20
+keybind = ctrl+t>left=resize_split:left,20
+keybind = ctrl+t>down=resize_split:down,36
+keybind = ctrl+t>up=resize_split:up,36
+keybind = ctrl+t>right=resize_split:right,20
+
+# ---- tab ----
+keybind = ctrl+t>t=new_tab
+keybind = ctrl+t>1=goto_tab:1
+keybind = ctrl+t>2=goto_tab:2
+keybind = ctrl+t>3=goto_tab:3
+keybind = ctrl+t>4=goto_tab:4
+keybind = ctrl+t>5=goto_tab:5
+keybind = ctrl+t>6=goto_tab:6
+keybind = ctrl+t>7=goto_tab:7
+keybind = ctrl+t>8=goto_tab:8
+keybind = ctrl+t>9=goto_tab:9
+keybind = f1=goto_tab:1
+keybind = f2=goto_tab:2
+keybind = f3=goto_tab:3
+keybind = f4=goto_tab:4
+keybind = f5=goto_tab:5
+keybind = f6=goto_tab:6
+keybind = f7=goto_tab:7
+keybind = f8=goto_tab:8
+keybind = f9=goto_tab:9
+keybind = ctrl+t>[=previous_tab
+keybind = ctrl+t>]=next_tab
+keybind = f11=previous_tab
+keybind = f12=next_tab
+
+# ================= mouse =================
+# Ghostty にマウスバインド設定は存在しないが、mouse_bindings.lua の内容は
+# 既定動作でほぼ再現される:
+#   wheel scroll / 左ドラッグでセル単位選択拡張 / ダブルクリック=単語 / トリプルクリック=行
+#   → すべて既定動作
+#   クリック確定時のクリップボード書込 → 上記 copy-on-select = clipboard
+#   SUPER+クリックでリンクを開く → macOS 既定(cmd 押下でホバー・クリックで open)
