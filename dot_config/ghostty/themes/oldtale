@@ -1,19 +1,13 @@
-# oldtale — Ghostty theme(oldtale.toml からの移植)
-# 配置先: ~/.config/ghostty/themes/oldtale
-
 background = #121213
 foreground = #b4b1ba
 
 cursor-color = #666370
 cursor-text = #121213
-# cursor_border に相当する設定は無い(cursor-color に統合される)
 
 selection-background = #363639
 selection-foreground = #b4b1ba
 
-# wezterm の split(= 分割線色)相当
 split-divider-color = #504d54
-# scrollbar_thumb に相当する設定は無い(macOS ネイティブのスクロールバーを使用)
 
 # ansi 0-7
 palette = 0=#202023
