@@ -8,7 +8,7 @@ return {
 			["claude-agent-acp"] = {
 				env = {
 					CLAUDE_CONFIG_DIR = os.getenv("CLAUDE_CONFIG_DIR"),
-					ANTHROPIC_MODEL = "claude-sonnet-5",
+					-- ANTHROPIC_MODEL = "claude-sonnet-5",
 				},
 			},
 		},
