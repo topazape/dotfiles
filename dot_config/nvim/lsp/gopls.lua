@@ -8,6 +8,9 @@ return {
 			analyses = {
 				fillstruct = true,
 			},
+			env = {
+				GOEXPERIMENT = "jsonv2",
+			},
 			hints = {
 				assignVariableTypes = true,
 				compositeLiteralFields = true,
