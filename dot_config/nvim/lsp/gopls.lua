@@ -7,6 +7,7 @@ return {
 		gopls = {
 			analyses = {
 				fillstruct = true,
+				stdversion = false,
 			},
 			env = {
 				GOEXPERIMENT = "jsonv2",
