@@ -13,19 +13,28 @@ return {
 		end
 		return vim.lsp.rpc.start({ bin, "--lsp", "--stdio" }, dispatchers)
 	end,
+
 	filetypes = {
 		"javascript",
 		"javascriptreact",
 		"typescript",
 		"typescriptreact",
 	},
+
 	-- monorepo を単一プロセスで扱うため、tsconfig.json ではなく
 	-- package manager の lockfile をプロジェクトルートとする（upstream tsgo.lua と同方針）。
 	-- 内側テーブルは同一優先度、.git は最後の fallback（nvim 0.11.3+ の記法）。
 	root_markers = {
-		{ "package-lock.json", "yarn.lock", "pnpm-lock.yaml", "bun.lockb", "bun.lock" },
+		{
+			"package-lock.json",
+			"yarn.lock",
+			"pnpm-lock.yaml",
+			"bun.lockb",
+			"bun.lock",
+		},
 		{ ".git" },
 	},
+
 	settings = {
 		typescript = {
 			inlayHints = {
@@ -42,4 +51,4 @@ return {
 			},
 		},
 	},
-}1
+}
