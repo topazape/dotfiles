@@ -9,9 +9,6 @@ return {
 				fillstruct = true,
 				stdversion = false,
 			},
-			env = {
-				GOEXPERIMENT = "jsonv2",
-			},
 			hints = {
 				assignVariableTypes = true,
 				compositeLiteralFields = true,
