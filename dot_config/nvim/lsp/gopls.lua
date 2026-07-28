@@ -9,6 +9,11 @@ return {
 				fillstruct = true,
 				stdversion = false,
 			},
+			env = {
+				GOEXPERIMENT = "jsonv2",
+				GOOS = "js",
+				GOARCH = "wasm",
+			},
 			hints = {
 				assignVariableTypes = true,
 				compositeLiteralFields = true,
