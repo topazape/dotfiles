@@ -141,9 +141,9 @@ autocmd({ "FileType" }, {
 		vim.opt_local.expandtab = true
 	end,
 })
----- json, yaml, toml
+---- json, jsonc, yaml, toml
 autocmd({ "FileType" }, {
-	pattern = { "json", "yaml", "yml", "toml" },
+	pattern = { "json", "jsonc", "yaml", "yml", "toml" },
 	callback = function()
 		vim.opt_local.tabstop = 2
 		vim.opt_local.shiftwidth = 2
