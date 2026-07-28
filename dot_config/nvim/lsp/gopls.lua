@@ -9,11 +9,8 @@ return {
 		local env = {}
 
 		-- Go の minor version を取得し、1.26 の場合に encoding/json/v2 を有効にする
-		local go_version_output = vim.system({ "go", "env", "GOVERSION" }, { cwd = root, text = true }):wait().stdout
-			or ""
-		local go_minor_version = tonumber(go_version_output:match("^go1%.(%d+)"))
-		local jsonv2_is_experimental = go_minor_version ~= nil and go_minor_version <= 26
-		if jsonv2_is_experimental then
+		local goversion = vim.system({ "go", "env", "GOVERSION" }, { cwd = root, text = true }):wait().stdout or ""
+		if goversion:match("^go1%.(%d+)") == "26" then
 			env.GOEXPERIMENT = "jsonv2"
 		end
 
