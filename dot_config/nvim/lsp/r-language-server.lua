@@ -4,7 +4,12 @@ return {
 		R_LINTR_LINTER_FILE = vim.fn.stdpath("config") .. "/lsp/lintr.dcf",
 	},
 	filetypes = { "r" },
-	root_markers = { "DESCRIPTION", "renv.lock", "rproject.toml" },
+	root_markers = {
+		"DESCRIPTION",
+		"renv.lock",
+		"rproject.toml",
+		{ ".git" },
+	},
 	settings = {
 		r = {
 			lsp = {
