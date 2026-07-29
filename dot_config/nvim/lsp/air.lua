@@ -1,5 +1,11 @@
 return {
 	cmd = { "air", "language-server" },
 	filetypes = { "r" },
-	root_markers = { "air.toml", ".air.toml", "renv.lock" },
+	root_markers = {
+		"air.toml",
+		".air.toml",
+		"renv.lock",
+		"rproject.toml",
+		{ ".git" },
+	},
 }
