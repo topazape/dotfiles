@@ -2,7 +2,11 @@ return {
 	cmd = { "gopls" },
 	cmd_env = { GOPLSCACHE = vim.env.XDG_CACHE_HOME .. "/gopls" },
 	filetypes = { "go", "gomod", "gowork", "gotmpl" },
-	root_markers = { "go.work", "go.mod", ".git" },
+	root_markers = {
+		"go.work",
+		"go.mod",
+		{ ".git" },
+	},
 
 	before_init = function(params, config)
 		local root = params.rootPath or ""
