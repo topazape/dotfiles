@@ -51,6 +51,6 @@ return {
 		".golangci.json",
 		"go.work",
 		"go.mod",
-		".git",
+		{ ".git" },
 	},
 }
