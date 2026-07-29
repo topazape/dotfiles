@@ -7,5 +7,9 @@ return {
 	on_init = function(client)
 		client.server_capabilities.semanticTokensProvider = nil
 	end,
-	root_markers = { ".terraform.lock.hcl", "versions.tf" },
+	root_markers = {
+		".terraform.lock.hcl",
+		"versions.tf",
+		{ ".git" },
+	},
 }
