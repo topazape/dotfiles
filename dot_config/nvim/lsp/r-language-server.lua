@@ -8,7 +8,7 @@ return {
 		"DESCRIPTION",
 		"renv.lock",
 		"rproject.toml",
-		{ ".git" },
+		".git",
 	},
 	settings = {
 		r = {

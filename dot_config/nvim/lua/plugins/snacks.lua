@@ -149,13 +149,12 @@ return {
 	},
 
 	opts = {
-		bigfile = { enable = true },
+		bigfile = { enabled = true },
 		dashboard = { enabled = false },
 		explorer = {
 			enabled = true,
 			replace_netrw = true,
 			trash = true,
-			git_status = true,
 		},
 		indent = {
 			enabled = true,

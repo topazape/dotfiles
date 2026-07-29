@@ -6,6 +6,6 @@ return {
 		".air.toml",
 		"renv.lock",
 		"rproject.toml",
-		{ ".git" },
+		".git",
 	},
 }

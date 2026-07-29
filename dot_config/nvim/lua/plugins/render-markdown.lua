@@ -14,7 +14,7 @@ return {
 			end,
 		},
 
-		file_types = { "markdown", "md", "AgenticChat" },
+		file_types = { "markdown", "AgenticChat" },
 
 		anti_conceal = { enabled = false },
 

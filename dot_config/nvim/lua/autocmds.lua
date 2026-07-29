@@ -1,26 +1,21 @@
 local augroup = vim.api.nvim_create_augroup -- Create/get autocommand group
 local autocmd = vim.api.nvim_create_autocmd -- Create autocommand
 
+local group = augroup("user_autocmds", { clear = true })
+
 -- 拡張子を元にファイルタイプを設定する
----- *.bq は SQL ファイルとして扱う
-autocmd({ "BufNewFile", "BufRead" }, {
-	pattern = { "*.bq" },
-	command = "setfiletype sql",
-})
----- *.tf は Terraform ファイルとして扱う
-autocmd({ "BufNewFile", "BufRead" }, {
-	pattern = { "*.tf" },
-	command = "setfiletype terraform",
-})
----- *.golden は JSON ファイルとして扱う
-autocmd({ "BufNewFile", "BufRead" }, {
-	pattern = { "*.golden" },
-	command = "setfiletype json",
+vim.filetype.add({
+	extension = {
+		bq = "sql", -- *.bq は SQL ファイルとして扱う
+		golden = "json", -- *.golden は JSON ファイルとして扱う
+		tf = "terraform", -- *.tf は Terraform ファイルとして扱う
+	},
 })
 
 -- ファイルタイプ別設定
 ---- r
 autocmd({ "FileType" }, {
+	group = group,
 	pattern = { "r", "rmd", "rnoweb", "rrst" },
 	callback = function()
 		vim.opt_local.tabstop = 2
@@ -32,6 +27,7 @@ autocmd({ "FileType" }, {
 
 ---- dbt
 autocmd({ "FileType" }, {
+	group = group,
 	pattern = { "dbt" },
 	callback = function()
 		vim.opt_local.tabstop = 4
@@ -43,6 +39,7 @@ autocmd({ "FileType" }, {
 
 ---- go
 autocmd({ "FileType" }, {
+	group = group,
 	pattern = { "go" },
 	callback = function()
 		vim.opt_local.tabstop = 4
@@ -53,6 +50,7 @@ autocmd({ "FileType" }, {
 })
 ---- html
 autocmd({ "FileType" }, {
+	group = group,
 	pattern = { "html" },
 	callback = function()
 		vim.opt_local.tabstop = 2
@@ -63,6 +61,7 @@ autocmd({ "FileType" }, {
 })
 ---- lua
 autocmd({ "FileType" }, {
+	group = group,
 	pattern = { "lua" },
 	callback = function()
 		vim.opt_local.tabstop = 2
@@ -73,6 +72,7 @@ autocmd({ "FileType" }, {
 })
 ---- makefile
 autocmd({ "FileType" }, {
+	group = group,
 	pattern = { "make" },
 	callback = function()
 		vim.opt_local.tabstop = 8
@@ -83,6 +83,7 @@ autocmd({ "FileType" }, {
 })
 ---- rust
 autocmd({ "FileType" }, {
+	group = group,
 	pattern = { "rust" },
 	callback = function()
 		vim.opt_local.tabstop = 4
@@ -93,6 +94,7 @@ autocmd({ "FileType" }, {
 })
 ---- sh (Google Shell Style Guide)
 autocmd({ "FileType" }, {
+	group = group,
 	pattern = { "sh", "bash", "zsh" },
 	callback = function()
 		vim.opt_local.tabstop = 2
@@ -103,6 +105,7 @@ autocmd({ "FileType" }, {
 })
 ---- fish
 autocmd({ "FileType" }, {
+	group = group,
 	pattern = { "fish" },
 	callback = function()
 		vim.opt_local.tabstop = 4
@@ -113,6 +116,7 @@ autocmd({ "FileType" }, {
 })
 ---- java
 autocmd({ "FileType" }, {
+	group = group,
 	pattern = { "java" },
 	callback = function()
 		vim.opt_local.tabstop = 4
@@ -123,6 +127,7 @@ autocmd({ "FileType" }, {
 })
 ---- sql
 autocmd({ "FileType" }, {
+	group = group,
 	pattern = { "sql" },
 	callback = function()
 		vim.opt_local.tabstop = 4
@@ -133,6 +138,7 @@ autocmd({ "FileType" }, {
 })
 ---- terraform, hcl
 autocmd({ "FileType" }, {
+	group = group,
 	pattern = { "terraform", "hcl" },
 	callback = function()
 		vim.opt_local.tabstop = 2
@@ -143,6 +149,7 @@ autocmd({ "FileType" }, {
 })
 ---- json, jsonc, yaml, toml
 autocmd({ "FileType" }, {
+	group = group,
 	pattern = { "json", "jsonc", "yaml", "toml" },
 	callback = function()
 		vim.opt_local.tabstop = 2
@@ -153,24 +160,19 @@ autocmd({ "FileType" }, {
 })
 ---- typst
 autocmd({ "FileType" }, {
+	group = group,
 	pattern = { "typst" },
 	callback = function()
 		vim.opt_local.tabstop = 2
 		vim.opt_local.shiftwidth = 2
 		vim.opt_local.softtabstop = 2
 		vim.opt_local.expandtab = true
-		vim.keymap.set("n", "<leader>pr", "<cmd>TypstPreviewToggle<cr>", { buffer = true, noremap = true, silent = true })
-	end,
-})
----- octo
-autocmd({ "FileType" }, {
-	pattern = { "octo" },
-	callback = function()
-		vim.bo.filetype = "markdown"
+		vim.keymap.set("n", "<leader>pr", "<cmd>TypstPreviewToggle<cr>", { buffer = true, silent = true })
 	end,
 })
 ---- xml
 autocmd({ "FileType" }, {
+	group = group,
 	pattern = { "xml" },
 	callback = function()
 		vim.opt_local.foldmethod = "expr"
@@ -189,11 +191,13 @@ autocmd({ "FileType" }, {
 -- ターミナルモード
 ---- 常にインサートモードで開く
 autocmd({ "TermOpen" }, {
+	group = group,
 	pattern = { "*" },
 	command = "startinsert",
 })
 ---- 行番号を表示させない
 autocmd({ "TermOpen" }, {
+	group = group,
 	pattern = { "*" },
 	callback = function()
 		vim.opt_local.number = false

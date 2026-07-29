@@ -5,14 +5,17 @@ return {
 	root_markers = {
 		"go.work",
 		"go.mod",
-		{ ".git" },
+		".git",
 	},
 
-	before_init = function(params, config)
-		local root = params.rootPath or ""
-		local env = {}
+	before_init = function(_, config)
+		local root = config.root_dir
+		if not root then
+			return
+		end
 
 		-- Go の minor version を取得し、1.26 の場合に encoding/json/v2 を有効にする
+		local env = {}
 		local goversion = vim.system({ "go", "env", "GOVERSION" }, { cwd = root, text = true }):wait().stdout or ""
 		if goversion:match("^go1%.(%d+)") == "26" then
 			env.GOEXPERIMENT = "jsonv2"

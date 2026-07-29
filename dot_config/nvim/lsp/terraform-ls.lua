@@ -10,6 +10,6 @@ return {
 	root_markers = {
 		".terraform.lock.hcl",
 		"versions.tf",
-		{ ".git" },
+		".git",
 	},
 }

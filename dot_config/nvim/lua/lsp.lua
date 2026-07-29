@@ -14,17 +14,10 @@ vim.diagnostic.config({
 
 -- setup lsp
 ---- enable each lsp server at lsp directory if exists
-local disabled_lsps = {}
-vim.iter(vim.api.nvim_get_runtime_file("lsp/*.lua", true))
-	:map(function(file)
-		return vim.fs.basename(file):match("^(.*)%.lua$")
-	end)
-	:filter(function(server_name)
-		return not vim.tbl_contains(disabled_lsps, server_name)
-	end)
-	:each(function(server_name)
-		vim.lsp.enable(server_name)
-	end)
+local servers = vim.tbl_map(function(file)
+	return vim.fs.basename(file):match("^(.*)%.lua$")
+end, vim.api.nvim_get_runtime_file("lsp/*.lua", true))
+vim.lsp.enable(servers)
 
 ---- inlayHint
 vim.api.nvim_create_autocmd("LspAttach", {
@@ -32,7 +25,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
 
 		-- LSPs that should not have inlay hints enabled
-		local skip_inlay_hint_lsps = { "copilot", "ruff" }
+		local skip_inlay_hint_lsps = { "ruff" }
 		local should_skip = vim.tbl_contains(skip_inlay_hint_lsps, client.name)
 
 		-- enable inlay hints if not in skip list and supported by the client

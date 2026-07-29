@@ -4,6 +4,6 @@ return {
 	root_markers = {
 		"tombi.toml",
 		"pyproject.toml",
-		{ ".git" },
+		".git",
 	},
 }

@@ -9,7 +9,7 @@ return {
 		"stylua.toml",
 		"selene.toml",
 		"selene.yml",
-		{ ".git" },
+		".git",
 	},
 	settings = {
 		Lua = {
@@ -29,20 +29,7 @@ return {
 					"missing-parameter",
 				},
 				globals = {
-					"LazyVim",
 					"Snacks",
-					"bit",
-					"colors",
-					"defaults",
-					"describe",
-					"ev",
-					"hl",
-					"it",
-					"keys",
-					"math",
-					"ns",
-					"package",
-					"require",
 					"vim",
 				},
 				unusedLocalExclude = {

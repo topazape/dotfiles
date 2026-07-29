@@ -4,11 +4,14 @@ return {
 		GOLANGCI_LINT_CACHE = vim.env.XDG_CACHE_HOME .. "/golangci-lint",
 	},
 
-	before_init = function(params, config)
-		local root = config.root_dir or params.rootPath or ""
-		local env = {}
+	before_init = function(_, config)
+		local root = config.root_dir
+		if not root then
+			return
+		end
 
 		-- Go 1.26 では encoding/json/v2 が GOEXPERIMENT でのみ有効
+		local env = {}
 		local goversion = vim.system({ "go", "env", "GOVERSION" }, { cwd = root, text = true }):wait().stdout or ""
 		if goversion:match("^go1%.(%d+)") == "26" then
 			env.GOEXPERIMENT = "jsonv2"
@@ -51,6 +54,6 @@ return {
 		".golangci.json",
 		"go.work",
 		"go.mod",
-		{ ".git" },
+		".git",
 	},
 }

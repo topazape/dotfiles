@@ -18,21 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup({
 	spec = {
-		{ import = "plugins.oldtale" },
-
-		{ import = "plugins.agentic" },
-		{ import = "plugins.blink-cmp" },
-		{ import = "plugins.conform" },
-		{ import = "plugins.diffview" },
-		{ import = "plugins.ghlite" },
-		{ import = "plugins.gitsigns" },
-		{ import = "plugins.godoc" },
-		{ import = "plugins.gopher" },
-		{ import = "plugins.iron" },
-		{ import = "plugins.lspsaga" },
-		{ import = "plugins.lualine" },
-		{ import = "plugins.render-markdown" },
-		{ import = "plugins.snacks" },
+		{ import = "plugins" },
 
 		{ "HiPhish/rainbow-delimiters.nvim" },
 		{ "OXY2DEV/helpview.nvim", config = true },
@@ -43,7 +29,7 @@ require("lazy").setup({
 		{ "nvim-tree/nvim-web-devicons", config = true },
 		{ "romus204/tree-sitter-manager.nvim", opts = { auto_install = true } },
 		{ "tzachar/highlight-undo.nvim", config = true },
-		{ "williamboman/mason.nvim", config = true },
+		{ "mason-org/mason.nvim", config = true },
 		{
 			"rainbowhxch/accelerated-jk.nvim",
 			keys = {

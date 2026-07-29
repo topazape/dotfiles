@@ -12,7 +12,7 @@ return {
 		"pnpm-lock.yaml",
 		"bun.lockb",
 		"bun.lock",
-		{ ".git" },
+		".git",
 	},
 	settings = {
 		typescript = {

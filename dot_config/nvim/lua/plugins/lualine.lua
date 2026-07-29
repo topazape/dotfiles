@@ -7,7 +7,7 @@ local lsp_names = function()
 end
 
 return {
-	"hoob3rt/lualine.nvim",
+	"nvim-lualine/lualine.nvim",
 
 	opts = {
 		options = {

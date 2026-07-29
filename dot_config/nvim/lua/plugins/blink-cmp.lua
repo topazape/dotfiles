@@ -4,7 +4,6 @@ return {
 	version = "*",
 	dependencies = {
 		"rafamadriz/friendly-snippets",
-		"fang2hou/blink-copilot",
 	},
 
 	opts = {
@@ -20,7 +19,6 @@ return {
 		},
 
 		appearance = {
-			use_nvim_cmp_as_default = true,
 			nerd_font_variant = "mono",
 		},
 
@@ -49,22 +47,7 @@ return {
 		},
 
 		sources = {
-			default = { "lsp", "path", "buffer", "snippets", "copilot" },
-			providers = {
-				copilot = {
-					name = "copilot",
-					module = "blink-copilot",
-					score_offset = 100,
-					async = true,
-				},
-				dataform = {
-					name = "Dataform",
-					module = "dataform.completion.blink",
-				},
-			},
-			per_filetype = {
-				sqlx = { "dataform", "lsp", "path", "buffer", "snippets", "copilot" },
-			},
+			default = { "lsp", "path", "buffer", "snippets" },
 		},
 
 		cmdline = {
