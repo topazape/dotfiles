@@ -6,7 +6,7 @@ return {
 		"typescript",
 		"typescriptreact",
 	},
-	root_makers = {
+	root_markers = {
 		"package-lock.json",
 		"yarn.lock",
 		"pnpm-lock.yaml",

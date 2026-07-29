@@ -73,7 +73,7 @@ autocmd({ "FileType" }, {
 })
 ---- makefile
 autocmd({ "FileType" }, {
-	pattern = { "makefile", "Makefile" },
+	pattern = { "make" },
 	callback = function()
 		vim.opt_local.tabstop = 8
 		vim.opt_local.shiftwidth = 8
@@ -143,7 +143,7 @@ autocmd({ "FileType" }, {
 })
 ---- json, jsonc, yaml, toml
 autocmd({ "FileType" }, {
-	pattern = { "json", "jsonc", "yaml", "yml", "toml" },
+	pattern = { "json", "jsonc", "yaml", "toml" },
 	callback = function()
 		vim.opt_local.tabstop = 2
 		vim.opt_local.shiftwidth = 2
@@ -159,7 +159,7 @@ autocmd({ "FileType" }, {
 		vim.opt_local.shiftwidth = 2
 		vim.opt_local.softtabstop = 2
 		vim.opt_local.expandtab = true
-		vim.keymap.set("n", "<leader>pr", "<cmd>typstpreviewtoggle<cr>", { noremap = true, silent = true })
+		vim.keymap.set("n", "<leader>pr", "<cmd>TypstPreviewToggle<cr>", { buffer = true, noremap = true, silent = true })
 	end,
 })
 ---- octo

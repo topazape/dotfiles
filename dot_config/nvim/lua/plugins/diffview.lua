@@ -15,9 +15,16 @@ return {
 			DiffviewOpen = { "--imply-local" },
 			DiffviewFileHistory = {},
 		},
-	},
-
-	keys = {
-		{ "q", "<CMD>DiffviewClose<CR>", noremap = true },
+		keymaps = {
+			view = {
+				{ "n", "q", "<CMD>DiffviewClose<CR>", { desc = "Close Diffview" } },
+			},
+			file_panel = {
+				{ "n", "q", "<CMD>DiffviewClose<CR>", { desc = "Close Diffview" } },
+			},
+			file_history_panel = {
+				{ "n", "q", "<CMD>DiffviewClose<CR>", { desc = "Close Diffview" } },
+			},
+		},
 	},
 }

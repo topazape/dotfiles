@@ -1,7 +1,7 @@
 return {
 	cmd = { "ruff", "server" },
 	filetypes = { "python" },
-	root_marker = {
+	root_markers = {
 		"pyproject.toml",
 		"ruff.toml",
 		".ruff.toml",

@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(nvim --version)",
+      "Bash(grep -rn \"get_active_clients\" /opt/homebrew/Cellar/neovim/*/share/nvim/runtime/lua/vim/lsp.lua 2>/dev/null | head -5; ls /opt/homebrew/Cellar/neovim/ 2>/dev/null)",
+      "Read(//Users/kawai/.local/share/nvim/lazy/**)",
+      "Read(//Users/kawai/.local/share/nvim/lazy/snacks.nvim/lua/snacks/**)",
+      "Read(//Users/kawai/.local/share/nvim/lazy/snacks.nvim/lua/snacks/picker/config/**)",
+      "Bash(echo \"---conform builtins---\"; ls ~/.local/share/nvim/lazy/conform.nvim/lua/conform/formatters/ | grep -iE \"golangci|hcl|tombi|xmlformat|sqlfluff|sqlfmt|air\"; echo \"---blink-copilot deps---\"; grep -rn \"copilot\" ~/.local/share/nvim/lazy/blink-copilot/README.md | head -20)",
+      "Bash(env)"
+    ]
+  }
+}
