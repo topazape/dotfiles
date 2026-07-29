@@ -9,6 +9,7 @@ return {
 		"setup.cfg",
 		"setup.py",
 		"ty.toml",
+		{ ".git" },
 	},
 	settings = {
 		ty = {
