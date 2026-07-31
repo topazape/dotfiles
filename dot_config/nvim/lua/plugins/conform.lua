@@ -45,6 +45,9 @@ return {
 			json = {
 				"prettier",
 			},
+			jsonc = {
+				"prettier",
+			},
 			lua = {
 				"stylua",
 			},
