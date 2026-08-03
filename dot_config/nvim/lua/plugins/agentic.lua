@@ -8,8 +8,8 @@ return {
 			["claude-agent-acp"] = {
 				env = {
 					CLAUDE_CONFIG_DIR = os.getenv("CLAUDE_CONFIG_DIR"),
-					ANTHROPIC_MODEL = "claude-fable-5[1m]",
-					-- ANTHROPIC_MODEL = "claude-opus-5[1m]",
+					-- ANTHROPIC_MODEL = "claude-fable-5[1m]",
+					ANTHROPIC_MODEL = "claude-opus-5[1m]",
 				},
 			},
 		},
