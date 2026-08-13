@@ -13,6 +13,12 @@ if type -q npm
     # Fish has npm completions built-in
 end
 
+## pnpm
+set -gx PNPM_HOME "/Users/kawai/.local/share/pnpm"
+if not string match -q -- "$PNPM_HOME/bin" $PATH
+    set -gx PATH "$PNPM_HOME/bin" $PATH
+end
+
 # Python
 if type -q python3
     set -gx PTPYTHON_CONFIG_HOME $XDG_CONFIG_HOME/ptpython
