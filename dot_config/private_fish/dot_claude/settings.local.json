@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(fish --version)",
+      "Bash(/opt/homebrew/bin/fish -c 'for t in eza bat fzf gtrash starship chezmoi nvim colima docker claude go npm pnpm cargo typst aws terraform tenv kubectl dbt; printf \"%-10s %s\\\\n\" $t \\(type -q $t; and echo yes; or echo NO\\); end')",
+      "Bash(/opt/homebrew/bin/fish -c 'echo \"fish_user_paths: \"\\(count $fish_user_paths\\)\" entries\"; echo \"--- type -q colima and type -q docker ---\"; if type -q colima and type -q docker; echo \"TRUE\"; else; echo \"FALSE\"; end; echo \"--- colima alone ---\"; type -q colima; and echo colima-yes; or echo colima-NO; echo \"--- GOROOT ---\"; set -q GOROOT; and echo \"set: $GOROOT\"; or echo \"UNSET\"; echo \"--- prefix uninstalled ---\"; brew --prefix llvm 2>&1 | head -2')",
+      "Bash(/opt/homebrew/bin/fish -c 'echo \"=== fish_user_paths ===\"; for p in $fish_user_paths; echo \"  $p\"; end; echo \"=== dir checks ===\"; for pkg in llvm unzip coreutils findutils gnu-sed gawk grep tenv; set -l p \\(brew --prefix $pkg 2>/dev/null\\); printf \"%-12s %-40s %s\\\\n\" $pkg $p \\(test -d $p; and echo EXISTS; or echo missing\\); end')",
+      "Bash(:)",
+      "Bash(col -b)",
+      "Read(//opt/homebrew/share/doc/**)",
+      "Read(//opt/homebrew/**)",
+      "Bash(man /opt/homebrew/share/fish/man/man1/set.1)",
+      "Bash(man /opt/homebrew/share/man/man1/fish-language.1)",
+      "Read(//Users/kawai/**)",
+      "Bash(chezmoi managed *)",
+      "Bash(chezmoi source-path *)",
+      "Bash(chezmoi status *)"
+    ]
+  }
+}

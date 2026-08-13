@@ -1,3 +1,10 @@
+# シェル共通の環境変数
+
+# editor
+if type -q nvim
+    set -gx EDITOR nvim
+end
+
 # less
 if type -q less
     set -gx LESSHISTFILE -
