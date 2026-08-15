@@ -58,6 +58,9 @@ return {
 				"ruff_organize_imports",
 				"ruff_format",
 			},
+			qmd = {
+				"pretter",
+			},
 			sh = {
 				"shfmt",
 			},
