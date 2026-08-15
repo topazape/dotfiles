@@ -58,7 +58,7 @@ return {
 				"ruff_organize_imports",
 				"ruff_format",
 			},
-			qmd = {
+			quarto = {
 				"pretter",
 			},
 			sh = {
