@@ -82,10 +82,14 @@ return {
 			zsh = {
 				"shfmt",
 			},
-			["*"] = {
-				"trim_newlines",
-				"trim_whitespace",
-			},
+			["*"] = function(bufnr)
+				local ft = vim.bo[bufnr].filetype
+				-- panache LSP に任せる（fallback を機能させるため空を返す）
+				if ft == "quarto" or ft == "rmd" then
+					return {}
+				end
+				return { "trim_newlines", "trim_whitespace" }
+			end,
 		},
 	},
 }
