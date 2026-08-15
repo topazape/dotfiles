@@ -1,7 +1,6 @@
 return {
 	cmd = { "panache", "lsp" },
 	filetypes = {
-		"markdown",
 		"quarto",
 		"rmd",
 	},
