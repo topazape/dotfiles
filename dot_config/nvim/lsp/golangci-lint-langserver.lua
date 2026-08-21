@@ -10,13 +10,7 @@ return {
 			return
 		end
 
-		-- Go 1.26 では encoding/json/v2 が GOEXPERIMENT でのみ有効
 		local env = {}
-		local goversion = vim.system({ "go", "env", "GOVERSION" }, { cwd = root, text = true }):wait().stdout or ""
-		if goversion:match("^go1%.(%d+)") == "26" then
-			env.GOEXPERIMENT = "jsonv2"
-		end
-
 		-- wrangler プロジェクトは wasm ターゲットなので GOOS/GOARCH を合わせる
 		if vim.uv.fs_stat(root .. "/wrangler.toml") or vim.uv.fs_stat(root .. "/wrangler.jsonc") then
 			env.GOOS = "js"
