@@ -21,3 +21,8 @@ if type -q claude
     set -gx CLAUDE_CONFIG_DIR $XDG_CONFIG_HOME/claude
     set -gx CLAUDE_CODE_EFFORT_LEVEL max
 end
+
+# codex
+if type -q codex
+    set -gx CODEX_HOME $XDG_CONFIG_HOME/codex
+end
