@@ -48,11 +48,12 @@ customCommands:
         title: "(Optional) Enter the scope"
         key: "Scope"
         initialValue: ""
+
     command: >-
       bash -c '
         type="{{.Form.Type}}"
         scope="{{.Form.Scope}}"
-        message=$(git diff --staged | claude --model sonnet -p "この git diff を確認して、日本語1行コミットメッセージ(prefix不要、AI署名なし)だけを出力してください。バッククォートは不要です。")
+        message=$(git diff --staged | claude --model claude-sonnet-5 --print --no-session-persistence "この git diff --staged の出力を読み、コミットメッセージ本文を日本語1行で出力してください。種別「$type」と scope は呼び出し側が「type(scope): 」として前置するので、本文に prefix・種別語・scope 名を含めないこと。全角50字以内、体言止め、末尾に句点なし。ファイル名の列挙ではなく何をどう変えたかを書き、複数の変更がある場合は主要なものを優先して最大2点まで。前置き・説明・引用符・バッククォート・改行・署名（Co-Authored-By 等）は一切含めず、本文のみを出力すること。")
         if [ -n "$scope" ]; then
           commit_message="$type($scope): $message"
         else
@@ -60,4 +61,3 @@ customCommands:
         fi
         git commit -m "$commit_message"
       '
-    loadingText: "Generating commit message..."
