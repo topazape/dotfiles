@@ -16,9 +16,6 @@ end
 # 以降は $HOMEBREW_PREFIX が確定していることが条件。
 # type -q brew では brew が PATH にあるだけの状態を通してしまうため使わない。
 if set -q HOMEBREW_PREFIX
-    # allow non-official taps
-    set -gx HOMEBREW_NO_REQUIRE_TAP_TRUST 1
-
     # cache dir
     if test (uname) = Darwin
         set -gx HOMEBREW_CACHE $XDG_CACHE_HOME/Homebrew
