@@ -69,5 +69,4 @@ customCommands:
 
         git commit -m "$commit_message"
       '
-
     loadingText: "Generating commit message..."
