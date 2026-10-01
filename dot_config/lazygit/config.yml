@@ -82,15 +82,17 @@ customCommands:
 
         diff="${diff:0:12000}"
 
-        prompt="以下は git diff --cached です。
-      変更内容を要約し、type=${type} に合う Git のコミット件名を日本語で1行だけ生成してください。
+        system_prompt="Gitのコミット件名を生成してください。
+      出力は日本語の短い件名1行のみです。
+      説明、前置き、引用符、箇条書き、typeは絶対に出力しないでください。
+      「要約します」などのメタ発言は禁止です。
+      文末は「〜しました」「〜します」にせず、
+      「〜を修正」「〜を追加」「〜を更新」のような簡潔な形式にしてください。"
 
-      制約:
-      - 件名のみ出力する
-      - type や scope などの接頭辞は付けない
-      - 引用符を付けない
-      - 箇条書きにしない
-      - 50字以内
+        prompt="コミット種別: ${type}
+
+      次の差分について、何を変更したかを具体的な短い句で表してください。
+      50字以内。
 
       ${diff}"
 
@@ -99,9 +101,11 @@ customCommands:
         raw=$(
           llama-completion \
             -m "$model" \
+            --single-turn \
             --no-display-prompt \
             --temp 0 \
-            -n 64 \
+            -n 48 \
+            -sys "$system_prompt" \
             -p "$prompt" \
             2>"$err"
         )
@@ -119,7 +123,9 @@ customCommands:
         msg=$(
           printf "%s\n" "$raw" |
             grep -m1 "[^[:space:]]" |
-            sed -E "s/^[-*[:digit:].)]+[[:space:]]*//"
+            sed -E "s/^[-*[:digit:].)]+[[:space:]]*//" |
+            sed -E "s/[[:space:]]*\[end of text\][[:space:]]*$//" |
+            sed -E "s/[[:space:]]+$//"
         )
 
         if [ -z "$msg" ]; then
