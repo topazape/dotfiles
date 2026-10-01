@@ -1,7 +1,3 @@
-os:
-  shell: bash
-  shellArg: -c
-
 gui:
   switchTabsWithPanelJumpKeys: true
   showRandomTip: false
