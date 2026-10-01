@@ -18,6 +18,7 @@ customCommands:
   - key: "C"
     context: "files"
     description: "commit with AI-generated message"
+
     prompts:
       - type: "menu"
         title: "Commit type"
@@ -26,21 +27,27 @@ customCommands:
           - name: "feat"
             description: "新機能の追加"
             value: "feat"
+
           - name: "fix"
             description: "バグや不具合の修正"
             value: "fix"
+
           - name: "refactor"
             description: "機能変更を伴わないコード改善"
             value: "refactor"
+
           - name: "docs"
             description: "ドキュメントのみの変更"
             value: "docs"
+
           - name: "chore"
             description: "ビルド、依存関係、設定などの雑務"
             value: "chore"
+
           - name: "test"
             description: "テストの追加・修正"
             value: "test"
+
           - name: "perf"
             description: "パフォーマンス改善"
             value: "perf"
@@ -87,29 +94,32 @@ customCommands:
 
       ${diff}"
 
+        err=$(mktemp)
+
         raw=$(
           llama-completion \
             -m "$model" \
-            --single-turn \
-            --simple-io \
             --no-display-prompt \
-            --no-show-timings \
             --temp 0 \
             -n 64 \
             -p "$prompt" \
-            2>/dev/null
+            2>"$err"
         )
+        status=$?
 
-        if [ $? -ne 0 ]; then
-          echo "error: llama-completion failed" >&2
-          exit 1
+        if [ "$status" -ne 0 ]; then
+          echo "error: llama-completion failed (exit $status)" >&2
+          cat "$err" >&2
+          rm -f "$err"
+          exit "$status"
         fi
+
+        rm -f "$err"
 
         msg=$(
           printf "%s\n" "$raw" |
             grep -m1 "[^[:space:]]" |
-            sed -E "s/^[-*[:digit:].)]+[[:space:]]*//" |
-            sed -E "s/^[\"'\'']//; s/[\"'\'']$//"
+            sed -E "s/^[-*[:digit:].)]+[[:space:]]*//"
         )
 
         if [ -z "$msg" ]; then
