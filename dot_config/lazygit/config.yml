@@ -51,8 +51,6 @@ customCommands:
 
     command: |
       bash -c '
-        set -o pipefail
-
         type="$1"
         scope="$2"
 
@@ -68,31 +66,50 @@ customCommands:
           exit 1
         fi
 
-        diff=$(git diff --cached | head -c 12000)
+        diff=$(git diff --cached)
 
         if [ -z "$diff" ]; then
           echo "error: no staged changes" >&2
           exit 1
         fi
 
-        prompt="以下は git diff --cached。
-      type=${type} に合うコミット件名を日本語で1行だけ出力してください。
-      接頭辞、説明、引用符は不要です。
-      50字以内にしてください。
+        diff="${diff:0:12000}"
+
+        prompt="以下は git diff --cached です。
+      変更内容を要約し、type=${type} に合う Git のコミット件名を日本語で1行だけ生成してください。
+
+      制約:
+      - 件名のみ出力する
+      - type や scope などの接頭辞は付けない
+      - 引用符を付けない
+      - 箇条書きにしない
+      - 50字以内
 
       ${diff}"
 
-        msg=$(
+        raw=$(
           llama-completion \
             -m "$model" \
             --single-turn \
+            --simple-io \
             --no-display-prompt \
-            --log-disable \
+            --no-show-timings \
+            --temp 0 \
             -n 64 \
             -p "$prompt" \
-            2>/dev/null |
-            grep -m1 . |
-            sed -E "s/^[-*[:digit:].)]+[[:space:]]*//"
+            2>/dev/null
+        )
+
+        if [ $? -ne 0 ]; then
+          echo "error: llama-completion failed" >&2
+          exit 1
+        fi
+
+        msg=$(
+          printf "%s\n" "$raw" |
+            grep -m1 "[^[:space:]]" |
+            sed -E "s/^[-*[:digit:].)]+[[:space:]]*//" |
+            sed -E "s/^[\"'\'']//; s/[\"'\'']$//"
         )
 
         if [ -z "$msg" ]; then
