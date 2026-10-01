@@ -48,12 +48,13 @@ customCommands:
         title: "(Optional) scope"
         key: "Scope"
     command: >-
-      model="${LLAMA_CACHE:-${XDG_CACHE_HOME:-$HOME/.cache}/llama.cpp}/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf";
-      msg=$(git diff --cached | head -c 12000 |
-        llama-completion -m "$model" -no-cnv --no-display-prompt -n 64
-        -p "以下は git diff --cached, type='{{.Form.Type}}' に合うコミット件名を日本語で1行だけ、接頭辞・説明・引用符なし、50字以内で出力せよ" 2>/dev/null
-        | head -n1 | sed -E 's/^[-*[:digit:].)]+[[:space:]]*//');
-      scope="{{.Form.Scope}}";
-      git commit -e -m "{{.Form.Type}}${scope:+($scope)}: $msg"
-    subprocess: true
-    loadingText: "Generating commit message..."
+      bash -c '
+        model="${LLAMA_CACHE:-${XDG_CACHE_HOME:-$HOME/.cache}/llama.cpp}/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf";
+        msg=$(git diff --cached | head -c 12000 |
+          llama-completion -m "$model" -no-cnv --no-display-prompt -n 64
+          -p "以下は git diff --cached。type={{.Form.Type}} に合うコミット件名を日本語で1行だけ、接頭辞・説明・引用符なし、50字以内で出力。" 2>/dev/null
+          | head -n1 | sed -E "s/^[-*[:digit:].)]+[[:space:]]*//");
+        scope="{{.Form.Scope}}";
+        git commit -e -m "{{.Form.Type}}${scope:+($scope)}: $msg"
+      '
+    output: terminal
