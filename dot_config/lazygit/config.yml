@@ -47,10 +47,10 @@ customCommands:
         key: "Scope"
     command: >-
       msg=$(git diff --cached | head -c 12000 |
-        ollama run qwen2.5-coder:1.5b
-        "以下は git diff --cached。type='{{.Form.Type}}' に合うコミット件名を日本語で1行だけ、接頭辞・説明・引用符なし、50字以内で出力。" 2>/dev/null
+        llama-cli -m "$XDG_DATA_HOME/llama/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf"
+        -no-cnv --no-display-prompt --log-disable -n 64 -t 4
+        -p "以下は git diff --cached。type='{{.Form.Type}}' に合うコミット件名を日本語で1行だけ、接頭辞・説明・引用符なし、50字以内で出力。" 2>/dev/null
         | head -n1 | sed -E 's/^[-*[:digit:].)]+[[:space:]]*//');
       scope="{{.Form.Scope}}";
       git commit -e -m "{{.Form.Type}}${scope:+($scope)}: $msg"
     subprocess: true
-    loadingText: "Generating commit message..."
