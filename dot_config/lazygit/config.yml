@@ -133,7 +133,7 @@ customCommands:
           exit 1
         fi
 
-        git commit -e -m "${type}${scope:+($scope)}: $msg"
+        git commit -m "${type}${scope:+($scope)}: $msg"
       ' -- {{.Form.Type | quote}} {{.Form.Scope | quote}}
 
-    output: terminal
+    output: log
