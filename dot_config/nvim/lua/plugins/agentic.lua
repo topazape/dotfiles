@@ -2,16 +2,7 @@ return {
 	"carlos-algms/agentic.nvim",
 
 	opts = {
-		-- provider = "codex-acp",
 		provider = "claude-agent-acp",
-
-		acp_providers = {
-			["claude-agent-acp"] = {
-				env = {
-					ANTHROPIC_MODEL = "claude-opus-5[1m]",
-				},
-			},
-		},
 
 		windows = {
 			position = "right",
@@ -57,6 +48,14 @@ return {
 			desc = "Agentic Restore session",
 			silent = true,
 			mode = { "n", "v", "i" },
+		},
+		{
+			"<leader>ap",
+			function()
+				require("agentic").switch_provider()
+			end,
+			mode = { "n", "v", "i" },
+			desc = "Switch Agentic Provider",
 		},
 	},
 }
