@@ -17,56 +17,40 @@ git:
 customCommands:
   - key: "C"
     context: "files"
-    description: "commit files with AI-generated message"
+    description: "commit with AI-generated message"
     prompts:
       - type: "menu"
-        title: "What kind of commit type is it?"
+        title: "Commit type"
         key: "Type"
         options:
-          - name: "feat"
-            description: "新機能の追加"
-            value: "feat"
-          - name: "fix"
-            description: "バグや不具合の修正"
-            value: "fix"
-          - name: "refactor"
-            description: "機能変更を伴わないコード改善"
-            value: "refactor"
-          - name: "docs"
-            description: "ドキュメントのみの変更"
-            value: "docs"
-          - name: "chore"
-            description: "ビルド、依存関係、設定などの雑務"
-            value: "chore"
-          - name: "test"
-            description: "テストの追加・修正"
-            value: "test"
-          - name: "perf"
-            description: "パフォーマンス改善"
-            value: "perf"
-
+          - { name: "feat", description: "新機能の追加", value: "feat" }
+          - { name: "fix", description: "バグや不具合の修正", value: "fix" }
+          - {
+              name: "refactor",
+              description: "機能変更を伴わないコード改善",
+              value: "refactor",
+            }
+          - {
+              name: "docs",
+              description: "ドキュメントのみの変更",
+              value: "docs",
+            }
+          - {
+              name: "chore",
+              description: "ビルド、依存関係、設定などの雑務",
+              value: "chore",
+            }
+          - { name: "test", description: "テストの追加・修正", value: "test" }
+          - { name: "perf", description: "パフォーマンス改善", value: "perf" }
       - type: "input"
-        title: "(Optional) Enter the scope"
+        title: "(Optional) scope"
         key: "Scope"
-        initialValue: ""
-
-      - type: "input"
-        title: "Enter commit message"
-        key: "Message"
-        initialValue: ""
-
     command: >-
-      bash -c '
-        type="{{.Form.Type}}"
-        scope="{{.Form.Scope}}"
-        message="{{.Form.Message}}"
-
-        if [ -n "$scope" ]; then
-          commit_message="$type($scope): $message"
-        else
-          commit_message="$type: $message"
-        fi
-
-        git commit -m "$commit_message"
-      '
+      msg=$(git diff --cached | head -c 12000 |
+        ollama run qwen2.5-coder:1.5b
+        "以下は git diff --cached。type='{{.Form.Type}}' に合うコミット件名を日本語で1行だけ、接頭辞・説明・引用符なし、50字以内で出力。" 2>/dev/null
+        | head -n1 | sed -E 's/^[-*[:digit:].)]+[[:space:]]*//');
+      scope="{{.Form.Scope}}";
+      git commit -e -m "{{.Form.Type}}${scope:+($scope)}: $msg"
+    subprocess: true
     loadingText: "Generating commit message..."
