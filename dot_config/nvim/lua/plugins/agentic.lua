@@ -6,7 +6,9 @@ return {
 
 		acp_providers = {
 			["claude-agent-acp"] = {
-				initial_model = "claude-opus-5",
+				env = {
+					ANTHOROPIC_MODEL = "claude-opus-5-5[1m]",
+				},
 			},
 		},
 
