@@ -7,7 +7,9 @@ return {
 		acp_providers = {
 			["claude-agent-acp"] = {
 				env = {
-					ANTHOROPIC_MODEL = "claude-opus-5-5[1m]",
+					ANTHROPIC_MODEL = "claude-opus-5-5",
+					CLAUDE_CODE_EFFORT_LEVEL = "max",
+					CLAUDE_CODE_DISABLE_1M_CONTEXT = "1",
 				},
 			},
 		},
