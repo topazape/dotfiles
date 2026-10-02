@@ -4,6 +4,12 @@ return {
 	opts = {
 		provider = "claude-agent-acp",
 
+		acp_providers = {
+			["claude-agent-acp"] = {
+				initial_model = "opus",
+			},
+		},
+
 		windows = {
 			position = "right",
 			width = "30%",
