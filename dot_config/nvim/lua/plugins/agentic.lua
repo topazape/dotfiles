@@ -6,7 +6,7 @@ return {
 
 		acp_providers = {
 			["claude-agent-acp"] = {
-				initial_model = "opus",
+				initial_model = "claude-opus-5",
 			},
 		},
 
