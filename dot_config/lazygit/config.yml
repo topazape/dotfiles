@@ -82,18 +82,19 @@ customCommands:
 
         diff="${diff:0:12000}"
 
-        system_prompt="日本語のGitコミット件名を1行だけ生成してください。
-        50字以内で、必ず体言止めにしてください。
-        文末は「追加」「変更」「修正」「削除」「対応」「改善」「更新」などの名詞にしてください。
-        「した」「する」「します」「しました」などの動詞終止形は禁止です。
-        説明、箇条書き、引用符は出力しないでください。"
+        system_prompt="日本語のGitコミット件名を生成してください。
+    出力は50字以内の1行だけにしてください。
+    変更内容を簡潔かつ具体的に表し、必ず体言止めにしてください。
+    文末は「追加」「変更」「修正」「削除」「対応」「改善」「更新」などの名詞にしてください。
+    「した」「する」「します」「しました」などの動詞終止形は禁止です。
+    Markdown、バッククォート、引用符、箇条書き、説明文は出力しないでください。"
 
         prompt="コミット種別: ${type}
-        スコープ: ${scope}
+    スコープ: ${scope}
 
-        次のGit差分から、変更内容を具体的に表すコミット件名を生成してください。
+    次のGit差分からコミット件名を生成してください。
 
-        ${diff}"
+    ${diff}"
 
         err=$(mktemp)
 
@@ -122,7 +123,12 @@ customCommands:
         msg=$(
           printf "%s\n" "$raw" |
             grep -m1 "[^[:space:]]" |
+            sed -E "s/^[[:space:]]+//" |
+            sed -E "s/[[:space:]]+$//" |
             sed -E "s/^[-*[:digit:].)]+[[:space:]]*//" |
+            sed -E "s/^\`(.*)\`$/\1/" |
+            sed -E "s/^\"(.*)\"$/\1/" |
+            sed -E "s/^「(.*)」$/\1/" |
             sed -E "s/[[:space:]]*\[end of text\][[:space:]]*$//" |
             sed -E "s/[[:space:]]+$//"
         )
@@ -132,7 +138,13 @@ customCommands:
           exit 1
         fi
 
-        git commit -m "${type}${scope:+($scope)}: $msg"
-      '
+        if [ -n "$type" ]; then
+          prefix="${type}${scope:+($scope)}: "
+        else
+          prefix=""
+        fi
+
+        git commit -m "${prefix}${msg}"
+      ' -- {{.Form.Type | quote}} {{.Form.Scope | quote}}
 
     output: log
