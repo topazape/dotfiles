@@ -133,5 +133,6 @@ customCommands:
         fi
 
         git commit -m "${type}${scope:+($scope)}: $msg"
+      '
 
     output: log
