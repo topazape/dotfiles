@@ -82,14 +82,18 @@ customCommands:
 
         diff="${diff:0:12000}"
 
-        system_prompt="Gitのコミット件名を生成してください。"
+        system_prompt="日本語のGitコミット件名を1行だけ生成してください。
+        50字以内で、必ず体言止めにしてください。
+        文末は「追加」「変更」「修正」「削除」「対応」「改善」「更新」などの名詞にしてください。
+        「した」「する」「します」「しました」などの動詞終止形は禁止です。
+        説明、箇条書き、引用符は出力しないでください。"
 
         prompt="コミット種別: ${type}
+        スコープ: ${scope}
 
-      次の差分について、何を変更したかを具体的な短い句で表してください。
-      50字以内。
+        次のGit差分から、変更内容を具体的に表すコミット件名を生成してください。
 
-      ${diff}"
+        ${diff}"
 
         err=$(mktemp)
 
@@ -129,6 +133,5 @@ customCommands:
         fi
 
         git commit -m "${type}${scope:+($scope)}: $msg"
-      ' -- {{.Form.Type | quote}} {{.Form.Scope | quote}}
 
     output: log
