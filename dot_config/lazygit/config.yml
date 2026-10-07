@@ -17,43 +17,100 @@ git:
 customCommands:
   - key: "C"
     context: "files"
-    description: "commit with AI-generated message"
-
+    description: "commit files with AI-generated message"
     prompts:
       - type: "menu"
-        title: "Commit type"
+        title: "What kind of commit type is it?"
         key: "Type"
         options:
           - name: "feat"
             description: "新機能の追加"
             value: "feat"
-
           - name: "fix"
             description: "バグや不具合の修正"
             value: "fix"
-
           - name: "refactor"
             description: "機能変更を伴わないコード改善"
             value: "refactor"
-
           - name: "docs"
             description: "ドキュメントのみの変更"
             value: "docs"
-
           - name: "chore"
             description: "ビルド、依存関係、設定などの雑務"
             value: "chore"
-
           - name: "test"
             description: "テストの追加・修正"
             value: "test"
-
           - name: "perf"
             description: "パフォーマンス改善"
             value: "perf"
 
       - type: "input"
-        title: "(Optional) scope"
+        title: "(Optional) Enter the scope"
         key: "Scope"
+        initialValue: ""
+
+    command: |
+      bash -c '
+        type="$1"
+        scope="$2"
+
+        model="${LLAMA_CACHE:-${XDG_CACHE_HOME:-$HOME/.cache}/llama.cpp}/qwen2.5-coder-1.5b-instruct-q4_k_m.gguf"
+
+        diff=$(git diff --cached)
+
+        if [ -z "$diff" ]; then
+          echo "error: no staged changes" >&2
+          exit 1
+        fi
+
+        diff="${diff:0:12000}"
+
+        system_prompt="日本語のGitコミット件名の本文を生成してください。
+        出力は50字以内の1行だけにしてください。
+        変更内容を簡潔かつ具体的に表し、必ず体言止めにしてください。
+        文末は「追加」「変更」「修正」「削除」「対応」「改善」「更新」などの名詞にしてください。
+        コミット種別やスコープなどのprefixは出力しないでください。
+        Markdown、バッククォート、引用符、説明文は出力しないでください。"
+
+        prompt="コミット種別: ${type}
+        スコープ: ${scope}
+
+        次のGit差分からコミット件名の本文だけを生成してください。
+
+        ${diff}"
+
+        raw=$(
+          llama-completion \
+            -m "$model" \
+            --single-turn \
+            --no-display-prompt \
+            --temp 0 \
+            -n 48 \
+            -sys "$system_prompt" \
+            -p "$prompt" \
+            2>/dev/null
+        )
+
+        message=$(
+          printf "%s\n" "$raw" |
+            grep -m1 "[^[:space:]]" |
+            sed -E "s/^[[:space:]]+//; s/[[:space:]]+$//" |
+            sed -E "s/^\`(.*)\`$/\1/"
+        )
+
+        if [ -z "$message" ]; then
+          echo "error: failed to generate commit message" >&2
+          exit 1
+        fi
+
+        if [ -n "$scope" ]; then
+          git commit -m "${type}(${scope}): ${message}"
+        else
+          git commit -m "${type}: ${message}"
+        fi
+      ' -- {{.Form.Type | quote}} {{.Form.Scope | quote}}
+
+    loadingText: "Generating commit message..."
 
     output: log
