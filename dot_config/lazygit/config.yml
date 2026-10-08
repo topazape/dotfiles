@@ -50,64 +50,21 @@ customCommands:
         key: "Scope"
         initialValue: ""
 
-    command: |
+
+    command: >-
       bash -c '
-        type="$1"
-        scope="$2"
+        type="{{.Form.Type}}"
+        scope="{{.Form.Scope}}"
 
-        model="${LLAMA_CACHE:-${XDG_CACHE_HOME:-$HOME/.cache}/llama.cpp}/Qwen3-4B-Instruct-2507-Q4_K_M.gguf"
-
-        if ! command -v llama-completion >/dev/null 2>&1; then
-          echo "error: llama-completion not found" >&2
-          exit 1
-        fi
-
-        if [ ! -f "$model" ]; then
-          echo "error: model not found: $model" >&2
-          exit 1
-        fi
-
-        diff=$(git diff --cached)
-
-        if [ -z "$diff" ]; then
-          echo "error: no staged changes" >&2
-          exit 1
-        fi
-
-        system_prompt="git コミットメッセージを簡潔かつ具体的に日本語で生成してください。説明、Markdown、引用符、prefixは出力しないでください。"
-        prompt="次の diff からコミットメッセージを1行で生成してください。${diff}"
-
-        raw=$(
-          llama-completion \
-            -m "$model" \
-            --single-turn \
-            --no-display-prompt \
-            --temp 0 \
-            -n 32 \
-            -sys "$system_prompt" \
-            -p "$prompt" \
-            2>/dev/null
-        )
-
-        message=$(
-          printf "%s" "$raw" |
-            sed -E "s/[[:space:]]*\[end of text\].*$//" |
-            sed -E "s/^[[:space:]]+|[[:space:]]+$//g" |
-            sed -E "s/^\`(.*)\`$/\1/"
-        )
-
-        if [ -z "$message" ]; then
-          echo "error: failed to generate commit message" >&2
-          exit 1
-        fi
+        message=$(git diff --staged | claude --model claude-sonnet-5 --print --no-session-persistence "この git diff --staged の出力を読み、コミットメッセージ本文を日本語1行で出力してください。種別「$type」と scope は呼び出し側が「type(scope): 」として前置するので、本文に prefix・種別語・scope 名を含めないこと。全角50字以内、体言止め、末尾に句点なし。ファイル名の列挙ではなく何をどう変えたかを書き、複数の変更がある場合は主要なものを優先して最大2点まで。前置き・説明・引用符・バッククォート・改行・署名（Co-Authored-By 等）は一切含めず、本文のみを出力すること。")
 
         if [ -n "$scope" ]; then
-          git commit -m "${type}(${scope}): ${message}"
+          commit_message="$type($scope): $message"
         else
-          git commit -m "${type}: ${message}"
+          commit_message="$type: $message"
         fi
-      ' -- {{.Form.Type | quote}} {{.Form.Scope | quote}}
-
+        git commit -m "$commit_message"
+      '
     loadingText: "Generating commit message..."
 
     output: log
