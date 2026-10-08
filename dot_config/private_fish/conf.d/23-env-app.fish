@@ -15,8 +15,3 @@ end
 if type -q bat
     set -gx BAT_THEME TwoDark
 end
-
-# llama.cpp
-if type -q llama-cli
-    set -gx LLAMA_CACHE $XDG_CACHE_HOME/llama.cpp
-end
