@@ -8,55 +8,7 @@ autocomplete_debounce_ms = 150
 autocomplete_trigger_len = 2
 autopairs_enabled = true
 
-[keybindings.Menu]
-"<Ctrl-h>" = "FocusMenu"
-"<Ctrl-j>" = "FocusEditor"
-"<Ctrl-l>" = "FocusData"
-"<Alt-1>" = ""
-"<Alt-2>" = ""
-"<Alt-3>" = ""
-"<Alt-4>" = ""
-"<Alt-5>" = ""
-
 [keybindings.Editor]
-"<Ctrl-h>" = "FocusMenu"
-"<Ctrl-j>" = "FocusEditor"
-"<Ctrl-l>" = "FocusData"
-"<Ctrl-t>" = "SubmitEditorQuery"
+"<Shift-Enter>" = "SubmitEditorQuery"
 "<Alt-Enter>" = ""
 "<F5>" = ""
-"<Alt-1>" = ""
-"<Alt-2>" = ""
-"<Alt-3>" = ""
-"<Alt-4>" = ""
-"<Alt-5>" = ""
-
-[keybindings.Data]
-"<Ctrl-h>" = "FocusMenu"
-"<Ctrl-j>" = "FocusEditor"
-"<Ctrl-l>" = "FocusData"
-"<Alt-1>" = ""
-"<Alt-2>" = ""
-"<Alt-3>" = ""
-"<Alt-4>" = ""
-"<Alt-5>" = ""
-
-[keybindings.History]
-"<Ctrl-h>" = "FocusMenu"
-"<Ctrl-j>" = "FocusEditor"
-"<Ctrl-l>" = "FocusData"
-"<Alt-1>" = ""
-"<Alt-2>" = ""
-"<Alt-3>" = ""
-"<Alt-4>" = ""
-"<Alt-5>" = ""
-
-[keybindings.Favorites]
-"<Ctrl-h>" = "FocusMenu"
-"<Ctrl-j>" = "FocusEditor"
-"<Ctrl-l>" = "FocusData"
-"<Alt-1>" = ""
-"<Alt-2>" = ""
-"<Alt-3>" = ""
-"<Alt-4>" = ""
-"<Alt-5>" = ""
