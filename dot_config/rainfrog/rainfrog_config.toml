@@ -10,3 +10,5 @@ autopairs_enabled = true
 
 [keybindings.Editor]
 "<Ctrl-t>" = "SubmitEditorQuery"
+"<Alt-Enter>" = ""
+"<F5>" = ""
