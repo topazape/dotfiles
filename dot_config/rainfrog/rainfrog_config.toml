@@ -7,8 +7,3 @@ autocomplete_enabled = true
 autocomplete_debounce_ms = 150
 autocomplete_trigger_len = 2
 autopairs_enabled = true
-
-[keybindings.Editor]
-"<Ctrl-Enter>" = "SubmitEditorQuery"
-"<Alt-Enter>" = ""
-"<F5>" = ""
