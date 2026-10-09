@@ -9,6 +9,6 @@ autocomplete_trigger_len = 2
 autopairs_enabled = true
 
 [keybindings.Editor]
-"<Shift-Enter>" = "SubmitEditorQuery"
+"<Ctrl-Enter>" = "SubmitEditorQuery"
 "<Alt-Enter>" = ""
 "<F5>" = ""
