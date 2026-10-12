@@ -1,7 +1,6 @@
 theme = oldtale
 
 # ==== font ====
-font-family = System Mono
 font-family = Berkeley Mono
 font-family = IBM Plex Sans JP
 font-family = Symbols Nerd Font Mono
