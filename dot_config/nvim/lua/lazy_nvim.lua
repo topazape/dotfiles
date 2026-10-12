@@ -42,4 +42,5 @@ require("lazy").setup({
 			name = "arf.nvim",
 			cmd = "ArfPlot",
 		},
+  },
 })
