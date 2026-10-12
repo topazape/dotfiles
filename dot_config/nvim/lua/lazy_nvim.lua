@@ -47,6 +47,7 @@ require("lazy").setup({
 					build = false,
 					ops = {
 						backend = "kitty",
+						processor = "magick_cli",
 					},
 				},
 			},
