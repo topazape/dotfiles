@@ -45,7 +45,7 @@ require("lazy").setup({
 				{
 					"3rd/image.nvim",
 					build = false,
-					ops = {
+					opts = {
 						backend = "kitty",
 						processor = "magick_cli",
 					},
