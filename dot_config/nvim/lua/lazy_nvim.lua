@@ -42,7 +42,6 @@ require("lazy").setup({
 			name = "arf.nvim",
 			cmd = "ArfPlot",
       dependencies = {
-    {
       "3rd/image.nvim",
       build = false,
       opts = {
