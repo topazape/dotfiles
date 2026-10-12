@@ -41,6 +41,9 @@ require("lazy").setup({
 			dir = vim.fn.expand("~/Develop/local/arf.nvim"),
 			name = "arf.nvim",
 			cmd = "ArfPlot",
+			ops = {
+				backend = "kitty",
+			},
 		},
-  },
+	},
 })
