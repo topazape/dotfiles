@@ -37,5 +37,11 @@ require("lazy").setup({
 				{ "k", "<Plug>(accelerated_jk_gk)", mode = "n" },
 			},
 		},
+		{
+			dir = vim.fn.expand("~/Develop/local/arf.nvim"),
+			name = "arf.nvim",
+			cmd = "ArfPlot",
+			dependencies = { "3rd/image.nvim" },
+		},
 	},
 })
