@@ -41,7 +41,14 @@ require("lazy").setup({
 			dir = vim.fn.expand("~/Develop/local/arf.nvim"),
 			name = "arf.nvim",
 			cmd = "ArfPlot",
-			dependencies = { "3rd/image.nvim" },
+      dependencies = {
+    {
+      "3rd/image.nvim",
+      build = false,
+      opts = {
+        backend = "kitty",
+        processor = "magick_cli",
+      },
+    },
 		},
-	},
 })
