@@ -1,9 +1,9 @@
 return {
 	cmd = { "arity", "lsp" },
-	filetype = { "r" },
+	filetypes = { "r" },
 	root_markers = {
 		"arity.toml",
-		"rproject.toml",
-		"git",
+		"DESCRIPTION",
+		".git",
 	},
 }
