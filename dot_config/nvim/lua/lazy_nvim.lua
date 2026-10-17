@@ -78,18 +78,17 @@ require("lazy").setup({
 				-- 実行サイン
 				signs = {
 					enabled = true, -- false ならすべての実行サインを非表示
-					nerd_font = true, -- true なら成功・エラーの既定記号に Nerd Font を使用
 					priority = 5, -- 大きい値を優先
 					range = {
 						text = "│", -- 最終行以外に表示する範囲マーク
 						hl = "ArfSignRange",
 					},
 					success = {
-						text = "✓", -- 実行成功時の最終行
+						text = "", -- 実行成功時の最終行
 						hl = "ArfSignSuccess",
 					},
 					error = {
-						text = "✗", -- R エラー時の最終行
+						text = "", -- R エラー時の最終行
 						hl = "ArfSignError",
 					},
 					running = {
