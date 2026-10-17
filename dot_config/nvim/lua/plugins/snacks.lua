@@ -166,6 +166,7 @@ return {
 			enabled = true,
 			style = "fancy",
 		},
+		image = { enabled = true },
 		picker = {
 			sources = {
 				explorer = {
