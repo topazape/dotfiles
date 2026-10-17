@@ -66,7 +66,7 @@ require("lazy").setup({
 				plot_res = 180, -- 描画解像度（dpi）。文字や線の大きさにも影響
 
 				-- summary フロート
-				summary_width = 120, -- 幅（列）。短い出力でもこの幅を確保
+				summary_width = 60, -- 幅（列）。短い出力でもこの幅を確保
 				summary_max_height = 20, -- 最大高さ（行）。内容が短ければ小さく表示
 
 				-- 実行結果の表示・保持
