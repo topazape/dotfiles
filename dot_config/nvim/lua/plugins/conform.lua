@@ -15,9 +15,6 @@ return {
 			},
 		},
 		formatters_by_ft = {
-			r = {
-				"air",
-			},
 			css = {
 				"prettier",
 			},
