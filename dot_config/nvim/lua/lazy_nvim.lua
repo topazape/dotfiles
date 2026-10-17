@@ -57,8 +57,8 @@ require("lazy").setup({
 				timeout = 300000, -- IPC 応答の待機時間（ミリ秒）
 
 				-- 画像の表示上限（端末のセル単位）
-				image_width = 60, -- 最大幅（列）
-				image_height = 12, -- 最大高さ（行）
+				image_width = 100, -- 最大幅（列）
+				image_height = 30, -- 最大高さ（行）
 
 				-- R が生成する PNG
 				plot_width = 1200, -- 幅（ピクセル）
