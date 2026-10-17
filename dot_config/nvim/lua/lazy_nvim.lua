@@ -63,7 +63,7 @@ require("lazy").setup({
 				-- R が生成する PNG
 				plot_width = 1200, -- 幅（ピクセル）
 				plot_height = 800, -- 高さ（ピクセル）
-				plot_res = 120, -- 描画解像度（dpi）。文字や線の大きさにも影響
+				plot_res = 180, -- 描画解像度（dpi）。文字や線の大きさにも影響
 
 				-- summary フロート
 				summary_width = 120, -- 幅（列）。短い出力でもこの幅を確保
