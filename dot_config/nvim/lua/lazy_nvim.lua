@@ -40,7 +40,14 @@ require("lazy").setup({
 		{
 			dir = vim.fn.expand("~/Develop/local/arf.nvim"),
 			name = "arf.nvim",
-			cmd = "ArfRun",
+			cmd = { "ArfRun", "ArfClear" },
+			dependencies = {
+				{
+					"folke/snacks.nvim",
+					opts = { image = { enabled = true } },
+				},
+			},
+			opts = {},
 		},
 	},
 })
