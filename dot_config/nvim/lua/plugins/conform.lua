@@ -2,24 +2,30 @@ return {
 	"stevearc/conform.nvim",
 
 	opts = {
-		format_on_save = {
+		default_format_opts = {
 			timeout_ms = 3000,
 			lsp_format = "fallback",
 		},
+		format_on_save = {},
 		formatters = {
 			["sqlfluff"] = {
 				require_cwd = false,
 			},
 			["golangci-lint"] = {
-				args = { "--no-config", "--enable=gofumpt,goimports", "fmt", "--stdin" },
+				append_args = { "--no-config", "--enable=gofumpt,goimports" },
+			},
+			["arity"] = {
+				command = "arity",
+				args = { "format", "--stdin-filename", "$FILENAME", "-" },
+				stdin = true,
 			},
 		},
 		formatters_by_ft = {
-			css = {
-				"prettier",
-			},
 			bash = {
 				"shfmt",
+			},
+			css = {
+				"prettier",
 			},
 			dbt = {
 				"sqlfmt",
@@ -55,6 +61,9 @@ return {
 				"ruff_organize_imports",
 				"ruff_format",
 			},
+			r = {
+				"arity",
+			},
 			sh = {
 				"shfmt",
 			},
@@ -79,14 +88,11 @@ return {
 			zsh = {
 				"shfmt",
 			},
-			["*"] = function(bufnr)
-				local ft = vim.bo[bufnr].filetype
-				-- panache LSP に任せる（fallback を機能させるため空を返す）
-				if ft == "quarto" or ft == "rmd" then
-					return {}
-				end
-				return { "trim_newlines", "trim_whitespace" }
-			end,
+			["_"] = {
+				"trim_newlines",
+				"trim_whitespace",
+				lsp_format = "last",
+			},
 		},
 	},
 }
