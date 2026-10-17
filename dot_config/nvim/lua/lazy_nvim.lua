@@ -51,6 +51,9 @@ require("lazy").setup({
 			opts = {
 				image_width = 100,
 				image_height = 25,
+				plot_width = 1200, -- PNG の幅（px）
+				plot_height = 800, -- PNG の高さ（px）
+				plot_res = 120, -- 文字や線の大きさを調整する解像度
 			},
 		},
 	},
