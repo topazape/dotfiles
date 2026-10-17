@@ -42,7 +42,17 @@ require("lazy").setup({
 			name = "arf.nvim",
 			cmd = { "ArfRun", "ArfClear", "ArfSummary", "ArfOutput", "ArfStop" },
 			ft = "r",
-			opts = {},
+			opts = {
+				default_keymaps = false,
+			},
+			keys = {
+				{ "<LocalLeader>r", "<Cmd>ArfRun<CR>", mode = "n", ft = "r", desc = "Run R expression" },
+				{ "<LocalLeader>r", ":ArfRun<CR>", mode = "x", ft = "r", desc = "Run selected R lines" },
+				{ "<LocalLeader>c", "<Cmd>ArfClear<CR>", ft = "r", desc = "Clear R results" },
+				{ "<LocalLeader>s", "<Cmd>ArfStop<CR>", ft = "r", desc = "Stop R session" },
+				{ "<LocalLeader>o", "<Cmd>ArfOutput<CR>", ft = "r", desc = "Show saved R output" },
+				{ "<LocalLeader>k", "<Cmd>ArfSummary<CR>", ft = "r", desc = "Show R object summary" },
+			},
 		},
 	},
 })
