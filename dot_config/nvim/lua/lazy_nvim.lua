@@ -53,7 +53,7 @@ require("lazy").setup({
 				image_height = 30,
 				plot_width = 1200,
 				plot_height = 900,
-				plot_res = 120,
+				plot_res = 180, -- 120から変更
 			},
 		},
 	},
