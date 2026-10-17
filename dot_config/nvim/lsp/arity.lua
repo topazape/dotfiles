@@ -3,7 +3,7 @@ return {
 	filetypes = { "r" },
 	root_markers = {
 		"arity.toml",
-		"DESCRIPTION",
+		"rproject.toml",
 		".git",
 	},
 }
