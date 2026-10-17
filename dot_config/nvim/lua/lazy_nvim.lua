@@ -40,14 +40,18 @@ require("lazy").setup({
 		{
 			dir = vim.fn.expand("~/Develop/local/arf.nvim"),
 			name = "arf.nvim",
-			cmd = { "ArfRun", "ArfClear" },
+			cmd = { "ArfRun", "ArfClear", "ArfSummary" },
+			ft = "r", -- R ファイルを開いた時点でキーバインドを登録
 			dependencies = {
 				{
 					"folke/snacks.nvim",
 					opts = { image = { enabled = true } },
 				},
 			},
-			opts = {},
+			opts = {
+				image_width = 100,
+				image_height = 25,
+			},
 		},
 	},
 })
