@@ -37,12 +37,5 @@ require("lazy").setup({
 				{ "k", "<Plug>(accelerated_jk_gk)", mode = "n" },
 			},
 		},
-		{
-			dir = vim.fn.expand("~/Develop/local/arf.nvim"),
-			name = "arf.nvim",
-			cmd = { "ArfRun", "ArfClear", "ArfSummary", "ArfOutput", "ArfStop" },
-			ft = "r",
-			opts = {},
-		},
 	},
 })
