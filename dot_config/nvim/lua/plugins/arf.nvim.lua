@@ -1,7 +1,14 @@
 return {
 	dir = vim.fn.expand("~/Develop/local/arf.nvim"),
 	name = "arf.nvim",
+	ft = "r",
 	cmd = { "ArfRun", "ArfRunAll", "ArfClear", "ArfSummary", "ArfOutput", "ArfStop" },
+	dependencies = {
+		{
+			"folke/snacks.nvim",
+			opts = { image = { enabled = true } },
+		},
+	},
 	opts = {},
 	keys = {
 		{ "<LocalLeader>fr", "<Cmd>ArfRun<CR>", ft = "r", desc = "Run R expression" },
