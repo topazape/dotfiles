@@ -1,5 +1,5 @@
 return {
 	cmd = { "dbt", "lsp" },
-	filetypes = { "sql", "dbt", "yaml" },
+	filetypes = { "dbt", "yaml" },
 	root_markers = { "dbt_project.yml" },
 }
