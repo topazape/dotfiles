@@ -56,6 +56,9 @@ return {
 				"ruff_organize_imports",
 				"ruff_format",
 			},
+			r = {
+				"air",
+			},
 			sh = {
 				"shfmt",
 			},
