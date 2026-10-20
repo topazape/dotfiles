@@ -14,11 +14,6 @@ return {
 			["golangci-lint"] = {
 				append_args = { "--no-config", "--enable=gofumpt,goimports" },
 			},
-			["arity"] = {
-				command = "arity",
-				args = { "format", "--stdin-filename", "$FILENAME", "-" },
-				stdin = true,
-			},
 		},
 		formatters_by_ft = {
 			bash = {
@@ -60,9 +55,6 @@ return {
 			python = {
 				"ruff_organize_imports",
 				"ruff_format",
-			},
-			r = {
-				"arity",
 			},
 			sh = {
 				"shfmt",
