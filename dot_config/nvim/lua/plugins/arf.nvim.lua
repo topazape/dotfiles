@@ -3,7 +3,9 @@ return {
 	name = "arf.nvim",
 	ft = "r",
 	cmd = { "ArfRun", "ArfRunAll", "ArfClear", "ArfSummary", "ArfOutput", "ArfStop" },
-	opts = {},
+	opts = {
+		theme = "slate",
+	},
 	keys = {
 		{ "<LocalLeader>fr", "<Cmd>ArfRun<CR>", ft = "r", desc = "Run R expression" },
 		{ "<LocalLeader>fr", ":ArfRun<CR>", mode = "x", ft = "r", desc = "Run selected R lines" },
