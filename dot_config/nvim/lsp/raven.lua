@@ -3,7 +3,7 @@ return {
 	init_options = {
 		packages = {
 			additionalLibraryPaths = {
-				"rv/",
+				"/Users/kawai/arf_temp/rv/library/4.6/arm64",
 			},
 		},
 	},
