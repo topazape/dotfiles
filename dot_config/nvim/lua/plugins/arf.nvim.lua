@@ -4,7 +4,7 @@ return {
 	ft = "r",
 	cmd = { "ArfRun", "ArfRunAll", "ArfClear", "ArfSummary", "ArfOutput", "ArfStop" },
 	opts = {
-		theme = "default",
+		theme = "neon",
 	},
 	keys = {
 		{ "<LocalLeader>fr", "<Cmd>ArfRun<CR>", ft = "r", desc = "Run R expression" },
