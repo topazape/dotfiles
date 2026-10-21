@@ -4,12 +4,6 @@ return {
 	ft = "r",
 	cmd = { "ArfRun", "ArfRunAll", "ArfClear", "ArfSummary", "ArfOutput", "ArfStop" },
 	opts = {
-		image_width = 120, -- Maximum columns
-		image_height = 60, -- Maximum rows
-		plot_width = 1440, -- Width in pixels
-		plot_height = 900, -- Height in pixels
-		plot_res = 200, -- DPI; also affects text and line sizes
-
 		tibble_max_rows = 100,
 	},
 	keys = {
