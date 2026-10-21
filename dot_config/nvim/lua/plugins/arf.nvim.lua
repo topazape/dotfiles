@@ -4,6 +4,8 @@ return {
 	ft = "r",
 	cmd = { "ArfRun", "ArfRunAll", "ArfClear", "ArfSummary", "ArfOutput", "ArfStop" },
 	opts = {
+		image_width = 120, -- Maximum columns
+		image_height = 60, -- Maximum rows
 		tibble_max_rows = 100,
 	},
 	keys = {
