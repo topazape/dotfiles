@@ -8,7 +8,7 @@ return {
 		image_height = 60, -- Maximum rows
 		plot_width = 1440, -- Width in pixels
 		plot_height = 900, -- Height in pixels
-		plot_res = 180, -- DPI; also affects text and line sizes
+		plot_res = 200, -- DPI; also affects text and line sizes
 
 		tibble_max_rows = 100,
 	},
