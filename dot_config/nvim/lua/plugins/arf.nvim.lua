@@ -9,7 +9,7 @@ return {
 	keys = {
 		{ "<C-CR>", "<Cmd>ArfRun<CR>", ft = "r", desc = "Run R expression" },
 		{ "<C-CR>", ":ArfRun<CR>", mode = "x", ft = "r", desc = "Run selected R lines" },
-		{ "<LocalLeader>fR", "<Cmd>ArfRunAll<CR>", ft = "r", desc = "Run all R expressions" },
+		{ "<C-R>", "<Cmd>ArfRunAll<CR>", ft = "r", desc = "Run all R expressions" },
 		{ "<LocalLeader>fc", "<Cmd>ArfClear<CR>", ft = "r", desc = "Clear R results" },
 		{ "<LocalLeader>fs", "<Cmd>ArfStop<CR>", ft = "r", desc = "Stop R session" },
 		{ "<LocalLeader>fo", "<Cmd>ArfOutput<CR>", ft = "r", desc = "Show saved R output" },
