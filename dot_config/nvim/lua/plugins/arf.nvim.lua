@@ -7,7 +7,7 @@ return {
 		tibble_max_rows = 100,
 	},
 	keys = {
-		{ "<LocalLeader>fr", "<Cmd>ArfRun<CR>", ft = "r", desc = "Run R expression" },
+		{ "<c-cr>", "<Cmd>ArfRun<CR>", ft = "r", desc = "Run R expression" },
 		{ "<LocalLeader>fr", ":ArfRun<CR>", mode = "x", ft = "r", desc = "Run selected R lines" },
 		{ "<LocalLeader>fR", "<Cmd>ArfRunAll<CR>", ft = "r", desc = "Run all R expressions" },
 		{ "<LocalLeader>fc", "<Cmd>ArfClear<CR>", ft = "r", desc = "Clear R results" },
