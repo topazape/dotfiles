@@ -2,7 +2,7 @@ return {
 	dir = vim.fn.expand("~/Develop/local/arf.nvim"),
 	name = "arf.nvim",
 	ft = "r",
-	cmd = { "ArfRun", "ArfRunAll", "ArfClear", "ArfSummary", "ArfOutput", "ArfCopyPlot", "ArfStop" },
+	cmd = { "ArfRun", "ArfRunAll", "ArfClear", "ArfSummary", "ArfObjects", "ArfOutput", "ArfCopyPlot", "ArfStop" },
 	opts = {
 		tibble_max_rows = 100,
 	},
