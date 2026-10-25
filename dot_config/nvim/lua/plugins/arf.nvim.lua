@@ -2,7 +2,7 @@ return {
 	dir = vim.fn.expand("~/Develop/local/arf.nvim"),
 	name = "arf.nvim",
 	ft = "r",
-	cmd = { "ArfRun", "ArfRunAll", "ArfClear", "ArfSummary", "ArfOutput", "ArfStop", "ArfCopyPlot" },
+	cmd = { "ArfRun", "ArfRunAll", "ArfClear", "ArfSummary", "ArfOutput", "ArfCopyPlot", "ArfStop" },
 	opts = {
 		tibble_max_rows = 100,
 	},
@@ -13,6 +13,7 @@ return {
 		{ "<LocalLeader>c", "<Cmd>ArfClear<CR>", ft = "r", desc = "Clear R results" },
 		{ "<LocalLeader>s", "<Cmd>ArfStop<CR>", ft = "r", desc = "Stop R session" },
 		{ "<LocalLeader>o", "<Cmd>ArfOutput<CR>", ft = "r", desc = "Show saved R output" },
+		{ "<LocalLeader>y", "<Cmd>ArfCopyPlot<CR>", ft = "r", desc = "Copy latest plot" },
 		{ "<LocalLeader><Space>", "<Cmd>ArfSummary<CR>", ft = "r", desc = "Show R object summary" },
 	},
 }
