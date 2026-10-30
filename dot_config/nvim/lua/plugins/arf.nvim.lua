@@ -4,7 +4,7 @@ return {
 	ft = "r",
 	cmd = { "ArfRun", "ArfRunAll", "ArfClear", "ArfSummary", "ArfObjects", "ArfOutput", "ArfCopyPlot", "ArfStop" },
 	opts = {
-		eval_timeout = 14400000, -- 4 hr
+		eval_timeout = 21600000, -- 6 hr
 		tibble_max_rows = 100,
 	},
 	keys = {
