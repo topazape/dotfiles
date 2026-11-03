@@ -15,9 +15,3 @@ end
 if type -q bat
     set -gx BAT_THEME TwoDark
 end
-
-# arf
-if type -q arf
-    set -gx ARF_CONFIG $XDG_CONFIG_HOME/arf/arf.toml
-    set -gx ARF_HISTORY_DIR $XDG_STATE_HOME/arf/history
-end
