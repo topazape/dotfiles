@@ -22,7 +22,7 @@ return {
 		{ "<LocalLeader>r", ":ArfRun<CR>", mode = "x", ft = "r", desc = "Run selected R lines" },
 		{ "<LocalLeader>R", "<Cmd>ArfRunAll<CR>", ft = "r", desc = "Run all R expressions" },
 		{ "<LocalLeader>c", "<Cmd>ArfClear<CR>", ft = "r", desc = "Clear R results" },
-		{ "<LocalLeader>fi", "<Cmd>ArfInterrupt<CR>", ft = "r", desc = "Interrupt R evaluation" },
+		{ "<LocalLeader>i", "<Cmd>ArfInterrupt<CR>", ft = "r", desc = "Interrupt R evaluation" },
 		{ "<LocalLeader>s", "<Cmd>ArfStop<CR>", ft = "r", desc = "Stop R session" },
 		{ "<LocalLeader>o", "<Cmd>ArfOutput<CR>", ft = "r", desc = "Show saved R output" },
 		{ "<LocalLeader>y", "<Cmd>ArfCopyPlot<CR>", ft = "r", desc = "Copy latest plot" },
