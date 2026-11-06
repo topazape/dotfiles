@@ -3,7 +3,7 @@ return {
 	name = "arf.nvim",
 	ft = "r",
 	opts = {
-		eval_timeout = 21600000, -- 6 hr
+		eval_timeout_ms = 6 * 60 * 60 * 1000, -- 6 hr
 		theme = "default",
 		inline = {
 			border = "rounded",
