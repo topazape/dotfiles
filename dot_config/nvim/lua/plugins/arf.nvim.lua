@@ -6,7 +6,7 @@ return {
 		eval_timeout_ms = 6 * 60 * 60 * 1000, -- 6 hr
 		theme = "default",
 		inline = {
-			border = "rounded",
+			border = "single",
 		},
 		output = {
 			tibble = {
