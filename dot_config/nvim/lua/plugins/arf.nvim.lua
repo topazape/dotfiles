@@ -4,7 +4,7 @@ return {
 	ft = "r",
 	opts = {
 		eval_timeout = 21600000, -- 6 hr
-		theme = "default",
+		theme = "neon",
 		output = {
 			tibble = {
 				max_rows = false,
