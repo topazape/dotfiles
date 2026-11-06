@@ -5,6 +5,9 @@ return {
 	opts = {
 		eval_timeout = 21600000, -- 6 hr
 		theme = "default",
+		inline = {
+			border = "double",
+		},
 		output = {
 			tibble = {
 				max_rows = "inherit",
