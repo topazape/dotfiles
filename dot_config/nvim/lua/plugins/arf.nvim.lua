@@ -7,7 +7,7 @@ return {
 		theme = "default",
 		output = {
 			tibble = {
-				max_rows = false,
+				max_rows = "inherit",
 				width = "auto",
 			},
 		},
