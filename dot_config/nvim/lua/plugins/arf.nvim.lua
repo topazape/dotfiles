@@ -10,7 +10,7 @@ return {
 		},
 		output = {
 			tibble = {
-				max_rows = "inherit",
+				max_rows = 128,
 				width = "auto",
 			},
 		},
