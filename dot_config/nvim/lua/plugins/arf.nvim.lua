@@ -25,6 +25,7 @@ return {
 		{ "<LocalLeader>o", "<Cmd>ArfOutput<CR>", ft = "r", desc = "Show saved R output" },
 		{ "<LocalLeader>y", "<Cmd>ArfCopyPlot<CR>", ft = "r", desc = "Copy latest plot" },
 		{ "<LocalLeader><Space>", "<Cmd>ArfSummary<CR>", ft = "r", desc = "Show R object summary" },
+		{ "<LocalLeader>fl", "<Cmd>ArfObjects<CR>", ft = "r", desc = "List R objects" },
 		{ "<LocalLeader>?", "<Cmd>ArfHelp<CR>", ft = "r", desc = "Show R object summary" },
 	},
 }
