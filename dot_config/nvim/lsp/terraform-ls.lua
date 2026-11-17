@@ -1,6 +1,6 @@
 return {
 	cmd = { "terraform-ls", "serve" },
-	filetypes = { "terraform", "terraform-vars" },
+	filetypes = { "terraform", "terraform-vars", "hcl" },
 	init_options = {
 		ignoreSingleFileWarning = true,
 	},
