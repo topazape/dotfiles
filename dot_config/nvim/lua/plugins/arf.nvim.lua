@@ -14,6 +14,9 @@ return {
 				width = "auto",
 			},
 		},
+		help = {
+			keymaps = { follow = "<C-]>", back = "<C-[>" },
+		},
 	},
 	keys = {
 		{ "<LocalLeader>r", "<Cmd>ArfRun<CR>", ft = "r", desc = "Run R expression" },
