@@ -15,7 +15,10 @@ return {
 			},
 		},
 		help = {
-			keymaps = { follow = "<C-]>", back = "<C-[>" },
+			keymaps = {
+				follow = "<C-]>",
+				back = "<C-[>",
+			},
 		},
 	},
 	keys = {
